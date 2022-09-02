@@ -1,0 +1,41 @@
+query {
+    survey(survey: state_of_graphql) {
+        demographics {
+            source (filters: {}, options: {limit:20}, facet: null){
+                year(year: 2022) {
+                    year
+                    completion {
+                        total
+                        percentage_survey
+                        count
+                    }
+                    facets {
+                        id
+                        type
+                        completion {
+                            total
+                            percentage_question
+                            percentage_survey
+                            count
+                        }
+                        buckets {
+                            id
+                            count
+                            percentage_question
+                            percentage_survey
+                            entity {
+                                name
+                                homepage {
+                                    url
+                                }
+                                github {
+                                    url
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+query {
+    cardinality: survey(survey: state_of_graphql) {
+        graphql_servers: tools_cardinality_by_user(
+            year: 2022,
+            ids: [apollo_server,yoga,graphql_js,helix,express_graphql,mercurius,dgs,graphql_dotnet,absinthe,graphql_go],
+            experienceId: would_use
+        ) {
+            cardinality
+            count
+            percentage_survey
+        }
+        graphql_clients: tools_cardinality_by_user(
+            year: 2022,
+            ids: [apollo_client,urql,react_query,relay,apollo_ios,swift_graphql,apollo_kotlin,graphql_hooks,graphql_request,no_client],
+            experienceId: would_use
+        ) {
+            cardinality
+            count
+            percentage_survey
+        }
+        graphql_api_generators: tools_cardinality_by_user(
+            year: 2022,
+            ids: [postgraphile,hasura,graphcms,datocms,sanity,wpgraphql,wundergraph,fauna,dgraph,graphql_editor,strapi,appsync,contentful,graphene,graphql_mesh],
+            experienceId: would_use
+        ) {
+            cardinality
+            count
+            percentage_survey
+        }
+        schema_builders: tools_cardinality_by_user(
+            year: 2022,
+            ids: [nexus,typegraphql,pothos,strawberry,sangria,graphql_java,gqlgen,graphql_zeus,genql,graphql_code_generator],
+            experienceId: would_use
+        ) {
+            cardinality
+            count
+            percentage_survey
+        }
+    }
+}

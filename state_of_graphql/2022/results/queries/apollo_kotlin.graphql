@@ -1,0 +1,42 @@
+query {
+    survey(survey: state_of_graphql) {
+        apollo_kotlin_experience: tool(id: apollo_kotlin) {
+            id
+            entity {
+                homepage {
+                    url
+                }
+                description
+                name
+                github {
+                    name
+                    url
+                }
+                npm {
+                    name
+                    url
+                }
+            }
+            experience {
+                keys
+                all_years {
+                    year
+                    completion {
+                        total
+                        count
+                        percentage_survey
+                    }
+                    facets {
+                        buckets {
+                            id
+                            count
+                            countDelta
+                            percentage_survey
+                            percentage_question
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

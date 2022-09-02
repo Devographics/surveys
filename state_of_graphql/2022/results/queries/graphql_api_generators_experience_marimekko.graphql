@@ -1,0 +1,29 @@
+query {
+    survey(survey: state_of_graphql) {
+        graphql_api_generators_marimekko: tools(ids: [postgraphile,hasura,graphcms,datocms,sanity,wpgraphql,wundergraph,fauna,dgraph,graphql_editor,strapi,appsync,contentful,graphene,graphql_mesh]) {
+            id
+            entity {
+                name
+            }
+            experience {
+                keys
+                year(year: 2022) {
+                    year
+                    completion {
+                        total
+                        count
+                        percentage_survey
+                    }
+                    facets {
+                        buckets {
+                            id
+                            count
+                            percentage_survey
+                            percentage_question
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

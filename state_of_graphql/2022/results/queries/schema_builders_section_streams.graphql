@@ -1,0 +1,35 @@
+query {
+    survey(survey: state_of_graphql) {
+        schema_builders_streams: tools(ids: [nexus,typegraphql,pothos,strawberry,sangria,graphql_java,gqlgen,graphql_zeus,genql,graphql_code_generator]) {
+            id
+            entity {
+                name
+                homepage {
+                    url
+                }
+                github {
+                    url
+                }
+            }
+            experience {
+                keys
+                all_years {
+                    year
+                    completion {
+                        total
+                        count
+                        percentage_survey
+                    }
+                    facets {
+                        buckets {
+                            id
+                            count
+                            percentage_question
+                            percentage_survey
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
