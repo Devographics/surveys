@@ -1,13 +1,19 @@
 query {
     survey(survey: state_of_graphql) {
-        graphql_servers_streams: tools(ids: [apollo_server,yoga,graphql_js,helix,express_graphql,mercurius,dgs,graphql_dotnet,absinthe,graphql_go]) {
+        apollo_server_experience: tool(id: apollo_server) {
             id
             entity {
-                name
                 homepage {
                     url
                 }
+                description
+                name
                 github {
+                    name
+                    url
+                }
+                npm {
+                    name
                     url
                 }
             }
@@ -24,8 +30,9 @@ query {
                         buckets {
                             id
                             count
-                            percentage_question
+                            countDelta
                             percentage_survey
+                            percentage_question
                         }
                     }
                 }
