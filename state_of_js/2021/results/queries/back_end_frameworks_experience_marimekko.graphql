@@ -1,0 +1,29 @@
+query {
+    survey(survey: state_of_js) {
+        back_end_frameworks_marimekko: tools(ids: [express,nextjs,nuxt,gatsby,nest,strapi,fastify,redwood,astro,eleventy,blitz,remix,sveltekit]) {
+            id
+            entity {
+                name
+            }
+            experience {
+                keys
+                year(year: 2021) {
+                    year
+                    completion {
+                        total
+                        count
+                        percentage_survey
+                    }
+                    facets {
+                        buckets {
+                            id
+                            count
+                            percentage_survey
+                            percentage_question
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

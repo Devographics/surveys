@@ -1,0 +1,33 @@
+query {
+    survey(survey: state_of_js) {
+        js_ecosystem_changing_to_fast: opinion(id: js_ecosystem_changing_to_fast) {
+            id
+            keys
+            all_years {
+                year
+                mean
+                completion {
+                    total
+                    count
+                    percentage_survey
+                }
+                facets {
+                    id
+                    type
+                    completion {
+                        total
+                        percentage_question
+                        percentage_survey
+                        count
+                    }
+                    buckets {
+                        id
+                        count
+                        percentage_question
+                        percentage_survey
+                    }
+                }
+            }
+        }
+    }
+}

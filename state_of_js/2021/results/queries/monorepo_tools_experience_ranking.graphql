@@ -1,0 +1,34 @@
+query {
+    survey(survey: state_of_js) {
+        monorepo_tools_rankings: tools_rankings(ids: [rush,turborepo,yarn_workspaces,yalc,lerna,npm_workspaces,pnpm,nx]) {
+            ids
+            years
+            experience {
+                id
+                entity {
+                    name
+                }
+                usage {
+                    year
+                    rank
+                    percentage_question
+                }
+                awareness {
+                    year
+                    rank
+                    percentage_question
+                }
+                interest {
+                    year
+                    rank
+                    percentage_question
+                }
+                satisfaction {
+                    year
+                    rank
+                    percentage_question
+                }
+            }
+        }
+    }
+}

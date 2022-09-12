@@ -1,0 +1,58 @@
+query {
+    cardinality: survey(survey: state_of_js) {
+        front_end_frameworks: tools_cardinality_by_user(
+            year: 2021,
+            ids: [react,vuejs,angular,preact,ember,svelte,alpinejs,litelement,stimulus,solid],
+            experienceId: would_use
+        ) {
+            cardinality
+            count
+            percentage_survey
+        }
+        back_end_frameworks: tools_cardinality_by_user(
+            year: 2021,
+            ids: [express,nextjs,nuxt,gatsby,nest,strapi,fastify,redwood,astro,eleventy,blitz,remix,sveltekit],
+            experienceId: would_use
+        ) {
+            cardinality
+            count
+            percentage_survey
+        }
+        testing: tools_cardinality_by_user(
+            year: 2021,
+            ids: [jest,mocha,storybook,cypress,ava,jasmine,puppeteer,testing_library,playwright,webdriverio,vitest],
+            experienceId: would_use
+        ) {
+            cardinality
+            count
+            percentage_survey
+        }
+        build_tools: tools_cardinality_by_user(
+            year: 2021,
+            ids: [webpack,parcel,gulp,rollup,browserify,tsc,rome,snowpack,swc,esbuild,vite,wmr],
+            experienceId: would_use
+        ) {
+            cardinality
+            count
+            percentage_survey
+        }
+        monorepo_tools: tools_cardinality_by_user(
+            year: 2021,
+            ids: [rush,turborepo,yarn_workspaces,yalc,lerna,npm_workspaces,pnpm,nx],
+            experienceId: would_use
+        ) {
+            cardinality
+            count
+            percentage_survey
+        }
+        mobile_desktop: tools_cardinality_by_user(
+            year: 2021,
+            ids: [electron,reactnative,nativeapps,cordova,ionic,nwjs,expo,capacitor,quasar,tauri],
+            experienceId: would_use
+        ) {
+            cardinality
+            count
+            percentage_survey
+        }
+    }
+}
