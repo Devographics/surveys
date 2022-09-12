@@ -1,0 +1,33 @@
+query {
+    survey(survey: state_of_css) {
+        css_easy_to_learn: opinion(id: css_easy_to_learn) {
+            id
+            keys
+            all_years {
+                year
+                mean
+                completion {
+                    total
+                    count
+                    percentage_survey
+                }
+                facets {
+                    id
+                    type
+                    completion {
+                        total
+                        percentage_question
+                        percentage_survey
+                        count
+                    }
+                    buckets {
+                        id
+                        count
+                        percentage_question
+                        percentage_survey
+                    }
+                }
+            }
+        }
+    }
+}

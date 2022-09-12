@@ -1,0 +1,38 @@
+query {
+    survey(survey: state_of_css) {
+        currently_missing_from_css: opinions_others(id: currently_missing_from_css) {
+            id
+            year(year: 2021) {
+                year
+                completion {
+                    total
+                    count
+                    percentage_survey
+                }
+                facets {
+                    id
+                    type
+                    completion {
+                        total
+                        percentage_question
+                        percentage_survey
+                        count
+                    }
+                    buckets {
+                        id
+                        count
+                        percentage_question
+                        percentage_survey
+                        entity {
+                            id
+                            homepage {
+                                url
+                            }
+                            name
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

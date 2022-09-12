@@ -1,0 +1,44 @@
+query {
+    survey(survey: state_of_css) {
+        features_overview: features(ids: [grid,subgrid,flexbox,multi_column,writing_modes,position_sticky,logical_properties,aspect_ratio,content_visibility,flexbox_gap,break_rules,at_container,shapes,object_fit,clip_path,masks,blend_modes,filter_effects,backdrop_filter,color_gamut,perspective,intrinsic_sizing,conic_gradient,color_function,accent_color,scroll_snap,overscroll_behavior,overflow_anchor,touch_action,pointer_events,scroll_timeline,font_variant,initial_letter,font_variant_numeric,font_display,line_clamp,variable_fonts,prefers_reduced_motion,prefers_color_scheme,prefers_reduced_data,color_contrast,color_scheme,tabindex,aria_attributes,variables,feature_support_queries,containment,will_change,calc,houdini,comparison_functions,at_property,marker]) {
+            id
+            entity {
+                name
+                homepage {
+                    url
+                }
+                caniuse {
+                    name
+                    url
+                }
+                mdn {
+                    locale
+                    url
+                    title
+                    summary
+                }
+            }
+            experience{
+                keys
+                year(year: 2021) {
+                    year
+                    completion {
+                        total
+                        count
+                        percentage_survey
+                    }
+                    facets{
+                        type
+                        id
+                        buckets {
+                            id
+                            count
+                            percentage_question
+                            percentage_survey
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+query {
+    survey(survey: state_of_css) {
+        enjoy_writing_css: opinion(id: enjoy_writing_css) {
+            id
+            keys
+            all_years {
+                year
+                mean
+                completion {
+                    total
+                    count
+                    percentage_survey
+                }
+                facets {
+                    id
+                    type
+                    completion {
+                        total
+                        percentage_question
+                        percentage_survey
+                        count
+                    }
+                    buckets {
+                        id
+                        count
+                        percentage_question
+                        percentage_survey
+                    }
+                }
+            }
+        }
+    }
+}

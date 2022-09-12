@@ -1,0 +1,41 @@
+query {
+    survey(survey: state_of_css) {
+        pre_post_processors_others: tools_others(id: pre_post_processors_others, options: {limit: 20}) {
+            id
+            year(year: 2021) {
+                year
+                completion {
+                    total
+                    count
+                    percentage_survey
+                }
+                facets {
+                    id
+                    type
+                    completion {
+                        total
+                        percentage_question
+                        percentage_survey
+                        count
+                    }
+                    buckets{
+                        id
+                        count
+                        percentage_question
+                        percentage_survey
+                        entity {
+                            id
+                            homepage {
+                                url
+                            }
+                            name
+                            github {
+                                url
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

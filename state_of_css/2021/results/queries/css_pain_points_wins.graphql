@@ -1,0 +1,43 @@
+query {
+    survey(survey: state_of_css) {
+        css_pain_points_wins: bracket_wins(id: opinions__css_pain_points, filters: {}, options: {}) {
+            id
+            keys
+            year(year: 2021) {
+                year
+                completion {
+                    total
+                    count
+                    percentage_survey
+                }
+                facets {
+                    completion {
+                        total
+                        count
+                        percentage_survey
+                        percentage_question
+                    }
+                    buckets {
+                        id
+                        combined {
+                            count
+                            percentage
+                        }
+                        round1 {
+                            count
+                            percentage
+                        }
+                        round2 {
+                            count
+                            percentage
+                        }
+                        round3 {
+                            count
+                            percentage
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
