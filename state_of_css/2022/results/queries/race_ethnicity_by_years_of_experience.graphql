@@ -1,0 +1,48 @@
+query {
+  survey(survey: state_of_css) {
+    demographics {
+      race_ethnicity_all_years_of_experience: race_ethnicity(filters: {}, options: {}, facet: null) {
+        keys
+        year(year: 2022) {
+          year
+          facets {
+            id
+            type
+            mean
+            buckets {
+              id
+              count
+              percentage_question
+              percentage_survey
+              percentage_facet
+            }
+          }
+        }
+      }
+      race_ethnicity_by_years_of_experience: race_ethnicity(filters: {}, options: {facetSort:{order:asc,property:"mean"},limit:11,facetMinCount:100}, facet: years_of_experience) {
+        keys
+        year(year: 2022) {
+          year
+          facets {
+            id
+            type
+            mean
+            completion {
+              count
+              percentage_question
+              percentage_survey
+              total
+            }
+            buckets {
+              id
+              count
+              percentage_question
+              percentage_survey
+              percentage_facet
+            }
+          }
+        }
+      }
+    }
+  }
+}

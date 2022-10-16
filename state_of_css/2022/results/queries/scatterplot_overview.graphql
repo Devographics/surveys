@@ -1,0 +1,34 @@
+query {
+    survey(survey: state_of_css) {
+          scatterplot_overview: tools(ids: [bootstrap,materialize_css,ant_design,semantic_ui,bulma,foundation,ui_kit,tachyons,primer,tailwind_css,pure_css,halfmoon,styled_components,jss,styled_jsx,emotion,css_modules,styled_system,stitches,fela,linaria,astroturf,twin,theme_ui,vanilla_extract,windi_css]) {
+            id
+            entity {
+                homepage {
+                    url
+                }
+                name
+                github {
+                    url
+                }
+            }
+            experience {
+                keys
+                year(year:2022) {
+                    facets {
+                        buckets{
+                            id
+                            count
+                            percentage_question
+                            percentage_survey
+                        }
+                    }
+                    completion {
+                        count
+                        total
+                        percentage_survey
+                    }
+                }
+            }
+        }
+    }
+}

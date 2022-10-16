@@ -1,0 +1,33 @@
+query {
+    survey(survey: state_of_css) {
+        demographics {
+            completion_stats: completion_stats(filters: {}, options: {}, facet: null) {
+                keys
+                year(year: 2022) {
+                    year
+                    completion {
+                        total
+                        percentage_survey
+                        count
+                    }
+                    facets {
+                        id
+                        type
+                        completion {
+                            total
+                            percentage_question
+                            percentage_survey
+                            count
+                        }
+                        buckets {
+                            id
+                            count
+                            percentage_question
+                            percentage_survey
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
