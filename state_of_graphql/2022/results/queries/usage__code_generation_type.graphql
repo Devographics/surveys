@@ -1,0 +1,43 @@
+query {
+    survey(survey: state_of_graphql) {
+        code_generation_type: usage(id: code_generation_type, filters: {}, options: {}) {
+            id
+            keys
+            year(year: 2022) {
+                year
+                completion {
+                    total
+                    count
+                    percentage_survey
+                }
+                facets {
+                    id
+                    type
+                    completion {
+                        total
+                        percentage_question
+                        percentage_survey
+                        count
+                    }
+                    buckets {
+                        id
+                        count
+                        percentage_question
+                        percentage_survey
+                        entity {
+                            name
+                            nameClean
+                            nameHtml
+                            homepage {
+                                url
+                            }
+                            github {
+                                url
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
