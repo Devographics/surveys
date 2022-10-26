@@ -1,0 +1,44 @@
+query {
+    survey(survey: state_of_js) {
+        stimulus_experience: tool(id: stimulus) {
+            id
+            entity {
+                name
+                nameClean
+                nameHtml
+                homepage {
+                    url
+                }
+                description
+                github {
+                    name
+                    url
+                }
+                npm {
+                    name
+                    url
+                }
+            }
+            experience {
+                keys
+                all_years {
+                    year
+                    completion {
+                        total
+                        count
+                        percentage_survey
+                    }
+                    facets {
+                        buckets {
+                            id
+                            count
+                            countDelta
+                            percentage_survey
+                            percentage_question
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+query {
+    survey(survey: state_of_js) {
+        mobile_desktop_rankings: tools_rankings(ids: [electron,reactnative,nativeapps,cordova,ionic,nwjs,expo,capacitor,quasar,tauri]) {
+            ids
+            years
+            experience {
+                id
+                entity {
+                    name
+                    nameClean
+                    nameHtml
+                }
+                usage {
+                    year
+                    rank
+                    percentage_question
+                }
+                awareness {
+                    year
+                    rank
+                    percentage_question
+                }
+                interest {
+                    year
+                    rank
+                    percentage_question
+                }
+                satisfaction {
+                    year
+                    rank
+                    percentage_question
+                }
+            }
+        }
+    }
+}

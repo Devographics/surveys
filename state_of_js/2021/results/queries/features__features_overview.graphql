@@ -1,0 +1,46 @@
+query {
+    survey(survey: state_of_js) {
+        features_overview: features(ids: [proxies,promise_all_settled,dynamic_import,nullish_coalescing,optional_chaining,private_fields,big_int,numeric_separators,string_replace_all,string_match_all,logical_assignment,promise_any,array_at,top_level_await,service_workers,intl,web_audio,webgl,web_animations,webrtc,web_speech,websocket,custom_elements,shadow_dom,page_visibility,broadcast_channel,geolocation,file_system_access,web_share,webxr,pwa,wasm]) {
+            id
+            entity {
+                name
+                nameClean
+                nameHtml
+                homepage {
+                    url
+                }
+                caniuse {
+                    name
+                    url
+                }
+                mdn {
+                    locale
+                    url
+                    title
+                    summary
+                }
+            }
+            experience{
+                keys
+                year(year: 2021) {
+                    year
+                    completion {
+                        total
+                        count
+                        percentage_survey
+                    }
+                    facets{
+                        type
+                        id
+                        buckets {
+                            id
+                            count
+                            percentage_question
+                            percentage_survey
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+query {
+    survey(survey: state_of_js) {
+        front_end_frameworks_marimekko: tools(ids: [react,vuejs,angular,preact,ember,svelte,alpinejs,litelement,stimulus,solid]) {
+            id
+            entity {
+                name
+                nameClean
+                nameHtml
+            }
+            experience {
+                keys
+                year(year: 2021) {
+                    year
+                    completion {
+                        total
+                        count
+                        percentage_survey
+                    }
+                    facets {
+                        buckets {
+                            id
+                            count
+                            percentage_survey
+                            percentage_question
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

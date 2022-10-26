@@ -1,0 +1,31 @@
+query {
+    survey(survey: state_of_js) {
+        monorepo_tools_marimekko: tools(ids: [rush,turborepo,yarn_workspaces,yalc,lerna,npm_workspaces,pnpm,nx]) {
+            id
+            entity {
+                name
+                nameClean
+                nameHtml
+            }
+            experience {
+                keys
+                year(year: 2021) {
+                    year
+                    completion {
+                        total
+                        count
+                        percentage_survey
+                    }
+                    facets {
+                        buckets {
+                            id
+                            count
+                            percentage_survey
+                            percentage_question
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

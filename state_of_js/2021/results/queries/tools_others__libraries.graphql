@@ -1,0 +1,42 @@
+query {
+    survey(survey: state_of_js) {
+        libraries: tools_others(id: libraries, filters: {}, options: {}) {
+            id
+            year(year: 2021) {
+                year
+                completion {
+                    total
+                    count
+                    percentage_survey
+                }
+                facets {
+                    id
+                    type
+                    completion {
+                        total
+                        percentage_question
+                        percentage_survey
+                        count
+                    }
+                    buckets {
+                        id
+                        count
+                        percentage_question
+                        percentage_survey
+                        entity {
+                            name
+                            nameClean
+                            nameHtml
+                            homepage {
+                                url
+                            }
+                            github {
+                                url
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
