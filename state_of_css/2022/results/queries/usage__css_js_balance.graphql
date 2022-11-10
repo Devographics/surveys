@@ -1,0 +1,43 @@
+query {
+    survey(survey: state_of_css) {
+        css_js_balance: usage(id: css_js_balance, filters: {}, options: {}) {
+            id
+            keys
+            year(year: 2022) {
+                year
+                completion {
+                    total
+                    count
+                    percentage_survey
+                }
+                facets {
+                    id
+                    type
+                    completion {
+                        total
+                        percentage_question
+                        percentage_survey
+                        count
+                    }
+                    buckets {
+                        id
+                        count
+                        percentage_question
+                        percentage_survey
+                        entity {
+                            name
+                            nameClean
+                            nameHtml
+                            homepage {
+                                url
+                            }
+                            github {
+                                url
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
