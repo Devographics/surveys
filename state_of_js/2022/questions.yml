@@ -1,3 +1,8 @@
+
+######################################################
+#########              FEATURES              #########
+######################################################
+
 # For each question in this section, possible answers are:
 # - Never heard of it
 # - Know about it
@@ -202,10 +207,6 @@
     - id: gatsby
 
     # new in 2021
-    - id: redwood
-      year: 2021
-    - id: blitz
-      year: 2021
     - id: remix
       year: 2021
     - id: astro
@@ -215,6 +216,12 @@
     - id: sveltekit
       year: 2021
 
+    - id: docusaurus
+      year: 2022
+
+    # - id: solidstart # too early?
+    #   year: 2022
+
     - id: rendering_frameworks
       intlId: tools.other_tools
       template: project
@@ -224,41 +231,42 @@
       template: happiness
       sectionSlug: happiness
 
-- id: back_end_frameworks
-  template: tool
-  slug: tools
-  questions:
-    # removed in 2021
-    # - id: meteor
-    # - id: hapi
+# - id: back_end_frameworks
+#   template: tool
+#   slug: tools
+#   questions:
+#     # removed in 2021
+#     # - id: meteor
+#     # - id: hapi
 
-    - id: express
-    - id: nest
-    - id: strapi
-    - id: fastify
+#     - id: express
+#     - id: nest
+#     - id: strapi
+#     - id: fastify
 
-    - id: koa # added again in 2022
+#     - id: blitz # removed in 2022?
+#       year: 2021
 
-    # new in 2022
-    - id: adonis
-      year: 2022
-    - id: trpc
-      year: 2022
-    - id: directus
-      year: 2022
-    - id: keystone
-      year: 2022
-    - id: amplication
-      year: 2022
+#     - id: koa # added again in 2022
 
-    - id: back_end_frameworks
-      intlId: tools.other_tools
-      template: project
-      sectionSlug: tools_others
-    - id: back_end_frameworks
-      intlId: tools.happiness
-      template: happiness
-      sectionSlug: happiness
+#     # new in 2022
+#     - id: adonis
+#       year: 2022
+#     - id: directus
+#       year: 2022
+#     - id: keystone
+#       year: 2022
+#     - id: amplication
+#       year: 2022
+
+#     - id: back_end_frameworks
+#       intlId: tools.other_tools
+#       template: project
+#       sectionSlug: tools_others
+#     - id: back_end_frameworks
+#       intlId: tools.happiness
+#       template: happiness
+#       sectionSlug: happiness
 
 - id: testing
   template: tool
@@ -429,54 +437,107 @@
         - id: immer
         - id: lodash
         - id: underscore
-        - id: moment
-        - id: dayjs
-        - id: date_fns
-        - id: luxon
         - id: ramda
         - id: jquery
         - id: rxjs
-        - id: axios
-        - id: d3
         - id: stdlib
         - id: zod
           year: 2022
         - id: partytown
-          year: 2022
-        - id: tanstack_query
-          year: 2022
-        - id: radix_ui
-          year: 2022
-        - id: theatre_js
           year: 2022
         - id: mitosis
           year: 2022
     - id: libraries
       template: project
 
-    # - id: code_analysis
-    #   template: multiple
-    #   options:
-    #     - id: prettier
-    #     - id: eslint
-    #     - id: sonarqube
-    # - id: code_analysis
-    #   template: others
-    #   matchTags: [tools]
-
-    - id: backend_as_a_service
+    - id: date_management
+      year: 2022
       template: multiple
       options:
-        - id: firebase
-        - id: aws_amplify
-        - id: supabase
-        - id: nhost
-        - id: realm
-        - id: parse
-        - id: back4app
-    - id: backend_as_a_service
-      template: others
-      matchTags: [tools]
+        - id: moment
+        - id: dayjs
+        - id: date_fns
+        - id: luxon
+    - id: date_management
+      year: 2022
+      template: project
+
+    - id: data_visualization
+      year: 2022
+      template: multiple
+      options:
+        - id: d3
+        - id: mermaid
+        - id: nivo
+        - id: recharts
+        - id: visx
+        - id: victory
+        - id: echarts
+        - id: chart_js
+        - id: highcharts
+        - id: plotly
+    - id: data_visualization
+      year: 2022
+      template: project
+
+    - id: graphics_animation
+      year: 2022
+      template: multiple
+      options:
+        - id: three_js
+        - id: theatre_js
+        - id: anime_js
+        - id: react_spring
+        - id: lottie
+        - id: greensock
+        - id: popmotion
+        - id: framer_motion
+    - id: graphics_animation
+      year: 2022
+      template: project
+
+    - id: data_fetching
+      year: 2022
+      template: multiple
+      options:
+        - id: trpc
+        - id: apollo_client
+        - id: axios
+        - id: tanstack_query
+        - id: swr
+        - id: relay
+    - id: data_fetching
+      year: 2022
+      template: project
+
+    - id: backend_frameworks
+      year: 2022
+      template: multiple
+      options:
+        - id: express
+        - id: nest
+        - id: strapi
+        - id: fastify
+        - id: meteor
+        - id: hapi
+        - id: koa # added again in 2022
+        - id: adonis
+          year: 2022
+        - id: keystone
+          year: 2022
+        - id: redwood
+          year: 2021
+        - id: sails # added again in 2022
+        # new in 2022
+        - id: directus
+          year: 2022
+        - id: amplication
+          year: 2022
+        - id: blitz # removed in 2022?
+          year: 2021
+    - id: backend_frameworks
+      year: 2022
+      template: project
 
     - id: utilities
       template: multiple
@@ -523,32 +584,10 @@
         - id: akamai_edge_workers
         - id: nextjs_edge_runtime
         - id: fly_io
+        - id: digital_ocean_functions
     - id: edge_runtimes
       template: others
       matchTags: [libraries, other]
-
-    # - id: package_management
-    #   year: 2021
-    #   template: multiple
-    #   options:
-    #     - id: npm
-    #     - id: pnpm
-    #     - id: yarn
-    # - id: package_management
-    #   year: 2021
-    #   template: project
-
-    # - id: package_registries
-    #   year: 2021
-    #   template: multiple
-    #   options:
-    #     - id: npm
-    #     - id: github
-    #     - id: jspm
-    #     - id: private_registry
-    # - id: package_registries
-    #   year: 2021
-    #   template: project
 
     - id: javascript_flavors
       year: 2021
@@ -611,6 +650,16 @@
     #   template: others
     #   matchTags: [tools]
 
+    # - id: code_analysis
+    #   template: multiple
+    #   options:
+    #     - id: prettier
+    #     - id: eslint
+    #     - id: sonarqube
+    # - id: code_analysis
+    #   template: others
+    #   matchTags: [tools]
+
     # - id: browsers
     #   template: multiple
     #   options:
@@ -648,18 +697,33 @@
     #     - id: testing_tools
     #     - id: vision_simulator
 
-    - id: tool_evaluation
-      year: 2021
-      template: bracket
-      options:
-        - id: learning_curve_documentation # is a tool is easy to learn?
-        - id: momentum_popularity # does it have a lot of hype?
-        - id: user_base_size # is it a well-established option?
-        - id: developer_experience_tooling # does it provide a good developer experience?
-        - id: performance_user_experience # does it provide a good user experience?
-        - id: creator_team # is it backed by a well-known/well-funded team?
-        - id: accessibility_features # does it implement accessibility features well?
-        - id: community_inclusivity # does it have a good community?
+    # - id: backend_as_a_service
+    #   template: multiple
+    #   options:
+    #     - id: firebase
+    #     - id: aws_amplify
+    #     - id: supabase
+    #     - id: nhost
+    #     - id: realm
+    #     - id: parse
+    #     - id: back4app
+    # - id: backend_as_a_service
+    #   template: others
+    #   matchTags: [tools]
+
+
+    # - id: tool_evaluation
+    #   year: 2021
+    #   template: bracket
+    #   options:
+    #     - id: learning_curve_documentation # is a tool is easy to learn?
+    #     - id: momentum_popularity # does it have a lot of hype?
+    #     - id: user_base_size # is it a well-established option?
+    #     - id: developer_experience_tooling # does it provide a good developer experience?
+    #     - id: performance_user_experience # does it provide a good user experience?
+    #     - id: creator_team # is it backed by a well-known/well-funded team?
+    #     - id: accessibility_features # does it implement accessibility features well?
+    #     - id: community_inclusivity # does it have a good community?
 
 ######################################################
 #########                USAGE               #########
@@ -673,7 +737,20 @@
       year: 2022
       template: slider
 
+    - id: usage_type
+      year: 2022
+      template: single
+      allowother: true
+      options:
+        - id: professionally
+        - id: student
+        - id: hobby
+    # - id: usage_type
+    #   matchTags: [usage_types]
+    #   template: others
+
     - id: what_do_you_use_js_for
+      year: 2022
       template: multiple
       options:
         - id: frontend_development
@@ -691,21 +768,25 @@
       template: others
 
     - id: js_app_patterns
+      year: 2022
       template: multiple
+      itemProperties:
+        cutoff: 0
       options:
         - id: single_page_app
         - id: multiple_page_app
-        - id: static_site_rendering
-        - id: server_side_generation
+        - id: static_site_generation
+        - id: server_side_rendering
         - id: partial_hydration
         - id: progressive_rehydration
-        - id: selective_hydration
         - id: islands_architecture
         - id: progressive_enhancement
         - id: incremental_static_generation
         - id: streaming_ssr
         - id: resumability
+        - id: edge_rendering
     - id: js_app_patterns
+      year: 2022
       matchTags: [js_patterns]
       template: others
 
@@ -733,7 +814,8 @@
 
     - id: js_pain_points
       year: 2021
-      template: bracket
+      # template: bracket
+      template: top_n
       options:
         - id: state_management
         - id: architecture
@@ -743,6 +825,7 @@
         - id: async_code
         - id: writing_modules
         - id: date_management
+
     - id: js_pain_points
       year: 2021
       sectionSlug: opinions_others
@@ -751,7 +834,8 @@
 
     - id: currently_missing_from_js
       year: 2021
-      template: bracket
+      # template: bracket
+      template: top_n
       options:
         - id: static_typing
         - id: standard_library
@@ -763,6 +847,12 @@
         - id: observable
 
     - id: currently_missing_from_js
+      sectionSlug: opinions_others
+      template: others
+      matchTags: [js_missing_features]
+
+    - id: pick_of_the_year
+      year: 2022
       sectionSlug: opinions_others
       template: others
       matchTags: [js_missing_features]
@@ -807,12 +897,12 @@
         # - id: overreacted
         # - id: kentcdodds
 
+        - id: medium
+        - id: devto
         - id: css_tricks
-        - id: a_list_apart
         - id: smashing_magazine
         - id: codrops
         - id: sitepoint
-        - id: devto
         - id: daily_js
         - id: echo_js
         - id: front_end_front
@@ -821,15 +911,13 @@
         - id: js_weekly
         - id: bestofjs
         - id: alligator
-        - id: medium
+        - id: a_list_apart
     - id: blogs_news_magazines
       template: others
       matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
 
     - id: sites_courses
       template: multiple
-      itemProperties:
-        cutoff: 12
       options:
         - id: stack_overflow
         - id: udemy
@@ -850,14 +938,13 @@
         - id: o_reilly
         - id: pluralsight
         - id: linkedin_learning
-        - id: pluralsight
         - id: designcode
         - id: academind
         - id: ui_dev
         - id: vue_mastery
         - id: newline
         - id: epic_react
-        - id: midu_dev
+        - id: miguel_angel_duran
         - id: levelup
         - id: doka
     - id: sites_courses
@@ -868,6 +955,8 @@
       template: multiple
       options:
         - id: fireship
+        - id: kevin_j_powell
+        - id: fun_fun_function
         - id: theo_browne
         - id: tina_huang
         - id: jason_goodison # https://www.youtube.com/c/JasonGoodison/videos
@@ -876,37 +965,35 @@
         - id: brad_traversy
         - id: clever_programmer # rafeh_qazi https://www.youtube.com/c/CleverProgrammer
         - id: ben_awad # https://www.youtube.com/channel/UC-8QAzbLcRglXeN_MY9blyw
-        - id: kevin_powell
         - id: web_dev_simplified # kyle cook https://www.youtube.com/c/WebDevSimplified/
         - id: coding_train # Daniel Shiffman https://www.youtube.com/user/shiffman?app=desktop
         - id: net_ninja # https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg?app=desktop
+        - id: the_primeagen # https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg?app=desktop
     - id: video_creators
       template: others
-      matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
+      matchTags: [video_creators, youtube, courses, people, sites, newsletters, socialmedia]
 
     - id: podcasts
       template: multiple
-      itemProperties:
-        cutoff: 12
       options:
         - id: syntaxfm
         - id: js_party
         - id: changelog
         - id: http_203
         - id: shop_talk_show
-        - id: web_standards_ru
         - id: full_stack_radio
         - id: javascript_jabber
         - id: front_end_happy_hour
         - id: react_podcast
-        - id: software_engineering_daily
         - id: ladybug
+        - id: web_standards_ru
+        - id: software_engineering_daily
         - id: big_web_show
         - id: jamstack_radio
         - id: web_platform_podcast
         - id: modern_web
         - id: codepen_radio
-        - id: real_talk_javascript
+        - id: web_rush
         - id: frontend_weekend
         - id: frontend_first
         - id: a11y_rules
@@ -935,6 +1022,7 @@
         - id: codingame_survey
         - id: uxtools_survey
         - id: postman_survey
+        - id: jamstack_survey
     - id: other_surveys
       template: others
       matchTags: [surveys]
