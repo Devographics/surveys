@@ -1,0 +1,48 @@
+query {
+  survey(survey: state_of_graphql) {
+    demographics {
+      yearly_salary_all_years_of_experience: yearly_salary(filters: {}, options: {}, facet: null) {
+        keys
+        year(year: 2022) {
+          year
+          facets {
+            id
+            type
+            mean
+            buckets {
+              id
+              count
+              percentage_question
+              percentage_survey
+              percentage_facet
+            }
+          }
+        }
+      }
+      yearly_salary_by_years_of_experience: yearly_salary(filters: {}, options: {facetSort:{order:desc,property:"mean"},facetMinCount:100}, facet: years_of_experience) {
+        keys
+        year(year: 2022) {
+          year
+          facets {
+            id
+            type
+            mean
+            completion {
+              count
+              percentage_question
+              percentage_survey
+              total
+            }
+            buckets {
+              id
+              count
+              percentage_question
+              percentage_survey
+              percentage_facet
+            }
+          }
+        }
+      }
+    }
+  }
+}

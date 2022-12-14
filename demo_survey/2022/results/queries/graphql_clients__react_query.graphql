@@ -1,0 +1,44 @@
+query {
+    survey(survey: state_of_graphql) {
+        react_query_experience: tool(id: react_query) {
+            id
+            entity {
+                name
+                nameClean
+                nameHtml
+                homepage {
+                    url
+                }
+                description
+                github {
+                    name
+                    url
+                }
+                npm {
+                    name
+                    url
+                }
+            }
+            experience {
+                keys
+                all_years {
+                    year
+                    completion {
+                        total
+                        count
+                        percentage_survey
+                    }
+                    facets {
+                        buckets {
+                            id
+                            count
+                            countDelta
+                            percentage_survey
+                            percentage_question
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
