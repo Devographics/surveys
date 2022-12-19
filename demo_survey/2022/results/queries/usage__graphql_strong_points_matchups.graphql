@@ -1,0 +1,31 @@
+query {
+    survey(survey: state_of_graphql) {
+        graphql_strong_points_matchups: bracket_matchups(id: usage__graphql_strong_points, filters: {}, options: {}) {
+            id
+            year(year: 2022) {
+                year
+                completion {
+                    total
+                    count
+                    percentage_survey
+                }
+                facets {
+                    completion {
+                        total
+                        count
+                        percentage_survey
+                        percentage_question
+                    }
+                    buckets {
+                        id
+                        matchups {
+                            id
+                            count
+                            percentage
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
