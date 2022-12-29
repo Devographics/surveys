@@ -1,0 +1,49 @@
+query {
+    survey(survey: state_of_js) {
+        storybook_experience: tool(id: storybook) {
+            id
+            entity {
+                name
+                nameClean
+                nameHtml
+                homepage {
+                    url
+                }
+                description
+                github {
+                    name
+                    url
+                }
+                npm {
+                    name
+                    url
+                }
+            }
+            comments {
+                year(year: 2022) {
+                    count
+                }
+            }
+            experience {
+                keys
+                all_years {
+                    year
+                    completion {
+                        total
+                        count
+                        percentage_survey
+                    }
+                    facets {
+                        buckets {
+                            id
+                            count
+                            countDelta
+                            percentage_survey
+                            percentage_question
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

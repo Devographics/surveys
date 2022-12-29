@@ -1,0 +1,36 @@
+query {
+    survey(survey: state_of_js) {
+        testing_linechart: tools_rankings(ids: [jest,mocha,storybook,cypress,ava,jasmine,puppeteer,testing_library,playwright,webdriverio,vitest,selenium,testcafe]) {
+            ids
+            years
+            experience {
+                id
+                entity {
+                    name
+                    nameClean
+                    nameHtml
+                }
+                usage {
+                    year
+                    rank
+                    percentage_question
+                }
+                awareness {
+                    year
+                    rank
+                    percentage_question
+                }
+                interest {
+                    year
+                    rank
+                    percentage_question
+                }
+                satisfaction {
+                    year
+                    rank
+                    percentage_question
+                }
+            }
+        }
+    }
+}

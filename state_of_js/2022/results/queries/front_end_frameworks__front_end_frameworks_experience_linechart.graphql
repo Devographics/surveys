@@ -1,0 +1,36 @@
+query {
+    survey(survey: state_of_js) {
+        front_end_frameworks_linechart: tools_rankings(ids: [react,vuejs,angular,preact,ember,svelte,alpinejs,litelement,solid,qwik,stencil]) {
+            ids
+            years
+            experience {
+                id
+                entity {
+                    name
+                    nameClean
+                    nameHtml
+                }
+                usage {
+                    year
+                    rank
+                    percentage_question
+                }
+                awareness {
+                    year
+                    rank
+                    percentage_question
+                }
+                interest {
+                    year
+                    rank
+                    percentage_question
+                }
+                satisfaction {
+                    year
+                    rank
+                    percentage_question
+                }
+            }
+        }
+    }
+}

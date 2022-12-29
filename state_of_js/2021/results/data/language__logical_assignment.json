@@ -7,9 +7,7 @@
           "name": "Logical Assignment",
           "nameClean": null,
           "nameHtml": null,
-          "homepage": {
-            "url": null
-          },
+          "homepage": null,
           "caniuse": {
             "name": "mdn-javascript_operators_logical_and_assignment",
             "url": "https://caniuse.com/mdn-javascript_operators_logical_and_assignment"
@@ -18,9 +16,15 @@
             "locale": "en-US",
             "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment",
             "title": "Logical AND assignment (&&=)",
-            "summary": "The logical AND assignment (x &&= y) operator only assigns if\n  x is truthy."
+            "summary": "The logical AND assignment (x &&= y) operator only assigns if x is truthy."
           },
-          "example": null
+          "example": {
+            "language": "js",
+            "code": "const a = { duration: 50, title: '' };\n\na.duration ||= 10;\nconsole.log(a.duration);\n// expected output: 50\n\na.title ||= 'title is empty.';\nconsole.log(a.title);\n// expected output: \"title is empty\"\n"
+          }
+        },
+        "comments": {
+          "year": null
         },
         "experience": {
           "keys": [

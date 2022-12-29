@@ -1,0 +1,32 @@
+query {
+    survey(survey: state_of_js) {
+        state_of_the_web_happiness: happiness(id: state_of_the_web) {
+            keys
+            year(year: 2022) {
+                year
+                mean
+                completion {
+                    total
+                    count
+                    percentage_survey
+                }
+                facets {
+                    id
+                    type
+                    completion {
+                        total
+                        percentage_question
+                        percentage_survey
+                        count
+                    }
+                    buckets {
+                        id
+                        count
+                        percentage_question
+                        percentage_survey
+                    }
+                }
+            }
+        }
+    }
+}

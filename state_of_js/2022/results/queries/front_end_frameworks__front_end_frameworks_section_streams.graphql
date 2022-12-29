@@ -1,0 +1,37 @@
+query {
+    survey(survey: state_of_js) {
+        front_end_frameworks_streams: tools(ids: [react,vuejs,angular,preact,ember,svelte,alpinejs,litelement,solid,qwik,stencil]) {
+            id
+            entity {
+                name
+                nameClean
+                nameHtml
+                homepage {
+                    url
+                }
+                github {
+                    url
+                }
+            }
+            experience {
+                keys
+                all_years {
+                    year
+                    completion {
+                        total
+                        count
+                        percentage_survey
+                    }
+                    facets {
+                        buckets {
+                            id
+                            count
+                            percentage_question
+                            percentage_survey
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

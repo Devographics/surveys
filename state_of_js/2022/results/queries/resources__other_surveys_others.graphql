@@ -1,0 +1,42 @@
+query {
+    survey(survey: state_of_js) {
+        other_surveys_others: resources(id: other_surveys_others, filters: {}, options: {cutoff:5}) {
+            id
+            year(year: 2022) {
+                year
+                completion {
+                    total
+                    count
+                    percentage_survey
+                }
+                facets {
+                    id
+                    type
+                    completion {
+                        total
+                        percentage_question
+                        percentage_survey
+                        count
+                    }
+                    buckets {
+                        id
+                        count
+                        percentage_question
+                        percentage_survey
+                        entity {
+                            name
+                            nameClean
+                            nameHtml
+                            homepage {
+                                url
+                            }
+                            github {
+                                url
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
