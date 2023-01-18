@@ -1,7 +1,8 @@
 query {
     survey(survey: state_of_js) {
         demographics {
-            source (filters: {}, options: {limit:20}, facet: null){
+            # fragmentStart
+            source: source (filters: {}, options: {limit:20}, facet: null){
                 year(year: 2022) {
                     year
                     completion {
@@ -38,6 +39,7 @@ query {
                     }
                 }
             }
+            # fragmentEnd
         }
     }
 }

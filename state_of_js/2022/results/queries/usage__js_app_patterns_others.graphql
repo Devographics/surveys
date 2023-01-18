@@ -1,5 +1,6 @@
 query {
     survey(survey: state_of_js) {
+        # fragmentStart
         js_app_patterns_others: usage(id: js_app_patterns_others, filters: {}, options: {limit:15}) {
             id
             year(year: 2022) {
@@ -67,5 +68,6 @@ query {
                 }
             }
         }
+        # fragmentEnd
     }
 }
