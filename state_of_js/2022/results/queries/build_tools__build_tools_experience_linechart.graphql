@@ -1,9 +1,10 @@
 query {
     survey(survey: state_of_js) {
-        build_tools_linechart: tools_rankings(ids: [webpack,parcel,gulp,rollup,browserify,tsc,rome,snowpack,swc,esbuild,vite,wmr,turbopack]) {
+        # fragmentStart
+        build_tools_experience_linechart: tools_rankings(ids: [webpack,parcel,gulp,rollup,browserify,tsc,rome,snowpack,swc,esbuild,vite,wmr,turbopack]) {
             ids
             years
-            experience {
+            experience(filters: {}) {
                 id
                 entity {
                     name
@@ -32,5 +33,6 @@ query {
                 }
             }
         }
+        # fragmentEnd
     }
 }

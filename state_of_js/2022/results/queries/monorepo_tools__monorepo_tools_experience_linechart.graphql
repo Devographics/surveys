@@ -1,9 +1,10 @@
 query {
     survey(survey: state_of_js) {
-        monorepo_tools_linechart: tools_rankings(ids: [rush,turborepo,yarn_workspaces,yalc,lerna,npm_workspaces,pnpm,nx]) {
+        # fragmentStart
+        monorepo_tools_experience_linechart: tools_rankings(ids: [rush,turborepo,yarn_workspaces,yalc,lerna,npm_workspaces,pnpm,nx]) {
             ids
             years
-            experience {
+            experience(filters: {}) {
                 id
                 entity {
                     name
@@ -32,5 +33,6 @@ query {
                 }
             }
         }
+        # fragmentEnd
     }
 }

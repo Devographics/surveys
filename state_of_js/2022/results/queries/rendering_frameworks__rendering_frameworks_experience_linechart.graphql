@@ -1,9 +1,10 @@
 query {
     survey(survey: state_of_js) {
-        rendering_frameworks_linechart: tools_rankings(ids: [nextjs,nuxt,gatsby,remix,astro,eleventy,sveltekit,docusaurus]) {
+        # fragmentStart
+        rendering_frameworks_experience_linechart: tools_rankings(ids: [nextjs,nuxt,gatsby,remix,astro,eleventy,sveltekit,docusaurus]) {
             ids
             years
-            experience {
+            experience(filters: {}) {
                 id
                 entity {
                     name
@@ -32,5 +33,6 @@ query {
                 }
             }
         }
+        # fragmentEnd
     }
 }

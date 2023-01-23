@@ -1,5 +1,6 @@
 query {
     survey(survey: state_of_js) {
+        # fragmentStart
         testing_marimekko: tools(ids: [jest,mocha,storybook,cypress,ava,jasmine,puppeteer,testing_library,playwright,webdriverio,vitest,selenium,testcafe]) {
             id
             entity {
@@ -7,7 +8,7 @@ query {
                 nameClean
                 nameHtml
             }
-            experience {
+            experience(filters: {}) {
                 keys
                 year(year: 2022) {
                     year
@@ -27,5 +28,6 @@ query {
                 }
             }
         }
+        # fragmentEnd
     }
 }
