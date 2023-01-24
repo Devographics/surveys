@@ -1,9 +1,10 @@
 query {
     survey(survey: state_of_css) {
+        # fragmentStart
         css_frameworks_rankings: tools_rankings(ids: [bootstrap,materialize_css,ant_design,semantic_ui,bulma,foundation,ui_kit,tachyons,primer,tailwind_css,pure_css,halfmoon]) {
             ids
             years
-            experience {
+            experience(filters: {}) {
                 id
                 entity {
                     name
@@ -32,5 +33,6 @@ query {
                 }
             }
         }
+        # fragmentEnd
     }
 }
