@@ -1,9 +1,11 @@
 query {
-    survey(survey: state_of_js) {
-        other_surveys_others: opinions(id: other_surveys_others, filters: {}, options: {cutoff:5}) {
-            id
-            year(year: 2021) {
+    survey(survey: state_of_css) {
+        # fragmentStart
+        state_of_the_web_happiness: happiness(id: state_of_the_web) {
+            keys
+            year(year: 2022) {
                 year
+                mean
                 completion {
                     total
                     count
@@ -23,20 +25,10 @@ query {
                         count
                         percentage_question
                         percentage_survey
-                        entity {
-                            name
-                            nameClean
-                            nameHtml
-                            homepage {
-                                url
-                            }
-                            github {
-                                url
-                            }
-                        }
                     }
                 }
             }
         }
+        # fragmentEnd
     }
 }

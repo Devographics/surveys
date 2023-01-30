@@ -1,6 +1,7 @@
 query {
     survey(survey: state_of_js) {
-        testcafe_experience: tool(id: testcafe) {
+        # fragmentStart
+        testcafe: tool(id: testcafe) {
             id
             entity {
                 name
@@ -24,7 +25,7 @@ query {
                     count
                 }
             }
-            experience {
+            experience(filters: {}, facet: null) {
                 keys
                 all_years {
                     year
@@ -45,5 +46,6 @@ query {
                 }
             }
         }
+        # fragmentEnd
     }
 }
