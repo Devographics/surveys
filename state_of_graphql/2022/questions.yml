@@ -85,13 +85,13 @@
     - id: absinthe
     - id: graphql_go
 
-    - id: graphql_servers
+    - id: graphql_servers_others
       intlId: tools.other_tools
       # template: project
       template: others
       sectionSlug: tools_others
       matchTags: [libraries, graphql]
-    - id: graphql_servers
+    - id: graphql_servers_happiness
       intlId: tools.happiness
       template: happiness
       sectionSlug: happiness
@@ -111,13 +111,13 @@
     - id: graphql_request
     - id: no_client
 
-    - id: graphql_clients
+    - id: graphql_clients_others
       intlId: tools.other_tools
       # template: project
       template: others
       matchTags: [libraries, graphql]
       sectionSlug: tools_others
-    - id: graphql_clients
+    - id: graphql_clients_happiness
       intlId: tools.happiness
       template: happiness
       sectionSlug: happiness
@@ -142,13 +142,13 @@
     - id: graphene
     - id: graphql_mesh
 
-    - id: api_generators
+    - id: api_generators_others
       intlId: tools.other_tools
       # template: project
       template: others
       matchTags: [libraries, graphql]
       sectionSlug: tools_others
-    - id: api_generators
+    - id: api_generators_happiness
       intlId: tools.happiness
       template: happiness
       sectionSlug: happiness
@@ -170,13 +170,13 @@
     - id: genql
     - id: graphql_code_generator
 
-    - id: schema_builders
+    - id: schema_builders_others
       intlId: tools.other_tools
       # template: project
       template: others
       matchTags: [libraries, graphql]
       sectionSlug: tools_others
-    - id: schema_builders
+    - id: schema_builders_happiness
       intlId: tools.happiness
       template: happiness
       sectionSlug: happiness
@@ -199,7 +199,7 @@
         - id: stepzen
         - id: mulesoft
         - id: graphql_modules
-    - id: combining_schemas
+    - id: combining_schemas_others
       template: others
       matchTags: [graphql]
 
@@ -215,7 +215,7 @@
         - id: sveltekit
         - id: create_react_app
         - id: astro
-    - id: web_frameworks
+    - id: web_frameworks_others
       template: others
       matchTags: [libraries, graphql, frameworks]
 
@@ -231,7 +231,7 @@
         - id: mongodb
         - id: elasticsearch
         - id: dynamodb
-    - id: databases
+    - id: databases_others
       template: others
       matchTags: [libraries, databases]
 
@@ -259,7 +259,7 @@
         - id: elixir
         - id: clojure
         - id: julia
-    - id: server_languages
+    - id: server_languages_others
       template: others
       matchTags: [languages]
 
@@ -275,7 +275,7 @@
         - id: postman
         - id: graphql_editor
         - id: apollo_sandbox
-    - id: graphql_ides
+    - id: graphql_ides_others
       template: others
       matchTags: [libraries, graphql]
 
@@ -298,7 +298,7 @@
         - id: prisma
         - id: graphql_eslint
         - id: apollo_workbench
-    - id: other_tools
+    - id: other_tools_others
       template: others
       matchTags: [libraries, graphql]
 
@@ -325,7 +325,7 @@
         - id: public_apis
         - id: personal_apis
         - id: private_apis
-    - id: api_type
+    - id: api_type_others
       template: others
       matchTags: [graphql]
 
@@ -337,7 +337,7 @@
         - id: mobile_devices
         - id: desktop_apps
         - id: other_servers
-    - id: client_type
+    - id: client_type_others
       template: others
       matchTags: [graphql]
 
@@ -352,7 +352,7 @@
         - id: rest_apis
         - id: other_graphql_apis
         - id: other_api_protocols
-    - id: data_sources
+    - id: data_sources_others
       template: others
       matchTags: [graphql]
 
@@ -363,7 +363,7 @@
         - id: code_first
         - id: schema_first
         - id: database_first
-    - id: code_generation_type
+    - id: code_generation_type_others
       template: others
       matchTags: [graphql]
 
@@ -376,7 +376,7 @@
         - id: server_resolvers
         - id: fragments_or_queries
         - id: client_code # e.g. React hooks
-    - id: code_generation_target
+    - id: code_generation_target_others
       template: others
       matchTags: [graphql]
 
@@ -409,7 +409,7 @@
         - id: agriculture
         - id: transport
         - id: manufacturing
-    - id: industry_sector
+    - id: industry_sector_others
       template: others
       matchTags: [industry_sectors]
 
@@ -427,7 +427,7 @@
         - id: aggregating_requests
         - id: community
         - id: fragment_colocation
-    - id: graphql_strong_points
+    - id: graphql_strong_points_others
       sectionSlug: usage_others
       template: others
       matchTags: [graphql_strong_points]
@@ -443,12 +443,12 @@
         - id: testing
         - id: error_handling
         - id: client_side_caching
-    - id: graphql_pain_points
+    - id: graphql_pain_points_others
       sectionSlug: usage_others
       template: others
       matchTags: [graphql_pain_points]
 
-    - id: state_of_graphql
+    - id: state_of_graphql_happiness
       template: happiness
       sectionSlug: happiness
 
@@ -474,10 +474,21 @@
         - id: on_the_job
         - id: mentoring
         - id: self_directed
-    - id: first_steps
+    - id: first_steps_others
       intlId: resources.first_steps_graphql.others
       template: others
-      matchTags: [first_steps, courses, podcasts, people, youtube, sites, newsletters, socialmedia, graphql]
+      matchTags:
+        [
+          first_steps,
+          courses,
+          podcasts,
+          people,
+          youtube,
+          sites,
+          newsletters,
+          socialmedia,
+          graphql,
+        ]
 
     - id: sites_courses
       intlId: resources.sites_courses_graphql
@@ -494,16 +505,17 @@
         - id: egghead
         - id: newline
         - id: edx
-    - id: sites_courses
+    - id: sites_courses_others
       template: others
-      matchTags: [courses, people, youtube, sites, newsletters, socialmedia, graphql]
+      matchTags:
+        [courses, people, youtube, sites, newsletters, socialmedia, graphql]
 
-    - id: podcasts
+    - id: podcasts_others
       intlId: resources.podcasts_graphql.others
       template: others
       matchTags: [podcasts, people, sites, graphql]
 
-    - id: people
+    - id: people_others
       intlId: resources.people_graphql.others
       template: others
       matchTags: [people, youtube, graphql]
@@ -517,7 +529,7 @@
         - id: codingame_survey
         - id: uxtools_survey
         - id: postman_survey
-    - id: other_surveys
+    - id: other_surveys_others
       template: others
       matchTags: [surveys]
 
@@ -632,4 +644,3 @@
       hidden: true
     - id: email_temporary
       template: email2
-

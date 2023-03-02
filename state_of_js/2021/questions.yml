@@ -11,7 +11,6 @@
   template: feature
   slug: features
   questions:
-
     - id: features_intro
       template: help
 
@@ -132,7 +131,6 @@
   template: tool
   slug: tools
   questions:
-
     - id: tools_intro
       template: help
 
@@ -147,11 +145,11 @@
     - id: stimulus
     - id: solid
       year: 2021
-    - id: front_end_frameworks
+    - id: front_end_frameworks_prenormalized
       intlId: tools.other_tools
       template: project
       sectionSlug: tools_others
-    - id: front_end_frameworks
+    - id: front_end_frameworks_happiness
       intlId: tools.happiness
       template: happiness
       sectionSlug: happiness
@@ -211,11 +209,11 @@
     - id: sveltekit
       year: 2021
 
-    - id: back_end_frameworks
+    - id: back_end_frameworks_prenormalized
       intlId: tools.other_tools
       template: project
       sectionSlug: tools_others
-    - id: back_end_frameworks
+    - id: back_end_frameworks_happiness
       intlId: tools.happiness
       template: happiness
       sectionSlug: happiness
@@ -236,11 +234,11 @@
     - id: webdriverio
     - id: vitest
       year: 2021
-    - id: testing
+    - id: testing_prenormalized
       intlId: tools.other_tools
       template: project
       sectionSlug: tools_others
-    - id: testing
+    - id: testing_happiness
       intlId: tools.happiness
       template: happiness
       sectionSlug: happiness
@@ -295,15 +293,14 @@
     - id: quasar
     - id: tauri
       year: 2021
-    - id: mobile_desktop
+    - id: mobile_desktop_prenormalized
       intlId: tools.other_tools
       template: project
       sectionSlug: tools_others
-    - id: mobile_desktop
+    - id: mobile_desktop_happiness
       intlId: tools.happiness
       template: happiness
       sectionSlug: happiness
-
 
 - id: build_tools
   template: tool
@@ -326,11 +323,11 @@
     - id: wmr
       year: 2021
 
-    - id: build_tools
+    - id: build_tools_prenormalized
       intlId: tools.other_tools
       template: project
       sectionSlug: tools_others
-    - id: build_tools
+    - id: build_tools_happiness
       intlId: tools.happiness
       template: happiness
       sectionSlug: happiness
@@ -357,11 +354,11 @@
     - id: nx
       year: 2021
 
-    - id: monorepo_tools
+    - id: monorepo_tools_prenormalized
       intlId: tools.other_tools
       template: project
       sectionSlug: tools_others
-    - id: monorepo_tools
+    - id: monorepo_tools_happiness
       intlId: tools.happiness
       template: happiness
       sectionSlug: happiness
@@ -389,7 +386,7 @@
         - id: axios
         - id: d3
         - id: stdlib
-    - id: libraries
+    - id: libraries_prenormalized
       template: project
 
     - id: utilities
@@ -406,7 +403,7 @@
           year: 2021
         - id: verdaccio
           year: 2021
-    - id: utilities
+    - id: utilities_prenormalized
       template: project
 
     - id: runtimes
@@ -421,7 +418,7 @@
           year: 2021
         - id: serverless_workers
           year: 2021
-    - id: runtimes
+    - id: runtimes_others
       template: others
       matchTags: [libraries, other]
 
@@ -461,7 +458,7 @@
         - id: coffeescript
         - id: rescript
         - id: imba
-    - id: javascript_flavors
+    - id: javascript_flavors_others
       year: 2021
       template: others
       matchTags: [javascript_flavors, libraries]
@@ -489,7 +486,7 @@
         - id: clojure
         - id: elm
         - id: julia
-    - id: non_js_languages
+    - id: non_js_languages_others
       template: others
       matchTags: [languages]
 
@@ -563,14 +560,23 @@
         - id: on_the_job
         - id: mentoring
         - id: self_directed
-    - id: first_steps
+    - id: first_steps_others
       template: others
-      matchTags: [first_steps, courses, podcasts, people, youtube, sites, newsletters, socialmedia]
+      matchTags:
+        [
+          first_steps,
+          courses,
+          podcasts,
+          people,
+          youtube,
+          sites,
+          newsletters,
+          socialmedia,
+        ]
 
     - id: blogs_news_magazines
       template: multiple
       options:
-
         #  removed in 2021 (personal blogs)
         # - id: david_walsh
         # - id: overreacted
@@ -591,7 +597,7 @@
         - id: bestofjs
         - id: alligator
         - id: medium
-    - id: blogs_news_magazines
+    - id: blogs_news_magazines_others
       template: others
       matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
 
@@ -612,7 +618,7 @@
         - id: egghead
         - id: newline
         - id: web_dev
-    - id: sites_courses
+    - id: sites_courses_others
       template: others
       matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
 
@@ -644,11 +650,11 @@
         - id: the_bike_shed
         - id: css_podcast
         - id: undefined_podcast
-    - id: podcasts
+    - id: podcasts_others
       template: others
       matchTags: [podcasts, people, sites]
 
-    - id: people
+    - id: people_others
       year: 2021
       template: others
       matchTags: [people, youtube]
@@ -687,7 +693,7 @@
         - id: async_code
         - id: writing_modules
         - id: date_management
-    - id: js_pain_points
+    - id: js_pain_points_others
       year: 2021
       sectionSlug: opinions_others
       template: others
@@ -706,15 +712,15 @@
         - id: better_date_management
         - id: observable
 
-    - id: currently_missing_from_js
+    - id: currently_missing_from_js_others
       sectionSlug: opinions_others
       template: others
       matchTags: [js_missing_features]
 
-    - id: state_of_the_web
+    - id: state_of_the_web_happiness
       template: happiness
       sectionSlug: happiness
-    - id: state_of_js
+    - id: state_of_js_happiness
       template: happiness
       sectionSlug: happiness
 
@@ -815,7 +821,7 @@
         - id: cognitive_impairments
         - id: not_listed
 
-    - id: disability_status
+    - id: disability_status_others
       year: 2021
       template: others
       matchTags: [disabilities]

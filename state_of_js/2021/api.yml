@@ -1,0 +1,89 @@
+- id: user_info
+  questions:
+    # - id: country
+    #   variables:
+    #     options: { limit: 20 }
+    #     fixedIds:
+    #       [
+    #         "USA",
+    #         "DEU",
+    #         "FRA",
+    #         "GBR",
+    #         "IND",
+    #         "CAN",
+    #         "POL",
+    #         "BRA",
+    #         "ESP",
+    #         "NLD",
+    #         "RUS",
+    #         "AUS",
+    #         "SWE",
+    #         "ITA",
+    #         "UKR",
+    #         "CZE",
+    #         "NOR",
+    #         "CHN",
+    #         "BEL",
+    #         "MEX",
+    #       ]
+
+    - id: locale
+      variables:
+        options: { cutoff: 20 }
+
+    - template: source
+      dataFunction: cleanUpSources
+      variables:
+        options: { limit: 20 }
+
+- id: features
+  questions:
+    - template: all_features
+
+    - template: knowledge_score
+
+- id: libraries
+  questions:
+    - template: all_tools
+
+    # - template: tools_arrows
+
+    # - template: tier_list
+
+    # - template: scatterplot_overview
+
+- id: front_end_frameworks
+  questions:
+    - template: section_tools
+
+    - template: section_tools_ratios
+
+- id: back_end_frameworks
+  questions:
+    - template: section_tools
+
+    - template: section_tools_ratios
+
+- id: testing
+  questions:
+    - template: section_tools
+
+    - template: section_tools_ratios
+
+- id: mobile_desktop
+  questions:
+    - template: section_tools
+
+    - template: section_tools_ratios
+
+- id: build_tools
+  questions:
+    - template: section_tools
+
+    - template: section_tools_ratios
+
+- id: monorepo_tools
+  questions:
+    - template: section_tools
+
+    - template: section_tools_ratios
