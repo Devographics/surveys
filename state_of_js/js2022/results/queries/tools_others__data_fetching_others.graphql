@@ -1,0 +1,32 @@
+
+query js2022Data_fetchingQuery {
+  query {
+    surveys {
+      state_of_js {
+        js2022 {
+          tools_others {
+            data_fetching {
+              id
+              responses {
+                current_edition {
+                  completion {
+                    count
+                    percentage_survey
+                    total
+                  }
+                  editionId
+                  buckets {
+                    count
+                    id
+                    percentage_question
+                    percentage_survey
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
