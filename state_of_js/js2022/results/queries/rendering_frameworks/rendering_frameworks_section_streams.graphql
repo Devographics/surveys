@@ -1,0 +1,33 @@
+query js2022renderingFrameworksSectionStreamsQuery {
+        surveys {
+        state_of_js {
+            js2022 {
+                rendering_frameworks {
+                    rendering_frameworks_section_streams: rendering_frameworks_allTools {
+                        items {
+                            id
+                            responsesundefined {
+                                allEditions {
+                                    editionId
+                                    year
+                                    buckets {
+                                        id
+                                        percentageQuestion
+                                        percentageSurvey
+                                        count
+                                    }
+                                    completion {
+                                        count
+                                        percentageSurvey
+                                        total
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

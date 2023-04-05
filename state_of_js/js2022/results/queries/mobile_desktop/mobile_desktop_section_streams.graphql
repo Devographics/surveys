@@ -1,0 +1,33 @@
+query js2022mobileDesktopSectionStreamsQuery {
+        surveys {
+        state_of_js {
+            js2022 {
+                mobile_desktop {
+                    mobile_desktop_section_streams: mobile_desktop_allTools {
+                        items {
+                            id
+                            responsesundefined {
+                                allEditions {
+                                    editionId
+                                    year
+                                    buckets {
+                                        id
+                                        percentageQuestion
+                                        percentageSurvey
+                                        count
+                                    }
+                                    completion {
+                                        count
+                                        percentageSurvey
+                                        total
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,33 @@
+query js2022librariesOthersQuery {
+    
+      surveys {
+        state_of_js {
+          js2022 {
+            other_tools {
+              libraries_others {
+            
+                responses(parameters: {limit:15}) {
+                  currentEdition {
+                
+                    completion {
+                      count
+                      percentageSurvey
+                      total
+                    }
+                    buckets {
+                      count
+                      id
+                      percentageQuestion
+                      percentageSurvey
+                  
+                  
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+}

@@ -1,0 +1,33 @@
+query js2022toolsArrowsQuery {
+        surveys {
+        state_of_js {
+            js2022 {
+                libraries {
+                    tools_arrows: allTools {
+                        items {
+                            id
+                            responsesundefined {
+                                allEditions {
+                                    year
+                                    editionId
+                                    buckets {
+                                        id
+                                        percentageQuestion
+                                        percentageSurvey
+                                        count
+                                    }
+                                    completion {
+                                        count
+                                        percentageSurvey
+                                        total
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

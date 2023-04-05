@@ -1,0 +1,26 @@
+query js2022featuresOverviewQuery {
+        surveys {
+        state_of_js {
+            js2022 {
+                features {
+                    features_overview: allFeatures {
+                        items {
+                            id
+                            responsesundefined {
+                                currentEdition {
+                                    buckets {
+                                        id
+                                        percentageQuestion
+                                        percentageSurvey
+                                        count
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

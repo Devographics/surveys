@@ -1,0 +1,33 @@
+query js2022sourceQuery {
+    
+      surveys {
+        state_of_js {
+          js2022 {
+            user_info {
+              source {
+            
+                responses(parameters: {limit:20}) {
+                  currentEdition {
+                
+                    completion {
+                      count
+                      percentageSurvey
+                      total
+                    }
+                    buckets {
+                      count
+                      id
+                      percentageQuestion
+                      percentageSurvey
+                  
+                  
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+}

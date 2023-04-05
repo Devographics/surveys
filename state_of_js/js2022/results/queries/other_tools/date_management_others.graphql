@@ -1,0 +1,33 @@
+query js2022dateManagementOthersQuery {
+    
+      surveys {
+        state_of_js {
+          js2022 {
+            other_tools {
+              date_management_others {
+            
+                responses(parameters: {limit:5}) {
+                  currentEdition {
+                
+                    completion {
+                      count
+                      percentageSurvey
+                      total
+                    }
+                    buckets {
+                      count
+                      id
+                      percentageQuestion
+                      percentageSurvey
+                  
+                  
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+}

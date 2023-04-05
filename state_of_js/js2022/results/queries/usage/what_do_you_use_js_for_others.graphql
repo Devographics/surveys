@@ -1,0 +1,33 @@
+query js2022whatDoYouUseJsForOthersQuery {
+    
+      surveys {
+        state_of_js {
+          js2022 {
+            usage {
+              what_do_you_use_js_for_others {
+            
+                responses(parameters: {limit:10}) {
+                  currentEdition {
+                
+                    completion {
+                      count
+                      percentageSurvey
+                      total
+                    }
+                    buckets {
+                      count
+                      id
+                      percentageQuestion
+                      percentageSurvey
+                  
+                  
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+}

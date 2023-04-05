@@ -1,0 +1,33 @@
+query js2022countryQuery {
+    
+      surveys {
+        state_of_js {
+          js2022 {
+            user_info {
+              country {
+            
+                responses(parameters: {limit:20}) {
+                  currentEdition {
+                
+                    completion {
+                      count
+                      percentageSurvey
+                      total
+                    }
+                    buckets {
+                      count
+                      id
+                      percentageQuestion
+                      percentageSurvey
+                  
+                  
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+}

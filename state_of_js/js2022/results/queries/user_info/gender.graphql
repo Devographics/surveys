@@ -1,0 +1,33 @@
+query js2022genderQuery {
+    
+      surveys {
+        state_of_js {
+          js2022 {
+            user_info {
+              gender {
+            
+                responses(parameters: {showNoAnswer:true}) {
+                  currentEdition {
+                
+                    completion {
+                      count
+                      percentageSurvey
+                      total
+                    }
+                    buckets {
+                      count
+                      id
+                      percentageQuestion
+                      percentageSurvey
+                  
+                  
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+}

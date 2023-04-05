@@ -1,0 +1,33 @@
+query js2022industrySectorOthersQuery {
+    
+      surveys {
+        state_of_js {
+          js2022 {
+            usage {
+              industry_sector_others {
+            
+                responses(parameters: {limit:15}) {
+                  currentEdition {
+                
+                    completion {
+                      count
+                      percentageSurvey
+                      total
+                    }
+                    buckets {
+                      count
+                      id
+                      percentageQuestion
+                      percentageSurvey
+                  
+                  
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+}

@@ -1,0 +1,33 @@
+query js2022buildToolsSectionStreamsQuery {
+        surveys {
+        state_of_js {
+            js2022 {
+                build_tools {
+                    build_tools_section_streams: build_tools_allTools {
+                        items {
+                            id
+                            responsesundefined {
+                                allEditions {
+                                    editionId
+                                    year
+                                    buckets {
+                                        id
+                                        percentageQuestion
+                                        percentageSurvey
+                                        count
+                                    }
+                                    completion {
+                                        count
+                                        percentageSurvey
+                                        total
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
