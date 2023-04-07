@@ -1,26 +1,30 @@
 query js2022knowledgeScoreQuery {
-    
-      surveys {
-        state_of_js {
-          js2022 {
-            features {
-              knowledge_score {
-            
-                responsesundefined {
-                  currentEdition {
+    dataAPI{
+        
+        surveys {
+          state_of_js {
+            js2022 {
+              features {
+                knowledge_score {
+          
+          
+                  responses(parameters: {enableCache:false}) {
+                    currentEdition {
+              
+                      completion {
+                        count
+                        percentageSurvey
+                        total
+                      }
+                      buckets {
+                        count
+                        id
+                        percentageQuestion
+                        percentageSurvey
                 
-                    completion {
-                      count
-                      percentageSurvey
-                      total
-                    }
-                    buckets {
-                      count
-                      id
-                      percentageQuestion
-                      percentageSurvey
-                  
-                  
+                
+                
+                      }
                     }
                   }
                 }
@@ -28,6 +32,6 @@ query js2022knowledgeScoreQuery {
             }
           }
         }
-      }
 
+    }
 }

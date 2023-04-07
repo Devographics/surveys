@@ -1,25 +1,27 @@
 query js2022frontEndFrameworksExperienceMarimekkoQuery {
-        surveys {
-        state_of_js {
-            js2022 {
-                front_end_frameworks {
-                    front_end_frameworks_experience_marimekko: front_end_frameworks_allTools {
-                        items {
-                            id
-                            responsesundefined {
-                                currentEdition {
-                                    editionId
-                                    year
-                                    buckets {
-                                        id
-                                        percentageQuestion
-                                        percentageSurvey
-                                        count
-                                    }
-                                    completion {
-                                        count
-                                        percentageSurvey
-                                        total
+    dataAPI{
+                surveys {
+            state_of_js {
+                js2022 {
+                    front_end_frameworks {
+                        front_end_frameworks_experience_marimekko: front_end_frameworks_allTools {
+                            items {
+                                id
+                                responses(parameters: {enableCache:false}) {
+                                    currentEdition {
+                                        editionId
+                                        year
+                                        buckets {
+                                            id
+                                            percentageQuestion
+                                            percentageSurvey
+                                            count
+                                        }
+                                        completion {
+                                            count
+                                            percentageSurvey
+                                            total
+                                        }
                                     }
                                 }
                             }
@@ -28,6 +30,6 @@ query js2022frontEndFrameworksExperienceMarimekkoQuery {
                 }
             }
         }
-    }
 
+    }
 }

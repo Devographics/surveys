@@ -1,26 +1,30 @@
 query js2022dataVisualizationOthersQuery {
-    
-      surveys {
-        state_of_js {
-          js2022 {
-            other_tools {
-              data_visualization_others {
-            
-                responses(parameters: {limit:5}) {
-                  currentEdition {
+    dataAPI{
+        
+        surveys {
+          state_of_js {
+            js2022 {
+              other_tools {
+                data_visualization_others {
+          
+          
+                  responses(parameters: {limit:5,enableCache:false}) {
+                    currentEdition {
+              
+                      completion {
+                        count
+                        percentageSurvey
+                        total
+                      }
+                      buckets {
+                        count
+                        id
+                        percentageQuestion
+                        percentageSurvey
                 
-                    completion {
-                      count
-                      percentageSurvey
-                      total
-                    }
-                    buckets {
-                      count
-                      id
-                      percentageQuestion
-                      percentageSurvey
-                  
-                  
+                
+                
+                      }
                     }
                   }
                 }
@@ -28,6 +32,6 @@ query js2022dataVisualizationOthersQuery {
             }
           }
         }
-      }
 
+    }
 }

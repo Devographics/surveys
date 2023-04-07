@@ -1,23 +1,25 @@
 query js2022allToolsQuery {
-        surveys {
-        state_of_js {
-            js2022 {
-                libraries {
-                    allTools {
-                        items {
-                            id
-                            responsesundefined {
-                                currentEdition {
-                                    buckets {
-                                        id
-                                        percentageQuestion
-                                        percentageSurvey
-                                        count
-                                    }
-                                    completion {
-                                        count
-                                        percentageSurvey
-                                        total
+    dataAPI{
+                surveys {
+            state_of_js {
+                js2022 {
+                    libraries {
+                        allTools {
+                            items {
+                                id
+                                responses(parameters: {enableCache:false}) {
+                                    currentEdition {
+                                        buckets {
+                                            id
+                                            percentageQuestion
+                                            percentageSurvey
+                                            count
+                                        }
+                                        completion {
+                                            count
+                                            percentageSurvey
+                                            total
+                                        }
                                     }
                                 }
                             }
@@ -26,6 +28,6 @@ query js2022allToolsQuery {
                 }
             }
         }
-    }
 
+    }
 }

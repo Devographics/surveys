@@ -1,26 +1,30 @@
 query js2022javascriptFlavorsOthersQuery {
-    
-      surveys {
-        state_of_js {
-          js2022 {
-            other_tools {
-              javascript_flavors_others {
-            
-                responses(parameters: {limit:10}) {
-                  currentEdition {
+    dataAPI{
+        
+        surveys {
+          state_of_js {
+            js2022 {
+              other_tools {
+                javascript_flavors_others {
+          
+          
+                  responses(parameters: {limit:10,enableCache:false}) {
+                    currentEdition {
+              
+                      completion {
+                        count
+                        percentageSurvey
+                        total
+                      }
+                      buckets {
+                        count
+                        id
+                        percentageQuestion
+                        percentageSurvey
                 
-                    completion {
-                      count
-                      percentageSurvey
-                      total
-                    }
-                    buckets {
-                      count
-                      id
-                      percentageQuestion
-                      percentageSurvey
-                  
-                  
+                
+                
+                      }
                     }
                   }
                 }
@@ -28,6 +32,6 @@ query js2022javascriptFlavorsOthersQuery {
             }
           }
         }
-      }
 
+    }
 }

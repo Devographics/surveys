@@ -1,26 +1,30 @@
 query js2022higherEducationDegreeQuery {
-    
-      surveys {
-        state_of_js {
-          js2022 {
-            user_info {
-              higher_education_degree {
-            
-                responses(parameters: {showNoAnswer:true}) {
-                  currentEdition {
+    dataAPI{
+        
+        surveys {
+          state_of_js {
+            js2022 {
+              user_info {
+                higher_education_degree {
+          
+          
+                  responses(parameters: {showNoAnswer:true,enableCache:false}) {
+                    currentEdition {
+              
+                      completion {
+                        count
+                        percentageSurvey
+                        total
+                      }
+                      buckets {
+                        count
+                        id
+                        percentageQuestion
+                        percentageSurvey
                 
-                    completion {
-                      count
-                      percentageSurvey
-                      total
-                    }
-                    buckets {
-                      count
-                      id
-                      percentageQuestion
-                      percentageSurvey
-                  
-                  
+                
+                
+                      }
                     }
                   }
                 }
@@ -28,6 +32,6 @@ query js2022higherEducationDegreeQuery {
             }
           }
         }
-      }
 
+    }
 }

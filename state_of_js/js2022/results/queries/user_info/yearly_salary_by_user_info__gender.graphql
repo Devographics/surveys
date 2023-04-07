@@ -1,35 +1,39 @@
 query js2022yearlySalaryByUserInfoGenderQuery {
-    
-      surveys {
-        state_of_js {
-          js2022 {
-            user_info {
-              yearly_salary_by_user_info__gender: yearly_salary {
-            
-                responses(facet: user_info__gender, parameters: {facetSort:{order:desc,property:mean},facetCutoff:100}) {
-                  currentEdition {
-                
-                    completion {
-                      count
-                      percentageSurvey
-                      total
-                    }
-                    buckets {
-                      count
-                      id
-                      percentageQuestion
-                      percentageSurvey
-                  
-                  
-        facetBuckets {
-            id
-            count
-            percentageQuestion
-            percentageSurvey
-            percentageFacet
+    dataAPI{
         
-        }
+        surveys {
+          state_of_js {
+            js2022 {
+              user_info {
+                yearly_salary_by_user_info__gender: yearly_salary {
+          
+          
+                  responses(facet: user_info__gender, parameters: {facetSort:{order:desc,property:mean},facetCutoff:100,enableCache:false}) {
+                    currentEdition {
+              
+                      completion {
+                        count
+                        percentageSurvey
+                        total
+                      }
+                      buckets {
+                        count
+                        id
+                        percentageQuestion
+                        percentageSurvey
+                
+                
+            facetBuckets {
+                id
+                count
+                percentageQuestion
+                percentageSurvey
+                percentageFacet
+        
+            }
 
+                
+                      }
                     }
                   }
                 }
@@ -37,6 +41,6 @@ query js2022yearlySalaryByUserInfoGenderQuery {
             }
           }
         }
-      }
 
+    }
 }

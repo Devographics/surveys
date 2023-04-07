@@ -1,26 +1,30 @@
 query js2022whatDoYouUseJsForQuery {
-    
-      surveys {
-        state_of_js {
-          js2022 {
-            usage {
-              what_do_you_use_js_for {
-            
-                responsesundefined {
-                  currentEdition {
+    dataAPI{
+        
+        surveys {
+          state_of_js {
+            js2022 {
+              usage {
+                what_do_you_use_js_for {
+          
+          
+                  responses(parameters: {enableCache:false}) {
+                    currentEdition {
+              
+                      completion {
+                        count
+                        percentageSurvey
+                        total
+                      }
+                      buckets {
+                        count
+                        id
+                        percentageQuestion
+                        percentageSurvey
                 
-                    completion {
-                      count
-                      percentageSurvey
-                      total
-                    }
-                    buckets {
-                      count
-                      id
-                      percentageQuestion
-                      percentageSurvey
-                  
-                  
+                
+                
+                      }
                     }
                   }
                 }
@@ -28,6 +32,6 @@ query js2022whatDoYouUseJsForQuery {
             }
           }
         }
-      }
 
+    }
 }

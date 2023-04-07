@@ -1,27 +1,31 @@
 query js2022buildingJsAppsOverlyComplexQuery {
-    
-      surveys {
-        state_of_js {
-          js2022 {
-            opinions {
-              building_js_apps_overly_complex {
-            
-                responsesundefined {
-                  allEditions {
-                    editionId
-      year
-                    completion {
-                      count
-                      percentageSurvey
-                      total
-                    }
-                    buckets {
-                      count
-                      id
-                      percentageQuestion
-                      percentageSurvey
-                  
-                  
+    dataAPI{
+        
+        surveys {
+          state_of_js {
+            js2022 {
+              opinions {
+                building_js_apps_overly_complex {
+          
+          
+                  responses(parameters: {enableCache:false}) {
+                    allEditions {
+                      editionId
+          year
+                      completion {
+                        count
+                        percentageSurvey
+                        total
+                      }
+                      buckets {
+                        count
+                        id
+                        percentageQuestion
+                        percentageSurvey
+                
+                
+                
+                      }
                     }
                   }
                 }
@@ -29,6 +33,6 @@ query js2022buildingJsAppsOverlyComplexQuery {
             }
           }
         }
-      }
 
+    }
 }

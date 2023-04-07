@@ -1,27 +1,31 @@
 query js2022jsMovingInRightDirectionQuery {
-    
-      surveys {
-        state_of_js {
-          js2022 {
-            opinions {
-              js_moving_in_right_direction {
-            
-                responsesundefined {
-                  allEditions {
-                    editionId
-      year
-                    completion {
-                      count
-                      percentageSurvey
-                      total
-                    }
-                    buckets {
-                      count
-                      id
-                      percentageQuestion
-                      percentageSurvey
-                  
-                  
+    dataAPI{
+        
+        surveys {
+          state_of_js {
+            js2022 {
+              opinions {
+                js_moving_in_right_direction {
+          
+          
+                  responses(parameters: {enableCache:false}) {
+                    allEditions {
+                      editionId
+          year
+                      completion {
+                        count
+                        percentageSurvey
+                        total
+                      }
+                      buckets {
+                        count
+                        id
+                        percentageQuestion
+                        percentageSurvey
+                
+                
+                
+                      }
                     }
                   }
                 }
@@ -29,6 +33,6 @@ query js2022jsMovingInRightDirectionQuery {
             }
           }
         }
-      }
 
+    }
 }
