@@ -31,15 +31,13 @@
     #         "MEX",
     #       ]
 
-    - id: locale
+    - template: locale
       variables:
         options: { cutoff: 20 }
 
-    - id: completion_stats
-      template: completion_stats
+    - template: completion_stats
 
     - template: source
-      dataFunction: cleanUpSources
       variables:
         options: { limit: 20 }
 

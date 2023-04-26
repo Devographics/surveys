@@ -164,11 +164,9 @@
     - id: front_end_frameworks_prenormalized
       intlId: tools.other_tools
       template: project
-      sectionSlug: tools_others
     - id: front_end_frameworks_happiness
       intlId: tools.happiness
       template: happiness
-      sectionSlug: happiness
 
 # removed in 2021
 # - id: datalayer
@@ -221,11 +219,9 @@
     - id: rendering_frameworks_prenormalized
       intlId: tools.other_tools
       template: project
-      sectionSlug: tools_others
     - id: rendering_frameworks_happiness
       intlId: tools.happiness
       template: happiness
-      sectionSlug: happiness
 
 # - id: back_end_frameworks
 #   template: tool
@@ -287,11 +283,9 @@
     - id: testing_prenormalized
       intlId: tools.other_tools
       template: project
-      sectionSlug: tools_others
     - id: testing_happiness
       intlId: tools.happiness
       template: happiness
-      sectionSlug: happiness
 
 # under consideration for 2022?
 # - id: graphics_animation
@@ -348,11 +342,9 @@
     - id: mobile_desktop_prenormalized
       intlId: tools.other_tools
       template: project
-      sectionSlug: tools_others
     - id: mobile_desktop_happiness
       intlId: tools.happiness
       template: happiness
-      sectionSlug: happiness
 
 - id: build_tools
   template: tool
@@ -382,11 +374,9 @@
     - id: build_tools_prenormalized
       intlId: tools.other_tools
       template: project
-      sectionSlug: tools_others
     - id: build_tools_happiness
       intlId: tools.happiness
       template: happiness
-      sectionSlug: happiness
 
 - id: monorepo_tools
   template: tool
@@ -413,11 +403,9 @@
     - id: monorepo_tools_prenormalized
       intlId: tools.other_tools
       template: project
-      sectionSlug: tools_others
     - id: monorepo_tools_happiness
       intlId: tools.happiness
       template: happiness
-      sectionSlug: happiness
 
 ######################################################
 #########             OTHER TOOLS            #########
@@ -428,6 +416,7 @@
   questions:
     - id: libraries
       template: multiple
+      # allowPrenormalized: true
       options:
         - id: immer
         - id: lodash
@@ -448,6 +437,7 @@
     - id: date_management
       year: 2022
       template: multiple
+      # allowPrenormalized: true
       options:
         - id: moment
         - id: dayjs
@@ -460,6 +450,7 @@
     - id: data_visualization
       year: 2022
       template: multiple
+      # allowPrenormalized: true
       options:
         - id: d3
         - id: mermaid
@@ -478,6 +469,7 @@
     - id: graphics_animation
       year: 2022
       template: multiple
+      # allowPrenormalized: true
       options:
         - id: three_js
         - id: theatre_js
@@ -495,6 +487,7 @@
     - id: data_fetching
       year: 2022
       template: multiple
+      # allowPrenormalized: true
       options:
         - id: trpc
         - id: apollo_client
@@ -509,6 +502,7 @@
     - id: backend_frameworks
       year: 2022
       template: multiple
+      # allowPrenormalized: true
       options:
         - id: express
         - id: nest
@@ -537,6 +531,7 @@
 
     - id: utilities
       template: multiple
+      # allowPrenormalized: true
       options:
         - id: babel
         # - id: prettier
@@ -554,6 +549,7 @@
 
     - id: runtimes
       template: multiple
+      # allowOther: true
       options:
         - id: browser_environment
         - id: node
@@ -570,6 +566,7 @@
 
     - id: edge_runtimes
       template: multiple
+      # allowOther: true
       year: 2022
       options:
         - id: aws_lambda
@@ -588,6 +585,7 @@
     - id: javascript_flavors
       year: 2021
       template: multiple
+      # allowOther: true
       options:
         - id: typescript
         - id: reason
@@ -605,6 +603,7 @@
 
     - id: non_js_languages
       template: multiple
+      # allowOther: true
       options:
         - id: php
         - id: ruby
@@ -734,7 +733,6 @@
     - id: usage_type
       year: 2022
       template: single
-      allowother: true
       options:
         - id: professionally
         - id: student
@@ -746,6 +744,7 @@
     - id: what_do_you_use_js_for
       year: 2022
       template: multiple
+      # allowOther: true
       options:
         - id: frontend_development
         - id: backend_development
@@ -764,7 +763,7 @@
     - id: industry_sector
       intlId: usage.industry_sector_js
       template: multiple
-      allowother: true
+      # allowOther: true
       options:
         - id: ecommerce
         - id: news_media
@@ -798,6 +797,7 @@
     - id: js_app_patterns
       year: 2022
       template: multiple
+      # allowOther: true
       itemProperties:
         cutoff: 0
       options:
@@ -844,6 +844,7 @@
       year: 2021
       # template: bracket
       template: top_n
+      # allowOther: true
       options:
         - id: state_management
         - id: architecture
@@ -864,6 +865,7 @@
       year: 2021
       # template: bracket
       template: top_n
+      # allowOther: true
       options:
         - id: static_typing
         - id: standard_library
@@ -887,10 +889,8 @@
 
     - id: state_of_the_web_happiness
       template: happiness
-      sectionSlug: happiness
     - id: state_of_js_happiness
       template: happiness
-      sectionSlug: happiness
 
 ######################################################
 #########             RESOURCES              #########
@@ -901,6 +901,7 @@
   questions:
     - id: first_steps
       template: multiple
+      # allowOther: true
       options:
         - id: books
         - id: videos
@@ -928,6 +929,7 @@
 
     - id: blogs_news_magazines
       template: multiple
+      # allowOther: true
       options:
         #  removed in 2021 (personal blogs)
         # - id: david_walsh
@@ -958,6 +960,7 @@
 
     - id: sites_courses
       template: multiple
+      # allowOther: true
       options:
         - id: stack_overflow
         - id: udemy
@@ -993,6 +996,7 @@
 
     - id: video_creators
       template: multiple
+      # allowOther: true
       options:
         - id: fireship
         - id: kevin_j_powell
@@ -1028,6 +1032,7 @@
 
     - id: podcasts
       template: multiple
+      # allowOther: true
       options:
         - id: syntaxfm
         - id: js_party
@@ -1065,7 +1070,7 @@
 
     - id: other_surveys
       template: multiple
-      allowother: true
+      # allowOther: true
       options:
         # - id: state_of_js_survey
         - id: state_of_css_survey
@@ -1087,95 +1092,24 @@
 - id: user_info
   slug: user_info
   questions:
-    - id: age
-      template: single
-      options:
-        - id: range_less_than_10
-        - id: range_10_18
-        - id: range_18_24
-        - id: range_25_34
-        - id: range_35_44
-        - id: range_45_54
-        - id: range_55_64
-        - id: range_more_than_65
+    - template: age
 
-    - id: years_of_experience
-      template: single
-      options:
-        - id: range_less_than_1
-        - id: range_1_2
-        - id: range_2_5
-        - id: range_5_10
-        - id: range_10_20
-        - id: range_more_than_20
+    - template: years_of_experience
 
-    - id: company_size
-      template: single
-      options:
-        - id: range_1
-        - id: range_1_5
-        - id: range_5_10
-        - id: range_10_20
-        - id: range_20_50
-        - id: range_50_100
-        - id: range_100_1000
-        - id: range_more_than_1000
+    - template: company_size
 
-    - id: yearly_salary
-      template: single
-      options:
-        - id: range_work_for_free
-        - id: range_0_10
-        - id: range_10_30
-        - id: range_30_50
-        - id: range_50_100
-        - id: range_100_200
-        - id: range_more_than_200
+    - template: yearly_salary
 
-    - id: higher_education_degree
-      template: single
-      options:
-        - id: no_degree
-        - id: yes_related
-        - id: yes_unrelated
+    - template: higher_education_degree
 
-    - id: country
-      template: country
+    - template: country
 
-    - id: gender
-      template: single
-      allowother: true
-      options:
-        - id: female
-        - id: male
-        - id: non_binary
-        - id: not_listed
+    - template: gender
 
-    - id: race_ethnicity
-      template: race_ethnicity
-      allowother: true
-      options:
-        - id: black_african
-        - id: east_asian
-        - id: hispanic_latin
-        - id: middle_eastern
-        - id: multiracial
-        - id: native_american_islander_australian
-        - id: south_asian
-        - id: south_east_asian
-        - id: white_european
-        - id: not_listed
+    - template: race_ethnicity
 
-    - id: disability_status
+    - template: disability_status
       year: 2021
-      template: multiple
-      allowother: true
-      options:
-        - id: visual_impairments
-        - id: hearing_impairments
-        - id: mobility_impairments
-        - id: cognitive_impairments
-        - id: not_listed
 
     - id: disability_status_others
       year: 2021
