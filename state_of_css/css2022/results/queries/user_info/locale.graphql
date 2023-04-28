@@ -1,0 +1,37 @@
+query css2022localeQuery {
+    dataAPI{
+        
+        surveys {
+          state_of_css {
+            css2022 {
+              user_info {
+                locale {
+          
+          
+                  responses(parameters: {cutoff:20,enableCache:false}) {
+                    currentEdition {
+              
+                      completion {
+                        count
+                        percentageSurvey
+                        total
+                      }
+                      buckets {
+                        count
+                        id
+                        percentageQuestion
+                        percentageSurvey
+                
+                
+                
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+    }
+}

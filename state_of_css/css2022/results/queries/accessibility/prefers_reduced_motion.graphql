@@ -1,0 +1,44 @@
+query css2022prefersReducedMotionQuery {
+    dataAPI{
+        
+        surveys {
+          state_of_css {
+            css2022 {
+              accessibility {
+                prefers_reduced_motion {
+          
+          
+        comments {
+            currentEdition {
+              count
+            }
+          }
+
+                  responses(parameters: {showNoAnswer:true,enableCache:false}) {
+                    allEditions {
+                      editionId
+          year
+                      completion {
+                        count
+                        percentageSurvey
+                        total
+                      }
+                      buckets {
+                        count
+                        id
+                        percentageQuestion
+                        percentageSurvey
+                
+                
+                
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+    }
+}

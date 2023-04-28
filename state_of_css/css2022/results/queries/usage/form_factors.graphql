@@ -1,0 +1,37 @@
+query css2022formFactorsQuery {
+    dataAPI{
+        
+        surveys {
+          state_of_css {
+            css2022 {
+              usage {
+                form_factors {
+          
+          
+                  responses(parameters: {enableCache:false}) {
+                    currentEdition {
+              
+                      completion {
+                        count
+                        percentageSurvey
+                        total
+                      }
+                      buckets {
+                        count
+                        id
+                        percentageQuestion
+                        percentageSurvey
+                
+                
+                
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+    }
+}

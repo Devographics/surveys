@@ -1,0 +1,44 @@
+query css2022shadowDomCssQuery {
+    dataAPI{
+        
+        surveys {
+          state_of_css {
+            css2022 {
+              other_features {
+                shadow_dom_css {
+          
+          
+        comments {
+            currentEdition {
+              count
+            }
+          }
+
+                  responses(parameters: {showNoAnswer:true,enableCache:true}) {
+                    allEditions {
+                      editionId
+          year
+                      completion {
+                        count
+                        percentageSurvey
+                        total
+                      }
+                      buckets {
+                        count
+                        id
+                        percentageQuestion
+                        percentageSurvey
+                
+                
+                
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+    }
+}

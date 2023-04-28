@@ -1,0 +1,44 @@
+query css2022viewportPercentageLengthUnitsQuery {
+    dataAPI{
+        
+        surveys {
+          state_of_css {
+            css2022 {
+              layout {
+                viewport_percentage_length_units {
+          
+          
+        comments {
+            currentEdition {
+              count
+            }
+          }
+
+                  responses(parameters: {showNoAnswer:true,enableCache:false}) {
+                    allEditions {
+                      editionId
+          year
+                      completion {
+                        count
+                        percentageSurvey
+                        total
+                      }
+                      buckets {
+                        count
+                        id
+                        percentageQuestion
+                        percentageSurvey
+                
+                
+                
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+    }
+}

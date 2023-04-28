@@ -1,0 +1,37 @@
+query css2022stateOfCssHappinessQuery {
+    dataAPI{
+        
+        surveys {
+          state_of_css {
+            css2022 {
+              usage {
+                state_of_css_happiness {
+          
+          
+                  responses(parameters: {enableCache:false}) {
+                    currentEdition {
+              
+                      completion {
+                        count
+                        percentageSurvey
+                        total
+                      }
+                      buckets {
+                        count
+                        id
+                        percentageQuestion
+                        percentageSurvey
+                
+                
+                
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+    }
+}

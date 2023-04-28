@@ -1,0 +1,46 @@
+query css2022raceEthnicityByUserInfoYearsOfExperienceQuery {
+    dataAPI{
+        
+        surveys {
+          state_of_css {
+            css2022 {
+              user_info {
+                race_ethnicity_by_user_info__years_of_experience: race_ethnicity {
+          
+          
+                  responses(facet: user_info__years_of_experience, parameters: {facetSort:{order:asc,property:mean},limit:11,facetCutoff:100,enableCache:false}) {
+                    currentEdition {
+              
+                      completion {
+                        count
+                        percentageSurvey
+                        total
+                      }
+                      buckets {
+                        count
+                        id
+                        percentageQuestion
+                        percentageSurvey
+                
+                
+            facetBuckets {
+                id
+                count
+                percentageQuestion
+                percentageSurvey
+                percentageFacet
+        
+            }
+
+                
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+    }
+}

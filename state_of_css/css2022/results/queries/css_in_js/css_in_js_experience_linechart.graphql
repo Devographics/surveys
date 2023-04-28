@@ -1,0 +1,39 @@
+query css2022cssInJsExperienceLinechartQuery {
+    dataAPI{
+                surveys {
+            state_of_css {
+                css2022 {
+                    css_in_js {
+                        css_in_js_experience_linechart: css_in_js_ratios {
+                            years
+                            items(parameters: {enableCache:false}) {
+                                id
+                                usage {
+                                    year
+                                    rank
+                                    percentageQuestion
+                                }
+                                awareness {
+                                    year
+                                    rank
+                                    percentageQuestion
+                                }
+                                interest {
+                                    year
+                                    rank
+                                    percentageQuestion
+                                }
+                                satisfaction {
+                                    year
+                                    rank
+                                    percentageQuestion
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

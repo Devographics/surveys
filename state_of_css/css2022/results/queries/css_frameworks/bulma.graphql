@@ -1,0 +1,44 @@
+query css2022bulmaQuery {
+    dataAPI{
+        
+        surveys {
+          state_of_css {
+            css2022 {
+              css_frameworks {
+                bulma {
+          
+          
+        comments {
+            currentEdition {
+              count
+            }
+          }
+
+                  responses(parameters: {showNoAnswer:true,enableCache:false}) {
+                    allEditions {
+                      editionId
+          year
+                      completion {
+                        count
+                        percentageSurvey
+                        total
+                      }
+                      buckets {
+                        count
+                        id
+                        percentageQuestion
+                        percentageSurvey
+                
+                
+                
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+    }
+}

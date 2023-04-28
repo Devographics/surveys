@@ -1,0 +1,35 @@
+query css2022cssFrameworksSectionStreamsQuery {
+    dataAPI{
+                surveys {
+            state_of_css {
+                css2022 {
+                    css_frameworks {
+                        css_frameworks_section_streams: css_frameworks_allTools {
+                            items {
+                                id
+                                responses(parameters: {enableCache:false}) {
+                                    allEditions {
+                                        editionId
+                                        year
+                                        buckets {
+                                            id
+                                            percentageQuestion
+                                            percentageSurvey
+                                            count
+                                        }
+                                        completion {
+                                            count
+                                            percentageSurvey
+                                            total
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

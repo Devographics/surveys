@@ -1,0 +1,37 @@
+query css2022ageQuery {
+    dataAPI{
+        
+        surveys {
+          state_of_css {
+            css2022 {
+              user_info {
+                age {
+          
+          
+                  responses(parameters: {showNoAnswer:true,enableCache:false}) {
+                    currentEdition {
+              
+                      completion {
+                        count
+                        percentageSurvey
+                        total
+                      }
+                      buckets {
+                        count
+                        id
+                        percentageQuestion
+                        percentageSurvey
+                
+                
+                
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+    }
+}

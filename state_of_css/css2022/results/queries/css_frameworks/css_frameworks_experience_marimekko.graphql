@@ -1,0 +1,35 @@
+query css2022cssFrameworksExperienceMarimekkoQuery {
+    dataAPI{
+                surveys {
+            state_of_css {
+                css2022 {
+                    css_frameworks {
+                        css_frameworks_experience_marimekko: css_frameworks_allTools {
+                            items {
+                                id
+                                responses(parameters: {enableCache:false}) {
+                                    currentEdition {
+                                        editionId
+                                        year
+                                        buckets {
+                                            id
+                                            percentageQuestion
+                                            percentageSurvey
+                                            count
+                                        }
+                                        completion {
+                                            count
+                                            percentageSurvey
+                                            total
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

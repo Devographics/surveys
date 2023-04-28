@@ -1,0 +1,37 @@
+query css2022disabilityStatusQuery {
+    dataAPI{
+        
+        surveys {
+          state_of_css {
+            css2022 {
+              user_info {
+                disability_status {
+          
+          
+                  responses(parameters: {enableCache:false}) {
+                    currentEdition {
+              
+                      completion {
+                        count
+                        percentageSurvey
+                        total
+                      }
+                      buckets {
+                        count
+                        id
+                        percentageQuestion
+                        percentageSurvey
+                
+                
+                
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+    }
+}
