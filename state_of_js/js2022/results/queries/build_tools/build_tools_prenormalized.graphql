@@ -1,0 +1,37 @@
+query js2022buildToolsPrenormalizedQuery {
+    dataAPI{
+        
+        surveys {
+          state_of_js {
+            js2022 {
+              build_tools {
+                build_tools_prenormalized {
+          
+          
+                  responses(parameters: {limit:5,enableCache:false}) {
+                    currentEdition {
+              
+                      completion {
+                        count
+                        percentageSurvey
+                        total
+                      }
+                      buckets {
+                        count
+                        id
+                        percentageQuestion
+                        percentageSurvey
+                
+                
+                
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+    }
+}

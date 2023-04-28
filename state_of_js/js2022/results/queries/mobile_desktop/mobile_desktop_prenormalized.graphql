@@ -1,0 +1,37 @@
+query js2022mobileDesktopPrenormalizedQuery {
+    dataAPI{
+        
+        surveys {
+          state_of_js {
+            js2022 {
+              mobile_desktop {
+                mobile_desktop_prenormalized {
+          
+          
+                  responses(parameters: {limit:5,enableCache:false}) {
+                    currentEdition {
+              
+                      completion {
+                        count
+                        percentageSurvey
+                        total
+                      }
+                      buckets {
+                        count
+                        id
+                        percentageQuestion
+                        percentageSurvey
+                
+                
+                
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+    }
+}

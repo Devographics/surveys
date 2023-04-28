@@ -10,8 +10,8 @@
     # - id: position_sticky # removed in 2022, not that new anymore
     - id: logical_properties
     - id: aspect_ratio
-    - id: content_visibility
-    - id: flexbox_gap
+    - id: content_visibility # 2023: thinking about it
+    - id: flexbox_gap # 2023: quick win
       year: 2021
     # - id: break_rules # removed in 2022, too niche?
     #   year: 2021
@@ -35,7 +35,7 @@
     # - id: clip_path # remove in 2022?
     # - id: masks # remove in 2022?
     - id: blend_modes
-    - id: filter_effects
+    - id: filter_effects # 2023: quick win
     - id: backdrop_filter
     # - id: perspective # removed in 2022, downward trend and too niche
     - id: intrinsic_sizing #min-, max, and fit-content
@@ -98,6 +98,9 @@
     # - id: color_fonts # not a specific CSS feature…
     #   year: 2022
 
+    - id: text_wrap_balance
+      year: 2023
+
 - id: accessibility
   template: feature
   slug: features
@@ -135,6 +138,9 @@
       year: 2022
     - id: where_selector
       year: 2022
+
+    - id: lang_selector
+      year: 2023
 
 # - id: javascript_apis
 #   template: feature
@@ -195,6 +201,9 @@
 
     - id: image_function
       year: 2022
+
+    - id: individual_transform_properties
+      year: 2023
 
 ### TOOLS ###
 
@@ -334,24 +343,10 @@
         - id: ucbrowser
         - id: opera
         - id: polypane
+        - id: arc
     - id: browsers_others
       template: others
       matchTags: [browsers, other]
-
-      # option 1 : stored as [first option, second option, winning option] for each round
-    # e.g. [[0,5,5], [3,6,3], [1,7,1], [2,4,2], [5,3,5], [1,2,1], [5,1,1]]
-    - id: tool_evaluation
-      year: 2021
-      template: bracket
-      options:
-        - id: learning_curve_documentation # is a tool is easy to learn?
-        - id: momentum_popularity # does it have a lot of hype?
-        - id: user_base_size # is it a well-established option?
-        - id: developer_experience_tooling # does it provide a good developer experience?
-        - id: performance_user_experience # does it provide a good user experience?
-        - id: creator_team # is it backed by a well-known/well-funded team?
-        - id: accessibility_features # does it implement accessibility features well?
-        - id: community_inclusivity # does it have a good community?
 
 ### USAGE ###
 - id: usage
@@ -413,6 +408,7 @@
         - id: css_art
         - id: emails
         - id: printed_documents
+        - id: e_commerce
     - id: what_do_you_use_css_for_others
       intlId: environments.what_do_you_use_css_for.others
       matchTags: [css_uses]
@@ -637,6 +633,43 @@
     - id: podcasts_others
       template: others
       matchTags: [podcasts, people, sites]
+
+    - id: video_creators
+      template: multiple
+      # allowOther: true
+      options:
+        - id: fireship
+        - id: kevin_j_powell
+        - id: fun_fun_function
+        - id: theo_browne
+        - id: tina_huang
+        - id: jason_goodison # https://www.youtube.com/c/JasonGoodison/videos
+        - id: programming_with_mosh # mosh_hamedani https://codewithmosh.com/ https://www.youtube.com/c/programmingwithmosh
+        - id: kent_c_dodds
+        - id: brad_traversy
+        - id: clever_programmer # rafeh_qazi https://www.youtube.com/c/CleverProgrammer
+        - id: ben_awad # https://www.youtube.com/channel/UC-8QAzbLcRglXeN_MY9blyw
+        - id: web_dev_simplified # kyle cook https://www.youtube.com/c/WebDevSimplified/
+        - id: coding_train # Daniel Shiffman https://www.youtube.com/user/shiffman?app=desktop
+        - id: net_ninja # https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg?app=desktop
+        - id: the_primeagen # https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg?app=desktop
+        - id: jack_herrington # https://www.youtube.com/@jherr
+        - id: midudev
+        - id: mayuko
+        - id: coding_garden
+
+    - id: video_creators_others
+      template: others
+      matchTags:
+        [
+          video_creators,
+          youtube,
+          courses,
+          people,
+          sites,
+          newsletters,
+          socialmedia,
+        ]
 
     - id: people_others
       year: 2021
