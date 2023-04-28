@@ -1,0 +1,64 @@
+- id: data_explorer
+  questions:
+    - template: data_explorer
+
+- id: user_info
+  questions:
+    # - id: country
+    #   variables:
+    #     options: { limit: 20 }
+    #     fixedIds:
+    #       [
+    #         "USA",
+    #         "DEU",
+    #         "FRA",
+    #         "GBR",
+    #         "IND",
+    #         "CAN",
+    #         "POL",
+    #         "BRA",
+    #         "ESP",
+    #         "NLD",
+    #         "RUS",
+    #         "AUS",
+    #         "SWE",
+    #         "ITA",
+    #         "UKR",
+    #         "CZE",
+    #         "NOR",
+    #         "CHN",
+    #         "BEL",
+    #         "MEX",
+    #       ]
+
+    - template: locale
+      variables:
+        options: { cutoff: 20 }
+
+    - template: completion_stats
+
+    - template: source
+      variables:
+        options: { limit: 20 }
+
+- id: features
+  questions:
+    - template: all_features
+
+    - template: knowledge_score
+
+- id: libraries
+  questions:
+    - template: all_tools
+
+- id: css_frameworks
+  questions:
+    - template: section_tools
+
+    - template: section_tools_ratios
+
+- id: css_in_js
+  questions:
+    - template: section_tools
+
+    - template: section_tools_ratios

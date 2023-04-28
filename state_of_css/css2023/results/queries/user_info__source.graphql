@@ -1,0 +1,45 @@
+query {
+    survey(survey: state_of_css) {
+        demographics {
+            # fragmentStart
+            source: source (filters: {}, options: {cutoff:20}, facet: null){
+                year(year: 2022) {
+                    year
+                    completion {
+                        total
+                        percentage_survey
+                        count
+                    }
+                    facets {
+                        id
+                        type
+                        completion {
+                            total
+                            percentage_question
+                            percentage_survey
+                            count
+                        }
+                        buckets {
+                            id
+                            count
+                            percentage_question
+                            percentage_survey
+                            entity {
+                                name
+                                nameClean
+                                nameHtml
+                                homepage {
+                                    url
+                                }
+                                github {
+                                    url
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            # fragmentEnd
+        }
+    }
+}

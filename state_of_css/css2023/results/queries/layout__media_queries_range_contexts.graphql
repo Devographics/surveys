@@ -1,0 +1,55 @@
+query {
+    survey(survey: state_of_css) {
+        media_queries_range_contexts: feature(id: media_queries_range_contexts) {
+            id
+            entity {
+                name
+                nameClean
+                nameHtml
+                homepage {
+                    url
+                }
+                caniuse {
+                    name
+                    url
+                }
+                mdn {
+                    locale
+                    url
+                    title
+                    summary
+                }
+                example {
+                    language
+                    code
+                }
+            }
+            comments {
+                year(year: 2022) {
+                    count
+                }
+            }
+            experience {
+                keys
+                all_years {
+                    year
+                    completion {
+                        total
+                        count
+                        percentage_survey
+                    }
+                    facets{
+                        buckets {
+                            id
+                            count
+                            countDelta
+                            percentage_question
+                            percentage_survey
+                            percentageDelta
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
