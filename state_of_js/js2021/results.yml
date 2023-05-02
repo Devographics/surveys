@@ -51,11 +51,11 @@
       blockType: HorizontalBarBlock
       translateData: true
       variables:
-        options: {cutoff: 20}
+        options: { cutoff: 20 }
 
     - id: hint_hint
       template: hint
-      
+
     - id: age
       template: demographics
 
@@ -66,10 +66,14 @@
           blockNamespace: user_info
           tabId: tabs.by_salary
           template: by_facet
-          variables:  
+          variables:
             fieldId: years_of_experience
             facetId: yearly_salary
-            options: {facetSort: {order: ___asc___, property: mean}, facetMinCount: 100}
+            options:
+              {
+                facetSort: { order: ___asc___, property: mean },
+                facetMinCount: 100,
+              }
 
     - id: company_size
       template: demographics
@@ -84,10 +88,14 @@
           blockNamespace: user_info
           tabId: tabs.by_gender
           template: by_facet
-          variables:  
+          variables:
             fieldId: higher_education_degree
             facetId: gender
-            options: {facetSort: {order: ___asc___, property: mean}, facetMinCount: 100}
+            options:
+              {
+                facetSort: { order: ___asc___, property: mean },
+                facetMinCount: 100,
+              }
 
     - id: yearly_salary
       template: demographics
@@ -96,34 +104,46 @@
           blockNamespace: user_info
           tabId: tabs.by_country
           template: by_facet
-          variables:  
+          variables:
             fieldId: yearly_salary
             facetId: country
-            options: {facetSort: {order: ___desc___, property: mean}, facetMinCount: 100}
+            options:
+              {
+                facetSort: { order: ___desc___, property: mean },
+                facetMinCount: 100,
+              }
         - id: yearly_salary_by_degree
           blockNamespace: user_info
           tabId: tabs.by_degree
           template: by_facet
-          variables:  
+          variables:
             fieldId: yearly_salary
             facetId: higher_education_degree
-            options: {facetSort: {order: ___desc___, property: mean}, facetMinCount: 100}
+            options:
+              {
+                facetSort: { order: ___desc___, property: mean },
+                facetMinCount: 100,
+              }
         - id: yearly_salary_by_experience
           blockNamespace: user_info
           tabId: tabs.by_experience
           template: by_facet
-          variables:  
+          variables:
             fieldId: yearly_salary
             facetId: years_of_experience
-            options: {facetSort: {order: ___desc___, property: mean}, facetMinCount: 100}
+            options:
+              {
+                facetSort: { order: ___desc___, property: mean },
+                facetMinCount: 100,
+              }
 
     - id: source
       template: source
       blockType: HorizontalBarBlock
       dataFunction: cleanUpSources
       variables:
-        options: {limit: 20}
-      
+        options: { limit: 20 }
+
     - id: gender
       template: demographics
       variants:
@@ -131,10 +151,15 @@
           blockNamespace: user_info
           tabId: tabs.by_country
           template: by_facet
-          variables:  
+          variables:
             fieldId: gender
             facetId: country
-            options: {facetSort: {order: ___desc___, property: mean}, limit: 11, facetMinCount: 100}
+            options:
+              {
+                facetSort: { order: ___desc___, property: mean },
+                limit: 11,
+                facetMinCount: 100,
+              }
 
     - id: race_ethnicity
       template: demographics
@@ -145,10 +170,15 @@
           blockNamespace: user_info
           tabId: tabs.by_experience
           template: by_facet
-          variables:  
+          variables:
             fieldId: race_ethnicity
             facetId: years_of_experience
-            options: {facetSort: {order: ___asc___, property: mean}, limit: 11, facetMinCount: 100}
+            options:
+              {
+                facetSort: { order: ___asc___, property: mean },
+                limit: 11,
+                facetMinCount: 100,
+              }
 
     - id: disability_status
       template: demographics
@@ -213,29 +243,29 @@
 
         - id: numeric_separators
           template: feature_experience
-          year: 2021
+          yearAdded: 2021
         - id: string_replace_all
           template: feature_experience
-          year: 2021
+          yearAdded: 2021
         - id: string_match_all
           template: feature_experience
-          year: 2021
+          yearAdded: 2021
         - id: logical_assignment
           template: feature_experience
-          year: 2021
+          yearAdded: 2021
 
         - id: michael_jackson
           template: picks
 
         - id: promise_any
           template: feature_experience
-          year: 2021
+          yearAdded: 2021
         - id: array_at
           template: feature_experience
-          year: 2021
+          yearAdded: 2021
         - id: top_level_await
           template: feature_experience
-          year: 2021
+          yearAdded: 2021
 
         - id: language_resources
           items: [fm-javascript-new-hard-parts]
@@ -277,26 +307,26 @@
 
         - id: page_visibility
           template: feature_experience
-          year: 2021
+          yearAdded: 2021
         - id: broadcast_channel
           template: feature_experience
-          year: 2021
+          yearAdded: 2021
         - id: geolocation
           template: feature_experience
-          year: 2021
+          yearAdded: 2021
         - id: file_system_access
           template: feature_experience
-          year: 2021
+          yearAdded: 2021
 
         - id: wes_bos
           template: picks
 
         - id: web_share
           template: feature_experience
-          year: 2021
+          yearAdded: 2021
         - id: webxr
           template: feature_experience
-          year: 2021
+          yearAdded: 2021
 
         - id: browser_apis_resources
           items: [fm-service-workers]
@@ -305,22 +335,21 @@
     - id: other_features
       path: /other-features
       blocks:
-        
-      - id: pwa
-        template: feature_experience
+        - id: pwa
+          template: feature_experience
 
-      - id: units_switcher_hint
-        template: hint
+        - id: units_switcher_hint
+          template: hint
 
-      - id: tejas_kumar
-        template: picks
+        - id: tejas_kumar
+          template: picks
 
-      - id: wasm
-        template: feature_experience
+        - id: wasm
+          template: feature_experience
 
-      - id: browser_apis_resources
-        items: [fm-web-assembly, fm-pwas]
-        template: recommended_resources
+        - id: browser_apis_resources
+          items: [fm-web-assembly, fm-pwas]
+          template: recommended_resources
 
 - id: libraries
   path: /libraries
@@ -352,7 +381,7 @@
 
         - id: tool_modal_hint
           template: hint
-          
+
         - template: tools_experience_marimekko
 
         - template: section_other_tools
@@ -390,7 +419,7 @@
           template: tool_experience
         - id: solid
           template: tool_experience
-          year: 2021
+          yearAdded: 2021
 
     - id: back_end_frameworks
       path: /back-end-frameworks
@@ -403,7 +432,7 @@
 
         - id: tool_modal_hint
           template: hint
-          
+
         - template: tools_experience_marimekko
 
         - template: section_other_tools
@@ -439,22 +468,22 @@
         # new in 2021
         - id: redwood
           template: tool_experience
-          year: 2021
+          yearAdded: 2021
         - id: astro
           template: tool_experience
-          year: 2021
+          yearAdded: 2021
         - id: eleventy
           template: tool_experience
-          year: 2021
+          yearAdded: 2021
         - id: blitz
           template: tool_experience
-          year: 2021
+          yearAdded: 2021
         - id: remix
           template: tool_experience
-          year: 2021
+          yearAdded: 2021
         - id: sveltekit
           template: tool_experience
-          year: 2021
+          yearAdded: 2021
 
     - id: testing
       path: /testing
@@ -467,7 +496,7 @@
 
         - id: tool_modal_hint
           template: hint
-          
+
         - template: tools_experience_marimekko
 
         - template: section_other_tools
@@ -507,8 +536,8 @@
           template: tool_experience
         - id: vitest
           template: tool_experience
-          year: 2021
- 
+          yearAdded: 2021
+
     - id: mobile_desktop
       path: /mobile-desktop
       blocks:
@@ -520,7 +549,7 @@
 
         - id: tool_modal_hint
           template: hint
-          
+
         - template: tools_experience_marimekko
 
         - template: section_other_tools
@@ -558,8 +587,8 @@
           template: tool_experience
         - id: tauri
           template: tool_experience
-          year: 2021
- 
+          yearAdded: 2021
+
     - id: build_tools
       path: /build-tools
       blocks:
@@ -571,7 +600,7 @@
 
         - id: tool_modal_hint
           template: hint
-          
+
         - template: tools_experience_marimekko
 
         - template: section_other_tools
@@ -611,11 +640,11 @@
           template: tool_experience
         - id: vite
           template: tool_experience
-          year: 2021
+          yearAdded: 2021
         - id: wmr
           template: tool_experience
-          year: 2021
- 
+          yearAdded: 2021
+
     - id: monorepo_tools
       path: /monorepo-tools
       blocks:
@@ -627,7 +656,7 @@
 
         - id: tool_modal_hint
           template: hint
-          
+
         - template: tools_experience_marimekko
 
         - template: section_other_tools
@@ -647,28 +676,28 @@
 
         - id: rush
           template: tool_experience
-          year: 2021
+          yearAdded: 2021
         - id: turborepo
           template: tool_experience
-          year: 2021
+          yearAdded: 2021
         - id: yarn_workspaces
           template: tool_experience
-          year: 2021
+          yearAdded: 2021
         - id: yalc
           template: tool_experience
-          year: 2021
+          yearAdded: 2021
         - id: lerna
           template: tool_experience
-          year: 2021
+          yearAdded: 2021
         - id: npm_workspaces
           template: tool_experience
-          year: 2021
+          yearAdded: 2021
         - id: pnpm
           template: tool_experience
-          year: 2021
+          yearAdded: 2021
         - id: nx
           template: tool_experience
-          year: 2021
+          yearAdded: 2021
 
 - id: tools_others
   path: /other-tools
@@ -678,13 +707,13 @@
 
     - id: libraries
       tabId: tabs.main_answers
-      blockNamespace: tools_others  
+      blockNamespace: tools_others
       template: multiple_options
       variables:
         fieldId: tools_others
       variants:
         - id: libraries_others
-          blockNamespace: tools_others  
+          blockNamespace: tools_others
           template: multiple_options
           defaultUnits: count
           variables:
@@ -696,13 +725,13 @@
 
     - id: utilities
       tabId: tabs.main_answers
-      blockNamespace: tools_others  
+      blockNamespace: tools_others
       template: multiple_options
       variables:
         fieldId: tools_others
-      variants: 
+      variants:
         - id: utilities_others
-          blockNamespace: tools_others  
+          blockNamespace: tools_others
           template: multiple_options
           defaultUnits: count
           variables:
@@ -714,13 +743,13 @@
 
     - id: runtimes
       tabId: tabs.main_answers
-      blockNamespace: tools_others  
+      blockNamespace: tools_others
       template: multiple_options
       variables:
         fieldId: tools_others
-      variants: 
+      variants:
         - id: runtimes_others
-          blockNamespace: tools_others  
+          blockNamespace: tools_others
           template: multiple_options
           defaultUnits: count
           variables:
@@ -729,32 +758,31 @@
 
     - id: javascript_flavors
       tabId: tabs.main_answers
-      blockNamespace: tools_others  
+      blockNamespace: tools_others
       template: multiple_options
       variables:
         fieldId: tools_others
-      variants: 
+      variants:
         - id: javascript_flavors_others
-          blockNamespace: tools_others  
+          blockNamespace: tools_others
           template: multiple_options
           defaultUnits: count
           variables:
             fieldId: tools_others
             options: { limit: 15 }
 
-
     - id: kent_c_dodds
       template: picks
-      
+
     - id: non_js_languages
       tabId: tabs.main_answers
-      blockNamespace: tools_others  
+      blockNamespace: tools_others
       template: multiple_options
       variables:
         fieldId: tools_others
-      variants: 
+      variants:
         - id: non_js_languages_others
-          blockNamespace: tools_others  
+          blockNamespace: tools_others
           template: multiple_options
           defaultUnits: count
           variables:
@@ -770,7 +798,7 @@
       blockNamespace: tool_evaluation
       variables:
         fieldId: tools_others__tool_evaluation
-      variants: 
+      variants:
         - id: tool_evaluation_matchups
           tabId: tabs.bracket_matchups
           blockNamespace: tool_evaluation
@@ -904,7 +932,7 @@
       blockNamespace: js_pain_points
       variables:
         fieldId: opinions__js_pain_points
-      variants: 
+      variants:
         - id: js_pain_points_matchups
           tabId: tabs.bracket_matchups
           blockNamespace: js_pain_points
@@ -923,7 +951,7 @@
       blockNamespace: currently_missing_from_js
       variables:
         fieldId: opinions__currently_missing_from_js
-      variants: 
+      variants:
         - id: currently_missing_from_js_matchups
           tabId: tabs.bracket_matchups
           blockNamespace: currently_missing_from_js
@@ -1008,11 +1036,9 @@
             - id: platzi
               value: "100"
 
-
 - id: conclusion
   path: /conclusion
   blocks:
-
     - id: conclusion
       template: conclusion
       variables:
@@ -1030,7 +1056,6 @@
 - id: about
   path: /about
   blocks:
-
     - id: about_contents
       blockType: AboutBlock
       wrapBlock: false
