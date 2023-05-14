@@ -299,18 +299,19 @@
   questions:
     - id: pre_post_processors_others
       template: multiple
+      allowOther: true
+      matchTags: [libraries, other]
       options:
         - id: sass
         - id: less
         - id: post_css
         - id: stylus
         - id: assembler_css
-    - id: pre_post_processors
-      template: others
-      matchTags: [libraries, other]
 
     - id: utilities_others
       template: multiple
+      allowOther: true
+      matchTags: [libraries, other]
       options:
         - id: stylelint
         - id: purge_css
@@ -319,12 +320,11 @@
         - id: autoprefixer
         - id: cssnano
         - id: acss
-    - id: utilities
-      template: others
-      matchTags: [libraries, other]
 
     - id: browsers
       template: multiple
+      allowOther: true
+      matchTags: [browsers, other]
       options:
         - id: edge
         - id: chrome
@@ -344,9 +344,6 @@
         - id: opera
         - id: polypane
         - id: arc
-    - id: browsers_others
-      template: others
-      matchTags: [browsers, other]
 
 ### USAGE ###
 - id: usage
@@ -355,6 +352,8 @@
     - id: form_factors
       intlId: environments.form_factors
       template: multiple
+      allowOther: true
+      matchTags: [form_factors]
       options:
         - id: desktop
         - id: smartphone
@@ -368,12 +367,6 @@
         - id: keyboard_only
         - id: testing_tools
         - id: vision_simulator
-
-    - id: form_factors_others
-      intlId: environments.form_factors.others
-      template: others
-      matchTags: [form_factors]
-      yearAdded: 2022
 
     # - id: accessibility_features
     #   intlId: environments.accessibility_features
@@ -399,6 +392,8 @@
     - id: what_do_you_use_css_for
       intlId: environments.what_do_you_use_css_for
       template: multiple
+      allowOther: true
+      matchTags: [css_uses]
       options:
         - id: marketing_sites
         - id: design_systems
@@ -409,10 +404,6 @@
         - id: emails
         - id: printed_documents
         - id: e_commerce
-    - id: what_do_you_use_css_for_others
-      intlId: environments.what_do_you_use_css_for.others
-      matchTags: [css_uses]
-      template: others
 
     # - id: industry_sector
     #   intlId: user_info.industry_sector
@@ -472,6 +463,8 @@
 
     - id: interoperability_features
       template: multiple
+      allowOther: true
+      matchTags: [features, browser_interoperability, css_missing_features]
       options:
         - id: has_selector
         - id: at_container
@@ -484,13 +477,10 @@
         - id: backdrop_filter
         - id: flexbox
 
-    - id: interoperability_features_freeform
-      yearAdded: 2021
-      template: others
-      matchTags: [features, browser_interoperability, css_missing_features]
-
     - id: missing_features
       template: multiple
+      allowOther: true
+      matchTags: [features, browser_interoperability, css_missing_features]
       options:
         - id: todo1
         - id: todo2
@@ -502,14 +492,11 @@
         - id: todo8
         - id: todo9
         - id: todo10
-
-    - id: missing_features_freeform
-      yearAdded: 2021
-      template: others
-      matchTags: [features, browser_interoperability, css_missing_features]
 
     - id: other_pain_points
       template: multiple
+      allowOther: true
+      matchTags: [features, browser_interoperability, css_missing_features]
       options:
         - id: todo1
         - id: todo2
@@ -521,11 +508,6 @@
         - id: todo8
         - id: todo9
         - id: todo10
-
-    - id: other_pain_points_freeform
-      yearAdded: 2021
-      template: others
-      matchTags: [features, browser_interoperability, css_missing_features]
 
     # - id: css_pain_points
     #   intlId: opinions.css_pain_points
@@ -583,6 +565,9 @@
     - id: first_steps
       intlId: resources.first_steps_css
       template: multiple
+      allowOther: true
+      matchTags:
+        [first_steps, courses, people, youtube, sites, newsletters, socialmedia]
       options:
         - id: books
         - id: videos
@@ -595,14 +580,10 @@
         - id: mentoring
         - id: self_directed
 
-    - id: first_steps_others
-      intlId: resources.first_steps.others
-      template: others
-      matchTags:
-        [first_steps, courses, people, youtube, sites, newsletters, socialmedia]
-
     - id: blogs_news_magazines
       template: multiple
+      allowOther: true
+      matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
       options:
         - id: css_tricks
         - id: a_list_apart
@@ -619,12 +600,10 @@
         - id: moderncss
         - id: medium
 
-    - id: blogs_news_magazines_others
-      template: others
-      matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
-
     - id: sites_courses
       template: multiple
+      allowOther: true
+      matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
       options:
         - id: stack_overflow
         - id: mdn
@@ -641,12 +620,10 @@
         - id: newline
         - id: web_dev
 
-    - id: sites_courses_others
-      template: others
-      matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
-
     - id: podcasts
       template: multiple
+      allowOther: true
+      matchTags: [podcasts, people, sites]
       options:
         - id: shop_talk_show
         - id: big_web_show
@@ -672,13 +649,19 @@
         - id: working_draft
         - id: web_standards
 
-    - id: podcasts_others
-      template: others
-      matchTags: [podcasts, people, sites]
-
     - id: video_creators
       template: multiple
-      # allowOther: true
+      allowOther: true
+      matchTags:
+        [
+          video_creators,
+          youtube,
+          courses,
+          people,
+          sites,
+          newsletters,
+          socialmedia,
+        ]
       options:
         - id: fireship
         - id: kevin_j_powell
@@ -700,19 +683,6 @@
         - id: mayuko
         - id: coding_garden
 
-    - id: video_creators_others
-      template: others
-      matchTags:
-        [
-          video_creators,
-          youtube,
-          courses,
-          people,
-          sites,
-          newsletters,
-          socialmedia,
-        ]
-
     - id: people_others
       yearAdded: 2021
       template: others
@@ -720,7 +690,8 @@
 
     - id: other_surveys
       template: multiple
-      allowother: true
+      allowOther: true
+      matchTags: [surveys]
       options:
         - id: state_of_js_survey
         # - id: state_of_css_survey
@@ -730,9 +701,6 @@
         - id: codingame_survey
         - id: uxtools_survey
         - id: postman_survey
-    - id: other_surveys_others
-      template: others
-      matchTags: [surveys]
 
 ### DEMOGRAPHICS ###
 
