@@ -1110,30 +1110,35 @@
 - id: user_info
   slug: user_info
   questions:
-    - template: age
+    - id: age
+      template: age
 
-    - template: years_of_experience
+    - id: years_of_experience
+      template: years_of_experience
 
-    - template: company_size
+    - id: company_size
+      template: company_size
 
-    - template: yearly_salary
+    - id: yearly_salary
+      template: yearly_salary
 
-    - template: higher_education_degree
+    - id: higher_education_degree
+      template: higher_education_degree
 
-    - template: country
+    - id: country
+      template: country
 
-    - template: gender
+    - id: gender
+      template: gender
 
-    - template: race_ethnicity
+    - id: race_ethnicity
+      template: race_ethnicity
 
-    - template: disability_status
-      yearAdded: 2021
-
-    - id: disability_status_others
-      intlId: user_info.disability_status.others
-      yearAdded: 2021
-      template: others
+    - id: disability_status
       matchTags: [disabilities]
+      template: disability_status
+      allowOther: true
+      yearAdded: 2021
 
     - id: how_did_user_find_out_about_the_survey
       template: text
