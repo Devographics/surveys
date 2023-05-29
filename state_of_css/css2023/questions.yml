@@ -37,11 +37,28 @@
     - id: blend_modes
     - id: filter_effects # 2023: quick win
     - id: backdrop_filter
+
+    # - id: quiz_dave_shea
+    #   intlId: quiz.quiz_dave_shea
+    #   template: quiz
+    #   options:
+    #     - id: css_playground
+    #     - id: style_jungle
+    #     - id: css_zen_garden
+
     # - id: perspective # removed in 2022, downward trend and too niche
     - id: intrinsic_sizing #min-, max, and fit-content
       yearAdded: 2021
     - id: conic_gradient
       yearAdded: 2021
+
+    # - id: quiz_css_spec
+    #   intlId: quiz.quiz_css_spec
+    #   template: quiz
+    #   options:
+    #     - id: w3c
+    #     - id: w3schools
+    #     - id: mdn
 
 - id: colors
   template: feature
@@ -238,11 +255,15 @@
     - id: foundation
     - id: ui_kit
     - id: tachyons
-    - id: primer
+    # - id: primer # removed 2023
     - id: tailwind_css
     - id: pure_css
-    - id: halfmoon
-      yearAdded: 2021
+    # - id: halfmoon # removed 2023
+    #   yearAdded: 2021
+    - id: open_props
+      yearAdded: 2023
+    - id: blaze_ui
+      yearAdded: 2023
 
     - id: css_frameworks_others
       intlId: tools.other_tools
@@ -266,11 +287,11 @@
     - id: css_modules
     - id: styled_system
     - id: stitches
-    - id: fela
-    - id: linaria
-    - id: astroturf
-    - id: twin
-      yearAdded: 2021
+    # - id: fela # removed in 2023
+    # - id: linaria # removed in 2023
+    # - id: astroturf # removed in 2023
+    # - id: twin # removed in 2023
+    #   yearAdded: 2021
     - id: theme_ui
       yearAdded: 2021
     - id: vanilla_extract
@@ -402,40 +423,37 @@
         - id: printed_documents
         - id: e_commerce
 
-    # - id: industry_sector
-    #   intlId: user_info.industry_sector
-    #   template: multiple
-    #   allowother: true
-    #   options:
-    #     - id: ecommerce
-    #     - id: news_media
-    #     - id: healthcare
-    #     - id: finance
-    #     - id: programming_tools
-    #     - id: socialmedia
-    #     - id: marketing_tools
-    #     - id: education
-    #     - id: real_estate
-    #     - id: government
-    #     - id: entertainment
-    #     - id: consulting
-    #     - id: travel
-    #     - id: insurance
-    #     - id: logistics
-    #     - id: energy
-    #     - id: telecommunications
-    #     - id: student
-    #     - id: hospitality
-    #     - id: cyber_security
-    #     - id: construction
-    #     - id: automotive
-    #     - id: agriculture
-    #     - id: transport
-    #     - id: manufacturing
-    # - id: industry_sector
-    #   intlId: user_info.industry_sector.others
-    #   template: others
-    #   matchTags: [industry_sectors]
+    - id: industry_sector
+      intlId: user_info.industry_sector
+      template: multiple
+      allowOther: true
+      matchTags: [industry_sectors]
+      options:
+        - id: ecommerce
+        - id: news_media
+        - id: healthcare
+        - id: finance
+        - id: programming_tools
+        - id: socialmedia
+        - id: marketing_tools
+        - id: education
+        - id: real_estate
+        - id: government
+        - id: entertainment
+        - id: consulting
+        - id: travel
+        - id: insurance
+        - id: logistics
+        - id: energy
+        - id: telecommunications
+        - id: student
+        - id: hospitality
+        - id: cyber_security
+        - id: construction
+        - id: automotive
+        - id: agriculture
+        - id: transport
+        - id: manufacturing
 
     - id: css_js_balance
       yearAdded: 2022
@@ -458,26 +476,45 @@
     #     - id: at_container
     #     - id: attr_function
 
-    - id: interoperability_features
+    - id: interoperability_css_features
       template: multiple
       allowOther: true
       matchTags: [features, browser_interoperability, css_missing_features]
+      limit: 5
       options:
         - id: has_selector
         - id: at_container
         - id: subgrid
         - id: flexbox_gap
-        - id: grid
         - id: css_nesting
         - id: aspect_ratio
         - id: scrollbar_styling
         - id: backdrop_filter
-        - id: flexbox
 
-    - id: missing_features
+    - id: missing_css_features
       template: multiple
       allowOther: true
       matchTags: [features, browser_interoperability, css_missing_features]
+      limit: 5
+      options:
+        - id: native_visually_hidden
+        - id: generated_content_alt_text
+        - id: animate_to_auto
+        - id: anchored_positioning
+        - id: wrapping_detection
+        - id: more_pseudo_elements
+        - id: svg_in_css
+        - id: masonry_layout
+        - id: grid_lines_styling
+        - id: media_queries_variables
+        - id: mixins
+        - id: scoping
+
+    - id: other_css_pain_points
+      template: multiple
+      allowOther: true
+      matchTags: [features, browser_interoperability, css_missing_features]
+      limit: 5
       options:
         - id: todo1
         - id: todo2
@@ -489,62 +526,6 @@
         - id: todo8
         - id: todo9
         - id: todo10
-
-    - id: other_pain_points
-      template: multiple
-      allowOther: true
-      matchTags: [features, browser_interoperability, css_missing_features]
-      options:
-        - id: todo1
-        - id: todo2
-        - id: todo3
-        - id: todo4
-        - id: todo5
-        - id: todo6
-        - id: todo7
-        - id: todo8
-        - id: todo9
-        - id: todo10
-
-    # - id: css_pain_points
-    #   intlId: opinions.css_pain_points
-    #   yearAdded: 2021
-    #   template: top_n
-    #   options:
-    #     - id: browser_interoperability
-    #     - id: interactions
-    #     - id: architecture
-    #     - id: layout_positioning
-    #     - id: scoping_specificity
-    #     - id: responsive_design
-    #     - id: form_elements_styling
-    #     - id: performance_issues
-    # - id: css_pain_points
-    #   intlId: opinions_others.css_pain_points.others
-    #   yearAdded: 2021
-    #   sectionSlug: opinions_others
-    #   template: others
-    #   matchTags: [css_pain_points, css_missing_features]
-
-    # - id: currently_missing_from_css
-    #   intlId: opinions.currently_missing_from_css
-    #   yearAdded: 2021
-    #   optionsIntlId: features
-    #   template: bracket
-    #   options:
-    #     - id: container_queries
-    #     - id: parent_selector
-    #     - id: nesting
-    #     - id: color_functions
-    #     - id: subgrid
-    #     - id: browser_support
-    #     - id: mixins
-    #     - id: scoping
-    # - id: currently_missing_from_css
-    #   intlId: opinions_others.currently_missing_from_css.others
-    #   sectionSlug: opinions_others
-    #   template: others
-    #   matchTags: [css_missing_features]
 
     - id: state_of_the_web_happiness
       intlId: happiness.state_of_the_web
@@ -830,9 +811,5 @@
     - id: how_can_we_improve
       template: longtext
 
-    # these two fields go together
     - id: receive_notifications
       template: receive_notifications
-      hidden: true
-    - id: email_temporary
-      template: email2

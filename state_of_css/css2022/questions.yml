@@ -288,7 +288,7 @@
 - id: other_tools
   slug: tools_others
   questions:
-    - id: pre_post_processors_others
+    - id: pre_post_processors
       template: multiple
       options:
         - id: sass
@@ -296,11 +296,11 @@
         - id: post_css
         - id: stylus
         - id: assembler_css
-    - id: pre_post_processors
+    - id: pre_post_processors_others
       template: others
       matchTags: [libraries, other]
 
-    - id: utilities_others
+    - id: utilities
       template: multiple
       options:
         - id: stylelint
@@ -310,7 +310,7 @@
         - id: autoprefixer
         - id: cssnano
         - id: acss
-    - id: utilities
+    - id: utilities_others
       template: others
       matchTags: [libraries, other]
 
@@ -764,9 +764,5 @@
     - id: how_can_we_improve
       template: longtext
 
-    # these two fields go together
     - id: receive_notifications
       template: receive_notifications
-      hidden: true
-    - id: email_temporary
-      template: email2

@@ -132,7 +132,7 @@
 #     - id: purescript
 #     - id: javascript_flavors
 #       intlId: tools.other_tools
-#       template: project
+#       template: projects
 #       sectionSlug: tools_others
 #     - id: javascript_flavors
 #       intlId: tools.happiness
@@ -163,7 +163,7 @@
       yearAdded: 2022
     - id: front_end_frameworks_others
       intlId: tools.other_tools
-      template: project
+      template: projects
     - id: front_end_frameworks_happiness
       intlId: tools.happiness
       template: happiness
@@ -185,7 +185,7 @@
 #     # - id: swr
 #     - id: datalayer
 #       intlId: tools.other_tools
-#       template: project
+#       template: projects
 #       sectionSlug: tools_others
 #     - id: datalayer
 #       intlId: tools.happiness
@@ -218,7 +218,7 @@
 
     - id: rendering_frameworks_others
       intlId: tools.other_tools
-      template: project
+      template: projects
     - id: rendering_frameworks_happiness
       intlId: tools.happiness
       template: happiness
@@ -253,7 +253,7 @@
 
 #     - id: back_end_frameworks
 #       intlId: tools.other_tools
-#       template: project
+#       template: projects
 #       sectionSlug: tools_others
 #     - id: back_end_frameworks
 #       intlId: tools.happiness
@@ -282,7 +282,7 @@
       yearAdded: 2022
     - id: testing_others
       intlId: tools.other_tools
-      template: project
+      template: projects
     - id: testing_happiness
       intlId: tools.happiness
       template: happiness
@@ -315,7 +315,7 @@
 
 #     - id: graphics_animation
 #       intlId: tools.other_tools
-#       template: project
+#       template: projects
 #       sectionSlug: tools_others
 #     - id: graphics_animation
 #       intlId: tools.happiness
@@ -341,7 +341,7 @@
       yearAdded: 2022
     - id: mobile_desktop_others
       intlId: tools.other_tools
-      template: project
+      template: projects
     - id: mobile_desktop_happiness
       intlId: tools.happiness
       template: happiness
@@ -373,7 +373,7 @@
 
     - id: build_tools_others
       intlId: tools.other_tools
-      template: project
+      template: projects
     - id: build_tools_happiness
       intlId: tools.happiness
       template: happiness
@@ -402,7 +402,7 @@
 
     - id: monorepo_tools_others
       intlId: tools.other_tools
-      template: project
+      template: projects
     - id: monorepo_tools_happiness
       intlId: tools.happiness
       template: happiness
@@ -432,7 +432,8 @@
         - id: mitosis
           yearAdded: 2022
     - id: libraries_others
-      template: project
+      intlId: tools_others.libraries.others
+      template: projects
 
     - id: date_management
       yearAdded: 2022
@@ -444,8 +445,9 @@
         - id: date_fns
         - id: luxon
     - id: date_management_others
+      intlId: tools_others.date_management.others
       yearAdded: 2022
-      template: project
+      template: projects
 
     - id: data_visualization
       yearAdded: 2022
@@ -463,8 +465,9 @@
         - id: highcharts
         - id: plotly
     - id: data_visualization_others
+      intlId: tools_others.data_visualization.others
       yearAdded: 2022
-      template: project
+      template: projects
 
     - id: graphics_animation
       yearAdded: 2022
@@ -481,8 +484,9 @@
         - id: framer_motion
         - id: motion_one
     - id: graphics_animation_others
+      intlId: tools_others.graphics_animation.others
       yearAdded: 2022
-      template: project
+      template: projects
 
     - id: data_fetching
       yearAdded: 2022
@@ -496,8 +500,9 @@
         - id: swr
         - id: relay
     - id: data_fetching_others
+      intlId: tools_others.data_fetching.others
       yearAdded: 2022
-      template: project
+      template: projects
 
     - id: backend_frameworks
       yearAdded: 2022
@@ -526,8 +531,9 @@
         - id: blitz # removed in 2022?
           yearAdded: 2021
     - id: backend_frameworks_others
+      intlId: tools_others.backend_frameworks.others
       yearAdded: 2022
-      template: project
+      template: projects
 
     - id: utilities
       template: multiple
@@ -545,11 +551,13 @@
         - id: verdaccio
           yearAdded: 2021
     - id: utilities_others
-      template: project
+      intlId: tools_others.utilities.others
+      template: projects
 
     - id: runtimes
       template: multiple
-      # allowOther: true
+      allowOther: true
+      matchTags: [libraries, other]
       options:
         - id: browser_environment
         - id: node
@@ -560,15 +568,12 @@
           yearAdded: 2021
         - id: bun
           yearAdded: 2022
-    - id: runtimes_others
-      template: others
-      intlId: tools_others.runtimes.others
-      matchTags: [libraries, other]
 
     - id: edge_runtimes
       template: multiple
-      # allowOther: true
+      allowOther: true
       yearAdded: 2022
+      matchTags: [libraries, other]
       options:
         - id: aws_lambda
         - id: cloudflare_workers
@@ -579,15 +584,12 @@
         - id: nextjs_edge_runtime
         - id: fly_io
         - id: digital_ocean_functions
-    - id: edge_runtimes_others
-      intlId: tools_others.edge_runtimes.others
-      template: others
-      matchTags: [libraries, other]
 
     - id: javascript_flavors
       yearAdded: 2021
       template: multiple
-      # allowOther: true
+      allowOther: true
+      matchTags: [javascript_flavors, libraries]
       options:
         - id: typescript
         - id: reason
@@ -598,15 +600,11 @@
         - id: coffeescript
         - id: rescript
         - id: imba
-    - id: javascript_flavors_others
-      intlId: tools_others.javascript_flavors.others
-      yearAdded: 2021
-      template: others
-      matchTags: [javascript_flavors, libraries]
 
     - id: non_js_languages
       template: multiple
-      # allowOther: true
+      allowOther: true
+      matchTags: [languages]
       options:
         - id: php
         - id: ruby
@@ -628,10 +626,6 @@
         - id: clojure
         - id: elm
         - id: julia
-    - id: non_js_languages_others
-      intlId: tools_others.non_js_languages.others
-      template: others
-      matchTags: [languages]
 
     # - id: performance_testing
     #   template: multiple
@@ -748,7 +742,8 @@
     - id: what_do_you_use_js_for
       yearAdded: 2022
       template: multiple
-      # allowOther: true
+      matchTags: [js_uses]
+      allowOther: true
       options:
         - id: frontend_development
         - id: backend_development
@@ -760,15 +755,12 @@
         - id: game_development
         - id: data_visualization
         - id: graphics_animation
-    - id: what_do_you_use_js_for_others
-      intlId: usage.what_do_you_use_js_for.others
-      matchTags: [js_uses]
-      template: others
 
     - id: industry_sector
       intlId: usage.industry_sector_js
       template: multiple
-      # allowOther: true
+      allowOther: true
+      matchTags: [industry_sectors]
       options:
         - id: ecommerce
         - id: news_media
@@ -795,17 +787,13 @@
         - id: agriculture
         - id: transport
         - id: manufacturing
-    - id: industry_sector_others
-      intlId: usage.industry_sector.others
-      template: others
-      matchTags: [industry_sectors]
 
     - id: js_app_patterns
       yearAdded: 2022
       template: multiple
-      # allowOther: true
-      itemProperties:
-        cutoff: 0
+      allowOther: true
+      matchTags: [js_patterns]
+      cutoff: 999
       options:
         - id: single_page_app
         - id: multiple_page_app
@@ -819,18 +807,13 @@
         - id: streaming_ssr
         - id: resumability
         - id: edge_rendering
-    - id: js_app_patterns_others
-      intlId: usage.js_app_patterns.others
-      yearAdded: 2022
-      matchTags: [js_patterns]
-      template: others
 
 ######################################################
 #########              OPINIONS              #########
 ######################################################
 
 - id: opinions
-  slug: opinions
+  intlId: opinions
   questions:
     # removed in 2021
     # - id: js_over_used_online
@@ -853,7 +836,8 @@
       # template: top_n
       template: multiple
       limit: 3
-      # allowOther: true
+      allowOther: true
+      matchTags: [js_pain_points]
       options:
         - id: state_management
         - id: architecture
@@ -864,19 +848,14 @@
         - id: writing_modules
         - id: date_management
 
-    - id: top_js_pain_points_others
-      intlId: opinions.top_js_pain_points.others
-      yearAdded: 2021
-      template: others
-      matchTags: [js_pain_points]
-
     - id: top_currently_missing_from_js
       yearAdded: 2021
       # template: bracket
       # template: top_n
       template: multiple
       limit: 3
-      # allowOther: true
+      allowOther: true
+      matchTags: [js_missing_features]
       options:
         - id: static_typing
         - id: standard_library
@@ -887,11 +866,6 @@
         - id: better_date_management
         - id: observable
 
-    - id: top_currently_missing_from_js_others
-      intlId: opinions.top_currently_missing_from_js.others
-      template: others
-      matchTags: [js_missing_features]
-
     # - id: pick_of_the_year
     #   yearAdded: 2022
     #   sectionSlug: opinions_others
@@ -899,8 +873,10 @@
     #   matchTags: [js_missing_features]
 
     - id: state_of_the_web_happiness
+      intlId: happiness.state_of_the_web
       template: happiness
     - id: state_of_js_happiness
+      intlId: happiness.state_of_js
       template: happiness
 
 ######################################################
@@ -912,21 +888,7 @@
   questions:
     - id: first_steps
       template: multiple
-      # allowOther: true
-      options:
-        - id: books
-        - id: videos
-        - id: courses_free
-        - id: courses_paid
-        - id: school
-        - id: podcasts
-        - id: bootcamp
-        - id: on_the_job
-        - id: mentoring
-        - id: self_directed
-    - id: first_steps_others
-      intlId: resources.first_steps.others
-      template: others
+      allowOther: true
       matchTags:
         [
           first_steps,
@@ -938,10 +900,22 @@
           newsletters,
           socialmedia,
         ]
+      options:
+        - id: books
+        - id: videos
+        - id: courses_free
+        - id: courses_paid
+        - id: school
+        - id: podcasts
+        - id: bootcamp
+        - id: on_the_job
+        - id: mentoring
+        - id: self_directed
 
     - id: blogs_news_magazines
       template: multiple
-      # allowOther: true
+      allowOther: true
+      matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
       options:
         #  removed in 2021 (personal blogs)
         # - id: david_walsh
@@ -966,14 +940,10 @@
         - id: daily_js # remove in 2023?
         - id: a_list_apart # remove in 2023?
 
-    - id: blogs_news_magazines_others
-      intlId: resources.blogs_news_magazines.others
-      template: others
-      matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
-
     - id: sites_courses
       template: multiple
-      # allowOther: true
+      allowOther: true
+      matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
       options:
         - id: stack_overflow
         - id: udemy
@@ -1003,14 +973,20 @@
         - id: miguel_angel_duran
         - id: levelup
         - id: doka
-    - id: sites_courses_others
-      intlId: resources.sites_courses.others
-      template: others
-      matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
 
     - id: video_creators
       template: multiple
-      # allowOther: true
+      allowOther: true
+      matchTags:
+        [
+          video_creators,
+          youtube,
+          courses,
+          people,
+          sites,
+          newsletters,
+          socialmedia,
+        ]
       options:
         - id: fireship
         - id: kevin_j_powell
@@ -1031,23 +1007,11 @@
         - id: midudev
         - id: mayuko
         - id: coding_garden
-    - id: video_creators_others
-      intlId: resources.video_creators.others
-      template: others
-      matchTags:
-        [
-          video_creators,
-          youtube,
-          courses,
-          people,
-          sites,
-          newsletters,
-          socialmedia,
-        ]
 
     - id: podcasts
       template: multiple
-      # allowOther: true
+      allowOther: true
+      matchTags: [podcasts, people, sites]
       options:
         - id: syntaxfm
         - id: js_party
@@ -1074,10 +1038,6 @@
         - id: the_bike_shed
         - id: css_podcast
         - id: undefined_podcast
-    - id: podcasts_others
-      intlId: resources.podcasts.others
-      template: others
-      matchTags: [podcasts, people, sites]
 
     - id: people_others
       intlId: resources.people.others
@@ -1087,7 +1047,8 @@
 
     - id: other_surveys
       template: multiple
-      # allowOther: true
+      allowOther: true
+      matchTags: [surveys]
       options:
         # - id: state_of_js_survey
         - id: state_of_css_survey
@@ -1098,10 +1059,6 @@
         - id: uxtools_survey
         - id: postman_survey
         - id: jamstack_survey
-    - id: other_surveys_others
-      intlId: resources.other_surveys.others
-      template: others
-      matchTags: [surveys]
 
 ######################################################
 #########            DEMOGRAPHICS            #########
@@ -1146,11 +1103,5 @@
     - id: how_can_we_improve
       template: longtext
 
-    # these two fields go together
     - id: receive_notifications
-      includeInApi: false
       template: receive_notifications
-      hidden: true
-    - id: email_temporary
-      includeInApi: false
-      template: email2
