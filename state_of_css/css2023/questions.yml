@@ -138,8 +138,8 @@
     - id: prefers_color_scheme
     - id: prefers_reduced_data
       yearAdded: 2021
-    - id: color_contrast
-      yearAdded: 2021
+    # - id: color_contrast #removed in 2023, it's been renamed to contrast-color()
+    #   yearAdded: 2021
     - id: color_scheme
       yearAdded: 2021
     # - id: tabindex # removed in 2022, not CSS
@@ -351,11 +351,13 @@
       options:
         - id: stylelint
         - id: purge_css
-        - id: purify_css
         - id: prettier
         - id: autoprefixer
         - id: cssnano
         - id: acss
+        - id: lightning_css
+        - id: project_wallace
+        - id: post_css_preset_env
 
     - id: browsers
       template: multiple
@@ -504,14 +506,11 @@
         - id: has_selector
         - id: at_container
         - id: subgrid
-        - id: flexbox_gap
         - id: css_nesting
-        - id: aspect_ratio
         - id: scrollbar
         - id: backdrop_filter
         - id: media_queries_range_contexts
         - id: at_property
-        - id: attr_function
         - id: math_functions
 
     - id: css_missing_features
