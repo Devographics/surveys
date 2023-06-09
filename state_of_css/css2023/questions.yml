@@ -343,6 +343,7 @@
       allowOther: true
       matchTags: [libraries, other]
       options:
+        - id: na
         - id: sass
         - id: less
         - id: post_css
@@ -354,6 +355,7 @@
       allowOther: true
       matchTags: [libraries, other]
       options:
+        - id: na
         - id: stylelint
         - id: purge_css
         - id: prettier
@@ -453,32 +455,43 @@
       template: multiple
       allowOther: true
       matchTags: [industry_sectors]
+      randomize: false
       options:
-        - id: ecommerce
-        - id: news_media
-        - id: healthcare
-        - id: finance
-        - id: programming_tools
-        - id: socialmedia
-        - id: marketing_tools
-        - id: education
-        - id: real_estate
-        - id: government
-        - id: entertainment
+        - id: agriculture
+        - id: automotive
+        - id: construction
         - id: consulting
-        - id: travel
+        - id: cyber_security
+        - id: ecommerce
+        - id: education
+        - id: energy
+        - id: entertainment
+        - id: finance
+        - id: government
+        - id: healthcare
+        - id: hospitality
         - id: insurance
         - id: logistics
-        - id: energy
-        - id: telecommunications
-        - id: student
-        - id: hospitality
-        - id: cyber_security
-        - id: construction
-        - id: automotive
-        - id: agriculture
-        - id: transport
         - id: manufacturing
+        - id: marketing_tools
+        - id: news_media
+        - id: programming_tools
+        - id: real_estate
+        - id: socialmedia
+        - id: student
+        - id: telecommunications
+        - id: transport
+        - id: travel
+
+    - id: usage_type
+      intlId: usage.css_usage_type
+      yearAdded: 2023
+      template: single
+      allowOther: true
+      options:
+        - id: professionally
+        - id: student
+        - id: hobby
 
     - id: css_js_balance
       yearAdded: 2022
@@ -507,6 +520,7 @@
       matchTags: [features, browser_interoperability, css_missing_features]
       limit: 5
       options:
+        - id: na
         - id: has_selector
         - id: at_container
         - id: subgrid
@@ -523,6 +537,7 @@
       matchTags: [features, browser_interoperability, css_missing_features]
       limit: 5
       options:
+        - id: na
         - id: native_visually_hidden
         - id: generated_content_alt_text
         - id: animate_to_auto
@@ -542,6 +557,7 @@
       matchTags: [features, browser_interoperability, css_missing_features]
       limit: 5
       options:
+        - id: na
         - id: browser_interoperability
         - id: interactions
         - id: architecture
@@ -571,86 +587,93 @@
       matchTags:
         [first_steps, courses, people, youtube, sites, newsletters, socialmedia]
       options:
+        - id: na
         - id: books
-        - id: videos
+        - id: bootcamp
         - id: courses_free
         - id: courses_paid
-        - id: school
-        - id: podcasts
-        - id: bootcamp
-        - id: on_the_job
         - id: mentoring
+        - id: on_the_job
+        - id: podcasts
+        - id: school
         - id: self_directed
+        - id: videos
         - id: view_source
 
     - id: blogs_news_magazines
       template: multiple
       allowOther: true
       matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
+      randomize: false
       options:
-        - id: css_tricks
+        - id: na
         - id: a_list_apart
-        - id: smashing_magazine
         - id: codrops
-        - id: sitepoint
-        - id: devto
-        - id: sidebar
-        - id: heydesigner
-        - id: css_weekly
-        - id: frontend_horse
-        - id: frontend_focus
         - id: css_irl
-        - id: moderncss
-        - id: medium
-        - id: web_dev
+        - id: css_tricks
+        - id: css_weekly
         - id: csswg
+        - id: devto
+        - id: frontend_focus
+        - id: frontend_horse
+        - id: heydesigner
+        - id: medium
+        - id: moderncss
+        - id: sidebar
+        - id: sitepoint
+        - id: smashing_magazine
+        - id: web_dev
 
     - id: sites_courses
       template: multiple
       allowOther: true
       matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
+      randomize: false
       options:
-        - id: stack_overflow
-        - id: mdn
-        - id: w3schools
-        - id: freecodecamp
+        - id: na
         - id: codecademy
-        - id: levelup
-        - id: wes_bos
-        - id: frontendmasters
-        - id: pluralsight
         - id: designcode
-        - id: udemy
         - id: egghead
+        - id: freecodecamp
+        - id: frontendmasters
+        - id: levelup
+        - id: mdn
         - id: newline
+        - id: pluralsight
+        - id: stack_overflow
+        - id: udemy
+        - id: w3schools
         - id: web_dev
+        - id: wes_bos
 
     - id: podcasts
       template: multiple
       allowOther: true
       matchTags: [podcasts, people, sites]
+      randomize: false
       options:
-        - id: shop_talk_show
+        - id: na
+        - id: a11y_rules
         - id: big_web_show
         - id: changelog
-        - id: syntaxfm
-        - id: full_stack_radio
-        - id: front_end_happy_hour
-        - id: jamstack_radio
-        - id: web_platform_podcast
-        - id: modern_web
         - id: codepen_radio
-        - id: ladybug
-        - id: software_engineering_daily
-        - id: frontend_weekend
-        - id: web_standards_ru
-        - id: frontend_first
-        - id: http_203
-        - id: a11y_rules
-        - id: tools_day
-        - id: the_bike_shed
         - id: css_podcast
+        - id: front_end_happy_hour
+        - id: frontend_first
+        - id: frontend_weekend
+        - id: full_stack_radio
+        - id: http_203
+        - id: jamstack_radio
+        - id: ladybug
+        - id: modern_web
+        - id: shop_talk_show
+        - id: software_engineering_daily
+        - id: syntaxfm
+        - id: the_bike_shed
+        - id: tools_day
         - id: undefined_podcast
+        - id: web_platform_podcast
+        - id: web_standards_ru
         - id: working_draft
 
     # - id: video_creators
@@ -701,33 +724,36 @@
           newsletters,
           socialmedia,
         ]
+      randomize: false
       options:
-        - id: kevin_j_powell
-        - id: lea_verou
+        - id: na
         - id: adam_argyle
-        - id: josh_w_comeau
-        - id: jen_simmons
-        - id: una_kravets
-        - id: chris_coyier
-        - id: ahmad_shadeed
-        - id: sara_soueidan
-        - id: rachel_andrew
         - id: adam_wathan
-        - id: kyle_cook
-        - id: stephanie_eckles
+        - id: ahmad_shadeed
         - id: andy_bell
-        - id: miriam_suzanne
         - id: bramus_van_damme
-        - id: vadim_makeev
+        - id: chris_coyier
         - id: jake_archibald
-        - id: wes_bos
+        - id: jen_simmons
         - id: jhey_tompkins
+        - id: josh_comeau
+        - id: kevin_j_powell
+        - id: kyle_cook
+        - id: lea_verou
+        - id: miriam_suzanne
+        - id: rachel_andrew
+        - id: sara_soueidan
+        - id: stephanie_eckles
+        - id: una_kravets
+        - id: vadim_makeev
+        - id: wes_bos
 
     - id: other_surveys
       template: multiple
       allowOther: true
       matchTags: [surveys]
       options:
+        - id: na
         - id: state_of_js_survey
         # - id: state_of_css_survey
         - id: state_of_graphql_survey
@@ -766,6 +792,7 @@
     - id: company_size
       template: single
       options:
+        - id: na
         - id: range_1
         - id: range_1_5
         - id: range_5_10
@@ -778,7 +805,7 @@
     - id: yearly_salary
       template: single
       options:
-        - id: range_work_for_free
+        - id: na
         - id: range_0_10
         - id: range_10_30
         - id: range_30_50
@@ -798,7 +825,7 @@
 
     - id: gender
       template: single
-      allowother: true
+      # allowOther: true
       options:
         - id: female
         - id: male
@@ -807,7 +834,7 @@
 
     - id: race_ethnicity
       template: race_ethnicity
-      allowother: true
+      allowOther: true
       options:
         - id: black_african
         - id: east_asian
@@ -818,7 +845,6 @@
         - id: south_asian
         - id: south_east_asian
         - id: white_european
-        - id: not_listed
 
     - id: disability_status
       yearAdded: 2021
@@ -830,7 +856,6 @@
         - id: hearing_impairments
         - id: mobility_impairments
         - id: cognitive_impairments
-        - id: not_listed
 
     - id: how_did_user_find_out_about_the_survey
       template: text
