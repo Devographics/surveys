@@ -371,24 +371,24 @@
       allowOther: true
       matchTags: [browsers, other]
       options:
-        - id: edge
-        - id: chrome
-        - id: safari
-        - id: firefox
-        - id: internet_explorer_11
-        # - id: internet_explorer_8_9_10 # removed in 2023
-        # - id: opera_mini # removed in 2023
-        - id: safari_ios
-        - id: chrome_ios
-        - id: chrome_android
-        - id: firefox_android
-        - id: samsung_internet
-        - id: vivaldi
+        - id: arc
         - id: brave
-        # - id: ucbrowser # removed in 2023
+        - id: chrome
+        - id: chrome_android
+        - id: chrome_ios
+        - id: edge
+        - id: firefox
+        - id: firefox_android
+        - id: internet_explorer_11
         - id: opera
         - id: polypane
-        - id: arc
+        - id: safari
+        - id: safari_ios
+        - id: samsung_internet
+        - id: vivaldi
+        # - id: internet_explorer_8_9_10 # removed in 2023
+        # - id: opera_mini # removed in 2023
+        # - id: ucbrowser # removed in 2023
 
 ### USAGE ###
 - id: usage
@@ -401,16 +401,16 @@
       matchTags: [form_factors]
       options:
         - id: desktop
-        - id: smartphone
         - id: feature_phone
-        - id: tablet
-        - id: smart_watch
-        - id: tv
         - id: gaming_console
-        - id: screen_reader
-        - id: print
         - id: keyboard_only
+        - id: print
+        - id: screen_reader
+        - id: smart_watch
+        - id: smartphone
+        - id: tablet
         - id: testing_tools
+        - id: tv
         - id: vision_simulator
 
     # - id: accessibility_features
@@ -440,22 +440,21 @@
       allowOther: true
       matchTags: [css_uses]
       options:
-        - id: marketing_sites
-        - id: design_systems
         - id: blogs
-        - id: web_apps
-        - id: mobile_apps
         - id: css_art
-        - id: emails
-        - id: printed_documents
+        - id: design_systems
         - id: desktop_apps
+        - id: emails
+        - id: marketing_sites
+        - id: mobile_apps
+        - id: printed_documents
+        - id: web_apps
 
     - id: industry_sector
       intlId: user_info.industry_sector
       template: multiple
       allowOther: true
       matchTags: [industry_sectors]
-      randomize: false
       options:
         - id: agriculture
         - id: automotive
@@ -530,6 +529,9 @@
         - id: media_queries_range_contexts
         - id: at_property
         - id: math_functions
+        - id: color_functions
+        - id: cascade_layers
+        - id: line_clamp
 
     - id: css_missing_features
       template: multiple
@@ -604,7 +606,6 @@
       template: multiple
       allowOther: true
       matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
-      randomize: false
       options:
         - id: na
         - id: a_list_apart
@@ -628,7 +629,6 @@
       template: multiple
       allowOther: true
       matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
-      randomize: false
       options:
         - id: na
         - id: codecademy
@@ -650,7 +650,6 @@
       template: multiple
       allowOther: true
       matchTags: [podcasts, people, sites]
-      randomize: false
       options:
         - id: na
         - id: a11y_rules
@@ -724,7 +723,6 @@
           newsletters,
           socialmedia,
         ]
-      randomize: false
       options:
         - id: na
         - id: adam_argyle
