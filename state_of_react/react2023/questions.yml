@@ -1,0 +1,590 @@
+- id: components
+  template: feature
+  slug: features
+  messageId: features.features_intro_react
+  questions:
+    - id: fragment
+      showCommentInput: true
+    - id: profiler
+    - id: strict_mode
+    - id: suspense
+
+- id: hooks
+  template: feature
+  slug: features
+  questions:
+    - id: usecallback
+    - id: usecontext
+    - id: usedebugvalue
+    - id: usedeferredvalue
+    - id: useeffect
+    - id: useid
+    # - id: useimperativehandle
+    # - id: useinsertioneffect
+    # - id: uselayouteffect
+    - id: usememo
+    - id: usereducer
+    - id: useref
+    - id: usestate
+    - id: usesyncexternalstore
+    - id: usetransition
+
+# - id: component_apis
+#   template: feature
+#   slug: features
+#   questions:
+# - id: flushsync
+# - id: finddomnode
+# - id: hydrate
+# - id: render
+# - id: unmountcomponentatnode
+
+- id: other_apis
+  template: feature
+  slug: features
+  questions:
+    - id: createportal
+    - id: createcontext
+    - id: forwardref
+    - id: lazy
+    - id: memo
+    - id: starttransition
+    - id: createroot
+    - id: hydrateroot
+    - id: react_server_components
+    # - id: rendertonodestream
+    # - id: rendertopipeablestream
+    # - id: rendertoreadablestream
+    # - id: rendertostaticmarkup
+    # - id: rendertostaticnodestream
+    # - id: rendertostring
+
+- id: legacy_apis
+  template: feature
+  slug: features
+  questions:
+    - id: cloneelement
+    - id: class_components
+    - id: createelement
+    # - id: createfactory
+    # - id: createref
+    # - id: isvalidelement
+    # - id: purecomponent
+
+- id: state_management
+  template: tool
+  slug: tools
+  questions:
+    - id: redux
+    - id: zustand
+    - id: jotai
+    - id: xstate
+    - id: mobx
+    - id: recoil
+
+- id: data_loading
+  template: tool
+  slug: tools
+  questions:
+    - id: apollo_client
+    - id: tanstack_query
+    - id: swr
+    - id: trpc
+    - id: relay
+
+- id: ui_libraries
+  template: tool
+  slug: tools
+  questions:
+    - id: react_bootstrap
+    - id: mui
+    - id: ant_design
+    - id: mantine
+    - id: radix
+    - id: shadcn_ui
+    - id: tailwind_css
+    - id: ionic
+    - id: chakra_ui
+    - id: react_admin
+    - id: blueprint_js
+
+- id: meta_frameworks
+  template: tool
+  slug: tools
+  questions:
+    - id: create_react_app
+    - id: nextjs
+    - id: remix
+    - id: gatsby
+    - id: astro
+    - id: docusaurus
+    - id: nextra
+    - id: vite
+
+- id: testing
+  template: tool
+  slug: tools
+  questions:
+    - id: jest
+    - id: testing_library
+    - id: storybook
+    - id: playwright
+    - id: cypress
+    - id: vitest
+
+- id: mobile_development
+  template: tool
+  slug: tools
+  questions:
+    - id: react_native
+
+- id: other_tools
+  slug: tools_others
+  questions:
+    - id: routing
+      template: multiple
+      options:
+        - id: react_router
+        - id: reach_router
+
+    - id: forms
+      template: multiple
+      options:
+        - id: react_hook_forms
+        - id: formik
+        - id: redux_forms
+        - id: joi
+        - id: zod
+        - id: yup
+
+    - id: animation
+      template: multiple
+      options:
+        - id: framer_motion
+
+    - id: auth
+      template: multiple
+      options:
+        - id: clerk
+        - id: fusionauth
+        - id: nextauth
+        - id: auth_js
+        - id: passport
+
+    - id: data_visualization
+      template: multiple
+      options:
+        - id: nivo
+        - id: visx
+        - id: recharts
+        - id: react_vis
+
+    - id: css_tools
+      template: multiple
+      options:
+        - id: regular_css
+        - id: sass
+        - id: styled_components
+        - id: css_modules
+        - id: scss_modules
+        - id: styled_jsx
+        - id: emotion
+        - id: stitches
+        - id: vanilla_extract
+        - id: unocss
+
+    - id: other_tools
+      template: multiple
+      options:
+        - id: prisma
+
+    - id: other_frontend_frameworks
+      template: multiple
+      options:
+        - id: angular
+        - id: vue
+        - id: qwik
+        - id: solid
+
+- id: usage
+  questions:
+    - id: class_vs_function_components
+      template: multiple
+      options:
+        - id: foo
+
+    - id: what_do_you_use_react_for
+      template: multiple
+      options:
+        - id: foo
+
+    - id: industry_sector
+      template: multiple
+      options:
+        - id: agriculture
+        - id: automotive
+        - id: construction
+        - id: consulting
+        - id: cyber_security
+        - id: ecommerce
+        - id: education
+        - id: energy
+        - id: entertainment
+        - id: finance
+        - id: government
+        - id: healthcare
+        - id: hospitality
+        - id: insurance
+        - id: logistics
+        - id: manufacturing
+        - id: marketing_tools
+        - id: news_media
+        - id: programming_tools
+        - id: real_estate
+        - id: socialmedia
+        - id: student
+        - id: telecommunications
+        - id: transport
+        - id: travel
+
+    - id: js_app_patterns
+      allowOther: true
+      template: multiple
+      cutoff: 0
+      options:
+        - id: single_page_app
+        - id: multiple_page_app
+        - id: static_site_generation
+        - id: server_side_rendering
+        - id: partial_hydration
+        - id: progressive_rehydration
+        - id: islands_architecture
+        - id: progressive_enhancement
+        - id: incremental_static_generation
+        - id: streaming_ssr
+        - id: resumability
+        - id: edge_rendering
+
+    - id: react_pain_points
+      template: multiple
+      limit: 3
+      options:
+        - id: rerenders
+        - id: testing
+        - id: data_loading
+        - id: state_management
+        - id: bundle_sizes
+        - id: server_rendering
+        - id: css_styling
+        - id: attribute_names
+        - id: synthetic_events
+        - id: ref_management
+        - id: memoization
+        - id: animations
+        - id: forms
+        - id: typescript
+
+    - id: react_moving_right_direction
+      template: opinion
+
+    - id: state_of_react
+      template: happiness
+
+    - id: state_of_javascript
+      template: happiness
+
+    - id: new_upcoming_features
+      template: multiple
+      options:
+        - id: asset_loading
+        - id: forget_compiler
+        - id: offscreen_component
+        - id: react_server_components
+        - id: suspense
+        - id: new_docs
+        - id: use_hook
+        - id: cache
+
+- id: resources
+  questions:
+    - id: first_steps
+      intlid: resources.first_steps_react
+      template: multiple
+      allowother: true
+      matchtags:
+        [first_steps, courses, people, youtube, sites, newsletters, socialmedia]
+      options:
+        - id: na
+        - id: books
+        - id: bootcamp
+        - id: courses_free
+        - id: courses_paid
+        - id: mentoring
+        - id: on_the_job
+        - id: podcasts
+        - id: school
+        - id: self_directed
+        - id: videos
+        - id: view_source
+
+    - id: blogs_news_magazines
+      template: multiple
+      allowother: true
+      matchtags: [courses, people, youtube, sites, newsletters, socialmedia]
+      options:
+        - id: na
+        - id: a_list_apart
+        - id: codrops
+        - id: css_irl
+        - id: css_tricks
+        - id: css_weekly
+        - id: csswg
+        - id: devto
+        - id: frontend_focus
+        - id: frontend_horse
+        - id: heydesigner
+        - id: medium
+        - id: moderncss
+        - id: sidebar
+        - id: sitepoint
+        - id: smashing_magazine
+        - id: web_dev
+
+    - id: sites_courses
+      template: multiple
+      allowother: true
+      matchtags: [courses, people, youtube, sites, newsletters, socialmedia]
+      options:
+        - id: na
+        - id: codecademy
+        - id: designcode
+        - id: egghead
+        - id: freecodecamp
+        - id: frontendmasters
+        - id: levelup
+        - id: mdn
+        - id: newline
+        - id: pluralsight
+        - id: stack_overflow
+        - id: udemy
+        - id: w3schools
+        - id: web_dev
+        - id: wes_bos
+
+    - id: podcasts
+      template: multiple
+      allowother: true
+      matchtags: [podcasts, people, sites]
+      options:
+        - id: na
+        - id: a11y_rules
+        - id: big_web_show
+        - id: changelog
+        - id: codepen_radio
+        - id: css_podcast
+        - id: front_end_happy_hour
+        - id: frontend_first
+        - id: frontend_weekend
+        - id: full_stack_radio
+        - id: http_203
+        - id: jamstack_radio
+        - id: ladybug
+        - id: modern_web
+        - id: shop_talk_show
+        - id: software_engineering_daily
+        - id: syntaxfm
+        - id: the_bike_shed
+        - id: tools_day
+        - id: undefined_podcast
+        - id: web_platform_podcast
+        - id: web_standards_ru
+        - id: working_draft
+
+    # - id: video_creators
+    #   template: multiple
+    #   allowother: true
+    #   matchtags:
+    #     [
+    #       video_creators,
+    #       youtube,
+    #       courses,
+    #       people,
+    #       sites,
+    #       newsletters,
+    #       socialmedia,
+    #     ]
+    #   options:
+    #     - id: fireship
+    #     - id: kevin_j_powell
+    #     - id: fun_fun_function
+    #     - id: theo_browne
+    #     - id: tina_huang
+    #     - id: jason_goodison # https://www.youtube.com/c/jasongoodison/videos
+    #     - id: programming_with_mosh # mosh_hamedani https://codewithmosh.com/ https://www.youtube.com/c/programmingwithmosh
+    #     - id: kent_c_dodds
+    #     - id: brad_traversy
+    #     - id: clever_programmer # rafeh_qazi https://www.youtube.com/c/cleverprogrammer
+    #     - id: ben_awad # https://www.youtube.com/channel/uc-8qazblcrglxen_my9blyw
+    #     - id: web_dev_simplified # kyle cook https://www.youtube.com/c/webdevsimplified/
+    #     - id: coding_train # daniel shiffman https://www.youtube.com/user/shiffman?app=desktop
+    #     - id: net_ninja # https://www.youtube.com/channel/ucw5yeuermmlnqo4oq8vwupg?app=desktop
+    #     - id: the_primeagen # https://www.youtube.com/channel/ucw5yeuermmlnqo4oq8vwupg?app=desktop
+    #     - id: jack_herrington # https://www.youtube.com/@jherr
+    #     - id: midudev
+    #     - id: mayuko
+    #     - id: coding_garden
+
+    - id: people
+      yearadded: 2021
+      template: multiple
+      allowother: true
+      matchtags:
+        [
+          video_creators,
+          youtube,
+          courses,
+          people,
+          sites,
+          newsletters,
+          socialmedia,
+        ]
+      options:
+        - id: na
+        - id: adam_argyle
+        - id: adam_wathan
+        - id: ahmad_shadeed
+        - id: andy_bell
+        - id: bramus_van_damme
+        - id: chris_coyier
+        - id: jake_archibald
+        - id: jen_simmons
+        - id: jhey_tompkins
+        - id: josh_comeau
+        - id: kevin_j_powell
+        - id: kyle_cook
+        - id: lea_verou
+        - id: miriam_suzanne
+        - id: rachel_andrew
+        - id: sara_soueidan
+        - id: stephanie_eckles
+        - id: una_kravets
+        - id: vadim_makeev
+        - id: wes_bos
+
+    - id: other_surveys
+      template: multiple
+      allowother: true
+      matchtags: [surveys]
+      options:
+        - id: na
+        - id: state_of_js_survey
+        # - id: state_of_css_survey
+        - id: state_of_graphql_survey
+        - id: jetbrains_survey
+        - id: stack_overflow_survey
+        - id: codingame_survey
+        - id: uxtools_survey
+        - id: postman_survey
+
+### demographics ###
+
+- id: user_info
+  questions:
+    - id: age
+      template: single
+      options:
+        - id: range_less_than_10
+        - id: range_10_18
+        - id: range_18_24
+        - id: range_25_34
+        - id: range_35_44
+        - id: range_45_54
+        - id: range_55_64
+        - id: range_more_than_65
+
+    - id: years_of_experience
+      template: single
+      options:
+        - id: range_less_than_1
+        - id: range_1_2 # for intl'd options, intl keys are of the form options.${question.id}.${option.id}
+        - id: range_2_5
+        - id: range_5_10
+        - id: range_10_20
+        - id: range_more_than_20
+
+    - id: company_size
+      template: single
+      options:
+        - id: na
+        - id: range_1
+        - id: range_1_5
+        - id: range_5_10
+        - id: range_10_20
+        - id: range_20_50
+        - id: range_50_100
+        - id: range_100_1000
+        - id: range_more_than_1000
+
+    - id: yearly_salary
+      template: single
+      options:
+        - id: na
+        - id: range_0_10
+        - id: range_10_30
+        - id: range_30_50
+        - id: range_50_100
+        - id: range_100_200
+        - id: range_more_than_200
+
+    - id: higher_education_degree
+      template: single
+      options:
+        - id: no_degree
+        - id: yes_related
+        - id: yes_unrelated
+
+    - id: country
+      template: country
+
+    - id: gender
+      template: single
+      # allowother: true
+      options:
+        - id: female
+        - id: male
+        - id: non_binary
+        - id: not_listed
+
+    - id: race_ethnicity
+      template: race_ethnicity
+      allowother: true
+      options:
+        - id: black_african
+        - id: east_asian
+        - id: hispanic_latin
+        - id: middle_eastern
+        - id: multiracial
+        - id: native_american_islander_australian
+        - id: south_asian
+        - id: south_east_asian
+        - id: white_european
+
+    - id: disability_status
+      yearadded: 2021
+      template: multiple
+      allowother: true
+      matchtags: [disabilities]
+      options:
+        - id: visual_impairments
+        - id: hearing_impairments
+        - id: mobility_impairments
+        - id: cognitive_impairments
+
+    - id: how_did_user_find_out_about_the_survey
+      template: text
+
+    - id: how_can_we_improve
+      template: longtext
+
+    - id: receive_notifications
+      template: receive_notifications
