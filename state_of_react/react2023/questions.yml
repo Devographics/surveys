@@ -6,7 +6,7 @@
     - id: fragment
       showCommentInput: true
     - id: profiler
-    - id: strict_mode
+    - id: strictmode
     - id: suspense
 
 - id: hooks
@@ -19,9 +19,9 @@
     - id: usedeferredvalue
     - id: useeffect
     - id: useid
-    # - id: useimperativehandle
-    # - id: useinsertioneffect
-    # - id: uselayouteffect
+    # - id: useimperativehandle # too niche
+    # - id: useinsertioneffect # for css-in-js lib authors
+    # - id: uselayouteffect # can hurt performance
     - id: usememo
     - id: usereducer
     - id: useref
@@ -33,11 +33,11 @@
 #   template: feature
 #   slug: features
 #   questions:
-# - id: flushsync
-# - id: finddomnode
-# - id: hydrate
-# - id: render
-# - id: unmountcomponentatnode
+# - id: flushsync # uncommon
+# - id: finddomnode # deprecated
+# - id: hydrate # deprecated
+# - id: render # deprecated
+# - id: unmountcomponentatnode # deprecated
 
 - id: other_apis
   template: feature
@@ -52,12 +52,12 @@
     - id: createroot
     - id: hydrateroot
     - id: react_server_components
-    # - id: rendertonodestream
-    # - id: rendertopipeablestream
-    # - id: rendertoreadablestream
-    # - id: rendertostaticmarkup
-    # - id: rendertostaticnodestream
-    # - id: rendertostring
+    # - id: rendertonodestream # deprecated
+    # - id: rendertopipeablestream # too niche
+    # - id: rendertoreadablestream # too niche
+    # - id: rendertostaticmarkup # too niche
+    # - id: rendertostaticnodestream # too niche
+    # - id: rendertostring # pitfall
 
 - id: legacy_apis
   template: feature
@@ -66,10 +66,10 @@
     - id: cloneelement
     - id: class_components
     - id: createelement
-    # - id: createfactory
-    # - id: createref
-    # - id: isvalidelement
-    # - id: purecomponent
+    # - id: createfactory # too niche
+    # - id: createref # too niche
+    # - id: isvalidelement # too niche
+    # - id: purecomponent # too niche
 
 - id: state_management
   template: tool
@@ -103,10 +103,10 @@
     - id: radix
     - id: shadcn_ui
     - id: tailwind_css
-    - id: ionic
     - id: chakra_ui
     - id: react_admin
     - id: blueprint_js
+    - id: headless_ui
 
 - id: meta_frameworks
   template: tool
@@ -119,7 +119,6 @@
     - id: astro
     - id: docusaurus
     - id: nextra
-    - id: vite
 
 - id: testing
   template: tool
@@ -137,90 +136,156 @@
   slug: tools
   questions:
     - id: react_native
+    - id: ionic
+    - id: expo
 
-- id: other_tools
-  slug: tools_others
+- id: tools_others
   questions:
-    - id: routing
-      template: multiple
-      options:
-        - id: react_router
-        - id: reach_router
-
     - id: forms
       template: multiple
       options:
-        - id: react_hook_forms
+        - id: na
+        - id: react_hook_form
         - id: formik
-        - id: redux_forms
+        - id: redux_form
         - id: joi
         - id: zod
         - id: yup
 
+    - id: build_tools
+      template: multiple
+      options:
+        - id: na
+        - id: webpack
+        - id: vite
+        - id: tsup
+        - id: esbuild
+        - id: rollup
+        - id: tsc
+        - id: parcel
+
     - id: animation
       template: multiple
       options:
+        - id: na
         - id: framer_motion
+        - id: react_spring
+        - id: react_motion
+        - id: autoanimate
 
     - id: auth
       template: multiple
       options:
+        - id: na
         - id: clerk
-        - id: fusionauth
-        - id: nextauth
+        - id: fusion_auth
         - id: auth_js
         - id: passport
+
+    - id: backend_language
+      template: multiple
+      options:
+        - id: na
+        - id: javascript
+        - id: typescript
+        - id: python
+        - id: php
+        - id: golang
+        - id: rust
+        - id: ruby
+        - id: dotnet
 
     - id: data_visualization
       template: multiple
       options:
+        - id: na
         - id: nivo
         - id: visx
         - id: recharts
         - id: react_vis
+        - id: victory
 
     - id: css_tools
       template: multiple
       options:
-        - id: regular_css
+        - id: na
+        - id: plain_css
         - id: sass
         - id: styled_components
         - id: css_modules
-        - id: scss_modules
         - id: styled_jsx
         - id: emotion
         - id: stitches
         - id: vanilla_extract
-        - id: unocss
+        - id: uno_css
 
-    - id: other_tools
+    - id: hosting
       template: multiple
       options:
+        - id: na
+        - id: aws
+        - id: cloudflare
+        - id: digital_ocean
+        - id: fastly
+        - id: fly_io
+        - id: github_pages
+        - id: google_cloud
+        - id: netlify
+        - id: render
+        - id: vercel
+
+    - id: other_services
+      template: multiple
+      options:
+        - id: na
+        - id: firebase
+        - id: planetscale
         - id: prisma
+        - id: redis
+        - id: sentry
+        - id: supabase
+        - id: upstash
 
     - id: other_frontend_frameworks
       template: multiple
       options:
+        - id: na
+        - id: alpinejs
         - id: angular
-        - id: vue
+        - id: ember
+        - id: lit
+        - id: preact
         - id: qwik
         - id: solid
+        - id: stencil
+        - id: svelte
+        - id: vue
 
 - id: usage
   questions:
-    - id: class_vs_function_components
-      template: multiple
-      options:
-        - id: foo
-
     - id: what_do_you_use_react_for
       template: multiple
       options:
-        - id: foo
+        - id: design_systems
+        - id: desktop_apps
+        - id: mobile_apps
+        - id: static_sites
+        - id: web_apps
+
+    - id: usage_type
+      intlId: usage.css_usage_type
+      yearAdded: 2023
+      template: single
+      allowOther: true
+      options:
+        - id: professionally
+        - id: student
+        - id: hobby
 
     - id: industry_sector
       template: multiple
       options:
+        - id: none
         - id: agriculture
         - id: automotive
         - id: construction
@@ -248,69 +313,77 @@
         - id: travel
 
     - id: js_app_patterns
-      allowOther: true
       template: multiple
       cutoff: 0
+      randomize: true
       options:
-        - id: single_page_app
-        - id: multiple_page_app
-        - id: static_site_generation
-        - id: server_side_rendering
-        - id: partial_hydration
-        - id: progressive_rehydration
-        - id: islands_architecture
-        - id: progressive_enhancement
-        - id: incremental_static_generation
-        - id: streaming_ssr
-        - id: resumability
+        - id: na
         - id: edge_rendering
+        - id: incremental_static_generation
+        - id: islands_architecture
+        - id: multiple_page_app
+        - id: partial_hydration
+        - id: progressive_enhancement
+        - id: progressive_rehydration
+        - id: resumability
+        - id: server_side_rendering
+        - id: single_page_app
+        - id: static_site_generation
+        - id: streaming_ssr
 
     - id: react_pain_points
       template: multiple
       limit: 3
+      cutoff: 0
+      randomize: true
       options:
-        - id: rerenders
-        - id: testing
-        - id: data_loading
-        - id: state_management
-        - id: bundle_sizes
-        - id: server_rendering
-        - id: css_styling
-        - id: attribute_names
-        - id: synthetic_events
-        - id: ref_management
-        - id: memoization
+        - id: na
         - id: animations
+        - id: attribute_names
+        - id: bundle_sizes
+        - id: css_styling
+        - id: data_loading
         - id: forms
+        - id: memoization
+        - id: ref_management
+        - id: rerenders
+        - id: server_rendering
+        - id: state_management
+        - id: synthetic_events
+        - id: testing
         - id: typescript
 
-    - id: react_moving_right_direction
-      template: opinion
+    # - id: react_moving_right_direction
+    #   template: opinion
 
     - id: state_of_react
       template: happiness
 
-    - id: state_of_javascript
-      template: happiness
+    # - id: state_of_javascript
+    #   template: happiness
 
-    - id: new_upcoming_features
+    - id: new_features
       template: multiple
+      limit: 3
+      cutoff: 0
+      randomize: true
       options:
+        - id: na
         - id: asset_loading
+        - id: cache
         - id: forget_compiler
+        - id: new_docs
         - id: offscreen_component
         - id: react_server_components
         - id: suspense
-        - id: new_docs
+        - id: transition_tracing
         - id: use_hook
-        - id: cache
 
 - id: resources
   questions:
     - id: first_steps
       intlid: resources.first_steps_react
       template: multiple
-      allowother: true
       matchtags:
         [first_steps, courses, people, youtube, sites, newsletters, socialmedia]
       options:
@@ -325,55 +398,64 @@
         - id: school
         - id: self_directed
         - id: videos
-        - id: view_source
+        - id: documentation
 
     - id: blogs_news_magazines
       template: multiple
-      allowother: true
       matchtags: [courses, people, youtube, sites, newsletters, socialmedia]
       options:
         - id: na
-        - id: a_list_apart
+        - id: alligator
+        - id: bestofjs
+        - id: bytes
         - id: codrops
-        - id: css_irl
-        - id: css_tricks
-        - id: css_weekly
-        - id: csswg
         - id: devto
+        - id: echo_js
+        - id: front_end_front
         - id: frontend_focus
         - id: frontend_horse
-        - id: heydesigner
+        - id: js_weekly
         - id: medium
-        - id: moderncss
-        - id: sidebar
+        - id: node_weekly
+        - id: react_weekly
         - id: sitepoint
         - id: smashing_magazine
-        - id: web_dev
 
     - id: sites_courses
       template: multiple
-      allowother: true
       matchtags: [courses, people, youtube, sites, newsletters, socialmedia]
       options:
-        - id: na
-        - id: codecademy
-        - id: designcode
-        - id: egghead
-        - id: freecodecamp
-        - id: frontendmasters
-        - id: levelup
-        - id: mdn
-        - id: newline
-        - id: pluralsight
         - id: stack_overflow
         - id: udemy
         - id: w3schools
+        - id: mdn
+        - id: freecodecamp
+        - id: codecademy
         - id: web_dev
+        - id: javascript_info
+        - id: scrimba
+        - id: frontendmasters
         - id: wes_bos
+        - id: platzi
+        - id: skillshare
+        - id: coursera
+        - id: egghead
+        - id: kent_c_dodds
+        - id: o_reilly
+        - id: pluralsight
+        - id: linkedin_learning
+        - id: designcode
+        - id: academind
+        - id: ui_dev
+        - id: vue_mastery
+        - id: newline
+        - id: epic_react
+        - id: miguel_angel_duran
+        - id: levelup
+        - id: doka
 
     - id: podcasts
       template: multiple
-      allowother: true
       matchtags: [podcasts, people, sites]
       options:
         - id: na
@@ -388,8 +470,11 @@
         - id: full_stack_radio
         - id: http_203
         - id: jamstack_radio
+        - id: javascript_jabber
+        - id: js_party
         - id: ladybug
         - id: modern_web
+        - id: react_podcast
         - id: shop_talk_show
         - id: software_engineering_daily
         - id: syntaxfm
@@ -397,47 +482,44 @@
         - id: tools_day
         - id: undefined_podcast
         - id: web_platform_podcast
+        - id: web_rush
         - id: web_standards_ru
-        - id: working_draft
 
-    # - id: video_creators
-    #   template: multiple
-    #   allowother: true
-    #   matchtags:
-    #     [
-    #       video_creators,
-    #       youtube,
-    #       courses,
-    #       people,
-    #       sites,
-    #       newsletters,
-    #       socialmedia,
-    #     ]
-    #   options:
-    #     - id: fireship
-    #     - id: kevin_j_powell
-    #     - id: fun_fun_function
-    #     - id: theo_browne
-    #     - id: tina_huang
-    #     - id: jason_goodison # https://www.youtube.com/c/jasongoodison/videos
-    #     - id: programming_with_mosh # mosh_hamedani https://codewithmosh.com/ https://www.youtube.com/c/programmingwithmosh
-    #     - id: kent_c_dodds
-    #     - id: brad_traversy
-    #     - id: clever_programmer # rafeh_qazi https://www.youtube.com/c/cleverprogrammer
-    #     - id: ben_awad # https://www.youtube.com/channel/uc-8qazblcrglxen_my9blyw
-    #     - id: web_dev_simplified # kyle cook https://www.youtube.com/c/webdevsimplified/
-    #     - id: coding_train # daniel shiffman https://www.youtube.com/user/shiffman?app=desktop
-    #     - id: net_ninja # https://www.youtube.com/channel/ucw5yeuermmlnqo4oq8vwupg?app=desktop
-    #     - id: the_primeagen # https://www.youtube.com/channel/ucw5yeuermmlnqo4oq8vwupg?app=desktop
-    #     - id: jack_herrington # https://www.youtube.com/@jherr
-    #     - id: midudev
-    #     - id: mayuko
-    #     - id: coding_garden
+    - id: video_creators
+      template: multiple
+      matchtags:
+        [
+          video_creators,
+          youtube,
+          courses,
+          people,
+          sites,
+          newsletters,
+          socialmedia,
+        ]
+      options:
+        - id: ben_awad
+        - id: brad_traversy
+        - id: clever_programmer
+        - id: coding_garden
+        - id: coding_train
+        - id: fireship
+        - id: fun_fun_function
+        - id: jack_herrington
+        - id: jason_goodison
+        - id: kent_c_dodds
+        - id: kevin_j_powell
+        - id: mayuko
+        - id: midudev
+        - id: net_ninja
+        - id: programming_with_mosh
+        - id: the_primeagen
+        - id: theo_browne
+        - id: tina_huang
+        - id: web_dev_simplified
 
     - id: people
-      yearadded: 2021
       template: multiple
-      allowother: true
       matchtags:
         [
           video_creators,
@@ -450,30 +532,59 @@
         ]
       options:
         - id: na
-        - id: adam_argyle
         - id: adam_wathan
-        - id: ahmad_shadeed
-        - id: andy_bell
-        - id: bramus_van_damme
+        - id: addy_osmani
+        - id: alex_russel
+        - id: anthony_fu
+        - id: axel_rauschmayer
+        - id: ben_holmes
+        - id: carlos_azaustre
+        - id: cassidy_williams
+        - id: cassie_evans
         - id: chris_coyier
+        - id: cory_house
+        - id: dan_abramov
+        - id: eric_elliott
+        - id: evan_you
+        - id: fernando_herrera
+        - id: fireship
+        - id: illya_klymov
+        - id: jack_herrington
         - id: jake_archibald
-        - id: jen_simmons
-        - id: jhey_tompkins
+        - id: james_q_quick
+        - id: jarred_sumner
+        - id: jason_lengstorf
+        - id: jason_miller
         - id: josh_comeau
+        - id: kent_c_dodds
         - id: kevin_j_powell
-        - id: kyle_cook
-        - id: lea_verou
-        - id: miriam_suzanne
-        - id: rachel_andrew
+        - id: kyle_simpson
+        - id: lee_robinson
+        - id: mark_erikson
+        - id: martin_fowler
+        - id: matt_pocock
+        - id: matteo_collina
+        - id: maximilian_schwarzmuller
+        - id: miguel_angel_duran
+        - id: minko_gechev
+        - id: netanel_basal
+        - id: rich_harris
+        - id: ryan_carniato
+        - id: ryan_florence
         - id: sara_soueidan
-        - id: stephanie_eckles
+        - id: sarah_drasner
+        - id: scott_tolinski
+        - id: surma
+        - id: tanner_linsley
+        - id: the_primeagen
+        - id: theo_browne
         - id: una_kravets
         - id: vadim_makeev
         - id: wes_bos
+        - id: zach_leatherman
 
     - id: other_surveys
       template: multiple
-      allowother: true
       matchtags: [surveys]
       options:
         - id: na
@@ -548,7 +659,6 @@
 
     - id: gender
       template: single
-      # allowother: true
       options:
         - id: female
         - id: male
@@ -557,7 +667,6 @@
 
     - id: race_ethnicity
       template: race_ethnicity
-      allowother: true
       options:
         - id: black_african
         - id: east_asian
@@ -572,7 +681,6 @@
     - id: disability_status
       yearadded: 2021
       template: multiple
-      allowother: true
       matchtags: [disabilities]
       options:
         - id: visual_impairments
