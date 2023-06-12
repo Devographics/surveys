@@ -75,6 +75,7 @@
   template: tool
   slug: tools
   questions:
+    # - id: usestate
     - id: redux
     - id: zustand
     - id: jotai
@@ -95,6 +96,7 @@
     - id: swr
     - id: trpc
     - id: relay
+    - id: rtk_query
     - id: data_loading_others
       template: projects
     - id: data_loading_happiness
@@ -285,6 +287,7 @@
         - id: vue
 
 - id: usage
+  intlId: usage_react
   questions:
     - id: what_do_you_use_react_for
       template: multiple
@@ -295,8 +298,17 @@
         - id: static_sites
         - id: web_apps
 
+    - id: react_version
+      template: single
+      allowOther: true
+      options:
+        - id: react_v16x
+        - id: react_v17x
+        - id: react_v18x
+        - id: not_sure
+
     - id: usage_type
-      intlId: usage.css_usage_type
+      intlId: usage.react_usage_type
       yearAdded: 2023
       template: single
       allowOther: true
@@ -394,9 +406,9 @@
         - id: na
         - id: asset_loading
         - id: cache
-        - id: forget_compiler
+        - id: react_forget
         - id: new_docs
-        - id: offscreen_component
+        - id: offscreen_rendering
         - id: react_server_components
         - id: suspense
         - id: transition_tracing
@@ -443,6 +455,8 @@
         - id: react_weekly
         - id: sitepoint
         - id: smashing_magazine
+        - id: reactiflux
+        - id: r_reactjs
 
     - id: sites_courses
       template: multiple
