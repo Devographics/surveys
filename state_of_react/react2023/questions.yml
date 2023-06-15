@@ -75,8 +75,9 @@
   template: tool
   slug: tools
   questions:
-    # - id: usestate
+    - id: usestate
     - id: redux
+    - id: redux_toolkit
     - id: zustand
     - id: jotai
     - id: xstate
@@ -106,17 +107,20 @@
   template: tool
   slug: tools
   questions:
-    - id: react_bootstrap
-    - id: mui
     - id: ant_design
+    - id: ariakit
+    - id: blueprint_js
+    - id: chakra_ui
+    - id: headless_ui
     - id: mantine
+    - id: mui
     - id: radix
+    - id: reach_ui
+    - id: react_admin
+    - id: react_aria
+    - id: react_bootstrap
     - id: shadcn_ui
     - id: tailwind_css
-    - id: chakra_ui
-    - id: react_admin
-    - id: blueprint_js
-    - id: headless_ui
     - id: ui_libraries_others
       template: projects
     - id: ui_libraries_happiness
@@ -133,6 +137,7 @@
     - id: astro
     - id: docusaurus
     - id: nextra
+    - id: redwood
     - id: meta_frameworks_others
       template: projects
     - id: meta_frameworks_happiness
@@ -160,6 +165,7 @@
     - id: react_native
     - id: ionic
     - id: expo
+    - id: capacitor
     - id: mobile_development_others
       template: projects
     - id: mobile_developmentt_happiness
@@ -173,10 +179,15 @@
         - id: na
         - id: react_hook_form
         - id: formik
-        - id: redux_form
+
+    - id: validation
+      template: multiple
+      options:
+        - id: na
         - id: joi
         - id: zod
         - id: yup
+        - id: io_ts
 
     - id: build_tools
       template: multiple
@@ -189,6 +200,7 @@
         - id: rollup
         - id: tsc
         - id: parcel
+        - id: turbopack
 
     - id: animation
       template: multiple
@@ -198,6 +210,7 @@
         - id: react_spring
         - id: react_motion
         - id: autoanimate
+        - id: react_native_reanimated
 
     - id: auth
       template: multiple
@@ -212,24 +225,29 @@
       template: multiple
       options:
         - id: na
-        - id: javascript
-        - id: typescript
-        - id: python
-        - id: php
-        - id: golang
-        - id: rust
-        - id: ruby
         - id: dotnet
+        - id: elixir
+        - id: golang
+        - id: haskell
+        - id: javascript
+        - id: php
+        - id: python
+        - id: ruby
+        - id: rust
+        - id: scala
+        - id: typescript
 
     - id: data_visualization
       template: multiple
       options:
         - id: na
+        - id: d3
         - id: nivo
-        - id: visx
-        - id: recharts
         - id: react_vis
+        - id: recharts
+        - id: tremor
         - id: victory
+        - id: visx
 
     - id: css_tools
       template: multiple
@@ -250,15 +268,27 @@
       options:
         - id: na
         - id: aws
+        - id: azure
         - id: cloudflare
         - id: digital_ocean
         - id: fastly
         - id: fly_io
         - id: github_pages
         - id: google_cloud
+        - id: heroku
         - id: netlify
         - id: render
         - id: vercel
+
+    - id: ai_tools
+      template: multiple
+      options:
+        - id: na
+        - id: chat_gpt
+        - id: copilot
+        - id: bing
+        - id: bard
+        - id: tabnine
 
     - id: other_services
       template: multiple
@@ -285,6 +315,9 @@
         - id: solid
         - id: svelte
         - id: vue
+
+    - id: other_tools
+      template: projects
 
 - id: usage
   intlId: usage_react
@@ -451,12 +484,15 @@
         - id: frontend_horse
         - id: js_weekly
         - id: medium
+        - id: next_js_weekly
         - id: node_weekly
-        - id: react_weekly
+        - id: r_reactjs
+        - id: react_digest
+        - id: react_status
+        - id: reactiflux
         - id: sitepoint
         - id: smashing_magazine
-        - id: reactiflux
-        - id: r_reactjs
+        - id: this_week_in_react
 
     - id: sites_courses
       template: multiple
@@ -477,14 +513,12 @@
         - id: skillshare
         - id: coursera
         - id: egghead
-        - id: kent_c_dodds
         - id: o_reilly
         - id: pluralsight
         - id: linkedin_learning
         - id: designcode
         - id: academind
         - id: ui_dev
-        - id: vue_mastery
         - id: newline
         - id: epic_react
         - id: miguel_angel_duran
@@ -508,9 +542,12 @@
         - id: http_203
         - id: jamstack_radio
         - id: javascript_jabber
+        - id: javascript_jam
         - id: js_party
         - id: ladybug
         - id: modern_web
+        - id: react_native_radio
+        - id: react_native_show
         - id: react_podcast
         - id: shop_talk_show
         - id: software_engineering_daily
@@ -536,6 +573,7 @@
         ]
       options:
         - id: ben_awad
+        - id: ben_holmes
         - id: brad_traversy
         - id: clever_programmer
         - id: coding_garden
@@ -544,16 +582,20 @@
         - id: fun_fun_function
         - id: jack_herrington
         - id: jason_goodison
+        - id: jason_lengstorf
         - id: kent_c_dodds
         - id: kevin_j_powell
         - id: mayuko
         - id: midudev
         - id: net_ninja
         - id: programming_with_mosh
+        - id: sam_selikoff
         - id: the_primeagen
         - id: theo_browne
         - id: tina_huang
+        - id: web_dev_cody
         - id: web_dev_simplified
+        - id: william_candillon
 
     - id: people
       template: multiple
@@ -569,53 +611,53 @@
         ]
       options:
         - id: na
-        - id: adam_wathan
-        - id: addy_osmani
         - id: alex_russel
         - id: anthony_fu
         - id: axel_rauschmayer
         - id: ben_holmes
         - id: carlos_azaustre
-        - id: cassidy_williams
-        - id: cassie_evans
-        - id: chris_coyier
+        - id: christoph_nakazawa
+        - id: christopher_chedeau
         - id: cory_house
+        - id: daishi_kato
         - id: dan_abramov
-        - id: eric_elliott
         - id: evan_you
         - id: fernando_herrera
         - id: fireship
-        - id: illya_klymov
+        - id: fred_schott
+        - id: henri_helvetica
         - id: jack_herrington
         - id: jake_archibald
         - id: james_q_quick
         - id: jarred_sumner
         - id: jason_lengstorf
         - id: jason_miller
+        - id: joe_savona
         - id: josh_comeau
         - id: kent_c_dodds
-        - id: kevin_j_powell
         - id: kyle_simpson
         - id: lee_robinson
         - id: mark_erikson
-        - id: martin_fowler
         - id: matt_pocock
         - id: matteo_collina
         - id: maximilian_schwarzmuller
+        - id: michel_westrate
         - id: miguel_angel_duran
-        - id: minko_gechev
-        - id: netanel_basal
+        - id: nicole_sullivan
+        - id: rachel_nabors
         - id: rich_harris
         - id: ryan_carniato
         - id: ryan_florence
-        - id: sara_soueidan
+        - id: sam_selikoff
         - id: sarah_drasner
         - id: scott_tolinski
-        - id: surma
+        - id: shaundai_person
+        - id: shruti_kapoor
         - id: tanner_linsley
+        - id: tejas_kumar
         - id: the_primeagen
         - id: theo_browne
-        - id: una_kravets
+        - id: tru_narla
         - id: vadim_makeev
         - id: wes_bos
         - id: zach_leatherman
@@ -626,13 +668,14 @@
       options:
         - id: na
         - id: state_of_js_survey
-        # - id: state_of_css_survey
+        - id: state_of_css_survey
         - id: state_of_graphql_survey
         - id: jetbrains_survey
         - id: stack_overflow_survey
         - id: codingame_survey
         - id: uxtools_survey
         - id: postman_survey
+        - id: state_of_react_native
 
 ### demographics ###
 
