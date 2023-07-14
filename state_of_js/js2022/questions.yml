@@ -10,9 +10,10 @@
 - id: language
   template: feature
   slug: features
+  messageId: features.features_intro
   questions:
-    - id: features_intro
-      template: help
+    # - id: features_intro
+    #   template: help
 
     # removed in 2021
     # - id: async_await
@@ -142,9 +143,10 @@
 - id: front_end_frameworks
   template: tool
   slug: tools
+  messageId: tools.tools_intro
   questions:
-    - id: tools_intro
-      template: help
+    # - id: tools_intro
+    #   template: help
 
     - id: react
     - id: vuejs
@@ -1137,14 +1139,19 @@
     - id: disability_status
       matchTags: [disabilities]
       template: disability_status
-      allowOther: true
+      # allowOther: true
       yearAdded: 2021
+
+    - id: disability_status_others
+      template: others
+      matchTags: [surveys]
 
     - id: how_did_user_find_out_about_the_survey
       template: text
 
     - id: how_can_we_improve
       template: longtext
+      matchTags: [how_can_we_improve]
 
     - id: receive_notifications
       template: receive_notifications

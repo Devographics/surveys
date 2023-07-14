@@ -344,8 +344,7 @@
   slug: tools_others
   questions:
     - id: pre_post_processors
-      template: multiple
-      allowOther: true
+      template: multipleWithOther
       matchTags: [libraries, other]
       options:
         - id: na
@@ -356,8 +355,7 @@
         - id: assembler_css
 
     - id: utilities
-      template: multiple
-      allowOther: true
+      template: multipleWithOther
       matchTags: [libraries, other]
       options:
         - id: na
@@ -372,8 +370,7 @@
         - id: post_css_preset_env
 
     - id: browsers
-      template: multiple
-      allowOther: true
+      template: multipleWithOther
       matchTags: [browsers, other]
       options:
         - id: arc
@@ -401,8 +398,7 @@
   questions:
     - id: form_factors
       intlId: environments.form_factors
-      template: multiple
-      allowOther: true
+      template: multipleWithOther
       matchTags: [form_factors]
       options:
         - id: desktop
@@ -441,8 +437,7 @@
 
     - id: what_do_you_use_css_for
       intlId: environments.what_do_you_use_css_for
-      template: multiple
-      allowOther: true
+      template: multipleWithOther
       matchTags: [css_uses]
       options:
         - id: blogs
@@ -457,8 +452,7 @@
 
     - id: industry_sector
       intlId: user_info.industry_sector
-      template: multiple
-      allowOther: true
+      template: multipleWithOther
       matchTags: [industry_sectors]
       options:
         - id: agriculture
@@ -490,8 +484,7 @@
     - id: usage_type
       intlId: usage.css_usage_type
       yearAdded: 2023
-      template: single
-      allowOther: true
+      template: singleWithOther
       options:
         - id: professionally
         - id: student
@@ -519,8 +512,7 @@
     #     - id: attr_function
 
     - id: css_interoperability_features
-      template: multiple
-      allowOther: true
+      template: multipleWithOther
       matchTags: [features, browser_interoperability, css_missing_features]
       limit: 5
       randomize: true
@@ -540,8 +532,7 @@
         - id: line_clamp
 
     - id: css_missing_features
-      template: multiple
-      allowOther: true
+      template: multipleWithOther
       matchTags: [features, browser_interoperability, css_missing_features]
       limit: 5
       randomize: true
@@ -561,8 +552,7 @@
         - id: css_toggle
 
     - id: css_pain_points
-      template: multiple
-      allowOther: true
+      template: multipleWithOther
       matchTags: [features, browser_interoperability, css_missing_features]
       limit: 5
       randomize: true
@@ -592,8 +582,7 @@
   questions:
     - id: learning_methods
       intlId: resources.learning_methods_css
-      template: multiple
-      allowOther: true
+      template: multipleWithOther
       matchTags:
         [first_steps, courses, people, youtube, sites, newsletters, socialmedia]
       options:
@@ -611,8 +600,7 @@
         - id: view_source
 
     - id: blogs_news_magazines
-      template: multiple
-      allowOther: true
+      template: multipleWithOther
       matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
       options:
         - id: na
@@ -632,8 +620,7 @@
         - id: smashing_magazine
 
     - id: sites_courses
-      template: multiple
-      allowOther: true
+      template: multipleWithOther
       matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
       options:
         - id: na
@@ -654,8 +641,7 @@
         - id: wes_bos
 
     - id: podcasts
-      template: multiple
-      allowOther: true
+      template: multipleWithOther
       matchTags: [podcasts, people, sites]
       options:
         - id: na
@@ -717,8 +703,7 @@
 
     - id: people
       yearAdded: 2021
-      template: multiple
-      allowOther: true
+      template: multipleWithOther
       matchTags:
         [
           video_creators,
@@ -754,8 +739,7 @@
         - id: wes_bos
 
     - id: other_surveys
-      template: multiple
-      allowOther: true
+      template: multipleWithOther
       matchTags: [surveys]
       options:
         - id: na
@@ -853,8 +837,7 @@
 
     - id: disability_status
       yearAdded: 2021
-      template: multiple
-      allowOther: true
+      template: multipleWithOther
       matchTags: [disabilities]
       options:
         - id: na
@@ -865,6 +848,18 @@
 
     - id: how_did_user_find_out_about_the_survey
       template: text
+      matchTags:
+        [
+          sources,
+          people,
+          sites,
+          newsletters,
+          video_creators,
+          podcasts,
+          sources_state_of_css,
+          socialmedia,
+          surveys,
+        ]
 
     - id: how_can_we_improve
       template: longtext
