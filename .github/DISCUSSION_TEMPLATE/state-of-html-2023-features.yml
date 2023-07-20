@@ -1,4 +1,3 @@
-title: Feature proposal (State of HTML 2023)
 title: 'Feature: [Page title]'
 labels: ['State of HTML 2023', 'feature']
 body:
@@ -6,7 +5,7 @@ body:
     attributes:
       value: |
         Thanks for taking the time to propose a feature for the State of HTML 2023 survey! Please fill out the following information to help us understand the feature you're proposing.
-        PLease make sure the feature is not already proposed by someone else, by browsing the [relevant issues](https://github.com/Devographics/surveys/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22State+of+HTML+2023%22).
+        PLease make sure the feature is not already proposed by someone else, by browsing the [other proposed features](https://github.com/Devographics/surveys/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22State+of+HTML+2023%22).
   - type: input
     id: spec_url
     attributes:
@@ -25,23 +24,37 @@ body:
       label: Any other links?
       description: These may be tutorials, blog posts, news coverage, tweets/toots/skeets, or other resources that help explain the feature. One per line please.
   - type: dropdown
+    id: stability
+    attributes:
+      label: How stable is this feature?
+      description: While the survey skews towards more recent and cutting edge features, we do plan to ask about certain stable features as well, to see how widely they're used and some future ones to gauge interest.
+      options:
+        - Future (No implementations yet)
+        - Cutting edge (Some implementations but not in all browsers and/or behind flags)
+        - Recent (Enabled by default in all major browsers)
+        - Stable (Has been widely supported for several years)
+        - Deprecated (Still supported, but not recommended for use in new projects)
+        - Removed (No longer supported in any major browsers)
+  - type: dropdown
     id: type
     attributes:
-      label: What kind of feature is this?
-      description: If not an HTML feature, please explain how it relates to the State of HTML survey in the "Details" section below. If it’s a combination, select all that apply.
+      label: Type of feature
+      description: |
+        If not an HTML feature, please explain how it relates to the State of HTML survey in the "Details" section below.
+        If it’s a combination, select all that apply.
+        E.g. Canvas would fall under both "HTML element" and "JS API".
       multiple: true
       options:
         - HTML element
         - HTML attribute
         - HTML attribute value
-        - DOM API
-        - Other JS API
-        - Related CSS feature
+        - JS API
+        - CSS
         - Other
   - type: dropdown
     id: area
     attributes:
-      label: What category does this feature fall into?
+      label: What focus area does this feature fall into?
       description: Please select all that apply. If none apply, please select "Other" and explain in the "Details" section below.
       multiple: true
       options:
@@ -61,8 +74,8 @@ body:
   - type: textarea
     id: details
     attributes:
-      label: Description
-      description: Please provide more details
+      label: Details
+      description: Please provide more details, explain what asking about this feature teaches us about developers and the state of web development in 2023, how it relates to the State of HTML survey (if non-obvious), and any other information you think would be relevant.
 
 
 
