@@ -1,0 +1,74 @@
+name: Feature proposal (State of HTML 2023)
+description: A proposal for a feature to ask about about in the State of HTML 2023 survey
+title: 'Feature: [Page title]'
+labels: ['State of HTML 2023', 'feature']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to propose a feature for the State of HTML 2023 survey! Please fill out the following information to help us understand the feature you're proposing.
+        PLease make sure the feature is not already proposed by someone else, by browsing the [relevant issues](https://github.com/Devographics/surveys/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22State+of+HTML+2023%22).
+  - type: input
+    id: spec_url
+    attributes:
+      label: "Specification URL:"
+      description: URL to the specification for this feature, if it exists and you have it
+      placeholder: ex. https://wicg.github.io/portals/#the-portal-element
+  - type: input
+    id: mdn_url
+    attributes:
+      label: "MDN URL:"
+      description: URL to the MDN docs for this feature, if they exist
+      placeholder: ex. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/portal
+  - type: textarea
+    id: other_urls
+    attributes:
+      label: Any other links?
+      description: These may be tutorials, blog posts, news coverage, tweets/toots/skeets, or other resources that help explain the feature
+  - type: dropdown
+    id: issues
+    attributes:
+      label: What kind of feature is this?
+      description: If not an HTML feature, please explain how it relates to the State of HTML survey in the "Details" section below. If it’s a combination, select all that apply.
+      multiple: true
+      options:
+        - HTML element
+        - HTML attribute
+        - HTML attribute value
+        - DOM API
+        - Other JS API
+        - Related CSS feature
+        - Other
+      validations:
+        required: true
+  - type: dropdown
+    id: issues
+    attributes:
+      label: What category does this feature fall into?
+      description: Please select all that apply. If none apply, please select "Other" and explain in the "Details" section below.
+      multiple: true
+      options:
+        - Forms
+        - Consuming Web Components
+        - Making Web Components
+        - Accessibility
+        - Security & Privacy
+        - Performance
+        - Embedding
+        - Multimedia
+        - Interactivity
+        - Semantic HTML
+        - Templating
+        - Bridging the gap with native
+        - Other
+      validations:
+        required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Description
+      description: Please provide more details
+
+
+
+
