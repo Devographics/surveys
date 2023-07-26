@@ -1,0 +1,35 @@
+query css2023companySizeQuery {
+    
+    surveys {
+      state_of_css {
+        css2023 {
+          user_info {
+            company_size {
+          
+          
+              responses(parameters: {showNoAnswer:true}) {
+                currentEdition {
+              
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
+                
+                
+                
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+}

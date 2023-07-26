@@ -1,0 +1,35 @@
+query css2023genderQuery {
+    
+    surveys {
+      state_of_css {
+        css2023 {
+          user_info {
+            gender {
+          
+          
+              responses(parameters: {showNoAnswer:true}) {
+                currentEdition {
+              
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
+                
+                
+                
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+}

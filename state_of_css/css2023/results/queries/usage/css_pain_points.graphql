@@ -1,0 +1,35 @@
+query css2023cssPainPointsQuery {
+    
+    surveys {
+      state_of_css {
+        css2023 {
+          usage {
+            css_pain_points {
+          
+          
+              responses(parameters: {limit:20,cutoff:20}) {
+                currentEdition {
+              
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
+                
+                
+                
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+}

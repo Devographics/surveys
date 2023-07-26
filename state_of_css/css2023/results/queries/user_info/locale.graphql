@@ -1,0 +1,35 @@
+query css2023localeQuery {
+    
+    surveys {
+      state_of_css {
+        css2023 {
+          user_info {
+            locale {
+          
+          
+              responses(parameters: {cutoff:20}) {
+                currentEdition {
+              
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
+                
+                
+                
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+}

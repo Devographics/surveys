@@ -1,0 +1,35 @@
+query css2023ageQuery {
+    
+    surveys {
+      state_of_css {
+        css2023 {
+          user_info {
+            age {
+          
+          
+              responses(parameters: {showNoAnswer:true}) {
+                currentEdition {
+              
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
+                
+                
+                
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+}

@@ -1,0 +1,35 @@
+query css2023sourceQuery {
+    
+    surveys {
+      state_of_css {
+        css2023 {
+          user_info {
+            source {
+          
+          
+              responses(parameters: {limit:20}) {
+                currentEdition {
+              
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
+                
+                
+                
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+}

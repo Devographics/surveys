@@ -1,0 +1,33 @@
+query css2023cssFrameworksSectionStreamsQuery {
+        surveys {
+        state_of_css {
+            css2023 {
+                css_frameworks {
+                    css_frameworks_section_streams: css_frameworks_tools {
+                        items {
+                            id
+                            responses<ARGUMENTS_PLACEHOLDER> {
+                                allEditions {
+                                    editionId
+                                    year
+                                    buckets {
+                                        id
+                                        percentageQuestion
+                                        percentageSurvey
+                                        count
+                                    }
+                                    completion {
+                                        count
+                                        percentageSurvey
+                                        total
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

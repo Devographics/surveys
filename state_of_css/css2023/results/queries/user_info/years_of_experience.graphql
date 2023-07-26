@@ -1,0 +1,35 @@
+query css2023yearsOfExperienceQuery {
+    
+    surveys {
+      state_of_css {
+        css2023 {
+          user_info {
+            years_of_experience {
+          
+          
+              responses(parameters: {showNoAnswer:true}) {
+                currentEdition {
+              
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
+                
+                
+                
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+}

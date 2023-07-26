@@ -1,0 +1,33 @@
+query css2023cssInJsSectionStreamsQuery {
+        surveys {
+        state_of_css {
+            css2023 {
+                css_in_js {
+                    css_in_js_section_streams: css_in_js_tools {
+                        items {
+                            id
+                            responses<ARGUMENTS_PLACEHOLDER> {
+                                allEditions {
+                                    editionId
+                                    year
+                                    buckets {
+                                        id
+                                        percentageQuestion
+                                        percentageSurvey
+                                        count
+                                    }
+                                    completion {
+                                        count
+                                        percentageSurvey
+                                        total
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

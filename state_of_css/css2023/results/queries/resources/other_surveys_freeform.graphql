@@ -1,0 +1,67 @@
+query css2023otherSurveysFreeformQuery {
+    
+    surveys {
+      state_of_css {
+        css2023 {
+          resources {
+            other_surveys_freeform: other_surveys {
+          
+          
+              freeform(parameters: {cutoff:5}) {
+                currentEdition {
+              
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
+                    entity {
+        name
+        nameHtml
+        nameClean
+        id
+        homepage {
+          url
+        }
+        youtube {
+          url
+        }
+        twitter {
+          url
+        }
+        twitch {
+          url
+        }
+        rss {
+          url
+        }
+        blog { 
+            url
+        }
+        mastodon {
+            url
+        }
+        github {
+            url
+        }
+        npm {
+            url
+        }
+    }
+                
+                
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+}
