@@ -1,0 +1,663 @@
+- id: layout
+  template: feature
+  slug: features
+  messageId: features.features_intro_css
+  questions:
+    - id: subgrid
+      showCommentInput: true
+    - id: writing_modes
+    - id: logical_properties
+    - id: aspect_ratio
+    - id: content_visibility # 2023: thinking about it
+    - id: flexbox_gap # 2023: quick win
+      yearAdded: 2021
+    - id: at_container # (@container)
+      yearAdded: 2021
+
+    - id: object_view_box # too new?
+      yearAdded: 2022
+    - id: viewport_percentage_length_units
+      yearAdded: 2022
+    - id: media_queries_range_contexts
+      yearAdded: 2022
+
+    - id: anchor_positioning
+      yearAdded: 2023
+
+- id: shapes_graphics
+  template: feature
+  slug: features
+  questions:
+    - id: blend_modes
+    - id: filter_effects # 2023: quick win
+    - id: backdrop_filter
+
+    - id: linear_easing_function # 2023
+
+    - id: intrinsic_sizing #min-, max, and fit-content
+      yearAdded: 2021
+    - id: conic_gradient
+      yearAdded: 2021
+
+    - id: view_transitions
+      yearAdded: 2023
+
+- id: colors
+  template: feature
+  slug: features
+  questions:
+    - id: color_function
+      yearAdded: 2021
+    - id: accent_color
+      yearAdded: 2021
+
+    - id: currentcolor
+      yearAdded: 2022
+    - id: color_mix
+      yearAdded: 2022
+    - id: wide_gamut_colors
+      yearAdded: 2022
+    - id: relative_colors
+      yearAdded: 2022
+    - id: gradient_color_spaces
+      yearAdded: 2022
+
+- id: interactions
+  template: feature
+  slug: features
+  questions:
+    - id: scroll_snap
+    - id: overscroll_behavior
+    - id: touch_action
+
+    - id: scroll_behavior
+      yearAdded: 2022
+    - id: scrollbar_gutter
+      yearAdded: 2022
+
+- id: typography
+  template: feature
+  slug: features
+  questions:
+    - id: font_display
+    - id: line_clamp
+    - id: variable_fonts
+
+    - id: font_palette
+      yearAdded: 2022
+
+    - id: text_wrap_balance
+      yearAdded: 2023
+
+- id: accessibility
+  template: feature
+  slug: features
+  questions:
+    - id: prefers_reduced_motion
+    - id: prefers_color_scheme
+    - id: prefers_reduced_data
+      yearAdded: 2021
+    - id: color_scheme
+      yearAdded: 2021
+    - id: prefers_contrast
+      yearAdded: 2022
+    - id: forced_colors
+      yearAdded: 2022
+
+    - id: focus_visible
+      yearAdded: 2022
+
+- id: other_features
+  template: feature
+  slug: features
+  questions:
+    - id: variables
+    - id: feature_support_queries # (@supports)
+    - id: comparison_functions
+
+    - id: at_property #(@property)
+      yearAdded: 2021
+
+    - id: marker
+      yearAdded: 2021
+
+    - id: has_selector
+      yearAdded: 2022
+    - id: where_selector
+      yearAdded: 2022
+
+    - id: cascade_layers
+      yearAdded: 2022
+
+    - id: shadow_dom_css
+      yearAdded: 2022
+
+    - id: trigonometric_functions
+      yearAdded: 2022
+    - id: css_nesting
+      yearAdded: 2022
+
+    - id: image_set
+      yearAdded: 2022
+
+    - id: image_function
+      yearAdded: 2022
+
+    - id: individual_transform_properties
+      yearAdded: 2023
+
+- id: css_frameworks
+  template: tool
+  slug: tools
+  messageId: tools.tools_intro_css
+  questions:
+    - id: bootstrap
+    - id: materialize_css
+    - id: ant_design
+    - id: semantic_ui
+    - id: bulma
+    - id: foundation
+    - id: ui_kit
+    - id: tachyons
+    - id: tailwind_css
+    - id: pure_css
+    - id: open_props
+      yearAdded: 2023
+    - id: blaze_ui
+      yearAdded: 2023
+    - id: uno_css
+      yearAdded: 2023
+
+    - id: css_frameworks_others
+      intlId: tools.other_tools
+      template: others
+      sectionSlug: tools_others
+      matchTags: [libraries, other]
+
+    - id: css_frameworks_happiness
+      intlId: tools.happiness
+      template: happiness
+      sectionSlug: happiness
+
+- id: css_in_js
+  template: tool
+  slug: tools
+  questions:
+    - id: styled_components
+    - id: jss
+    - id: styled_jsx
+    - id: emotion
+    - id: css_modules
+    - id: styled_system
+    - id: stitches
+    - id: theme_ui
+      yearAdded: 2021
+    - id: vanilla_extract
+      yearAdded: 2021
+    - id: windi_css
+      yearAdded: 2021
+
+    - id: css_in_js_others
+      intlId: tools.other_tools
+      template: others
+      sectionSlug: tools_others
+      matchTags: [libraries, other]
+
+    - id: css_in_js_happiness
+      intlId: tools.happiness
+      template: happiness
+      sectionSlug: happiness
+
+### OTHER TOOLS ###
+
+- id: other_tools
+  slug: tools_others
+  questions:
+    - id: pre_post_processors
+      template: multipleWithOther
+      matchTags: [libraries, other]
+      options:
+        - id: na
+        - id: sass
+        - id: less
+        - id: post_css
+        - id: stylus
+        - id: assembler_css
+
+    - id: utilities
+      template: multipleWithOther
+      matchTags: [libraries, other]
+      options:
+        - id: na
+        - id: stylelint
+        - id: purge_css
+        - id: prettier
+        - id: autoprefixer
+        - id: cssnano
+        - id: acss
+        - id: lightning_css
+        - id: project_wallace
+        - id: post_css_preset_env
+
+    - id: browsers
+      template: multipleWithOther
+      matchTags: [browsers, other]
+      options:
+        - id: arc
+        - id: brave
+        - id: chrome
+        - id: chrome_android
+        - id: chrome_ios
+        - id: edge
+        - id: firefox
+        - id: firefox_android
+        - id: internet_explorer_11
+        - id: opera
+        - id: polypane
+        - id: safari
+        - id: safari_ios
+        - id: samsung_internet
+        - id: vivaldi
+
+### USAGE ###
+- id: usage
+  intlId: sections.usage_css
+  questions:
+    - id: form_factors
+      intlId: environments.form_factors
+      template: multipleWithOther
+      matchTags: [form_factors, browsers]
+      options:
+        - id: desktop
+        - id: feature_phone
+        - id: gaming_console
+        - id: keyboard_only
+        - id: print
+        - id: screen_reader
+        - id: smart_watch
+        - id: smartphone
+        - id: tablet
+        - id: testing_tools
+        - id: tv
+        - id: vision_simulator
+
+    - id: what_do_you_use_css_for
+      intlId: environments.what_do_you_use_css_for
+      template: multipleWithOther
+      matchTags: [css_uses]
+      options:
+        - id: blogs
+        - id: css_art
+        - id: design_systems
+        - id: desktop_apps
+        - id: emails
+        - id: marketing_sites
+        - id: mobile_apps
+        - id: printed_documents
+        - id: web_apps
+
+    - id: industry_sector
+      intlId: user_info.industry_sector
+      template: multipleWithOther
+      matchTags: [industry_sectors]
+      options:
+        - id: agriculture
+        - id: automotive
+        - id: construction
+        - id: consulting
+        - id: crypto
+        - id: cyber_security
+        - id: ecommerce
+        - id: education
+        - id: energy
+        - id: entertainment
+        - id: finance
+        - id: government
+        - id: healthcare
+        - id: hospitality
+        - id: insurance
+        - id: logistics
+        - id: manufacturing
+        - id: marketing_tools
+        - id: news_media
+        - id: programming_tools
+        - id: real_estate
+        - id: socialmedia
+        - id: telecommunications
+        - id: tourism
+        - id: transport
+
+    - id: usage_type
+      intlId: usage.css_usage_type
+      yearAdded: 2023
+      template: singleWithOther
+      options:
+        - id: professionally
+        - id: student
+        - id: hobby
+
+    - id: css_js_balance
+      yearAdded: 2022
+      template: slider
+
+    - id: css_interoperability_features
+      template: multipleWithOther
+      matchTags: [features, browser_interoperability, css_missing_features]
+      limit: 5
+      randomize: true
+      options:
+        - id: na
+        - id: has_selector
+        - id: at_container
+        - id: subgrid
+        - id: css_nesting
+        - id: scrollbar
+        - id: backdrop_filter
+        - id: media_queries_range_contexts
+        - id: at_property
+        - id: math_functions
+        - id: color_function
+        - id: cascade_layers
+        - id: line_clamp
+
+    - id: css_missing_features
+      template: multipleWithOther
+      matchTags: [features, browser_interoperability, css_missing_features]
+      limit: 5
+      randomize: true
+      options:
+        - id: na
+        - id: native_visually_hidden
+        - id: generated_content_alt_text
+        - id: animate_to_auto
+        - id: wrapping_detection
+        - id: more_pseudo_elements
+        - id: svg_in_css
+        - id: masonry_layout
+        - id: grid_lines_styling
+        - id: media_queries_variables
+        - id: mixins
+        - id: scoping
+        - id: css_toggle
+
+    - id: css_pain_points
+      template: multipleWithOther
+      matchTags: [features, browser_interoperability, css_missing_features]
+      limit: 5
+      randomize: true
+      options:
+        - id: na
+        - id: browser_interoperability
+        - id: interactions
+        - id: architecture
+        - id: layout_positioning
+        - id: scoping_specificity
+        - id: responsive_design
+        - id: form_elements_styling
+        - id: performance_issues
+
+    - id: state_of_the_web_happiness
+      intlId: happiness.state_of_the_web
+      template: happiness
+      sectionSlug: happiness
+    - id: state_of_css_happiness
+      intlId: happiness.state_of_css
+      template: happiness
+      sectionSlug: happiness
+
+  ### RESOURCES ###
+
+- id: resources
+  questions:
+    - id: learning_methods
+      intlId: resources.learning_methods_css
+      template: multipleWithOther
+      matchTags:
+        [first_steps, courses, people, youtube, sites, newsletters, socialmedia]
+      options:
+        - id: na
+        - id: books
+        - id: bootcamp
+        - id: courses_free
+        - id: courses_paid
+        - id: mentoring
+        - id: on_the_job
+        - id: podcasts
+        - id: school
+        - id: self_directed
+        - id: videos
+        - id: view_source
+
+    - id: blogs_news_magazines
+      template: multipleWithOther
+      matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
+      options:
+        - id: na
+        - id: a_list_apart
+        - id: codrops
+        - id: css_irl
+        - id: css_tricks
+        - id: css_weekly
+        - id: devto
+        - id: frontend_focus
+        - id: frontend_horse
+        - id: heydesigner
+        - id: medium
+        - id: moderncss
+        - id: sidebar
+        - id: sitepoint
+        - id: smashing_magazine
+
+    - id: sites_courses
+      template: multipleWithOther
+      matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
+      options:
+        - id: na
+        - id: codecademy
+        - id: csswg
+        - id: designcode
+        - id: egghead
+        - id: freecodecamp
+        - id: frontendmasters
+        - id: levelup
+        - id: mdn
+        - id: newline
+        - id: pluralsight
+        - id: stack_overflow
+        - id: udemy
+        - id: w3schools
+        - id: web_dev
+        - id: wes_bos
+
+    - id: podcasts
+      template: multipleWithOther
+      matchTags: [podcasts, people, sites]
+      options:
+        - id: na
+        - id: a11y_rules
+        - id: changelog
+        - id: codepen_radio
+        - id: css_podcast
+        - id: front_end_happy_hour
+        - id: frontend_first
+        - id: frontend_weekend
+        - id: full_stack_radio
+        - id: http_203
+        - id: jamstack_radio
+        - id: ladybug
+        - id: modern_web
+        - id: shop_talk_show
+        - id: software_engineering_daily
+        - id: syntaxfm
+        - id: the_bike_shed
+        - id: tools_day
+        - id: undefined_podcast
+        - id: web_platform_podcast
+        - id: web_standards_ru
+        - id: working_draft
+
+    - id: people
+      yearAdded: 2021
+      template: multipleWithOther
+      matchTags:
+        [
+          video_creators,
+          youtube,
+          courses,
+          people,
+          sites,
+          newsletters,
+          socialmedia,
+        ]
+      options:
+        - id: na
+        - id: adam_argyle
+        - id: adam_wathan
+        - id: ahmad_shadeed
+        - id: andy_bell
+        - id: bramus_van_damme
+        - id: chris_coyier
+        - id: jake_archibald
+        - id: jen_simmons
+        - id: jhey_tompkins
+        - id: josh_comeau
+        - id: kevin_j_powell
+        - id: kyle_cook
+        - id: lea_verou
+        - id: michelle_barker
+        - id: miriam_suzanne
+        - id: rachel_andrew
+        - id: sara_soueidan
+        - id: stephanie_eckles
+        - id: una_kravets
+        - id: vadim_makeev
+        - id: wes_bos
+
+    - id: other_surveys
+      template: multipleWithOther
+      matchTags: [surveys]
+      options:
+        - id: na
+        - id: state_of_js_survey
+        # - id: state_of_css_survey
+        - id: state_of_graphql_survey
+        - id: jetbrains_survey
+        - id: stack_overflow_survey
+        - id: codingame_survey
+        - id: uxtools_survey
+        - id: postman_survey
+
+### DEMOGRAPHICS ###
+
+- id: user_info
+  questions:
+    - id: age
+      template: single
+      options:
+        - id: range_less_than_10
+        - id: range_10_18
+        - id: range_18_24
+        - id: range_25_34
+        - id: range_35_44
+        - id: range_45_54
+        - id: range_55_64
+        - id: range_more_than_65
+
+    - id: years_of_experience
+      template: single
+      options:
+        - id: range_less_than_1
+        - id: range_1_2 # for intl'd options, intl keys are of the form options.${question.id}.${option.id}
+        - id: range_2_5
+        - id: range_5_10
+        - id: range_10_20
+        - id: range_more_than_20
+
+    - id: company_size
+      template: single
+      options:
+        - id: na
+        - id: range_1
+        - id: range_1_5
+        - id: range_5_10
+        - id: range_10_20
+        - id: range_20_50
+        - id: range_50_100
+        - id: range_100_1000
+        - id: range_more_than_1000
+
+    - id: yearly_salary
+      template: single
+      options:
+        - id: na
+        - id: range_0_10
+        - id: range_10_30
+        - id: range_30_50
+        - id: range_50_100
+        - id: range_100_200
+        - id: range_more_than_200
+
+    - id: higher_education_degree
+      template: single
+      options:
+        - id: no_degree
+        - id: yes_related
+        - id: yes_unrelated
+
+    - id: country
+      template: country
+
+    - id: gender
+      template: single
+      # allowOther: true
+      options:
+        - id: female
+        - id: male
+        - id: non_binary
+        - id: not_listed
+
+    - id: race_ethnicity
+      template: race_ethnicity
+      allowOther: true
+      options:
+        - id: black_african
+        - id: east_asian
+        - id: hispanic_latin
+        - id: middle_eastern
+        - id: multiracial
+        - id: native_american_islander_australian
+        - id: south_asian
+        - id: south_east_asian
+        - id: white_european
+
+    - id: disability_status
+      yearAdded: 2021
+      template: multipleWithOther
+      matchTags: [disabilities]
+      options:
+        - id: na
+        - id: visual_impairments
+        - id: hearing_impairments
+        - id: mobility_impairments
+        - id: cognitive_impairments
+
+    - id: how_did_user_find_out_about_the_survey
+      template: text
+      matchTags:
+        [
+          sources,
+          people,
+          sites,
+          newsletters,
+          video_creators,
+          podcasts,
+          sources_state_of_css,
+          socialmedia,
+          surveys,
+        ]
+
+    - id: how_can_we_improve
+      template: longtext
+
+    - id: receive_notifications
+      template: receive_notifications
