@@ -1,37 +1,35 @@
 query css2022higherEducationDegreeQuery {
-    dataAPI{
-        
-        surveys {
-          state_of_css {
-            css2022 {
-              user_info {
-                higher_education_degree {
+    
+    surveys {
+      state_of_css {
+        css2022 {
+          user_info {
+            higher_education_degree {
           
           
-                  responses(parameters: {showNoAnswer:true,enableCache:false}) {
-                    currentEdition {
+              responses(parameters: {showNoAnswer:true}) {
+                currentEdition {
               
-                      completion {
-                        count
-                        percentageSurvey
-                        total
-                      }
-                      buckets {
-                        count
-                        id
-                        percentageQuestion
-                        percentageSurvey
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
                 
                 
                 
-                      }
-                    }
                   }
                 }
               }
             }
           }
         }
-
+      }
     }
+
 }

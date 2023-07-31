@@ -1,46 +1,44 @@
 query css2022yearsOfExperienceByUserInfoYearlySalaryQuery {
-    dataAPI{
-        
-        surveys {
-          state_of_css {
-            css2022 {
-              user_info {
-                years_of_experience_by_user_info__yearly_salary: years_of_experience {
+    
+    surveys {
+      state_of_css {
+        css2022 {
+          user_info {
+            years_of_experience_by_user_info__yearly_salary: years_of_experience {
           
           
-                  responses(facet: user_info__yearly_salary, parameters: {facetSort:{order:asc,property:mean},facetCutoff:100,enableCache:false}) {
-                    currentEdition {
+              responses(facet: user_info__yearly_salary, parameters: {facetSort:{order:asc,property:mean},facetCutoff:100}) {
+                currentEdition {
               
-                      completion {
-                        count
-                        percentageSurvey
-                        total
-                      }
-                      buckets {
-                        count
-                        id
-                        percentageQuestion
-                        percentageSurvey
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
                 
                 
-            facetBuckets {
-                id
-                count
-                percentageQuestion
-                percentageSurvey
-                percentageFacet
+        facetBuckets {
+            id
+            count
+            percentageQuestion
+            percentageSurvey
+            percentageFacet
         
-            }
+        }
 
                 
-                      }
-                    }
                   }
                 }
               }
             }
           }
         }
-
+      }
     }
+
 }

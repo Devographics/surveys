@@ -1,37 +1,35 @@
 query css2022countryQuery {
-    dataAPI{
-        
-        surveys {
-          state_of_css {
-            css2022 {
-              user_info {
-                country {
+    
+    surveys {
+      state_of_css {
+        css2022 {
+          user_info {
+            country {
           
           
-                  responses(parameters: {limit:20,enableCache:false}) {
-                    currentEdition {
+              responses(parameters: {limit:20}) {
+                currentEdition {
               
-                      completion {
-                        count
-                        percentageSurvey
-                        total
-                      }
-                      buckets {
-                        count
-                        id
-                        percentageQuestion
-                        percentageSurvey
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
                 
                 
                 
-                      }
-                    }
                   }
                 }
               }
             }
           }
         }
-
+      }
     }
+
 }

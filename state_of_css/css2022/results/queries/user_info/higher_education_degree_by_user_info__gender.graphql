@@ -1,46 +1,44 @@
 query css2022higherEducationDegreeByUserInfoGenderQuery {
-    dataAPI{
-        
-        surveys {
-          state_of_css {
-            css2022 {
-              user_info {
-                higher_education_degree_by_user_info__gender: higher_education_degree {
+    
+    surveys {
+      state_of_css {
+        css2022 {
+          user_info {
+            higher_education_degree_by_user_info__gender: higher_education_degree {
           
           
-                  responses(facet: user_info__gender, parameters: {facetSort:{order:asc,property:mean},facetCutoff:100,enableCache:false}) {
-                    currentEdition {
+              responses(facet: user_info__gender, parameters: {facetSort:{order:asc,property:mean},facetCutoff:100}) {
+                currentEdition {
               
-                      completion {
-                        count
-                        percentageSurvey
-                        total
-                      }
-                      buckets {
-                        count
-                        id
-                        percentageQuestion
-                        percentageSurvey
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
                 
                 
-            facetBuckets {
-                id
-                count
-                percentageQuestion
-                percentageSurvey
-                percentageFacet
+        facetBuckets {
+            id
+            count
+            percentageQuestion
+            percentageSurvey
+            percentageFacet
         
-            }
+        }
 
                 
-                      }
-                    }
                   }
                 }
               }
             }
           }
         }
-
+      }
     }
+
 }

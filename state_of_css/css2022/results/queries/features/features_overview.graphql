@@ -1,20 +1,18 @@
 query css2022featuresOverviewQuery {
-    dataAPI{
-                surveys {
-            state_of_css {
-                css2022 {
-                    features {
-                        features_overview: all_features {
-                            items {
-                                id
-                                responses(parameters: {enableCache:false}) {
-                                    currentEdition {
-                                        buckets {
-                                            id
-                                            percentageQuestion
-                                            percentageSurvey
-                                            count
-                                        }
+        surveys {
+        state_of_css {
+            css2022 {
+                features {
+                    features_overview: all_features {
+                        items {
+                            id
+                            responses<ARGUMENTS_PLACEHOLDER> {
+                                currentEdition {
+                                    buckets {
+                                        id
+                                        percentageQuestion
+                                        percentageSurvey
+                                        count
                                     }
                                 }
                             }
@@ -23,6 +21,6 @@ query css2022featuresOverviewQuery {
                 }
             }
         }
-
     }
+
 }
