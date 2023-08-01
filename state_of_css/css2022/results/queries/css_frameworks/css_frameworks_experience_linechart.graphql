@@ -1,39 +1,37 @@
 query css2022cssFrameworksExperienceLinechartQuery {
-    dataAPI{
-                surveys {
-            state_of_css {
-                css2022 {
-                    css_frameworks {
-                        css_frameworks_experience_linechart: css_frameworks_ratios {
-                            years
-                            items(parameters: {enableCache:false}) {
-                                id
-                                usage {
-                                    year
-                                    rank
-                                    percentageQuestion
-                                }
-                                awareness {
-                                    year
-                                    rank
-                                    percentageQuestion
-                                }
-                                interest {
-                                    year
-                                    rank
-                                    percentageQuestion
-                                }
-                                satisfaction {
-                                    year
-                                    rank
-                                    percentageQuestion
-                                }
+        surveys {
+        state_of_css {
+            css2022 {
+                css_frameworks {
+                    css_frameworks_experience_linechart: css_frameworks_ratios {
+                        years
+                        items<ARGUMENTS_PLACEHOLDER> {
+                            id
+                            usage {
+                                year
+                                rank
+                                percentageQuestion
+                            }
+                            awareness {
+                                year
+                                rank
+                                percentageQuestion
+                            }
+                            interest {
+                                year
+                                rank
+                                percentageQuestion
+                            }
+                            satisfaction {
+                                year
+                                rank
+                                percentageQuestion
                             }
                         }
                     }
                 }
             }
         }
-
     }
+
 }
