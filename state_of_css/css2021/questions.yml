@@ -492,94 +492,31 @@
   slug: user_info
   questions:
     - id: age
-      template: single
-      options:
-        - id: range_less_than_10
-        - id: range_10_18
-        - id: range_18_24
-        - id: range_25_34
-        - id: range_35_44
-        - id: range_45_54
-        - id: range_55_64
-        - id: range_more_than_65
+      template: age
 
     - id: years_of_experience
-      template: single
-      options:
-        - id: range_less_than_1
-        - id: range_1_2 # for intl'd options, intl keys are of the form options.${question.id}.${option.id}
-        - id: range_2_5
-        - id: range_5_10
-        - id: range_10_20
-        - id: range_more_than_20
+      template: years_of_experience
 
     - id: company_size
-      template: single
-      options:
-        - id: range_1
-        - id: range_1_5
-        - id: range_5_10
-        - id: range_10_20
-        - id: range_20_50
-        - id: range_50_100
-        - id: range_100_1000
-        - id: range_more_than_1000
+      template: company_size
 
     - id: yearly_salary
-      template: single
-      options:
-        - id: range_work_for_free
-        - id: range_0_10
-        - id: range_10_30
-        - id: range_30_50
-        - id: range_50_100
-        - id: range_100_200
-        - id: range_more_than_200
+      template: yearly_salary
 
     - id: higher_education_degree
-      template: single
-      options:
-        - id: no_degree
-        - id: yes_related
-        - id: yes_unrelated
+      template: higher_education_degree
 
     - id: country
       template: country
 
     - id: gender
-      template: single
-      allowother: true
-      options:
-        - id: female
-        - id: male
-        - id: non_binary
-        - id: not_listed
+      template: gender
 
     - id: race_ethnicity
-      template: multiple
-      allowother: true
-      options:
-        - id: black_african
-        - id: east_asian
-        - id: hispanic_latin
-        - id: middle_eastern
-        - id: multiracial
-        - id: native_american_islander_australian
-        - id: south_asian
-        - id: south_east_asian
-        - id: white_european
-        - id: not_listed
+      template: race_ethnicity
 
     - id: disability_status
-      yearAdded: 2021
-      template: multiple
-      allowother: true
-      options:
-        - id: visual_impairments
-        - id: hearing_impairments
-        - id: mobility_impairments
-        - id: cognitive_impairments
-        - id: not_listed
+      template: disability_status
 
     - id: disability_status_others
       yearAdded: 2021
