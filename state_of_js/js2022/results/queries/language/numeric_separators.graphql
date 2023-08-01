@@ -1,44 +1,42 @@
 query js2022numericSeparatorsQuery {
-    dataAPI{
-        
-        surveys {
-          state_of_js {
-            js2022 {
-              language {
-                numeric_separators {
+    
+    surveys {
+      state_of_js {
+        js2022 {
+          language {
+            numeric_separators {
           
           
-        comments {
-            currentEdition {
-              count
-            }
-          }
+    comments {
+        currentEdition {
+          count
+        }
+      }
 
-                  responses(parameters: {showNoAnswer:true,enableCache:false}) {
-                    allEditions {
-                      editionId
-          year
-                      completion {
-                        count
-                        percentageSurvey
-                        total
-                      }
-                      buckets {
-                        count
-                        id
-                        percentageQuestion
-                        percentageSurvey
+              responses(parameters: {showNoAnswer:true}) {
+                allEditions {
+                  editionId
+      year
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
                 
                 
                 
-                      }
-                    }
                   }
                 }
               }
             }
           }
         }
-
+      }
     }
+
 }

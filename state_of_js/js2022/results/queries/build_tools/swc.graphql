@@ -1,44 +1,42 @@
 query js2022swcQuery {
-    dataAPI{
-        
-        surveys {
-          state_of_js {
-            js2022 {
-              build_tools {
-                swc {
+    
+    surveys {
+      state_of_js {
+        js2022 {
+          build_tools {
+            swc {
           
           
-        comments {
-            currentEdition {
-              count
-            }
-          }
+    comments {
+        currentEdition {
+          count
+        }
+      }
 
-                  responses(parameters: {showNoAnswer:true,enableCache:false}) {
-                    allEditions {
-                      editionId
-          year
-                      completion {
-                        count
-                        percentageSurvey
-                        total
-                      }
-                      buckets {
-                        count
-                        id
-                        percentageQuestion
-                        percentageSurvey
+              responses(parameters: {showNoAnswer:true}) {
+                allEditions {
+                  editionId
+      year
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
                 
                 
                 
-                      }
-                    }
                   }
                 }
               }
             }
           }
         }
-
+      }
     }
+
 }

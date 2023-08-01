@@ -1,37 +1,35 @@
 query js2022localeQuery {
-    dataAPI{
-        
-        surveys {
-          state_of_js {
-            js2022 {
-              user_info {
-                locale {
+    
+    surveys {
+      state_of_js {
+        js2022 {
+          user_info {
+            locale {
           
           
-                  responses(parameters: {cutoff:20,enableCache:false}) {
-                    currentEdition {
+              responses(parameters: {cutoff:20}) {
+                currentEdition {
               
-                      completion {
-                        count
-                        percentageSurvey
-                        total
-                      }
-                      buckets {
-                        count
-                        id
-                        percentageQuestion
-                        percentageSurvey
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
                 
                 
                 
-                      }
-                    }
                   }
                 }
               }
             }
           }
         }
-
+      }
     }
+
 }

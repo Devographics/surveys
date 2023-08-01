@@ -1,37 +1,35 @@
 query js2022dataVisualizationOthersQuery {
-    dataAPI{
-        
-        surveys {
-          state_of_js {
-            js2022 {
-              other_tools {
-                data_visualization_others {
+    
+    surveys {
+      state_of_js {
+        js2022 {
+          other_tools {
+            data_visualization_others {
           
           
-                  responses(parameters: {limit:5,enableCache:false}) {
-                    currentEdition {
+              responses(parameters: {limit:5}) {
+                currentEdition {
               
-                      completion {
-                        count
-                        percentageSurvey
-                        total
-                      }
-                      buckets {
-                        count
-                        id
-                        percentageQuestion
-                        percentageSurvey
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
                 
                 
                 
-                      }
-                    }
                   }
                 }
               }
             }
           }
         }
-
+      }
     }
+
 }

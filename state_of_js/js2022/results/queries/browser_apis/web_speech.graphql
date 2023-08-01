@@ -1,44 +1,42 @@
 query js2022webSpeechQuery {
-    dataAPI{
-        
-        surveys {
-          state_of_js {
-            js2022 {
-              browser_apis {
-                web_speech {
+    
+    surveys {
+      state_of_js {
+        js2022 {
+          browser_apis {
+            web_speech {
           
           
-        comments {
-            currentEdition {
-              count
-            }
-          }
+    comments {
+        currentEdition {
+          count
+        }
+      }
 
-                  responses(parameters: {showNoAnswer:true,enableCache:false}) {
-                    allEditions {
-                      editionId
-          year
-                      completion {
-                        count
-                        percentageSurvey
-                        total
-                      }
-                      buckets {
-                        count
-                        id
-                        percentageQuestion
-                        percentageSurvey
+              responses(parameters: {showNoAnswer:true}) {
+                allEditions {
+                  editionId
+      year
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
                 
                 
                 
-                      }
-                    }
                   }
                 }
               }
             }
           }
         }
-
+      }
     }
+
 }

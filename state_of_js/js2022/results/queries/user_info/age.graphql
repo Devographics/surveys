@@ -1,37 +1,35 @@
 query js2022ageQuery {
-    dataAPI{
-        
-        surveys {
-          state_of_js {
-            js2022 {
-              user_info {
-                age {
+    
+    surveys {
+      state_of_js {
+        js2022 {
+          user_info {
+            age {
           
           
-                  responses(parameters: {showNoAnswer:true,enableCache:false}) {
-                    currentEdition {
+              responses(parameters: {showNoAnswer:true}) {
+                currentEdition {
               
-                      completion {
-                        count
-                        percentageSurvey
-                        total
-                      }
-                      buckets {
-                        count
-                        id
-                        percentageQuestion
-                        percentageSurvey
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
                 
                 
                 
-                      }
-                    }
                   }
                 }
               }
             }
           }
         }
-
+      }
     }
+
 }

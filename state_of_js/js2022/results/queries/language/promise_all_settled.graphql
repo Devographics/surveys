@@ -1,44 +1,42 @@
 query js2022promiseAllSettledQuery {
-    dataAPI{
-        
-        surveys {
-          state_of_js {
-            js2022 {
-              language {
-                promise_all_settled {
+    
+    surveys {
+      state_of_js {
+        js2022 {
+          language {
+            promise_all_settled {
           
           
-        comments {
-            currentEdition {
-              count
-            }
-          }
+    comments {
+        currentEdition {
+          count
+        }
+      }
 
-                  responses(parameters: {showNoAnswer:true,enableCache:false}) {
-                    allEditions {
-                      editionId
-          year
-                      completion {
-                        count
-                        percentageSurvey
-                        total
-                      }
-                      buckets {
-                        count
-                        id
-                        percentageQuestion
-                        percentageSurvey
+              responses(parameters: {showNoAnswer:true}) {
+                allEditions {
+                  editionId
+      year
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
                 
                 
                 
-                      }
-                    }
                   }
                 }
               }
             }
           }
         }
-
+      }
     }
+
 }

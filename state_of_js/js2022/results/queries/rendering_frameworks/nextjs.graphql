@@ -1,44 +1,42 @@
 query js2022nextjsQuery {
-    dataAPI{
-        
-        surveys {
-          state_of_js {
-            js2022 {
-              rendering_frameworks {
-                nextjs {
+    
+    surveys {
+      state_of_js {
+        js2022 {
+          rendering_frameworks {
+            nextjs {
           
           
-        comments {
-            currentEdition {
-              count
-            }
-          }
+    comments {
+        currentEdition {
+          count
+        }
+      }
 
-                  responses(parameters: {showNoAnswer:true,enableCache:false}) {
-                    allEditions {
-                      editionId
-          year
-                      completion {
-                        count
-                        percentageSurvey
-                        total
-                      }
-                      buckets {
-                        count
-                        id
-                        percentageQuestion
-                        percentageSurvey
+              responses(parameters: {showNoAnswer:true}) {
+                allEditions {
+                  editionId
+      year
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
                 
                 
                 
-                      }
-                    }
                   }
                 }
               }
             }
           }
         }
-
+      }
     }
+
 }

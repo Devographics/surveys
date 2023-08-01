@@ -1,27 +1,25 @@
 query js2022renderingFrameworksExperienceMarimekkoQuery {
-    dataAPI{
-                surveys {
-            state_of_js {
-                js2022 {
-                    rendering_frameworks {
-                        rendering_frameworks_experience_marimekko: rendering_frameworks_allTools {
-                            items {
-                                id
-                                responses(parameters: {enableCache:false}) {
-                                    currentEdition {
-                                        editionId
-                                        year
-                                        buckets {
-                                            id
-                                            percentageQuestion
-                                            percentageSurvey
-                                            count
-                                        }
-                                        completion {
-                                            count
-                                            percentageSurvey
-                                            total
-                                        }
+        surveys {
+        state_of_js {
+            js2022 {
+                rendering_frameworks {
+                    rendering_frameworks_experience_marimekko: rendering_frameworks_tools {
+                        items {
+                            id
+                            responses<ARGUMENTS_PLACEHOLDER> {
+                                currentEdition {
+                                    editionId
+                                    year
+                                    buckets {
+                                        id
+                                        percentageQuestion
+                                        percentageSurvey
+                                        count
+                                    }
+                                    completion {
+                                        count
+                                        percentageSurvey
+                                        total
                                     }
                                 }
                             }
@@ -30,6 +28,6 @@ query js2022renderingFrameworksExperienceMarimekkoQuery {
                 }
             }
         }
-
     }
+
 }

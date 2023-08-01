@@ -1,37 +1,35 @@
 query js2022jsAppPatternsOthersQuery {
-    dataAPI{
-        
-        surveys {
-          state_of_js {
-            js2022 {
-              usage {
-                js_app_patterns_others {
+    
+    surveys {
+      state_of_js {
+        js2022 {
+          usage {
+            js_app_patterns_others {
           
           
-                  responses(parameters: {limit:15,enableCache:false}) {
-                    currentEdition {
+              responses(parameters: {limit:15}) {
+                currentEdition {
               
-                      completion {
-                        count
-                        percentageSurvey
-                        total
-                      }
-                      buckets {
-                        count
-                        id
-                        percentageQuestion
-                        percentageSurvey
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
                 
                 
                 
-                      }
-                    }
                   }
                 }
               }
             }
           }
         }
-
+      }
     }
+
 }

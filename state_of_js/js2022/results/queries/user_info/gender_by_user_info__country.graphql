@@ -1,46 +1,44 @@
 query js2022genderByUserInfoCountryQuery {
-    dataAPI{
-        
-        surveys {
-          state_of_js {
-            js2022 {
-              user_info {
-                gender_by_user_info__country: gender {
+    
+    surveys {
+      state_of_js {
+        js2022 {
+          user_info {
+            gender_by_user_info__country: gender {
           
           
-                  responses(facet: user_info__country, parameters: {facetSort:{order:desc,property:mean},limit:11,facetCutoff:100,enableCache:false}) {
-                    currentEdition {
+              responses(facet: user_info__country, parameters: {facetSort:{order:desc,property:mean},limit:11,facetCutoff:100}) {
+                currentEdition {
               
-                      completion {
-                        count
-                        percentageSurvey
-                        total
-                      }
-                      buckets {
-                        count
-                        id
-                        percentageQuestion
-                        percentageSurvey
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
                 
                 
-            facetBuckets {
-                id
-                count
-                percentageQuestion
-                percentageSurvey
-                percentageFacet
+        facetBuckets {
+            id
+            count
+            percentageQuestion
+            percentageSurvey
+            percentageBucket
         
-            }
+        }
 
                 
-                      }
-                    }
                   }
                 }
               }
             }
           }
         }
-
+      }
     }
+
 }
