@@ -1,0 +1,42 @@
+query graphql2022graphqlEditorQuery {
+    
+    surveys {
+      state_of_graphql {
+        graphql2022 {
+          api_generators {
+            graphql_editor {
+          
+          
+    comments {
+        currentEdition {
+          count
+        }
+      }
+
+              responses(parameters: {showNoAnswer:true}) {
+                allEditions {
+                  editionId
+      year
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
+                
+                
+                
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+}

@@ -1,0 +1,42 @@
+query graphql2022swiftGraphqlQuery {
+    
+    surveys {
+      state_of_graphql {
+        graphql2022 {
+          graphql_clients {
+            swift_graphql {
+          
+          
+    comments {
+        currentEdition {
+          count
+        }
+      }
+
+              responses(parameters: {showNoAnswer:true}) {
+                allEditions {
+                  editionId
+      year
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
+                
+                
+                
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+}

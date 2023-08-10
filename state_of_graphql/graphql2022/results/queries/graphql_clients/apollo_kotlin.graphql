@@ -1,0 +1,42 @@
+query graphql2022apolloKotlinQuery {
+    
+    surveys {
+      state_of_graphql {
+        graphql2022 {
+          graphql_clients {
+            apollo_kotlin {
+          
+          
+    comments {
+        currentEdition {
+          count
+        }
+      }
+
+              responses(parameters: {showNoAnswer:true}) {
+                allEditions {
+                  editionId
+      year
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
+                
+                
+                
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+}

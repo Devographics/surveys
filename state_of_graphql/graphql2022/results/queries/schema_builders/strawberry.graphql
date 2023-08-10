@@ -1,0 +1,42 @@
+query graphql2022strawberryQuery {
+    
+    surveys {
+      state_of_graphql {
+        graphql2022 {
+          schema_builders {
+            strawberry {
+          
+          
+    comments {
+        currentEdition {
+          count
+        }
+      }
+
+              responses(parameters: {showNoAnswer:true}) {
+                allEditions {
+                  editionId
+      year
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
+                
+                
+                
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+}

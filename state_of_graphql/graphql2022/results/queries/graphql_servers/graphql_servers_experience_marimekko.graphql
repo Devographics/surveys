@@ -1,0 +1,33 @@
+query graphql2022graphqlServersExperienceMarimekkoQuery {
+        surveys {
+        state_of_graphql {
+            graphql2022 {
+                graphql_servers {
+                    graphql_servers_experience_marimekko: graphql_servers_tools {
+                        items {
+                            id
+                            responses<ARGUMENTS_PLACEHOLDER> {
+                                currentEdition {
+                                    editionId
+                                    year
+                                    buckets {
+                                        id
+                                        percentageQuestion
+                                        percentageSurvey
+                                        count
+                                    }
+                                    completion {
+                                        count
+                                        percentageSurvey
+                                        total
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

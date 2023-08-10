@@ -1,0 +1,42 @@
+query graphql2022mercuriusQuery {
+    
+    surveys {
+      state_of_graphql {
+        graphql2022 {
+          graphql_servers {
+            mercurius {
+          
+          
+    comments {
+        currentEdition {
+          count
+        }
+      }
+
+              responses(parameters: {showNoAnswer:true}) {
+                allEditions {
+                  editionId
+      year
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                  buckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
+                
+                
+                
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+}
