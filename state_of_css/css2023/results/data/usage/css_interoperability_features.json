@@ -22,7 +22,18 @@
                         "name": "`:has()`",
                         "nameHtml": "<code>:has()</code>",
                         "nameClean": ":has()",
-                        "id": "has_selector"
+                        "id": "has_selector",
+                        "example": {
+                          "language": "css",
+                          "code": "a:has(> img) {\n  border: 2px solid grey;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-tag\">a</span><span class=\"hljs-selector-pseudo\">:has</span>(&gt; <span class=\"hljs-selector-tag\">img</span>) {\n  <span class=\"hljs-attribute\">border</span>: <span class=\"hljs-number\">2px</span> solid grey;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/:has"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-has"
+                        }
                       }
                     },
                     {
@@ -31,7 +42,18 @@
                       "percentageQuestion": 35.9,
                       "percentageSurvey": 22.1,
                       "entity": {
-                        "id": "css_nesting"
+                        "id": "css_nesting",
+                        "example": {
+                          "language": "css",
+                          "code": ".parent {\n  color: blue;\n\n  .child {\n    color: red;\n  }\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.parent</span> {\n  <span class=\"hljs-attribute\">color</span>: blue;\n\n  <span class=\"hljs-selector-class\">.child</span> {\n    <span class=\"hljs-attribute\">color</span>: red;\n  }\n}"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://developer.chrome.com/articles/css-nesting/",
+                            "title": "CSS Nesting"
+                          }
+                        ]
                       }
                     },
                     {
@@ -40,7 +62,18 @@
                       "percentageQuestion": 34.4,
                       "percentageSurvey": 21.2,
                       "entity": {
-                        "id": "at_container"
+                        "id": "at_container",
+                        "example": {
+                          "language": "css",
+                          "code": "@container (min-width: 700px) {\n  .card {\n    display: grid;\n    grid-template-columns: 2fr 1fr;\n  }\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">@container</span> (<span class=\"hljs-attribute\">min-width</span>: <span class=\"hljs-number\">700px</span>) {\n  <span class=\"hljs-selector-class\">.card</span> {\n    <span class=\"hljs-attribute\">display</span>: grid;\n    <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">2</span>fr <span class=\"hljs-number\">1</span>fr;\n  }\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_container_queries"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-container-queries"
+                        }
                       }
                     },
                     {
@@ -51,7 +84,18 @@
                       "entity": {
                         "name": "Subgrid",
                         "nameClean": "Subgrid",
-                        "id": "subgrid"
+                        "id": "subgrid",
+                        "example": {
+                          "language": "css",
+                          "code": ".wrapper {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.item {\n  grid-row: 1 / 4;\n  display: grid;\n  grid-template-rows: subgrid;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.wrapper</span> {\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">1</span>fr <span class=\"hljs-number\">1</span>fr;\n}\n\n<span class=\"hljs-selector-class\">.item</span> {\n  <span class=\"hljs-attribute\">grid-row</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">4</span>;\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-rows</span>: subgrid;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-subgrid"
+                        }
                       }
                     },
                     {
@@ -80,7 +124,18 @@
                         "name": "`@property`",
                         "nameHtml": "<code>@property</code>",
                         "nameClean": "@property",
-                        "id": "at_property"
+                        "id": "at_property",
+                        "example": {
+                          "language": "css",
+                          "code": "@property --property-name {\n  syntax: \"<color>\";\n  inherits: false;\n  initial-value: #c0ffee;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">@property</span> --property-name {\n  syntax: <span class=\"hljs-string\">&quot;&lt;color&gt;&quot;</span>;\n  inherits: false;\n  initial-value: <span class=\"hljs-number\">#c0ffee</span>;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@property"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-css_at-rules_property"
+                        }
                       }
                     },
                     {
@@ -92,7 +147,18 @@
                         "name": "`line-clamp`",
                         "nameHtml": "<code>line-clamp</code>",
                         "nameClean": "line-clamp",
-                        "id": "line_clamp"
+                        "id": "line_clamp",
+                        "example": {
+                          "language": "css",
+                          "code": "p {\n  display: -webkit-box;\n  -webkit-line-clamp: 2;\n  -webkit-box-orient: vertical;  \n  overflow: hidden;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-tag\">p</span> {\n  <span class=\"hljs-attribute\">display</span>: -webkit-box;\n  -webkit-line-clamp: <span class=\"hljs-number\">2</span>;\n  -webkit-box-orient: vertical;  \n  <span class=\"hljs-attribute\">overflow</span>: hidden;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-line-clamp"
+                        }
                       }
                     },
                     {
@@ -103,7 +169,15 @@
                       "entity": {
                         "name": "Media Queries Range Contexts",
                         "nameClean": "Media Queries Range Contexts",
-                        "id": "media_queries_range_contexts"
+                        "id": "media_queries_range_contexts",
+                        "example": {
+                          "language": "css",
+                          "code": "@media (400px < width < 1000px) {\n  /* ... */\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">@media</span> (<span class=\"hljs-number\">400px</span> &lt; <span class=\"hljs-attribute\">width</span> &lt; <span class=\"hljs-number\">1000px</span>) {\n  <span class=\"hljs-comment\">/* ... */</span>\n}"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-media-range-syntax"
+                        }
                       }
                     },
                     {
@@ -112,7 +186,18 @@
                       "percentageQuestion": 10.8,
                       "percentageSurvey": 6.7,
                       "entity": {
-                        "id": "cascade_layers"
+                        "id": "cascade_layers",
+                        "example": {
+                          "language": "css",
+                          "code": "@layer layer-name {rules}\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">@layer</span> layer-name {rules}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@layer"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-cascade-layers"
+                        }
                       }
                     },
                     {
@@ -124,7 +209,18 @@
                         "name": "`backdrop-filter`",
                         "nameHtml": "<code>backdrop-filter</code>",
                         "nameClean": "backdrop-filter",
-                        "id": "backdrop_filter"
+                        "id": "backdrop_filter",
+                        "example": {
+                          "language": "css",
+                          "code": ".box {\n  backdrop-filter: blur(10px);\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.box</span> {\n  backdrop-<span class=\"hljs-attribute\">filter</span>: <span class=\"hljs-built_in\">blur</span>(<span class=\"hljs-number\">10px</span>);\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-backdrop-filter"
+                        }
                       }
                     },
                     {
@@ -136,7 +232,18 @@
                         "name": "`color()`",
                         "nameHtml": "<code>color()</code>",
                         "nameClean": "color()",
-                        "id": "color_function"
+                        "id": "color_function",
+                        "example": {
+                          "language": "css",
+                          "code": ".brightest-green {\n  background: color(display-p3 0 1 0);\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.brightest-green</span> {\n  <span class=\"hljs-attribute\">background</span>: <span class=\"hljs-built_in\">color</span>(display-p3 <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">1</span> <span class=\"hljs-number\">0</span>);\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-color-function"
+                        }
                       }
                     },
                     {
@@ -145,7 +252,13 @@
                       "percentageQuestion": 6,
                       "percentageSurvey": 3.7,
                       "entity": {
-                        "id": "math_functions"
+                        "id": "math_functions",
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-math-functions"
+                        }
                       }
                     },
                     {
