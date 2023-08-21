@@ -1,0 +1,184 @@
+query css2023countryLowVsHighIncomeQuery {
+  surveys {
+    state_of_css {
+      css2023 {
+        user_info {
+          country_low_vs_high_income_1: country {
+            responses(
+              filters: {
+                user_info__yearly_salary: {
+                  in: [
+                    range_0_10
+                    range_10_30
+                    range_30_50
+                  ]
+                }
+              }
+              parameters: {
+                showNoAnswer: true
+                limit: 20
+              }
+            ) {
+              currentEdition {
+                completion {
+                  count
+                  percentageSurvey
+                  total
+                }
+                buckets {
+                  count
+                  id
+                  percentageQuestion
+                  percentageSurvey
+                  entity {
+                    name
+                    nameHtml
+                    nameClean
+                    id
+                    example {
+                      language
+                      code
+                      codeHighlighted
+                    }
+                    homepage {
+                      url
+                    }
+                    youtube {
+                      url
+                    }
+                    twitter {
+                      url
+                    }
+                    twitch {
+                      url
+                    }
+                    rss {
+                      url
+                    }
+                    blog {
+                      url
+                    }
+                    mastodon {
+                      url
+                    }
+                    github {
+                      url
+                    }
+                    npm {
+                      url
+                    }
+                    mdn {
+                      url
+                    }
+                    caniuse {
+                      url
+                    }
+                    resources {
+                      url
+                      title
+                    }
+                  }
+                  averageByFacet
+                  percentilesByFacet {
+                    p0
+                    p25
+                    p50
+                    p75
+                    p100
+                  }
+                }
+              }
+            }
+          }
+          country_low_vs_high_income_2: country {
+            responses(
+              filters: {
+                user_info__yearly_salary: {
+                  in: [
+                    range_50_100
+                    range_100_200
+                    range_more_than_200
+                  ]
+                }
+              }
+              parameters: {
+                showNoAnswer: true
+                limit: 20
+              }
+            ) {
+              currentEdition {
+                completion {
+                  count
+                  percentageSurvey
+                  total
+                }
+                buckets {
+                  count
+                  id
+                  percentageQuestion
+                  percentageSurvey
+                  entity {
+                    name
+                    nameHtml
+                    nameClean
+                    id
+                    example {
+                      language
+                      code
+                      codeHighlighted
+                    }
+                    homepage {
+                      url
+                    }
+                    youtube {
+                      url
+                    }
+                    twitter {
+                      url
+                    }
+                    twitch {
+                      url
+                    }
+                    rss {
+                      url
+                    }
+                    blog {
+                      url
+                    }
+                    mastodon {
+                      url
+                    }
+                    github {
+                      url
+                    }
+                    npm {
+                      url
+                    }
+                    mdn {
+                      url
+                    }
+                    caniuse {
+                      url
+                    }
+                    resources {
+                      url
+                      title
+                    }
+                  }
+                  averageByFacet
+                  percentilesByFacet {
+                    p0
+                    p25
+                    p50
+                    p75
+                    p100
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
