@@ -1,0 +1,95 @@
+query css2023sourceByGenderQuery {
+  surveys {
+    state_of_css {
+      css2023 {
+        user_info {
+          source_by_gender: source {
+            responses(
+              facet: user_info__gender
+              parameters: {
+                showNoAnswer: true
+              }
+            ) {
+              currentEdition {
+                completion {
+                  count
+                  percentageSurvey
+                  total
+                }
+                buckets {
+                  count
+                  id
+                  percentageQuestion
+                  percentageSurvey
+                  entity {
+                    name
+                    nameHtml
+                    nameClean
+                    id
+                    example {
+                      language
+                      code
+                      codeHighlighted
+                    }
+                    homepage {
+                      url
+                    }
+                    youtube {
+                      url
+                    }
+                    twitter {
+                      url
+                    }
+                    twitch {
+                      url
+                    }
+                    rss {
+                      url
+                    }
+                    blog {
+                      url
+                    }
+                    mastodon {
+                      url
+                    }
+                    github {
+                      url
+                    }
+                    npm {
+                      url
+                    }
+                    mdn {
+                      url
+                    }
+                    caniuse {
+                      url
+                    }
+                    resources {
+                      url
+                      title
+                    }
+                  }
+                  averageByFacet
+                  percentilesByFacet {
+                    p0
+                    p25
+                    p50
+                    p75
+                    p100
+                  }
+                  facetBuckets {
+                    id
+                    count
+                    percentageQuestion
+                    percentageSurvey
+                    percentageBucket
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
