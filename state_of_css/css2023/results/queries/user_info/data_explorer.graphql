@@ -1,0 +1,29 @@
+query css2023dataExplorerQuery {
+  surveys {
+    state_of_css {
+      css2023 {
+        user_info: data_explorer {
+          data_explorer {
+            items {
+              editionId
+              year
+              buckets {
+                count
+                id
+                facetBuckets {
+                  count
+                  id
+                  percentageBucket
+                  percentageQuestion
+                  percentageSurvey
+                }
+                percentageQuestion
+                percentageSurvey
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
