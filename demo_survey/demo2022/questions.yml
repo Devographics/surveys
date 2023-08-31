@@ -5,7 +5,7 @@
   questions:
     - id: demo_feature
     - id: demo_featurev3
-    template: featurev3
+      template: featurev3
 
 - id: multiple
   template: multiple
@@ -19,7 +19,8 @@
     # Multiple + one "other" field
     - id: multiople_allow_other
       template: multiple
-      allowother: true
+      # NOTE: in older surveys this was "allowother" lowercased
+      allowOther: true
       options:
         - id: apollo_federation
         - id: schema_stitching
@@ -31,6 +32,7 @@
         - id: graphql_modules
     # Multiple + multiple "other" fields (as an array)
     - id: demo_multipleWithOther
+      template: multipleWithOther
       options:
         - id: "one"
         - id: "two"
@@ -178,3 +180,12 @@
       template: longtext
     - id: receive_notifications
       template: receive_notifications
+
+# Stuff that may not exist yet
+# NOTE for adding a new type of input, we need:
+# - to define a new customComponent in surveyform
+# - to define a new template in the API
+- id: "experimental"
+  questions:
+    - id: textlist
+      template: textlist
