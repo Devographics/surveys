@@ -1,199 +1,23 @@
-######################################################
-#########              FEATURES              #########
-######################################################
-
-# For each question in this section, possible answers are:
-# - Never heard of it
-# - Know about it
-# - Have used it
-
-- id: graphql_language
+- id: feature
   template: feature
-  slug: features
-  messageId: features.graphql_features_intro
+  slug: fields
+  messageId: demo.feature_intro
   questions:
-    # - id: graphql_features_intro
-    #   template: help
-    - id: custom_directives
-    - id: custom_scalars
-    - id: fragments
-    - id: unions
-    - id: interfaces
+    - id: demo_feature
+    - id: demo_featurev3
+    template: featurev3
 
-- id: directives
-  template: feature
-  slug: features
+- id: multiple
+  template: multiple
+  slug: multiple
+  demo: demo.multiple_intro
   questions:
-    - id: at_skip
-    - id: at_include
-    - id: at_deprecated
-    - id: at_specified_by
-    - id: at_defer
-    - id: at_stream
-
-    - id: demo_balance_slider
-      yearAdded: 2023
-      template: slider
-
-- id: security_performance
-  template: feature
-  slug: features
-  questions:
-    - id: persisted_queries
-    # - id: query_allowlisting # redundant with persisted queries
-    - id: query_timeouts
-    - id: query_rate_limit
-    - id: query_depth_limit
-    # - id: query_amount_limit # not clear
-    - id: query_cost_analysis
-    - id: disabling_introspection
-    - id: ip_allowlisting
-    - id: require_authentication
-
-- id: other_features
-  template: feature
-  slug: features
-  questions:
-    - id: graphql_subscriptions
-    - id: live_queries
-    - id: apollo_federation
-    - id: schema_stitching
-
-######################################################
-#########                TOOLS               #########
-######################################################
-
-# For each question in this section, possible answers are:
-# - Never heard of it
-# - Have heard, but not interested
-# - Have heard, and interested in learning
-# - Have used, but wouldn't use again
-# - Have used, and would use again
-
-- id: graphql_servers
-  template: tool
-  slug: tools
-  messageId: tools.graphql_tools_intro
-  questions:
-    # - id: graphql_tools_intro
-    #   template: help
-
-    - id: apollo_server
-    - id: yoga
-    - id: graphql_js
-    - id: helix
-    - id: express_graphql
-    - id: mercurius
-    - id: dgs
-    # - id: strawberry
-    # - id: sangria
-    - id: graphql_dotnet
-    - id: absinthe
-    - id: graphql_go
-
-    - id: graphql_servers_others
-      intlId: tools.other_tools
-      # template: projects
-      template: others
-      sectionSlug: tools_others
-      matchTags: [libraries, graphql]
-    - id: graphql_servers_happiness
-      intlId: tools.happiness
-      template: happiness
-      sectionSlug: happiness
-
-- id: graphql_clients
-  template: tool
-  slug: tools
-  questions:
-    - id: apollo_client
-    - id: urql
-    - id: react_query
-    - id: relay
-    - id: apollo_ios
-    - id: swift_graphql
-    - id: apollo_kotlin
-    - id: graphql_hooks
-    - id: graphql_request
-    - id: no_client
-
-    - id: graphql_clients_others
-      intlId: tools.other_tools
-      # template: projects
-      template: others
-      matchTags: [libraries, graphql]
-      sectionSlug: tools_others
-    - id: graphql_clients_happiness
-      intlId: tools.happiness
-      template: happiness
-      sectionSlug: happiness
-
-- id: api_generators
-  template: tool
-  slug: tools
-  questions:
-    - id: postgraphile
-    - id: hasura
-    - id: graphcms
-    - id: datocms
-    - id: sanity
-    - id: wpgraphql
-    - id: wundergraph
-    - id: fauna
-    - id: dgraph
-    - id: graphql_editor
-    - id: strapi
-    - id: appsync
-    - id: contentful
-    - id: graphene
-    - id: graphql_mesh
-
-    - id: api_generators_others
-      intlId: tools.other_tools
-      # template: projects
-      template: others
-      matchTags: [libraries, graphql]
-      sectionSlug: tools_others
-    - id: api_generators_happiness
-      intlId: tools.happiness
-      template: happiness
-      sectionSlug: happiness
-
-- id: schema_builders
-  template: tool
-  slug: tools
-  questions:
-    - id: nexus
-    - id: typegraphql
-    - id: pothos
-    - id: strawberry
-    # - id: hot_chocolate # taken out at request of creator
-    - id: sangria
-    - id: graphql_java
-
-    - id: gqlgen
-    - id: graphql_zeus
-    - id: genql
-    - id: graphql_code_generator
-
-    - id: schema_builders_others
-      intlId: tools.other_tools
-      # template: projects
-      template: others
-      matchTags: [libraries, graphql]
-      sectionSlug: tools_others
-    - id: schema_builders_happiness
-      intlId: tools.happiness
-      template: happiness
-      sectionSlug: happiness
-
-######################################################
-#########            Other Tools             #########
-######################################################
-
-- id: tools_others
-  questions:
-    - id: combining_schemas
+    - id: demo_multiple
+      options:
+        - id: "one"
+        - id: "two"
+    # Multiple + one "other" field
+    - id: multiople_allow_other
       template: multiple
       allowother: true
       options:
@@ -205,118 +29,32 @@
         - id: stepzen
         - id: mulesoft
         - id: graphql_modules
-    - id: combining_schemas_others
-      template: others
-      matchTags: [graphql]
-
-    - id: web_frameworks
-      template: multiple
-      allowother: true
+    # Multiple + multiple "other" fields (as an array)
+    - id: demo_multipleWithOther
       options:
-        - id: gatsby
-        - id: redwood
-        - id: nextjs
-        - id: remix
-        - id: nuxt
-        - id: sveltekit
-        - id: create_react_app
-        - id: astro
-    - id: web_frameworks_others
+        - id: "one"
+        - id: "two"
+    # Others
+    - id: others
       template: others
-      matchTags: [libraries, graphql, frameworks]
+      matchTags: [graphql, libraries]
+      sectionSlug: tools_others
 
-    - id: graphql_ides
-      template: multiple
-      allowother: true
-      options:
-        - id: graphiql
-        - id: graphql_playground
-        - id: apollo_studio
-        - id: altair
-        - id: insomnia
-        - id: postman
-        - id: graphql_editor
-        - id: apollo_sandbox
-    - id: graphql_ides_others
-      template: others
-      matchTags: [libraries, graphql]
-
-    - id: other_tools
-      template: multiple
-      allowother: true
-      options:
-        - id: envelop
-        - id: graphql_shield
-        - id: dataloader
-        - id: apollo_datasources
-        - id: graphql_voyager
-        - id: graphqurl
-        - id: stellate
-        - id: apollo_client_devtools
-        - id: graphql_hive
-        - id: graphql_inspector
-        - id: graphql_scalars
-        - id: graphql_config
-        - id: prisma
-        - id: graphql_eslint
-        - id: apollo_workbench
-    - id: other_tools_others
-      template: others
-      matchTags: [libraries, graphql]
-
-######################################################
-#########            GraphQL Usage           #########
-######################################################
-
-- id: usage
-  intlId: usage_graphql
+- id: various_fields
+  # Default template for this section
+  template: feature
+  slug: fields
+  messageId: various.fields_intro
   questions:
-    - id: graphql_experience
-      template: single
-      options:
-        - id: range_less_than_1
-        - id: range_1_2
-        - id: range_3_5
-        - id: range_6_10
-        # - id: range_more_than_10
-
-    - id: api_type
-      template: multiple
-      allowother: true
-      options:
-        - id: public_apis
-        - id: personal_apis
-        - id: private_apis
-    - id: api_type_others
-      template: others
-      matchTags: [graphql]
-
-    - id: client_type
-      template: multipleWithOther
-      allowother: true
-      options:
-        - id: browsers
-        - id: mobile_devices
-        - id: desktop_apps
-        - id: other_servers
-    - id: client_type_others
-      template: others
-      matchTags: [graphql]
-
-    - id: code_generation_type
-      template: single
-      allowother: true
-      options:
-        - id: code_first
-        - id: schema_first
-        - id: database_first
-    - id: code_generation_type_others
-      template: others
-      matchTags: [graphql]
-
+    - id: slider
+      yearAdded: 2023
+      template: slider
+    - id: happiness
+      intlId: tools.happiness
+      template: happiness
+      sectionSlug: happiness
     - id: bracket_intro
       template: help
-
     - id: graphql_strong_points
       template: bracket
       options:
@@ -328,119 +66,18 @@
         - id: aggregating_requests
         - id: community
         - id: fragment_colocation
-    - id: graphql_strong_points_others
-      sectionSlug: usage_others
-      template: others
-      matchTags: [graphql_strong_points]
 
-    - id: graphql_pain_points
-      template: bracket
-      options:
-        - id: performance
-        - id: security
-        - id: combining_schemas
-        - id: api_versioning
-        - id: file_upload
-        - id: testing
-        - id: error_handling
-        - id: client_side_caching
-    - id: graphql_pain_points_others
-      sectionSlug: usage_others
-      template: others
-      matchTags: [graphql_pain_points]
-
-    - id: state_of_graphql_happiness
-      template: happiness
-      sectionSlug: happiness
-
-    - id: demo_balance_slider
-      yearAdded: 2023
-      template: slider
-
-######################################################
-#########             RESOURCES              #########
-######################################################
-
-- id: resources
-  intlId: resources_graphql
+- id: tools
+  template: tool
+  slug: tools
   questions:
-    - id: first_steps
-      intlId: resources.first_steps_graphql
-      template: multiple
-      allowother: true
-      options:
-        - id: books
-        - id: videos
-        - id: courses_free
-        - id: courses_paid
-        - id: school
-        - id: podcasts
-        - id: bootcamp
-        - id: on_the_job
-        - id: mentoring
-        - id: self_directed
-    - id: first_steps_others
-      intlId: resources.first_steps_graphql.others
+    - id: tool
+    - id: tools_others
+      intlId: tools.other_tools
+      # template: projects
       template: others
-      matchTags:
-        [
-          first_steps,
-          courses,
-          podcasts,
-          people,
-          youtube,
-          sites,
-          newsletters,
-          socialmedia,
-          graphql,
-        ]
-
-    - id: sites_courses
-      intlId: resources.sites_courses_graphql
-      template: multiple
-      options:
-        - id: stack_overflow
-        - id: freecodecamp
-        - id: codecademy
-        - id: levelup
-        - id: wes_bos
-        - id: frontendmasters
-        - id: pluralsight
-        - id: udemy
-        - id: egghead
-        - id: newline
-        - id: edx
-    - id: sites_courses_others
-      template: others
-      matchTags:
-        [courses, people, youtube, sites, newsletters, socialmedia, graphql]
-
-    - id: podcasts_others
-      intlId: resources.podcasts_graphql.others
-      template: others
-      matchTags: [podcasts, people, sites, graphql]
-
-    - id: people_others
-      intlId: resources.people_graphql.others
-      template: others
-      matchTags: [people, youtube, graphql]
-
-    - id: other_surveys
-      template: multiple
-      allowother: true
-      options:
-        - id: jetbrains_survey
-        - id: stack_overflow_survey
-        - id: codingame_survey
-        - id: uxtools_survey
-        - id: postman_survey
-    - id: other_surveys_others
-      template: others
-      matchTags: [surveys]
-
-######################################################
-#########            DEMOGRAPHICS            #########
-######################################################
+      matchTags: [libraries, graphql]
+      sectionSlug: tools_others
 
 - id: user_info
   questions:
@@ -533,15 +170,11 @@
         - id: cognitive_impairments
         - id: not_listed
 
-    # - id: disability_status
-    #   template: others
-    #   matchTags: [disabilities]
-
+- id: "text"
+  questions:
     - id: how_did_user_find_out_about_the_survey
       template: text
-
     - id: how_can_we_improve
       template: longtext
-
     - id: receive_notifications
       template: receive_notifications
