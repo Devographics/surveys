@@ -31,7 +31,7 @@
     - id: at_defer
     - id: at_stream
 
-    - id: css_js_balance
+    - id: demo_balance_slider
       yearAdded: 2023
       template: slider
 
@@ -225,50 +225,6 @@
       template: others
       matchTags: [libraries, graphql, frameworks]
 
-    - id: databases
-      template: multiple
-      allowother: true
-      options:
-        - id: mysql
-        - id: sqlite
-        - id: postgresql
-        - id: neo4j
-        - id: redis
-        - id: mongodb
-        - id: elasticsearch
-        - id: dynamodb
-    - id: databases_others
-      template: others
-      matchTags: [libraries, databases]
-
-    - id: server_languages
-      template: multiple
-      allowother: true
-      options:
-        - id: javascript
-        - id: typescript
-        - id: php
-        - id: ruby
-        - id: python
-        - id: go
-        - id: rust
-        - id: java
-        - id: c_cplusplus
-        - id: objective_c
-        - id: scala
-        - id: swift
-        - id: csharp
-        - id: haskell
-        - id: ocaml
-        - id: dart
-        - id: kotlin
-        - id: elixir
-        - id: clojure
-        - id: julia
-    - id: server_languages_others
-      template: others
-      matchTags: [languages]
-
     - id: graphql_ides
       template: multiple
       allowother: true
@@ -336,7 +292,7 @@
       matchTags: [graphql]
 
     - id: client_type
-      template: multiple
+      template: multipleWithOther
       allowother: true
       options:
         - id: browsers
@@ -344,21 +300,6 @@
         - id: desktop_apps
         - id: other_servers
     - id: client_type_others
-      template: others
-      matchTags: [graphql]
-
-    - id: data_sources
-      template: multiple
-      allowother: true
-      options:
-        - id: static_files
-        - id: databases
-        - id: spreadsheets
-        - id: cmses
-        - id: rest_apis
-        - id: other_graphql_apis
-        - id: other_api_protocols
-    - id: data_sources_others
       template: others
       matchTags: [graphql]
 
@@ -372,52 +313,6 @@
     - id: code_generation_type_others
       template: others
       matchTags: [graphql]
-
-    - id: code_generation_target
-      template: multiple
-      allowother: true
-      options:
-        - id: graphql_schema
-        - id: non_graphql_typings # e.g. TypeScript types
-        - id: server_resolvers
-        - id: fragments_or_queries
-        - id: client_code # e.g. React hooks
-    - id: code_generation_target_others
-      template: others
-      matchTags: [graphql]
-
-    - id: industry_sector
-      template: multiple
-      allowother: true
-      options:
-        - id: ecommerce
-        - id: news_media
-        - id: healthcare
-        - id: finance
-        - id: programming_tools
-        - id: socialmedia
-        - id: marketing_tools
-        - id: education
-        - id: real_estate
-        - id: government
-        - id: entertainment
-        - id: consulting
-        - id: travel
-        - id: insurance
-        - id: logistics
-        - id: energy
-        - id: telecommunications
-        - id: student
-        - id: hospitality
-        - id: cyber_security
-        - id: construction
-        - id: automotive
-        - id: agriculture
-        - id: transport
-        - id: manufacturing
-    - id: industry_sector_others
-      template: others
-      matchTags: [industry_sectors]
 
     - id: bracket_intro
       template: help
@@ -457,6 +352,10 @@
     - id: state_of_graphql_happiness
       template: happiness
       sectionSlug: happiness
+
+    - id: demo_balance_slider
+      yearAdded: 2023
+      template: slider
 
 ######################################################
 #########             RESOURCES              #########
