@@ -2,27 +2,54 @@
   template: feature
   slug: features
   questions:
-    - id: selectmenu_element
+    - id: selectlist_element
     - id: autocomplete_element
     - id: showpicker
     - id: contenteditable_plaintext
+    - id: media_capture
     - id: formdata
+    - id: form_request_submit
+    - id: datalist_element
 
     - id: forms_elements
       template: multipleWithOther
       options:
-        - id: todo
+        - id: select_element
+        - id: textarea_element
+        - id: input_type_range
+        - id: input_type_number
+        - id: input_type_file
+        - id: input_type_date
+        - id: input_type_time
+        - id: input_type_datetime_locale
+        - id: input_type_month
+        - id: input_type_week
+        - id: input_type_color
+        - id: input_type_email
+        - id: input_type_tel
+        - id: input_type_url
 
     - id: forms_validation_features
       template: multipleWithOther
       options:
-        - id: todo
+        - id: required_attribute
+        - id: pattern_attribute
+        - id: input_set_custom_validity
+        - id: input_report_validity
+        - id: input_check_validity
+        - id: invalid_event
+        - id: invalid_pseudo_class
+
+    - id: forms_pain_points
+      template: longtext
 
 - id: interactivity
   template: featureWithFollowups
   slug: features
   questions:
+    - id: dialog_element
     - id: popover_api
+    - id: details_element
     - id: inert_attribute
     - id: focusgroup
     - id: accordion_element
@@ -31,33 +58,85 @@
     - id: dom_methods
       template: multipleWithOther
       options:
-        - id: todo
+        - id: element_innerhtml
+        - id: element_textcontent
+        - id: element_insert_adjacent_html
+        - id: element_insert_adjacent_element
+        - id: element_append
+        - id: element_append_child
+        - id: element_before_after
+        - id: element_replace_with
+        - id: element_replace_child
+        - id: element_replace_children
+        - id: element_toggle_attribute
 
-    - id: events
-      template: multipleWithOther
+    - id: interactivity_techniques
+      template: multiple
       options:
-        - id: todo
+        - id: na
+        - id: css
+        - id: vanilla_js
+        - id: web_components
+        - id: js_dom_libraries
+        - id: js_framework
 
-    - id: interactivity_features
-      template: multipleWithOther
-      options:
-        - id: todo
+    # - id: events
+    #   template: multipleWithOther
+    #   options:
+    #     - id: todo
 
-- id: web_components
+    # - id: interactivity_features
+    #   template: multipleWithOther
+    #   options:
+    #     - id: todo
+
+    - id: interactivity_pain_points
+      template: longtext
+
+- id: content
   template: featurev2
   slug: features
   questions:
-    - id: custom_elements_using
-    - id: html_modules
-    - id: declarative_shadow
-    - id: element_internals
-    - id: imperative_slot
-    - id: scoped_element_registries
+    - id: search_element
+    - id: menu_element
 
-    - id: web_components_features
+    - id: machine_readable_features
       template: multipleWithOther
       options:
-        - id: todo
+        - id: time_element
+        - id: data_element
+        - id: microdata
+        - id: microformats
+        - id: rdfa
+        - id: json_ld
+
+    - id: multiple_languages_support
+      template: single
+      options:
+        - id: never
+        - id: infrequently
+        - id: frequently
+        - id: all_the_time
+
+    - id: i18n_features
+      template: multipleWithOther
+      options:
+        - id: dir_attribute
+        - id: lang_attribute
+        - id: ruby_rp_rt_elements
+        - id: intl_datetimeformat
+        - id: intl_collator
+        - id: intl_listformat
+        - id: intl_numberformat
+        - id: intl_pluralrules
+        - id: intl_relative_time_format
+        - id: intl_segmenter
+        - id: writing_modes_property
+        - id: direction_property
+        - id: logical_properties
+
+    - id: content_pain_points
+      template: longtext
 
 - id: external_content
   template: featurev3
@@ -71,33 +150,88 @@
     - id: media_capture
     - id: fencedframe_element
     - id: isolated_webapps
-    - id: sanitizer_api
-    - id: iframe_seamless
+    # - id: sanitizer_api
+    # - id: iframe_seamless
 
-    - id: img_attributes
-      template: multipleWithOther
-      options:
-        - id: todo
+    # - id: img_attributes
+    #   template: multipleWithOther
+    #   options:
+    #     - id: todo
 
-    - id: video_audio_attributes
-      template: multipleWithOther
-      options:
-        - id: todo
+    # - id: video_audio_attributes
+    #   template: multipleWithOther
+    #   options:
+    #     - id: todo
 
-    - id: iframe_attributes
-      template: multipleWithOther
-      options:
-        - id: todo
+    # - id: iframe_attributes
+    #   template: multipleWithOther
+    #   options:
+    #     - id: todo
 
     - id: script_link_attributes
       template: multipleWithOther
       options:
-        - id: todo
+        - id: crossorigin_attribute
+        - id: integrity_attribute
+        - id: media_attribute
+        - id: referrerpolicy_attribute
 
     - id: rel_attribute
       template: multipleWithOther
       options:
-        - id: todo
+        - id: prefetch_attribute
+        - id: dns_prefetch_attribute
+        - id: preconnect_attribute
+        - id: preload_attribute
+        - id: modulepreload_attribute
+        - id: prerender_attribute
+
+    - id: external_content_pain_points
+      template: longtext
+
+- id: web_components
+  template: featurev2
+  slug: features
+  questions:
+    - id: custom_elements_using
+    - id: shadow_dom
+    - id: declarative_shadow_dom
+    - id: element_internals
+    - id: html_modules
+    - id: imperative_slot
+    - id: custom_elements_defining
+    - id: scoped_element_registries
+
+    - id: web_components_libraries
+      template: multipleWithOther
+      options:
+        - id: shoelace
+        - id: spectrum_wc
+        - id: lightning_wc
+        - id: fast_design
+        - id: elix
+        - id: lion
+        - id: material_components
+
+    - id: web_components_features
+      template: multipleWithOther
+      options:
+        - id: slot_element
+        - id: slot_attribute
+        - id: part_attribute
+        - id: part_pseudo
+        - id: host_pseudos
+        - id: slotted_pseudo_element
+        - id: custom_elements_get
+        - id: custom_elements_when_defined
+        - id: custom_elements_get_name
+        - id: is_attribute
+
+    - id: making_web_components_pain_points
+      template: longtext
+
+    - id: using_web_components_pain_points
+      template: longtext
 
 - id: accessibility
   template: feature
@@ -105,43 +239,73 @@
   questions:
     - id: todo
 
-    - id: accessibility_techniques
+    - id: accessibility_features
       template: multipleWithOther
       options:
         - id: todo
 
-    - id: accessibility_testing
+    - id: accessibility_techniques
       template: multipleWithOther
       options:
-        - id: todo
+        - id: keyboard_navigation
+        - id: compliant_contrast
+        - id: focus_indicators
+        - id: skip_to_content_link
+        - id: color_themes # dark mode, high contrast mode, etc.
+        - id: prefers_reduced_motion
+        - id: alt_text
+        - id: semantic_markup
+        - id: aria_attributes
+
+    - id: accessibility_tools
+      template: multipleWithOther
+      options:
+        - id: voiceover
+        - id: jaws
+        - id: nvda
+        - id: axe
+        - id: lighthouse
+        - id: assistive_labs
+        - id: voiceover_js
+        - id: guidepup
+
+    - id: accessibility_pain_points
+      template: longtext
 
 - id: progressive_web_apps
   template: feature
   slug: features
   questions:
-    - id: client_hints
+    # - id: client_hints
     - id: isolated_webapps
+    - id: borderless_mode
     - id: badging_api
     - id: web_share_api
     - id: window_controls_overlay
     - id: text_fragments
-    - id: borderless_mode
 
     - id: pwa_features
       template: multipleWithOther
       options:
-        - id: todo
+        - id: na
+        - id: app_manifest
+        - id: service_workers
+        - id: notifications_api
+        - id: caching_api
 
-- id: other_features
-  template: feature
-  slug: features
-  questions:
-    - id: search_element
-
-    - id: i18n_features
+    - id: pwa_app_manifest_fields
       template: multipleWithOther
       options:
-        - id: todo
+        - id: app_manifest_name
+        - id: app_manifest_icons
+        - id: app_manifest_shortcuts
+        - id: app_manifest_file_handlers
+        - id: app_manifest_protocol_handlers
+        - id: app_manifest_share_target
+        - id: app_manifest_launch_handler
+
+    - id: progressive_web_apps_pain_points
+      template: longtext
 
 - id: other_tools
   questions:
@@ -163,55 +327,105 @@
     #     - id: na
     #     - id: emmet
 
-    - id: interactivity
-      template: multiple
-      options:
-        - id: na
-        - id: css
-        - id: js
-        - id: js_framework
-
-    - id: front_end_frameworks
+    - id: ai_tools
       template: multipleWithOther
       options:
         - id: na
-        - id: react
-        - id: angular
-        - id: vuejs
-        - id: lit
-        - id: htmx
-        - id: alpine
-        - id: svelte
-        - id: solid
-        - id: qwik
-        - id: jquery
+        - id: copilot
+        - id: chat_gpt
+        - id: google_bard
+
+    # - id: front_end_frameworks
+    #   template: multipleWithOther
+    #   options:
+    #     - id: na
+    #     - id: web_components
+    #     - id: react
+    #     - id: angular
+    #     - id: vuejs
+    #     - id: lit
+    #     - id: htmx
+    #     - id: alpine
+    #     - id: svelte
+    #     - id: solid
+    #     - id: qwik
+    #     - id: jquery
 
 - id: usage
   questions:
     - id: html_interoperability_features
-      template: multipleWithOther
-      options:
-        - id: accordion_element
-        - id: breadcrumb_element
-        - id: drawer_element
-        - id: todo
+      template: longtext
 
-    - id: html_missing_features
-      template: multipleWithOther
-      options:
-        - id: accordion_element
-        - id: breadcrumb_element
-        - id: drawer_element
-        - id: todo
+    # - id: html_missing_features
+    #   template: multipleWithOther
+    #   options:
+    #     - id: accordion_element
+    #     - id: breadcrumb_element
+    #     - id: drawer_element
+    #     - id: todo
 
-    - id: html_common_components
-      template: multipleWithOther
+    # - id: html_common_components
+    #   template: multipleWithOther
+    #   options:
+    #     - id: accordion
+    #     - id: dialog
+    #     - id: tabs
+    #     - id: toast
+    #     - id: toggle
+
+    - id: tools_for_other_developers
+      template: singleWithOther
       options:
-        - id: accordion
-        - id: dialog
-        - id: tabs
-        - id: toast
-        - id: toggle
+        - id: na
+        - id: yes_internally
+        - id: yes_publicly_hundreds_users
+        - id: yes_publicly_thousands_users
+        - id: yes_publicly_millions_users
+
+    - id: what_do_you_use_html_for
+      template: multipleWithOther
+      matchTags: [css_uses]
+      options:
+        - id: blogs
+        - id: css_art
+        - id: design_systems
+        - id: desktop_apps
+        - id: emails
+        - id: marketing_sites
+        - id: mobile_apps
+        - id: printed_documents
+        - id: web_apps
+
+    - id: industry_sector
+      intlId: user_info.industry_sector
+      template: multipleWithOther
+      matchTags: [industry_sectors]
+      options:
+        - id: agriculture
+        - id: automotive
+        - id: construction
+        - id: consulting
+        - id: crypto
+        - id: cyber_security
+        - id: ecommerce
+        - id: education
+        - id: energy
+        - id: entertainment
+        - id: finance
+        - id: government
+        - id: healthcare
+        - id: hospitality
+        - id: insurance
+        - id: logistics
+        - id: manufacturing
+        - id: marketing_tools
+        - id: news_media
+        - id: programming_tools
+        - id: real_estate
+        - id: socialmedia
+        - id: telecommunications
+        - id: tourism
+        - id: transport
 
     - id: html_pain_points_freeform
       template: longtext
@@ -221,7 +435,7 @@
 - id: user_info
   questions:
     - id: age
-      template: age
+      template: age_number
 
     - id: years_of_experience
       template: years_of_experience
