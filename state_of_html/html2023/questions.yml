@@ -22,7 +22,7 @@
     #     - id: button_element
 
     - id: form_input_types
-      template: multipleWithOther
+      template: multipleWithOtherSentiment
       cutoff: 99
       options:
         - id: na
@@ -40,7 +40,7 @@
         - id: input_type_url
 
     - id: form_validation_features
-      template: multipleWithOther
+      template: multipleWithOtherSentiment
       options:
         - id: required_attribute
         - id: pattern_attribute
@@ -66,7 +66,7 @@
     - id: navigation_api
 
     - id: dom_methods
-      template: multipleWithOther
+      template: multipleWithOtherSentiment
       cutoff: 99
       randomize: false
       options:
@@ -83,7 +83,7 @@
         - id: element_toggle_attribute
 
     - id: interactivity_techniques
-      template: multipleWithOther
+      template: multipleWithOtherSentiment
       options:
         - id: na
         - id: css
@@ -152,7 +152,7 @@
 #     - id: content_pain_points
 #       template: longtext
 
-- id: external_content
+- id: content
   template: featurev3
   slug: features
   questions:
@@ -168,19 +168,30 @@
     # - id: iframe_seamless
 
     # - id: img_attributes
-    #   template: multipleWithOther
+    #   template: multipleWithOtherSentiment
     #   options:
     #     - id: todo
 
     # - id: video_audio_attributes
-    #   template: multipleWithOther
+    #   template: multipleWithOtherSentiment
     #   options:
     #     - id: todo
 
     # - id: iframe_attributes
-    #   template: multipleWithOther
+    #   template: multipleWithOtherSentiment
     #   options:
     #     - id: todo
+
+    - id: machine_readable_features
+      template: multipleWithOtherSentiment
+      randomize: false
+      options:
+        - id: time_element
+        - id: data_element
+        - id: microdata
+        - id: microformats
+        - id: rdfa
+        - id: json_ld
 
     - id: script_link_attributes
       template: multipleWithOtherSentiment
@@ -201,7 +212,8 @@
         - id: prerender_attribute
 
     - id: external_content_pain_points
-      template: textlist
+      template: textList
+      longText: true
 
 - id: web_components
   template: featurev3
@@ -244,10 +256,12 @@
         - id: is_attribute
 
     - id: making_web_components_pain_points
-      template: textlist
+      template: textList
+      longText: true
 
     - id: using_web_components_pain_points
-      template: textlist
+      template: textList
+      longText: true
 
 - id: accessibility
   template: featurev3
@@ -271,11 +285,12 @@
         - id: atypical_vision
 
     - id: accessibility_techniques
-      template: multipleWithOtherSentiment
+      template: multipleWithOther
+      cutoff: 99
       options:
-        - id: tabindex
+        # - id: tabindex
         - id: keyboard_navigation
-        - id: aria_attributes
+        # - id: aria_attributes
         - id: descriptive_alt_text
         - id: skip_to_content
         - id: fieldset_and_legend
@@ -306,7 +321,8 @@
         - id: guidepup
 
     - id: accessibility_pain_points
-      template: textlist
+      template: textList
+      longText: true
 
 - id: progressive_web_apps
   template: featurev3
@@ -341,7 +357,8 @@
         - id: app_manifest_launch_handler
 
     - id: progressive_web_apps_pain_points
-      template: textlist
+      template: textList
+      longText: true
 
 - id: other_tools
   questions:
@@ -371,19 +388,8 @@
         - id: chat_gpt
         - id: bard
 
-    - id: machine_readable_features
-      template: multipleWithOther
-      randomize: false
-      options:
-        - id: time_element
-        - id: data_element
-        - id: microdata
-        - id: microformats
-        - id: rdfa
-        - id: json_ld
-
     # - id: front_end_frameworks
-    #   template: multipleWithOther
+    #   template: multipleWithOtherSentiment
     #   options:
     #     - id: na
     #     - id: web_components
@@ -401,34 +407,34 @@
 - id: usage
   questions:
     - id: html_existing_features
-      template: longtext
+      template: textList
 
     - id: html_missing_elements
-      limit: 5
-      template: multipleWithOther
-      cutoff: 99
-      options:
-        - id: accordion
-        - id: alert
-        - id: calendar
-        - id: carousel
-        - id: combobox_autocomplete
-        - id: command_palette
-        - id: context_menu
-        - id: datatable
-        - id: dropdown_menu
-        - id: progress_bar
-        - id: skeleton_loading_placeholder
-        - id: switch
-        - id: tabs
-        - id: toast_message
-        - id: tooltip
-        - id: offcanvas
-        - id: spinner
-        - id: segmented_button
-        - id: scroll_area
-        - id: icon
-        - id: star_rating
+      # limit: 5
+      template: textList
+      # cutoff: 99
+      # options:
+      #   - id: accordion
+      #   - id: alert
+      #   - id: calendar
+      #   - id: carousel
+      #   - id: combobox_autocomplete
+      #   - id: command_palette
+      #   - id: context_menu
+      #   - id: datatable
+      #   - id: dropdown_menu
+      #   - id: progress_bar
+      #   - id: skeleton_loading_placeholder
+      #   - id: switch
+      #   - id: tabs
+      #   - id: toast_message
+      #   - id: tooltip
+      #   - id: offcanvas
+      #   - id: spinner
+      #   - id: segmented_button
+      #   - id: scroll_area
+      #   - id: icon
+      #   - id: star_rating
 
     # - id: html_interoperability_features
     #   template: longtext
@@ -504,7 +510,8 @@
         - id: transport
 
     - id: html_pain_points_freeform
-      template: textlist
+      template: textList
+      longText: true
 
 ### DEMOGRAPHICS ###
 
