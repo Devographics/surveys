@@ -13,6 +13,7 @@
 
     - id: form_controls
       template: multipleWithOtherSentiment
+      allowOther: false
       options:
         - id: na
         - id: input_element
@@ -22,6 +23,7 @@
 
     - id: form_input_types
       template: multipleWithOtherSentiment
+      allowOther: false
       cutoff: 99
       options:
         - id: na
@@ -40,6 +42,7 @@
 
     - id: form_validation_features
       template: multipleWithOtherSentiment
+      allowOther: false
       options:
         - id: required_attribute
         - id: pattern_attribute
@@ -66,6 +69,7 @@
 
     - id: dom_methods
       template: multipleWithOtherSentiment
+      allowOther: false
       cutoff: 99
       randomize: false
       options:
@@ -171,21 +175,25 @@
 
     # - id: img_attributes
     #   template: multipleWithOtherSentiment
+    #   allowOther: false
     #   options:
     #     - id: todo
 
     # - id: video_audio_attributes
     #   template: multipleWithOtherSentiment
+    #   allowOther: false
     #   options:
     #     - id: todo
 
     # - id: iframe_attributes
     #   template: multipleWithOtherSentiment
+    #   allowOther: false
     #   options:
     #     - id: todo
 
     - id: script_link_attributes
       template: multipleWithOtherSentiment
+      allowOther: false
       options:
         - id: crossorigin_attribute
         - id: integrity_attribute
@@ -194,6 +202,7 @@
 
     - id: rel_attribute
       template: multipleWithOtherSentiment
+      allowOther: false
       options:
         - id: prefetch_attribute
         - id: dns_prefetch_attribute
@@ -245,6 +254,7 @@
 
     - id: web_components_features
       template: multipleWithOtherSentiment
+      allowOther: false
       cutoff: 99
       options:
         - id: slot_element
@@ -341,6 +351,7 @@
 
     - id: pwa_features
       template: multipleWithOtherSentiment
+      allowOther: false
       options:
         - id: na
         - id: app_manifest
@@ -350,6 +361,7 @@
 
     - id: pwa_app_manifest_fields
       template: multipleWithOtherSentiment
+      allowOther: false
       options:
         - id: app_manifest_name
         - id: app_manifest_icons
@@ -365,6 +377,18 @@
 
 - id: other_tools
   questions:
+    - id: machine_readable_features
+      template: multipleWithOtherSentiment
+      randomize: false
+      allowOther: false
+      options:
+        - id: time_element
+        - id: data_element
+        - id: microdata
+        - id: microformats
+        - id: rdfa
+        - id: json_ld
+
     - id: site_generators
       template: multipleWithOtherSentiment
       options:
@@ -408,7 +432,7 @@
     #     - id: jquery
 
     - id: blast_from_the_past
-      template: multipleWithOtherSentiment
+      template: multiple
       allowOther: false
       options:
         - id: blink_element
