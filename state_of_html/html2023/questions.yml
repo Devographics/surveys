@@ -151,7 +151,7 @@
 #     - id: content_pain_points
 #       template: longtext
 
-- id: external_content
+- id: content
   template: featurev2
   slug: features
   questions:
@@ -163,6 +163,9 @@
     - id: media_capture
     - id: fencedframe_element
     - id: isolated_webapps
+    - id: lazy_loading
+    - id: respimg_attributes
+    - id: controlslist_attribute
     # - id: sanitizer_api
     # - id: iframe_seamless
 
@@ -199,6 +202,17 @@
         - id: modulepreload_attribute
         - id: prerender_attribute
 
+    - id: machine_readable_features
+      template: multipleWithOtherSentiment
+      randomize: false
+      options:
+        - id: time_element
+        - id: data_element
+        - id: microdata
+        - id: microformats
+        - id: rdfa
+        - id: json_ld
+
     - id: external_content_pain_points
       template: textList
       longText: true
@@ -226,8 +240,8 @@
         - id: lightning_wc
         - id: fast_design
         - id: elix
-        - id: lion
-        - id: material_components
+        - id: lion_wc
+        - id: material_wc
 
     - id: web_components_features
       template: multipleWithOtherSentiment
@@ -376,17 +390,6 @@
         - id: copilot
         - id: chat_gpt
         - id: bard
-
-    - id: machine_readable_features
-      template: multipleWithOtherSentiment
-      randomize: false
-      options:
-        - id: time_element
-        - id: data_element
-        - id: microdata
-        - id: microformats
-        - id: rdfa
-        - id: json_ld
 
     # - id: front_end_frameworks
     #   template: multipleWithOtherSentiment
