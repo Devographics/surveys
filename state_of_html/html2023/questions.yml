@@ -44,6 +44,7 @@
       template: multipleWithOtherSentiment
       allowOther: false
       options:
+        - id: na
         - id: required_attribute
         - id: pattern_attribute
         - id: input_set_custom_validity
@@ -159,7 +160,7 @@
   template: featurev2
   slug: features
   questions:
-    - id: fetchpriority
+    - id: fetchpriority_attribute
     - id: portal_element
     - id: content_security_policy
     - id: blocking_render
@@ -214,6 +215,7 @@
     - id: machine_readable_features
       template: multipleWithOtherSentiment
       randomize: false
+      allowOther: false
       options:
         - id: time_element
         - id: data_element
@@ -377,18 +379,6 @@
 
 - id: other_tools
   questions:
-    - id: machine_readable_features
-      template: multipleWithOtherSentiment
-      randomize: false
-      allowOther: false
-      options:
-        - id: time_element
-        - id: data_element
-        - id: microdata
-        - id: microformats
-        - id: rdfa
-        - id: json_ld
-
     - id: site_generators
       template: multipleWithOtherSentiment
       options:
