@@ -152,7 +152,7 @@
 #     - id: content_pain_points
 #       template: longtext
 
-- id: content
+- id: external_content
   template: featurev3
   slug: features
   questions:
@@ -181,17 +181,6 @@
     #   template: multipleWithOtherSentiment
     #   options:
     #     - id: todo
-
-    - id: machine_readable_features
-      template: multipleWithOtherSentiment
-      randomize: false
-      options:
-        - id: time_element
-        - id: data_element
-        - id: microdata
-        - id: microformats
-        - id: rdfa
-        - id: json_ld
 
     - id: script_link_attributes
       template: multipleWithOtherSentiment
@@ -299,7 +288,7 @@
         - id: form_control_label
         - id: visible_focus
         - id: pointer_alternative
-        - id: color_contrast
+        - id: good_color_contrast
         - id: color_alternative
         - id: prefers_reduced_motion
         - id: prefers_contrast
@@ -388,6 +377,17 @@
         - id: chat_gpt
         - id: bard
 
+    - id: machine_readable_features
+      template: multipleWithOtherSentiment
+      randomize: false
+      options:
+        - id: time_element
+        - id: data_element
+        - id: microdata
+        - id: microformats
+        - id: rdfa
+        - id: json_ld
+
     # - id: front_end_frameworks
     #   template: multipleWithOtherSentiment
     #   options:
@@ -403,6 +403,19 @@
     #     - id: solid
     #     - id: qwik
     #     - id: jquery
+
+    - id: blast_from_the_past
+      template: multipleWithOtherSentiment
+      allowOther: false
+      options:
+        - id: blink_element
+        - id: frame_element
+        - id: frameset_element
+        - id: font_element
+        - id: center_element
+        - id: isindex_element
+        - id: nextid_element
+        - id: applet_element
 
 - id: usage
   questions:
@@ -460,10 +473,13 @@
       template: single
       options:
         - id: na
-        - id: yes_internally
-        - id: yes_publicly_hundreds_users
-        - id: yes_publicly_thousands_users
-        - id: yes_publicly_millions_users
+        - id: less_than_100
+        - id: more_than_100
+        - id: more_than_1000
+        - id: more_than_1000000
+
+    - id: html_css_js_balance
+      template: slider
 
     - id: what_do_you_use_html_for
       template: multipleWithOther
