@@ -461,36 +461,39 @@
 
 - id: usage
   questions:
-    - id: html_existing_features
+    - id: html_functionality_features
+      template: textList
+
+    - id: html_interoperability_features
       template: textList
 
     - id: html_missing_elements
-      template: textList
-      limit: 5
-      # template: multipleWithOther
-      # cutoff: 99
-      # options:
-      #   - id: accordion
-      #   - id: alert
-      #   - id: calendar
-      #   - id: carousel
-      #   - id: combobox_autocomplete
-      #   - id: command_palette
-      #   - id: context_menu
-      #   - id: datatable
-      #   - id: dropdown_menu
-      #   - id: progress_bar
-      #   - id: skeleton_loading_placeholder
-      #   - id: switch
-      #   - id: tabs
-      #   - id: toast_message
-      #   - id: tooltip
-      #   - id: offcanvas
-      #   - id: spinner
-      #   - id: segmented_button
-      #   - id: scroll_area
-      #   - id: icon
-      #   - id: star_rating
+      # template: textList
+      # limit: 5
+      template: multipleWithOther
+      cutoff: 99
+      options:
+        - id: accordion
+        - id: alert
+        - id: calendar
+        - id: carousel
+        - id: combobox_autocomplete
+        - id: command_palette
+        - id: context_menu
+        - id: datatable
+        - id: dropdown_menu
+        - id: progress_bar
+        - id: skeleton_loading_placeholder
+        - id: switch
+        - id: tabs
+        - id: toast_message
+        - id: tooltip
+        - id: offcanvas
+        - id: spinner
+        - id: segmented_button
+        - id: scroll_area
+        - id: icon
+        - id: star_rating
 
     # - id: html_interoperability_features
     #   template: longtext
@@ -542,6 +545,7 @@
       intlId: user_info.industry_sector
       template: multipleWithOther
       matchTags: [industry_sectors]
+      cutoff: 99
       options:
         - id: na
         - id: agriculture
@@ -570,9 +574,9 @@
         - id: tourism
         - id: transport
 
-    - id: html_pain_points_freeform
-      template: textList
-      longText: true
+    # - id: html_pain_points_freeform
+    #   template: textList
+    #   longText: true
 
 ### DEMOGRAPHICS ###
 
@@ -589,6 +593,11 @@
 
     - id: yearly_salary
       template: yearly_salary
+      showIf:
+        - id: company_size
+          condition:
+            operator: includes
+            values: [10_20, 50_70]
 
     - id: higher_education_degree
       template: higher_education_degree
