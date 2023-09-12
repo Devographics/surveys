@@ -167,6 +167,7 @@
   slug: features
   questions:
     - id: fetchpriority_attribute
+    - id: resource_hints
     - id: portal_element
     - id: content_security_policy
     - id: blocking_render
@@ -207,18 +208,18 @@
         - id: media_attribute
         - id: referrerpolicy_attribute
 
-    - id: rel_attribute
-      template: multipleWithOtherSentiment
-      allowOther: false
-      countsTowardScore: true
-      options:
-        - id: na
-        - id: prefetch_attribute
-        - id: dns_prefetch_attribute
-        - id: preconnect_attribute
-        - id: preload_attribute
-        - id: modulepreload_attribute
-        - id: prerender_attribute
+    # - id: rel_attribute
+    #   template: multipleWithOtherSentiment
+    #   allowOther: false
+    #   countsTowardScore: true
+    #   options:
+    #     - id: na
+    #     - id: prefetch_attribute
+    #     - id: dns_prefetch_attribute
+    #     - id: preconnect_attribute
+    #     - id: preload_attribute
+    #     - id: modulepreload_attribute
+    #     - id: prerender_attribute
 
     - id: machine_readable_features
       template: multipleWithOtherSentiment
@@ -249,6 +250,7 @@
     - id: dom_parts
     - id: element_internals
     - id: html_modules
+    - id: slot_attribute
     - id: imperative_slot
     - id: custom_elements_defining
     - id: scoped_element_registries
@@ -261,7 +263,6 @@
       options:
         - id: na
         - id: slot_element
-        - id: slot_attribute
         - id: part_attribute
         - id: part_pseudo
         - id: host_pseudos
