@@ -373,6 +373,18 @@
     - id: window_controls_overlay
     # - id: text_fragments
 
+    - id: local_storage_features
+      template: multipleWithOtherSentiment
+      allowOther: false
+      countsTowardScore: true
+      options:
+        - id: na
+        - id: document_cookie
+        - id: local_storage
+        - id: session_storage
+        - id: indexeddb
+        - id: cache_storage
+
     - id: pwa_features
       template: multipleWithOtherSentiment
       allowOther: false
@@ -382,7 +394,7 @@
         - id: app_manifest
         - id: service_workers
         - id: notifications_api
-        - id: caching_api
+        # - id: caching_api
 
     - id: pwa_app_manifest_fields
       template: multipleWithOtherSentiment
