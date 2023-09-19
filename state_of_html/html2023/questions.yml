@@ -116,13 +116,13 @@
     - id: content_security_policy
     - id: fetchpriority_attribute
     - id: blocking_render
-    - id: portal_element
+    # - id: portal_element
     - id: model_element
     # - id: fencedframe_element
-
     - id: controlslist_attribute
     # - id: sanitizer_api
     # - id: iframe_seamless
+    # - id: text_fragments
 
     # - id: img_attributes
     #   template: multipleWithOtherSentiment
@@ -265,10 +265,10 @@
   template: featurev3
   slug: features
   questions:
+    - id: landmark_elements
     - id: tabindex_attribute
     - id: focusgroup_attribute
     - id: search_element
-    - id: landmark_elements
 
     - id: accessibility_disabilities
       template: multipleWithOther
@@ -325,20 +325,21 @@
 
     - id: accessibility_pain_points
       template: textList
-      # longText: true
 
 - id: mobile_web_apps
   template: featurev3
   slug: features
   questions:
-    # - id: client_hints
-    - id: isolated_webapps
-    - id: filesystem_access
-    - id: borderless_mode
-    - id: badging_api
-    - id: web_share_api
-    - id: window_controls_overlay
-    # - id: text_fragments
+    - id: pwa_features
+      template: multipleWithOtherSentiment
+      allowOther: false
+      countsTowardScore: true
+      options:
+        - id: app_manifest
+        - id: service_workers
+        - id: notifications_api
+        # - id: caching_api
+        - id: na
 
     - id: local_storage_features
       template: multipleWithOtherSentiment
@@ -353,16 +354,13 @@
         - id: cache_storage
         - id: na
 
-    - id: pwa_features
-      template: multipleWithOtherSentiment
-      allowOther: false
-      countsTowardScore: true
-      options:
-        - id: app_manifest
-        - id: service_workers
-        - id: notifications_api
-        # - id: caching_api
-        - id: na
+    # - id: client_hints
+    - id: isolated_webapps
+    - id: filesystem_access
+    - id: badging_api
+    - id: web_share_api
+    - id: window_controls_overlay
+    - id: borderless_mode
 
     - id: pwa_app_manifest_fields
       template: multipleWithOtherSentiment
