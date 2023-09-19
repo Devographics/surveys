@@ -76,7 +76,6 @@
       template: multipleWithOtherSentiment
       allowOther: false
       cutoff: 99
-      # randomize: false
       countsTowardScore: true
       options:
         - id: element_innerhtml
@@ -124,7 +123,6 @@
 
     #     - id: machine_readable_features
     #       template: multipleWithOther
-    #       randomize: false
     #       options:
     #         - id: time_element
     #         - id: data_element
@@ -226,7 +224,6 @@
 
     - id: machine_readable_features
       template: multipleWithOtherSentiment
-      randomize: false
       allowOther: false
       countsTowardScore: true
       options:
@@ -348,6 +345,7 @@
 
     - id: accessibility_tools
       template: multipleWithOtherSentiment
+      order: alphabetical
       options:
         - id: axe
         - id: lighthouse
@@ -377,6 +375,7 @@
       template: multipleWithOtherSentiment
       allowOther: false
       countsTowardScore: true
+      order: random
       options:
         - id: document_cookie
         - id: local_storage
@@ -400,7 +399,6 @@
       template: multipleWithOtherSentiment
       allowOther: false
       countsTowardScore: true
-      randomize: false
       options:
         - id: app_manifest_name
         - id: app_manifest_icons
@@ -419,12 +417,13 @@
   questions:
     - id: site_generators
       template: multipleWithOtherSentiment
+      order: alphabetical
       options:
         - id: jekyll
         - id: eleventy
         - id: hugo
-        - id: nextjs
         - id: gatsby
+        - id: nextjs
         - id: nuxt
         - id: astro
         - id: na
@@ -437,6 +436,7 @@
 
     - id: ai_tools
       template: multipleWithOtherSentiment
+      order: random
       options:
         - id: copilot
         - id: chat_gpt
@@ -463,6 +463,7 @@
       template: multiple
       allowOther: false
       countsTowardScore: true
+      order: random
       options:
         - id: blink_element
         - id: marquee_element
@@ -488,6 +489,7 @@
       limit: 3
       template: multipleWithOther
       cutoff: 99
+      order: random
       options:
         - id: accordion
         # - id: alert
@@ -535,6 +537,7 @@
 
     - id: tools_for_other_developers
       template: single
+      order: alphabetical
       options:
         - id: a_few
         - id: less_than_100
@@ -549,6 +552,7 @@
     - id: what_do_you_use_html_for
       template: multipleWithOther
       matchTags: [css_uses]
+      order: alphabetical
       options:
         - id: blogs
         - id: design_systems
@@ -565,6 +569,7 @@
       template: multipleWithOther
       matchTags: [industry_sectors]
       cutoff: 99
+      order: alphabetical
       options:
         - id: agriculture
         - id: automotive
