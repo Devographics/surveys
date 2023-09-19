@@ -366,11 +366,24 @@
   questions:
     # - id: client_hints
     - id: isolated_webapps
+    - id: filesystem_access
     - id: borderless_mode
     - id: badging_api
     - id: web_share_api
     - id: window_controls_overlay
     # - id: text_fragments
+
+    - id: local_storage_features
+      template: multipleWithOtherSentiment
+      allowOther: false
+      countsTowardScore: true
+      options:
+        - id: document_cookie
+        - id: local_storage
+        - id: session_storage
+        - id: indexeddb
+        - id: cache_storage
+        - id: na
 
     - id: pwa_features
       template: multipleWithOtherSentiment
@@ -380,7 +393,7 @@
         - id: app_manifest
         - id: service_workers
         - id: notifications_api
-        - id: caching_api
+        # - id: caching_api
         - id: na
 
     - id: pwa_app_manifest_fields
@@ -523,6 +536,7 @@
     - id: tools_for_other_developers
       template: single
       options:
+        - id: a_few
         - id: less_than_100
         - id: more_than_100
         - id: more_than_1000
