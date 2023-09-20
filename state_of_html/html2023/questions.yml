@@ -14,6 +14,15 @@
     #     - id: textarea_element
     #     - id: button_element
 
+    - id: datalist_element
+    - id: autocomplete_attribute
+    - id: media_capture
+    - id: showpicker
+    - id: formdata
+    - id: selectlist_element
+    - id: contenteditable_plaintext
+    # - id: form_request_submit
+
     - id: form_input_types
       template: multipleWithOtherSentiment
       allowOther: false
@@ -32,15 +41,6 @@
         - id: input_type_tel
         - id: input_type_url
         - id: na
-
-    - id: datalist_element
-    - id: autocomplete_attribute
-    - id: media_capture
-    - id: showpicker
-    - id: formdata
-    - id: selectlist_element
-    - id: contenteditable_plaintext
-    # - id: form_request_submit
 
     - id: form_validation_features
       template: multipleWithOtherSentiment
@@ -341,30 +341,6 @@
   template: featurev3
   slug: features
   questions:
-    - id: local_storage_features
-      template: multipleWithOtherSentiment
-      allowOther: false
-      countsTowardScore: true
-      order: random
-      options:
-        - id: document_cookie
-        - id: local_storage
-        - id: session_storage
-        - id: indexed_db
-        - id: cache_storage
-        - id: na
-
-    - id: pwa_features
-      template: multipleWithOtherSentiment
-      allowOther: false
-      countsTowardScore: true
-      options:
-        - id: app_manifest
-        - id: service_workers
-        - id: notifications_api
-        # - id: caching_api
-        - id: na
-
     # - id: client_hints
     - id: filesystem_access
     - id: badging_api
@@ -389,18 +365,42 @@
     #     - id: app_manifest_launch_handler # chrome-only
     #     - id: na
 
-    - id: native_apps_tools
+    # - id: native_apps_tools
+    #   template: multipleWithOtherSentiment
+    #   order: random
+    #   options:
+    #     - id: electron
+    #     - id: webview
+    #     - id: react_native
+    #     # - id: capacitor
+    #     # - id: cordova
+    #     # - id: nwjs
+    #     # - id: flutter
+    #     - id: native_tech
+    #     - id: na
+
+    - id: local_storage_features
       template: multipleWithOtherSentiment
+      allowOther: false
+      countsTowardScore: true
       order: random
       options:
-        - id: electron
-        - id: webview
-        - id: react_native
-        # - id: capacitor
-        # - id: cordova
-        # - id: nwjs
-        # - id: flutter
-        - id: native_tech
+        - id: document_cookie
+        - id: local_storage
+        - id: session_storage
+        - id: indexed_db
+        - id: cache_storage
+        - id: na
+
+    - id: pwa_features
+      template: multipleWithOtherSentiment
+      allowOther: false
+      countsTowardScore: true
+      options:
+        - id: app_manifest
+        - id: service_workers
+        - id: notifications_api
+        # - id: caching_api
         - id: na
 
     - id: mobile_web_apps_pain_points
