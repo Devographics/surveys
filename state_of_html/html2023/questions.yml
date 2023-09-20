@@ -139,23 +139,21 @@
     # - id: iframe_seamless
     # - id: text_fragments
 
-    # - id: img_attributes
-    #   template: multipleWithOtherSentiment
-    #   allowOther: false
-    #   options:
-    #     - id: todo
-
-    # - id: video_audio_attributes
-    #   template: multipleWithOtherSentiment
-    #   allowOther: false
-    #   options:
-    #     - id: todo
-
-    # - id: iframe_attributes
-    #   template: multipleWithOtherSentiment
-    #   allowOther: false
-    #   options:
-    #     - id: todo
+    - id: external_content_elements
+      template: multipleWithOtherSentiment
+      allowOther: false
+      countsTowardScore: true
+      order: random
+      options:
+        - id: picture_element
+        - id: video_element
+        - id: audio_element
+        - id: iframe_element
+        - id: object_element
+        - id: svg_element
+        - id: math_element
+        - id: canvas_element
+        - id: na
 
     - id: privacy_security_features
       template: multipleWithOtherSentiment
