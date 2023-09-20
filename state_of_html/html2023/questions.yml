@@ -70,22 +70,39 @@
     - id: inert_attribute
     # - id: navigation_api
 
-    - id: dom_methods
+    - id: dom_attribute_features
+      template: multipleWithOtherSentiment
+      allowOther: false
+      countsTowardScore: true
+      options:
+        - id: element_classlist
+        - id: element_toggle_attribute
+        - id: element_getattributenames
+        - id: na
+
+    - id: dom_html_features
       template: multipleWithOtherSentiment
       allowOther: false
       countsTowardScore: true
       options:
         - id: element_innerhtml
-        - id: element_textcontent
+        - id: element_outerhtml
         - id: element_insert_adjacent_html
+        - id: domparser
+        - id: na
+
+    - id: dom_moving_element_features
+      template: multipleWithOtherSentiment
+      allowOther: false
+      countsTowardScore: true
+      options:
         - id: element_insert_adjacent_element
-        - id: element_append_child
+        # - id: element_append_child
         - id: element_append
-        - id: element_before_after
-        - id: element_replace_child
+        - id: element_before
+        # - id: element_replace_child
         - id: element_replace_with
         - id: element_replace_children
-        - id: element_toggle_attribute
         - id: document_create_document_fragment
         - id: na
 
@@ -324,17 +341,6 @@
   template: featurev3
   slug: features
   questions:
-    - id: pwa_features
-      template: multipleWithOtherSentiment
-      allowOther: false
-      countsTowardScore: true
-      options:
-        - id: app_manifest
-        - id: service_workers
-        - id: notifications_api
-        # - id: caching_api
-        - id: na
-
     - id: local_storage_features
       template: multipleWithOtherSentiment
       allowOther: false
@@ -346,6 +352,17 @@
         - id: session_storage
         - id: indexeddb
         - id: cache_storage
+        - id: na
+
+    - id: pwa_features
+      template: multipleWithOtherSentiment
+      allowOther: false
+      countsTowardScore: true
+      options:
+        - id: app_manifest
+        - id: service_workers
+        - id: notifications_api
+        # - id: caching_api
         - id: na
 
     # - id: client_hints
