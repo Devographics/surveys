@@ -353,30 +353,31 @@
         - id: na
 
     # - id: client_hints
-    - id: isolated_webapps
     - id: filesystem_access
     - id: badging_api
     - id: web_share_api
+    - id: launch_handler_api
+    - id: file_handling_api
     - id: window_controls_overlay
-    - id: borderless_mode
+    - id: isolated_webapps
+    # - id: borderless_mode
 
-    - id: pwa_app_manifest_fields
-      template: multipleWithOtherSentiment
-      allowOther: false
-      countsTowardScore: true
-      options:
-        - id: app_manifest_name
-        - id: app_manifest_icons
-        - id: app_manifest_shortcuts
-        - id: app_manifest_file_handlers
-        - id: app_manifest_protocol_handlers
-        - id: app_manifest_share_target
-        - id: app_manifest_launch_handler
-        - id: na
+    # - id: pwa_app_manifest_fields
+    #   template: multipleWithOtherSentiment
+    #   allowOther: false
+    #   countsTowardScore: true
+    #   options:
+    #     - id: app_manifest_name
+    #     - id: app_manifest_icons
+    #     - id: app_manifest_shortcuts # chrome-only
+    #     - id: app_manifest_file_handlers # chrome-only
+    #     # - id: app_manifest_protocol_handlers
+    #     - id: app_manifest_share_target # chrome-only
+    #     - id: app_manifest_launch_handler # chrome-only
+    #     - id: na
 
     - id: mobile_web_apps_pain_points
       template: textList
-      # longText: true
 
 - id: other_tools
   questions:
