@@ -281,6 +281,7 @@
 
     - id: accessibility_disabilities
       template: multipleWithOther
+      allowComment: true
       options:
         - id: low_vision
         - id: atypical_vision
@@ -458,6 +459,7 @@
     - id: blast_from_the_past
       template: multiple
       allowOther: false
+      allowComment: true
       countsTowardScore: true
       order: random
       options:
@@ -481,9 +483,9 @@
       template: textList
 
     - id: html_missing_elements
-      # template: textList
       limit: 3
       template: multipleWithOther
+      allowComment: true
       order: random
       options:
         - id: accordion
@@ -533,6 +535,7 @@
     - id: tools_for_other_developers
       template: single
       order: alphabetical
+      allowComment: true
       options:
         - id: na
         - id: a_few
@@ -542,11 +545,13 @@
 
     - id: html_css_js_balance
       template: slider
+      allowComment: true
 
     - id: what_do_you_use_html_for
       template: multipleWithOther
       matchTags: [css_uses]
       order: alphabetical
+      allowComment: true
       options:
         - id: blogs
         - id: design_systems
