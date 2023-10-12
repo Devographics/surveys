@@ -57,6 +57,7 @@
         - id: na
 
     - id: forms_pain_points
+      matchTags: [html_pain_points, features_html]
       template: textList
 
 - id: interactivity
@@ -119,6 +120,7 @@
         - id: na
 
     - id: interactivity_pain_points
+      matchTags: [html_pain_points, features_html]
       template: textList
 
 - id: content
@@ -218,6 +220,7 @@
         - id: na
 
     - id: content_pain_points
+      matchTags: [html_pain_points, features_html]
       template: textList
 
 - id: web_components
@@ -254,6 +257,7 @@
 
     - id: web_components_libraries
       template: multipleWithOtherSentiment
+      matchTags: [libraries]
       options:
         - id: shoelace
         - id: spectrum_wc
@@ -265,9 +269,11 @@
         - id: na
 
     - id: using_web_components_pain_points
+      matchTags: [html_pain_points, features_html]
       template: textList
 
     - id: making_web_components_pain_points
+      matchTags: [html_pain_points, features_html]
       template: textList
 
 - id: accessibility
@@ -281,6 +287,7 @@
 
     - id: accessibility_disabilities
       template: multipleWithOther
+      matchTags: [accessibility, disabilities]
       allowComment: true
       options:
         - id: low_vision
@@ -294,6 +301,7 @@
 
     - id: accessibility_techniques
       template: multipleWithOther
+      matchTags: [accessibility]
       cutoff: 999
       options:
         # - id: tabindex
@@ -315,6 +323,7 @@
 
     - id: accessibility_screenreaders
       template: multipleWithOtherSentiment
+      matchTags: [accessibility, browsers]
       options:
         - id: voiceover
         - id: jaws
@@ -324,6 +333,7 @@
 
     - id: accessibility_tools
       template: multipleWithOtherSentiment
+      matchTags: [accessibility, browsers]
       order: alphabetical
       options:
         - id: axe
@@ -334,6 +344,7 @@
         - id: na
 
     - id: accessibility_pain_points
+      matchTags: [html_pain_points, features_html]
       template: textList
 
 - id: mobile_web_apps
@@ -366,6 +377,7 @@
 
     - id: native_apps_tools
       template: multipleWithOtherSentiment
+      matchTags: [libraries]
       # order: alphabetical
       options:
         # - id: electron
@@ -408,6 +420,7 @@
         - id: na
 
     - id: mobile_web_apps_pain_points
+      matchTags: [html_pain_points, features_html]
       template: textList
 
 - id: other_tools
@@ -478,9 +491,11 @@
 - id: usage
   questions:
     - id: html_interoperability_features
+      matchTags: [features_html]
       template: textList
 
     - id: html_functionality_features
+      matchTags: [features_html]
       template: textList
 
     - id: html_missing_elements
@@ -488,6 +503,7 @@
       template: multipleWithOther
       allowComment: true
       order: random
+      matchTags: [features_html]
       options:
         - id: accordion
         # - id: alert
@@ -639,7 +655,7 @@
 
     - id: other_surveys
       sectionId: resources
-      template: multiple
+      template: multipleWithOther
       allowOther: true
       matchTags: [surveys]
       options:
@@ -656,18 +672,19 @@
 
     - id: how_did_user_find_out_about_the_survey
       template: text
+      matchType: single
       matchTags:
         [
-          sources,
-          sources_state_of_css,
           people,
           sites,
           newsletters,
           video_creators,
           podcasts,
-          socialmedia,
           surveys,
           events,
+          sources_state_of_html,
+          socialmedia,
+          sources,
         ]
 
     - id: how_can_we_improve
@@ -677,37 +694,37 @@
       template: receive_notifications
 
     - id: referrer
+      matchType: single
       matchTags:
         [
-          sources,
-          sources_state_of_css,
           people,
           sites,
           newsletters,
           video_creators,
           podcasts,
-          sources_state_of_css,
-          socialmedia,
           surveys,
           events,
+          sources_state_of_html,
+          socialmedia,
+          sources,
         ]
       hidden: true
       template: referrer
 
     - id: sourcetag
+      matchType: single
       matchTags:
         [
-          sources,
-          sources_state_of_css,
           people,
           sites,
           newsletters,
           video_creators,
           podcasts,
-          sources_state_of_css,
-          socialmedia,
           surveys,
           events,
+          sources_state_of_html,
+          socialmedia,
+          sources,
         ]
       hidden: true
       template: sourcetag
