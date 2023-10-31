@@ -396,24 +396,30 @@
   questions:
     - id: webpack
     - id: parcel
-    - id: gulp
+    # - id: gulp # removed in 2023
     - id: rollup
-    - id: browserify # remove in 2023
+    # - id: browserify # remove in 2023
     - id: tsc
-    - id: rome
-    - id: snowpack
+    # - id: rome
+    # - id: snowpack
     - id: swc
     - id: esbuild
 
     # new in 2021
     - id: vite
       yearAdded: 2021
-    - id: wmr
-      yearAdded: 2021
+    # - id: wmr # removed in 2023
+    #   yearAdded: 2021
 
     # new in 2022
     - id: turbopack
       yearAdded: 2022
+
+    # new in 2023
+    - id: bun
+      yearAdded: 2023
+    - id: tsup
+      yearAdded: 2023
 
     - id: build_tools_others
       intlId: tools.other_tools
@@ -475,16 +481,12 @@
           yearAdded: 2022
         - id: mitosis
           yearAdded: 2022
-
-    - id: date_management
-      yearAdded: 2022
-      template: multipleWithOtherSentiment
-      # allowPrenormalized: true
-      options:
         - id: moment
         - id: dayjs
         - id: date_fns
         - id: luxon
+        - id: yup
+          yearAdded: 2023
 
     - id: data_visualization
       yearAdded: 2022
@@ -517,17 +519,17 @@
         - id: framer_motion
         - id: motion_one
 
-    - id: data_fetching
-      yearAdded: 2022
-      template: multipleWithOtherSentiment
-      # allowPrenormalized: true
-      options:
-        - id: trpc
-        - id: apollo_client
-        - id: axios
-        - id: tanstack_query
-        - id: swr
-        - id: relay
+    # - id: data_fetching
+    #   yearAdded: 2022
+    #   template: multipleWithOtherSentiment
+    #   # allowPrenormalized: true
+    #   options:
+    #     - id: trpc
+    #     - id: apollo_client
+    #     - id: axios
+    #     - id: tanstack_query
+    #     - id: swr
+    #     - id: relay
 
     - id: backend_frameworks
       yearAdded: 2022
@@ -556,24 +558,21 @@
         - id: blitz # removed in 2022?
           yearAdded: 2021
 
-    - id: utilities
-      template: multipleWithOtherSentiment
-      # allowPrenormalized: true
-      options:
-        - id: babel
-        # - id: prettier
-        # - id: eslint
-        - id: nvm
-        - id: "n"
-        - id: zx
-          yearAdded: 2021
-        - id: volta
-          yearAdded: 2021
-        - id: verdaccio
-          yearAdded: 2021
-    - id: utilities_others
-      intlId: tools_others.utilities.others
-      template: projects
+    # - id: utilities
+    #   template: multipleWithOtherSentiment
+    #   # allowPrenormalized: true
+    #   options:
+    #     - id: babel
+    #     # - id: prettier
+    #     # - id: eslint
+    #     - id: nvm
+    #     - id: "n"
+    #     - id: zx
+    #       yearAdded: 2021
+    #     - id: volta
+    #       yearAdded: 2021
+    #     - id: verdaccio
+    #       yearAdded: 2021
 
     - id: runtimes
       template: multipleWithOtherSentiment
@@ -597,12 +596,13 @@
         - id: aws_lambda
         - id: cloudflare_workers
         - id: netlify_edge_functions
-        - id: fastly_edge_compute
+        # - id: fastly_edge_compute
         - id: google_cloud_functions
-        - id: akamai_edge_workers
+        # - id: akamai_edge_workers
         - id: nextjs_edge_runtime
         - id: fly_io
         - id: digital_ocean_functions
+        - id: azure_functions
 
     - id: javascript_flavors
       yearAdded: 2021
@@ -643,6 +643,46 @@
         - id: clojure
         - id: elm
         - id: julia
+        - id: csharp
+
+    - id: ai_tools
+      template: multipleWithOtherSentiment
+      order: random
+      options:
+        - id: copilot
+        - id: chat_gpt
+        - id: bard
+        - id: bing
+        - id: perplexity
+        - id: cursor
+        - id: phind
+        - id: codium
+        - id: codeium
+        - id: tabnine
+        - id: code_whisperer
+        - id: cody
+        - id: jetbrains_ai
+        - id: llama
+        - id: claude
+        - id: na
+
+    - id: hosting
+      sectionId: other_tools
+      template: multipleWithOtherSentiment
+      options:
+        - id: aws
+        - id: azure
+        - id: cloudflare
+        - id: digital_ocean
+        - id: fastly
+        - id: fly_io
+        - id: github_pages
+        - id: google_cloud
+        - id: heroku
+        - id: netlify
+        - id: render
+        - id: vercel
+        - id: na
 
     # - id: performance_testing
     #   template: multiple
