@@ -8,7 +8,7 @@
 # - Have used it
 
 - id: language
-  template: feature
+  template: featurev3
   slug: features
   messageId: features.features_intro
   questions:
@@ -23,41 +23,72 @@
     # - id: spread_operator
     # - id: arrow_functions
 
-    - id: proxies
+    # - id: proxies # removed in 2023, stable trend
     - id: promise_all_settled
-    - id: dynamic_import
+    # - id: dynamic_import # removed in 2023
     - id: nullish_coalescing
     # - id: optional_chaining # removed in 2022, too popular
     - id: private_fields
     # - id: big_int # removed in 2022
 
     # new in 2021
-    - id: numeric_separators
-      yearAdded: 2021
-    - id: string_replace_all
-      yearAdded: 2021
-    - id: string_match_all
-      yearAdded: 2021
+    # - id: numeric_separators # removed in 2023
+    #   yearAdded: 2021
+    # - id: string_replace_all
+    #   yearAdded: 2021
+    # - id: string_match_all
+    #   yearAdded: 2021
     - id: logical_assignment
       yearAdded: 2021
     - id: promise_any
       yearAdded: 2021
-    - id: array_at
-      yearAdded: 2021
+    # - id: array_at # removed in 2023
+    #   yearAdded: 2021
     - id: top_level_await
       yearAdded: 2021
 
     # new in 2022
-    - id: temporal
-      yearAdded: 2022
-    - id: array_findlast
-      yearAdded: 2022
+    # - id: array_findlast
+    #   yearAdded: 2022
     - id: error_cause
       yearAdded: 2022
     - id: object_hasown
       yearAdded: 2022
-    - id: regexp_match_indices
-      yearAdded: 2022
+    # - id: regexp_match_indices
+    #   yearAdded: 2022
+
+    - id: hashbang_grammar
+      yearAdded: 2023
+
+    - id: string_features
+      template: multipleWithOtherSentiment
+      allowOther: false
+      options:
+        - id: string_replace_all
+        - id: string_match_all
+        - id: regexp_match_indices
+        - id: na
+
+    - id: array_features
+      template: multipleWithOtherSentiment
+      allowOther: false
+      options:
+        - id: array_findlast
+        - id: array_to_sorted
+        - id: array_to_reversed
+        - id: array_with
+        - id: array_to_spliced
+        - id: na
+
+    # new in 2023
+    # - id: array_to_sorted
+    #   yearAdded: 2023
+    # - id: array_to_reversed
+    #   yearAdded: 2023
+    # - id: array_with
+    #   yearAdded: 2023
+    # - id: array_to_spliced
+    #   yearAdded: 2023
 
 # removed in 2021
 # - id: data_structures
@@ -70,7 +101,7 @@
 #     - id: array_prototype_flat
 
 - id: browser_apis
-  template: feature
+  template: featurev3
   slug: features
   questions:
     # removed in 2021
@@ -103,12 +134,18 @@
     - id: webxr
       yearAdded: 2021
 
-- id: other_features
-  template: feature
-  slug: features
-  questions:
+    - id: temporal
+      yearAdded: 2022
+
     - id: pwa
     - id: wasm
+    # - id: making_web_components
+    # - id: using_web_components
+
+# - id: other_features
+#   template: feature
+#   slug: features
+#   questions:
 
 ######################################################
 #########                TOOLS               #########
@@ -152,7 +189,7 @@
     - id: vuejs
     - id: angular
     - id: preact
-    - id: ember
+    # - id: ember # removed in 2022
     - id: svelte
     - id: alpinejs
     - id: litelement
@@ -163,6 +200,10 @@
       yearAdded: 2022
     - id: stencil
       yearAdded: 2022
+    - id: htmx
+      yearAdded: 2023
+    # - id: enhance # too new to add in 2023?
+    #   yearAdded: 2024
     - id: front_end_frameworks_others
       intlId: tools.other_tools
       template: projects
@@ -194,7 +235,7 @@
 #       template: happiness
 #       sectionSlug: happiness
 
-- id: rendering_frameworks
+- id: meta_frameworks
   template: tool
   slug: tools
   questions:
@@ -214,9 +255,10 @@
 
     - id: docusaurus
       yearAdded: 2022
-
-    # - id: solidstart # too early?
-    #   yearAdded: 2022
+    - id: solidstart
+      yearAdded: 2023
+    - id: fresh
+      yearAdded: 2023
 
     - id: rendering_frameworks_others
       intlId: tools.other_tools
@@ -417,7 +459,7 @@
   slug: tools_others
   questions:
     - id: libraries
-      template: multiple
+      template: multipleWithOtherSentiment
       # allowPrenormalized: true
       options:
         - id: immer
@@ -433,27 +475,20 @@
           yearAdded: 2022
         - id: mitosis
           yearAdded: 2022
-    - id: libraries_others
-      intlId: tools_others.libraries.others
-      template: projects
 
     - id: date_management
       yearAdded: 2022
-      template: multiple
+      template: multipleWithOtherSentiment
       # allowPrenormalized: true
       options:
         - id: moment
         - id: dayjs
         - id: date_fns
         - id: luxon
-    - id: date_management_others
-      intlId: tools_others.date_management.others
-      yearAdded: 2022
-      template: projects
 
     - id: data_visualization
       yearAdded: 2022
-      template: multiple
+      template: multipleWithOtherSentiment
       # allowPrenormalized: true
       options:
         - id: d3
@@ -466,14 +501,10 @@
         - id: chart_js
         - id: highcharts
         - id: plotly
-    - id: data_visualization_others
-      intlId: tools_others.data_visualization.others
-      yearAdded: 2022
-      template: projects
 
     - id: graphics_animation
       yearAdded: 2022
-      template: multiple
+      template: multipleWithOtherSentiment
       # allowPrenormalized: true
       options:
         - id: three_js
@@ -485,14 +516,10 @@
         - id: popmotion
         - id: framer_motion
         - id: motion_one
-    - id: graphics_animation_others
-      intlId: tools_others.graphics_animation.others
-      yearAdded: 2022
-      template: projects
 
     - id: data_fetching
       yearAdded: 2022
-      template: multiple
+      template: multipleWithOtherSentiment
       # allowPrenormalized: true
       options:
         - id: trpc
@@ -501,14 +528,10 @@
         - id: tanstack_query
         - id: swr
         - id: relay
-    - id: data_fetching_others
-      intlId: tools_others.data_fetching.others
-      yearAdded: 2022
-      template: projects
 
     - id: backend_frameworks
       yearAdded: 2022
-      template: multiple
+      template: multipleWithOtherSentiment
       # allowPrenormalized: true
       options:
         - id: express
@@ -532,13 +555,9 @@
           yearAdded: 2022
         - id: blitz # removed in 2022?
           yearAdded: 2021
-    - id: backend_frameworks_others
-      intlId: tools_others.backend_frameworks.others
-      yearAdded: 2022
-      template: projects
 
     - id: utilities
-      template: multiple
+      template: multipleWithOtherSentiment
       # allowPrenormalized: true
       options:
         - id: babel
@@ -557,8 +576,7 @@
       template: projects
 
     - id: runtimes
-      template: multiple
-      allowOther: true
+      template: multipleWithOtherSentiment
       matchTags: [libraries, other]
       options:
         - id: browser_environment
@@ -572,8 +590,7 @@
           yearAdded: 2022
 
     - id: edge_runtimes
-      template: multiple
-      allowOther: true
+      template: multipleWithOtherSentiment
       yearAdded: 2022
       matchTags: [libraries, other]
       options:
@@ -589,8 +606,7 @@
 
     - id: javascript_flavors
       yearAdded: 2021
-      template: multiple
-      allowOther: true
+      template: multipleWithOtherSentiment
       matchTags: [javascript_flavors, libraries]
       options:
         - id: typescript
@@ -604,8 +620,7 @@
         - id: imba
 
     - id: non_js_languages
-      template: multiple
-      allowOther: true
+      template: multipleWithOtherSentiment
       matchTags: [languages]
       options:
         - id: php
@@ -732,7 +747,7 @@
 
     - id: usage_type
       yearAdded: 2022
-      template: single
+      template: multipleWithOther
       options:
         - id: professionally
         - id: student
@@ -743,9 +758,8 @@
 
     - id: what_do_you_use_js_for
       yearAdded: 2022
-      template: multiple
+      template: multipleWithOther
       matchTags: [js_uses]
-      allowOther: true
       options:
         - id: frontend_development
         - id: backend_development
@@ -760,40 +774,38 @@
 
     - id: industry_sector
       intlId: usage.industry_sector_js
-      template: multiple
-      allowOther: true
+      template: multipleWithOther
       matchTags: [industry_sectors]
       options:
-        - id: ecommerce
-        - id: news_media
-        - id: healthcare
-        - id: finance
-        - id: programming_tools
-        - id: socialmedia
-        - id: marketing_tools
-        - id: education
-        - id: real_estate
-        - id: government
-        - id: entertainment
+        - id: agriculture
+        - id: automotive
+        - id: construction
         - id: consulting
-        - id: travel
+        - id: cyber_security
+        - id: ecommerce
+        - id: education
+        - id: energy
+        - id: entertainment
+        - id: finance
+        - id: government
+        - id: healthcare
+        - id: hospitality
         - id: insurance
         - id: logistics
-        - id: energy
-        - id: telecommunications
-        - id: student
-        - id: hospitality
-        - id: cyber_security
-        - id: construction
-        - id: automotive
-        - id: agriculture
-        - id: transport
         - id: manufacturing
+        - id: marketing_tools
+        - id: news_media
+        - id: programming_tools
+        - id: real_estate
+        - id: socialmedia
+        - id: student
+        - id: telecommunications
+        - id: transport
+        - id: travel
 
     - id: js_app_patterns
       yearAdded: 2022
-      template: multiple
-      allowOther: true
+      template: multipleWithOtherSentiment
       matchTags: [js_patterns]
       cutoff: 999
       options:
@@ -810,35 +822,12 @@
         - id: resumability
         - id: edge_rendering
 
-######################################################
-#########              OPINIONS              #########
-######################################################
-
-- id: opinions
-  intlId: opinions
-  questions:
-    # removed in 2021
-    # - id: js_over_used_online
-    #   template: opinion
-    # - id: enjoy_building_js_apps
-    #   template: opinion
-    # - id: would_like_js_to_be_main_lang
-    #   template: opinion
-
-    - id: js_moving_in_right_direction
-      template: opinion
-    - id: building_js_apps_overly_complex
-      template: opinion
-    - id: js_ecosystem_changing_to_fast
-      template: opinion
-
     - id: top_js_pain_points
       yearAdded: 2021
       # template: bracket
       # template: top_n
-      template: multiple
+      template: multipleWithOther
       limit: 3
-      allowOther: true
       matchTags: [js_pain_points]
       options:
         - id: state_management
@@ -854,9 +843,76 @@
       yearAdded: 2021
       # template: bracket
       # template: top_n
-      template: multiple
+      template: multipleWithOther
       limit: 3
-      allowOther: true
+      matchTags: [js_missing_features]
+      options:
+        - id: static_typing
+        - id: standard_library
+        - id: pattern_matching
+        - id: pipe_operator
+        - id: decorators
+        - id: immutable_data_structures
+        - id: better_date_management
+        - id: observable
+
+    # - id: pick_of_the_year
+    #   yearAdded: 2022
+    #   sectionSlug: opinions_others
+    #   template: others
+    #   matchTags: [js_missing_features]
+
+    - id: state_of_the_web_happiness
+      intlId: happiness.state_of_the_web
+      template: happiness
+    - id: state_of_js_happiness
+      intlId: happiness.state_of_js
+      template: happiness
+    ######################################################
+    #########              OPINIONS              #########
+    ######################################################
+
+    # - id: opinions
+    #   intlId: opinions
+    #   questions:
+    #     # removed in 2021
+    #     # - id: js_over_used_online
+    #     #   template: opinion
+    #     # - id: enjoy_building_js_apps
+    #     #   template: opinion
+    #     # - id: would_like_js_to_be_main_lang
+    #     #   template: opinion
+
+    #     - id: js_moving_in_right_direction
+    #       template: opinion
+    #     - id: building_js_apps_overly_complex
+    #       template: opinion
+    #     - id: js_ecosystem_changing_to_fast
+    #       template: opinion
+
+    - id: top_js_pain_points
+      yearAdded: 2021
+      # template: bracket
+      # template: top_n
+      template: multipleWithOther
+      limit: 3
+      matchTags: [js_pain_points]
+      options:
+        - id: state_management
+        - id: architecture
+        - id: finding_packages
+        - id: debugging
+        - id: managing_dependencies
+        - id: async_code
+        - id: writing_modules
+        - id: date_management
+
+    - id: top_currently_missing_from_js
+      yearAdded: 2021
+      # template: bracket
+      # template: top_n
+      template: multipleWithOther
+      limit: 3
       matchTags: [js_missing_features]
       options:
         - id: static_typing
@@ -889,8 +945,7 @@
   slug: resources
   questions:
     - id: first_steps
-      template: multiple
-      allowOther: true
+      template: multipleWithOther
       matchTags:
         [
           first_steps,
@@ -915,8 +970,7 @@
         - id: self_directed
 
     - id: blogs_news_magazines
-      template: multiple
-      allowOther: true
+      template: multipleWithOther
       matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
       options:
         #  removed in 2021 (personal blogs)
@@ -926,60 +980,64 @@
 
         - id: medium
         - id: devto
-        - id: bestofjs
-        - id: smashing_magazine
+        - id: css_tricks
         - id: js_weekly
-        - id: bytes
+        - id: smashing_magazine
+        - id: bestofjs
         - id: node_weekly
+        - id: bytes
         - id: codrops
         - id: sitepoint
+        - id: frontend_dogma
         - id: echo_js
-        - id: css_tricks
         - id: front_end_front
         - id: frontend_horse
         - id: frontend_focus
         - id: alligator
         - id: logrocket
-        - id: daily_js # remove in 2023?
-        - id: a_list_apart # remove in 2023?
+        - id: daily_js
+        - id: a_list_apart
+        - id: na
 
     - id: sites_courses
-      template: multiple
-      allowOther: true
+      template: multipleWithOther
       matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
       options:
         - id: stack_overflow
-        - id: udemy
-        - id: w3schools
         - id: mdn
+        - id: w3schools
+        - id: udemy
+        - id: web_dev
         - id: freecodecamp
         - id: codecademy
-        - id: web_dev
-        - id: javascript_info
-        - id: scrimba
         - id: frontendmasters
-        - id: wes_bos
-        - id: platzi
-        - id: skillshare
-        - id: coursera
-        - id: egghead
+        - id: javascript_info
         - id: kent_c_dodds
-        - id: o_reilly
+        - id: scrimba
+        - id: egghead
+        - id: wes_bos
         - id: pluralsight
-        - id: linkedin_learning
-        - id: designcode
-        - id: academind
-        - id: ui_dev
+        - id: o_reilly
+        - id: zero_to_mastery
+        - id: josh_w_comeau
         - id: vue_mastery
-        - id: newline
-        - id: epic_react
-        - id: miguel_angel_duran
-        - id: levelup
-        - id: doka
+        - id: coursera
+        - id: academind
+        - id: na
+
+        # - id: platzi
+        # - id: skillshare
+        # - id: linkedin_learning
+        # - id: designcode
+        # - id: ui_dev
+        # - id: newline
+        # - id: epic_react
+        # - id: miguel_angel_duran
+        # - id: levelup
+        # - id: doka
 
     - id: video_creators
-      template: multiple
-      allowOther: true
+      template: multipleWithOther
       matchTags:
         [
           video_creators,
@@ -993,67 +1051,71 @@
       options:
         - id: fireship
         - id: kevin_j_powell
-        - id: fun_fun_function
-        - id: theo_browne
-        - id: tina_huang
-        - id: jason_goodison # https://www.youtube.com/c/JasonGoodison/videos
-        - id: programming_with_mosh # mosh_hamedani https://codewithmosh.com/ https://www.youtube.com/c/programmingwithmosh
-        - id: kent_c_dodds
-        - id: brad_traversy
-        - id: clever_programmer # rafeh_qazi https://www.youtube.com/c/CleverProgrammer
-        - id: ben_awad # https://www.youtube.com/channel/UC-8QAzbLcRglXeN_MY9blyw
         - id: web_dev_simplified # kyle cook https://www.youtube.com/c/WebDevSimplified/
-        - id: coding_train # Daniel Shiffman https://www.youtube.com/user/shiffman?app=desktop
-        - id: net_ninja # https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg?app=desktop
+        - id: theo_browne
+        - id: brad_traversy
+        - id: kent_c_dodds
+        - id: ben_awad # https://www.youtube.com/channel/UC-8QAzbLcRglXeN_MY9blyw
         - id: the_primeagen # https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg?app=desktop
+        - id: net_ninja # https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg?app=desktop
+        - id: programming_with_mosh # mosh_hamedani https://codewithmosh.com/ https://www.youtube.com/c/programmingwithmosh
+        - id: coding_train # Daniel Shiffman https://www.youtube.com/user/shiffman?app=desktop
         - id: jack_herrington # https://www.youtube.com/@jherr
         - id: midudev
         - id: mayuko
-        - id: coding_garden
+        - id: tina_huang
+        - id: james_q_quick
+        - id: hyperplexed
+        - id: na
+        # - id: fun_fun_function
+        # - id: jason_goodison # https://www.youtube.com/c/JasonGoodison/videos
+        # - id: clever_programmer # rafeh_qazi https://www.youtube.com/c/CleverProgrammer
+        # - id: coding_garden
 
-    - id: communities
-      template: multiple
-      allowOther: true
-      matchTags: [podcasts, people, sites]
-      options:
-        - id: reactiflux
-        - id: vercel
-        - id: vite
+    # - id: communities
+    #   template: multipleWithOther
+    #   matchTags: [podcasts, people, sites]
+    #   options:
+    #     - id: reactiflux
+    #     - id: vercel
+    #     - id: vite
 
     - id: podcasts
-      template: multiple
-      allowOther: true
+      template: multipleWithOther
       matchTags: [podcasts, people, sites]
       options:
         - id: syntaxfm
         - id: js_party
-        - id: changelog
         - id: http_203
-        - id: shop_talk_show
-        - id: full_stack_radio
+        - id: changelog
         - id: javascript_jabber
         - id: front_end_happy_hour
+        - id: full_stack_radio
+        - id: shop_talk_show
         - id: react_podcast
-        - id: ladybug
         - id: web_standards_ru
-        - id: software_engineering_daily
-        - id: big_web_show
-        - id: jamstack_radio
-        - id: web_platform_podcast
-        - id: modern_web
-        - id: codepen_radio
-        - id: web_rush
-        - id: frontend_weekend
-        - id: frontend_first
-        - id: a11y_rules
-        - id: tools_day
-        - id: the_bike_shed
         - id: css_podcast
-        - id: undefined_podcast
+        - id: ladybug
+        - id: software_engineering_daily
+        - id: jamstack_radio
         - id: podrocket
+        - id: svelte_radio
+        - id: na
+        # - id: big_web_show
+        # - id: web_platform_podcast
+        # - id: modern_web
+        # - id: codepen_radio
+        # - id: web_rush
+        # - id: frontend_weekend
+        # - id: frontend_first
+        # - id: a11y_rules
+        # - id: tools_day
+        # - id: the_bike_shed
+        # - id: undefined_podcast
 
     - id: people
-      template: multiple
+      template: multipleWithOther
+      order: random
       matchtags:
         [
           video_creators,
@@ -1065,67 +1127,66 @@
           socialmedia,
         ]
       options:
-        - id: na
-        - id: adam_wathan
-        - id: addy_osmani
-        - id: alex_russel
-        - id: anthony_fu
-        - id: axel_rauschmayer
-        - id: ben_holmes
-        - id: carlos_azaustre
-        - id: cassidy_williams
-        - id: cassie_evans
-        - id: chris_coyier
-        - id: cory_house
         - id: dan_abramov
-        - id: eric_elliott
-        - id: evan_you
-        - id: fernando_herrera
-        - id: fireship
-        - id: illya_klymov
-        - id: jack_herrington
-        - id: jake_archibald
-        - id: james_q_quick
-        - id: jarred_sumner
-        - id: jason_lengstorf
-        - id: jason_miller
-        - id: josh_comeau
-        - id: kent_c_dodds
-        - id: kevin_j_powell
-        - id: kyle_simpson
-        - id: lee_robinson
-        - id: mark_erikson
-        - id: martin_fowler
-        - id: matt_pocock
-        - id: matteo_collina
-        - id: maximilian_schwarzmuller
-        - id: miguel_angel_duran
-        - id: minko_gechev
-        - id: netanel_basal
         - id: rich_harris
         - id: ryan_carniato
-        - id: ryan_florence
-        - id: sara_soueidan
-        - id: sarah_drasner
-        - id: scott_tolinski
-        - id: surma
-        - id: tanner_linsley
-        - id: the_primeagen
-        - id: theo_browne
-        - id: una_kravets
-        - id: vadim_makeev
+        - id: evan_you
+        - id: josh_comeau
+        - id: kent_c_dodds
+        - id: anthony_fu
+        - id: miguel_angel_duran
         - id: wes_bos
-        - id: zach_leatherman
+        - id: jake_archibald
+        - id: matt_pocock
+        - id: theo_browne
+        - id: tanner_linsley
+        - id: ryan_florence
+        - id: the_primeagen
+        - id: maximilian_schwarzmuller
+        - id: sarah_drasner
+        - id: surma
+        - id: cassidy_williams
+        - id: sara_soueidan
+        - id: na
+        # - id: cassie_evans
+        # - id: adam_wathan
+        # - id: addy_osmani
+        # - id: alex_russel
+        # - id: axel_rauschmayer
+        # - id: ben_holmes
+        # - id: carlos_azaustre
+        # - id: chris_coyier
+        # - id: cory_house
+        # - id: eric_elliott
+        # - id: fernando_herrera
+        # - id: fireship
+        # - id: illya_klymov
+        # - id: jack_herrington
+        # - id: james_q_quick
+        # - id: jarred_sumner
+        # - id: jason_lengstorf
+        # - id: jason_miller
+        # - id: kevin_j_powell
+        # - id: kyle_simpson
+        # - id: lee_robinson
+        # - id: mark_erikson
+        # - id: martin_fowler
+        # - id: matteo_collina
+        # - id: minko_gechev
+        # - id: netanel_basal
+        # - id: scott_tolinski
+        # - id: una_kravets
+        # - id: vadim_makeev
+        # - id: zach_leatherman
 
     - id: other_surveys
-      template: multiple
-      allowOther: true
+      template: multipleWithOther
       matchTags: [surveys]
       options:
         # - id: state_of_js_survey
-        - id: state_of_html_survey
         - id: state_of_css_survey
         - id: state_of_graphql_survey
+        - id: state_of_html_survey
         - id: jetbrains_survey
         - id: stack_overflow_survey
         - id: codingame_survey
@@ -1141,7 +1202,7 @@
   slug: user_info
   questions:
     - id: age
-      template: age
+      template: age_number
 
     - id: years_of_experience
       template: years_of_experience
@@ -1165,10 +1226,7 @@
       template: race_ethnicity
 
     - id: disability_status
-      matchTags: [disabilities]
       template: disability_status
-      allowOther: true
-      yearAdded: 2021
 
     - id: how_did_user_find_out_about_the_survey
       template: text
@@ -1178,3 +1236,39 @@
 
     - id: receive_notifications
       template: receive_notifications
+
+    - id: referrer
+      matchType: single
+      matchTags:
+        [
+          people,
+          sites,
+          newsletters,
+          video_creators,
+          podcasts,
+          surveys,
+          events,
+          sources_state_of_html,
+          socialmedia,
+          sources,
+        ]
+      hidden: true
+      template: referrer
+
+    - id: sourcetag
+      matchType: single
+      matchTags:
+        [
+          people,
+          sites,
+          newsletters,
+          video_creators,
+          podcasts,
+          surveys,
+          events,
+          sources_state_of_html,
+          socialmedia,
+          sources,
+        ]
+      hidden: true
+      template: sourcetag
