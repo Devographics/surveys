@@ -7,7 +7,7 @@
 # - Know about it
 # - Have used it
 
-- id: language
+- id: features
   template: featurev3
   slug: features
   messageId: features.features_intro
@@ -24,11 +24,11 @@
     # - id: arrow_functions
 
     # - id: proxies # removed in 2023, stable trend
-    - id: promise_all_settled
-    # - id: dynamic_import # removed in 2023
-    - id: nullish_coalescing
+    # - id: promise_all_settled
+    # - id: dynamic_import
+    # - id: nullish_coalescing
     # - id: optional_chaining # removed in 2022, too popular
-    - id: private_fields
+    # - id: private_fields
     # - id: big_int # removed in 2022
 
     # new in 2021
@@ -38,27 +38,40 @@
     #   yearAdded: 2021
     # - id: string_match_all
     #   yearAdded: 2021
-    - id: logical_assignment
-      yearAdded: 2021
-    - id: promise_any
-      yearAdded: 2021
+    # - id: logical_assignment
+    #   yearAdded: 2021
+    # - id: promise_any
+    #   yearAdded: 2021
     # - id: array_at # removed in 2023
     #   yearAdded: 2021
-    - id: top_level_await
-      yearAdded: 2021
+    # - id: top_level_await
+    #   yearAdded: 2021
 
     # new in 2022
     # - id: array_findlast
     #   yearAdded: 2022
-    - id: error_cause
-      yearAdded: 2022
-    - id: object_hasown
-      yearAdded: 2022
+    # - id: error_cause
+    #   yearAdded: 2022
+    # - id: object_hasown
+    #   yearAdded: 2022
     # - id: regexp_match_indices
     #   yearAdded: 2022
 
-    - id: hashbang_grammar
-      yearAdded: 2023
+    # - id: hashbang_grammar
+    #   yearAdded: 2023
+
+    - id: syntax_features
+      template: multipleWithOtherSentiment
+      allowOther: false
+      options:
+        - id: dynamic_import
+        - id: nullish_coalescing
+        - id: private_fields
+        - id: logical_assignment
+        - id: error_cause
+        - id: hashbang_grammar
+          yearAdded: 2023
+        - id: na
 
     - id: string_features
       template: multipleWithOtherSentiment
@@ -80,6 +93,46 @@
         - id: array_to_spliced
         - id: na
 
+    - id: async_features
+      template: multipleWithOtherSentiment
+      allowOther: false
+      options:
+        - id: top_level_await
+        - id: promise_all_settled
+        - id: promise_any
+        - id: na
+
+    - id: browser_api_features
+      template: multipleWithOtherSentiment
+      allowOther: false
+      options:
+        - id: webgl
+        - id: web_animations
+        - id: webrtc
+        - id: web_speech
+        - id: websocket
+        - id: page_visibility
+          yearAdded: 2021
+        - id: broadcast_channel
+          yearAdded: 2021
+        - id: geolocation
+          yearAdded: 2021
+        - id: webxr
+          yearAdded: 2021
+
+        - id: temporal
+          yearAdded: 2022
+
+        - id: pwa
+        - id: wasm
+        - id: na
+
+    - id: language_pain_points
+      template: textList
+
+    - id: browser_apis_pain_points
+      template: textList
+
     # new in 2023
     # - id: array_to_sorted
     #   yearAdded: 2023
@@ -100,47 +153,50 @@
 #     - id: typed_arrays
 #     - id: array_prototype_flat
 
-- id: browser_apis
-  template: featurev3
-  slug: features
-  questions:
-    # removed in 2021
-    # - id: local_storage
-    # - id: webvr
-    # - id: fetch
+# - id: browser_apis
+#   template: featurev3
+#   slug: features
+#   questions:
+#     # removed in 2021
+#     # - id: local_storage
+#     # - id: webvr
+#     # - id: fetch
 
-    - id: service_workers
-    - id: intl
-    # - id: web_audio # removed in 2022, too niche?
-    - id: webgl
-    - id: web_animations
-    - id: webrtc
-    - id: web_speech
-    - id: websocket
-    - id: custom_elements
-    - id: shadow_dom
+#     - id: service_workers # in state of html
+#     - id: intl # in state of html
+#     # - id: web_audio # removed in 2022, too niche?
+#     - id: webgl
+#     - id: web_animations
+#     - id: webrtc
+#     - id: web_speech
+#     - id: websocket
+#     - id: custom_elements # in state of html
+#     - id: shadow_dom # in state of html
 
-    # new in 2021
-    - id: page_visibility
-      yearAdded: 2021
-    - id: broadcast_channel
-      yearAdded: 2021
-    - id: geolocation
-      yearAdded: 2021
-    - id: file_system_access
-      yearAdded: 2021
-    - id: web_share
-      yearAdded: 2021
-    - id: webxr
-      yearAdded: 2021
+#     # new in 2021
+#     - id: page_visibility
+#       yearAdded: 2021
+#     - id: broadcast_channel
+#       yearAdded: 2021
+#     - id: geolocation
+#       yearAdded: 2021
+#     - id: file_system_access  # in state of html
+#       yearAdded: 2021
+#     - id: web_share # in state of html
+#       yearAdded: 2021
+#     - id: webxr
+#       yearAdded: 2021
 
-    - id: temporal
-      yearAdded: 2022
+#     - id: temporal
+#       yearAdded: 2022
 
-    - id: pwa
-    - id: wasm
-    # - id: making_web_components
-    # - id: using_web_components
+#     - id: pwa
+#     - id: wasm
+#     # - id: making_web_components
+#     # - id: using_web_components
+
+#     - id: browser_apis_pain_points
+#       template: textList
 
 # - id: other_features
 #   template: feature
@@ -173,7 +229,6 @@
 #       template: projects
 #       sectionSlug: tools_others
 #     - id: javascript_flavors
-#       intlId: tools.happiness
 #       sectionSlug: happiness
 #       template: happiness
 
@@ -207,9 +262,12 @@
     - id: front_end_frameworks_others
       intlId: tools.other_tools
       template: projects
+
     - id: front_end_frameworks_happiness
-      intlId: tools.happiness
       template: happiness
+
+    - id: front_end_frameworks_pain_points
+      template: textList
 
 # removed in 2021
 # - id: datalayer
@@ -231,7 +289,6 @@
 #       template: projects
 #       sectionSlug: tools_others
 #     - id: datalayer
-#       intlId: tools.happiness
 #       template: happiness
 #       sectionSlug: happiness
 
@@ -260,12 +317,14 @@
     - id: fresh
       yearAdded: 2023
 
-    - id: rendering_frameworks_others
+    - id: meta_frameworks_others
       intlId: tools.other_tools
       template: projects
-    - id: rendering_frameworks_happiness
-      intlId: tools.happiness
+    - id: meta_frameworks_happiness
       template: happiness
+
+    - id: meta_frameworks_pain_points
+      template: textList
 
 # - id: back_end_frameworks
 #   template: tool
@@ -300,7 +359,6 @@
 #       template: projects
 #       sectionSlug: tools_others
 #     - id: back_end_frameworks
-#       intlId: tools.happiness
 #       template: happiness
 #       sectionSlug: happiness
 
@@ -328,8 +386,10 @@
       intlId: tools.other_tools
       template: projects
     - id: testing_happiness
-      intlId: tools.happiness
       template: happiness
+
+    - id: testing_pain_points
+      template: textList
 
 # under consideration for 2022?
 # - id: graphics_animation
@@ -362,7 +422,6 @@
 #       template: projects
 #       sectionSlug: tools_others
 #     - id: graphics_animation
-#       intlId: tools.happiness
 #       template: happiness
 #       sectionSlug: happiness
 
@@ -387,8 +446,10 @@
       intlId: tools.other_tools
       template: projects
     - id: mobile_desktop_happiness
-      intlId: tools.happiness
       template: happiness
+
+    - id: mobile_desktop_pain_points
+      template: textList
 
 - id: build_tools
   template: tool
@@ -400,7 +461,7 @@
     - id: rollup
     # - id: browserify # remove in 2023
     - id: tsc
-    # - id: rome
+    # - id: rome # removed in 2023
     # - id: snowpack
     - id: swc
     - id: esbuild
@@ -420,13 +481,17 @@
       yearAdded: 2023
     - id: tsup
       yearAdded: 2023
+    - id: biome
+      yearAdded: 2023
 
     - id: build_tools_others
       intlId: tools.other_tools
       template: projects
     - id: build_tools_happiness
-      intlId: tools.happiness
       template: happiness
+
+    - id: build_tools_pain_points
+      template: textList
 
 - id: monorepo_tools
   template: tool
@@ -454,8 +519,10 @@
       intlId: tools.other_tools
       template: projects
     - id: monorepo_tools_happiness
-      intlId: tools.happiness
       template: happiness
+
+    - id: monorepo_tools_pain_points
+      template: textList
 
 ######################################################
 #########             OTHER TOOLS            #########
@@ -475,6 +542,7 @@
         - id: rxjs
         - id: stdlib
         - id: zod
+        - id: core_js
           yearAdded: 2022
         - id: partytown
           yearAdded: 2022
@@ -665,6 +733,7 @@
         - id: jetbrains_ai
         - id: llama
         - id: claude
+        - id: v0
         - id: na
 
     - id: hosting
@@ -792,9 +861,6 @@
         - id: professionally
         - id: student
         - id: hobby
-    # - id: usage_type
-    #   matchTags: [usage_types]
-    #   template: others
 
     - id: what_do_you_use_js_for
       yearAdded: 2022
@@ -984,100 +1050,102 @@
 - id: resources
   slug: resources
   questions:
-    - id: first_steps
-      template: multipleWithOther
-      matchTags:
-        [
-          first_steps,
-          courses,
-          podcasts,
-          people,
-          youtube,
-          sites,
-          newsletters,
-          socialmedia,
-        ]
-      options:
-        - id: books
-        - id: videos
-        - id: courses_free
-        - id: courses_paid
-        - id: school
-        - id: podcasts
-        - id: bootcamp
-        - id: on_the_job
-        - id: mentoring
-        - id: self_directed
+    # - id: first_steps
+    #   template: multipleWithOther
+    #   matchTags:
+    #     [
+    #       first_steps,
+    #       courses,
+    #       podcasts,
+    #       people,
+    #       youtube,
+    #       sites,
+    #       newsletters,
+    #       socialmedia,
+    #     ]
+    #   options:
+    #     - id: books
+    #     - id: videos
+    #     - id: courses_free
+    #     - id: courses_paid
+    #     - id: school
+    #     - id: podcasts
+    #     - id: bootcamp
+    #     - id: on_the_job
+    #     - id: mentoring
+    #     - id: self_directed
 
-    - id: blogs_news_magazines
-      template: multipleWithOther
-      matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
-      options:
-        #  removed in 2021 (personal blogs)
-        # - id: david_walsh
-        # - id: overreacted
-        # - id: kentcdodds
+    # - id: blogs_news_magazines
+    #   template: multipleWithOther
+    #   matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
+    #   options:
+    #     #  removed in 2021 (personal blogs)
+    #     # - id: david_walsh
+    #     # - id: overreacted
+    #     # - id: kentcdodds
 
-        - id: medium
-        - id: devto
-        - id: css_tricks
-        - id: js_weekly
-        - id: smashing_magazine
-        - id: bestofjs
-        - id: node_weekly
-        - id: bytes
-        - id: codrops
-        - id: sitepoint
-        - id: frontend_dogma
-        - id: echo_js
-        - id: front_end_front
-        - id: frontend_horse
-        - id: frontend_focus
-        - id: alligator
-        - id: logrocket
-        - id: daily_js
-        - id: a_list_apart
-        - id: na
+    #     - id: medium
+    #     - id: devto
+    #     - id: css_tricks
+    #     - id: js_weekly
+    #     - id: smashing_magazine
+    #     - id: bestofjs
+    #     - id: node_weekly
+    #     - id: bytes
+    #     - id: codrops
+    #     - id: sitepoint
+    #     - id: frontend_dogma
+    #     - id: echo_js
+    #     - id: front_end_front
+    #     - id: frontend_horse
+    #     - id: frontend_focus
+    #     - id: alligator
+    #     - id: logrocket
+    #     - id: daily_js
+    #     - id: a_list_apart
+    #     - id: na
 
     - id: sites_courses
-      template: multipleWithOther
+      # template: multipleWithOther
+      template: textList
       matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
-      options:
-        - id: stack_overflow
-        - id: mdn
-        - id: w3schools
-        - id: udemy
-        - id: web_dev
-        - id: freecodecamp
-        - id: codecademy
-        - id: frontendmasters
-        - id: javascript_info
-        - id: kent_c_dodds
-        - id: scrimba
-        - id: egghead
-        - id: wes_bos
-        - id: pluralsight
-        - id: o_reilly
-        - id: zero_to_mastery
-        - id: josh_w_comeau
-        - id: vue_mastery
-        - id: coursera
-        - id: academind
-        - id: na
+      # options:
+      #   - id: stack_overflow
+      #   - id: mdn
+      #   - id: w3schools
+      #   - id: udemy
+      #   - id: web_dev
+      #   - id: freecodecamp
+      #   - id: codecademy
+      #   - id: frontendmasters
+      #   - id: javascript_info
+      #   - id: kent_c_dodds
+      #   - id: scrimba
+      #   - id: egghead
+      #   - id: wes_bos
+      #   - id: pluralsight
+      #   - id: o_reilly
+      #   - id: zero_to_mastery
+      #   - id: josh_w_comeau
+      #   - id: vue_mastery
+      #   - id: coursera
+      #   - id: academind
+      #   - id: na
 
-        # - id: platzi
-        # - id: skillshare
-        # - id: linkedin_learning
-        # - id: designcode
-        # - id: ui_dev
-        # - id: newline
-        # - id: epic_react
-        # - id: miguel_angel_duran
-        # - id: levelup
-        # - id: doka
+      # - id: platzi
+      # - id: skillshare
+      # - id: linkedin_learning
+      # - id: designcode
+      # - id: ui_dev
+      # - id: newline
+      # - id: epic_react
+      # - id: miguel_angel_duran
+      # - id: levelup
+      # - id: doka
 
     - id: video_creators
-      template: multipleWithOther
+      # template: multipleWithOther
+      template: textList
       matchTags:
         [
           video_creators,
@@ -1088,29 +1156,29 @@
           newsletters,
           socialmedia,
         ]
-      options:
-        - id: fireship
-        - id: kevin_j_powell
-        - id: web_dev_simplified # kyle cook https://www.youtube.com/c/WebDevSimplified/
-        - id: theo_browne
-        - id: brad_traversy
-        - id: kent_c_dodds
-        - id: ben_awad # https://www.youtube.com/channel/UC-8QAzbLcRglXeN_MY9blyw
-        - id: the_primeagen # https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg?app=desktop
-        - id: net_ninja # https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg?app=desktop
-        - id: programming_with_mosh # mosh_hamedani https://codewithmosh.com/ https://www.youtube.com/c/programmingwithmosh
-        - id: coding_train # Daniel Shiffman https://www.youtube.com/user/shiffman?app=desktop
-        - id: jack_herrington # https://www.youtube.com/@jherr
-        - id: midudev
-        - id: mayuko
-        - id: tina_huang
-        - id: james_q_quick
-        - id: hyperplexed
-        - id: na
-        # - id: fun_fun_function
-        # - id: jason_goodison # https://www.youtube.com/c/JasonGoodison/videos
-        # - id: clever_programmer # rafeh_qazi https://www.youtube.com/c/CleverProgrammer
-        # - id: coding_garden
+      # options:
+      #   - id: fireship
+      #   - id: kevin_j_powell
+      #   - id: web_dev_simplified # kyle cook https://www.youtube.com/c/WebDevSimplified/
+      #   - id: theo_browne
+      #   - id: brad_traversy
+      #   - id: kent_c_dodds
+      #   - id: ben_awad # https://www.youtube.com/channel/UC-8QAzbLcRglXeN_MY9blyw
+      #   - id: the_primeagen # https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg?app=desktop
+      #   - id: net_ninja # https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg?app=desktop
+      #   - id: programming_with_mosh # mosh_hamedani https://codewithmosh.com/ https://www.youtube.com/c/programmingwithmosh
+      #   - id: coding_train # Daniel Shiffman https://www.youtube.com/user/shiffman?app=desktop
+      #   - id: jack_herrington # https://www.youtube.com/@jherr
+      #   - id: midudev
+      #   - id: mayuko
+      #   - id: tina_huang
+      #   - id: james_q_quick
+      #   - id: hyperplexed
+      #   - id: na
+      # - id: fun_fun_function
+      # - id: jason_goodison # https://www.youtube.com/c/JasonGoodison/videos
+      # - id: clever_programmer # rafeh_qazi https://www.youtube.com/c/CleverProgrammer
+      # - id: coding_garden
 
     # - id: communities
     #   template: multipleWithOther
@@ -1119,42 +1187,43 @@
     #     - id: reactiflux
     #     - id: vercel
     #     - id: vite
-
     - id: podcasts
-      template: multipleWithOther
+      # template: multipleWithOther
+      template: textList
       matchTags: [podcasts, people, sites]
-      options:
-        - id: syntaxfm
-        - id: js_party
-        - id: http_203
-        - id: changelog
-        - id: javascript_jabber
-        - id: front_end_happy_hour
-        - id: full_stack_radio
-        - id: shop_talk_show
-        - id: react_podcast
-        - id: web_standards_ru
-        - id: css_podcast
-        - id: ladybug
-        - id: software_engineering_daily
-        - id: jamstack_radio
-        - id: podrocket
-        - id: svelte_radio
-        - id: na
-        # - id: big_web_show
-        # - id: web_platform_podcast
-        # - id: modern_web
-        # - id: codepen_radio
-        # - id: web_rush
-        # - id: frontend_weekend
-        # - id: frontend_first
-        # - id: a11y_rules
-        # - id: tools_day
-        # - id: the_bike_shed
-        # - id: undefined_podcast
+      # options:
+      #   - id: syntaxfm
+      #   - id: js_party
+      #   - id: http_203
+      #   - id: changelog
+      #   - id: javascript_jabber
+      #   - id: front_end_happy_hour
+      #   - id: full_stack_radio
+      #   - id: shop_talk_show
+      #   - id: react_podcast
+      #   - id: web_standards_ru
+      #   - id: css_podcast
+      #   - id: ladybug
+      #   - id: software_engineering_daily
+      #   - id: jamstack_radio
+      #   - id: podrocket
+      #   - id: svelte_radio
+      #   - id: na
+      # - id: big_web_show
+      # - id: web_platform_podcast
+      # - id: modern_web
+      # - id: codepen_radio
+      # - id: web_rush
+      # - id: frontend_weekend
+      # - id: frontend_first
+      # - id: a11y_rules
+      # - id: tools_day
+      # - id: the_bike_shed
+      # - id: undefined_podcast
 
     - id: people
-      template: multipleWithOther
+      template: textList
+      # template: multipleWithOther
       order: random
       matchtags:
         [
@@ -1166,58 +1235,58 @@
           newsletters,
           socialmedia,
         ]
-      options:
-        - id: dan_abramov
-        - id: rich_harris
-        - id: ryan_carniato
-        - id: evan_you
-        - id: josh_comeau
-        - id: kent_c_dodds
-        - id: anthony_fu
-        - id: miguel_angel_duran
-        - id: wes_bos
-        - id: jake_archibald
-        - id: matt_pocock
-        - id: theo_browne
-        - id: tanner_linsley
-        - id: ryan_florence
-        - id: the_primeagen
-        - id: maximilian_schwarzmuller
-        - id: sarah_drasner
-        - id: surma
-        - id: cassidy_williams
-        - id: sara_soueidan
-        - id: na
-        # - id: cassie_evans
-        # - id: adam_wathan
-        # - id: addy_osmani
-        # - id: alex_russel
-        # - id: axel_rauschmayer
-        # - id: ben_holmes
-        # - id: carlos_azaustre
-        # - id: chris_coyier
-        # - id: cory_house
-        # - id: eric_elliott
-        # - id: fernando_herrera
-        # - id: fireship
-        # - id: illya_klymov
-        # - id: jack_herrington
-        # - id: james_q_quick
-        # - id: jarred_sumner
-        # - id: jason_lengstorf
-        # - id: jason_miller
-        # - id: kevin_j_powell
-        # - id: kyle_simpson
-        # - id: lee_robinson
-        # - id: mark_erikson
-        # - id: martin_fowler
-        # - id: matteo_collina
-        # - id: minko_gechev
-        # - id: netanel_basal
-        # - id: scott_tolinski
-        # - id: una_kravets
-        # - id: vadim_makeev
-        # - id: zach_leatherman
+      # options:
+      #   - id: dan_abramov
+      #   - id: rich_harris
+      #   - id: ryan_carniato
+      #   - id: evan_you
+      #   - id: josh_comeau
+      #   - id: kent_c_dodds
+      #   - id: anthony_fu
+      #   - id: miguel_angel_duran
+      #   - id: wes_bos
+      #   - id: jake_archibald
+      #   - id: matt_pocock
+      #   - id: theo_browne
+      #   - id: tanner_linsley
+      #   - id: ryan_florence
+      #   - id: the_primeagen
+      #   - id: maximilian_schwarzmuller
+      #   - id: sarah_drasner
+      #   - id: surma
+      #   - id: cassidy_williams
+      #   - id: sara_soueidan
+      #   - id: na
+      # - id: cassie_evans
+      # - id: adam_wathan
+      # - id: addy_osmani
+      # - id: alex_russel
+      # - id: axel_rauschmayer
+      # - id: ben_holmes
+      # - id: carlos_azaustre
+      # - id: chris_coyier
+      # - id: cory_house
+      # - id: eric_elliott
+      # - id: fernando_herrera
+      # - id: fireship
+      # - id: illya_klymov
+      # - id: jack_herrington
+      # - id: james_q_quick
+      # - id: jarred_sumner
+      # - id: jason_lengstorf
+      # - id: jason_miller
+      # - id: kevin_j_powell
+      # - id: kyle_simpson
+      # - id: lee_robinson
+      # - id: mark_erikson
+      # - id: martin_fowler
+      # - id: matteo_collina
+      # - id: minko_gechev
+      # - id: netanel_basal
+      # - id: scott_tolinski
+      # - id: una_kravets
+      # - id: vadim_makeev
+      # - id: zach_leatherman
 
     - id: other_surveys
       template: multipleWithOther
@@ -1245,13 +1314,13 @@
       template: age_number
 
     - id: years_of_experience
-      template: years_of_experience
+      template: years
 
     - id: company_size
       template: company_size
 
     - id: yearly_salary
-      template: yearly_salary
+      template: yearly_salary_v2
 
     - id: higher_education_degree
       template: higher_education_degree
@@ -1272,7 +1341,7 @@
       template: text
 
     - id: how_can_we_improve
-      template: longtext
+      template: textList
 
     - id: receive_notifications
       template: receive_notifications
