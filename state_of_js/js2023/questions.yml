@@ -370,8 +370,8 @@
     - id: mocha
     - id: storybook
     - id: cypress
-    - id: ava
-    - id: jasmine
+    # - id: ava # removed in 2023
+    # - id: jasmine # removed in 2023
     - id: puppeteer
     - id: testing_library
     - id: playwright
@@ -382,6 +382,8 @@
       yearAdded: 2022
     - id: testcafe
       yearAdded: 2022
+    - id: mock_service_worker
+      yearAdded: 2023
     - id: testing_others
       intlId: tools.other_tools
       template: projects
@@ -477,8 +479,8 @@
       yearAdded: 2022
 
     # new in 2023
-    - id: bun
-      yearAdded: 2023
+    # - id: bun
+    #   yearAdded: 2023
     - id: tsup
       yearAdded: 2023
     - id: biome
@@ -673,20 +675,20 @@
         - id: digital_ocean_functions
         - id: azure_functions
 
-    - id: javascript_flavors
-      yearAdded: 2021
-      template: multipleWithOtherSentiment
-      matchTags: [javascript_flavors, libraries]
-      options:
-        - id: typescript
-        - id: reason
-        - id: flow
-        - id: elm
-        - id: clojurescript
-        - id: purescript
-        - id: coffeescript
-        - id: rescript
-        - id: imba
+    # - id: javascript_flavors
+    #   yearAdded: 2021
+    #   template: multipleWithOtherSentiment
+    #   matchTags: [javascript_flavors, libraries]
+    #   options:
+    #     - id: typescript
+    #     - id: reason
+    #     - id: flow
+    #     - id: elm
+    #     - id: clojurescript
+    #     - id: purescript
+    #     - id: coffeescript
+    #     - id: rescript
+    #     - id: imba
 
     - id: non_js_languages
       template: multipleWithOtherSentiment
@@ -695,7 +697,7 @@
         - id: php
         - id: ruby
         - id: python
-        - id: go
+        - id: golang
         - id: rust
         - id: java
         - id: c_cplusplus
@@ -883,31 +885,31 @@
       template: multipleWithOther
       matchTags: [industry_sectors]
       options:
-        - id: agriculture
-        - id: automotive
-        - id: construction
-        - id: consulting
+        # - id: agriculture
+        # - id: automotive
+        # - id: construction
+        - id: consulting #
         - id: cyber_security
-        - id: ecommerce
-        - id: education
-        - id: energy
-        - id: entertainment
-        - id: finance
-        - id: government
-        - id: healthcare
-        - id: hospitality
-        - id: insurance
-        - id: logistics
-        - id: manufacturing
-        - id: marketing_tools
-        - id: news_media
-        - id: programming_tools
-        - id: real_estate
-        - id: socialmedia
-        - id: student
-        - id: telecommunications
-        - id: transport
-        - id: travel
+        - id: ecommerce #
+        - id: education #
+        # - id: energy
+        - id: entertainment #
+        - id: finance #
+        - id: government #
+        - id: healthcare #
+        # - id: hospitality
+        # - id: insurance
+        # - id: logistics
+        # - id: manufacturing
+        - id: marketing_tools #
+        - id: news_media #
+        - id: programming_tools #
+        # - id: real_estate
+        - id: socialmedia #
+        # - id: student
+        # - id: telecommunications
+        # - id: transport
+        # - id: travel
 
     - id: js_app_patterns
       yearAdded: 2022
@@ -1105,7 +1107,7 @@
     #     - id: a_list_apart
     #     - id: na
 
-    - id: sites_courses
+    - id: paid_courses
       # template: multipleWithOther
       template: textList
       matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
@@ -1142,6 +1144,40 @@
       # - id: miguel_angel_duran
       # - id: levelup
       # - id: doka
+
+    - id: podcasts
+      # template: multipleWithOther
+      template: textList
+      matchTags: [podcasts, people, sites]
+      # options:
+      #   - id: syntaxfm
+      #   - id: js_party
+      #   - id: http_203
+      #   - id: changelog
+      #   - id: javascript_jabber
+      #   - id: front_end_happy_hour
+      #   - id: full_stack_radio
+      #   - id: shop_talk_show
+      #   - id: react_podcast
+      #   - id: web_standards_ru
+      #   - id: css_podcast
+      #   - id: ladybug
+      #   - id: software_engineering_daily
+      #   - id: jamstack_radio
+      #   - id: podrocket
+      #   - id: svelte_radio
+      #   - id: na
+      # - id: big_web_show
+      # - id: web_platform_podcast
+      # - id: modern_web
+      # - id: codepen_radio
+      # - id: web_rush
+      # - id: frontend_weekend
+      # - id: frontend_first
+      # - id: a11y_rules
+      # - id: tools_day
+      # - id: the_bike_shed
+      # - id: undefined_podcast
 
     - id: video_creators
       # template: multipleWithOther
@@ -1187,40 +1223,6 @@
     #     - id: reactiflux
     #     - id: vercel
     #     - id: vite
-    - id: podcasts
-      # template: multipleWithOther
-      template: textList
-      matchTags: [podcasts, people, sites]
-      # options:
-      #   - id: syntaxfm
-      #   - id: js_party
-      #   - id: http_203
-      #   - id: changelog
-      #   - id: javascript_jabber
-      #   - id: front_end_happy_hour
-      #   - id: full_stack_radio
-      #   - id: shop_talk_show
-      #   - id: react_podcast
-      #   - id: web_standards_ru
-      #   - id: css_podcast
-      #   - id: ladybug
-      #   - id: software_engineering_daily
-      #   - id: jamstack_radio
-      #   - id: podrocket
-      #   - id: svelte_radio
-      #   - id: na
-      # - id: big_web_show
-      # - id: web_platform_podcast
-      # - id: modern_web
-      # - id: codepen_radio
-      # - id: web_rush
-      # - id: frontend_weekend
-      # - id: frontend_first
-      # - id: a11y_rules
-      # - id: tools_day
-      # - id: the_bike_shed
-      # - id: undefined_podcast
-
     - id: people
       template: textList
       # template: multipleWithOther
@@ -1301,7 +1303,7 @@
         - id: codingame_survey
         - id: uxtools_survey
         - id: postman_survey
-        - id: jamstack_survey
+        - id: netlify_survey
 
 ######################################################
 #########            DEMOGRAPHICS            #########
