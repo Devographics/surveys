@@ -1,37 +1,36 @@
 query js2022buildToolsExperienceLinechartQuery {
-        surveys {
-        state_of_js {
-            js2022 {
-                build_tools {
-                    build_tools_experience_linechart: build_tools_ratios {
-                        years
-                        items<ARGUMENTS_PLACEHOLDER> {
-                            id
-                            usage {
-                                year
-                                rank
-                                percentageQuestion
-                            }
-                            awareness {
-                                year
-                                rank
-                                percentageQuestion
-                            }
-                            interest {
-                                year
-                                rank
-                                percentageQuestion
-                            }
-                            satisfaction {
-                                year
-                                rank
-                                percentageQuestion
-                            }
-                        }
-                    }
-                }
+  surveys {
+    state_of_js {
+      js2022 {
+        build_tools {
+          build_tools_experience_linechart: build_tools_ratios {
+            years
+            items {
+              id
+              usage {
+                year
+                rank
+                percentageQuestion
+              }
+              awareness {
+                year
+                rank
+                percentageQuestion
+              }
+              interest {
+                year
+                rank
+                percentageQuestion
+              }
+              satisfaction {
+                year
+                rank
+                percentageQuestion
+              }
             }
+          }
         }
+      }
     }
-
+  }
 }

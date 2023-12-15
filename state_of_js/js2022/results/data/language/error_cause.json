@@ -5,6 +5,20 @@
         "js2022": {
           "language": {
             "error_cause": {
+              "entity": {
+                "name": "`error.cause`",
+                "nameHtml": "<code>error.cause</code>",
+                "nameClean": "error.cause",
+                "id": "error_cause",
+                "example": {
+                  "language": "js",
+                  "code": "try {\n  connectToDatabase();\n} catch (err) {\n  throw new Error('Connecting to database failed.', { cause: err });\n}\n",
+                  "codeHighlighted": "<span class=\"hljs-keyword\">try</span> {\n  <span class=\"hljs-title function_\">connectToDatabase</span>();\n} <span class=\"hljs-keyword\">catch</span> (err) {\n  <span class=\"hljs-keyword\">throw</span> <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Error</span>(<span class=\"hljs-string\">&#x27;Connecting to database failed.&#x27;</span>, { <span class=\"hljs-attr\">cause</span>: err });\n}"
+                },
+                "mdn": {
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause"
+                }
+              },
               "comments": {
                 "currentEdition": {
                   "count": 21

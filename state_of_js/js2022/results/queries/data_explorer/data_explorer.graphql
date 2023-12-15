@@ -1,30 +1,29 @@
 query js2022dataExplorerQuery {
-        surveys {
-        state_of_js {
-            js2022 {
-                data_explorer {
-                    data_explorer {
-                        items(parameters: {showNoAnswer:true}, axis1: user_info__years_of_experience, axis2: user_info__yearly_salary) {
-                            editionId
-                            year
-                            buckets {
-                                count
-                                id
-                                facetBuckets {
-                                    count
-                                    id
-                                    percentageBucket
-                                    percentageQuestion
-                                    percentageSurvey
-                                }
-                                percentageQuestion
-                                percentageSurvey
-                            }
-                        }
-                    }
+  surveys {
+    state_of_js {
+      js2022 {
+        user_info: data_explorer {
+          data_explorer {
+            items {
+              editionId
+              year
+              buckets {
+                count
+                id
+                facetBuckets {
+                  count
+                  id
+                  percentageBucket
+                  percentageQuestion
+                  percentageSurvey
                 }
+                percentageQuestion
+                percentageSurvey
+              }
             }
+          }
         }
+      }
     }
-
+  }
 }

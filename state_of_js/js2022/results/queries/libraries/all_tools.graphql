@@ -1,31 +1,30 @@
 query js2022allToolsQuery {
-        surveys {
-        state_of_js {
-            js2022 {
-                libraries {
-                    all_tools {
-                        items {
-                            id
-                            responses<ARGUMENTS_PLACEHOLDER> {
-                                currentEdition {
-                                    buckets {
-                                        id
-                                        percentageQuestion
-                                        percentageSurvey
-                                        count
-                                    }
-                                    completion {
-                                        count
-                                        percentageSurvey
-                                        total
-                                    }
-                                }
-                            }
-                        }
-                    }
+  surveys {
+    state_of_js {
+      js2022 {
+        libraries {
+          all_tools {
+            items {
+              id
+              responses {
+                currentEdition {
+                  buckets {
+                    id
+                    percentageQuestion
+                    percentageSurvey
+                    count
+                  }
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
                 }
+              }
             }
+          }
         }
+      }
     }
-
+  }
 }

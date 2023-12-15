@@ -1,33 +1,32 @@
 query js2022testingExperienceMarimekkoQuery {
-        surveys {
-        state_of_js {
-            js2022 {
-                testing {
-                    testing_experience_marimekko: testing_tools {
-                        items {
-                            id
-                            responses<ARGUMENTS_PLACEHOLDER> {
-                                currentEdition {
-                                    editionId
-                                    year
-                                    buckets {
-                                        id
-                                        percentageQuestion
-                                        percentageSurvey
-                                        count
-                                    }
-                                    completion {
-                                        count
-                                        percentageSurvey
-                                        total
-                                    }
-                                }
-                            }
-                        }
-                    }
+  surveys {
+    state_of_js {
+      js2022 {
+        testing {
+          testing_experience_marimekko: testing_tools {
+            items {
+              id
+              responses {
+                currentEdition {
+                  editionId
+                  year
+                  buckets {
+                    id
+                    percentageQuestion
+                    percentageSurvey
+                    count
+                  }
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
                 }
+              }
             }
+          }
         }
+      }
     }
-
+  }
 }

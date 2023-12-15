@@ -134,9 +134,16 @@
 
     - id: language_pain_points
       template: textList
+      matchTags:
+        - pain_points
+        - js_pain_points
 
     - id: browser_apis_pain_points
       template: textList
+      matchTags:
+        - pain_points
+        - js_pain_points
+        - features
 
     # new in 2023
     # - id: array_to_sorted
@@ -273,6 +280,9 @@
 
     - id: front_end_frameworks_pain_points
       template: textList
+      matchTags:
+        - pain_points
+        - libraries
 
 # removed in 2021
 # - id: datalayer
@@ -330,6 +340,9 @@
 
     - id: meta_frameworks_pain_points
       template: textList
+      matchTags:
+        - pain_points
+        - libraries
 
 # - id: back_end_frameworks
 #   template: tool
@@ -397,6 +410,9 @@
 
     - id: testing_pain_points
       template: textList
+      matchTags:
+        - pain_points
+        - libraries
 
 # under consideration for 2022?
 # - id: graphics_animation
@@ -457,6 +473,9 @@
 
     - id: mobile_desktop_pain_points
       template: textList
+      matchTags:
+        - pain_points
+        - libraries
 
 - id: build_tools
   template: tool
@@ -499,6 +518,9 @@
 
     - id: build_tools_pain_points
       template: textList
+      matchTags:
+        - pain_points
+        - libraries
 
 - id: monorepo_tools
   template: tool
@@ -530,6 +552,9 @@
 
     - id: monorepo_tools_pain_points
       template: textList
+      matchTags:
+        - pain_points
+        - libraries
 
 ######################################################
 #########             OTHER TOOLS            #########
@@ -584,6 +609,8 @@
       template: multipleWithOtherSentiment
       # allowPrenormalized: true
       order: random
+      matchTags:
+        - libraries
       options:
         - id: three_js
         - id: theatre_js
@@ -613,6 +640,9 @@
       yearAdded: 2022
       template: multipleWithOtherSentiment
       # allowPrenormalized: true
+      matchTags:
+        - libraries
+        - runtimes
       options:
         - id: express
         - id: nest
@@ -724,7 +754,6 @@
         - id: clojure
         - id: elm
         - id: julia
-        - id: csharp
         - id: na
 
     - id: ai_tools
@@ -751,6 +780,8 @@
 
     - id: hosting
       template: multipleWithOtherSentiment
+      matchTags:
+        - services
       options:
         - id: aws
         - id: azure
@@ -948,7 +979,7 @@
       # template: top_n
       template: multipleWithOther
       limit: 3
-      matchTags: [js_pain_points]
+      matchTags: [js_pain_points, pain_points]
       options:
         - id: state_management
         - id: architecture
@@ -1197,16 +1228,7 @@
     - id: video_creators
       # template: multipleWithOther
       template: textList
-      matchTags:
-        [
-          video_creators,
-          youtube,
-          courses,
-          people,
-          sites,
-          newsletters,
-          socialmedia,
-        ]
+      matchTags: [video_creators, youtube, courses, people, sites, newsletters]
       # options:
       #   - id: fireship
       #   - id: kevin_j_powell
@@ -1242,16 +1264,8 @@
       template: textList
       # template: multipleWithOther
       order: random
-      matchtags:
-        [
-          video_creators,
-          youtube,
-          courses,
-          people,
-          sites,
-          newsletters,
-          socialmedia,
-        ]
+      matchTags: [video_creators, youtube, courses, people, sites, newsletters]
+
       # options:
       #   - id: dan_abramov
       #   - id: rich_harris
@@ -1356,6 +1370,20 @@
 
     - id: how_did_user_find_out_about_the_survey
       template: text
+      matchType: single
+      matchTags:
+        [
+          people,
+          sites,
+          newsletters,
+          video_creators,
+          podcasts,
+          surveys,
+          events,
+          sources_state_of_html,
+          socialmedia,
+          sources,
+        ]
 
     - id: how_can_we_improve
       template: textList

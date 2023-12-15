@@ -1,60 +1,71 @@
 query js2022monorepoToolsOthersQuery {
-    
-    surveys {
-      state_of_js {
-        js2022 {
-          monorepo_tools {
-            monorepo_tools_others {
-          
-          
-              prenormalized(parameters: {limit:5}) {
-                currentEdition {
-              
-                  completion {
-                    count
-                    percentageSurvey
-                    total
-                  }
-                  buckets {
-                    count
+  surveys {
+    state_of_js {
+      js2022 {
+        monorepo_tools {
+          monorepo_tools_others {
+            prenormalized(parameters: { limit: 5 }) {
+              currentEdition {
+                completion {
+                  count
+                  percentageSurvey
+                  total
+                }
+                buckets {
+                  count
+                  id
+                  percentageQuestion
+                  percentageSurvey
+                  isFreeformData
+                  hasInsufficientData
+                  entity {
+                    name
+                    nameHtml
+                    nameClean
                     id
-                    percentageQuestion
-                    percentageSurvey
-                    entity {
-        name
-        nameHtml
-        nameClean
-        id
-        homepage {
-          url
-        }
-        youtube {
-          url
-        }
-        twitter {
-          url
-        }
-        twitch {
-          url
-        }
-        rss {
-          url
-        }
-        blog { 
-            url
-        }
-        mastodon {
-            url
-        }
-        github {
-            url
-        }
-        npm {
-            url
-        }
-    }
-                
-                
+                    example {
+                      label
+                      language
+                      code
+                      codeHighlighted
+                    }
+                    homepage {
+                      url
+                    }
+                    youtube {
+                      url
+                    }
+                    twitter {
+                      url
+                    }
+                    twitch {
+                      url
+                    }
+                    rss {
+                      url
+                    }
+                    blog {
+                      url
+                    }
+                    mastodon {
+                      url
+                    }
+                    github {
+                      url
+                    }
+                    npm {
+                      url
+                    }
+                    mdn {
+                      url
+                    }
+                    caniuse {
+                      url
+                    }
+                    resources {
+                      url
+                      title
+                    }
                   }
                 }
               }
@@ -63,5 +74,5 @@ query js2022monorepoToolsOthersQuery {
         }
       }
     }
-
+  }
 }
