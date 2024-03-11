@@ -1,0 +1,33 @@
+query html2023readingListQuery {
+  surveys {
+    state_of_html {
+      html2023 {
+        # hack to make this work when appearing in features section
+        features: reading_list {
+          reading_list {
+            responses {
+              currentEdition {
+                buckets {
+                  id
+                  count
+                  entity {
+                    name
+                    nameClean
+                    nameHtml
+                    mdn {
+                      url
+                    }
+                    resources {
+                      url
+                      title
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -57,7 +57,7 @@
         - id: na
 
     - id: forms_pain_points
-      matchTags: [pain_points, features_html]
+      matchTags: [common_pain_points, features_html]
       template: textList
 
 - id: interactivity
@@ -120,7 +120,7 @@
         - id: na
 
     - id: interactivity_pain_points
-      matchTags: [pain_points, features_html]
+      matchTags: [common_pain_points, features_html]
       template: textList
 
 - id: content
@@ -269,11 +269,11 @@
         - id: na
 
     - id: using_web_components_pain_points
-      matchTags: [pain_points, features_html]
+      matchTags: [common_pain_points, features_html]
       template: textList
 
     - id: making_web_components_pain_points
-      matchTags: [pain_points, features_html]
+      matchTags: [common_pain_points, features_html]
       template: textList
 
 - id: accessibility
@@ -344,7 +344,8 @@
         - id: na
 
     - id: accessibility_pain_points
-      matchTags: [pain_points, features_html]
+      matchTags: [common_pain_points, features_html]
+      disallowedTokenIds: [accessibility]
       template: textList
 
 - id: mobile_web_apps
@@ -420,7 +421,7 @@
         - id: na
 
     - id: mobile_web_apps_pain_points
-      matchTags: [pain_points, features_html]
+      matchTags: [common_pain_points, features_html]
       template: textList
 
 - id: other_tools
@@ -491,11 +492,13 @@
 - id: usage
   questions:
     - id: html_interoperability_features
-      matchTags: [pain_points, features_html]
+      matchTags:
+        [features_html, features_js, features_css, html_missing_features]
       template: textList
 
     - id: html_functionality_features
-      matchTags: [pain_points, features_html]
+      matchTags:
+        [features_html, features_js, features_css, html_missing_features]
       template: textList
 
     - id: html_missing_elements
@@ -503,7 +506,8 @@
       template: multipleWithOther
       allowComment: true
       order: random
-      matchTags: [features_html]
+      matchTags:
+        [features_html, features_js, features_css, html_missing_features]
       options:
         - id: accordion
         # - id: alert
@@ -566,7 +570,7 @@
 
     - id: what_do_you_use_html_for
       template: multipleWithOther
-      matchTags: [css_uses]
+      matchTags: [use_cases]
       order: alphabetical
       allowComment: true
       options:

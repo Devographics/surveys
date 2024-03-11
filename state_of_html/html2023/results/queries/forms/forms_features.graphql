@@ -1,0 +1,35 @@
+query html2023formsFeaturesQuery {
+  surveys {
+    state_of_html {
+      html2023 {
+        forms {
+          forms_features: _forms_items {
+            items {
+              id
+              entity {
+                id
+              }
+              responses(facet: _sentiment) {
+                currentEdition {
+                  buckets {
+                    count
+                    id
+                    facetBuckets {
+                      count
+                      id
+                      percentageBucket
+                      percentageQuestion
+                      percentageSurvey
+                    }
+                    percentageQuestion
+                    percentageSurvey
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
