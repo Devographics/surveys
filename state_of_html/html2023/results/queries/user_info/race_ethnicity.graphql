@@ -4,7 +4,7 @@ query html2023raceEthnicityQuery {
       html2023 {
         user_info {
           race_ethnicity {
-            combined(parameters: { showNoAnswer: true }) {
+            combined(parameters: { showNoAnswer: true, cutoffPercent: 1 }) {
               currentEdition {
                 completion {
                   count
@@ -23,11 +23,15 @@ query html2023raceEthnicityQuery {
                     nameHtml
                     nameClean
                     id
+                    type
                     example {
                       label
                       language
                       code
                       codeHighlighted
+                    }
+                    avatar {
+                      url
                     }
                     homepage {
                       url
@@ -66,10 +70,6 @@ query html2023raceEthnicityQuery {
                       url
                       title
                     }
-                  }
-                  token {
-                    id
-                    parentId
                   }
                 }
               }

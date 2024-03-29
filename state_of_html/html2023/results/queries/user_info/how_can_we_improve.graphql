@@ -4,7 +4,7 @@ query html2023howCanWeImproveQuery {
       html2023 {
         user_info {
           how_can_we_improve {
-            freeform {
+            freeform(parameters: { cutoff: 10 }) {
               currentEdition {
                 completion {
                   count
@@ -23,11 +23,15 @@ query html2023howCanWeImproveQuery {
                     nameHtml
                     nameClean
                     id
+                    type
                     example {
                       label
                       language
                       code
                       codeHighlighted
+                    }
+                    avatar {
+                      url
                     }
                     homepage {
                       url
@@ -67,9 +71,66 @@ query html2023howCanWeImproveQuery {
                       title
                     }
                   }
-                  token {
+                  groupedBuckets {
+                    count
                     id
-                    parentId
+                    percentageQuestion
+                    percentageSurvey
+                    isFreeformData
+                    hasInsufficientData
+                    entity {
+                      name
+                      nameHtml
+                      nameClean
+                      id
+                      type
+                      example {
+                        label
+                        language
+                        code
+                        codeHighlighted
+                      }
+                      avatar {
+                        url
+                      }
+                      homepage {
+                        url
+                      }
+                      youtube {
+                        url
+                      }
+                      twitter {
+                        url
+                      }
+                      twitch {
+                        url
+                      }
+                      rss {
+                        url
+                      }
+                      blog {
+                        url
+                      }
+                      mastodon {
+                        url
+                      }
+                      github {
+                        url
+                      }
+                      npm {
+                        url
+                      }
+                      mdn {
+                        url
+                      }
+                      caniuse {
+                        url
+                      }
+                      resources {
+                        url
+                        title
+                      }
+                    }
                   }
                 }
               }

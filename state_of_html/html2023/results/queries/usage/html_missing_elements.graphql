@@ -4,7 +4,7 @@ query html2023htmlMissingElementsQuery {
       html2023 {
         usage {
           html_missing_elements {
-            combined(parameters: { showNoAnswer: true }) {
+            combined(parameters: { showNoAnswer: true, cutoffPercent: 1 }) {
               currentEdition {
                 completion {
                   count
@@ -23,11 +23,15 @@ query html2023htmlMissingElementsQuery {
                     nameHtml
                     nameClean
                     id
+                    type
                     example {
                       label
                       language
                       code
                       codeHighlighted
+                    }
+                    avatar {
+                      url
                     }
                     homepage {
                       url
@@ -66,10 +70,6 @@ query html2023htmlMissingElementsQuery {
                       url
                       title
                     }
-                  }
-                  token {
-                    id
-                    parentId
                   }
                 }
               }

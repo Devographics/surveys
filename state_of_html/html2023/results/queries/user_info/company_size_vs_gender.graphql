@@ -1,10 +1,16 @@
-query html2023knowledgeScoreQuery {
+query html2023companySizeVsGenderQuery {
   surveys {
     state_of_html {
       html2023 {
-        features {
-          knowledge_score {
-            responses(parameters: { showNoAnswer: true }) {
+        user_info {
+          company_size_vs_gender: company_size {
+            responses(
+              facet: user_info__gender
+              parameters: {
+                enableCache: false
+                showNoAnswer: true
+              }
+            ) {
               currentEdition {
                 completion {
                   count
@@ -23,11 +29,15 @@ query html2023knowledgeScoreQuery {
                     nameHtml
                     nameClean
                     id
+                    type
                     example {
                       label
                       language
                       code
                       codeHighlighted
+                    }
+                    avatar {
+                      url
                     }
                     homepage {
                       url
@@ -67,9 +77,23 @@ query html2023knowledgeScoreQuery {
                       title
                     }
                   }
-                  token {
+                  averageByFacet
+                  percentilesByFacet {
+                    p0
+                    p10
+                    p25
+                    p50
+                    p75
+                    p90
+                    p100
+                  }
+                  facetBuckets {
                     id
-                    parentId
+                    count
+                    percentageQuestion
+                    percentageSurvey
+                    percentageBucket
+                    hasInsufficientData
                   }
                 }
               }

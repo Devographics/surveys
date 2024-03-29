@@ -4,7 +4,13 @@ query html2023otherSurveysQuery {
       html2023 {
         user_info {
           other_surveys {
-            combined(parameters: { showNoAnswer: true }) {
+            combined(
+              parameters: {
+                showNoAnswer: true
+                cutoffPercent: 1
+                cutoff: 20
+              }
+            ) {
               currentEdition {
                 completion {
                   count
@@ -23,11 +29,15 @@ query html2023otherSurveysQuery {
                     nameHtml
                     nameClean
                     id
+                    type
                     example {
                       label
                       language
                       code
                       codeHighlighted
+                    }
+                    avatar {
+                      url
                     }
                     homepage {
                       url
@@ -66,10 +76,6 @@ query html2023otherSurveysQuery {
                       url
                       title
                     }
-                  }
-                  token {
-                    id
-                    parentId
                   }
                 }
               }

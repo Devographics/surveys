@@ -1,10 +1,16 @@
-query html2023completionStatsQuery {
+query html2023companySizeVsYearlySalaryQuery {
   surveys {
     state_of_html {
       html2023 {
         user_info {
-          completion_stats {
-            responses(parameters: { showNoAnswer: true }) {
+          company_size_vs_yearly_salary: company_size {
+            responses(
+              facet: user_info__yearly_salary
+              parameters: {
+                enableCache: false
+                showNoAnswer: true
+              }
+            ) {
               currentEdition {
                 completion {
                   count
@@ -70,6 +76,24 @@ query html2023completionStatsQuery {
                       url
                       title
                     }
+                  }
+                  averageByFacet
+                  percentilesByFacet {
+                    p0
+                    p10
+                    p25
+                    p50
+                    p75
+                    p90
+                    p100
+                  }
+                  facetBuckets {
+                    id
+                    count
+                    percentageQuestion
+                    percentageSurvey
+                    percentageBucket
+                    hasInsufficientData
                   }
                 }
               }
