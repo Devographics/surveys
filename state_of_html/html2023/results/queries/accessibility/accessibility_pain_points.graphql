@@ -4,7 +4,7 @@ query html2023accessibilityPainPointsQuery {
       html2023 {
         accessibility {
           accessibility_pain_points {
-            freeform(parameters: { cutoff: 10, showNoAnswer: true }) {
+            freeform(parameters: { cutoff: 10 }) {
               currentEdition {
                 completion {
                   count
@@ -22,6 +22,9 @@ query html2023accessibilityPainPointsQuery {
                     name
                     nameHtml
                     nameClean
+                    description
+                    descriptionHtml
+                    descriptionClean
                     id
                     type
                     example {
@@ -82,6 +85,9 @@ query html2023accessibilityPainPointsQuery {
                       name
                       nameHtml
                       nameClean
+                      description
+                      descriptionHtml
+                      descriptionClean
                       id
                       type
                       example {

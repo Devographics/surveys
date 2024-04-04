@@ -1,0 +1,65 @@
+query html2023interactivityFeaturesQuery {
+  surveys {
+    state_of_html {
+      html2023 {
+        interactivity {
+          interactivity_features: _interactivity_items {
+            items {
+              id
+              entity {
+                name
+                nameClean
+                nameHtml
+                type
+                description
+                descriptionClean
+                descriptionHtml
+                homepage {
+                  url
+                }
+                caniuse {
+                  name
+                  url
+                }
+                mdn {
+                  locale
+                  url
+                  title
+                  summary
+                }
+                example {
+                  label
+                  language
+                  code
+                  codeHighlighted
+                }
+              }
+              responses(facet: _sentiment) {
+                currentEdition {
+                  buckets {
+                    count
+                    id
+                    facetBuckets {
+                      count
+                      id
+                      percentageBucket
+                      percentageQuestion
+                      percentageSurvey
+                    }
+                    percentageQuestion
+                    percentageSurvey
+                  }
+                  completion {
+                    count
+                    percentageSurvey
+                    total
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -8,6 +8,25 @@
               "items": [
                 {
                   "id": "filesystem_access",
+                  "entity": {
+                    "name": "File System Access API",
+                    "nameClean": "File System Access API",
+                    "type": "feature",
+                    "description": "Access files and directories on the user's local device.",
+                    "descriptionClean": "Access files and directories on the user's local device.",
+                    "descriptionHtml": "Access files and directories on the user's local device.",
+                    "mdn": {
+                      "locale": "en-US",
+                      "url": "https://developer.mozilla.org/en-US/docs/Web/API/File_System_API",
+                      "title": "File System API",
+                      "summary": "The File System API — with extensions provided via the File System Access API to access files on the device file system — allows read, write and file management capabilities."
+                    },
+                    "example": {
+                      "language": "js",
+                      "code": "const handle = await window.showSaveFilePicker(opts);",
+                      "codeHighlighted": "<span class=\"hljs-keyword\">const</span> handle = <span class=\"hljs-keyword\">await</span> <span class=\"hljs-variable language_\">window</span>.<span class=\"hljs-title function_\">showSaveFilePicker</span>(opts);"
+                    }
+                  },
                   "responses": {
                     "currentEdition": {
                       "buckets": [
@@ -109,6 +128,24 @@
                 },
                 {
                   "id": "badging_api",
+                  "entity": {
+                    "name": "Badging API",
+                    "nameClean": "Badging API",
+                    "type": "feature",
+                    "description": "Set a badge on the web application’s icon to notify about updated state in a less intrusive, persistent way.",
+                    "descriptionClean": "Set a badge on the web application’s icon to notify about updated state in a less intrusive, persistent way.",
+                    "mdn": {
+                      "locale": "en-US",
+                      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Badging_API",
+                      "title": "Badging API",
+                      "summary": "The Badging API gives web developers a method of setting a badge on a document or application, to act as a notification that state has changed without displaying a more distracting notification. A common use case for this would be an application with a messaging feature displaying a badge on the app icon to show that new messages have arrived."
+                    },
+                    "example": {
+                      "language": "js",
+                      "code": "navigator.setAppBadge(unreadCount)",
+                      "codeHighlighted": "navigator.<span class=\"hljs-title function_\">setAppBadge</span>(unreadCount)"
+                    }
+                  },
                   "responses": {
                     "currentEdition": {
                       "buckets": [
@@ -210,6 +247,28 @@
                 },
                 {
                   "id": "web_share_api",
+                  "entity": {
+                    "name": "Web Share API",
+                    "nameClean": "Web Share API",
+                    "type": "feature",
+                    "description": "Exposes a mechanism for sharing content to various user-selected targets.",
+                    "descriptionClean": "Exposes a mechanism for sharing content to various user-selected targets.",
+                    "caniuse": {
+                      "name": "web-share",
+                      "url": "https://caniuse.com/web-share"
+                    },
+                    "mdn": {
+                      "locale": "en-US",
+                      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API",
+                      "title": "Web Share API",
+                      "summary": "The Web Share API provides a mechanism for sharing text, links, files, and other content to an arbitrary share target selected by the user."
+                    },
+                    "example": {
+                      "language": "js",
+                      "code": "navigator.share(shareData)",
+                      "codeHighlighted": "navigator.<span class=\"hljs-title function_\">share</span>(shareData)"
+                    }
+                  },
                   "responses": {
                     "currentEdition": {
                       "buckets": [
@@ -311,6 +370,25 @@
                 },
                 {
                   "id": "launch_handler_api",
+                  "entity": {
+                    "name": "Launch Handler API",
+                    "nameClean": "Launch Handler API",
+                    "type": "feature",
+                    "description": "Allows PWAs to control how they are launched, e.g. in a new window or tab.",
+                    "descriptionClean": "Allows PWAs to control how they are launched, e.g. in a new window or tab.",
+                    "mdn": {
+                      "locale": "en-US",
+                      "url": "https://developer.mozilla.org/en-US/docs/Web/Manifest/launch_handler",
+                      "title": "launch_handler",
+                      "summary": "The launch_handler member defines values that control the launch of a web application. Currently it can only contain a single value, client_mode, which specifies the context in which the app should be loaded when launched. For example, in an existing web app client containing an instance of the app, or in a new web app client. This leaves scope for more launch_handler values to be defined in the future."
+                    },
+                    "example": {
+                      "label": "manifest.json",
+                      "language": "json",
+                      "code": "\"launch_handler\": {\"client_mode\": \"navigate-new\"}\n",
+                      "codeHighlighted": "<span class=\"hljs-attr\">&quot;launch_handler&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span><span class=\"hljs-attr\">&quot;client_mode&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">&quot;navigate-new&quot;</span><span class=\"hljs-punctuation\">}</span>"
+                    }
+                  },
                   "responses": {
                     "currentEdition": {
                       "buckets": [
@@ -412,6 +490,25 @@
                 },
                 {
                   "id": "file_handling_api",
+                  "entity": {
+                    "name": "File Handling API",
+                    "nameClean": "File Handling API",
+                    "type": "feature",
+                    "description": "Allows PWAs to register themselves as handlers for certain file types.",
+                    "descriptionClean": "Allows PWAs to register themselves as handlers for certain file types.",
+                    "mdn": {
+                      "locale": "en-US",
+                      "url": "https://developer.mozilla.org/en-US/docs/Web/Manifest/file_handlers",
+                      "title": "file_handlers",
+                      "summary": "The file_handlers member specifies an array of objects representing the types of files an installed progressive web app (PWA) can handle."
+                    },
+                    "example": {
+                      "label": "manifest.json",
+                      "language": "json",
+                      "code": "\"file_handlers\": [{\n    \"action\": \"/open-file\",\n    \"accept\": {\n      \"image/svg+xml\": \".svg\",\n      \"image/png\": \".png\"\n    }\n  }]\n",
+                      "codeHighlighted": "<span class=\"hljs-attr\">&quot;file_handlers&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">[</span><span class=\"hljs-punctuation\">{</span>\n    <span class=\"hljs-attr\">&quot;action&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">&quot;/open-file&quot;</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">&quot;accept&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n      <span class=\"hljs-attr\">&quot;image/svg+xml&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">&quot;.svg&quot;</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">&quot;image/png&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">&quot;.png&quot;</span>\n    <span class=\"hljs-punctuation\">}</span>\n  <span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">]</span>"
+                    }
+                  },
                   "responses": {
                     "currentEdition": {
                       "buckets": [
@@ -513,6 +610,25 @@
                 },
                 {
                   "id": "window_controls_overlay",
+                  "entity": {
+                    "name": "Window Controls Overlay API",
+                    "nameClean": "Window Controls Overlay API",
+                    "type": "feature",
+                    "description": "Allows PWAs to display custom content over the title bar area, whose controls become an overlay.",
+                    "descriptionClean": "Allows PWAs to display custom content over the title bar area, whose controls become an overlay.",
+                    "mdn": {
+                      "locale": "en-US",
+                      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window_Controls_Overlay_API",
+                      "title": "Window Controls Overlay API",
+                      "summary": "The Window Controls Overlay API gives Progressive Web Apps installed on desktop operating systems the ability to hide the default window title bar and display their own content\n  over the full surface area of the app window, turning the control buttons (maximize, minimize, and close) into an overlay."
+                    },
+                    "example": {
+                      "label": "manifest.json",
+                      "language": "json",
+                      "code": "\"display_override\": [\"window-controls-overlay\"]\n",
+                      "codeHighlighted": "<span class=\"hljs-attr\">&quot;display_override&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">[</span><span class=\"hljs-string\">&quot;window-controls-overlay&quot;</span><span class=\"hljs-punctuation\">]</span>"
+                    }
+                  },
                   "responses": {
                     "currentEdition": {
                       "buckets": [
@@ -614,6 +730,18 @@
                 },
                 {
                   "id": "isolated_webapps",
+                  "entity": {
+                    "name": "Isolated Web Apps",
+                    "nameClean": "Isolated Web Apps",
+                    "type": "feature",
+                    "description": "Native-like packaging, permissions and signed updates for PWAs.",
+                    "descriptionClean": "Native-like packaging, permissions and signed updates for PWAs.",
+                    "example": {
+                      "label": "URL",
+                      "code": "isolated-app://4tkr2qbhf7rlz2a3wo3rh4wqaaic/index.html\n",
+                      "codeHighlighted": "isolated-app://4tkr2qbhf7rlz2a3wo3rh4wqaaic/index.html\n"
+                    }
+                  },
                   "responses": {
                     "currentEdition": {
                       "buckets": [
