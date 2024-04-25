@@ -4,7 +4,13 @@ query html2023whatDoYouUseHtmlForQuery {
       html2023 {
         usage {
           what_do_you_use_html_for {
-            combined(parameters: { showNoAnswer: true, cutoffPercent: 1 }) {
+            combined(
+              parameters: {
+                showNoAnswer: true
+                cutoffPercent: 1
+                mergeOtherBuckets: true
+              }
+            ) {
               currentEdition {
                 completion {
                   count

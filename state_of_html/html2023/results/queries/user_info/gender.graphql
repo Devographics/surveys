@@ -4,7 +4,12 @@ query html2023genderQuery {
       html2023 {
         user_info {
           gender {
-            responses(parameters: { showNoAnswer: true }) {
+            responses(
+              parameters: {
+                showNoAnswer: true
+                mergeOtherBuckets: true
+              }
+            ) {
               currentEdition {
                 completion {
                   count

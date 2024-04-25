@@ -4,7 +4,12 @@ query html2023domMovingElementFeaturesQuery {
       html2023 {
         interactivity {
           dom_moving_element_features {
-            responses(parameters: { showNoAnswer: true }) {
+            responses(
+              parameters: {
+                showNoAnswer: true
+                mergeOtherBuckets: true
+              }
+            ) {
               currentEdition {
                 completion {
                   count

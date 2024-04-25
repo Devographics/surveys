@@ -4,7 +4,12 @@ query html2023yearsOfExperienceQuery {
       html2023 {
         user_info {
           years_of_experience {
-            responses(parameters: { showNoAnswer: true }) {
+            responses(
+              parameters: {
+                showNoAnswer: true
+                mergeOtherBuckets: true
+              }
+            ) {
               currentEdition {
                 completion {
                   count

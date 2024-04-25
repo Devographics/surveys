@@ -4,7 +4,12 @@ query html2023accessibilityTechniquesQuery {
       html2023 {
         accessibility {
           accessibility_techniques {
-            responses(parameters: { showNoAnswer: true }) {
+            responses(
+              parameters: {
+                showNoAnswer: true
+                mergeOtherBuckets: true
+              }
+            ) {
               currentEdition {
                 completion {
                   count

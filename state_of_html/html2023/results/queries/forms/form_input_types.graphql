@@ -4,7 +4,12 @@ query html2023formInputTypesQuery {
       html2023 {
         forms {
           form_input_types {
-            responses(parameters: { showNoAnswer: true }) {
+            responses(
+              parameters: {
+                showNoAnswer: true
+                mergeOtherBuckets: true
+              }
+            ) {
               currentEdition {
                 completion {
                   count

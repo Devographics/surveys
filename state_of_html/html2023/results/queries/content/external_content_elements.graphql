@@ -4,7 +4,12 @@ query html2023externalContentElementsQuery {
       html2023 {
         content {
           external_content_elements {
-            responses(parameters: { showNoAnswer: true }) {
+            responses(
+              parameters: {
+                showNoAnswer: true
+                mergeOtherBuckets: true
+              }
+            ) {
               currentEdition {
                 completion {
                   count

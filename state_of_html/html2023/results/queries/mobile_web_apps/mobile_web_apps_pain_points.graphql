@@ -4,7 +4,13 @@ query html2023mobileWebAppsPainPointsQuery {
       html2023 {
         mobile_web_apps {
           mobile_web_apps_pain_points {
-            freeform(parameters: { cutoff: 10, limit: 10 }) {
+            freeform(
+              parameters: {
+                cutoff: 10
+                mergeOtherBuckets: true
+                limit: 10
+              }
+            ) {
               currentEdition {
                 completion {
                   count

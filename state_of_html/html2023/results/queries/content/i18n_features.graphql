@@ -4,7 +4,12 @@ query html2023i18NFeaturesQuery {
       html2023 {
         content {
           i18n_features {
-            responses(parameters: { showNoAnswer: true }) {
+            responses(
+              parameters: {
+                showNoAnswer: true
+                mergeOtherBuckets: true
+              }
+            ) {
               currentEdition {
                 completion {
                   count

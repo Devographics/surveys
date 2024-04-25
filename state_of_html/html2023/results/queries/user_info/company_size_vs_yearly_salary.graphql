@@ -9,6 +9,7 @@ query html2023companySizeVsYearlySalaryQuery {
               parameters: {
                 enableCache: false
                 showNoAnswer: true
+                mergeOtherBuckets: true
               }
             ) {
               currentEdition {
@@ -93,8 +94,6 @@ query html2023companySizeVsYearlySalaryQuery {
                   facetBuckets {
                     id
                     count
-                    percentageQuestion
-                    percentageSurvey
                     percentageBucket
                     hasInsufficientData
                   }

@@ -4,7 +4,12 @@ query html2023completionStatsQuery {
       html2023 {
         user_info {
           completion_stats {
-            responses(parameters: { showNoAnswer: true }) {
+            responses(
+              parameters: {
+                showNoAnswer: true
+                mergeOtherBuckets: true
+              }
+            ) {
               currentEdition {
                 completion {
                   count

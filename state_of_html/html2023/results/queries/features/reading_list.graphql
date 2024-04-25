@@ -4,7 +4,13 @@ query html2023readingListQuery {
       html2023 {
         reading_list {
           reading_list {
-            responses(parameters: { showNoAnswer: true, limit: 10 }) {
+            responses(
+              parameters: {
+                showNoAnswer: true
+                mergeOtherBuckets: true
+                limit: 10
+              }
+            ) {
               currentEdition {
                 completion {
                   count

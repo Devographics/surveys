@@ -4,7 +4,12 @@ query html2023companySizeQuery {
       html2023 {
         user_info {
           company_size {
-            responses(parameters: { showNoAnswer: true }) {
+            responses(
+              parameters: {
+                showNoAnswer: true
+                mergeOtherBuckets: true
+              }
+            ) {
               currentEdition {
                 completion {
                   count

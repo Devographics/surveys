@@ -4,7 +4,13 @@ query html2023industrySectorQuery {
       html2023 {
         usage {
           industry_sector {
-            combined(parameters: { showNoAnswer: true, cutoffPercent: 1 }) {
+            combined(
+              parameters: {
+                showNoAnswer: true
+                cutoffPercent: 1
+                mergeOtherBuckets: true
+              }
+            ) {
               currentEdition {
                 completion {
                   count

@@ -4,7 +4,12 @@ query html2023higherEducationDegreeQuery {
       html2023 {
         user_info {
           higher_education_degree {
-            responses(parameters: { showNoAnswer: true }) {
+            responses(
+              parameters: {
+                showNoAnswer: true
+                mergeOtherBuckets: true
+              }
+            ) {
               currentEdition {
                 completion {
                   count

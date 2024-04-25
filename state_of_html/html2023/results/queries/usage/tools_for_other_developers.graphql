@@ -4,7 +4,12 @@ query html2023toolsForOtherDevelopersQuery {
       html2023 {
         usage {
           tools_for_other_developers {
-            responses(parameters: { showNoAnswer: true }) {
+            responses(
+              parameters: {
+                showNoAnswer: true
+                mergeOtherBuckets: true
+              }
+            ) {
               currentEdition {
                 completion {
                   count

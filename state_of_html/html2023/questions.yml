@@ -378,7 +378,7 @@
 
     - id: native_apps_tools
       template: multipleWithOtherSentiment
-      matchTags: [libraries]
+      matchTags: [libraries, languages]
       # order: alphabetical
       options:
         # - id: electron
@@ -493,12 +493,12 @@
   questions:
     - id: html_interoperability_features
       matchTags:
-        [features_html, features_js, features_css, html_missing_features]
+        [html_features, js_features, css_features, html_missing_features]
       template: textList
 
     - id: html_functionality_features
       matchTags:
-        [features_html, features_js, features_css, html_missing_features]
+        [html_features, js_features, css_features, html_missing_features]
       template: textList
 
     - id: html_missing_elements
@@ -507,7 +507,7 @@
       allowComment: true
       order: random
       matchTags:
-        [features_html, features_js, features_css, html_missing_features]
+        [features_html, features_js, css_features, html_missing_features]
       options:
         - id: accordion
         # - id: alert

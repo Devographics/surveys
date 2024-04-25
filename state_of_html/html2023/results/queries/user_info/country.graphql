@@ -4,7 +4,13 @@ query html2023countryQuery {
       html2023 {
         user_info {
           country {
-            responses(parameters: { showNoAnswer: true, limit: 20 }) {
+            responses(
+              parameters: {
+                showNoAnswer: true
+                mergeOtherBuckets: true
+                limit: 20
+              }
+            ) {
               currentEdition {
                 completion {
                   count

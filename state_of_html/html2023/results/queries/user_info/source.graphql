@@ -4,7 +4,13 @@ query html2023sourceQuery {
       html2023 {
         user_info {
           source {
-            freeform(parameters: { cutoff: 10, limit: 20 }) {
+            freeform(
+              parameters: {
+                cutoff: 10
+                mergeOtherBuckets: true
+                limit: 20
+              }
+            ) {
               currentEdition {
                 completion {
                   count

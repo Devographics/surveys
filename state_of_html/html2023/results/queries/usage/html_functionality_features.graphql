@@ -4,7 +4,13 @@ query html2023htmlFunctionalityFeaturesQuery {
       html2023 {
         usage {
           html_functionality_features {
-            freeform(parameters: { cutoff: 10 }) {
+            freeform(
+              parameters: {
+                cutoff: 10
+                mergeOtherBuckets: true
+                limit: 20
+              }
+            ) {
               currentEdition {
                 completion {
                   count

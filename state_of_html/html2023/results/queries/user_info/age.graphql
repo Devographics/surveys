@@ -4,7 +4,12 @@ query html2023ageQuery {
       html2023 {
         user_info {
           age {
-            responses(parameters: { showNoAnswer: true }) {
+            responses(
+              parameters: {
+                showNoAnswer: true
+                mergeOtherBuckets: true
+              }
+            ) {
               currentEdition {
                 completion {
                   count

@@ -9,6 +9,7 @@ query html2023companySizeVsGenderQuery {
               parameters: {
                 enableCache: false
                 showNoAnswer: true
+                mergeOtherBuckets: true
               }
             ) {
               currentEdition {
@@ -93,8 +94,6 @@ query html2023companySizeVsGenderQuery {
                   facetBuckets {
                     id
                     count
-                    percentageQuestion
-                    percentageSurvey
                     percentageBucket
                     hasInsufficientData
                   }

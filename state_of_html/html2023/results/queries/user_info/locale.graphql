@@ -4,7 +4,13 @@ query html2023localeQuery {
       html2023 {
         user_info {
           locale {
-            responses(parameters: { showNoAnswer: true, cutoff: 20 }) {
+            responses(
+              parameters: {
+                showNoAnswer: true
+                mergeOtherBuckets: true
+                cutoff: 20
+              }
+            ) {
               currentEdition {
                 completion {
                   count

@@ -4,7 +4,12 @@ query html2023webComponentsFeaturesQuery {
       html2023 {
         web_components {
           web_components_features {
-            responses(parameters: { showNoAnswer: true }) {
+            responses(
+              parameters: {
+                showNoAnswer: true
+                mergeOtherBuckets: true
+              }
+            ) {
               currentEdition {
                 completion {
                   count

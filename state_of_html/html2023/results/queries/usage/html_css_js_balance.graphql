@@ -4,7 +4,12 @@ query html2023htmlCssJsBalanceQuery {
       html2023 {
         usage {
           html_css_js_balance {
-            responses(parameters: { showNoAnswer: true }) {
+            responses(
+              parameters: {
+                showNoAnswer: true
+                mergeOtherBuckets: true
+              }
+            ) {
               currentEdition {
                 completion {
                   count

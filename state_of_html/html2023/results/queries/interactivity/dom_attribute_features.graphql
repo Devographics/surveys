@@ -4,7 +4,12 @@ query html2023domAttributeFeaturesQuery {
       html2023 {
         interactivity {
           dom_attribute_features {
-            responses(parameters: { showNoAnswer: true }) {
+            responses(
+              parameters: {
+                showNoAnswer: true
+                mergeOtherBuckets: true
+              }
+            ) {
               currentEdition {
                 completion {
                   count

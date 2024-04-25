@@ -4,7 +4,12 @@ query html2023blastFromThePastQuery {
       html2023 {
         other_tools {
           blast_from_the_past {
-            responses(parameters: { showNoAnswer: true }) {
+            responses(
+              parameters: {
+                showNoAnswer: true
+                mergeOtherBuckets: true
+              }
+            ) {
               currentEdition {
                 completion {
                   count

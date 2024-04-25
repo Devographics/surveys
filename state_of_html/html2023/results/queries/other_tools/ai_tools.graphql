@@ -4,7 +4,13 @@ query html2023aiToolsQuery {
       html2023 {
         other_tools {
           ai_tools {
-            combined(parameters: { showNoAnswer: true, cutoffPercent: 1 }) {
+            combined(
+              parameters: {
+                showNoAnswer: true
+                cutoffPercent: 1
+                mergeOtherBuckets: true
+              }
+            ) {
               currentEdition {
                 completion {
                   count

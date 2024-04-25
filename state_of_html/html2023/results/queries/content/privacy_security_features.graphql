@@ -4,7 +4,12 @@ query html2023privacySecurityFeaturesQuery {
       html2023 {
         content {
           privacy_security_features {
-            responses(parameters: { showNoAnswer: true }) {
+            responses(
+              parameters: {
+                showNoAnswer: true
+                mergeOtherBuckets: true
+              }
+            ) {
               currentEdition {
                 completion {
                   count
