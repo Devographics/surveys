@@ -1,15 +1,14 @@
-query html2023companySizeVsGenderQuery {
+query html2023raceEthnicityVsYearsOfExperienceQuery {
   surveys {
     state_of_html {
       html2023 {
         user_info {
-          company_size_vs_gender: company_size {
+          race_ethnicity_vs_years_of_experience: race_ethnicity {
             responses(
-              facet: user_info__gender
+              facet: user_info__years_of_experience
               parameters: {
                 enableCache: false
                 showNoAnswer: true
-                mergeOtherBuckets: true
               }
             ) {
               currentEdition {
@@ -17,6 +16,10 @@ query html2023companySizeVsGenderQuery {
                   count
                   percentageSurvey
                   total
+                }
+                average
+                percentiles {
+                  p50
                 }
                 buckets {
                   count
