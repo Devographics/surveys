@@ -1,0 +1,36 @@
+query js2023testingExperienceLinechartQuery {
+  surveys {
+    state_of_js {
+      js2023 {
+        testing {
+          testing_experience_linechart: testing_ratios {
+            years
+            items {
+              id
+              usage {
+                year
+                rank
+                percentageQuestion
+              }
+              awareness {
+                year
+                rank
+                percentageQuestion
+              }
+              interest {
+                year
+                rank
+                percentageQuestion
+              }
+              satisfaction {
+                year
+                rank
+                percentageQuestion
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

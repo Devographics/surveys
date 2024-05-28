@@ -1,0 +1,68 @@
+query js2023metaFrameworksItemsQuery {
+  surveys {
+    state_of_js {
+      js2023 {
+        meta_frameworks {
+          meta_frameworks_items: _items {
+            id
+            entity {
+              name
+              nameClean
+              nameHtml
+              type
+              description
+              descriptionClean
+              descriptionHtml
+              homepage {
+                url
+              }
+              caniuse {
+                name
+                url
+              }
+              mdn {
+                locale
+                url
+                title
+                summary
+              }
+              example {
+                label
+                language
+                code
+                codeHighlighted
+              }
+            }
+            comments {
+              currentEdition {
+                count
+              }
+            }
+            responses(facet: _sentiment) {
+              currentEdition {
+                buckets {
+                  count
+                  id
+                  facetBuckets {
+                    count
+                    id
+                    percentageBucket
+                    percentageQuestion
+                    percentageSurvey
+                  }
+                  percentageQuestion
+                  percentageSurvey
+                }
+                completion {
+                  count
+                  percentageSurvey
+                  total
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
