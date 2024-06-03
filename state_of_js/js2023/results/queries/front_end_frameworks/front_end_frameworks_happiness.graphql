@@ -5,7 +5,9 @@ query js2023frontEndFrameworksHappinessQuery {
         front_end_frameworks {
           front_end_frameworks_happiness {
             responses(parameters: { showNoAnswer: true }) {
-              currentEdition {
+              allEditions {
+                editionId
+                year
                 completion {
                   count
                   percentageSurvey
@@ -30,7 +32,7 @@ query js2023frontEndFrameworksHappinessQuery {
                     descriptionHtml
                     descriptionClean
                     id
-                    type
+                    entityType
                     example {
                       label
                       language

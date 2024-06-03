@@ -4,14 +4,10 @@ query js2023mobileDesktopHappinessQuery {
       js2023 {
         mobile_desktop {
           mobile_desktop_happiness {
-            responses(
-              parameters: {
-                showNoAnswer: true
-                mergeOtherBuckets: true
-                limit: 10
-              }
-            ) {
-              currentEdition {
+            responses(parameters: { showNoAnswer: true }) {
+              allEditions {
+                editionId
+                year
                 completion {
                   count
                   percentageSurvey
@@ -36,7 +32,7 @@ query js2023mobileDesktopHappinessQuery {
                     descriptionHtml
                     descriptionClean
                     id
-                    type
+                    entityType
                     example {
                       label
                       language

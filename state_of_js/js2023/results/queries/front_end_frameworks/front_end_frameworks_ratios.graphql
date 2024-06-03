@@ -1,15 +1,15 @@
-query js2023allFeaturesQuery {
+query js2023frontEndFrameworksRatiosQuery {
   surveys {
     state_of_js {
       js2023 {
-        features {
-          all_features: _items {
+        front_end_frameworks {
+          front_end_frameworks_ratios: _items {
             id
             entity {
               name
               nameClean
               nameHtml
-              type
+              entityType
               description
               descriptionClean
               descriptionHtml
@@ -33,25 +33,16 @@ query js2023allFeaturesQuery {
                 codeHighlighted
               }
             }
-            comments {
-              currentEdition {
-                count
-              }
-            }
             responses(facet: _sentiment) {
-              currentEdition {
-                buckets {
-                  count
-                  id
-                  facetBuckets {
-                    count
-                    id
-                    percentageBucket
-                    percentageQuestion
-                    percentageSurvey
-                  }
-                  percentageQuestion
-                  percentageSurvey
+              allEditions {
+                year
+                editionId
+                ratios {
+                  awareness
+                  interest
+                  usage
+                  retention
+                  positivity
                 }
                 completion {
                   count

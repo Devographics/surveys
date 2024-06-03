@@ -4,14 +4,10 @@ query js2023metaFrameworksHappinessQuery {
       js2023 {
         meta_frameworks {
           meta_frameworks_happiness {
-            responses(
-              parameters: {
-                showNoAnswer: true
-                mergeOtherBuckets: true
-                limit: 10
-              }
-            ) {
-              currentEdition {
+            responses(parameters: { showNoAnswer: true }) {
+              allEditions {
+                editionId
+                year
                 completion {
                   count
                   percentageSurvey
@@ -36,7 +32,7 @@ query js2023metaFrameworksHappinessQuery {
                     descriptionHtml
                     descriptionClean
                     id
-                    type
+                    entityType
                     example {
                       label
                       language

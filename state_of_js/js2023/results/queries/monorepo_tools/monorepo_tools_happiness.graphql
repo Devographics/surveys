@@ -4,14 +4,10 @@ query js2023monorepoToolsHappinessQuery {
       js2023 {
         monorepo_tools {
           monorepo_tools_happiness {
-            responses(
-              parameters: {
-                showNoAnswer: true
-                mergeOtherBuckets: true
-                limit: 10
-              }
-            ) {
-              currentEdition {
+            responses(parameters: { showNoAnswer: true }) {
+              allEditions {
+                editionId
+                year
                 completion {
                   count
                   percentageSurvey
@@ -36,7 +32,7 @@ query js2023monorepoToolsHappinessQuery {
                     descriptionHtml
                     descriptionClean
                     id
-                    type
+                    entityType
                     example {
                       label
                       language
