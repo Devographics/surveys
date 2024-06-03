@@ -1,0 +1,322 @@
+### TOOLS ###
+
+- id: javascript_flavors
+  template: tool
+  slug: tools
+  questions:
+    - id: es6
+    - id: typescript
+    - id: flow
+    - id: reason
+    - id: elm
+    - id: clojurescript
+    - id: javascript_flavors_others
+      intlId: tools.other_tools
+      template: others
+      sectionSlug: tools_others
+      matchTags: [libraries, other]
+    - id: javascript_flavors_happiness
+      intlId: tools.happiness
+      sectionSlug: happiness
+      template: happiness
+
+- id: front_end_frameworks
+  template: tool
+  slug: tools
+  questions:
+    - id: react
+    - id: vuejs
+    - id: angular
+    - id: preact
+    - id: ember
+    - id: aurelia
+    - id: polymer
+    - id: backbone
+    - id: angular_js
+    - id: front_end_frameworks_others
+      intlId: tools.other_tools
+      template: others
+      sectionSlug: tools_others
+      matchTags: [libraries, other]
+    - id: front_end_frameworks_happiness
+      intlId: tools.happiness
+      template: happiness
+      sectionSlug: happiness
+
+- id: datalayer
+  template: tool
+  slug: tools
+  questions:
+    - id: redux
+    - id: apollo
+    - id: graphql
+    - id: mobx
+    - id: relay
+    - id: firebase
+    - id: falcor
+    - id: datalayer_others
+      intlId: tools.other_tools
+      template: others
+      sectionSlug: tools_others
+      matchTags: [libraries, other]
+    - id: datalayer_happiness
+      intlId: tools.happiness
+      template: happiness
+      sectionSlug: happiness
+
+- id: back_end_frameworks
+  template: tool
+  slug: tools
+  questions:
+    - id: keystone
+    - id: feathers
+    - id: loopback
+    - id: sails
+    - id: hapi
+    - id: meteor
+    - id: koa
+    - id: express
+    - id: back_end_frameworks_others
+      intlId: tools.other_tools
+      template: others
+      sectionSlug: tools_others
+      matchTags: [libraries, other]
+      suffix: others
+    - id: back_end_frameworks_happiness
+      intlId: tools.happiness
+      template: happiness
+      sectionSlug: happiness
+
+- id: testing
+  template: tool
+  slug: tools
+  questions:
+    - id: ava
+    - id: tape
+    - id: enzyme
+    - id: jest
+    - id: jasmine
+    - id: mocha
+    - id: testing_others
+      intlId: tools.other_tools
+      template: others
+      sectionSlug: tools_others
+      suffix: others
+      matchTags: [libraries, other]
+    - id: testing_happiness
+      intlId: tools.happiness
+      template: happiness
+      sectionSlug: happiness
+
+- id: css
+  template: tool
+  slug: tools
+  questions:
+    - id: stylus
+    - id: foundation
+    - id: css_in_js
+    - id: less
+    - id: bootstrap
+    - id: sass
+    - id: css_others
+      intlId: tools.other_tools
+      template: others
+      sectionSlug: tools_others
+      suffix: others
+      matchTags: [libraries, other]
+    - id: css_happiness
+      intlId: tools.happiness
+      template: happiness
+      sectionSlug: happiness
+
+- id: mobile_desktop
+  template: tool
+  slug: tools
+  questions:
+    - id: nativescript
+    - id: ionic
+    - id: cordova
+    - id: reactnative
+    - id: electron
+    - id: nativeapps
+    - id: mobile_desktop_others
+      intlId: tools.other_tools
+      template: others
+      sectionSlug: tools_others
+      suffix: others
+      matchTags: [libraries, other]
+    - id: mobile_desktop_happiness
+      intlId: tools.happiness
+      template: happiness
+      sectionSlug: happiness
+
+- id: build_tools
+  template: tool
+  slug: tools
+  questions:
+    - id: rollup
+    - id: grunt
+    - id: browserify
+    - id: gulp
+    - id: webpack
+    - id: npm
+    - id: build_tools_others
+      intlId: tools.other_tools
+      template: others
+      sectionSlug: tools_others
+      suffix: others
+      matchTags: [libraries, other]
+    - id: build_tools_happiness
+      intlId: tools.happiness
+      template: happiness
+      sectionSlug: happiness
+
+### OTHER TOOLS ###
+
+- id: other_tools
+  slug: other_tools
+  questions:
+    - id: package_managers
+      template: multiple
+      options:
+        - id: yarn
+        - id: npm
+        - id: bower
+        - id: nuget
+        - id: composer
+        - id: jspm
+        - id: elm_package
+        - id: homebrew
+        - id: maven
+        - id: leiningen
+        - id: meteor
+        - id: atmosphere
+    - id: package_managers_others
+      template: others
+      matchTags: [libraries]
+
+    - id: text_editors
+      template: multiple
+      options:
+        - id: vs_code
+        - id: atom
+        - id: sublime_text
+        - id: webstorm
+        - id: vim
+        - id: emacs
+        - id: notepad_plus_plus
+        - id: brackets
+        - id: intellij
+        - id: phpstorm
+        - id: coda
+        - id: netbeans
+    - id: text_editors_others
+      template: others
+      matchTags: [text_editors]
+
+    - id: code_linters
+      template: multiple
+      options:
+        - id: eslint
+        - id: prettier
+        - id: jshint
+        - id: standardjs
+        - id: tslint
+        - id: stylelint
+        - id: xo
+        - id: jslint
+        - id: elm_format
+        - id: jscs
+        - id: coffeelint
+    - id: code_linters_others
+      template: others
+      matchTags: [libraries]
+
+### OPINIONS ###
+
+- id: opinions
+  slug: opinions
+  questions:
+    - id: js_moving_in_right_direction
+      template: opinion
+    - id: building_js_apps_overly_complex
+      template: opinion
+    - id: js_over_used_online
+      template: opinion
+    - id: enjoy_building_js_apps
+      template: opinion
+    - id: would_like_js_to_be_main_lang
+      template: opinion
+    - id: js_ecosystem_changing_to_fast
+      template: opinion
+    - id: missing_from_js
+      sectionSlug: opinions_others
+      template: longtext
+      matchTags: [missing_features]
+
+### DEMOGRAPHICS ###
+
+- id: user_info
+  slug: user_info
+  questions:
+    - id: years_of_experience
+      template: single
+      options:
+        - id: range_less_than_1
+        - id: range_1_2
+        - id: range_2_5
+        - id: range_5_10
+        - id: range_10_20
+        - id: range_more_than_20
+
+    - id: company_size
+      template: single
+      options:
+        - id: range_1
+        - id: range_1_5
+        - id: range_5_10
+        - id: range_10_20
+        - id: range_20_50
+        - id: range_50_100
+        - id: range_100_1000
+        - id: range_more_than_1000
+
+    - id: yearly_salary
+      template: single
+      options:
+        - id: range_work_for_free
+        - id: range_0_10
+        - id: range_10_30
+        - id: range_30_50
+        - id: range_50_100
+        - id: range_100_200
+        - id: range_more_than_200
+
+    - id: job_title
+      template: single
+      allowother: true
+      options:
+        - id: front_end_developer
+        - id: full_stack_developer
+        - id: back_end_developer
+        - id: web_developer
+
+    - id: css_proficiency
+      template: single
+    - id: backend_proficiency
+      template: single
+
+    - id: how_did_user_find_out_about_the_survey
+      template: text
+
+    - id: gender
+      template: single
+      allowother: true
+      options:
+        - id: female
+        - id: male
+        - id: non_binary
+        - id: prefer_not_to_say
+
+    - id: country
+      template: country
