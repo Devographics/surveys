@@ -1,9 +1,9 @@
-query js2023allTools2Query {
+query js2023scatterplotOverviewQuery {
   surveys {
     state_of_js {
       js2023 {
         libraries {
-          all_tools2: _items {
+          scatterplot_overview: _items {
             id
             entity {
               name
@@ -40,6 +40,13 @@ query js2023allTools2Query {
             }
             responses(facet: _sentiment) {
               currentEdition {
+                ratios {
+                  awareness
+                  interest
+                  usage
+                  retention
+                  positivity
+                }
                 buckets {
                   count
                   id
