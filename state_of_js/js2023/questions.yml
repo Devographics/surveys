@@ -135,13 +135,13 @@
     - id: language_pain_points
       template: textList
       matchTags:
-        - pain_points
+        - common_pain_points
         - js_pain_points
 
     - id: browser_apis_pain_points
       template: textList
       matchTags:
-        - pain_points
+        - common_pain_points
         - js_pain_points
         - features
 
@@ -281,8 +281,8 @@
     - id: front_end_frameworks_pain_points
       template: textList
       matchTags:
-        - pain_points
-        - libraries
+        - common_pain_points
+        # - libraries
 
 # removed in 2021
 # - id: datalayer
@@ -341,8 +341,8 @@
     - id: meta_frameworks_pain_points
       template: textList
       matchTags:
-        - pain_points
-        - libraries
+        - common_pain_points
+        # - libraries
 
 # - id: back_end_frameworks
 #   template: tool
@@ -410,8 +410,9 @@
 
     - id: testing_pain_points
       template: textList
+      disallowedTokenIds: [testing]
       matchTags:
-        - pain_points
+        - common_pain_points
         - libraries
 
 # under consideration for 2022?
@@ -474,7 +475,8 @@
     - id: mobile_desktop_pain_points
       template: textList
       matchTags:
-        - pain_points
+        - common_pain_points
+        - mobile_web_apps_pain_points
         - libraries
 
 - id: build_tools
@@ -518,9 +520,9 @@
 
     - id: build_tools_pain_points
       template: textList
+      disallowedTokenIds: [build_tools]
       matchTags:
-        - pain_points
-        - libraries
+        - common_pain_points
 
 - id: monorepo_tools
   template: tool
@@ -553,8 +555,7 @@
     - id: monorepo_tools_pain_points
       template: textList
       matchTags:
-        - pain_points
-        - libraries
+        - common_pain_points
 
 ######################################################
 #########             OTHER TOOLS            #########
@@ -980,7 +981,7 @@
       # template: top_n
       template: multipleWithOther
       limit: 3
-      matchTags: [js_pain_points, pain_points]
+      matchTags: [js_pain_points, common_pain_points]
       options:
         - id: state_management
         - id: architecture
@@ -1195,7 +1196,7 @@
     - id: podcasts
       # template: multipleWithOther
       template: textList
-      matchTags: [podcasts, people, sites]
+      matchTags: [podcasts, people, video_creators, sites]
       # options:
       #   - id: syntaxfm
       #   - id: js_party

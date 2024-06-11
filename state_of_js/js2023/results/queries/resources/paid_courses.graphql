@@ -4,7 +4,13 @@ query js2023paidCoursesQuery {
       js2023 {
         resources {
           paid_courses {
-            freeform(parameters: { cutoff: 10, mergeOtherBuckets: true }) {
+            freeform(
+              parameters: {
+                cutoff: 10
+                mergeOtherBuckets: true
+                limit: 20
+              }
+            ) {
               currentEdition {
                 completion {
                   count

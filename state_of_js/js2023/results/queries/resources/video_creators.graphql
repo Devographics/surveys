@@ -4,7 +4,13 @@ query js2023videoCreatorsQuery {
       js2023 {
         resources {
           video_creators {
-            freeform(parameters: { cutoff: 10, mergeOtherBuckets: true }) {
+            freeform(
+              parameters: {
+                cutoff: 10
+                mergeOtherBuckets: true
+                limit: 20
+              }
+            ) {
               currentEdition {
                 completion {
                   count
