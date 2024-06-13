@@ -6,9 +6,10 @@ query js2023testingPainPointsQuery {
           testing_pain_points {
             freeform(
               parameters: {
+                showNoAnswer: true
                 cutoff: 10
-                mergeOtherBuckets: false
-                limit: 10
+                limit: 20
+                mergeOtherBuckets: true
               }
             ) {
               currentEdition {

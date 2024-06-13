@@ -6,9 +6,10 @@ query js2023peopleQuery {
           people {
             freeform(
               parameters: {
+                showNoAnswer: true
                 cutoff: 10
-                mergeOtherBuckets: false
-                limit: 20
+                limit: 40
+                mergeOtherBuckets: true
               }
             ) {
               currentEdition {
