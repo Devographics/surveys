@@ -1,15 +1,15 @@
-query js2023languagePainPointsQuery {
+query js2023readingListQuery {
   surveys {
     state_of_js {
       js2023 {
-        features {
-          language_pain_points {
-            freeform(
+        reading_list {
+          reading_list {
+            responses(
               parameters: {
                 showNoAnswer: true
                 cutoff: 10
                 limit: 20
-                mergeOtherBuckets: true
+                mergeOtherBuckets: false
               }
             ) {
               currentEdition {
@@ -84,71 +84,6 @@ query js2023languagePainPointsQuery {
                     resources {
                       url
                       title
-                    }
-                  }
-                  groupedBuckets {
-                    count
-                    id
-                    percentageQuestion
-                    percentageSurvey
-                    isFreeformData
-                    hasInsufficientData
-                    entity {
-                      name
-                      nameHtml
-                      nameClean
-                      alias
-                      description
-                      descriptionHtml
-                      descriptionClean
-                      id
-                      entityType
-                      example {
-                        label
-                        language
-                        code
-                        codeHighlighted
-                      }
-                      avatar {
-                        url
-                      }
-                      homepage {
-                        url
-                      }
-                      youtube {
-                        url
-                      }
-                      twitter {
-                        url
-                      }
-                      twitch {
-                        url
-                      }
-                      rss {
-                        url
-                      }
-                      blog {
-                        url
-                      }
-                      mastodon {
-                        url
-                      }
-                      github {
-                        url
-                      }
-                      npm {
-                        url
-                      }
-                      mdn {
-                        url
-                      }
-                      caniuse {
-                        url
-                      }
-                      resources {
-                        url
-                        title
-                      }
                     }
                   }
                 }

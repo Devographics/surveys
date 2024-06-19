@@ -1,0 +1,439 @@
+{
+  "dataAPI": {
+    "surveys": {
+      "state_of_js": {
+        "js2023": {
+          "reading_list": {
+            "reading_list": {
+              "responses": {
+                "currentEdition": {
+                  "completion": {
+                    "count": 6803,
+                    "percentageSurvey": 28.9,
+                    "total": 23540
+                  },
+                  "buckets": [
+                    {
+                      "count": 2989,
+                      "id": "error_cause",
+                      "percentageQuestion": 43.94,
+                      "percentageSurvey": 12.7,
+                      "entity": {
+                        "name": "`error.cause`",
+                        "nameHtml": "<code>error.cause</code>",
+                        "nameClean": "error.cause",
+                        "id": "error_cause",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "try {\n  connectToDatabase();\n} catch (err) {\n  throw new Error('Connecting to database failed.', { cause: err });\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">try</span> {\n  <span class=\"hljs-title function_\">connectToDatabase</span>();\n} <span class=\"hljs-keyword\">catch</span> (err) {\n  <span class=\"hljs-keyword\">throw</span> <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Error</span>(<span class=\"hljs-string\">&#x27;Connecting to database failed.&#x27;</span>, { <span class=\"hljs-attr\">cause</span>: err });\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause"
+                        }
+                      }
+                    },
+                    {
+                      "count": 2583,
+                      "id": "logical_assignment",
+                      "percentageQuestion": 37.97,
+                      "percentageSurvey": 10.97,
+                      "entity": {
+                        "name": "Logical Assignment",
+                        "nameClean": "Logical Assignment",
+                        "id": "logical_assignment",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "const a = { duration: 50, title: '' };\n\na.duration ||= 10;\nconsole.log(a.duration);\n// expected output: 50\n\na.title ||= 'title is empty.';\nconsole.log(a.title);\n// expected output: \"title is empty\"\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">const</span> a = { <span class=\"hljs-attr\">duration</span>: <span class=\"hljs-number\">50</span>, <span class=\"hljs-attr\">title</span>: <span class=\"hljs-string\">&#x27;&#x27;</span> };\n\na.<span class=\"hljs-property\">duration</span> ||= <span class=\"hljs-number\">10</span>;\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(a.<span class=\"hljs-property\">duration</span>);\n<span class=\"hljs-comment\">// expected output: 50</span>\n\na.<span class=\"hljs-property\">title</span> ||= <span class=\"hljs-string\">&#x27;title is empty.&#x27;</span>;\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(a.<span class=\"hljs-property\">title</span>);\n<span class=\"hljs-comment\">// expected output: &quot;title is empty&quot;</span>"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-javascript_operators_logical_and_assignment"
+                        }
+                      }
+                    },
+                    {
+                      "count": 2373,
+                      "id": "hashbang_grammar",
+                      "percentageQuestion": 34.88,
+                      "percentageSurvey": 10.08,
+                      "entity": {
+                        "name": "Hashbang Grammar",
+                        "nameClean": "Hashbang Grammar",
+                        "id": "hashbang_grammar",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "#!/usr/bin/env node\n\nconsole.log(\"Hello world\");\n",
+                          "codeHighlighted": "<span class=\"hljs-meta\">#!/usr/bin/env node</span>\n\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&quot;Hello world&quot;</span>);"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar"
+                        }
+                      }
+                    },
+                    {
+                      "count": 2339,
+                      "id": "array_with",
+                      "percentageQuestion": 34.38,
+                      "percentageSurvey": 9.94,
+                      "entity": {
+                        "name": "`array.with()`\n",
+                        "nameHtml": "<code>array.with()</code>\n",
+                        "nameClean": "array.with()",
+                        "id": "array_with",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "const arr = [1, 2, 3, 4, 5];\nconsole.log(arr.with(2, 6)); // [1, 2, 6, 4, 5]\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">const</span> arr = [<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">3</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">5</span>];\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(arr.<span class=\"hljs-title function_\">with</span>(<span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">6</span>)); <span class=\"hljs-comment\">// [1, 2, 6, 4, 5]</span>"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/with"
+                        }
+                      }
+                    },
+                    {
+                      "count": 1669,
+                      "id": "dynamic_import",
+                      "percentageQuestion": 24.53,
+                      "percentageSurvey": 7.09,
+                      "entity": {
+                        "name": "Dynamic Import",
+                        "nameClean": "Dynamic Import",
+                        "id": "dynamic_import",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "await import('/modules/my-module.js')\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">await</span> <span class=\"hljs-keyword\">import</span>(<span class=\"hljs-string\">&#x27;/modules/my-module.js&#x27;</span>)"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import"
+                        }
+                      }
+                    },
+                    {
+                      "count": 1578,
+                      "id": "array_to_spliced",
+                      "percentageQuestion": 23.2,
+                      "percentageSurvey": 6.7,
+                      "entity": {
+                        "name": "`array.toSpliced()`\n",
+                        "nameHtml": "<code>array.toSpliced()</code>\n",
+                        "nameClean": "array.toSpliced()",
+                        "id": "array_to_spliced",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "const months = [\"Jan\", \"Mar\", \"Apr\", \"May\"];\n\n// Inserting an element at index 1\nconst months2 = months.toSpliced(1, 0, \"Feb\");\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">const</span> months = [<span class=\"hljs-string\">&quot;Jan&quot;</span>, <span class=\"hljs-string\">&quot;Mar&quot;</span>, <span class=\"hljs-string\">&quot;Apr&quot;</span>, <span class=\"hljs-string\">&quot;May&quot;</span>];\n\n<span class=\"hljs-comment\">// Inserting an element at index 1</span>\n<span class=\"hljs-keyword\">const</span> months2 = months.<span class=\"hljs-title function_\">toSpliced</span>(<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">0</span>, <span class=\"hljs-string\">&quot;Feb&quot;</span>);"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced"
+                        }
+                      }
+                    },
+                    {
+                      "count": 1492,
+                      "id": "array_to_sorted",
+                      "percentageQuestion": 21.93,
+                      "percentageSurvey": 6.34,
+                      "entity": {
+                        "name": "`array.toSorted()`\n",
+                        "nameHtml": "<code>array.toSorted()</code>\n",
+                        "nameClean": "array.toSorted()",
+                        "id": "array_to_sorted",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "const values = [1, 10, 21, 2];\nconst sortedValues = values.toSorted((a, b) => a - b);\nconsole.log(sortedValues); // [1, 2, 10, 21]\nconsole.log(values); // [1, 10, 21, 2]\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">const</span> values = [<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">10</span>, <span class=\"hljs-number\">21</span>, <span class=\"hljs-number\">2</span>];\n<span class=\"hljs-keyword\">const</span> sortedValues = values.<span class=\"hljs-title function_\">toSorted</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">a, b</span>) =&gt;</span> a - b);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(sortedValues); <span class=\"hljs-comment\">// [1, 2, 10, 21]</span>\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(values); <span class=\"hljs-comment\">// [1, 10, 21, 2]</span>"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted"
+                        }
+                      }
+                    },
+                    {
+                      "count": 1439,
+                      "id": "private_fields",
+                      "percentageQuestion": 21.15,
+                      "percentageSurvey": 6.11,
+                      "entity": {
+                        "name": "Private Fields",
+                        "nameClean": "Private Fields",
+                        "id": "private_fields",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "class ClassWithPrivateField {\n  #privateField\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">class</span> <span class=\"hljs-title class_\">ClassWithPrivateField</span> {\n  #privateField\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties"
+                        }
+                      }
+                    },
+                    {
+                      "count": 1378,
+                      "id": "temporal",
+                      "percentageQuestion": 20.26,
+                      "percentageSurvey": 5.85,
+                      "entity": {
+                        "name": "Temporal",
+                        "nameClean": "Temporal",
+                        "id": "temporal",
+                        "entityType": "feature",
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"
+                        }
+                      }
+                    },
+                    {
+                      "count": 1369,
+                      "id": "regexp_match_indices",
+                      "percentageQuestion": 20.12,
+                      "percentageSurvey": 5.82,
+                      "entity": {
+                        "name": "Regexp Match Indices",
+                        "nameClean": "Regexp Match Indices",
+                        "id": "regexp_match_indices",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "const str1 = \"foo bar foo\";\nconst regex1 = /foo/dg;\nconsole.log(regex1.exec(str1).indices[0]); // Output: Array [0, 2]\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">const</span> str1 = <span class=\"hljs-string\">&quot;foo bar foo&quot;</span>;\n<span class=\"hljs-keyword\">const</span> regex1 = <span class=\"hljs-regexp\">/foo/</span>dg;\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(regex1.<span class=\"hljs-title function_\">exec</span>(str1).<span class=\"hljs-property\">indices</span>[<span class=\"hljs-number\">0</span>]); <span class=\"hljs-comment\">// Output: Array [0, 2]</span>"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices"
+                        }
+                      }
+                    },
+                    {
+                      "count": 1299,
+                      "id": "page_visibility",
+                      "percentageQuestion": 19.09,
+                      "percentageSurvey": 5.52,
+                      "entity": {
+                        "name": "Page Visibility API",
+                        "nameClean": "Page Visibility API",
+                        "id": "page_visibility",
+                        "entityType": "feature",
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/pagevisibility"
+                        }
+                      }
+                    },
+                    {
+                      "count": 1198,
+                      "id": "array_to_reversed",
+                      "percentageQuestion": 17.61,
+                      "percentageSurvey": 5.09,
+                      "entity": {
+                        "name": "`array.toReversed()`\n",
+                        "nameHtml": "<code>array.toReversed()</code>\n",
+                        "nameClean": "array.toReversed()",
+                        "id": "array_to_reversed",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "const items = [1, 2, 3];\nconst reversedItems = items.toReversed();\nconsole.log(reversedItems); // [3, 2, 1]\nconsole.log(items); // [1, 2, 3]\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">const</span> items = [<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">3</span>];\n<span class=\"hljs-keyword\">const</span> reversedItems = items.<span class=\"hljs-title function_\">toReversed</span>();\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(reversedItems); <span class=\"hljs-comment\">// [3, 2, 1]</span>\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(items); <span class=\"hljs-comment\">// [1, 2, 3]</span>"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed"
+                        }
+                      }
+                    },
+                    {
+                      "count": 1151,
+                      "id": "broadcast_channel",
+                      "percentageQuestion": 16.92,
+                      "percentageSurvey": 4.89,
+                      "entity": {
+                        "name": "Broadcast Channel API",
+                        "nameClean": "Broadcast Channel API",
+                        "id": "broadcast_channel",
+                        "entityType": "feature",
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/broadcastchannel"
+                        }
+                      }
+                    },
+                    {
+                      "count": 1123,
+                      "id": "promise_all_settled",
+                      "percentageQuestion": 16.51,
+                      "percentageSurvey": 4.77,
+                      "entity": {
+                        "name": "`Promise.allSettled()`",
+                        "nameHtml": "<code>Promise.allSettled()</code>",
+                        "nameClean": "Promise.allSettled()",
+                        "id": "promise_all_settled",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "const promises = [promise1, promise2];\n\nPromise.allSettled(promises).then((results) =>\n  results.forEach((result) => console.log(result.status)),\n);\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">const</span> promises = [promise1, promise2];\n\n<span class=\"hljs-title class_\">Promise</span>.<span class=\"hljs-title function_\">allSettled</span>(promises).<span class=\"hljs-title function_\">then</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">results</span>) =&gt;</span>\n  results.<span class=\"hljs-title function_\">forEach</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">result</span>) =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result.<span class=\"hljs-property\">status</span>)),\n);"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled"
+                        }
+                      }
+                    },
+                    {
+                      "count": 1109,
+                      "id": "array_findlast",
+                      "percentageQuestion": 16.3,
+                      "percentageSurvey": 4.71,
+                      "entity": {
+                        "name": "`array.findLast()`",
+                        "nameHtml": "<code>array.findLast()</code>",
+                        "nameClean": "array.findLast()",
+                        "id": "array_findlast",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "const array1 = [5, 12, 50, 130, 44];\nconst found = array1.findLast((element) => element > 45);\nconsole.log(found);\n// expected output: 130\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">const</span> array1 = [<span class=\"hljs-number\">5</span>, <span class=\"hljs-number\">12</span>, <span class=\"hljs-number\">50</span>, <span class=\"hljs-number\">130</span>, <span class=\"hljs-number\">44</span>];\n<span class=\"hljs-keyword\">const</span> found = array1.<span class=\"hljs-title function_\">findLast</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">element</span>) =&gt;</span> element &gt; <span class=\"hljs-number\">45</span>);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(found);\n<span class=\"hljs-comment\">// expected output: 130</span>"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast"
+                        }
+                      }
+                    },
+                    {
+                      "count": 1090,
+                      "id": "web_animations",
+                      "percentageQuestion": 16.02,
+                      "percentageSurvey": 4.63,
+                      "entity": {
+                        "name": "Web Animations",
+                        "nameClean": "Web Animations",
+                        "id": "web_animations",
+                        "entityType": "feature",
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API"
+                        }
+                      }
+                    },
+                    {
+                      "count": 1025,
+                      "id": "promise_any",
+                      "percentageQuestion": 15.07,
+                      "percentageSurvey": 4.35,
+                      "entity": {
+                        "name": "`Promise.any()`",
+                        "nameHtml": "<code>Promise.any()</code>",
+                        "nameClean": "Promise.any()",
+                        "id": "promise_any",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "const promises = [promise1, promise2, promise3];\n\nPromise.any(promises).then((value) => console.log(value));\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">const</span> promises = [promise1, promise2, promise3];\n\n<span class=\"hljs-title class_\">Promise</span>.<span class=\"hljs-title function_\">any</span>(promises).<span class=\"hljs-title function_\">then</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">value</span>) =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(value));"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-javascript_builtins_promise_any"
+                        }
+                      }
+                    },
+                    {
+                      "count": 929,
+                      "id": "nullish_coalescing",
+                      "percentageQuestion": 13.66,
+                      "percentageSurvey": 3.95,
+                      "entity": {
+                        "name": "Nullish Coalescing",
+                        "nameClean": "Nullish Coalescing",
+                        "id": "nullish_coalescing",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "const foo = null ?? 'default string';\nconsole.log(foo);\n// expected output: \"default string\"\n\nconst baz = 0 ?? 42;\nconsole.log(baz);\n// expected output: 0\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">const</span> foo = <span class=\"hljs-literal\">null</span> ?? <span class=\"hljs-string\">&#x27;default string&#x27;</span>;\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(foo);\n<span class=\"hljs-comment\">// expected output: &quot;default string&quot;</span>\n\n<span class=\"hljs-keyword\">const</span> baz = <span class=\"hljs-number\">0</span> ?? <span class=\"hljs-number\">42</span>;\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(baz);\n<span class=\"hljs-comment\">// expected output: 0</span>"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing"
+                        }
+                      }
+                    },
+                    {
+                      "count": 900,
+                      "id": "webrtc",
+                      "percentageQuestion": 13.23,
+                      "percentageSurvey": 3.82,
+                      "entity": {
+                        "name": "WebRTC",
+                        "nameClean": "WebRTC",
+                        "id": "webrtc",
+                        "entityType": "feature",
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API"
+                        }
+                      }
+                    },
+                    {
+                      "count": 881,
+                      "id": "tsup",
+                      "percentageQuestion": 12.95,
+                      "percentageSurvey": 3.74,
+                      "entity": {
+                        "name": "tsup",
+                        "nameClean": "tsup",
+                        "id": "tsup",
+                        "entityType": "library",
+                        "homepage": {
+                          "url": "https://tsup.egoist.dev/"
+                        },
+                        "npm": {
+                          "url": "https://www.npmjs.com/package/tsup"
+                        }
+                      }
+                    },
+                    {
+                      "count": 37,
+                      "id": "cutoff_answers",
+                      "percentageQuestion": 0.44,
+                      "percentageSurvey": 0.07
+                    },
+                    {
+                      "count": 12689,
+                      "id": "no_answer",
+                      "percentageQuestion": 0,
+                      "percentageSurvey": 53.9,
+                      "entity": {
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 47807,
+                      "id": "overlimit_answers",
+                      "percentageQuestion": 702.83,
+                      "percentageSurvey": 203.08
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
