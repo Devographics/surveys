@@ -7,8 +7,9 @@ query html2023readingListQuery {
             responses(
               parameters: {
                 showNoAnswer: true
-                mergeOtherBuckets: true
+                cutoff: 10
                 limit: 10
+                mergeOtherBuckets: false
               }
             ) {
               currentEdition {
@@ -32,11 +33,12 @@ query html2023readingListQuery {
                     name
                     nameHtml
                     nameClean
+                    alias
                     description
                     descriptionHtml
                     descriptionClean
                     id
-                    type
+                    entityType
                     example {
                       label
                       language

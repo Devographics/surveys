@@ -6,9 +6,10 @@ query html2023mobileWebAppsPainPointsQuery {
           mobile_web_apps_pain_points {
             freeform(
               parameters: {
+                showNoAnswer: true
                 cutoff: 10
-                mergeOtherBuckets: true
                 limit: 10
+                mergeOtherBuckets: true
               }
             ) {
               currentEdition {
@@ -32,11 +33,12 @@ query html2023mobileWebAppsPainPointsQuery {
                     name
                     nameHtml
                     nameClean
+                    alias
                     description
                     descriptionHtml
                     descriptionClean
                     id
-                    type
+                    entityType
                     example {
                       label
                       language
@@ -95,11 +97,12 @@ query html2023mobileWebAppsPainPointsQuery {
                       name
                       nameHtml
                       nameClean
+                      alias
                       description
                       descriptionHtml
                       descriptionClean
                       id
-                      type
+                      entityType
                       example {
                         label
                         language

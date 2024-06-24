@@ -7,9 +7,10 @@ query html2023htmlMissingElementsQuery {
             combined(
               parameters: {
                 showNoAnswer: true
-                cutoffPercent: 0
-                mergeOtherBuckets: true
                 cutoff: 25
+                limit: 20
+                mergeOtherBuckets: true
+                cutoffPercent: 0
               }
             ) {
               currentEdition {
@@ -33,11 +34,12 @@ query html2023htmlMissingElementsQuery {
                     name
                     nameHtml
                     nameClean
+                    alias
                     description
                     descriptionHtml
                     descriptionClean
                     id
-                    type
+                    entityType
                     example {
                       label
                       language
@@ -83,6 +85,71 @@ query html2023htmlMissingElementsQuery {
                     resources {
                       url
                       title
+                    }
+                  }
+                  groupedBuckets {
+                    count
+                    id
+                    percentageQuestion
+                    percentageSurvey
+                    isFreeformData
+                    hasInsufficientData
+                    entity {
+                      name
+                      nameHtml
+                      nameClean
+                      alias
+                      description
+                      descriptionHtml
+                      descriptionClean
+                      id
+                      entityType
+                      example {
+                        label
+                        language
+                        code
+                        codeHighlighted
+                      }
+                      avatar {
+                        url
+                      }
+                      homepage {
+                        url
+                      }
+                      youtube {
+                        url
+                      }
+                      twitter {
+                        url
+                      }
+                      twitch {
+                        url
+                      }
+                      rss {
+                        url
+                      }
+                      blog {
+                        url
+                      }
+                      mastodon {
+                        url
+                      }
+                      github {
+                        url
+                      }
+                      npm {
+                        url
+                      }
+                      mdn {
+                        url
+                      }
+                      caniuse {
+                        url
+                      }
+                      resources {
+                        url
+                        title
+                      }
                     }
                   }
                 }

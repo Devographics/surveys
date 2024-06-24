@@ -9,8 +9,9 @@ query html2023countryVsGenderQuery {
               parameters: {
                 enableCache: false
                 showNoAnswer: true
-                mergeOtherBuckets: true
+                cutoff: 10
                 limit: 15
+                mergeOtherBuckets: false
               }
             ) {
               currentEdition {
@@ -34,11 +35,12 @@ query html2023countryVsGenderQuery {
                     name
                     nameHtml
                     nameClean
+                    alias
                     description
                     descriptionHtml
                     descriptionClean
                     id
-                    type
+                    entityType
                     example {
                       label
                       language

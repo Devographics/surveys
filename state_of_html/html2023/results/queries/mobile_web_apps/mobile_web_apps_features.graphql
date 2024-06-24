@@ -1,4 +1,4 @@
-query html2023mobileWebAppsFeaturesQuery {
+query html2023itemsQuery {
   surveys {
     state_of_html {
       html2023 {
@@ -9,7 +9,8 @@ query html2023mobileWebAppsFeaturesQuery {
               name
               nameClean
               nameHtml
-              type
+              alias
+              entityType
               description
               descriptionClean
               descriptionHtml
@@ -40,6 +41,13 @@ query html2023mobileWebAppsFeaturesQuery {
             }
             responses(facet: _sentiment) {
               currentEdition {
+                ratios {
+                  awareness
+                  interest
+                  usage
+                  retention
+                  positivity
+                }
                 buckets {
                   count
                   id

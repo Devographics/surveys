@@ -6,9 +6,10 @@ query html2023htmlInteroperabilityFeaturesQuery {
           html_interoperability_features {
             freeform(
               parameters: {
+                showNoAnswer: true
                 cutoff: 10
-                mergeOtherBuckets: true
                 limit: 20
+                mergeOtherBuckets: true
               }
             ) {
               currentEdition {
@@ -32,11 +33,12 @@ query html2023htmlInteroperabilityFeaturesQuery {
                     name
                     nameHtml
                     nameClean
+                    alias
                     description
                     descriptionHtml
                     descriptionClean
                     id
-                    type
+                    entityType
                     example {
                       label
                       language
@@ -95,11 +97,12 @@ query html2023htmlInteroperabilityFeaturesQuery {
                       name
                       nameHtml
                       nameClean
+                      alias
                       description
                       descriptionHtml
                       descriptionClean
                       id
-                      type
+                      entityType
                       example {
                         label
                         language

@@ -7,7 +7,9 @@ query html2023interactivityTechniquesQuery {
             responses(
               parameters: {
                 showNoAnswer: true
-                mergeOtherBuckets: true
+                cutoff: 10
+                limit: 20
+                mergeOtherBuckets: false
               }
             ) {
               currentEdition {
@@ -31,11 +33,12 @@ query html2023interactivityTechniquesQuery {
                     name
                     nameHtml
                     nameClean
+                    alias
                     description
                     descriptionHtml
                     descriptionClean
                     id
-                    type
+                    entityType
                     example {
                       label
                       language
