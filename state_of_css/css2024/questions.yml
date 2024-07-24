@@ -6,23 +6,16 @@
     # - id: features_intro_css
     #   template: help
 
-    # - id: grid # removed in 2022, not that new anymore
     - id: subgrid
       showCommentInput: true
-    # - id: flexbox # removed in 2022, too high usage
-    # - id: multi_column # removed in 2022, not new anymore, too niche
     - id: writing_modes
-    # - id: position_sticky # removed in 2022, not that new anymore
     - id: logical_properties
     - id: aspect_ratio
     - id: content_visibility # 2023: thinking about it
     - id: flexbox_gap # 2023: quick win
       yearAdded: 2021
-    # - id: break_rules # removed in 2022, too niche?
-    #   yearAdded: 2021
     - id: at_container # (@container)
       yearAdded: 2021
-    # - id: containment # remove in 2022? confusing with container queries
 
     - id: object_view_box # too new?
       yearAdded: 2022
@@ -38,10 +31,6 @@
   template: feature
   slug: features
   questions:
-    # - id: shapes # removed in 2022, not new anymore, downward trend
-    # - id: object_fit # removed in 2022, not new anymore
-    # - id: clip_path # remove in 2022?
-    # - id: masks # remove in 2022?
     - id: blend_modes
     - id: filter_effects # 2023: quick win
     - id: backdrop_filter
@@ -56,7 +45,6 @@
     #     - id: style_jungle
     #     - id: css_zen_garden
 
-    # - id: perspective # removed in 2022, downward trend and too niche
     - id: intrinsic_sizing #min-, max, and fit-content
       yearAdded: 2021
     - id: conic_gradient
@@ -77,7 +65,6 @@
   template: feature
   slug: features
   questions:
-    # - id: color_gamut # removed in 2022, too niche
     - id: color_function
       yearAdded: 2021
     - id: accent_color
@@ -100,15 +87,10 @@
   questions:
     - id: scroll_snap
     - id: overscroll_behavior
-    # - id: overflow_anchor # removed in 2022, too niche/no upwards trend
     - id: touch_action # remove in 2022?
-    # - id: pointer_events # removed in 2022, too old
-    # - id: scroll_timeline # removed in 2022, deprecated? https://developer.mozilla.org/en-US/docs/Web/CSS/@scroll-timeline
 
     - id: scroll_behavior
       yearAdded: 2022
-    # - id: scroll_padding # not added since part of scroll snap
-    #   yearAdded: 2022
     - id: scrollbar_gutter
       yearAdded: 2022
 
@@ -116,23 +98,21 @@
   template: feature
   slug: features
   questions:
-    # - id: font_variant # remove in 2022? downward trend
-    # - id: initial_letter # removed in 2022, downward trend and no browser support
-    # - id: font_variant_numeric # removed in 2022, because there is already font-variant
     - id: font_display
     - id: line_clamp
     - id: variable_fonts
 
     - id: font_palette
       yearAdded: 2022
-    # - id: color_fonts # not a specific CSS feature…
-    #   yearAdded: 2022
 
     - id: text_wrap_balance
       yearAdded: 2023
 
     # - id: text_box_trim # too early?
     #   yearAdded: 2024
+
+    - id: font_size_adjust
+      yearAdded: 2024
 
 - id: accessibility
   template: feature
@@ -142,15 +122,8 @@
     - id: prefers_color_scheme
     - id: prefers_reduced_data
       yearAdded: 2021
-    # - id: color_contrast #removed in 2023, it's been renamed to contrast-color()
-    #   yearAdded: 2021
     - id: color_scheme
       yearAdded: 2021
-    # - id: tabindex # removed in 2022, not CSS
-    #   yearAdded: 2021
-    # - id: aria_attributes # removed in 2022, not CSS
-    #   yearAdded: 2021
-    # - prefers-reduced-transparency # not supported yet
     - id: prefers_contrast
       yearAdded: 2022
     - id: forced_colors
@@ -183,9 +156,6 @@
   questions:
     - id: variables
     - id: feature_support_queries # (@supports)
-    # - id: will_change # removed in 2023, too niche
-    # - id: calc # removed in 2022, too high usage
-    # - id: houdini # removed in 2022, not specific enough
     - id: comparison_functions
 
     - id: at_property #(@property)
@@ -204,17 +174,6 @@
 
     - id: shadow_dom_css
       yearAdded: 2022
-
-    # decided to group the following as a single question after all
-    # - id: shadow_dom_part
-    #   yearAdded: 2022
-    # - id: shadow_dom_host
-    #   yearAdded: 2022
-    # - id: shadow_dom_slotted
-    #   yearAdded: 2022
-
-    # - id: houdini_paint_api # remove in 2022? not much activity
-    #   yearAdded: 2022
 
     # - id: when_else_rules # too new?
     #   yearAdded: 2023
@@ -236,32 +195,8 @@
     - id: individual_transform_properties
       yearAdded: 2023
 
-    # - id: at_scope # too new?
-    # yearAdded: 2024
-
-### TOOLS ###
-
-# - id: pre_post_processors # removed in 2022
-#   template: tool
-#   slug: tools
-#   questions:
-#     - id: sass
-#     - id: less
-#     - id: post_css
-#     - id: stylus
-#     - id: assembler_css
-#       yearAdded: 2021
-
-#     - id: pre_post_processors
-#       intlId: tools.other_tools
-#       template: others
-#       sectionSlug: tools_others
-#       matchTags: [libraries, other]
-
-#     - id: pre_post_processors
-#       intlId: tools.happiness
-#       template: happiness
-#       sectionSlug: happiness
+    - id: at_scope # too new?
+      yearAdded: 2024
 
 - id: css_frameworks
   template: tool
@@ -277,13 +212,10 @@
     - id: semantic_ui
     - id: bulma
     - id: foundation
-    - id: ui_kit
-    - id: tachyons
-    # - id: primer # removed 2023
+    # - id: ui_kit # removed in 2024
+    # - id: tachyons # removed in 2024
     - id: tailwind_css
-    - id: pure_css
-    # - id: halfmoon # removed 2023
-    #   yearAdded: 2021
+    # - id: pure_css # removed in 2024
     - id: open_props
       yearAdded: 2023
     - id: blaze_ui
@@ -312,11 +244,6 @@
     - id: css_modules
     - id: styled_system
     - id: stitches
-    # - id: fela # removed in 2023
-    # - id: linaria # removed in 2023
-    # - id: astroturf # removed in 2023
-    # - id: twin # removed in 2023
-    #   yearAdded: 2021
     - id: theme_ui
       yearAdded: 2021
     - id: vanilla_extract
@@ -329,7 +256,6 @@
     - id: css_in_js_others
       intlId: tools.other_tools
       template: others
-      sectionSlug: tools_others
       matchTags: [libraries]
 
     - id: css_in_js_happiness
@@ -579,130 +505,25 @@
 
 - id: resources
   questions:
-    - id: learning_methods
-      intlId: resources.learning_methods_css
-      template: multipleWithOther
-      matchTags:
-        [first_steps, courses, people, youtube, sites, newsletters, socialmedia]
-      options:
-        - id: na
-        - id: books
-        - id: bootcamp
-        - id: courses_free
-        - id: courses_paid
-        - id: mentoring
-        - id: on_the_job
-        - id: podcasts
-        - id: school
-        - id: self_directed
-        - id: videos
-        - id: view_source
-
     - id: blogs_news_magazines
-      template: multipleWithOther
+      template: textList
       matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
-      options:
-        - id: na
-        - id: a_list_apart
-        - id: codrops
-        - id: css_irl
-        - id: css_tricks
-        - id: css_weekly
-        - id: devto
-        - id: frontend_focus
-        - id: frontend_horse
-        - id: heydesigner
-        - id: medium
-        - id: moderncss
-        - id: sidebar
-        - id: sitepoint
-        - id: smashing_magazine
 
-    - id: sites_courses
-      template: multipleWithOther
+    - id: courses
+      template: textList
       matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
-      options:
-        - id: na
-        - id: codecademy
-        - id: csswg
-        - id: designcode
-        - id: egghead
-        - id: freecodecamp
-        - id: frontendmasters
-        - id: levelup
-        - id: mdn
-        - id: newline
-        - id: pluralsight
-        - id: stack_overflow
-        - id: udemy
-        - id: w3schools
-        - id: web_dev
-        - id: wes_bos
 
     - id: podcasts
-      template: multipleWithOther
-      matchTags: [podcasts, people, sites]
-      options:
-        - id: na
-        - id: a11y_rules
-        - id: changelog
-        - id: codepen_radio
-        - id: css_podcast
-        - id: front_end_happy_hour
-        - id: frontend_first
-        - id: frontend_weekend
-        - id: full_stack_radio
-        - id: http_203
-        - id: jamstack_radio
-        - id: ladybug
-        - id: modern_web
-        - id: shop_talk_show
-        - id: software_engineering_daily
-        - id: syntaxfm
-        - id: the_bike_shed
-        - id: tools_day
-        - id: undefined_podcast
-        - id: web_platform_podcast
-        - id: web_standards_ru
-        - id: working_draft
+      template: textList
+      matchTags: [podcasts, people, video_creators, sites]
 
-    # - id: video_creators
-    #   template: multiple
-    #   allowOther: true
-    #   matchTags:
-    #     [
-    #       video_creators,
-    #       youtube,
-    #       courses,
-    #       people,
-    #       sites,
-    #       newsletters,
-    #       socialmedia,
-    #     ]
-    #   options:
-    #     - id: fireship
-    #     - id: kevin_j_powell
-    #     - id: fun_fun_function
-    #     - id: theo_browne
-    #     - id: tina_huang
-    #     - id: jason_goodison # https://www.youtube.com/c/JasonGoodison/videos
-    #     - id: programming_with_mosh # mosh_hamedani https://codewithmosh.com/ https://www.youtube.com/c/programmingwithmosh
-    #     - id: kent_c_dodds
-    #     - id: brad_traversy
-    #     - id: clever_programmer # rafeh_qazi https://www.youtube.com/c/CleverProgrammer
-    #     - id: ben_awad # https://www.youtube.com/channel/UC-8QAzbLcRglXeN_MY9blyw
-    #     - id: web_dev_simplified # kyle cook https://www.youtube.com/c/WebDevSimplified/
-    #     - id: coding_train # Daniel Shiffman https://www.youtube.com/user/shiffman?app=desktop
-    #     - id: net_ninja # https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg?app=desktop
-    #     - id: the_primeagen # https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg?app=desktop
-    #     - id: jack_herrington # https://www.youtube.com/@jherr
-    #     - id: midudev
-    #     - id: mayuko
-    #     - id: coding_garden
+    - id: video_creators
+      template: textList
+      matchTags: [video_creators, youtube, courses, people, sites, newsletters]
+      disallowedTokenIds: [youtube]
 
     - id: people
-      yearAdded: 2021
-      template: multipleWithOther
+      template: textList
       matchTags:
         [
           video_creators,
@@ -713,59 +534,40 @@
           newsletters,
           socialmedia,
         ]
-      options:
-        - id: na
-        - id: adam_argyle
-        - id: adam_wathan
-        - id: ahmad_shadeed
-        - id: andy_bell
-        - id: bramus_van_damme
-        - id: chris_coyier
-        - id: jake_archibald
-        - id: jen_simmons
-        - id: jhey_tompkins
-        - id: josh_comeau
-        - id: kevin_j_powell
-        - id: kyle_cook
-        - id: lea_verou
-        - id: michelle_barker
-        - id: miriam_suzanne
-        - id: rachel_andrew
-        - id: sara_soueidan
-        - id: stephanie_eckles
-        - id: una_kravets
-        - id: vadim_makeev
-        - id: wes_bos
+      disallowedTokenIds: [youtube]
 
     - id: other_surveys
       template: multipleWithOther
       matchTags: [surveys]
       options:
-        - id: na
         - id: state_of_js_survey
         # - id: state_of_css_survey
         - id: state_of_graphql_survey
+        - id: state_of_html_survey
+        - id: state_of_react_survey
         - id: jetbrains_survey
         - id: stack_overflow_survey
         - id: codingame_survey
         - id: uxtools_survey
         - id: postman_survey
+        - id: netlify_survey
 
 ### DEMOGRAPHICS ###
 
 - id: user_info
+  slug: user_info
   questions:
     - id: age
-      template: age
+      template: age_number
 
     - id: years_of_experience
-      template: years_of_experience
+      template: years
 
     - id: company_size
       template: company_size
 
     - id: yearly_salary
-      template: yearly_salary
+      template: yearly_salary_v2
 
     - id: higher_education_degree
       template: higher_education_degree
@@ -784,58 +586,59 @@
 
     - id: how_did_user_find_out_about_the_survey
       template: text
+      matchType: single
       matchTags:
         [
-          sources,
-          sources_state_of_css,
           people,
           sites,
           newsletters,
           video_creators,
           podcasts,
-          socialmedia,
           surveys,
           events,
+          socialmedia,
+          common_sources,
+          state_of_css_sources,
         ]
 
     - id: how_can_we_improve
-      template: longtext
+      template: textList
 
     - id: receive_notifications
       template: receive_notifications
 
     - id: referrer
+      matchType: single
       matchTags:
         [
-          sources,
-          sources_state_of_css,
           people,
           sites,
           newsletters,
           video_creators,
           podcasts,
-          sources_state_of_css,
-          socialmedia,
           surveys,
           events,
+          socialmedia,
+          common_sources,
+          state_of_css_sources,
         ]
       hidden: true
       template: referrer
 
     - id: sourcetag
+      matchType: single
       matchTags:
         [
-          sources,
-          sources_state_of_css,
           people,
           sites,
           newsletters,
           video_creators,
           podcasts,
-          sources_state_of_css,
-          socialmedia,
           surveys,
           events,
+          socialmedia,
+          common_sources,
+          state_of_css_sources,
         ]
       hidden: true
       template: sourcetag
