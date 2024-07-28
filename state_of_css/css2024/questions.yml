@@ -1,5 +1,5 @@
 - id: layout
-  template: feature
+  template: featurev3
   slug: features
   messageId: features.features_intro_css
   questions:
@@ -11,14 +11,17 @@
     - id: writing_modes
     - id: logical_properties
     - id: aspect_ratio
-    - id: content_visibility # 2023: thinking about it
-    - id: flexbox_gap # 2023: quick win
-      yearAdded: 2021
-    - id: at_container # (@container)
+    # - id: content_visibility # removed in 2024 (too niche)
+    # - id: flexbox_gap # removed in 2024 (broad usage)
+    #   yearAdded: 2021
+    - id: at_container # (@container size queries)
       yearAdded: 2021
 
-    - id: object_view_box # too new?
-      yearAdded: 2022
+    - id: at_container_style # (@container style queries)
+      yearAdded: 2024
+
+    # - id: object_view_box # removed in 2024 (too niche)
+    #   yearAdded: 2022
     - id: viewport_percentage_length_units
       yearAdded: 2022
     - id: media_queries_range_contexts
@@ -28,7 +31,7 @@
       yearAdded: 2023
 
 - id: shapes_graphics
-  template: feature
+  template: featurev3
   slug: features
   questions:
     - id: blend_modes
@@ -50,8 +53,8 @@
     - id: conic_gradient
       yearAdded: 2021
 
-    - id: view_transitions
-      yearAdded: 2023
+    - id: offset_path
+      yearAdded: 2024
 
     # - id: quiz_css_spec
     #   intlId: quiz.quiz_css_spec
@@ -62,7 +65,7 @@
     #     - id: mdn
 
 - id: colors
-  template: feature
+  template: featurev3
   slug: features
   questions:
     - id: color_function
@@ -70,8 +73,8 @@
     - id: accent_color
       yearAdded: 2021
 
-    - id: currentcolor
-      yearAdded: 2022
+    # - id: currentcolor # removed in 2024
+    #   yearAdded: 2022
     - id: color_mix
       yearAdded: 2022
     - id: wide_gamut_colors
@@ -82,7 +85,7 @@
       yearAdded: 2022
 
 - id: interactions
-  template: feature
+  template: featurev3
   slug: features
   questions:
     - id: scroll_snap
@@ -94,16 +97,22 @@
     - id: scrollbar_gutter
       yearAdded: 2022
 
+    - id: view_transitions
+      yearAdded: 2023
+
+    - id: scroll_timeline
+      yearAdded: 2024
+
 - id: typography
-  template: feature
+  template: featurev3
   slug: features
   questions:
     - id: font_display
     - id: line_clamp
     - id: variable_fonts
 
-    - id: font_palette
-      yearAdded: 2022
+    # - id: font_palette # removed in 2024 (too niche)
+    #   yearAdded: 2022
 
     - id: text_wrap_balance
       yearAdded: 2023
@@ -111,11 +120,14 @@
     # - id: text_box_trim # too early?
     #   yearAdded: 2024
 
-    - id: font_size_adjust
+    # - id: font_size_adjust # too niche
+    #   yearAdded: 2024
+
+    - id: initial_letter
       yearAdded: 2024
 
 - id: accessibility
-  template: feature
+  template: featurev3
   slug: features
   questions:
     - id: prefers_reduced_motion
@@ -133,13 +145,16 @@
     - id: focus_visible
       yearAdded: 2022
 
+    - id: light_dark
+      yearAdded: 2024
+
 # - id: selectors
-#   template: feature
+#   template: featurev3
 #   slug: features
 #   questions:
 
 # - id: javascript_apis
-#   template: feature
+#   template: featurev3
 #   slug: features
 #   questions:
 
@@ -151,10 +166,10 @@
 #   yearAdded: 2023
 
 - id: other_features
-  template: feature
+  template: featurev3
   slug: features
   questions:
-    - id: variables
+    # - id: variables # removed in 2024 (too widespread)
     - id: feature_support_queries # (@supports)
     - id: comparison_functions
 
@@ -172,15 +187,13 @@
     - id: cascade_layers
       yearAdded: 2022
 
-    - id: shadow_dom_css
-      yearAdded: 2022
+    # - id: shadow_dom_css # removed in 2024 (move wc stuff to html survey)
+    #   yearAdded: 2022
 
     # - id: when_else_rules # too new?
     #   yearAdded: 2023
     - id: trigonometric_functions # too new?
       yearAdded: 2022
-    # - id: stepped_value_functions # too new?
-    #   yearAdded: 2023
     - id: css_nesting # too new?
       yearAdded: 2022
     # - id: env_function # too new?
@@ -195,79 +208,124 @@
     - id: individual_transform_properties
       yearAdded: 2023
 
-    - id: at_scope # too new?
+    - id: at_scope
       yearAdded: 2024
 
-- id: css_frameworks
-  template: tool
-  slug: tools
-  messageId: tools.tools_intro_css
-  questions:
-    # - id: tools_intro_css
-    #   template: help
+# - id: css_frameworks
+#   template: tool
+#   slug: tools
+#   messageId: tools.tools_intro_css
+#   questions:
+#     # - id: tools_intro_css
+#     #   template: help
 
-    - id: bootstrap
-    - id: materialize_css
-    - id: ant_design
-    - id: semantic_ui
-    - id: bulma
-    - id: foundation
-    # - id: ui_kit # removed in 2024
-    # - id: tachyons # removed in 2024
-    - id: tailwind_css
-    # - id: pure_css # removed in 2024
-    - id: open_props
-      yearAdded: 2023
-    - id: blaze_ui
-      yearAdded: 2023
-    - id: uno_css
-      yearAdded: 2023
+#     - id: bootstrap
+#     - id: materialize_css
+#     - id: ant_design
+#     - id: semantic_ui
+#     - id: bulma
+#     - id: foundation
+#     # - id: ui_kit # removed in 2024
+#     # - id: tachyons # removed in 2024
+#     - id: tailwind_css
+#     # - id: pure_css # removed in 2024
+#     - id: open_props
+#       yearAdded: 2023
+#     - id: blaze_ui
+#       yearAdded: 2023
+#     - id: uno_css
+#       yearAdded: 2023
 
-    - id: css_frameworks_others
-      intlId: tools.other_tools
-      template: others
-      matchTags: [libraries]
+#     - id: css_frameworks_others
+#       intlId: tools.other_tools
+#       template: others
+#       matchTags: [libraries]
 
-    - id: css_frameworks_happiness
-      intlId: tools.happiness
-      template: happiness
-      sectionSlug: happiness
+#     - id: css_frameworks_happiness
+#       intlId: tools.happiness
+#       template: happiness
+#       sectionSlug: happiness
 
-- id: css_in_js
-  template: tool
-  slug: tools
-  questions:
-    - id: styled_components
-    - id: jss
-    - id: styled_jsx
-    - id: emotion
-    - id: css_modules
-    - id: styled_system
-    - id: stitches
-    - id: theme_ui
-      yearAdded: 2021
-    - id: vanilla_extract
-      yearAdded: 2021
-    - id: windi_css
-      yearAdded: 2021
-    # - id: panda_css
-    #   yearAdded: 2024
+# - id: css_in_js
+#   template: tool
+#   slug: tools
+#   questions:
+#     - id: styled_components
+#     - id: jss
+#     - id: styled_jsx
+#     - id: emotion
+#     - id: css_modules
+#     - id: styled_system
+#     - id: stitches
+#     - id: theme_ui
+#       yearAdded: 2021
+#     - id: vanilla_extract
+#       yearAdded: 2021
+#     - id: windi_css
+#       yearAdded: 2021
+#     # - id: panda_css
+#     #   yearAdded: 2024
 
-    - id: css_in_js_others
-      intlId: tools.other_tools
-      template: others
-      matchTags: [libraries]
+#     - id: css_in_js_others
+#       intlId: tools.other_tools
+#       template: others
+#       matchTags: [libraries]
 
-    - id: css_in_js_happiness
-      intlId: tools.happiness
-      template: happiness
-      sectionSlug: happiness
+#     - id: css_in_js_happiness
+#       intlId: tools.happiness
+#       template: happiness
+#       sectionSlug: happiness
 
 ### OTHER TOOLS ###
 
 - id: other_tools
   slug: tools
   questions:
+    - id: css_frameworks
+      template: multipleWithOther
+      matchTags: [libraries]
+      options:
+        - id: bootstrap
+        - id: materialize_css
+        - id: ant_design
+        - id: semantic_ui
+        - id: bulma
+        - id: foundation
+        # - id: ui_kit # removed in 2024
+        # - id: tachyons # removed in 2024
+        - id: tailwind_css
+        # - id: pure_css # removed in 2024
+        - id: open_props
+          yearAdded: 2023
+        - id: blaze_ui
+          yearAdded: 2023
+        - id: uno_css
+          yearAdded: 2023
+
+    - id: css_in_js
+      template: multipleWithOther
+      matchTags: [libraries]
+      options:
+        - id: styled_components
+        - id: jss
+        - id: styled_jsx
+        - id: emotion
+        - id: css_modules
+        - id: styled_system
+        # - id: stitches # removed in 2024
+        # - id: theme_ui # removed in 2024
+        #   yearAdded: 2021
+        - id: vanilla_extract
+          yearAdded: 2021
+        # - id: windi_css # removed in 2024
+        #   yearAdded: 2021
+        - id: panda_css
+          yearAdded: 2024
+        - id: pigment_css
+          yearAdded: 2024
+        - id: stylex
+          yearAdded: 2024
+
     - id: pre_post_processors
       template: multipleWithOther
       matchTags: [libraries]
@@ -322,7 +380,6 @@
   intlId: sections.usage_css
   questions:
     - id: form_factors
-      intlId: environments.form_factors
       template: multipleWithOther
       matchTags: [form_factors, browsers]
       options:
@@ -361,7 +418,6 @@
     #   yearAdded: 2021
 
     - id: what_do_you_use_css_for
-      intlId: environments.what_do_you_use_css_for
       template: multipleWithOther
       matchTags: [css_uses]
       options:
@@ -376,7 +432,6 @@
         - id: web_apps
 
     - id: industry_sector
-      intlId: user_info.industry_sector
       template: multipleWithOther
       matchTags: [industry_sectors]
       options:
@@ -407,7 +462,6 @@
         - id: transport
 
     - id: usage_type
-      intlId: usage.css_usage_type
       yearAdded: 2023
       template: singleWithOther
       options:
@@ -493,11 +547,9 @@
         - id: performance_issues
 
     - id: state_of_the_web_happiness
-      intlId: happiness.state_of_the_web
       template: happiness
       sectionSlug: happiness
     - id: state_of_css_happiness
-      intlId: happiness.state_of_css
       template: happiness
       sectionSlug: happiness
 
