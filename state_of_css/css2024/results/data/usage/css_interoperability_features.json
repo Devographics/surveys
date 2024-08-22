@@ -8,28 +8,165 @@
               "freeform": {
                 "currentEdition": {
                   "completion": {
-                    "count": 1,
-                    "percentageSurvey": 3.57,
-                    "total": 28
+                    "count": 117,
+                    "percentageSurvey": 17.75,
+                    "total": 659
                   },
                   "buckets": [
                     {
-                      "count": 27,
-                      "id": "no_answer",
-                      "percentageQuestion": 0,
-                      "percentageSurvey": 96.43
+                      "count": 21,
+                      "id": "view_transitions",
+                      "percentageQuestion": 17.95,
+                      "percentageSurvey": 3.19,
+                      "entity": {
+                        "name": "ViewTransition API",
+                        "nameClean": "ViewTransition API",
+                        "id": "view_transitions",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "::view-transition-old(main-image),\n::view-transition-new(main-image) {\n  transform-origin: right top;\n}\n\n::view-transition-new(main-image) {\n  animation: 400ms ease-out both grow;\n}\n\nfigure {\n  view-transition-name: main-image;\n}\n",
+                          "codeHighlighted": "::<span class=\"hljs-built_in\">view-transition-old</span>(main-image),\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">transform-origin</span>: right top;\n}\n\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">animation</span>: <span class=\"hljs-number\">400ms</span> ease-out both grow;\n}\n\n<span class=\"hljs-selector-tag\">figure</span> {\n  view-<span class=\"hljs-attribute\">transition</span>-name: main-image;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-api_viewtransition"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://developer.chrome.com/docs/web-platform/view-transitions/",
+                            "title": "Smooth and simple transitions with the View Transitions API"
+                          }
+                        ]
+                      }
                     },
                     {
-                      "count": 2,
+                      "count": 17,
+                      "id": "css_animations",
+                      "percentageQuestion": 14.53,
+                      "percentageSurvey": 2.58,
+                      "entity": {
+                        "id": "css_animations",
+                        "entityType": "feature",
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-animation"
+                        }
+                      }
+                    },
+                    {
+                      "count": 16,
+                      "id": "anchor_positioning",
+                      "percentageQuestion": 13.68,
+                      "percentageSurvey": 2.43,
+                      "entity": {
+                        "name": "Anchor Positioning",
+                        "nameClean": "Anchor Positioning",
+                        "id": "anchor_positioning",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".slider-link {\n  anchor-name: var(--is);\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.slider-link</span> {\n  anchor-name: <span class=\"hljs-built_in\">var</span>(--is);\n}"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://kizu.dev/anchor-positioning-experiments/",
+                            "title": "Future CSS: Anchor Positioning\n"
+                          },
+                          {
+                            "url": "https://developer.chrome.com/blog/tether-elements-to-each-other-with-css-anchor-positioning/",
+                            "title": "Tether elements to each other with CSS anchor positioning\n"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "count": 12,
+                      "id": "css_nesting",
+                      "percentageQuestion": 10.26,
+                      "percentageSurvey": 1.82,
+                      "entity": {
+                        "name": "CSS Nesting",
+                        "nameClean": "CSS Nesting",
+                        "id": "css_nesting",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".parent {\n  color: blue;\n\n  .child {\n    color: red;\n  }\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.parent</span> {\n  <span class=\"hljs-attribute\">color</span>: blue;\n\n  <span class=\"hljs-selector-class\">.child</span> {\n    <span class=\"hljs-attribute\">color</span>: red;\n  }\n}"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://developer.chrome.com/articles/css-nesting/",
+                            "title": "CSS Nesting"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "count": 12,
+                      "id": "scoping",
+                      "percentageQuestion": 10.26,
+                      "percentageSurvey": 1.82,
+                      "entity": {
+                        "name": "Scoping",
+                        "nameClean": "Scoping",
+                        "id": "scoping",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 10,
+                      "id": "has_selector",
+                      "percentageQuestion": 8.55,
+                      "percentageSurvey": 1.52,
+                      "entity": {
+                        "name": "`:has()`",
+                        "nameHtml": "<code>:has()</code>",
+                        "nameClean": ":has()",
+                        "id": "has_selector",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "a:has(> img) {\n  border: 2px solid grey;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-tag\">a</span><span class=\"hljs-selector-pseudo\">:has</span>(&gt; <span class=\"hljs-selector-tag\">img</span>) {\n  <span class=\"hljs-attribute\">border</span>: <span class=\"hljs-number\">2px</span> solid grey;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/:has"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-has"
+                        }
+                      }
+                    },
+                    {
+                      "count": 542,
+                      "id": "no_answer",
+                      "percentageQuestion": 0,
+                      "percentageSurvey": 82.25
+                    },
+                    {
+                      "count": 169,
                       "id": "other_answers",
-                      "percentageQuestion": 200,
-                      "percentageSurvey": 7.14,
+                      "percentageQuestion": 144.33,
+                      "percentageSurvey": 25.63,
                       "groupedBuckets": [
                         {
-                          "count": 2,
+                          "count": 97,
                           "id": "cutoff_answers",
-                          "percentageQuestion": 200,
-                          "percentageSurvey": 7.14
+                          "percentageQuestion": 82.79,
+                          "percentageSurvey": 14.7
+                        },
+                        {
+                          "count": 72,
+                          "id": "no_match",
+                          "percentageQuestion": 61.54,
+                          "percentageSurvey": 10.93
                         }
                       ]
                     }
