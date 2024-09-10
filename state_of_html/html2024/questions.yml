@@ -19,8 +19,15 @@
     - id: media_capture
     - id: showpicker
     - id: formdata
-    - id: selectlist_element
+    - id: customizable_select
     - id: contenteditable_plaintext
+
+    - id: edit_context
+      yearAdded: 2024
+
+    - id: caret_position_from_point
+      yearAdded: 2024
+
     # - id: form_request_submit
 
     # - id: form_input_types
@@ -69,6 +76,10 @@
     - id: accordion_element
     - id: popover_api
     - id: inert_attribute
+
+    - id: clipboard_api
+      yearAdded: 2024
+
     # - id: navigation_api
 
     # - id: dom_attribute_features
@@ -140,6 +151,17 @@
     # - id: sanitizer_api
     # - id: iframe_seamless
     # - id: text_fragments
+
+    - id: custom_highlight_api
+      yearAdded: 2024
+
+    - id: set_html_unsafe
+      yearAdded: 2024
+    - id: parse_html_unsafe
+      yearAdded: 2024
+
+    - id: intl_segmenter
+      yearAdded: 2024
 
     # - id: external_content_elements
     #   template: multipleWithOtherSentiment
@@ -266,6 +288,11 @@
         - id: elix
         - id: lion_wc
         - id: material_wc
+        - id: litelement
+        - id: stencil
+        - id: polymer
+        - id: svelte
+        - id: ionic
         - id: na
 
     - id: using_web_components_pain_points
@@ -319,6 +346,7 @@
         - id: color_alternative
         - id: prefers_reduced_motion
         - id: prefers_contrast
+        - id: prefers_color_scheme
         - id: na
 
     - id: accessibility_screenreaders
@@ -329,6 +357,11 @@
         - id: jaws
         - id: talkback
         - id: nvda
+        - id: narrator
+        - id: orca
+        - id: chrome_devtools
+        - id: chromevox
+        - id: wave
         - id: na
 
     - id: accessibility_tools
@@ -341,6 +374,17 @@
         - id: assistiv_labs
         - id: voiceover_js
         - id: guidepup
+        - id: wave
+        - id: browser_devtools
+        - id: firefox_accessibility_inspector
+        - id: siteimprove
+        - id: accessibility_insights
+        - id: pa11y
+        - id: storybook
+        - id: arc
+        - id: polypane
+        - id: guidepup
+        - id: ibm_accessibility_checker
         - id: na
 
     - id: accessibility_pain_points
@@ -438,6 +482,19 @@
         - id: nextjs
         - id: nuxt
         - id: astro
+        - id: sveltekit
+        - id: remix
+        - id: na
+
+    - id: validation_tools
+      template: multipleWithOther
+      order: alphabetical
+      matchTags: [libraries]
+      options:
+        - id: w3c_validator
+        - id: nu_html_checker
+        - id: html_validate
+        - id: html_hint
         - id: na
 
     # - id: other_tools
@@ -514,6 +571,27 @@
         [html_features, js_features, css_features, html_missing_features]
       template: textList
 
+    - id: html_new_features
+      limit: 3
+      template: multipleWithOther
+      allowComment: true
+      order: random
+      matchTags:
+        [features_html, features_js, css_features, html_missing_features]
+      options:
+        - id: popover_api
+        - id: custom_highlight_api
+        - id: clipboard_api
+        - id: accelerometer_api
+        - id: picture_in_picture_api
+        - id: edit_context
+        - id: eyedropper
+        - id: file_system_access
+        - id: jpeg_xl
+        - id: web_bluetooth_api
+        - id: background_fetch
+        - id: idle_detector
+
     - id: html_missing_elements
       limit: 3
       template: multipleWithOther
@@ -566,16 +644,16 @@
     #     - id: toast
     #     - id: toggle
 
-    - id: tools_for_other_developers
-      template: single
-      order: alphabetical
-      allowComment: true
-      options:
-        - id: na
-        - id: a_few
-        - id: less_than_1000
-        - id: more_than_1000
-        - id: more_than_1000000
+    # - id: tools_for_other_developers
+    #   template: single
+    #   order: alphabetical
+    #   allowComment: true
+    #   options:
+    #     - id: na
+    #     - id: a_few
+    #     - id: less_than_1000
+    #     - id: more_than_1000
+    #     - id: more_than_1000000
 
     - id: html_css_js_balance
       template: slider
@@ -629,6 +707,14 @@
     #   longText: true
 
 ### DEMOGRAPHICS ###
+
+# - id: opinions
+#   questions:
+#     - id: accessibility_is_important
+#       template: opinion
+
+#     - id: how_important_is_accessibility
+#       template: opinion
 
 - id: user_info
   questions:
