@@ -383,7 +383,6 @@
         - id: storybook
         - id: arc
         - id: polypane
-        - id: guidepup
         - id: ibm_accessibility_checker
         - id: na
 
@@ -472,7 +471,6 @@
   questions:
     - id: site_generators
       template: multipleWithOther
-      order: alphabetical
       matchTags: [libraries]
       options:
         - id: jekyll
@@ -488,7 +486,6 @@
 
     - id: validation_tools
       template: multipleWithOther
-      order: alphabetical
       matchTags: [libraries]
       options:
         - id: w3c_validator
@@ -497,67 +494,68 @@
         - id: html_hint
         - id: na
 
-    # - id: other_tools
-    #   template: multipleWithOther
-    #   options:
-    #     - id: na
-    #     - id: emmet
+    - id: performance_tools
+      template: multipleWithOther
+      matchTags: [services]
+      options:
+        - id: lighthouse
+        - id: browser_devtools
+        - id: pagespeed_insights
+        - id: webpagetest
+        - id: pingdom
+        - id: na
 
-    # - id: ai_tools
-    #   template: multipleWithOtherSentiment
-    #   order: random
-    #   options:
-    #     - id: copilot
-    #     - id: chat_gpt
-    #     - id: bard
-    #     - id: bing
-    #     - id: perplexity
-    #     - id: cursor
-    #     - id: phind
-    #     - id: codium
-    #     - id: codeium
-    #     - id: tabnine
-    #     - id: code_whisperer
-    #     - id: cody
-    #     - id: jetbrains_ai
-    #     - id: llama
-    #     - id: claude
-    #     - id: v0
-    #     - id: na
+    - id: analytics_tools
+      template: multipleWithOther
+      matchTags: [services]
+      options:
+        - id: google_analytics
+        - id: plausible
+        - id: fathom
+        - id: new_relic
+        - id: mixpanel
+        - id: clicky
+        - id: matomo
+        - id: heap
+        - id: datadog
+        - id: na
 
-    # - id: front_end_frameworks
-    #   template: multipleWithOtherSentiment
-    #   options:
-    #     - id: na
-    #     - id: web_components
-    #     - id: react
-    #     - id: angular
-    #     - id: vuejs
-    #     - id: lit
-    #     - id: htmx
-    #     - id: alpine
-    #     - id: svelte
-    #     - id: solid
-    #     - id: qwik
-    #     - id: jquery
+    - id: browsers
+      template: multipleWithOther
+      options:
+        - id: edge
+        - id: chrome
+        - id: safari
+        - id: firefox
+        - id: internet_explorer_11
+        - id: internet_explorer_8_9_10
+        - id: opera_mini
+        - id: safari_ios
+        - id: chrome_ios
+        - id: chrome_android
+        - id: firefox_android
+        - id: samsung_internet
+        - id: vivaldi
+        - id: brave
+        - id: ucbrowser
+        - id: opera
+        - id: polypane
+        - id: arc
+        - id: ladybird
 
-    # - id: blast_from_the_past
-    #   template: multiple
-    #   allowOther: false
-    #   allowComment: true
-    #   countsTowardScore: true
-    #   order: random
-    #   options:
-    #     - id: blink_element
-    #     - id: marquee_element
-    #     - id: plaintext_element
-    #     - id: frameset_element
-    #     - id: font_element
-    #     - id: center_element
-    #     - id: isindex_element
-    #     - id: nextid_element
-    #     - id: applet_element
-    #     - id: na
+    - id: web_platform_resources
+      template: multipleWithOther
+      matchTags: [sites]
+      sectionId: resources
+      options:
+        - id: w3c
+        - id: mdn
+        - id: web_dev
+        - id: caniuse
+        - id: chrome_platform_status
+        - id: webkit_blog
+        - id: http_archive
+        - id: web_features_explorer
 
 - id: usage
   questions:
@@ -571,26 +569,26 @@
         [html_features, js_features, css_features, html_missing_features]
       template: textList
 
-    - id: html_new_features
-      limit: 3
-      template: multipleWithOther
-      allowComment: true
-      order: random
-      matchTags:
-        [features_html, features_js, css_features, html_missing_features]
-      options:
-        - id: popover_api
-        - id: custom_highlight_api
-        - id: clipboard_api
-        - id: accelerometer_api
-        - id: picture_in_picture_api
-        - id: edit_context
-        - id: eyedropper
-        - id: file_system_access
-        - id: jpeg_xl
-        - id: web_bluetooth_api
-        - id: background_fetch
-        - id: idle_detector
+    # - id: html_new_features
+    #   limit: 3
+    #   template: multipleWithOther
+    #   allowComment: true
+    #   order: random
+    #   matchTags:
+    #     [features_html, features_js, css_features, html_missing_features]
+    #   options:
+    #     - id: popover_api
+    #     - id: custom_highlight_api
+    #     - id: clipboard_api
+    #     - id: accelerometer_api
+    #     - id: picture_in_picture_api
+    #     - id: edit_context
+    #     - id: eyedropper
+    #     - id: file_system_access
+    #     - id: jpeg_xl
+    #     - id: web_bluetooth_api
+    #     - id: background_fetch
+    #     - id: idle_detector
 
     - id: html_missing_elements
       limit: 3
@@ -708,13 +706,20 @@
 
 ### DEMOGRAPHICS ###
 
-# - id: opinions
-#   questions:
-#     - id: accessibility_is_important
-#       template: opinion
+- id: opinions
+  messageId: opinions.opinions_intro
+  questions:
+    - id: accessibility_is_valued
+      template: opinion
 
-#     - id: how_important_is_accessibility
-#       template: opinion
+    - id: keeping_informed_is_challenging
+      template: opinion
+
+    - id: browser_interoperability_is_obstacle
+      template: opinion
+
+    - id: web_platform_right_direction
+      template: opinion
 
 - id: user_info
   questions:
