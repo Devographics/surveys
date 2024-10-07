@@ -8,28 +8,497 @@
               "freeform": {
                 "currentEdition": {
                   "completion": {
-                    "count": 295,
-                    "percentageSurvey": 28.07,
-                    "total": 1051
+                    "count": 2402,
+                    "percentageSurvey": 25.04,
+                    "total": 9594
                   },
                   "buckets": [
                     {
-                      "count": 756,
-                      "id": "no_answer",
-                      "percentageQuestion": 0,
-                      "percentageSurvey": 71.93
+                      "count": 876,
+                      "id": "has_selector",
+                      "percentageQuestion": 36.47,
+                      "percentageSurvey": 9.13,
+                      "entity": {
+                        "name": "`:has()`",
+                        "nameHtml": "<code>:has()</code>",
+                        "nameClean": ":has()",
+                        "id": "has_selector",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "a:has(> img) {\n  border: 2px solid grey;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-tag\">a</span><span class=\"hljs-selector-pseudo\">:has</span>(&gt; <span class=\"hljs-selector-tag\">img</span>) {\n  <span class=\"hljs-attribute\">border</span>: <span class=\"hljs-number\">2px</span> solid grey;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/:has"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-has"
+                        }
+                      }
                     },
                     {
-                      "count": 548,
+                      "count": 401,
+                      "id": "css_nesting",
+                      "percentageQuestion": 16.69,
+                      "percentageSurvey": 4.18,
+                      "entity": {
+                        "name": "CSS Nesting",
+                        "nameClean": "CSS Nesting",
+                        "id": "css_nesting",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".parent {\n  color: blue;\n\n  .child {\n    color: red;\n  }\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.parent</span> {\n  <span class=\"hljs-attribute\">color</span>: blue;\n\n  <span class=\"hljs-selector-class\">.child</span> {\n    <span class=\"hljs-attribute\">color</span>: red;\n  }\n}"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://developer.chrome.com/articles/css-nesting/",
+                            "title": "CSS Nesting"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "count": 324,
+                      "id": "at_container",
+                      "percentageQuestion": 13.49,
+                      "percentageSurvey": 3.38,
+                      "entity": {
+                        "name": "`@container`\n",
+                        "nameHtml": "<code>@container</code>\n",
+                        "nameClean": "@container",
+                        "id": "at_container",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "@container (min-width: 700px) {\n  .card {\n    display: grid;\n    grid-template-columns: 2fr 1fr;\n  }\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">@container</span> (<span class=\"hljs-attribute\">min-width</span>: <span class=\"hljs-number\">700px</span>) {\n  <span class=\"hljs-selector-class\">.card</span> {\n    <span class=\"hljs-attribute\">display</span>: grid;\n    <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">2</span>fr <span class=\"hljs-number\">1</span>fr;\n  }\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-container-queries"
+                        }
+                      }
+                    },
+                    {
+                      "count": 184,
+                      "id": "subgrid",
+                      "percentageQuestion": 7.66,
+                      "percentageSurvey": 1.92,
+                      "entity": {
+                        "name": "Subgrid",
+                        "nameClean": "Subgrid",
+                        "id": "subgrid",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".wrapper {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.item {\n  grid-row: 1 / 4;\n  display: grid;\n  grid-template-rows: subgrid;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.wrapper</span> {\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">1</span>fr <span class=\"hljs-number\">1</span>fr;\n}\n\n<span class=\"hljs-selector-class\">.item</span> {\n  <span class=\"hljs-attribute\">grid-row</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">4</span>;\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-rows</span>: subgrid;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-subgrid"
+                        }
+                      }
+                    },
+                    {
+                      "count": 164,
+                      "id": "grid",
+                      "percentageQuestion": 6.83,
+                      "percentageSurvey": 1.71,
+                      "entity": {
+                        "name": "Grid",
+                        "nameClean": "Grid",
+                        "id": "grid",
+                        "entityType": "feature",
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-grid"
+                        }
+                      }
+                    },
+                    {
+                      "count": 100,
+                      "id": "clamp",
+                      "percentageQuestion": 4.16,
+                      "percentageSurvey": 1.04,
+                      "entity": {
+                        "name": "clamp()",
+                        "nameClean": "clamp()",
+                        "id": "clamp",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 92,
+                      "id": "aspect_ratio",
+                      "percentageQuestion": 3.83,
+                      "percentageSurvey": 0.96,
+                      "entity": {
+                        "name": "`aspect-ratio`",
+                        "nameHtml": "<code>aspect-ratio</code>",
+                        "nameClean": "aspect-ratio",
+                        "id": "aspect_ratio",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".square {\n  aspect-ratio: 1 / 1;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.square</span> {\n  aspect-ratio: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">1</span>;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-css_properties_aspect-ratio"
+                        }
+                      }
+                    },
+                    {
+                      "count": 92,
+                      "id": "view_transitions",
+                      "percentageQuestion": 3.83,
+                      "percentageSurvey": 0.96,
+                      "entity": {
+                        "name": "ViewTransition API",
+                        "nameClean": "ViewTransition API",
+                        "id": "view_transitions",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "::view-transition-old(main-image),\n::view-transition-new(main-image) {\n  transform-origin: right top;\n}\n\n::view-transition-new(main-image) {\n  animation: 400ms ease-out both grow;\n}\n\nfigure {\n  view-transition-name: main-image;\n}\n",
+                          "codeHighlighted": "::<span class=\"hljs-built_in\">view-transition-old</span>(main-image),\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">transform-origin</span>: right top;\n}\n\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">animation</span>: <span class=\"hljs-number\">400ms</span> ease-out both grow;\n}\n\n<span class=\"hljs-selector-tag\">figure</span> {\n  view-<span class=\"hljs-attribute\">transition</span>-name: main-image;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-api_viewtransition"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://developer.chrome.com/docs/web-platform/view-transitions/",
+                            "title": "Smooth and simple transitions with the View Transitions API"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "count": 92,
+                      "id": "where_selector",
+                      "percentageQuestion": 3.83,
+                      "percentageSurvey": 0.96,
+                      "entity": {
+                        "name": "`:where()`",
+                        "nameHtml": "<code>:where()</code>",
+                        "nameClean": ":where()",
+                        "id": "where_selector",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ":where(header, main, footer) p:hover {\n  color: red;\n  cursor: pointer;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-pseudo\">:where</span>(<span class=\"hljs-selector-tag\">header</span>, <span class=\"hljs-selector-tag\">main</span>, <span class=\"hljs-selector-tag\">footer</span>) <span class=\"hljs-selector-tag\">p</span><span class=\"hljs-selector-pseudo\">:hover</span> {\n  <span class=\"hljs-attribute\">color</span>: red;\n  <span class=\"hljs-attribute\">cursor</span>: pointer;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/:where"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-where"
+                        }
+                      }
+                    },
+                    {
+                      "count": 87,
+                      "id": "color_mix",
+                      "percentageQuestion": 3.62,
+                      "percentageSurvey": 0.91,
+                      "entity": {
+                        "name": "`color-mix()`",
+                        "nameHtml": "<code>color-mix()</code>",
+                        "nameClean": "color-mix()",
+                        "id": "color_mix",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".teal {\n  background: color-mix(in lab, white 20%, #34c9eb);\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.teal</span> {\n  <span class=\"hljs-attribute\">background</span>: <span class=\"hljs-built_in\">color-mix</span>(in lab, white <span class=\"hljs-number\">20%</span>, <span class=\"hljs-number\">#34c9eb</span>);\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-css_types_color_color-mix"
+                        }
+                      }
+                    },
+                    {
+                      "count": 86,
+                      "id": "text_wrap_balance",
+                      "percentageQuestion": 3.58,
+                      "percentageSurvey": 0.9,
+                      "entity": {
+                        "name": "`text-wrap: balance`",
+                        "nameHtml": "<code>text-wrap: balance</code>",
+                        "nameClean": "text-wrap: balance",
+                        "id": "text_wrap_balance",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".balanced {\n  max-inline-size: 50ch;\n  text-wrap: balance;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.balanced</span> {\n  <span class=\"hljs-attribute\">max-inline-size</span>: <span class=\"hljs-number\">50ch</span>;\n  text-wrap: balance;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://developer.chrome.com/blog/css-text-wrap-balance/",
+                            "title": "CSS text-wrap: balance\n"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "count": 77,
+                      "id": "css_animations",
+                      "percentageQuestion": 3.21,
+                      "percentageSurvey": 0.8,
+                      "entity": {
+                        "id": "css_animations",
+                        "entityType": "feature",
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-animation"
+                        }
+                      }
+                    },
+                    {
+                      "count": 67,
+                      "id": "relative_colors",
+                      "percentageQuestion": 2.79,
+                      "percentageSurvey": 0.7,
+                      "entity": {
+                        "name": "Relative Colors",
+                        "nameClean": "Relative Colors",
+                        "id": "relative_colors",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".foo {\n  --color: #4488dd;\n  background-color: hsl(from var(--color) h s calc(l * 1.2))\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attr\">--color</span>: <span class=\"hljs-number\">#4488dd</span>;\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">hsl</span>(from <span class=\"hljs-built_in\">var</span>(--color) h s <span class=\"hljs-built_in\">calc</span>(l * <span class=\"hljs-number\">1.2</span>))\n}"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://www.bram.us/2021/04/28/create-a-color-theme-with-css-relative-color-syntax-css-color-mix-and-css-color-contrast/",
+                            "title": "Create a color theme with CSS Relative Color Syntax, CSS color-mix(), and CSS color-contrast()"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "count": 61,
+                      "id": "anchor_positioning",
+                      "percentageQuestion": 2.54,
+                      "percentageSurvey": 0.64,
+                      "entity": {
+                        "name": "Anchor Positioning",
+                        "nameClean": "Anchor Positioning",
+                        "id": "anchor_positioning",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".slider-link {\n  anchor-name: var(--is);\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.slider-link</span> {\n  anchor-name: <span class=\"hljs-built_in\">var</span>(--is);\n}"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://kizu.dev/anchor-positioning-experiments/",
+                            "title": "Future CSS: Anchor Positioning\n"
+                          },
+                          {
+                            "url": "https://developer.chrome.com/blog/tether-elements-to-each-other-with-css-anchor-positioning/",
+                            "title": "Tether elements to each other with CSS anchor positioning\n"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "count": 61,
+                      "id": "logical_properties",
+                      "percentageQuestion": 2.54,
+                      "percentageSurvey": 0.64,
+                      "entity": {
+                        "name": "CSS Logical Properties",
+                        "nameClean": "CSS Logical Properties",
+                        "description": "`margin-block-start`, `padding-inline-end`, `border-inline-start`…\n",
+                        "descriptionHtml": "<code>margin-block-start</code>, <code>padding-inline-end</code>, <code>border-inline-start</code>…\n",
+                        "descriptionClean": "margin-block-start, padding-inline-end, border-inline-start…",
+                        "id": "logical_properties",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "section {\n  border-block: 8px solid blue;\n  border-inline: 8px solid green;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-tag\">section</span> {\n  <span class=\"hljs-attribute\">border-block</span>: <span class=\"hljs-number\">8px</span> solid blue;\n  <span class=\"hljs-attribute\">border-inline</span>: <span class=\"hljs-number\">8px</span> solid green;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-logical-props"
+                        }
+                      }
+                    },
+                    {
+                      "count": 53,
+                      "id": "light_dark",
+                      "percentageQuestion": 2.21,
+                      "percentageSurvey": 0.55,
+                      "entity": {
+                        "name": "`light-dark()`",
+                        "nameHtml": "<code>light-dark()</code>",
+                        "nameClean": "light-dark()",
+                        "id": "light_dark",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "code {\n  color: light-dark(var(--light-code), var(--dark-code));\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-tag\">code</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">light-dark</span>(<span class=\"hljs-built_in\">var</span>(--light-code), <span class=\"hljs-built_in\">var</span>(--dark-code));\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-css_types_color_light-dark"
+                        }
+                      }
+                    },
+                    {
+                      "count": 45,
+                      "id": "variables",
+                      "percentageQuestion": 1.87,
+                      "percentageSurvey": 0.47,
+                      "entity": {
+                        "name": "Variables",
+                        "nameClean": "Variables",
+                        "id": "variables",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ":root {\n  --main-bg-color: brown;\n}\n.foo {\n  background-color: var(--main-bg-color);\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-pseudo\">:root</span> {\n  <span class=\"hljs-attr\">--main-bg-color</span>: brown;\n}\n<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--main-bg-color);\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-variables"
+                        }
+                      }
+                    },
+                    {
+                      "count": 39,
+                      "id": "scoping",
+                      "percentageQuestion": 1.62,
+                      "percentageSurvey": 0.41,
+                      "entity": {
+                        "name": "Scoping",
+                        "nameClean": "Scoping",
+                        "id": "scoping",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 34,
+                      "id": "text_wrap",
+                      "percentageQuestion": 1.42,
+                      "percentageSurvey": 0.35,
+                      "entity": {
+                        "name": "`text-wrap`",
+                        "nameHtml": "<code>text-wrap</code>",
+                        "nameClean": "text-wrap",
+                        "id": "text_wrap",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".wrap {\n  text-wrap: wrap;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.wrap</span> {\n  text-wrap: wrap;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-css_properties_text-wrap"
+                        }
+                      }
+                    },
+                    {
+                      "count": 31,
+                      "id": "viewport_percentage_length_units",
+                      "percentageQuestion": 1.29,
+                      "percentageSurvey": 0.32,
+                      "entity": {
+                        "description": "`lvh` / `lvw` / `lvmin` / `lvmax`, `sv*`, `dv*`, etc.\n",
+                        "descriptionHtml": "<code>lvh</code> / <code>lvw</code> / <code>lvmin</code> / <code>lvmax</code>, <code>sv*</code>, <code>dv*</code>, etc.\n",
+                        "descriptionClean": "lvh / lvw / lvmin / lvmax, sv*, dv*, etc.",
+                        "id": "viewport_percentage_length_units",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "body {\n  height: 100dvh;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-tag\">body</span> {\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-number\">100</span>dvh;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/length"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-css_types_length_viewport_percentage_units_small"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://web.dev/viewport-units/",
+                            "title": "The large, small, and dynamic viewport units"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "count": 7192,
+                      "id": "no_answer",
+                      "percentageQuestion": 0,
+                      "percentageSurvey": 74.96
+                    },
+                    {
+                      "count": 1288,
                       "id": "other_answers",
-                      "percentageQuestion": 185.76,
-                      "percentageSurvey": 52.14,
+                      "percentageQuestion": 53.53,
+                      "percentageSurvey": 13.4,
                       "groupedBuckets": [
                         {
-                          "count": 548,
+                          "count": 323,
+                          "id": "overlimit_answers",
+                          "percentageQuestion": 13.46,
+                          "percentageSurvey": 3.4
+                        },
+                        {
+                          "count": 148,
+                          "id": "cutoff_answers",
+                          "percentageQuestion": 6.06,
+                          "percentageSurvey": 1.48
+                        },
+                        {
+                          "count": 817,
                           "id": "no_match",
-                          "percentageQuestion": 185.76,
-                          "percentageSurvey": 52.14
+                          "percentageQuestion": 34.01,
+                          "percentageSurvey": 8.52
                         }
                       ]
                     }
