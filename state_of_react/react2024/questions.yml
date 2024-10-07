@@ -1,0 +1,925 @@
+- id: main_apis
+  template: featurev3
+  slug: features
+  questions:
+    - id: createcontext
+    - id: createportal
+    - id: forwardref
+    - id: fragment
+    - id: lazy
+    - id: memo
+    - id: profiler
+    - id: strictmode
+    # - id: createroot
+    # - id: hydrateroot
+
+    - id: main_apis_pain_points
+      matchTags: [common_pain_points, react_features]
+      template: textList
+
+- id: hooks
+  template: featurev3
+  slug: features
+  questions:
+    - id: usecallback
+    - id: usecontext
+    - id: usedeferredvalue
+    - id: useeffect
+    - id: useid
+    - id: usememo
+    - id: usereducer
+    - id: useref
+    - id: usestate
+    - id: usesyncexternalstore
+    # - id: usedebugvalue
+    # - id: useimperativehandle # too niche
+    # - id: useinsertioneffect # for css-in-js lib authors
+    # - id: uselayouteffect # can hurt performance
+
+    - id: hooks_pain_points
+      matchTags: [common_pain_points, react_features]
+      template: textList
+
+- id: new_apis
+  template: featurev3
+  slug: features
+  questions:
+    - id: cache
+    - id: react_server_components
+    - id: server_actions
+    - id: starttransition
+    - id: suspense
+    - id: taint_api
+    # - id: use_client
+    - id: use_hook
+    # - id: use_server
+    # - id: useformstate # became useActionState, removed in 2024
+    - id: useformstatus
+    - id: usetransition
+    - id: useactionstate
+      yearAdded: 2024
+    - id: useoptimistic
+      yearAdded: 2024
+
+    - id: new_apis_pain_points
+      matchTags: [common_pain_points, react_features]
+      template: textList
+
+- id: component_libraries
+  template: toolv3
+  slug: tools
+  questions:
+    - id: ant_design
+    - id: chakra_ui
+    - id: headless_ui
+    - id: mui
+    - id: radix
+    - id: react_bootstrap
+    - id: shadcn_ui
+    - id: react_aria
+    - id: mantine
+
+    - id: component_libraries_others
+      template: projects
+
+    # - id: ui_libraries
+    #   template: multipleWithOtherSentiment
+    #   countsTowardScore: true
+    #   options:
+    #     - id: react_admin
+    #     - id: next_ui
+    #     - id: tailwind_ui
+    #     - id: react_aria
+    #     - id: reach_ui
+    #     - id: mantine
+    #     - id: ariakit
+    #     - id: ark_ui
+    #     - id: blueprint_js
+
+    - id: animation_libraries
+      template: multipleWithOtherSentiment
+      options:
+        - id: framer_motion
+        - id: react_spring
+        - id: react_motion
+        - id: autoanimate
+        - id: react_native_reanimated
+        - id: gsap
+        - id: na
+      matchTags: [libraries, features]
+
+    - id: data_visualization_libraries
+      template: multipleWithOtherSentiment
+      options:
+        - id: d3
+        - id: nivo
+        - id: react_vis
+        - id: recharts
+        - id: tremor
+        - id: victory
+        - id: visx
+        - id: chart_js
+        - id: na
+      matchTags: [libraries]
+
+    - id: form_libraries
+      template: multipleWithOtherSentiment
+      options:
+        - id: react_hook_form
+        - id: react_json_schema_form
+        - id: formik
+        - id: formily
+        - id: react_final_form
+        - id: mantine_forms
+        - id: redux_form
+        - id: na
+      matchTags: [libraries]
+
+    - id: css_tools
+      template: multipleWithOtherSentiment
+      options:
+        # - id: plain_css
+        - id: css_modules
+        - id: emotion
+        - id: sass
+        - id: stitches
+        - id: styled_components
+        - id: styled_jsx
+        - id: tailwind_css
+        - id: uno_css
+        - id: vanilla_extract
+        - id: na
+      matchTags: [libraries]
+
+    - id: component_libraries_pain_points
+      matchTags: [common_pain_points, react_features]
+      template: textList
+
+- id: state_management
+  template: toolv3
+  slug: tools
+  questions:
+    - id: jotai
+    - id: mobx
+    - id: recoil
+    - id: redux
+    - id: redux_toolkit
+    - id: usestate
+    - id: xstate
+    - id: zustand
+
+    - id: state_management_others
+      template: projects
+
+    - id: state_management_pain_points
+      matchTags: [common_pain_points, react_features]
+      disallowedTokenIds: [state_management]
+      template: textList
+
+- id: data_loading
+  template: toolv3
+  slug: tools
+  questions:
+    # - id: data_loading_heading
+    #   template: subheading
+
+    - id: apollo_client
+    - id: relay
+    - id: rtk_query
+    - id: swr
+    - id: tanstack_query
+    - id: trpc
+    - id: fetch
+    - id: axios
+
+    - id: data_loading_others
+      template: projects
+
+    - id: data_loading_pain_points
+      matchTags: [common_pain_points, react_features]
+      template: textList
+
+    # - id: state_management_heading
+    #   template: subheading
+
+    # - id: jotai
+    # - id: mobx
+    # - id: recoil
+    # - id: redux
+    # - id: redux_toolkit
+    # - id: usestate
+    # - id: xstate
+    # - id: zustand
+
+    # - id: state_management_others
+    #   template: projects
+
+    # - id: state_management_pain_points
+    #   template: projects
+
+    # - id: databases
+    #   template: multipleWithOtherSentiment
+    #   options:
+    #     - id: mysql
+    #     - id: sqlite
+    #     - id: postgresql
+    #     - id: neo4j
+    #     - id: redis
+    #     - id: mongodb
+    #     - id: elasticsearch
+    #     - id: dynamodb
+
+- id: back_end_infrastructure
+  template: toolv3
+  slug: tools
+  questions:
+    - id: meta_frameworks_heading
+      template: subheading
+
+    - id: astro
+    - id: create_react_app
+    - id: gatsby
+    - id: nextjs
+    - id: remix
+    - id: redwood
+    - id: tanstack_start
+
+    - id: meta_frameworks_others
+      template: projects
+
+    # - id: meta_frameworks
+    #   template: multipleWithOtherSentiment
+    #   options:
+    #     - id: blitz
+    #     - id: nextra
+    #     - id: docusaurus
+    #     - id: redwood
+    #     - id: wasp
+
+    - id: other_back_end_tools_heading
+      template: subheading
+
+    - id: build_tools
+      template: multipleWithOtherSentiment
+      matchTags: [libraries]
+      options:
+        - id: webpack
+        - id: vite
+        - id: tsup
+        - id: esbuild
+        - id: rollup
+        - id: tsc
+        - id: parcel
+        - id: turbopack
+        - id: na
+
+    - id: hosting
+      template: multipleWithOtherSentiment
+      options:
+        - id: aws
+        - id: azure
+        - id: cloudflare
+        - id: digital_ocean
+        - id: fastly
+        - id: fly_io
+        - id: github_pages
+        - id: google_cloud
+        - id: heroku
+        - id: netlify
+        - id: render
+        - id: vercel
+        - id: na
+      matchTags: [services]
+
+    - id: other_services
+      template: multipleWithOtherSentiment
+      options:
+        - id: firebase
+        - id: planetscale
+        - id: prisma
+        - id: redis
+        - id: sentry
+        - id: supabase
+        - id: upstash
+        - id: na
+      matchTags: [services, databases, js_backend_frameworks, js_other_tools]
+
+    - id: backend_language
+      template: multipleWithOtherSentiment
+      options:
+        - id: dotnet
+        - id: elixir
+        - id: golang
+        - id: haskell
+        - id: javascript
+        - id: php
+        - id: python
+        - id: ruby
+        - id: rust
+        - id: scala
+        - id: typescript
+        - id: java
+        - id: kotlin
+        - id: na
+      matchTags: [languages, libraries]
+
+    - id: back_end_infrastructure_pain_points
+      matchTags: [common_pain_points, react_features]
+      template: textList
+
+- id: other_tools
+  template: toolv3
+  slug: tools
+  questions:
+    # - id: cypress
+    # - id: jest
+    # - id: playwright
+    # - id: storybook
+    # - id: testing_library
+    # - id: vitest
+
+    # - id: testing_tools_others
+    #   template: textList
+
+    - id: testing
+      template: multipleWithOtherSentiment
+      matchTags: [libraries]
+      options:
+        - id: cypress
+        - id: jest
+        - id: playwright
+        - id: storybook
+        - id: testing_library
+        - id: vitest
+        - id: na
+
+    - id: renderers
+      template: multipleWithOtherSentiment
+      matchTags: [libraries]
+      disallowedTokenIds: [react]
+      options:
+        - id: react_dom
+        - id: react_email
+        - id: react_ink
+        - id: react_native_android
+        - id: react_native_ios
+        - id: react_native_macos
+        - id: react_native_skia
+        - id: react_native_web
+        - id: react_native_windows
+        - id: react_pdf
+        - id: react_three_fiber
+        - id: remotion
+        - id: na
+
+    - id: validation
+      template: multipleWithOtherSentiment
+      matchTags: [libraries]
+      options:
+        - id: joi
+        - id: zod
+        - id: yup
+        - id: io_ts
+        - id: valibot
+        - id: na
+
+    - id: auth
+      template: multipleWithOtherSentiment
+      matchTags: [services, libraries]
+      options:
+        - id: clerk
+        - id: fusion_auth
+        - id: auth_js
+        - id: lucia
+        - id: passport
+        - id: auth0
+        - id: na
+
+    # - id: testing
+    #   template: multipleWithOtherSentiment
+    #   options:
+    #     - id: cypress
+    #     - id: jest
+    #     - id: playwright
+    #     - id: storybook
+    #     - id: testing_library
+    #     - id: vitest
+
+    - id: mobile_development
+      template: multipleWithOtherSentiment
+      matchTags: [libraries]
+      options:
+        - id: capacitor
+        - id: expo
+        - id: ionic
+        - id: react_native
+        - id: na
+
+    - id: other_frontend_frameworks
+      template: multipleWithOtherSentiment
+      matchTags: [libraries]
+      options:
+        - id: alpinejs
+        - id: angular
+        - id: ember
+        - id: litelement
+        - id: preact
+        - id: qwik
+        - id: solid
+        - id: svelte
+        - id: vuejs
+        - id: na
+
+    # - id: other_tools_pain_points
+    #   template: textList
+
+- id: usage
+  questions:
+    - id: what_do_you_use_react_for
+      template: multipleWithOther
+      matchTags: [use_cases]
+      options:
+        - id: design_systems
+        - id: desktop_apps
+        - id: mobile_apps
+        - id: static_sites
+        - id: web_apps
+
+    - id: react_version
+      template: singleWithOther
+      allowOther: true
+      options:
+        - id: react_v16x
+        - id: react_v17x
+        - id: react_v18x
+        - id: react_canary
+        - id: not_sure
+
+    - id: usage_type
+      intlId: usage.react_usage_type
+      template: singleWithOther
+      allowOther: true
+      options:
+        - id: professionally
+        - id: student
+        - id: hobby
+
+    - id: industry_sector
+      template: multipleWithOther
+      matchTags: [industry_sectors]
+      options:
+        - id: agriculture
+        - id: automotive
+        - id: construction
+        - id: consulting
+        - id: cyber_security
+        - id: ecommerce
+        - id: education
+        - id: energy
+        - id: entertainment
+        - id: finance
+        - id: government
+        - id: healthcare
+        - id: hospitality
+        - id: insurance
+        - id: logistics
+        - id: manufacturing
+        - id: marketing_tools
+        - id: news_media
+        - id: programming_tools
+        - id: real_estate
+        - id: socialmedia
+        - id: student
+        - id: telecommunications
+        - id: transport
+        - id: travel
+        - id: na
+
+    - id: js_app_patterns
+      template: multipleWithOther
+      cutoff: 0
+      randomize: true
+      options:
+        - id: edge_rendering
+        - id: incremental_static_generation
+        - id: islands_architecture
+        - id: multiple_page_app
+        - id: partial_hydration
+        - id: progressive_enhancement
+        - id: progressive_rehydration
+        - id: resumability
+        - id: server_side_rendering
+        - id: single_page_app
+        - id: static_site_generation
+        - id: streaming_ssr
+        - id: na
+
+    # - id: react_pain_points
+    #   template: multipleWithOther
+    #   limit: 3
+    #   cutoff: 0
+    #   randomize: true
+    #   options:
+    #     - id: na
+    #     - id: animations
+    #     - id: attribute_names
+    #     - id: bundle_sizes
+    #     - id: css_styling
+    #     - id: data_loading
+    #     - id: forms
+    #     - id: memoization
+    #     - id: ref_management
+    #     - id: rerenders
+    #     - id: server_rendering
+    #     - id: state_management
+    #     - id: synthetic_events
+    #     - id: testing
+    #     - id: typescript
+
+    # - id: react_moving_right_direction
+    #   template: opinion
+
+    - id: state_of_react
+      template: happiness
+
+    # - id: state_of_javascript
+    #   template: happiness
+
+    - id: new_features
+      template: multipleWithOther
+      limit: 3
+      cutoff: 0
+      randomize: true
+      tags: [react_new_features]
+      options:
+        - id: asset_loading
+        - id: cache
+        - id: react_forget
+        - id: new_docs
+        - id: offscreen_rendering
+        - id: react_server_components
+        - id: server_actions
+        - id: suspense
+        - id: transition_tracing
+        - id: use_hook
+        - id: preloading_resources
+        - id: ref_as_a_prop
+        - id: built_in_head_tag_support
+        - id: na
+
+    - id: usage_pain_points
+      matchTags:
+        [
+          common_pain_points,
+          react_features,
+          react_pain_points,
+          react_usage_pain_points,
+        ]
+      template: textList
+
+- id: resources
+  questions:
+    - id: learning_methods
+      intlId: resources.learning_methods_react
+      template: multipleWithOther
+      order: random
+      matchTags:
+        [first_steps, courses, people, youtube, sites, newsletters, socialmedia]
+      options:
+        - id: books
+        - id: bootcamp
+        - id: courses_free
+        - id: courses_paid
+        - id: mentoring
+        - id: on_the_job
+        - id: podcasts
+        - id: school
+        - id: self_directed
+        - id: videos
+        - id: documentation
+        - id: ai_tools
+        # - id: na
+
+    - id: blogs_news_magazines
+      intlId: resources.blogs_news_magazines_react
+      template: multipleWithOther
+      matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
+      order: random
+      options:
+        - id: devto
+        - id: css_tricks
+        - id: js_weekly
+        - id: smashing_magazine
+        - id: bestofjs
+        - id: node_weekly
+        - id: bytes
+        - id: r_reactjs
+        - id: this_week_in_react
+        - id: reactiflux
+        - id: logrocket
+        - id: next_js_weekly
+        - id: react_digest
+        - id: react_status
+        # - id: medium
+        # - id: alligator
+        # - id: codrops
+        # - id: echo_js
+        # - id: front_end_front
+        # - id: frontend_focus
+        # - id: frontend_horse
+        # - id: sitepoint
+        - id: na
+
+    - id: sites_courses
+      intlId: resources.sites_courses_react
+      template: multipleWithOther
+      matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
+      order: random
+      options:
+        - id: stack_overflow
+        - id: react_gg
+        - id: wes_bos
+        - id: epic_react
+        - id: academind
+        - id: codecademy
+        - id: coursera
+        - id: egghead
+        - id: freecodecamp
+        - id: frontendmasters
+        - id: miguel_angel_duran
+        - id: o_reilly
+        - id: platzi
+        - id: pluralsight
+        - id: scrimba
+        - id: udemy
+        - id: joy_of_react
+        - id: build_ui
+        # - id: levelup
+        # - id: skillshare
+        # - id: newline
+        # - id: doka
+        # - id: linkedin_learning
+        # - id: javascript_info
+        # - id: ui_dev
+        # - id: web_dev
+        # - id: designcode
+        # - id: mdn
+        # - id: w3schools
+        - id: na
+
+    - id: podcasts
+      intlId: resources.podcasts_react
+      template: multipleWithOther
+      matchTags: [podcasts, people, sites]
+      disallowedTokenIds: [twitter]
+      order: random
+      options:
+        - id: syntaxfm
+        - id: js_party
+        - id: http_203
+        - id: changelog
+        - id: javascript_jabber
+        - id: front_end_happy_hour
+        - id: full_stack_radio
+        - id: shop_talk_show
+        - id: react_podcast
+        - id: jamstack_radio
+        - id: javascript_jam
+        - id: ladybug
+        - id: react_native_radio
+        - id: react_native_show
+        - id: podrocket
+        # - id: web_rush
+        # - id: web_standards_ru
+        # - id: software_engineering_daily
+        # - id: a11y_rules
+        # - id: big_web_show
+        # - id: codepen_radio
+        # - id: css_podcast
+        # - id: frontend_first
+        # - id: frontend_weekend
+        # - id: modern_web
+        # - id: the_bike_shed
+        # - id: tools_day
+        # - id: undefined_podcast
+        # - id: web_platform_podcast
+        - id: na
+
+    - id: video_creators
+      intlId: resources.video_creators_react
+      template: textList
+      # template: multipleWithOther
+      disallowedTokenIds: [twitter]
+      matchTags:
+        [
+          video_creators,
+          youtube,
+          courses,
+          people,
+          sites,
+          newsletters,
+          socialmedia,
+        ]
+      # options:
+      #   - id: ben_awad
+      #   - id: ben_holmes
+      #   - id: brad_traversy
+      #   - id: clever_programmer
+      #   - id: coding_garden
+      #   - id: coding_train
+      #   - id: fireship
+      #   - id: fun_fun_function
+      #   - id: jack_herrington
+      #   - id: jason_goodison
+      #   - id: jason_lengstorf
+      #   - id: kent_c_dodds
+      #   - id: kevin_j_powell
+      #   - id: mayuko
+      #   - id: miguel_angel_duran
+      #   - id: net_ninja
+      #   - id: programming_with_mosh
+      #   - id: sam_selikoff
+      #   - id: the_primeagen
+      #   - id: theo_browne
+      #   - id: tina_huang
+      #   - id: web_dev_cody
+      #   - id: web_dev_simplified
+      #   - id: william_candillon
+      #   - id: na
+
+    - id: people
+      intlId: resources.people_react
+      template: textList
+      # template: multipleWithOther
+      disallowedTokenIds: [twitter]
+      matchTags:
+        [
+          video_creators,
+          youtube,
+          courses,
+          people,
+          sites,
+          newsletters,
+          socialmedia,
+        ]
+      # options:
+      #   - id: alex_russel
+      #   - id: anthony_fu
+      #   - id: axel_rauschmayer
+      #   - id: ben_holmes
+      #   - id: carlos_azaustre
+      #   - id: christoph_nakazawa
+      #   - id: christopher_chedeau
+      #   - id: cory_house
+      #   - id: daishi_kato
+      #   - id: dan_abramov
+      #   - id: evan_you
+      #   - id: fernando_herrera
+      #   - id: fireship
+      #   - id: fred_schott
+      #   - id: henri_helvetica
+      #   - id: jack_herrington
+      #   - id: jake_archibald
+      #   - id: james_q_quick
+      #   - id: jarred_sumner
+      #   - id: jason_lengstorf
+      #   - id: jason_miller
+      #   - id: joe_savona
+      #   - id: josh_comeau
+      #   - id: kent_c_dodds
+      #   - id: kyle_simpson
+      #   - id: lee_robinson
+      #   - id: mark_erikson
+      #   - id: matt_pocock
+      #   - id: matteo_collina
+      #   - id: maximilian_schwarzmuller
+      #   - id: michel_westrate
+      #   - id: miguel_angel_duran
+      #   - id: nicole_sullivan
+      #   - id: rachel_nabors
+      #   - id: rich_harris
+      #   - id: ryan_carniato
+      #   - id: ryan_florence
+      #   - id: sam_selikoff
+      #   - id: sarah_drasner
+      #   - id: scott_tolinski
+      #   - id: shaundai_person
+      #   - id: shruti_kapoor
+      #   - id: tanner_linsley
+      #   - id: tejas_kumar
+      #   - id: the_primeagen
+      #   - id: theo_browne
+      #   - id: tru_narla
+      #   - id: vadim_makeev
+      #   - id: wes_bos
+      #   - id: zach_leatherman
+      #   - id: na
+
+    - id: other_surveys
+      template: multipleWithOther
+      matchTags: [surveys]
+      options:
+        - id: state_of_js_survey
+        - id: state_of_css_survey
+        - id: state_of_graphql_survey
+        - id: state_of_html_survey
+        - id: jetbrains_survey
+        - id: stack_overflow_survey
+        - id: codingame_survey
+        - id: uxtools_survey
+        - id: postman_survey
+        - id: state_of_react_native
+        - id: na
+
+### demographics ###
+
+- id: user_info
+  questions:
+    - id: age
+      template: age_number
+
+    - id: years_of_experience
+      template: years_of_experience
+
+    - id: company_size
+      template: company_size
+
+    - id: yearly_salary
+      template: yearly_salary
+
+    - id: higher_education_degree
+      template: higher_education_degree
+
+    - id: country
+      template: country
+
+    - id: gender
+      template: gender
+
+    - id: race_ethnicity
+      template: race_ethnicity
+
+    - id: disability_status
+      template: disability_status
+
+    - id: how_did_user_find_out_about_the_survey
+      template: text
+      matchType: single
+      matchTags:
+        [
+          people,
+          sites,
+          newsletters,
+          video_creators,
+          podcasts,
+          surveys,
+          events,
+          sources_state_of_react,
+          socialmedia,
+          sources,
+        ]
+
+    - id: did_you_run_into_technical_issues
+      template: longtext
+
+    - id: how_can_we_improve
+      template: longtext
+
+    - id: receive_notifications
+      template: receive_notifications
+
+    - id: referrer
+      matchType: single
+      matchTags:
+        [
+          people,
+          sites,
+          newsletters,
+          video_creators,
+          podcasts,
+          surveys,
+          events,
+          sources_state_of_react,
+          socialmedia,
+          sources,
+        ]
+      hidden: true
+      template: referrer
+
+    - id: sourcetag
+      matchType: single
+      matchTags:
+        [
+          people,
+          sites,
+          newsletters,
+          video_creators,
+          podcasts,
+          surveys,
+          events,
+          sources_state_of_react,
+          socialmedia,
+          sources,
+        ]
+      hidden: true
+      template: sourcetag
