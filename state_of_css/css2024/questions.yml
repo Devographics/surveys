@@ -526,7 +526,7 @@
     - id: css_interoperability_features
       # template: multipleWithOther
       template: textList
-      matchTags: [features, browser_interoperability, css_missing_features]
+      matchTags: [css_features, browser_interoperability, css_missing_features]
       # limit: 5
       # randomize: true
       # options:
@@ -553,7 +553,14 @@
     - id: css_missing_features
       # template: multipleWithOther
       template: textList
-      matchTags: [features, browser_interoperability, css_missing_features]
+      matchTags:
+        [
+          css_features,
+          browser_interoperability,
+          css_missing_features,
+          html_features,
+          html_missing_features,
+        ]
       # limit: 5
       # randomize: true
       # options:
@@ -576,7 +583,14 @@
     - id: css_pain_points
       # template: multipleWithOther
       template: textList
-      matchTags: [features, browser_interoperability, css_missing_features]
+      matchTags:
+        [
+          css_features,
+          browser_interoperability,
+          css_missing_features,
+          common_pain_points,
+          css_pain_points,
+        ]
       # limit: 5
       # randomize: true
       # options:
@@ -593,7 +607,7 @@
       #   - id: animations
 
     - id: favorite_new_features
-      matchTags: [features, browser_interoperability, css_missing_features]
+      matchTags: [css_features, browser_interoperability, css_missing_features]
       yearAdded: 2024
       template: textList
       limit: 3
