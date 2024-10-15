@@ -4,6 +4,11 @@ query css2024podcastsQuery {
       css2024 {
         resources {
           podcasts {
+            comments {
+              currentEdition {
+                count
+              }
+            }
             freeform(
               parameters: {
                 showNoAnswer: true
@@ -14,6 +19,16 @@ query css2024podcastsQuery {
               }
             ) {
               currentEdition {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                }
                 completion {
                   count
                   percentageSurvey

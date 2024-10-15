@@ -4,6 +4,11 @@ query css2024raceEthnicityVsYearsOfExperienceQuery {
       css2024 {
         user_info {
           race_ethnicity_vs_years_of_experience: race_ethnicity {
+            comments {
+              currentEdition {
+                count
+              }
+            }
             responses(
               facet: user_info__years_of_experience
               parameters: {
@@ -12,6 +17,16 @@ query css2024raceEthnicityVsYearsOfExperienceQuery {
               }
             ) {
               currentEdition {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                }
                 completion {
                   count
                   percentageSurvey

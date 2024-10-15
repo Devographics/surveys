@@ -4,6 +4,11 @@ query css2024countryVsSalaryQuery {
       css2024 {
         user_info {
           country_vs_salary: country {
+            comments {
+              currentEdition {
+                count
+              }
+            }
             responses(
               facet: user_info__yearly_salary
               parameters: {
@@ -18,6 +23,16 @@ query css2024countryVsSalaryQuery {
               }
             ) {
               currentEdition {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                }
                 completion {
                   count
                   percentageSurvey

@@ -4,6 +4,11 @@ query css2024cssInteroperabilityFeaturesQuery {
       css2024 {
         usage {
           css_interoperability_features {
+            comments {
+              currentEdition {
+                count
+              }
+            }
             freeform(
               parameters: {
                 showNoAnswer: true
@@ -14,6 +19,16 @@ query css2024cssInteroperabilityFeaturesQuery {
               }
             ) {
               currentEdition {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                }
                 completion {
                   count
                   percentageSurvey

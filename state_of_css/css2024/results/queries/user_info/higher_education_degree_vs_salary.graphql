@@ -4,6 +4,11 @@ query css2024higherEducationDegreeVsSalaryQuery {
       css2024 {
         user_info {
           higher_education_degree_vs_salary: higher_education_degree {
+            comments {
+              currentEdition {
+                count
+              }
+            }
             responses(
               facet: user_info__yearly_salary
               parameters: {
@@ -16,6 +21,16 @@ query css2024higherEducationDegreeVsSalaryQuery {
               }
             ) {
               currentEdition {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                }
                 completion {
                   count
                   percentageSurvey

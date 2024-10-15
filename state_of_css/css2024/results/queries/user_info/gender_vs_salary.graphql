@@ -4,6 +4,11 @@ query css2024genderVsSalaryQuery {
       css2024 {
         user_info {
           gender_vs_salary: gender {
+            comments {
+              currentEdition {
+                count
+              }
+            }
             responses(
               facet: user_info__yearly_salary
               parameters: {
@@ -13,6 +18,16 @@ query css2024genderVsSalaryQuery {
               }
             ) {
               currentEdition {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                }
                 completion {
                   count
                   percentageSurvey

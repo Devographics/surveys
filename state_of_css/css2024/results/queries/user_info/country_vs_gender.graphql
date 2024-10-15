@@ -4,6 +4,11 @@ query css2024countryVsGenderQuery {
       css2024 {
         user_info {
           country_vs_gender: country {
+            comments {
+              currentEdition {
+                count
+              }
+            }
             responses(
               facet: user_info__gender
               parameters: {
@@ -14,6 +19,16 @@ query css2024countryVsGenderQuery {
               }
             ) {
               currentEdition {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                }
                 completion {
                   count
                   percentageSurvey

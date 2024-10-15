@@ -5,8 +5,19 @@
         "css2024": {
           "usage": {
             "css_missing_features": {
+              "comments": {
+                "currentEdition": {
+                  "count": 8
+                }
+              },
               "freeform": {
                 "currentEdition": {
+                  "_metadata": {
+                    "axis1Sort": {
+                      "property": "count",
+                      "order": "desc"
+                    }
+                  },
                   "completion": {
                     "count": 1226,
                     "percentageSurvey": 12.63,
@@ -54,47 +65,6 @@
                       }
                     },
                     {
-                      "count": 57,
-                      "id": "variables",
-                      "percentageQuestion": 4.65,
-                      "percentageSurvey": 0.59,
-                      "entity": {
-                        "name": "Variables",
-                        "nameClean": "Variables",
-                        "id": "variables",
-                        "entityType": "feature",
-                        "example": {
-                          "language": "css",
-                          "code": ":root {\n  --main-bg-color: brown;\n}\n.foo {\n  background-color: var(--main-bg-color);\n}\n",
-                          "codeHighlighted": "<span class=\"hljs-selector-pseudo\">:root</span> {\n  <span class=\"hljs-attr\">--main-bg-color</span>: brown;\n}\n<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--main-bg-color);\n}"
-                        },
-                        "mdn": {
-                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables"
-                        },
-                        "caniuse": {
-                          "url": "https://caniuse.com/css-variables"
-                        }
-                      }
-                    },
-                    {
-                      "count": 52,
-                      "id": "grid",
-                      "percentageQuestion": 4.24,
-                      "percentageSurvey": 0.54,
-                      "entity": {
-                        "name": "Grid",
-                        "nameClean": "Grid",
-                        "id": "grid",
-                        "entityType": "feature",
-                        "mdn": {
-                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout"
-                        },
-                        "caniuse": {
-                          "url": "https://caniuse.com/css-grid"
-                        }
-                      }
-                    },
-                    {
                       "count": 48,
                       "id": "parent_selector",
                       "percentageQuestion": 3.92,
@@ -127,24 +97,6 @@
                             "title": "CSS Nesting"
                           }
                         ]
-                      }
-                    },
-                    {
-                      "count": 38,
-                      "id": "media_queries",
-                      "percentageQuestion": 3.1,
-                      "percentageSurvey": 0.39,
-                      "entity": {
-                        "name": "Media Queries",
-                        "nameClean": "Media Queries",
-                        "id": "media_queries",
-                        "entityType": "feature",
-                        "mdn": {
-                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries"
-                        },
-                        "caniuse": {
-                          "url": "https://caniuse.com/css-mediaqueries"
-                        }
                       }
                     },
                     {
@@ -220,21 +172,6 @@
                         "name": "Scrollbar Styling",
                         "nameClean": "Scrollbar Styling",
                         "id": "scrollbar",
-                        "entityType": "default"
-                      }
-                    },
-                    {
-                      "count": 21,
-                      "id": "improved_attr",
-                      "percentageQuestion": 1.71,
-                      "percentageSurvey": 0.22,
-                      "entity": {
-                        "name": "Improved `attr()`",
-                        "nameHtml": "Improved <code>attr()</code>",
-                        "nameClean": "Improved attr()",
-                        "description": "Support for properties other than content",
-                        "descriptionClean": "Support for properties other than content",
-                        "id": "improved_attr",
                         "entityType": "default"
                       }
                     },
@@ -325,34 +262,101 @@
                       }
                     },
                     {
+                      "count": 18,
+                      "id": "scroll_animations",
+                      "percentageQuestion": 1.47,
+                      "percentageSurvey": 0.19,
+                      "entity": {
+                        "name": "Animate on Scroll",
+                        "nameClean": "Animate on Scroll",
+                        "id": "scroll_animations",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 17,
+                      "id": "anchor_positioning",
+                      "percentageQuestion": 1.39,
+                      "percentageSurvey": 0.18,
+                      "entity": {
+                        "name": "Anchor Positioning",
+                        "nameClean": "Anchor Positioning",
+                        "id": "anchor_positioning",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".slider-link {\n  anchor-name: var(--is);\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.slider-link</span> {\n  anchor-name: <span class=\"hljs-built_in\">var</span>(--is);\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-anchor-positioning"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://kizu.dev/anchor-positioning-experiments/",
+                            "title": "Future CSS: Anchor Positioning\n"
+                          },
+                          {
+                            "url": "https://developer.chrome.com/blog/tether-elements-to-each-other-with-css-anchor-positioning/",
+                            "title": "Tether elements to each other with CSS anchor positioning\n"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "count": 17,
+                      "id": "animate_to_auto",
+                      "percentageQuestion": 1.39,
+                      "percentageSurvey": 0.18,
+                      "entity": {
+                        "id": "animate_to_auto",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 17,
+                      "id": "overflow",
+                      "percentageQuestion": 1.39,
+                      "percentageSurvey": 0.18,
+                      "entity": {
+                        "name": "Overflow",
+                        "nameClean": "Overflow",
+                        "id": "overflow",
+                        "entityType": "default"
+                      }
+                    },
+                    {
                       "count": 8476,
                       "id": "no_answer",
                       "percentageQuestion": 0,
                       "percentageSurvey": 87.35
                     },
                     {
-                      "count": 1254,
+                      "count": 1269,
                       "id": "other_answers",
-                      "percentageQuestion": 102.17,
-                      "percentageSurvey": 12.78,
+                      "percentageQuestion": 103.39,
+                      "percentageSurvey": 12.92,
                       "groupedBuckets": [
                         {
-                          "count": 270,
+                          "count": 198,
                           "id": "overlimit_answers",
-                          "percentageQuestion": 22.07,
-                          "percentageSurvey": 2.75
+                          "percentageQuestion": 16.19,
+                          "percentageSurvey": 1.99
                         },
                         {
-                          "count": 367,
+                          "count": 357,
                           "id": "cutoff_answers",
-                          "percentageQuestion": 29.77,
-                          "percentageSurvey": 3.67
+                          "percentageQuestion": 28.96,
+                          "percentageSurvey": 3.57
                         },
                         {
-                          "count": 617,
+                          "count": 714,
                           "id": "no_match",
-                          "percentageQuestion": 50.33,
-                          "percentageSurvey": 6.36
+                          "percentageQuestion": 58.24,
+                          "percentageSurvey": 7.36
                         }
                       ]
                     }

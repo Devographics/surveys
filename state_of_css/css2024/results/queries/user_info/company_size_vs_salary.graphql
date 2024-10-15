@@ -4,6 +4,11 @@ query css2024companySizeVsSalaryQuery {
       css2024 {
         user_info {
           company_size_vs_salary: company_size {
+            comments {
+              currentEdition {
+                count
+              }
+            }
             responses(
               facet: user_info__yearly_salary
               parameters: {
@@ -16,6 +21,16 @@ query css2024companySizeVsSalaryQuery {
               }
             ) {
               currentEdition {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                }
                 completion {
                   count
                   percentageSurvey

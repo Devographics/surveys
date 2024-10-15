@@ -4,8 +4,23 @@ query css2024stateOfTheWebHappinessQuery {
       css2024 {
         usage {
           state_of_the_web_happiness {
+            comments {
+              currentEdition {
+                count
+              }
+            }
             responses(parameters: { showNoAnswer: true, enableCache: false }) {
               allEditions {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                }
                 editionId
                 year
                 completion {
