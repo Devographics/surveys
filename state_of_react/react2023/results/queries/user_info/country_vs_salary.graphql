@@ -4,20 +4,35 @@ query react2023countryVsSalaryQuery {
       react2023 {
         user_info {
           country_vs_salary: country {
+            comments {
+              currentEdition {
+                count
+              }
+            }
             responses(
               facet: user_info__yearly_salary
               parameters: {
                 enableCache: false
                 showNoAnswer: true
                 cutoff: 100
+                limit: 20
                 sort: {
                   property: medianByFacet
                   order: desc
                 }
-                limit: 20
               }
             ) {
               currentEdition {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                }
                 completion {
                   count
                   percentageSurvey

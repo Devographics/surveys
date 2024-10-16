@@ -4,8 +4,23 @@ query react2023dataLoadingOthersQuery {
       react2023 {
         data_loading {
           data_loading_others {
+            comments {
+              currentEdition {
+                count
+              }
+            }
             prenormalized(parameters: { limit: 10, enableCache: false }) {
               currentEdition {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                }
                 completion {
                   count
                   percentageSurvey

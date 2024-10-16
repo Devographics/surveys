@@ -4,6 +4,11 @@ query react2023yearsOfExperienceVsSalaryQuery {
       react2023 {
         user_info {
           years_of_experience_vs_salary: years_of_experience {
+            comments {
+              currentEdition {
+                count
+              }
+            }
             responses(
               facet: user_info__yearly_salary
               parameters: {
@@ -16,6 +21,16 @@ query react2023yearsOfExperienceVsSalaryQuery {
               }
             ) {
               currentEdition {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                }
                 completion {
                   count
                   percentageSurvey

@@ -4,18 +4,30 @@ query react2023genderVsSalaryQuery {
       react2023 {
         user_info {
           gender_vs_salary: gender {
+            comments {
+              currentEdition {
+                count
+              }
+            }
             responses(
               facet: user_info__yearly_salary
               parameters: {
                 enableCache: false
                 showNoAnswer: true
                 cutoff: 10
-                sort: {
-                  property: medianByFacet
-                }
               }
             ) {
               currentEdition {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                }
                 completion {
                   count
                   percentageSurvey
