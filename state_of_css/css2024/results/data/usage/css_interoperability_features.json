@@ -56,9 +56,12 @@
                           }
                         ],
                         "webFeature": {
+                          "id": "anchor-positioning",
                           "description_html": "Anchor positioning places an element based on the position of another element. For example, you can place a tooltip next to the content it references.",
                           "name": "Anchor positioning",
-                          "spec": "https://drafts.csswg.org/css-anchor-position-1/#anchoring",
+                          "spec": [
+                            "https://drafts.csswg.org/css-anchor-position-1/#anchoring"
+                          ],
                           "status": {
                             "baseline": "false",
                             "support": {
@@ -117,10 +120,13 @@
                           "url": "https://caniuse.com/css-has"
                         },
                         "webFeature": {
+                          "id": "has",
                           "description_html": "The <code>:has()</code> CSS functional pseudo-class matches an element if any of the selectors passed as parameters would match at least one element.",
                           "group": "selectors",
                           "name": ":has()",
-                          "spec": "https://drafts.csswg.org/selectors-4/#relational",
+                          "spec": [
+                            "https://drafts.csswg.org/selectors-4/#relational"
+                          ],
                           "status": {
                             "baseline": "low",
                             "baseline_low_date": "2023-12-19",
@@ -162,10 +168,13 @@
                           }
                         ],
                         "webFeature": {
+                          "id": "nesting",
                           "description_html": "CSS nesting allows for shorter selectors, easier reading, and more modularity by nesting rules inside others.",
                           "group": "css",
                           "name": "Nesting",
-                          "spec": "https://drafts.csswg.org/css-nesting-1/",
+                          "spec": [
+                            "https://drafts.csswg.org/css-nesting-1/"
+                          ],
                           "status": {
                             "baseline": "low",
                             "baseline_low_date": "2023-12-11",
@@ -233,10 +242,13 @@
                           "url": "https://caniuse.com/css-subgrid"
                         },
                         "webFeature": {
+                          "id": "subgrid",
                           "description_html": "The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.",
                           "group": "grid",
                           "name": "Subgrid",
-                          "spec": "https://drafts.csswg.org/css-grid-2/#subgrids",
+                          "spec": [
+                            "https://drafts.csswg.org/css-grid-2/#subgrids"
+                          ],
                           "status": {
                             "baseline": "low",
                             "baseline_low_date": "2023-09-15",
@@ -270,10 +282,13 @@
                           "url": "https://caniuse.com/css-grid"
                         },
                         "webFeature": {
+                          "id": "grid",
                           "description_html": "CSS grid is a two-dimensional layout system, which lays content out in rows and columns.",
                           "group": "grid",
                           "name": "Grid",
-                          "spec": "https://drafts.csswg.org/css-grid-3/",
+                          "spec": [
+                            "https://drafts.csswg.org/css-grid-3/"
+                          ],
                           "status": {
                             "baseline": "high",
                             "baseline_low_date": "2017-10-17",
@@ -341,18 +356,45 @@
                       }
                     },
                     {
-                      "count": 45,
-                      "id": "css_animations",
-                      "percentageQuestion": 2.91,
-                      "percentageSurvey": 0.46,
+                      "count": 47,
+                      "id": "cascade_layers",
+                      "percentageQuestion": 3.03,
+                      "percentageSurvey": 0.48,
                       "entity": {
-                        "id": "css_animations",
+                        "id": "cascade_layers",
                         "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "@layer layer-name {rules}\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">@layer</span> layer-name {rules}"
+                        },
                         "mdn": {
-                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations"
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@layer"
                         },
                         "caniuse": {
-                          "url": "https://caniuse.com/css-animation"
+                          "url": "https://caniuse.com/css-cascade-layers"
+                        },
+                        "webFeature": {
+                          "id": "cascade-layers",
+                          "description_html": "The <code>@layer</code> CSS at-rule avoids specificity conflicts by providing priority levels for different groups of CSS rules, such as low-priority styles like resets, and high-priority styles like UI components.",
+                          "group": "css",
+                          "name": "Cascade layers",
+                          "spec": [
+                            "https://drafts.csswg.org/css-cascade-5/"
+                          ],
+                          "status": {
+                            "baseline": "high",
+                            "baseline_low_date": "2022-03-14",
+                            "support": {
+                              "chrome": "99",
+                              "chrome_android": "99",
+                              "edge": "99",
+                              "firefox": "97",
+                              "firefox_android": "97",
+                              "safari": "15.4",
+                              "safari_ios": "15.4"
+                            }
+                          }
                         }
                       }
                     },
@@ -379,10 +421,13 @@
                           "url": "https://caniuse.com/mdn-css_properties_aspect-ratio"
                         },
                         "webFeature": {
+                          "id": "aspect-ratio",
                           "description_html": "The <code>aspect-ratio</code> CSS property controls the width-to-height ratio of elements. For <code>&#x3C;img></code> and <code>&#x3C;video></code> elements, the <code>width</code> and <code>height</code> attributes used together with <code>height: auto</code> control the aspect ratio while the image/video is loading.",
                           "group": "css",
                           "name": "aspect-ratio",
-                          "spec": "https://drafts.csswg.org/css-sizing-4/#aspect-ratio",
+                          "spec": [
+                            "https://drafts.csswg.org/css-sizing-4/#aspect-ratio"
+                          ],
                           "status": {
                             "baseline": "high",
                             "baseline_low_date": "2021-09-20",
@@ -422,10 +467,13 @@
                           "url": "https://caniuse.com/css-line-clamp"
                         },
                         "webFeature": {
+                          "id": "line-clamp",
                           "description_html": "The <code>line-clamp</code> CSS property limits the text in a block container to a certain number of lines. The prefixed <code>-webkit-line-clamp</code> is widely supported but only works with <code>-webkit-box-orient: vertical</code> in combination with <code>display: -webkit-box</code> or <code>display: -webkit-inline-box</code>.",
                           "group": "css",
                           "name": "line-clamp",
-                          "spec": "https://drafts.csswg.org/css-overflow-4/#line-clamp",
+                          "spec": [
+                            "https://drafts.csswg.org/css-overflow-4/#line-clamp"
+                          ],
                           "status": {
                             "baseline": "false"
                           }
@@ -457,10 +505,13 @@
                           "url": "https://caniuse.com/css-lch-lab"
                         },
                         "webFeature": {
+                          "id": "oklab",
                           "description_html": "The Oklab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is, aiming to match how humans perceive colors. Oklch is a variant of Oklab with polar coordinates. These color spaces can be used with the CSS <code>color()</code>, <code>oklab()</code>, and <code>oklch()</code> functions.",
                           "group": "color-types",
                           "name": "Oklab and Oklch",
-                          "spec": "https://drafts.csswg.org/css-color-4/#ok-lab",
+                          "spec": [
+                            "https://drafts.csswg.org/css-color-4/#ok-lab"
+                          ],
                           "status": {
                             "baseline": "low",
                             "baseline_low_date": "2023-05-09",
@@ -478,16 +529,10 @@
                       }
                     },
                     {
-                      "count": 39,
-                      "id": "at_layer",
-                      "percentageQuestion": 2.52,
-                      "percentageSurvey": 0.4
-                    },
-                    {
-                      "count": 39,
+                      "count": 36,
                       "id": "discrete_properties_animations",
-                      "percentageQuestion": 2.52,
-                      "percentageSurvey": 0.4,
+                      "percentageQuestion": 2.32,
+                      "percentageSurvey": 0.37,
                       "entity": {
                         "name": "Discrete Properties Animations",
                         "nameClean": "Discrete Properties Animations",
@@ -502,10 +547,13 @@
                           "codeHighlighted": "<span class=\"hljs-comment\">/*   IS-OPEN STATE   */</span>\ndialog<span class=\"hljs-selector-attr\">[open]</span> {\n  translate: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">0</span>;\n}\n\n<span class=\"hljs-comment\">/*   EXIT STATE   */</span>\ndialog {\n  <span class=\"hljs-attribute\">transition</span>: translate <span class=\"hljs-number\">0.7s</span> ease-out, display <span class=\"hljs-number\">0.7s</span> ease-out allow-discrete;\n  translate: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n}\n\n<span class=\"hljs-comment\">/*   0. BEFORE-OPEN STATE   */</span>\n<span class=\"hljs-keyword\">@starting-style</span> {\n  dialog<span class=\"hljs-selector-attr\">[open]</span> {\n    translate: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n  }\n}"
                         },
                         "webFeature": {
+                          "id": "transition-behavior",
                           "description_html": "The <code>transition-behavior: allow-discrete</code> CSS declaration allows transitions for properties whose animation behavior is discrete. Such properties can't be interpolated and swap from their start value to the end value at 50%.",
                           "group": "css",
                           "name": "transition-behavior",
-                          "spec": "https://drafts.csswg.org/css-transitions-2/#transition-behavior-property",
+                          "spec": [
+                            "https://drafts.csswg.org/css-transitions-2/#transition-behavior-property"
+                          ],
                           "status": {
                             "baseline": "low",
                             "baseline_low_date": "2024-08-06",
@@ -545,10 +593,13 @@
                           "url": "https://caniuse.com/css-container-queries-style"
                         },
                         "webFeature": {
+                          "id": "container-style-queries",
                           "description_html": "Container style queries with the <code>@container</code> at-rule apply styles to an element based on the values of custom properties of its container.",
                           "group": "containment",
                           "name": "Container style queries",
-                          "spec": "https://drafts.csswg.org/css-contain-3/#style-container",
+                          "spec": [
+                            "https://drafts.csswg.org/css-contain-3/#style-container"
+                          ],
                           "status": {
                             "baseline": "false",
                             "support": {
@@ -608,10 +659,13 @@
                           }
                         ],
                         "webFeature": {
+                          "id": "relative-color",
                           "description_html": "The <code>from</code> keyword for color functions (<code>color()</code>, <code>hsl()</code>, <code>oklch()</code>, etc.) creates a new color based on a given color by modifying the values of the input color. Also known as relative color syntax (RCS).",
                           "group": "css",
                           "name": "Relative colors",
-                          "spec": "https://drafts.csswg.org/css-color-5/#relative-colors",
+                          "spec": [
+                            "https://drafts.csswg.org/css-color-5/#relative-colors"
+                          ],
                           "status": {
                             "baseline": "low",
                             "baseline_low_date": "2024-07-09",
@@ -629,34 +683,80 @@
                       }
                     },
                     {
+                      "count": 27,
+                      "id": "color_mix",
+                      "percentageQuestion": 1.74,
+                      "percentageSurvey": 0.28,
+                      "entity": {
+                        "name": "`color-mix()`",
+                        "nameHtml": "<code>color-mix()</code>",
+                        "nameClean": "color-mix()",
+                        "id": "color_mix",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".teal {\n  background: color-mix(in lab, white 20%, #34c9eb);\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.teal</span> {\n  <span class=\"hljs-attribute\">background</span>: <span class=\"hljs-built_in\">color-mix</span>(in lab, white <span class=\"hljs-number\">20%</span>, <span class=\"hljs-number\">#34c9eb</span>);\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-css_types_color_color-mix"
+                        },
+                        "webFeature": {
+                          "id": "color-mix",
+                          "description_html": "The <code>color-mix()</code> function mixes two colors in a given color space and by a given amount. Commonly, lighter or darker variations of a color are created by mixing with white or black.",
+                          "group": "css",
+                          "name": "color-mix()",
+                          "spec": [
+                            "https://drafts.csswg.org/css-color-5/#color-mix"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2023-05-09",
+                            "support": {
+                              "chrome": "111",
+                              "chrome_android": "111",
+                              "edge": "111",
+                              "firefox": "113",
+                              "firefox_android": "113",
+                              "safari": "16.2",
+                              "safari_ios": "16.2"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
                       "count": 8155,
                       "id": "no_answer",
                       "percentageQuestion": 0,
                       "percentageSurvey": 84.04
                     },
                     {
-                      "count": 1146,
+                      "count": 1135,
                       "id": "other_answers",
-                      "percentageQuestion": 73.9,
-                      "percentageSurvey": 11.7,
+                      "percentageQuestion": 73.2,
+                      "percentageSurvey": 11.6,
                       "groupedBuckets": [
                         {
-                          "count": 338,
+                          "count": 321,
                           "id": "overlimit_answers",
-                          "percentageQuestion": 21.82,
-                          "percentageSurvey": 3.47
+                          "percentageQuestion": 20.72,
+                          "percentageSurvey": 3.3
                         },
                         {
-                          "count": 306,
+                          "count": 284,
                           "id": "cutoff_answers",
-                          "percentageQuestion": 19.67,
-                          "percentageSurvey": 3.06
+                          "percentageQuestion": 18.26,
+                          "percentageSurvey": 2.84
                         },
                         {
-                          "count": 502,
+                          "count": 530,
                           "id": "no_match",
-                          "percentageQuestion": 32.41,
-                          "percentageSurvey": 5.17
+                          "percentageQuestion": 34.22,
+                          "percentageSurvey": 5.46
                         }
                       ]
                     }

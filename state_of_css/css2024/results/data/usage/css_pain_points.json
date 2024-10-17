@@ -19,15 +19,15 @@
                     }
                   },
                   "completion": {
-                    "count": 1089,
-                    "percentageSurvey": 11.22,
+                    "count": 1090,
+                    "percentageSurvey": 11.23,
                     "total": 9704
                   },
                   "buckets": [
                     {
                       "count": 97,
                       "id": "browser_support",
-                      "percentageQuestion": 8.91,
+                      "percentageQuestion": 8.9,
                       "percentageSurvey": 1,
                       "entity": {
                         "name": "Browser support",
@@ -59,7 +59,7 @@
                     {
                       "count": 48,
                       "id": "excessive_complexity",
-                      "percentageQuestion": 4.41,
+                      "percentageQuestion": 4.4,
                       "percentageSurvey": 0.49,
                       "entity": {
                         "name": "Excessive complexity",
@@ -73,7 +73,7 @@
                     {
                       "count": 47,
                       "id": "safari",
-                      "percentageQuestion": 4.32,
+                      "percentageQuestion": 4.31,
                       "percentageSurvey": 0.48,
                       "entity": {
                         "name": "Safari",
@@ -102,10 +102,13 @@
                           "url": "https://caniuse.com/css-grid"
                         },
                         "webFeature": {
+                          "id": "grid",
                           "description_html": "CSS grid is a two-dimensional layout system, which lays content out in rows and columns.",
                           "group": "grid",
                           "name": "Grid",
-                          "spec": "https://drafts.csswg.org/css-grid-3/",
+                          "spec": [
+                            "https://drafts.csswg.org/css-grid-3/"
+                          ],
                           "status": {
                             "baseline": "high",
                             "baseline_low_date": "2017-10-17",
@@ -147,10 +150,13 @@
                           }
                         ],
                         "webFeature": {
+                          "id": "nesting",
                           "description_html": "CSS nesting allows for shorter selectors, easier reading, and more modularity by nesting rules inside others.",
                           "group": "css",
                           "name": "Nesting",
-                          "spec": "https://drafts.csswg.org/css-nesting-1/",
+                          "spec": [
+                            "https://drafts.csswg.org/css-nesting-1/"
+                          ],
                           "status": {
                             "baseline": "low",
                             "baseline_low_date": "2023-12-11",
@@ -190,6 +196,20 @@
                         "description": "Debugging issues",
                         "descriptionClean": "Debugging issues",
                         "id": "debugging",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 28,
+                      "id": "animation_issues",
+                      "percentageQuestion": 2.57,
+                      "percentageSurvey": 0.29,
+                      "entity": {
+                        "name": "Animations",
+                        "nameClean": "Animations",
+                        "description": "Animation issues",
+                        "descriptionClean": "Animation issues",
+                        "id": "animation_issues",
                         "entityType": "default"
                       }
                     },
@@ -243,29 +263,6 @@
                       }
                     },
                     {
-                      "count": 22,
-                      "id": "variables",
-                      "percentageQuestion": 2.02,
-                      "percentageSurvey": 0.23,
-                      "entity": {
-                        "name": "Variables",
-                        "nameClean": "Variables",
-                        "id": "variables",
-                        "entityType": "feature",
-                        "example": {
-                          "language": "css",
-                          "code": ":root {\n  --main-bg-color: brown;\n}\n.foo {\n  background-color: var(--main-bg-color);\n}\n",
-                          "codeHighlighted": "<span class=\"hljs-selector-pseudo\">:root</span> {\n  <span class=\"hljs-attr\">--main-bg-color</span>: brown;\n}\n<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--main-bg-color);\n}"
-                        },
-                        "mdn": {
-                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables"
-                        },
-                        "caniuse": {
-                          "url": "https://caniuse.com/css-variables"
-                        }
-                      }
-                    },
-                    {
                       "count": 21,
                       "id": "speed_of_change",
                       "percentageQuestion": 1.93,
@@ -282,7 +279,7 @@
                     {
                       "count": 20,
                       "id": "specificity",
-                      "percentageQuestion": 1.84,
+                      "percentageQuestion": 1.83,
                       "percentageSurvey": 0.21,
                       "entity": {
                         "name": "Specificity",
@@ -317,6 +314,29 @@
                     },
                     {
                       "count": 18,
+                      "id": "variables",
+                      "percentageQuestion": 1.65,
+                      "percentageSurvey": 0.19,
+                      "entity": {
+                        "name": "Variables",
+                        "nameClean": "Variables",
+                        "id": "variables",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ":root {\n  --main-bg-color: brown;\n}\n.foo {\n  background-color: var(--main-bg-color);\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-pseudo\">:root</span> {\n  <span class=\"hljs-attr\">--main-bg-color</span>: brown;\n}\n<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--main-bg-color);\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-variables"
+                        }
+                      }
+                    },
+                    {
+                      "count": 18,
                       "id": "z_index",
                       "percentageQuestion": 1.65,
                       "percentageSurvey": 0.19,
@@ -325,22 +345,6 @@
                         "nameClean": "z-index",
                         "id": "z_index",
                         "entityType": "default"
-                      }
-                    },
-                    {
-                      "count": 17,
-                      "id": "css_animations",
-                      "percentageQuestion": 1.56,
-                      "percentageSurvey": 0.18,
-                      "entity": {
-                        "id": "css_animations",
-                        "entityType": "feature",
-                        "mdn": {
-                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations"
-                        },
-                        "caniuse": {
-                          "url": "https://caniuse.com/css-animation"
-                        }
                       }
                     },
                     {
@@ -366,10 +370,13 @@
                           "url": "https://caniuse.com/css-has"
                         },
                         "webFeature": {
+                          "id": "has",
                           "description_html": "The <code>:has()</code> CSS functional pseudo-class matches an element if any of the selectors passed as parameters would match at least one element.",
                           "group": "selectors",
                           "name": ":has()",
-                          "spec": "https://drafts.csswg.org/selectors-4/#relational",
+                          "spec": [
+                            "https://drafts.csswg.org/selectors-4/#relational"
+                          ],
                           "status": {
                             "baseline": "low",
                             "baseline_low_date": "2023-12-19",
@@ -393,28 +400,28 @@
                       "percentageSurvey": 88.77
                     },
                     {
-                      "count": 1047,
+                      "count": 1023,
                       "id": "other_answers",
-                      "percentageQuestion": 96.05,
-                      "percentageSurvey": 10.63,
+                      "percentageQuestion": 93.78,
+                      "percentageSurvey": 10.4,
                       "groupedBuckets": [
                         {
-                          "count": 203,
+                          "count": 176,
                           "id": "overlimit_answers",
-                          "percentageQuestion": 18.66,
-                          "percentageSurvey": 2.03
+                          "percentageQuestion": 16.16,
+                          "percentageSurvey": 1.76
                         },
                         {
-                          "count": 316,
+                          "count": 288,
                           "id": "cutoff_answers",
-                          "percentageQuestion": 28.91,
-                          "percentageSurvey": 3.16
+                          "percentageQuestion": 26.34,
+                          "percentageSurvey": 2.88
                         },
                         {
-                          "count": 528,
+                          "count": 559,
                           "id": "no_match",
-                          "percentageQuestion": 48.48,
-                          "percentageSurvey": 5.44
+                          "percentageQuestion": 51.28,
+                          "percentageSurvey": 5.76
                         }
                       ]
                     }
