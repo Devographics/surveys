@@ -4,8 +4,23 @@ query js2023metaFrameworksOthersQuery {
       js2023 {
         meta_frameworks {
           meta_frameworks_others {
+            comments {
+              currentEdition {
+                count
+              }
+            }
             prenormalized(parameters: { limit: 10, enableCache: false }) {
               currentEdition {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                }
                 completion {
                   count
                   percentageSurvey
@@ -77,6 +92,26 @@ query js2023metaFrameworksOthersQuery {
                     resources {
                       url
                       title
+                    }
+                    webFeature {
+                      id
+                      description_html
+                      group
+                      name
+                      spec
+                      status {
+                        baseline
+                        baseline_low_date
+                        support {
+                          chrome
+                          chrome_android
+                          edge
+                          firefox
+                          firefox_android
+                          safari
+                          safari_ios
+                        }
+                      }
                     }
                   }
                 }

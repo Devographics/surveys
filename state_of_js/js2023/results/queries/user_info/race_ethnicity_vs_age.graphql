@@ -4,6 +4,11 @@ query js2023raceEthnicityVsAgeQuery {
       js2023 {
         user_info {
           race_ethnicity_vs_age: race_ethnicity {
+            comments {
+              currentEdition {
+                count
+              }
+            }
             responses(
               facet: user_info__age
               parameters: {
@@ -12,6 +17,16 @@ query js2023raceEthnicityVsAgeQuery {
               }
             ) {
               currentEdition {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                }
                 completion {
                   count
                   percentageSurvey
@@ -83,6 +98,26 @@ query js2023raceEthnicityVsAgeQuery {
                     resources {
                       url
                       title
+                    }
+                    webFeature {
+                      id
+                      description_html
+                      group
+                      name
+                      spec
+                      status {
+                        baseline
+                        baseline_low_date
+                        support {
+                          chrome
+                          chrome_android
+                          edge
+                          firefox
+                          firefox_android
+                          safari
+                          safari_ios
+                        }
+                      }
                     }
                   }
                   averageByFacet

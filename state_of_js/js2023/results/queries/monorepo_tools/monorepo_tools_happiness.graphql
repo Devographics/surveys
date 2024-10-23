@@ -4,8 +4,23 @@ query js2023monorepoToolsHappinessQuery {
       js2023 {
         monorepo_tools {
           monorepo_tools_happiness {
+            comments {
+              currentEdition {
+                count
+              }
+            }
             responses(parameters: { showNoAnswer: true, enableCache: false }) {
               allEditions {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                }
                 editionId
                 year
                 completion {
@@ -79,6 +94,26 @@ query js2023monorepoToolsHappinessQuery {
                     resources {
                       url
                       title
+                    }
+                    webFeature {
+                      id
+                      description_html
+                      group
+                      name
+                      spec
+                      status {
+                        baseline
+                        baseline_low_date
+                        support {
+                          chrome
+                          chrome_android
+                          edge
+                          firefox
+                          firefox_android
+                          safari
+                          safari_ios
+                        }
+                      }
                     }
                   }
                 }

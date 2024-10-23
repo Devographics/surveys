@@ -4,6 +4,11 @@ query js2023topCurrentlyMissingFromJsQuery {
       js2023 {
         usage {
           top_currently_missing_from_js {
+            comments {
+              currentEdition {
+                count
+              }
+            }
             combined(
               parameters: {
                 showNoAnswer: true
@@ -14,6 +19,16 @@ query js2023topCurrentlyMissingFromJsQuery {
               }
             ) {
               currentEdition {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                }
                 completion {
                   count
                   percentageSurvey
@@ -86,6 +101,26 @@ query js2023topCurrentlyMissingFromJsQuery {
                       url
                       title
                     }
+                    webFeature {
+                      id
+                      description_html
+                      group
+                      name
+                      spec
+                      status {
+                        baseline
+                        baseline_low_date
+                        support {
+                          chrome
+                          chrome_android
+                          edge
+                          firefox
+                          firefox_android
+                          safari
+                          safari_ios
+                        }
+                      }
+                    }
                   }
                   groupedBuckets {
                     count
@@ -149,6 +184,26 @@ query js2023topCurrentlyMissingFromJsQuery {
                       resources {
                         url
                         title
+                      }
+                      webFeature {
+                        id
+                        description_html
+                        group
+                        name
+                        spec
+                        status {
+                          baseline
+                          baseline_low_date
+                          support {
+                            chrome
+                            chrome_android
+                            edge
+                            firefox
+                            firefox_android
+                            safari
+                            safari_ios
+                          }
+                        }
                       }
                     }
                   }

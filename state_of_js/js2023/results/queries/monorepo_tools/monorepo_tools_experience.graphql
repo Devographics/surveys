@@ -5,6 +5,9 @@ query js2023itemsQuery {
         monorepo_tools {
           monorepo_tools_experience: _items {
             id
+            _metadata {
+              sectionId
+            }
             entity {
               name
               nameClean
@@ -32,6 +35,26 @@ query js2023itemsQuery {
                 language
                 code
                 codeHighlighted
+              }
+              webFeature {
+                id
+                description_html
+                group
+                name
+                spec
+                status {
+                  baseline
+                  baseline_low_date
+                  support {
+                    chrome
+                    chrome_android
+                    edge
+                    firefox
+                    firefox_android
+                    safari
+                    safari_ios
+                  }
+                }
               }
             }
             comments {

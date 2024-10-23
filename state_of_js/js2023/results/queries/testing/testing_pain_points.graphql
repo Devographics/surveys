@@ -4,6 +4,11 @@ query js2023testingPainPointsQuery {
       js2023 {
         testing {
           testing_pain_points {
+            comments {
+              currentEdition {
+                count
+              }
+            }
             freeform(
               parameters: {
                 showNoAnswer: true
@@ -14,6 +19,16 @@ query js2023testingPainPointsQuery {
               }
             ) {
               currentEdition {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                }
                 completion {
                   count
                   percentageSurvey
@@ -86,6 +101,26 @@ query js2023testingPainPointsQuery {
                       url
                       title
                     }
+                    webFeature {
+                      id
+                      description_html
+                      group
+                      name
+                      spec
+                      status {
+                        baseline
+                        baseline_low_date
+                        support {
+                          chrome
+                          chrome_android
+                          edge
+                          firefox
+                          firefox_android
+                          safari
+                          safari_ios
+                        }
+                      }
+                    }
                   }
                   groupedBuckets {
                     count
@@ -149,6 +184,26 @@ query js2023testingPainPointsQuery {
                       resources {
                         url
                         title
+                      }
+                      webFeature {
+                        id
+                        description_html
+                        group
+                        name
+                        spec
+                        status {
+                          baseline
+                          baseline_low_date
+                          support {
+                            chrome
+                            chrome_android
+                            edge
+                            firefox
+                            firefox_android
+                            safari
+                            safari_ios
+                          }
+                        }
                       }
                     }
                   }

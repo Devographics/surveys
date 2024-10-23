@@ -4,8 +4,23 @@ query js2023frontEndFrameworksHappinessQuery {
       js2023 {
         front_end_frameworks {
           front_end_frameworks_happiness {
+            comments {
+              currentEdition {
+                count
+              }
+            }
             responses(parameters: { showNoAnswer: true, enableCache: false }) {
               allEditions {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                }
                 editionId
                 year
                 completion {
@@ -79,6 +94,26 @@ query js2023frontEndFrameworksHappinessQuery {
                     resources {
                       url
                       title
+                    }
+                    webFeature {
+                      id
+                      description_html
+                      group
+                      name
+                      spec
+                      status {
+                        baseline
+                        baseline_low_date
+                        support {
+                          chrome
+                          chrome_android
+                          edge
+                          firefox
+                          firefox_android
+                          safari
+                          safari_ios
+                        }
+                      }
                     }
                   }
                 }

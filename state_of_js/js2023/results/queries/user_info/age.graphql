@@ -4,6 +4,11 @@ query js2023ageQuery {
       js2023 {
         user_info {
           age {
+            comments {
+              currentEdition {
+                count
+              }
+            }
             responses(
               parameters: {
                 showNoAnswer: true
@@ -12,6 +17,16 @@ query js2023ageQuery {
               }
             ) {
               currentEdition {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                }
                 completion {
                   count
                   percentageSurvey
@@ -83,6 +98,26 @@ query js2023ageQuery {
                     resources {
                       url
                       title
+                    }
+                    webFeature {
+                      id
+                      description_html
+                      group
+                      name
+                      spec
+                      status {
+                        baseline
+                        baseline_low_date
+                        support {
+                          chrome
+                          chrome_android
+                          edge
+                          firefox
+                          firefox_android
+                          safari
+                          safari_ios
+                        }
+                      }
                     }
                   }
                 }
