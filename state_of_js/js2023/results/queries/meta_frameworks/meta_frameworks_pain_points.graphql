@@ -1,9 +1,10 @@
-query js2023metaFrameworksPainPointsQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         meta_frameworks {
-          meta_frameworks_pain_points {
+          meta_frameworks_pain_points: meta_frameworks_pain_points {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query js2023metaFrameworksPainPointsQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

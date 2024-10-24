@@ -1,9 +1,10 @@
-query js2023syntaxFeaturesQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         features {
-          syntax_features {
+          syntax_features: syntax_features {
+            id
             comments {
               currentEdition {
                 count
@@ -13,7 +14,6 @@ query js2023syntaxFeaturesQuery {
               parameters: {
                 showNoAnswer: true
                 mergeOtherBuckets: false
-                enableCache: false
               }
             ) {
               currentEdition {

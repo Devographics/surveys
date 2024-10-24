@@ -1,9 +1,10 @@
-query js2023buildToolsPainPointsQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         build_tools {
-          build_tools_pain_points {
+          build_tools_pain_points: build_tools_pain_points {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query js2023buildToolsPainPointsQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

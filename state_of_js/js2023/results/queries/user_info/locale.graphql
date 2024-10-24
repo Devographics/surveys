@@ -1,15 +1,15 @@
-query js2023localeQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         user_info {
-          locale {
+          locale: locale {
+            id
             responses(
               parameters: {
                 showNoAnswer: true
                 mergeOtherBuckets: false
                 cutoff: 20
-                enableCache: false
               }
             ) {
               currentEdition {

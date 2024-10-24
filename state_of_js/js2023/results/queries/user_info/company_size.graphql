@@ -1,9 +1,10 @@
-query js2023companySizeQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         user_info {
-          company_size {
+          company_size: company_size {
+            id
             comments {
               currentEdition {
                 count
@@ -13,7 +14,6 @@ query js2023companySizeQuery {
               parameters: {
                 showNoAnswer: true
                 mergeOtherBuckets: false
-                enableCache: false
               }
             ) {
               currentEdition {

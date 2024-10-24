@@ -1,9 +1,10 @@
-query js2023frontEndFrameworksPainPointsQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         front_end_frameworks {
-          front_end_frameworks_pain_points {
+          front_end_frameworks_pain_points: front_end_frameworks_pain_points {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query js2023frontEndFrameworksPainPointsQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

@@ -1,9 +1,10 @@
-query js2023backendFrameworksQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         other_tools {
-          backend_frameworks {
+          backend_frameworks: backend_frameworks {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query js2023backendFrameworksQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

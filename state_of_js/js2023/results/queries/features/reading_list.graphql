@@ -1,15 +1,15 @@
-query js2023readingListQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         reading_list {
-          reading_list {
+          reading_list: reading_list {
+            id
             responses(
               parameters: {
                 showNoAnswer: true
                 mergeOtherBuckets: false
                 limit: 20
-                enableCache: false
               }
             ) {
               currentEdition {

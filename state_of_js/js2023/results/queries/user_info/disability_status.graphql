@@ -1,9 +1,10 @@
-query js2023disabilityStatusQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         user_info {
-          disability_status {
+          disability_status: disability_status {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query js2023disabilityStatusQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

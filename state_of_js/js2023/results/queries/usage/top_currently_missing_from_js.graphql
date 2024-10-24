@@ -1,9 +1,10 @@
-query js2023topCurrentlyMissingFromJsQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         usage {
-          top_currently_missing_from_js {
+          top_currently_missing_from_js: top_currently_missing_from_js {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query js2023topCurrentlyMissingFromJsQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

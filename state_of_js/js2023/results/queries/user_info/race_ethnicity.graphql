@@ -1,9 +1,10 @@
-query js2023raceEthnicityQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         user_info {
-          race_ethnicity {
+          race_ethnicity: race_ethnicity {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query js2023raceEthnicityQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

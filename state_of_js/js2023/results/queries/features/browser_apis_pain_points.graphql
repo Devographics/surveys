@@ -1,9 +1,10 @@
-query js2023browserApisPainPointsQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         features {
-          browser_apis_pain_points {
+          browser_apis_pain_points: browser_apis_pain_points {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query js2023browserApisPainPointsQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

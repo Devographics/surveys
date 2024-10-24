@@ -1,15 +1,16 @@
-query js2023testingHappinessQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         testing {
-          testing_happiness {
+          testing_happiness: testing_happiness {
+            id
             comments {
               currentEdition {
                 count
               }
             }
-            responses(parameters: { showNoAnswer: true, enableCache: false }) {
+            responses(parameters: { showNoAnswer: true }) {
               allEditions {
                 _metadata {
                   axis1Sort {

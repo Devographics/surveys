@@ -1,9 +1,10 @@
-query js2023arrayFeaturesQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         features {
-          array_features {
+          array_features: array_features {
+            id
             comments {
               currentEdition {
                 count
@@ -13,7 +14,6 @@ query js2023arrayFeaturesQuery {
               parameters: {
                 showNoAnswer: true
                 mergeOtherBuckets: false
-                enableCache: false
               }
             ) {
               currentEdition {

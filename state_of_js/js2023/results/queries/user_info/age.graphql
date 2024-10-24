@@ -1,9 +1,10 @@
-query js2023ageQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         user_info {
-          age {
+          age: age {
+            id
             comments {
               currentEdition {
                 count
@@ -13,7 +14,6 @@ query js2023ageQuery {
               parameters: {
                 showNoAnswer: true
                 mergeOtherBuckets: false
-                enableCache: false
               }
             ) {
               currentEdition {

@@ -1,15 +1,16 @@
-query js2023mobileDesktopHappinessQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         mobile_desktop {
-          mobile_desktop_happiness {
+          mobile_desktop_happiness: mobile_desktop_happiness {
+            id
             comments {
               currentEdition {
                 count
               }
             }
-            responses(parameters: { showNoAnswer: true, enableCache: false }) {
+            responses(parameters: { showNoAnswer: true }) {
               allEditions {
                 _metadata {
                   axis1Sort {

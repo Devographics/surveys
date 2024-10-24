@@ -1,9 +1,10 @@
-query js2023otherSurveysQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         resources {
-          other_surveys {
+          other_surveys: other_surveys {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query js2023otherSurveysQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

@@ -1,9 +1,10 @@
-query js2023countryVsGenderQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         user_info {
           country_vs_gender: country {
+            id
             comments {
               currentEdition {
                 count
@@ -12,7 +13,6 @@ query js2023countryVsGenderQuery {
             responses(
               facet: user_info__gender
               parameters: {
-                enableCache: false
                 showNoAnswer: true
                 mergeOtherBuckets: false
                 limit: 15
@@ -136,7 +136,89 @@ query js2023countryVsGenderQuery {
                     id
                     count
                     percentageBucket
+                    percentageQuestion
                     hasInsufficientData
+                    entity {
+                      name
+                      nameHtml
+                      nameClean
+                      alias
+                      description
+                      descriptionHtml
+                      descriptionClean
+                      id
+                      entityType
+                      example {
+                        label
+                        language
+                        code
+                        codeHighlighted
+                      }
+                      avatar {
+                        url
+                      }
+                      homepage {
+                        url
+                      }
+                      youtube {
+                        url
+                      }
+                      twitter {
+                        url
+                      }
+                      twitch {
+                        url
+                      }
+                      rss {
+                        url
+                      }
+                      blog {
+                        url
+                      }
+                      mastodon {
+                        url
+                      }
+                      github {
+                        url
+                      }
+                      npm {
+                        url
+                      }
+                      mdn {
+                        url
+                      }
+                      caniuse {
+                        url
+                      }
+                      resources {
+                        url
+                        title
+                      }
+                      webFeature {
+                        id
+                        description_html
+                        group
+                        name
+                        spec
+                        status {
+                          baseline
+                          baseline_low_date
+                          support {
+                            chrome
+                            chrome_android
+                            edge
+                            firefox
+                            firefox_android
+                            safari
+                            safari_ios
+                          }
+                        }
+                      }
+                    }
+                    token {
+                      id
+                      parentId
+                    }
                   }
                 }
               }

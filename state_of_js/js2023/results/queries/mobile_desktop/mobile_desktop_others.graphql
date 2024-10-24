@@ -1,15 +1,16 @@
-query js2023mobileDesktopOthersQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         mobile_desktop {
-          mobile_desktop_others {
+          mobile_desktop_others: mobile_desktop_others {
+            id
             comments {
               currentEdition {
                 count
               }
             }
-            prenormalized(parameters: { limit: 10, enableCache: false }) {
+            prenormalized(parameters: { limit: 10 }) {
               currentEdition {
                 _metadata {
                   axis1Sort {

@@ -1,9 +1,10 @@
-query js2023higherEducationDegreeQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         user_info {
-          higher_education_degree {
+          higher_education_degree: higher_education_degree {
+            id
             comments {
               currentEdition {
                 count
@@ -13,7 +14,6 @@ query js2023higherEducationDegreeQuery {
               parameters: {
                 showNoAnswer: true
                 mergeOtherBuckets: false
-                enableCache: false
               }
             ) {
               currentEdition {

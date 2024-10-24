@@ -1,9 +1,10 @@
-query js2023genderQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         user_info {
-          gender {
+          gender: gender {
+            id
             comments {
               currentEdition {
                 count
@@ -13,7 +14,6 @@ query js2023genderQuery {
               parameters: {
                 showNoAnswer: true
                 mergeOtherBuckets: false
-                enableCache: false
               }
             ) {
               currentEdition {

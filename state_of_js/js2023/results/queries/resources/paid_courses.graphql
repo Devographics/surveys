@@ -1,9 +1,10 @@
-query js2023paidCoursesQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         resources {
-          paid_courses {
+          paid_courses: paid_courses {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query js2023paidCoursesQuery {
                 cutoff: 10
                 limit: 40
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

@@ -1,9 +1,10 @@
-query js2023countryQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         user_info {
-          country {
+          country: country {
+            id
             comments {
               currentEdition {
                 count
@@ -14,7 +15,6 @@ query js2023countryQuery {
                 showNoAnswer: true
                 mergeOtherBuckets: false
                 limit: 20
-                enableCache: false
               }
             ) {
               currentEdition {

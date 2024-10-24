@@ -1,16 +1,16 @@
-query js2023sourceQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         user_info {
-          source {
+          source: source {
+            id
             freeform(
               parameters: {
                 showNoAnswer: true
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

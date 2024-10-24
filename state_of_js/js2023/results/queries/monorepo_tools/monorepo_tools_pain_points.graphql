@@ -1,9 +1,10 @@
-query js2023monorepoToolsPainPointsQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         monorepo_tools {
-          monorepo_tools_pain_points {
+          monorepo_tools_pain_points: monorepo_tools_pain_points {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query js2023monorepoToolsPainPointsQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

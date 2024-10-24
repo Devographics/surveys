@@ -1,9 +1,10 @@
-query js2023topJsPainPointsQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         usage {
-          top_js_pain_points {
+          top_js_pain_points: top_js_pain_points {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query js2023topJsPainPointsQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

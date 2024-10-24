@@ -1,9 +1,10 @@
-query js2023jsTsBalanceQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         usage {
-          js_ts_balance {
+          js_ts_balance: js_ts_balance {
+            id
             comments {
               currentEdition {
                 count
@@ -13,7 +14,6 @@ query js2023jsTsBalanceQuery {
               parameters: {
                 showNoAnswer: true
                 mergeOtherBuckets: false
-                enableCache: false
               }
             ) {
               currentEdition {

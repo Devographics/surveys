@@ -1,9 +1,10 @@
-query js2023peopleQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         resources {
-          people {
+          people: people {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query js2023peopleQuery {
                 cutoff: 10
                 limit: 40
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

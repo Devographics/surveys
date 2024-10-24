@@ -1,9 +1,10 @@
-query js2023browserApiFeaturesQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         features {
-          browser_api_features {
+          browser_api_features: browser_api_features {
+            id
             comments {
               currentEdition {
                 count
@@ -13,7 +14,6 @@ query js2023browserApiFeaturesQuery {
               parameters: {
                 showNoAnswer: true
                 mergeOtherBuckets: false
-                enableCache: false
               }
             ) {
               currentEdition {

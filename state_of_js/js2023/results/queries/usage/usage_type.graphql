@@ -1,9 +1,10 @@
-query js2023usageTypeQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         usage {
-          usage_type {
+          usage_type: usage_type {
+            id
             comments {
               currentEdition {
                 count
@@ -13,7 +14,6 @@ query js2023usageTypeQuery {
               parameters: {
                 showNoAnswer: true
                 mergeOtherBuckets: false
-                enableCache: false
               }
             ) {
               currentEdition {

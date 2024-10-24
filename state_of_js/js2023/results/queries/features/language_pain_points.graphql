@@ -1,9 +1,10 @@
-query js2023languagePainPointsQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         features {
-          language_pain_points {
+          language_pain_points: language_pain_points {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query js2023languagePainPointsQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

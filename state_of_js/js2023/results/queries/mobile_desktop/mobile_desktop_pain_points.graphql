@@ -1,9 +1,10 @@
-query js2023mobileDesktopPainPointsQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         mobile_desktop {
-          mobile_desktop_pain_points {
+          mobile_desktop_pain_points: mobile_desktop_pain_points {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query js2023mobileDesktopPainPointsQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

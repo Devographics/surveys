@@ -1,9 +1,10 @@
-query js2023whatDoYouUseJsForQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         usage {
-          what_do_you_use_js_for {
+          what_do_you_use_js_for: what_do_you_use_js_for {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query js2023whatDoYouUseJsForQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

@@ -1,9 +1,10 @@
-query js2023yearlySalaryQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         user_info {
-          yearly_salary {
+          yearly_salary: yearly_salary {
+            id
             comments {
               currentEdition {
                 count
@@ -13,7 +14,6 @@ query js2023yearlySalaryQuery {
               parameters: {
                 showNoAnswer: true
                 mergeOtherBuckets: false
-                enableCache: false
               }
             ) {
               currentEdition {

@@ -1,9 +1,10 @@
-query js2023aiToolsQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         other_tools {
-          ai_tools {
+          ai_tools: ai_tools {
+            id
             comments {
               currentEdition {
                 count
@@ -13,7 +14,6 @@ query js2023aiToolsQuery {
               parameters: {
                 showNoAnswer: true
                 mergeOtherBuckets: false
-                enableCache: false
               }
             ) {
               currentEdition {

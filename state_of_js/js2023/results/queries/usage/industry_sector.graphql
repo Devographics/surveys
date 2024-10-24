@@ -1,9 +1,10 @@
-query js2023industrySectorQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         usage {
-          industry_sector {
+          industry_sector: industry_sector {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query js2023industrySectorQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

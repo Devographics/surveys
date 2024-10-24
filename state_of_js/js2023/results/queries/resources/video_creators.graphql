@@ -1,9 +1,10 @@
-query js2023videoCreatorsQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         resources {
-          video_creators {
+          video_creators: video_creators {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query js2023videoCreatorsQuery {
                 cutoff: 10
                 limit: 40
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

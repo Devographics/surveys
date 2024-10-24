@@ -1,9 +1,10 @@
-query js2023jsAppPatternsQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         usage {
-          js_app_patterns {
+          js_app_patterns: js_app_patterns {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query js2023jsAppPatternsQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

@@ -1,9 +1,10 @@
-query js2023asyncFeaturesQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         features {
-          async_features {
+          async_features: async_features {
+            id
             comments {
               currentEdition {
                 count
@@ -13,7 +14,6 @@ query js2023asyncFeaturesQuery {
               parameters: {
                 showNoAnswer: true
                 mergeOtherBuckets: false
-                enableCache: false
               }
             ) {
               currentEdition {

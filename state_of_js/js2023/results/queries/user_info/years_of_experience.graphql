@@ -1,9 +1,10 @@
-query js2023yearsOfExperienceQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         user_info {
-          years_of_experience {
+          years_of_experience: years_of_experience {
+            id
             comments {
               currentEdition {
                 count
@@ -13,7 +14,6 @@ query js2023yearsOfExperienceQuery {
               parameters: {
                 showNoAnswer: true
                 mergeOtherBuckets: false
-                enableCache: false
               }
             ) {
               currentEdition {

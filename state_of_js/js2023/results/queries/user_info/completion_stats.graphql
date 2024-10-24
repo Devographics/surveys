@@ -1,14 +1,14 @@
-query js2023completionStatsQuery {
+query {
   surveys {
     state_of_js {
       js2023 {
         user_info {
-          completion_stats {
+          completion_stats: completion_stats {
+            id
             responses(
               parameters: {
                 showNoAnswer: true
                 mergeOtherBuckets: false
-                enableCache: false
               }
             ) {
               currentEdition {
