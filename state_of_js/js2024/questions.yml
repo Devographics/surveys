@@ -61,7 +61,7 @@
     #   yearAdded: 2023
 
     - id: syntax_features
-      template: multipleWithOtherSentiment
+      template: multipleWithOther
       allowOther: false
       countsTowardScore: true
       options:
@@ -75,7 +75,7 @@
         - id: na
 
     - id: string_features
-      template: multipleWithOtherSentiment
+      template: multipleWithOther
       allowOther: false
       countsTowardScore: true
       options:
@@ -85,7 +85,7 @@
         - id: na
 
     - id: array_features
-      template: multipleWithOtherSentiment
+      template: multipleWithOther
       allowOther: false
       countsTowardScore: true
       options:
@@ -94,10 +94,44 @@
         - id: array_to_reversed
         - id: array_with
         - id: array_to_spliced
+        - id: array_from_async
+          yearAdded: 2024
+        - id: na
+
+    - id: set_features
+      template: multipleWithOther
+      allowOther: false
+      countsTowardScore: true
+      yearAdded: 2024
+      options:
+        - id: set_intersection
+          yearAdded: 2024
+        - id: set_union
+          yearAdded: 2024
+        - id: set_difference
+          yearAdded: 2024
+        - id: set_symmetric_difference
+          yearAdded: 2024
+        - id: set_is_subset_of
+          yearAdded: 2024
+        - id: set_is_superset_of
+          yearAdded: 2024
+        - id: set_is_disjoint_from
+          yearAdded: 2024
+        - id: na
+
+    - id: object_features
+      template: multipleWithOther
+      allowOther: false
+      countsTowardScore: true
+      yearAdded: 2024
+      options:
+        - id: object_group_by
+          yearAdded: 2024
         - id: na
 
     - id: async_features
-      template: multipleWithOtherSentiment
+      template: multipleWithOther
       allowOther: false
       countsTowardScore: true
       options:
@@ -107,7 +141,7 @@
         - id: na
 
     - id: browser_api_features
-      template: multipleWithOtherSentiment
+      template: multipleWithOther
       allowOther: false
       countsTowardScore: true
       options:
@@ -271,9 +305,27 @@
       yearAdded: 2023
     # - id: enhance # too new to add in 2023?
     #   yearAdded: 2024
+
     - id: front_end_frameworks_others
       intlId: tools.other_tools
       template: projects
+
+    - id: front_end_frameworks_work
+      template: multipleWithOther
+      yearAdded: 2024
+      options:
+        - id: react
+        - id: vuejs
+        - id: angular
+        - id: preact
+        - id: svelte
+        - id: alpinejs
+        - id: litelement
+        - id: solid
+        - id: qwik
+        - id: stencil
+        - id: htmx
+        - id: na
 
     - id: front_end_frameworks_happiness
       template: happiness
@@ -320,8 +372,8 @@
       yearAdded: 2021
     - id: astro
       yearAdded: 2021
-    - id: eleventy # TODO: remove in 2024
-      yearAdded: 2021
+    # - id: eleventy # TODO: remove in 2024
+    #   yearAdded: 2021
     - id: sveltekit
       yearAdded: 2021
 
@@ -335,6 +387,24 @@
     - id: meta_frameworks_others
       intlId: tools.other_tools
       template: projects
+
+    - id: meta_frameworks_work
+      template: multipleWithOther
+      yearAdded: 2024
+      options:
+        - id: nextjs
+        - id: nuxt
+        - id: gatsby
+        - id: remix
+        - id: astro
+        - id: sveltekit
+        - id: docusaurus
+        - id: solidstart
+        - id: fresh
+        - id: analog
+          yearAdded: 2024
+        - id: na
+
     - id: meta_frameworks_happiness
       template: happiness
 
@@ -402,9 +472,32 @@
       yearAdded: 2022
     - id: mock_service_worker
       yearAdded: 2023
+    - id: node_test_runner
+      yearAdded: 2024
+
     - id: testing_others
       intlId: tools.other_tools
       template: projects
+
+    - id: testing_work
+      template: multipleWithOther
+      yearAdded: 2024
+      options:
+        - id: jest
+        - id: mocha
+        - id: storybook
+        - id: cypress
+        - id: puppeteer
+        - id: testing_library
+        - id: playwright
+        - id: webdriverio
+        - id: vitest
+        - id: selenium
+        - id: testcafe
+        - id: mock_service_worker
+        - id: node_test_runner
+        - id: na
+
     - id: testing_happiness
       template: happiness
 
@@ -466,9 +559,28 @@
       yearAdded: 2021
     - id: nativescript
       yearAdded: 2022
+
     - id: mobile_desktop_others
       intlId: tools.other_tools
       template: projects
+
+    - id: mobile_desktop_work
+      template: multipleWithOther
+      yearAdded: 2024
+      options:
+        - id: electron
+        - id: reactnative
+        - id: nativeapps
+        - id: cordova
+        - id: ionic
+        - id: capacitor
+        - id: nwjs
+        - id: expo
+        - id: quasar
+        - id: tauri
+        - id: nativescript
+        - id: na
+
     - id: mobile_desktop_happiness
       template: happiness
 
@@ -511,10 +623,33 @@
       yearAdded: 2023
     - id: biome
       yearAdded: 2023
+    - id: rspack
+      yearAdded: 2024
+    - id: rolldown
+      yearAdded: 2024
 
     - id: build_tools_others
       intlId: tools.other_tools
       template: projects
+
+    - id: build_tools_work
+      template: multipleWithOther
+      yearAdded: 2024
+      options:
+        - id: webpack
+        - id: parcel
+        - id: rollup
+        - id: tsc
+        - id: swc
+        - id: esbuild
+        - id: vite
+        - id: turbopack
+        - id: tsup
+        - id: biome
+        - id: rspack
+        - id: rolldown
+        - id: na
+
     - id: build_tools_happiness
       template: happiness
 
@@ -549,6 +684,21 @@
     - id: monorepo_tools_others
       intlId: tools.other_tools
       template: projects
+
+    - id: monorepo_tools_work
+      template: multipleWithOther
+      yearAdded: 2024
+      options:
+        - id: rush
+        - id: turborepo
+        - id: yarn_workspaces
+        - id: yalc
+        - id: lerna
+        - id: npm_workspaces
+        - id: pnpm
+        - id: nx
+        - id: na
+
     - id: monorepo_tools_happiness
       template: happiness
 
@@ -624,6 +774,8 @@
         - id: framer_motion
         - id: motion_one
         - id: d3
+        - id: pixi_js
+          yearAdded: 2024
         - id: na
 
     # - id: data_fetching
@@ -667,6 +819,10 @@
           yearAdded: 2022
         - id: blitz # removed in 2022?
           yearAdded: 2021
+        - id: hono
+          yearAdded: 2024
+        - id: elysia
+          yearAdded: 2024
         - id: na
 
     # - id: utilities
@@ -715,6 +871,8 @@
         - id: fly_io
         - id: digital_ocean_functions
         - id: azure_functions
+        - id: deno
+          yearAdded: 2024
         - id: na
 
     # - id: javascript_flavors
@@ -797,6 +955,8 @@
         - id: netlify
         - id: render
         - id: vercel
+        - id: railway
+          yearAdded: 2024
         - id: na
 
     # - id: performance_testing
@@ -1155,7 +1315,7 @@
     #     - id: a_list_apart
     #     - id: na
 
-    - id: paid_courses
+    - id: courses
       # template: multipleWithOther
       template: textList
       matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
@@ -1326,7 +1486,7 @@
       template: multipleWithOther
       matchTags: [surveys]
       options:
-        # - id: state_of_js_survey
+        - id: state_of_js_survey
         - id: state_of_css_survey
         - id: state_of_graphql_survey
         - id: state_of_html_survey
@@ -1336,6 +1496,8 @@
         - id: uxtools_survey
         - id: postman_survey
         - id: netlify_survey
+        - id: state_of_react_native
+        - id: na
 
 ######################################################
 #########            DEMOGRAPHICS            #########
@@ -1352,6 +1514,9 @@
 
     - id: company_size
       template: company_size
+
+    - id: job_title
+      template: text
 
     - id: yearly_salary
       template: yearly_salary_v2
@@ -1387,6 +1552,9 @@
           common_sources,
           state_of_js_sources,
         ]
+
+    - id: did_you_run_into_technical_issues
+      template: longtext
 
     - id: how_can_we_improve
       template: textList
