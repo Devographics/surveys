@@ -138,6 +138,8 @@
         - id: top_level_await
         - id: promise_all_settled
         - id: promise_any
+        - id: promise_try
+          yearAdded: 2024
         - id: na
 
     - id: browser_api_features
@@ -161,6 +163,10 @@
 
         - id: temporal
           yearAdded: 2022
+        - id: gamepad_api
+          yearAdded: 2024
+        - id: web_authentication_api
+          yearAdded: 2024
 
         - id: pwa
         - id: wasm
@@ -712,6 +718,7 @@
 ######################################################
 
 - id: other_tools
+  slug: tools
   questions:
     - id: libraries
       template: multipleWithOtherSentiment
@@ -938,6 +945,18 @@
         - id: v0
         - id: na
 
+    - id: ai_generated_code
+      yearAdded: 2024
+      template: singleWithOther
+      options:
+        - id: range_0
+        - id: range_0_25
+        - id: range_25_50
+        - id: range_50
+        - id: range_50_75
+        - id: range_75_100
+        - id: range_100
+
     - id: hosting
       template: multipleWithOtherSentiment
       matchTags:
@@ -1155,6 +1174,26 @@
         - id: build_tools
         - id: typing
 
+    - id: js_new_features
+      yearAdded: 2024
+      template: multipleWithOther
+      limit: 3
+      options:
+        - id: temporal
+        - id: js_decorators
+        # - id: array_from_async
+        - id: js_explicit_resource_management
+        - id: js_source_phase_imports
+        # - id: js_dynamic_code_brand_checks
+        - id: regexp_escape
+        - id: js_shadow_realm
+        - id: js_deferring_module_evaluation
+        - id: js_joint_iteration
+        - id: js_iterator_sequencing
+        - id: js_json_parse_source_access
+        - id: js_decorator_metadata
+        - id: js_float16_arrays
+
     - id: top_currently_missing_from_js
       yearAdded: 2021
       # template: bracket
@@ -1165,12 +1204,26 @@
       options:
         - id: static_typing
         - id: standard_library
-        - id: pattern_matching
-        - id: pipe_operator
-        - id: decorators
-        - id: immutable_data_structures
-        - id: better_date_management
-        - id: observable
+        - id: js_pattern_matching
+        - id: js_pipeline_operator
+        # - id: decorators
+        # - id: immutable_data_structures
+        # - id: better_date_management
+        - id: js_observable
+        - id: js_signals
+          yearAdded: 2024
+        - id: js_async_context
+          yearAdded: 2024
+        - id: js_extractors
+          yearAdded: 2024
+        - id: js_iterator_chunking
+          yearAdded: 2024
+        - id: js_get_or_insert
+          yearAdded: 2024
+        - id: js_structs
+          yearAdded: 2024
+        - id: js_record_tuple
+          yearAdded: 2024
 
     # - id: pick_of_the_year
     #   yearAdded: 2022
@@ -1178,15 +1231,17 @@
     #   template: others
     #   matchTags: [js_missing_features]
 
-    - id: js_sugar_proposal
-      yearAdded: 2024
-      template: singleWithOther
-      options:
-        - id: strongly_oppose
-        - id: oppose
-        - id: neutral
-        - id: support
-        - id: strongly_support
+    # TC39 said people don't have an accurate idea of what the proposal is,
+    # so don't include the question for now
+    # - id: js_sugar_proposal
+    #   yearAdded: 2024
+    #   template: singleWithOther
+    #   options:
+    #     - id: strongly_oppose
+    #     - id: oppose
+    #     - id: neutral
+    #     - id: support
+    #     - id: strongly_support
 
     - id: native_types_proposal
       yearAdded: 2024
@@ -1199,6 +1254,7 @@
     - id: state_of_the_web_happiness
       intlId: happiness.state_of_the_web
       template: happiness
+
     - id: state_of_js_happiness
       intlId: happiness.state_of_js
       template: happiness
@@ -1504,7 +1560,8 @@
       template: multipleWithOther
       matchTags: [surveys]
       options:
-        - id: state_of_js_survey
+        # - id: state_of_js_survey
+        - id: state_of_react_survey
         - id: state_of_css_survey
         - id: state_of_graphql_survey
         - id: state_of_html_survey
