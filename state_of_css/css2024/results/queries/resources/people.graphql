@@ -1,9 +1,10 @@
-query css2024peopleQuery {
+query {
   surveys {
     state_of_css {
       css2024 {
         resources {
-          people {
+          people: people {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query css2024peopleQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {
