@@ -1,9 +1,10 @@
-query css2024cssFrameworksQuery {
+query {
   surveys {
     state_of_css {
       css2024 {
         other_tools {
-          css_frameworks {
+          css_frameworks: css_frameworks {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query css2024cssFrameworksQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

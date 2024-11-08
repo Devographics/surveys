@@ -1,9 +1,10 @@
-query css2024cssMissingFeaturesQuery {
+query {
   surveys {
     state_of_css {
       css2024 {
         usage {
-          css_missing_features {
+          css_missing_features: css_missing_features {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query css2024cssMissingFeaturesQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

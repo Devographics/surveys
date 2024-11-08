@@ -1,15 +1,16 @@
-query css2024stateOfCssHappinessQuery {
+query {
   surveys {
     state_of_css {
       css2024 {
         usage {
-          state_of_css_happiness {
+          state_of_css_happiness: state_of_css_happiness {
+            id
             comments {
               currentEdition {
                 count
               }
             }
-            responses(parameters: { showNoAnswer: true, enableCache: false }) {
+            responses(parameters: { showNoAnswer: true }) {
               allEditions {
                 _metadata {
                   axis1Sort {

@@ -1,9 +1,10 @@
-query css2024cssInJsQuery {
+query {
   surveys {
     state_of_css {
       css2024 {
         other_tools {
-          css_in_js {
+          css_in_js: css_in_js {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query css2024cssInJsQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

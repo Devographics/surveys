@@ -1,9 +1,10 @@
-query css2024genderQuery {
+query {
   surveys {
     state_of_css {
       css2024 {
         user_info {
-          gender {
+          gender: gender {
+            id
             comments {
               currentEdition {
                 count
@@ -13,7 +14,6 @@ query css2024genderQuery {
               parameters: {
                 showNoAnswer: true
                 mergeOtherBuckets: false
-                enableCache: false
               }
             ) {
               currentEdition {

@@ -1,9 +1,10 @@
-query css2024cssJsBalanceQuery {
+query {
   surveys {
     state_of_css {
       css2024 {
         usage {
-          css_js_balance {
+          css_js_balance: css_js_balance {
+            id
             comments {
               currentEdition {
                 count
@@ -13,7 +14,6 @@ query css2024cssJsBalanceQuery {
               parameters: {
                 showNoAnswer: true
                 mergeOtherBuckets: false
-                enableCache: false
               }
             ) {
               currentEdition {

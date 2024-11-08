@@ -1,9 +1,10 @@
-query css2024countryQuery {
+query {
   surveys {
     state_of_css {
       css2024 {
         user_info {
-          country {
+          country: country {
+            id
             comments {
               currentEdition {
                 count
@@ -14,7 +15,6 @@ query css2024countryQuery {
                 showNoAnswer: true
                 mergeOtherBuckets: false
                 limit: 20
-                enableCache: false
               }
             ) {
               currentEdition {

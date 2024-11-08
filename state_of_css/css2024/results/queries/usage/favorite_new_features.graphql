@@ -1,9 +1,10 @@
-query css2024favoriteNewFeaturesQuery {
+query {
   surveys {
     state_of_css {
       css2024 {
         usage {
-          favorite_new_features {
+          favorite_new_features: favorite_new_features {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query css2024favoriteNewFeaturesQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

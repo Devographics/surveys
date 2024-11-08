@@ -1,9 +1,10 @@
-query css2024formFactorsQuery {
+query {
   surveys {
     state_of_css {
       css2024 {
         usage {
-          form_factors {
+          form_factors: form_factors {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query css2024formFactorsQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

@@ -1,9 +1,10 @@
-query css2024yearlySalaryQuery {
+query {
   surveys {
     state_of_css {
       css2024 {
         user_info {
-          yearly_salary {
+          yearly_salary: yearly_salary {
+            id
             comments {
               currentEdition {
                 count
@@ -13,7 +14,6 @@ query css2024yearlySalaryQuery {
               parameters: {
                 showNoAnswer: true
                 mergeOtherBuckets: false
-                enableCache: false
               }
             ) {
               currentEdition {

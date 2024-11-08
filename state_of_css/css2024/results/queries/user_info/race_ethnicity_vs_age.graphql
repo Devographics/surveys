@@ -1,9 +1,10 @@
-query css2024raceEthnicityVsAgeQuery {
+query {
   surveys {
     state_of_css {
       css2024 {
         user_info {
           race_ethnicity_vs_age: race_ethnicity {
+            id
             comments {
               currentEdition {
                 count
@@ -12,7 +13,6 @@ query css2024raceEthnicityVsAgeQuery {
             responses(
               facet: user_info__age
               parameters: {
-                enableCache: false
                 showNoAnswer: true
               }
             ) {
@@ -134,7 +134,89 @@ query css2024raceEthnicityVsAgeQuery {
                     id
                     count
                     percentageBucket
+                    percentageQuestion
                     hasInsufficientData
+                    entity {
+                      name
+                      nameHtml
+                      nameClean
+                      alias
+                      description
+                      descriptionHtml
+                      descriptionClean
+                      id
+                      entityType
+                      example {
+                        label
+                        language
+                        code
+                        codeHighlighted
+                      }
+                      avatar {
+                        url
+                      }
+                      homepage {
+                        url
+                      }
+                      youtube {
+                        url
+                      }
+                      twitter {
+                        url
+                      }
+                      twitch {
+                        url
+                      }
+                      rss {
+                        url
+                      }
+                      blog {
+                        url
+                      }
+                      mastodon {
+                        url
+                      }
+                      github {
+                        url
+                      }
+                      npm {
+                        url
+                      }
+                      mdn {
+                        url
+                      }
+                      caniuse {
+                        url
+                      }
+                      resources {
+                        url
+                        title
+                      }
+                      webFeature {
+                        id
+                        description_html
+                        group
+                        name
+                        spec
+                        status {
+                          baseline
+                          baseline_low_date
+                          support {
+                            chrome
+                            chrome_android
+                            edge
+                            firefox
+                            firefox_android
+                            safari
+                            safari_ios
+                          }
+                        }
+                      }
+                    }
+                    token {
+                      id
+                      parentId
+                    }
                   }
                 }
               }

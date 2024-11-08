@@ -1,9 +1,10 @@
-query css2024higherEducationDegreeQuery {
+query {
   surveys {
     state_of_css {
       css2024 {
         user_info {
-          higher_education_degree {
+          higher_education_degree: higher_education_degree {
+            id
             comments {
               currentEdition {
                 count
@@ -13,7 +14,6 @@ query css2024higherEducationDegreeQuery {
               parameters: {
                 showNoAnswer: true
                 mergeOtherBuckets: false
-                enableCache: false
               }
             ) {
               currentEdition {

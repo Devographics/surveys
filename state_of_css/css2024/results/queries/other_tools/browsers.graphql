@@ -1,9 +1,10 @@
-query css2024browsersQuery {
+query {
   surveys {
     state_of_css {
       css2024 {
         other_tools {
-          browsers {
+          browsers: browsers {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query css2024browsersQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

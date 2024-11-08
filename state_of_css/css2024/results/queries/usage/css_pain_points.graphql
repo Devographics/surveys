@@ -1,9 +1,10 @@
-query css2024cssPainPointsQuery {
+query {
   surveys {
     state_of_css {
       css2024 {
         usage {
-          css_pain_points {
+          css_pain_points: css_pain_points {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query css2024cssPainPointsQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

@@ -1,16 +1,16 @@
-query css2024sourceQuery {
+query {
   surveys {
     state_of_css {
       css2024 {
         user_info {
-          source {
+          source: source {
+            id
             freeform(
               parameters: {
                 showNoAnswer: true
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

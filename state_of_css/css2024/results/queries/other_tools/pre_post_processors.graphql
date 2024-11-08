@@ -1,9 +1,10 @@
-query css2024prePostProcessorsQuery {
+query {
   surveys {
     state_of_css {
       css2024 {
         other_tools {
-          pre_post_processors {
+          pre_post_processors: pre_post_processors {
+            id
             comments {
               currentEdition {
                 count
@@ -15,7 +16,6 @@ query css2024prePostProcessorsQuery {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {

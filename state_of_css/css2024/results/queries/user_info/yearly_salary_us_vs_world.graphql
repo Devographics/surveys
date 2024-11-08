@@ -1,26 +1,16 @@
-query css2024yearlySalaryUsVsWorldQuery {
+query {
   surveys {
     state_of_css {
       css2024 {
         user_info {
           yearly_salary_us_vs_world_1: yearly_salary {
+            id
             comments {
               currentEdition {
                 count
               }
             }
-            responses(
-              filters: {
-                user_info__country: {
-                  in: [
-                    USA
-                  ]
-                }
-              }
-              parameters: {
-                enableCache: false
-              }
-            ) {
+            responses(filters: { user_info__country: { in: [USA] } }) {
               currentEdition {
                 _metadata {
                   axis1Sort {
@@ -124,39 +114,19 @@ query css2024yearlySalaryUsVsWorldQuery {
                         }
                       }
                     }
-                  }
-                  averageByFacet
-                  percentilesByFacet {
-                    p0
-                    p10
-                    p25
-                    p50
-                    p75
-                    p90
-                    p100
                   }
                 }
               }
             }
           }
           yearly_salary_us_vs_world_2: yearly_salary {
+            id
             comments {
               currentEdition {
                 count
               }
             }
-            responses(
-              filters: {
-                user_info__country: {
-                  nin: [
-                    USA
-                  ]
-                }
-              }
-              parameters: {
-                enableCache: false
-              }
-            ) {
+            responses(filters: { user_info__country: { nin: [USA] } }) {
               currentEdition {
                 _metadata {
                   axis1Sort {
@@ -260,16 +230,6 @@ query css2024yearlySalaryUsVsWorldQuery {
                         }
                       }
                     }
-                  }
-                  averageByFacet
-                  percentilesByFacet {
-                    p0
-                    p10
-                    p25
-                    p50
-                    p75
-                    p90
-                    p100
                   }
                 }
               }
