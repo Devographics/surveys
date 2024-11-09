@@ -27,6 +27,33 @@
                     "language": "html",
                     "code": "<template id=\"counter\">\n\t<div class=\"counter\">Clicked {{ times }} times</div>\n</template>",
                     "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">template</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;counter&quot;</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">&quot;counter&quot;</span>&gt;</span>Clicked {{ times }} times<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">template</span>&gt;</span>"
+                  },
+                  "resources": [
+                    {
+                      "title": "HTML Standard",
+                      "url": "https://html.spec.whatwg.org/multipage/scripting.html#the-template-element"
+                    }
+                  ],
+                  "webFeature": {
+                    "id": "template",
+                    "description_html": "The <code>&#x3C;template></code> HTML element holds HTML fragments which you can clone and insert into the document using JavaScript.",
+                    "name": "<template>",
+                    "spec": [
+                      "https://html.spec.whatwg.org/multipage/scripting.html#the-template-element"
+                    ],
+                    "status": {
+                      "baseline": "high",
+                      "baseline_low_date": "2015-11-12",
+                      "support": {
+                        "chrome": "26",
+                        "chrome_android": "26",
+                        "edge": "13",
+                        "firefox": "22",
+                        "firefox_android": "22",
+                        "safari": "8",
+                        "safari_ios": "8"
+                      }
+                    }
                   }
                 },
                 "comments": {
@@ -325,7 +352,13 @@
                     "language": "js",
                     "code": "class MyElement extends HTMLElement { … }\ncustomElements.define(\"my-element\", MyElement);",
                     "codeHighlighted": "<span class=\"hljs-keyword\">class</span> <span class=\"hljs-title class_\">MyElement</span> <span class=\"hljs-keyword\">extends</span> <span class=\"hljs-title class_ inherited__\">HTMLElement</span> { … }\ncustomElements.<span class=\"hljs-title function_\">define</span>(<span class=\"hljs-string\">&quot;my-element&quot;</span>, <span class=\"hljs-title class_\">MyElement</span>);"
-                  }
+                  },
+                  "resources": [
+                    {
+                      "title": "HTML Standard",
+                      "url": "https://html.spec.whatwg.org/multipage/custom-elements.html#dom-customelementregistry-define-dev"
+                    }
+                  ]
                 },
                 "comments": {
                   "currentEdition": {
@@ -468,7 +501,17 @@
                     "language": "js",
                     "code": "const registry = new CustomElementRegistry();\nregistry.define('sub-element', SubElement);",
                     "codeHighlighted": "<span class=\"hljs-keyword\">const</span> registry = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">CustomElementRegistry</span>();\nregistry.<span class=\"hljs-title function_\">define</span>(<span class=\"hljs-string\">&#x27;sub-element&#x27;</span>, <span class=\"hljs-title class_\">SubElement</span>);"
-                  }
+                  },
+                  "resources": [
+                    {
+                      "title": "Scoped Custom Element Registries",
+                      "url": "https://github.com/WICG/webcomponents/blob/gh-pages/proposals/Scoped-Custom-Element-Registries.md"
+                    },
+                    {
+                      "title": "Chrome Platform Status",
+                      "url": "https://chromestatus.com/feature/5090435261792256"
+                    }
+                  ]
                 },
                 "comments": {
                   "currentEdition": {
@@ -617,6 +660,28 @@
                     "language": "js",
                     "code": "this.shadowRoot = this.attachShadow({mode: \"open\"});",
                     "codeHighlighted": "<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">shadowRoot</span> = <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">attachShadow</span>({<span class=\"hljs-attr\">mode</span>: <span class=\"hljs-string\">&quot;open&quot;</span>});"
+                  },
+                  "webFeature": {
+                    "id": "shadow-dom",
+                    "description_html": "Shadow DOM allows you to attach encapsulated \"shadow\" DOM trees to elements. A shadow DOM tree is a separate component, isolated from the scripts and styles in other parts of the document. This is a part of Web Components.",
+                    "group": "web-components",
+                    "name": "Shadow DOM",
+                    "spec": [
+                      "https://dom.spec.whatwg.org/#shadow-trees"
+                    ],
+                    "status": {
+                      "baseline": "high",
+                      "baseline_low_date": "2020-01-15",
+                      "support": {
+                        "chrome": "53",
+                        "chrome_android": "53",
+                        "edge": "79",
+                        "firefox": "63",
+                        "firefox_android": "63",
+                        "safari": "10",
+                        "safari_ios": "10"
+                      }
+                    }
                   }
                 },
                 "comments": {
@@ -764,6 +829,45 @@
                     "language": "html",
                     "code": "<host-element>\n    <template shadowrootmode=\"open\">\n        <!-- Shadow content -->\n    </template>\n</host-element>",
                     "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">host-element</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">template</span> <span class=\"hljs-attr\">shadowrootmode</span>=<span class=\"hljs-string\">&quot;open&quot;</span>&gt;</span>\n        <span class=\"hljs-comment\">&lt;!-- Shadow content --&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">template</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">host-element</span>&gt;</span>"
+                  },
+                  "resources": [
+                    {
+                      "title": "GitHub - mfreed7/declarative-shadow-dom: Declarative Shadow DOM feature development",
+                      "url": "https://github.com/mfreed7/declarative-shadow-dom"
+                    },
+                    {
+                      "title": "Declarative Shadow DOM - Chrome Developers",
+                      "url": "https://developer.chrome.com/en/articles/declarative-shadow-dom/"
+                    },
+                    {
+                      "title": "Declarative Shadow DOM | WebKit",
+                      "url": "https://webkit.org/blog/13851/declarative-shadow-dom/"
+                    },
+                    {
+                      "title": "Chrome Platform Status",
+                      "url": "https://chromestatus.com/feature/5191745052606464"
+                    }
+                  ],
+                  "webFeature": {
+                    "id": "declarative-shadow-dom",
+                    "description_html": "The <code>shadowrootmode</code> attribute on <code>&#x3C;template></code> creates a shadow root without the use of JavaScript. It is a declarative alternative to the <code>attachShadow()</code> method.",
+                    "name": "Declarative shadow DOM",
+                    "spec": [
+                      "https://html.spec.whatwg.org/multipage/scripting.html#attr-template-shadowrootmode"
+                    ],
+                    "status": {
+                      "baseline": "low",
+                      "baseline_low_date": "2024-02-20",
+                      "support": {
+                        "chrome": "111",
+                        "chrome_android": "111",
+                        "edge": "111",
+                        "firefox": "123",
+                        "firefox_android": "123",
+                        "safari": "16.4",
+                        "safari_ios": "16.4"
+                      }
+                    }
                   }
                 },
                 "comments": {
@@ -1056,6 +1160,34 @@
                     "language": "js",
                     "code": "this.attachShadow({mode: \"open\", slotAssignment: \"manual\" });\nthis.shadowRoot.querySelector(\"slot[name=foo]\").assign(element);",
                     "codeHighlighted": "<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">attachShadow</span>({<span class=\"hljs-attr\">mode</span>: <span class=\"hljs-string\">&quot;open&quot;</span>, <span class=\"hljs-attr\">slotAssignment</span>: <span class=\"hljs-string\">&quot;manual&quot;</span> });\n<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">shadowRoot</span>.<span class=\"hljs-title function_\">querySelector</span>(<span class=\"hljs-string\">&quot;slot[name=foo]&quot;</span>).<span class=\"hljs-title function_\">assign</span>(element);"
+                  },
+                  "resources": [
+                    {
+                      "title": "HTML Standard",
+                      "url": "https://html.spec.whatwg.org/multipage/scripting.html#dom-slot-assign"
+                    }
+                  ],
+                  "webFeature": {
+                    "id": "slot-assign",
+                    "description_html": "The <code>assign()</code> method for <code>&#x3C;slot></code> elements assigns nodes to the slot, as an alternative to using the <code>slot</code> and <code>name</code> HTML attributes. The nodes must be children of a shadow host and the shadow root must be created with the <code>slotAssignment</code> set to \"manual\". Also known as manual slot assignment.",
+                    "group": "web-components",
+                    "name": "Imperative slot assignment",
+                    "spec": [
+                      "https://html.spec.whatwg.org/multipage/scripting.html#dom-slot-assign"
+                    ],
+                    "status": {
+                      "baseline": "low",
+                      "baseline_low_date": "2023-03-27",
+                      "support": {
+                        "chrome": "86",
+                        "chrome_android": "86",
+                        "edge": "86",
+                        "firefox": "92",
+                        "firefox_android": "92",
+                        "safari": "16.4",
+                        "safari_ios": "16.4"
+                      }
+                    }
                   }
                 },
                 "comments": {
@@ -1210,6 +1342,33 @@
                     "language": "js",
                     "code": "this.#internals = this.attachInternals()\nthis.#internals.ariaChecked = true;",
                     "codeHighlighted": "<span class=\"hljs-variable language_\">this</span>.#internals = <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">attachInternals</span>()\n<span class=\"hljs-variable language_\">this</span>.#internals.<span class=\"hljs-property\">ariaChecked</span> = <span class=\"hljs-literal\">true</span>;"
+                  },
+                  "resources": [
+                    {
+                      "title": "HTML Standard",
+                      "url": "https://html.spec.whatwg.org/multipage/custom-elements.html#the-elementinternals-interface"
+                    }
+                  ],
+                  "webFeature": {
+                    "id": "form-associated-custom-elements",
+                    "description_html": "Custom elements may act like built-in form elements, via the the <code>attachInternals()</code> method of <code>HTMLElement</code> and the <code>ElementInternals</code> API.",
+                    "name": "Form-associated custom elements",
+                    "spec": [
+                      "https://html.spec.whatwg.org/multipage/custom-elements.html#form-associated-custom-elements"
+                    ],
+                    "status": {
+                      "baseline": "low",
+                      "baseline_low_date": "2023-03-27",
+                      "support": {
+                        "chrome": "77",
+                        "chrome_android": "77",
+                        "edge": "79",
+                        "firefox": "98",
+                        "firefox_android": "98",
+                        "safari": "16.4",
+                        "safari_ios": "16.4"
+                      }
+                    }
                   }
                 },
                 "comments": {
@@ -1348,7 +1507,20 @@
                   "nameClean": "DOM Parts",
                   "entityType": "feature",
                   "description": "A cacheable representation of a part of the DOM that can be updated performantly.",
-                  "descriptionClean": "A cacheable representation of a part of the DOM that can be updated performantly."
+                  "descriptionClean": "A cacheable representation of a part of the DOM that can be updated performantly.",
+                  "resources": [
+                    {
+                      "title": "DOM Part API",
+                      "url": "https://github.com/WICG/webcomponents/blob/gh-pages/proposals/DOM-Parts.md"
+                    },
+                    {
+                      "title": "GitHub - tbondwilkinson/dom-parts",
+                      "url": "https://github.com/tbondwilkinson/dom-parts#readme"
+                    },
+                    {
+                      "url": "https://groups.google.com/a/chromium.org/g/blink-dev/c/wIADRnljZDA/m/Ghfv2jyRAgAJ"
+                    }
+                  ]
                 },
                 "comments": {
                   "currentEdition": {
@@ -1477,6 +1649,42 @@
                     "language": "html",
                     "code": "<script type=\"module\">\n\timport { TabList } from \"./tablist.html\" with { type: 'html' };\n\tcustomElements.define(\"tab-list\", TabList);\n</script>",
                     "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">&quot;module&quot;</span>&gt;</span><span class=\"language-javascript\">\n\t<span class=\"hljs-keyword\">import</span> { <span class=\"hljs-title class_\">TabList</span> } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&quot;./tablist.html&quot;</span> <span class=\"hljs-keyword\">with</span> { <span class=\"hljs-attr\">type</span>: <span class=\"hljs-string\">&#x27;html&#x27;</span> };\n\tcustomElements.<span class=\"hljs-title function_\">define</span>(<span class=\"hljs-string\">&quot;tab-list&quot;</span>, <span class=\"hljs-title class_\">TabList</span>);\n</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>"
+                  },
+                  "resources": [
+                    {
+                      "title": "HTML Modules Explainer",
+                      "url": "https://github.com/WICG/webcomponents/blob/gh-pages/proposals/html-modules-explainer.md"
+                    },
+                    {
+                      "title": "Chrome Platform Status",
+                      "url": "https://chromestatus.com/feature/4854408103854080"
+                    },
+                    {
+                      "url": "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/HTMLModules/designDoc.md"
+                    }
+                  ],
+                  "webFeature": {
+                    "id": "js-modules",
+                    "description_html": "JavaScript modules allow code to be organized into reusable units. Modules use <code>import</code> to load other modules and <code>export</code> to declare what is available to import from other modules. In HTML, modules are loaded with <code>&#x3C;script type=\"module\"></code>.",
+                    "group": "js-modules",
+                    "name": "JavaScript modules",
+                    "spec": [
+                      "https://html.spec.whatwg.org/multipage/webappapis.html#javascript-module-script",
+                      "https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html#sec-modules"
+                    ],
+                    "status": {
+                      "baseline": "high",
+                      "baseline_low_date": "2018-05-09",
+                      "support": {
+                        "chrome": "61",
+                        "chrome_android": "61",
+                        "edge": "16",
+                        "firefox": "60",
+                        "firefox_android": "60",
+                        "safari": "11",
+                        "safari_ios": "11"
+                      }
+                    }
                   }
                 },
                 "comments": {

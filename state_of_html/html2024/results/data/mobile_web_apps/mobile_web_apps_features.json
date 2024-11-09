@@ -27,6 +27,32 @@
                     "language": "js",
                     "code": "const handle = await window.showSaveFilePicker(opts);",
                     "codeHighlighted": "<span class=\"hljs-keyword\">const</span> handle = <span class=\"hljs-keyword\">await</span> <span class=\"hljs-variable language_\">window</span>.<span class=\"hljs-title function_\">showSaveFilePicker</span>(opts);"
+                  },
+                  "resources": [
+                    {
+                      "title": "File System Access API",
+                      "url": "https://web.dev/file-system-access/"
+                    },
+                    {
+                      "title": "File System API Specification",
+                      "url": "https://fs.spec.whatwg.org/"
+                    }
+                  ],
+                  "webFeature": {
+                    "id": "file-system-access",
+                    "description_html": "The <code>showOpenFilePicker()</code>, <code>showDirectoryPicker()</code>, and <code>showSaveFilePicker()</code> methods request access to files and directories on the user's device and returns a handle for reading and writing to them.",
+                    "group": "file-system",
+                    "name": "File system access",
+                    "spec": [
+                      "https://wicg.github.io/file-system-access/"
+                    ],
+                    "status": {
+                      "baseline": "false",
+                      "support": {
+                        "chrome": "86",
+                        "edge": "86"
+                      }
+                    }
                   }
                 },
                 "comments": {
@@ -176,7 +202,13 @@
                     "language": "js",
                     "code": "navigator.setAppBadge(unreadCount)",
                     "codeHighlighted": "navigator.<span class=\"hljs-title function_\">setAppBadge</span>(unreadCount)"
-                  }
+                  },
+                  "resources": [
+                    {
+                      "title": "Badging for app icons - Chrome Developers",
+                      "url": "https://developer.chrome.com/articles/badging-api/"
+                    }
+                  ]
                 },
                 "comments": {
                   "currentEdition": {
@@ -315,7 +347,13 @@
                     "language": "js",
                     "code": "navigator.share(shareData)",
                     "codeHighlighted": "navigator.<span class=\"hljs-title function_\">share</span>(shareData)"
-                  }
+                  },
+                  "resources": [
+                    {
+                      "title": "Integrate with the OS sharing UI with the Web Share API",
+                      "url": "https://web.dev/web-share/"
+                    }
+                  ]
                 },
                 "comments": {
                   "currentEdition": {
@@ -465,7 +503,17 @@
                     "language": "json",
                     "code": "\"launch_handler\": {\"client_mode\": \"navigate-new\"}\n",
                     "codeHighlighted": "<span class=\"hljs-attr\">&quot;launch_handler&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span><span class=\"hljs-attr\">&quot;client_mode&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">&quot;navigate-new&quot;</span><span class=\"hljs-punctuation\">}</span>"
-                  }
+                  },
+                  "resources": [
+                    {
+                      "title": "Web App Launch Handler API",
+                      "url": "https://wicg.github.io/web-app-launch/#launch_handler-member"
+                    },
+                    {
+                      "title": "Launch Handler API: Control how your app is launched.\n",
+                      "url": "https://web.dev/launch-handler/"
+                    }
+                  ]
                 },
                 "comments": {
                   "currentEdition": {
@@ -601,7 +649,13 @@
                     "language": "json",
                     "code": "\"file_handlers\": [{\n    \"action\": \"/open-file\",\n    \"accept\": {\n      \"image/svg+xml\": \".svg\",\n      \"image/png\": \".png\"\n    }\n  }]\n",
                     "codeHighlighted": "<span class=\"hljs-attr\">&quot;file_handlers&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">[</span><span class=\"hljs-punctuation\">{</span>\n    <span class=\"hljs-attr\">&quot;action&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">&quot;/open-file&quot;</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">&quot;accept&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n      <span class=\"hljs-attr\">&quot;image/svg+xml&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">&quot;.svg&quot;</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">&quot;image/png&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">&quot;.png&quot;</span>\n    <span class=\"hljs-punctuation\">}</span>\n  <span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">]</span>"
-                  }
+                  },
+                  "resources": [
+                    {
+                      "title": "File Handling API: Register your PWA as a handler for file types.\n",
+                      "url": "https://web.dev/file-handling/"
+                    }
+                  ]
                 },
                 "comments": {
                   "currentEdition": {
@@ -737,6 +791,36 @@
                     "language": "json",
                     "code": "\"display_override\": [\"window-controls-overlay\"]\n",
                     "codeHighlighted": "<span class=\"hljs-attr\">&quot;display_override&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">[</span><span class=\"hljs-string\">&quot;window-controls-overlay&quot;</span><span class=\"hljs-punctuation\">]</span>"
+                  },
+                  "resources": [
+                    {
+                      "title": "Window Controls Overlay",
+                      "url": "https://wicg.github.io/window-controls-overlay/"
+                    },
+                    {
+                      "title": "Customize the window controls overlay of your PWA's title bar",
+                      "url": "https://web.dev/window-controls-overlay/"
+                    },
+                    {
+                      "title": "Breaking Out of the Box",
+                      "url": "https://alistapart.com/article/breaking-out-of-the-box/"
+                    }
+                  ],
+                  "webFeature": {
+                    "id": "window-controls-overlay",
+                    "description_html": "The <code>display_override:\\ [\"window-controls-overlay\"]</code> web application manifest member shows content in the title bar area of a progressive web app that is installed on a desktop device.",
+                    "group": "progressive-web-app",
+                    "name": "Window Controls Overlay",
+                    "spec": [
+                      "https://wicg.github.io/window-controls-overlay/"
+                    ],
+                    "status": {
+                      "baseline": "false",
+                      "support": {
+                        "chrome": "105",
+                        "edge": "105"
+                      }
+                    }
                   }
                 },
                 "comments": {
@@ -866,7 +950,21 @@
                     "label": "URL",
                     "code": "isolated-app://4tkr2qbhf7rlz2a3wo3rh4wqaaic/index.html\n",
                     "codeHighlighted": "isolated-app://4tkr2qbhf7rlz2a3wo3rh4wqaaic/index.html\n"
-                  }
+                  },
+                  "resources": [
+                    {
+                      "title": "GitHub - WICG/isolated-web-apps: Repository for explainers and other documents related to the Isolated Web Apps proposal.",
+                      "url": "https://github.com/WICG/isolated-web-apps"
+                    },
+                    {
+                      "title": "Chrome Platform Status",
+                      "url": "https://chromestatus.com/feature/5146307550248960"
+                    },
+                    {
+                      "title": "Isolated Web Apps Explainer",
+                      "url": "https://github.com/WICG/isolated-web-apps/blob/64ee1861b9d25ff32437f839bf057dce78e6f555/README.md#motivating-use-cases"
+                    }
+                  ]
                 },
                 "comments": {
                   "currentEdition": {
