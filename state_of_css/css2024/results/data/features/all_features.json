@@ -728,6 +728,12 @@
                     "code": "body {\n  height: 100dvh;\n}\n",
                     "codeHighlighted": "<span class=\"hljs-selector-tag\">body</span> {\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-number\">100</span>dvh;\n}"
                   },
+                  "resources": [
+                    {
+                      "title": "The large, small, and dynamic viewport units",
+                      "url": "https://web.dev/viewport-units/"
+                    }
+                  ],
                   "webFeature": {
                     "id": "viewport-unit-variants",
                     "description_html": "The <code>sv*</code>, <code>lv*</code>, and <code>dv*</code> CSS viewport units are relative to the smallest, largest, and current (dynamic) viewport size. They are used to size elements in relation to the viewport's dimensions.",
@@ -1068,6 +1074,16 @@
                     "code": ".slider-link {\n  anchor-name: var(--is);\n}\n",
                     "codeHighlighted": "<span class=\"hljs-selector-class\">.slider-link</span> {\n  anchor-name: <span class=\"hljs-built_in\">var</span>(--is);\n}"
                   },
+                  "resources": [
+                    {
+                      "title": "Future CSS: Anchor Positioning\n",
+                      "url": "https://kizu.dev/anchor-positioning-experiments/"
+                    },
+                    {
+                      "title": "Tether elements to each other with CSS anchor positioning\n",
+                      "url": "https://developer.chrome.com/blog/tether-elements-to-each-other-with-css-anchor-positioning/"
+                    }
+                  ],
                   "webFeature": {
                     "id": "anchor-positioning",
                     "description_html": "Anchor positioning places an element based on the position of another element. For example, you can place a tooltip next to the content it references.",
@@ -2084,6 +2100,16 @@
                     "code": ":root {\n  --bounce-easing: linear(\n    0, 0.063, 0.25 18.2%, 1 36.4%, 0.813, 0.75, 0.813, 1, 0.938, 1, 1\n  );\n}\n",
                     "codeHighlighted": "<span class=\"hljs-selector-pseudo\">:root</span> {\n  <span class=\"hljs-attr\">--bounce-easing</span>: <span class=\"hljs-built_in\">linear</span>(\n    <span class=\"hljs-number\">0</span>, <span class=\"hljs-number\">0.063</span>, <span class=\"hljs-number\">0.25</span> <span class=\"hljs-number\">18.2%</span>, <span class=\"hljs-number\">1</span> <span class=\"hljs-number\">36.4%</span>, <span class=\"hljs-number\">0.813</span>, <span class=\"hljs-number\">0.75</span>, <span class=\"hljs-number\">0.813</span>, <span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">0.938</span>, <span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">1</span>\n  );\n}"
                   },
+                  "resources": [
+                    {
+                      "title": "Using linear() for better animation",
+                      "url": "https://fullystacked.net/posts/linear/"
+                    },
+                    {
+                      "title": "Linear() Generator",
+                      "url": "https://linear-easing-generator.netlify.app/"
+                    }
+                  ],
                   "webFeature": {
                     "id": "linear-easing",
                     "description_html": "The <code>linear()</code> easing function for animations and transitions interpolates linearly between the control points, and can be used to approximate complex easing functions, such as a bounce effect.",
@@ -3439,6 +3465,12 @@
                     "code": ".foo {\n  --color: #4488dd;\n  background-color: hsl(from var(--color) h s calc(l * 1.2))\n}\n",
                     "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attr\">--color</span>: <span class=\"hljs-number\">#4488dd</span>;\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">hsl</span>(from <span class=\"hljs-built_in\">var</span>(--color) h s <span class=\"hljs-built_in\">calc</span>(l * <span class=\"hljs-number\">1.2</span>))\n}"
                   },
+                  "resources": [
+                    {
+                      "title": "Create a color theme with CSS Relative Color Syntax, CSS color-mix(), and CSS color-contrast()",
+                      "url": "https://www.bram.us/2021/04/28/create-a-color-theme-with-css-relative-color-syntax-css-color-mix-and-css-color-contrast/"
+                    }
+                  ],
                   "webFeature": {
                     "id": "relative-color",
                     "description_html": "The <code>from</code> keyword for color functions (<code>color()</code>, <code>hsl()</code>, <code>oklch()</code>, etc.) creates a new color based on a given color by modifying the values of the input color. Also known as relative color syntax (RCS).",
@@ -3604,6 +3636,12 @@
                     "code": ".gradient {\n  background: linear-gradient(in oklab, hsl(80 90% 50%), red);\n}\n",
                     "codeHighlighted": "<span class=\"hljs-selector-class\">.gradient</span> {\n  <span class=\"hljs-attribute\">background</span>: <span class=\"hljs-built_in\">linear-gradient</span>(in oklab, <span class=\"hljs-built_in\">hsl</span>(<span class=\"hljs-number\">80</span> <span class=\"hljs-number\">90%</span> <span class=\"hljs-number\">50%</span>), red);\n}"
                   },
+                  "resources": [
+                    {
+                      "title": "Using Different Color Spaces for Non-Boring Gradients",
+                      "url": "https://css-tricks.com/color-spaces-for-more-interesting-css-gradients/"
+                    }
+                  ],
                   "webFeature": {
                     "id": "gradient-interpolation",
                     "description_html": "Gradient interpolation controls how the colors between gradient stops are calculated in CSS. For example, <code>linear-gradient(to right in oklch longer hue, red, red);</code> calculates in the <code>oklch</code> color space, with the hue going all the way around the hue circle from red back to red.",
@@ -4471,7 +4509,13 @@
                     "language": "css",
                     "code": "::view-transition-old(main-image),\n::view-transition-new(main-image) {\n  transform-origin: right top;\n}\n\n::view-transition-new(main-image) {\n  animation: 400ms ease-out both grow;\n}\n\nfigure {\n  view-transition-name: main-image;\n}\n",
                     "codeHighlighted": "::<span class=\"hljs-built_in\">view-transition-old</span>(main-image),\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">transform-origin</span>: right top;\n}\n\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">animation</span>: <span class=\"hljs-number\">400ms</span> ease-out both grow;\n}\n\n<span class=\"hljs-selector-tag\">figure</span> {\n  view-<span class=\"hljs-attribute\">transition</span>-name: main-image;\n}"
-                  }
+                  },
+                  "resources": [
+                    {
+                      "title": "Smooth and simple transitions with the View Transitions API",
+                      "url": "https://developer.chrome.com/docs/web-platform/view-transitions/"
+                    }
+                  ]
                 },
                 "comments": {
                   "currentEdition": {
@@ -5587,6 +5631,12 @@
                     "code": ".balanced {\n  max-inline-size: 50ch;\n  text-wrap: balance;\n}\n",
                     "codeHighlighted": "<span class=\"hljs-selector-class\">.balanced</span> {\n  <span class=\"hljs-attribute\">max-inline-size</span>: <span class=\"hljs-number\">50ch</span>;\n  text-wrap: balance;\n}"
                   },
+                  "resources": [
+                    {
+                      "title": "CSS text-wrap: balance\n",
+                      "url": "https://developer.chrome.com/blog/css-text-wrap-balance/"
+                    }
+                  ],
                   "webFeature": {
                     "id": "text-wrap-balance",
                     "description_html": "The <code>text-wrap: balance</code> CSS declaration balances the length of each line when text is broken into multiple lines. Also known as headline balancing.",
@@ -5757,6 +5807,12 @@
                     "code": ".pretty {\n  text-wrap: pretty;\n}\n",
                     "codeHighlighted": "<span class=\"hljs-selector-class\">.pretty</span> {\n  text-wrap: pretty;\n}"
                   },
+                  "resources": [
+                    {
+                      "title": "CSS text-wrap: pretty\n",
+                      "url": "https://developer.chrome.com/blog/css-text-wrap-pretty"
+                    }
+                  ],
                   "webFeature": {
                     "id": "text-wrap-pretty",
                     "description_html": "The <code>text-wrap: pretty</code> CSS declaration prioritizes better layout over speed when text is broken into multiple lines.",
@@ -9269,6 +9325,12 @@
                     "code": ".parent {\n  color: blue;\n\n  .child {\n    color: red;\n  }\n}\n",
                     "codeHighlighted": "<span class=\"hljs-selector-class\">.parent</span> {\n  <span class=\"hljs-attribute\">color</span>: blue;\n\n  <span class=\"hljs-selector-class\">.child</span> {\n    <span class=\"hljs-attribute\">color</span>: red;\n  }\n}"
                   },
+                  "resources": [
+                    {
+                      "title": "CSS Nesting",
+                      "url": "https://developer.chrome.com/articles/css-nesting/"
+                    }
+                  ],
                   "webFeature": {
                     "id": "nesting",
                     "description_html": "CSS nesting allows for shorter selectors, easier reading, and more modularity by nesting rules inside others.",
@@ -9919,6 +9981,12 @@
                     "code": ":nth-child(2 of .highlight)\n  border: 2px red solid;\n}\n",
                     "codeHighlighted": "<span class=\"hljs-selector-pseudo\">:nth-child</span>(<span class=\"hljs-number\">2</span> of <span class=\"hljs-selector-class\">.highlight</span>)\n  <span class=\"hljs-attribute\">border</span>: <span class=\"hljs-number\">2px</span> red solid;\n}"
                   },
+                  "resources": [
+                    {
+                      "title": "More control over :nth-child() selections with the of S syntax\n",
+                      "url": "https://developer.chrome.com/docs/css-ui/css-nth-child-of-s"
+                    }
+                  ],
                   "webFeature": {
                     "id": "nth-child-of",
                     "description_html": "The <code>of</code> syntax for the <code>:nth-child()</code> and <code>:nth-last-child()</code> CSS functional pseudo-classes match elements by the relative position of elements, counted from the first or last sibling matching a selector list.",
