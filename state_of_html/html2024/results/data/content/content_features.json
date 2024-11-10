@@ -30,7 +30,17 @@
                     "language": "html",
                     "code": "<img src=\"picture.jpg\" loading=\"lazy\" />\n<iframe src=\"supplementary.html\" loading=\"lazy\"></iframe>",
                     "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">img</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;picture.jpg&quot;</span> <span class=\"hljs-attr\">loading</span>=<span class=\"hljs-string\">&quot;lazy&quot;</span> /&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">iframe</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;supplementary.html&quot;</span> <span class=\"hljs-attr\">loading</span>=<span class=\"hljs-string\">&quot;lazy&quot;</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">iframe</span>&gt;</span>"
-                  }
+                  },
+                  "resources": [
+                    {
+                      "title": "HTML Standard",
+                      "url": "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#lazy-loading-attributes"
+                    },
+                    {
+                      "title": "Browser-level image lazy loading for the web",
+                      "url": "https://web.dev/browser-level-image-lazy-loading/"
+                    }
+                  ]
                 },
                 "comments": {
                   "currentEdition": {
@@ -166,6 +176,33 @@
                     "language": "html",
                     "code": "<img\n  srcset=\"fairy-med.jpg 480w, fairy-large.jpg 800w\"\n  sizes=\"(max-width: 600px) 480px, 800px\"\n  src=\"fairy-large.jpg\"\n  alt=\"Elva dressed as a fairy\" />",
                     "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">img</span>\n  <span class=\"hljs-attr\">srcset</span>=<span class=\"hljs-string\">&quot;fairy-med.jpg 480w, fairy-large.jpg 800w&quot;</span>\n  <span class=\"hljs-attr\">sizes</span>=<span class=\"hljs-string\">&quot;(max-width: 600px) 480px, 800px&quot;</span>\n  <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;fairy-large.jpg&quot;</span>\n  <span class=\"hljs-attr\">alt</span>=<span class=\"hljs-string\">&quot;Elva dressed as a fairy&quot;</span> /&gt;</span>"
+                  },
+                  "resources": [
+                    {
+                      "title": "HTML Standard",
+                      "url": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element"
+                    }
+                  ],
+                  "webFeature": {
+                    "id": "preloading-responsive-images",
+                    "description_html": "The <code>imagesrcset</code> and <code>imagesizes</code> attributes with the <code>rel=\"preload\"</code> attribute for the <code>&#x3C;link></code> HTML element starts fetching responsive images before they're found in the body of the document.",
+                    "name": "Preloading responsive images",
+                    "spec": [
+                      "https://html.spec.whatwg.org/multipage/semantics.html#attr-link-imagesrcset"
+                    ],
+                    "status": {
+                      "baseline": "low",
+                      "baseline_low_date": "2023-12-11",
+                      "support": {
+                        "chrome": "73",
+                        "chrome_android": "73",
+                        "edge": "79",
+                        "firefox": "78",
+                        "firefox_android": "79",
+                        "safari": "17.2",
+                        "safari_ios": "17.2"
+                      }
+                    }
                   }
                 },
                 "comments": {
@@ -316,7 +353,17 @@
                     "language": "html",
                     "code": "<link rel=\"preload\" href=\"picture.jpg\" />\n<link rel=\"dns-prefetch\" href=\"https://fonts.googleapis.com/\" />",
                     "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">link</span> <span class=\"hljs-attr\">rel</span>=<span class=\"hljs-string\">&quot;preload&quot;</span> <span class=\"hljs-attr\">href</span>=<span class=\"hljs-string\">&quot;picture.jpg&quot;</span> /&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">link</span> <span class=\"hljs-attr\">rel</span>=<span class=\"hljs-string\">&quot;dns-prefetch&quot;</span> <span class=\"hljs-attr\">href</span>=<span class=\"hljs-string\">&quot;https://fonts.googleapis.com/&quot;</span> /&gt;</span>"
-                  }
+                  },
+                  "resources": [
+                    {
+                      "title": "Understanding CSS preload and other resource hints - LogRocket Blog",
+                      "url": "https://blog.logrocket.com/understanding-css-preload-other-resource-hints/"
+                    },
+                    {
+                      "title": "Resource Hints",
+                      "url": "https://medium.com/@luisvieira_gmr/html5-prefetch-1e54f6dda15d"
+                    }
+                  ]
                 },
                 "comments": {
                   "currentEdition": {
@@ -623,6 +670,47 @@
                     "language": "html",
                     "code": "<img src=\"logo.svg\" fetchpriority=\"high\" />",
                     "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">img</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;logo.svg&quot;</span> <span class=\"hljs-attr\">fetchpriority</span>=<span class=\"hljs-string\">&quot;high&quot;</span> /&gt;</span>"
+                  },
+                  "resources": [
+                    {
+                      "title": "Priority Hints (obsolete)",
+                      "url": "https://wicg.github.io/priority-hints/"
+                    },
+                    {
+                      "title": "Priority Hints API · Issue #704 · w3ctag/design-reviews · GitHub",
+                      "url": "https://github.com/w3ctag/design-reviews/issues/704"
+                    },
+                    {
+                      "title": "Priority Hints",
+                      "url": "https://github.com/WICG/priority-hints/blob/main/EXPLAINER.md"
+                    },
+                    {
+                      "title": "Chrome Platform Status",
+                      "url": "https://chromestatus.com/feature/5273474901737472"
+                    },
+                    {
+                      "title": "Optimizing resource loading with the Fetch Priority API",
+                      "url": "https://web.dev/fetch-priority/"
+                    }
+                  ],
+                  "webFeature": {
+                    "id": "fetch-priority",
+                    "description_html": "The <code>fetch()</code> <code>priority</code> option and the <code>fetchPriority</code> HTML attribute give hints to the browser about which requests to do before other requests of the same type.",
+                    "name": "Fetch priority",
+                    "spec": [
+                      "https://fetch.spec.whatwg.org/#request-priority",
+                      "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#fetch-priority-attributes"
+                    ],
+                    "status": {
+                      "baseline": "false",
+                      "support": {
+                        "chrome": "103",
+                        "chrome_android": "103",
+                        "edge": "103",
+                        "safari": "17.2",
+                        "safari_ios": "17.2"
+                      }
+                    }
                   }
                 },
                 "comments": {
@@ -777,6 +865,37 @@
                     "language": "html",
                     "code": "<script blocking=\"render\" async src=\"async-script.js\"></script>",
                     "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span> <span class=\"hljs-attr\">blocking</span>=<span class=\"hljs-string\">&quot;render&quot;</span> <span class=\"hljs-attr\">async</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;async-script.js&quot;</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>"
+                  },
+                  "resources": [
+                    {
+                      "title": "HTML Standard",
+                      "url": "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#blocking-attributes"
+                    },
+                    {
+                      "title": "proposal-v3.md · GitHub",
+                      "url": "https://gist.github.com/xiaochengh/9404abbecdc3b45c0e9f3d5e99fbc65d"
+                    },
+                    {
+                      "title": "Review request on `blocking=render` attribute for scripts and stylesheets · Issue #727 · w3ctag/design-reviews · GitHub",
+                      "url": "https://github.com/w3ctag/design-reviews/issues/727"
+                    }
+                  ],
+                  "webFeature": {
+                    "id": "blocking-render",
+                    "description_html": "The <code>blocking=\"render\"</code> attribute for <code>&#x3C;link></code>, <code>&#x3C;script></code>, and <code>&#x3C;style></code> elements blocks rendering until the external script or stylesheet has been loaded. For <code>&#x3C;link rel=\"expect\"></code>, rendering is blocked until a specific element is in the DOM.",
+                    "group": "html",
+                    "name": "blocking=\"render\"",
+                    "spec": [
+                      "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#blocking-attributes"
+                    ],
+                    "status": {
+                      "baseline": "false",
+                      "support": {
+                        "chrome": "105",
+                        "chrome_android": "105",
+                        "edge": "105"
+                      }
+                    }
                   }
                 },
                 "comments": {
@@ -907,7 +1026,29 @@
                     "language": "html",
                     "code": "<model src=\"3d-assets/car\"></model>",
                     "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">model</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;3d-assets/car&quot;</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">model</span>&gt;</span>"
-                  }
+                  },
+                  "resources": [
+                    {
+                      "title": "The &lt;model&gt; element",
+                      "url": "https://immersive-web.github.io/model-element/"
+                    },
+                    {
+                      "title": "HTML model element: Test page",
+                      "url": "https://keithclark.co.uk/labs/3d-model-custom-element/examples/tests/"
+                    },
+                    {
+                      "title": "AR, VR, and a Model for 3D in HTML | CSS-Tricks - CSS-Tricks",
+                      "url": "https://css-tricks.com/ar-vr-and-a-model-for-3d-in-html/"
+                    },
+                    {
+                      "title": "<model> Evolution\n",
+                      "url": "https://github.com/WebKit/explainers/blob/main/model/HistoryAndEvolution.md"
+                    },
+                    {
+                      "title": "Safari Technology Preview 137 Release Notes | Apple Developer Documentation",
+                      "url": "https://developer.apple.com/documentation/safari-technology-preview-release-notes/stp-release-137"
+                    }
+                  ]
                 },
                 "comments": {
                   "currentEdition": {
@@ -1047,6 +1188,37 @@
                     "language": "html",
                     "code": "<video src=\"fun.mp4\" controlslist=\"nodownload\"></video>",
                     "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">video</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;fun.mp4&quot;</span> <span class=\"hljs-attr\">controlslist</span>=<span class=\"hljs-string\">&quot;nodownload&quot;</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">video</span>&gt;</span>"
+                  },
+                  "resources": [
+                    {
+                      "title": "Controls List API | controls-list",
+                      "url": "https://wicg.github.io/controls-list/#solution-outline"
+                    },
+                    {
+                      "title": "HTMLMediaElement controlsList explained | controls-list",
+                      "url": "https://wicg.github.io/controls-list/explainer.html"
+                    },
+                    {
+                      "title": "HTMLMediaElement controlsList · Issue #643 · w3ctag/design-reviews · GitHub",
+                      "url": "https://github.com/w3ctag/design-reviews/issues/643"
+                    }
+                  ],
+                  "webFeature": {
+                    "id": "controls-list",
+                    "description_html": "The <code>controlslist</code> attribute for <code>&#x3C;audio></code> or <code>&#x3C;video></code> hides parts of the browser's built-in controls. For example, <code>controlslist=\"nofullscreen\"</code> removes the button to play the video in fullscreen.",
+                    "group": "media-elements",
+                    "name": "controlslist",
+                    "spec": [
+                      "https://wicg.github.io/controls-list/"
+                    ],
+                    "status": {
+                      "baseline": "false",
+                      "support": {
+                        "chrome": "58",
+                        "chrome_android": "58",
+                        "edge": "79"
+                      }
+                    }
                   }
                 },
                 "comments": {
@@ -1196,6 +1368,24 @@
                     "language": "js",
                     "code": "\n// css\n::highlight(my-custom-highlight) {\n  background-color: blue;\n}\n\n// js\nconst parentNode = document.getElementById(\"foo\");\nconst range1 = new Range();\nrange1.setStart(parentNode, 10);\nrange1.setEnd(parentNode, 20);\nconst highlight = new Highlight(range1);\nCSS.highlights.set(\"my-custom-highlight\", highlight);\n",
                     "codeHighlighted": "<span class=\"hljs-comment\">// css</span>\n::<span class=\"hljs-title function_\">highlight</span>(<span class=\"hljs-params\">my-custom-highlight</span>) {\n  background-<span class=\"hljs-attr\">color</span>: blue;\n}\n\n<span class=\"hljs-comment\">// js</span>\n<span class=\"hljs-keyword\">const</span> parentNode = <span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-title function_\">getElementById</span>(<span class=\"hljs-string\">&quot;foo&quot;</span>);\n<span class=\"hljs-keyword\">const</span> range1 = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Range</span>();\nrange1.<span class=\"hljs-title function_\">setStart</span>(parentNode, <span class=\"hljs-number\">10</span>);\nrange1.<span class=\"hljs-title function_\">setEnd</span>(parentNode, <span class=\"hljs-number\">20</span>);\n<span class=\"hljs-keyword\">const</span> highlight = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Highlight</span>(range1);\n<span class=\"hljs-variable constant_\">CSS</span>.<span class=\"hljs-property\">highlights</span>.<span class=\"hljs-title function_\">set</span>(<span class=\"hljs-string\">&quot;my-custom-highlight&quot;</span>, highlight);"
+                  },
+                  "webFeature": {
+                    "id": "highlight",
+                    "description_html": "Custom highlights style arbitrary text ranges, without adding extra elements to the DOM.",
+                    "name": "Custom highlights",
+                    "spec": [
+                      "https://drafts.csswg.org/css-highlight-api-1/"
+                    ],
+                    "status": {
+                      "baseline": "false",
+                      "support": {
+                        "chrome": "105",
+                        "chrome_android": "105",
+                        "edge": "105",
+                        "safari": "17.2",
+                        "safari_ios": "17.2"
+                      }
+                    }
                   }
                 },
                 "comments": {
@@ -1347,6 +1537,27 @@
                     "language": "js",
                     "code": "const value = \"<p>This is a string of text</p>\";\ndocument.getElementById(\"target\").setHTMLUnsafe(value);\n",
                     "codeHighlighted": "<span class=\"hljs-keyword\">const</span> value = <span class=\"hljs-string\">&quot;&lt;p&gt;This is a string of text&lt;/p&gt;&quot;</span>;\n<span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-title function_\">getElementById</span>(<span class=\"hljs-string\">&quot;target&quot;</span>).<span class=\"hljs-title function_\">setHTMLUnsafe</span>(value);"
+                  },
+                  "webFeature": {
+                    "id": "parse-html-unsafe",
+                    "description_html": "The <code>Document.parseHTMLUnsafe()</code> static method parses HTML into a DOM tree, while the <code>setHTMLUnsafe()</code> method of <code>Element</code> and <code>ShadowRoot</code> parses and inserts HTML into an existing tree. No sanitization applies to these methods, so never call them with user-provided HTML strings.",
+                    "name": "Unsanitized HTML parsing methods",
+                    "spec": [
+                      "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#unsafe-html-parsing-methods"
+                    ],
+                    "status": {
+                      "baseline": "low",
+                      "baseline_low_date": "2024-07-09",
+                      "support": {
+                        "chrome": "124",
+                        "chrome_android": "124",
+                        "edge": "124",
+                        "firefox": "128",
+                        "firefox_android": "128",
+                        "safari": "17.4",
+                        "safari_ios": "17.4"
+                      }
+                    }
                   }
                 },
                 "comments": {
@@ -1621,6 +1832,28 @@
                     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter",
                     "title": "Intl.Segmenter",
                     "summary": "The Intl.Segmenter object enables locale-sensitive text segmentation, enabling you to get meaningful items (graphemes, words or sentences) from a string."
+                  },
+                  "webFeature": {
+                    "id": "intl-segmenter",
+                    "description_html": "The <code>Intl.Segmenter</code> API creates a locale-aware text splitter that can separate a string into meaningful graphemes, words, or sentences.",
+                    "group": "intl",
+                    "name": "Intl.Segmenter",
+                    "spec": [
+                      "https://tc39.es/ecma402/#segmenter-objects"
+                    ],
+                    "status": {
+                      "baseline": "low",
+                      "baseline_low_date": "2024-04-16",
+                      "support": {
+                        "chrome": "87",
+                        "chrome_android": "87",
+                        "edge": "87",
+                        "firefox": "125",
+                        "firefox_android": "125",
+                        "safari": "14.1",
+                        "safari_ios": "14.5"
+                      }
+                    }
                   }
                 },
                 "comments": {
