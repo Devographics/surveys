@@ -12,12 +12,14 @@
                     "axis1Sort": {
                       "property": "count",
                       "order": "desc"
-                    }
+                    },
+                    "limit": 20,
+                    "cutoff": 10
                   },
                   "completion": {
                     "count": 1490,
                     "percentageSurvey": 6.33,
-                    "total": 23532
+                    "total": 23540
                   },
                   "buckets": [
                     {
@@ -33,68 +35,6 @@
                         "id": "performance",
                         "entityType": "default"
                       }
-                    },
-                    {
-                      "count": 96,
-                      "id": "apple_ios_issues",
-                      "percentageQuestion": 6.45,
-                      "percentageSurvey": 0.41,
-                      "entity": {
-                        "name": "Apple/iOS issues",
-                        "nameClean": "Apple/iOS issues",
-                        "id": "apple_ios_issues",
-                        "entityType": "default"
-                      },
-                      "groupedBuckets": [
-                        {
-                          "count": 59,
-                          "id": "ios_general_issues",
-                          "percentageQuestion": 3.96,
-                          "percentageSurvey": 0.25,
-                          "entity": {
-                            "name": "iOS issues",
-                            "nameClean": "iOS issues",
-                            "id": "ios_general_issues",
-                            "entityType": "default"
-                          }
-                        },
-                        {
-                          "count": 19,
-                          "id": "apple_general_issues",
-                          "percentageQuestion": 1.28,
-                          "percentageSurvey": 0.08,
-                          "entity": {
-                            "name": "Apple issues",
-                            "nameClean": "Apple issues",
-                            "id": "apple_general_issues",
-                            "entityType": "default"
-                          }
-                        },
-                        {
-                          "count": 12,
-                          "id": "ios_lack_of_pwa_support",
-                          "percentageQuestion": 0.81,
-                          "percentageSurvey": 0.05,
-                          "entity": {
-                            "name": "Lack of PWA support",
-                            "nameClean": "Lack of PWA support",
-                            "id": "ios_lack_of_pwa_support",
-                            "entityType": "default"
-                          }
-                        },
-                        {
-                          "count": 6,
-                          "id": "safari_general_issues",
-                          "percentageQuestion": 0.4,
-                          "percentageSurvey": 0.03,
-                          "entity": {
-                            "name": "Safari issues",
-                            "nameClean": "Safari issues",
-                            "id": "safari_general_issues",
-                            "entityType": "default"
-                          }
-                        }
-                      ]
                     },
                     {
                       "count": 91,
@@ -186,6 +126,18 @@
                       }
                     },
                     {
+                      "count": 59,
+                      "id": "ios_general_issues",
+                      "percentageQuestion": 3.96,
+                      "percentageSurvey": 0.25,
+                      "entity": {
+                        "name": "iOS issues",
+                        "nameClean": "iOS issues",
+                        "id": "ios_general_issues",
+                        "entityType": "default"
+                      }
+                    },
+                    {
                       "count": 53,
                       "id": "debugging",
                       "percentageQuestion": 3.56,
@@ -198,48 +150,6 @@
                         "id": "debugging",
                         "entityType": "default"
                       }
-                    },
-                    {
-                      "count": 51,
-                      "id": "ux_issues",
-                      "percentageQuestion": 3.42,
-                      "percentageSurvey": 0.22,
-                      "entity": {
-                        "name": "UX issues",
-                        "nameClean": "UX issues",
-                        "id": "ux_issues",
-                        "entityType": "default"
-                      },
-                      "groupedBuckets": [
-                        {
-                          "count": 40,
-                          "id": "difficulty_achieving_native_feel",
-                          "percentageQuestion": 2.68,
-                          "percentageSurvey": 0.17,
-                          "entity": {
-                            "name": "Native feel",
-                            "nameClean": "Native feel",
-                            "description": "Difficulty of achieving a native look and feel",
-                            "descriptionClean": "Difficulty of achieving a native look and feel",
-                            "id": "difficulty_achieving_native_feel",
-                            "entityType": "default"
-                          }
-                        },
-                        {
-                          "count": 11,
-                          "id": "ux_bad_native_elements",
-                          "percentageQuestion": 0.74,
-                          "percentageSurvey": 0.05,
-                          "entity": {
-                            "name": "Bad native elements",
-                            "nameClean": "Bad native elements",
-                            "description": "Limited native elements",
-                            "descriptionClean": "Limited native elements",
-                            "id": "ux_bad_native_elements",
-                            "entityType": "default"
-                          }
-                        }
-                      ]
                     },
                     {
                       "count": 51,
@@ -340,28 +250,17 @@
                       }
                     },
                     {
-                      "count": 41,
-                      "id": "build_tools",
-                      "percentageQuestion": 2.75,
+                      "count": 40,
+                      "id": "difficulty_achieving_native_feel",
+                      "percentageQuestion": 2.68,
                       "percentageSurvey": 0.17,
                       "entity": {
-                        "id": "build_tools",
+                        "name": "Native feel",
+                        "nameClean": "Native feel",
+                        "description": "Difficulty of achieving a native look and feel",
+                        "descriptionClean": "Difficulty of achieving a native look and feel",
+                        "id": "difficulty_achieving_native_feel",
                         "entityType": "default"
-                      }
-                    },
-                    {
-                      "count": 39,
-                      "id": "just_js",
-                      "percentageQuestion": 2.62,
-                      "percentageSurvey": 0.17,
-                      "entity": {
-                        "name": "Just",
-                        "nameClean": "Just",
-                        "id": "just_js",
-                        "entityType": "library",
-                        "homepage": {
-                          "url": "https://just.billywhizz.io/"
-                        }
                       }
                     },
                     {
@@ -377,34 +276,68 @@
                       }
                     },
                     {
-                      "count": 22042,
+                      "count": 35,
+                      "id": "bundle_size",
+                      "percentageQuestion": 2.35,
+                      "percentageSurvey": 0.15,
+                      "entity": {
+                        "name": "Bundle size",
+                        "nameClean": "Bundle size",
+                        "description": "Excessive bundle size",
+                        "descriptionClean": "Excessive bundle size",
+                        "id": "bundle_size",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 34,
+                      "id": "expo",
+                      "percentageQuestion": 2.28,
+                      "percentageSurvey": 0.14,
+                      "entity": {
+                        "name": "Expo",
+                        "nameClean": "Expo",
+                        "description": "An open-source platform for making universal native apps with React. Expo runs on Android, iOS, and the web.",
+                        "descriptionClean": "An open-source platform for making universal native apps with React. Expo runs on Android, iOS, and the web.",
+                        "id": "expo",
+                        "entityType": "library",
+                        "homepage": {
+                          "url": "https://docs.expo.io"
+                        },
+                        "npm": {
+                          "url": "https://www.npmjs.com/package/expo"
+                        }
+                      }
+                    },
+                    {
+                      "count": 22050,
                       "id": "no_answer",
                       "percentageQuestion": 0,
                       "percentageSurvey": 93.67
                     },
                     {
-                      "count": 1254,
+                      "count": 1302,
                       "id": "other_answers",
-                      "percentageQuestion": 84.23,
-                      "percentageSurvey": 5.19,
+                      "percentageQuestion": 87.47,
+                      "percentageSurvey": 5.39,
                       "groupedBuckets": [
                         {
-                          "count": 611,
+                          "count": 631,
                           "id": "overlimit_answers",
-                          "percentageQuestion": 41.01,
-                          "percentageSurvey": 2.59
+                          "percentageQuestion": 42.36,
+                          "percentageSurvey": 2.68
                         },
                         {
-                          "count": 259,
+                          "count": 267,
                           "id": "cutoff_answers",
-                          "percentageQuestion": 17.45,
-                          "percentageSurvey": 0.97
+                          "percentageQuestion": 18,
+                          "percentageSurvey": 0.99
                         },
                         {
-                          "count": 384,
+                          "count": 404,
                           "id": "no_match",
-                          "percentageQuestion": 25.77,
-                          "percentageSurvey": 1.63
+                          "percentageQuestion": 27.11,
+                          "percentageSurvey": 1.72
                         }
                       ]
                     }
