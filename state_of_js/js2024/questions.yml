@@ -61,8 +61,7 @@
     #   yearAdded: 2023
 
     - id: syntax_features
-      template: multipleWithOther
-      allowOther: false
+      template: multiple
       countsTowardScore: true
       options:
         - id: dynamic_import
@@ -75,8 +74,7 @@
         - id: na
 
     - id: string_features
-      template: multipleWithOther
-      allowOther: false
+      template: multiple
       countsTowardScore: true
       options:
         - id: string_replace_all
@@ -85,8 +83,7 @@
         - id: na
 
     - id: array_features
-      template: multipleWithOther
-      allowOther: false
+      template: multiple
       countsTowardScore: true
       options:
         - id: array_findlast
@@ -99,8 +96,7 @@
         - id: na
 
     - id: set_features
-      template: multipleWithOther
-      allowOther: false
+      template: multiple
       countsTowardScore: true
       yearAdded: 2024
       options:
@@ -121,8 +117,7 @@
         - id: na
 
     - id: object_features
-      template: multipleWithOther
-      allowOther: false
+      template: multiple
       countsTowardScore: true
       yearAdded: 2024
       options:
@@ -131,8 +126,7 @@
         - id: na
 
     - id: async_features
-      template: multipleWithOther
-      allowOther: false
+      template: multiple
       countsTowardScore: true
       options:
         # - id: top_level_await # removed in 2024
@@ -143,8 +137,7 @@
         - id: na
 
     - id: browser_api_features
-      template: multipleWithOther
-      allowOther: false
+      template: multiple
       countsTowardScore: true
       options:
         - id: webgl
@@ -318,6 +311,7 @@
 
     - id: front_end_frameworks_work
       template: multipleWithOther
+      matchTags: [libraries]
       yearAdded: 2024
       options:
         - id: react
@@ -397,6 +391,7 @@
     - id: meta_frameworks_work
       template: multipleWithOther
       yearAdded: 2024
+      matchTags: [libraries]
       options:
         - id: nextjs
         - id: nuxt
@@ -488,6 +483,7 @@
     - id: testing_work
       template: multipleWithOther
       yearAdded: 2024
+      matchTags: [libraries]
       options:
         - id: jest
         - id: mocha
@@ -573,6 +569,7 @@
     - id: mobile_desktop_work
       template: multipleWithOther
       yearAdded: 2024
+      matchTags: [libraries]
       options:
         - id: electron
         - id: reactnative
@@ -641,6 +638,7 @@
     - id: build_tools_work
       template: multipleWithOther
       yearAdded: 2024
+      matchTags: [libraries]
       options:
         - id: webpack
         - id: parcel
@@ -694,6 +692,7 @@
     - id: monorepo_tools_work
       template: multipleWithOther
       yearAdded: 2024
+      matchTags: [libraries]
       options:
         - id: rush
         - id: turborepo
@@ -1184,6 +1183,7 @@
       yearAdded: 2024
       template: multipleWithOther
       limit: 3
+      matchTags: [js_features]
       options:
         - id: temporal
         - id: js_decorators
