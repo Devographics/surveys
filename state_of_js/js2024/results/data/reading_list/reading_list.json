@@ -1,0 +1,752 @@
+{
+  "dataAPI": {
+    "surveys": {
+      "state_of_js": {
+        "js2024": {
+          "reading_list": {
+            "reading_list": {
+              "id": "reading_list",
+              "responses": {
+                "currentEdition": {
+                  "_metadata": {
+                    "axis1Sort": {
+                      "property": "count",
+                      "order": "desc"
+                    },
+                    "limit": 20,
+                    "cutoff": 1
+                  },
+                  "completion": {
+                    "count": 3389,
+                    "percentageSurvey": 35.22,
+                    "total": 9623
+                  },
+                  "buckets": [
+                    {
+                      "count": 1026,
+                      "id": "error_cause",
+                      "percentageQuestion": 30.27,
+                      "percentageSurvey": 10.66,
+                      "entity": {
+                        "name": "`error.cause`",
+                        "nameHtml": "<code>error.cause</code>",
+                        "nameClean": "error.cause",
+                        "description": "Indicate the specific original cause of the error.\n",
+                        "descriptionClean": "Indicate the specific original cause of the error.\n",
+                        "id": "error_cause",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "try {\n  connectToDatabase();\n} catch (err) {\n  throw new Error('Connecting to database failed.', { cause: err });\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">try</span> {\n  <span class=\"hljs-title function_\">connectToDatabase</span>();\n} <span class=\"hljs-keyword\">catch</span> (err) {\n  <span class=\"hljs-keyword\">throw</span> <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Error</span>(<span class=\"hljs-string\">&#x27;Connecting to database failed.&#x27;</span>, { <span class=\"hljs-attr\">cause</span>: err });\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause"
+                        }
+                      }
+                    },
+                    {
+                      "count": 898,
+                      "id": "logical_assignment",
+                      "percentageQuestion": 26.5,
+                      "percentageSurvey": 9.33,
+                      "entity": {
+                        "name": "Logical Assignment",
+                        "nameClean": "Logical Assignment",
+                        "description": "Operators to assign a value to a variable based on its own truthy/falsy status.\n",
+                        "descriptionClean": "Operators to assign a value to a variable based on its own truthy/falsy status.\n",
+                        "id": "logical_assignment",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "const a = { duration: 50, title: '' };\n\na.duration ||= 10;\nconsole.log(a.duration);\n// expected output: 50\n\na.title ||= 'title is empty.';\nconsole.log(a.title);\n// expected output: \"title is empty\"\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">const</span> a = { <span class=\"hljs-attr\">duration</span>: <span class=\"hljs-number\">50</span>, <span class=\"hljs-attr\">title</span>: <span class=\"hljs-string\">&#x27;&#x27;</span> };\n\na.<span class=\"hljs-property\">duration</span> ||= <span class=\"hljs-number\">10</span>;\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(a.<span class=\"hljs-property\">duration</span>);\n<span class=\"hljs-comment\">// expected output: 50</span>\n\na.<span class=\"hljs-property\">title</span> ||= <span class=\"hljs-string\">&#x27;title is empty.&#x27;</span>;\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(a.<span class=\"hljs-property\">title</span>);\n<span class=\"hljs-comment\">// expected output: &quot;title is empty&quot;</span>"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-javascript_operators_logical_and_assignment"
+                        }
+                      }
+                    },
+                    {
+                      "count": 895,
+                      "id": "object_group_by",
+                      "percentageQuestion": 26.41,
+                      "percentageSurvey": 9.3,
+                      "entity": {
+                        "name": "`Object.groupBy()`\n",
+                        "nameHtml": "<code>Object.groupBy()</code>\n",
+                        "nameClean": "Object.groupBy()",
+                        "description": "Group the elements of a given iterable according to the string values returned by a provided function.\n",
+                        "descriptionClean": "Group the elements of a given iterable according to the string values returned by a provided function.\n",
+                        "id": "object_group_by",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "const inventory = [\n  { name: \"salad\", type: \"vegetables\" },\n  { name: \"banana\", type: \"fruit\" },\n  { name: \"apple\", type: \"fruit\" },\n];\n\nconst result = Object.groupBy(inventory, ({ type }) => type);\n\n/*\n{\n  vegetables: [\n    { name: 'salad', type: 'vegetables' },\n  ],\n  fruit: [\n    { name: \"banana\", type: \"fruit\" },\n    { name: \"apple\", type: \"fruit\" }\n  ]\n}\n*/\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">const</span> inventory = [\n  { <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">&quot;salad&quot;</span>, <span class=\"hljs-attr\">type</span>: <span class=\"hljs-string\">&quot;vegetables&quot;</span> },\n  { <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">&quot;banana&quot;</span>, <span class=\"hljs-attr\">type</span>: <span class=\"hljs-string\">&quot;fruit&quot;</span> },\n  { <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">&quot;apple&quot;</span>, <span class=\"hljs-attr\">type</span>: <span class=\"hljs-string\">&quot;fruit&quot;</span> },\n];\n\n<span class=\"hljs-keyword\">const</span> result = <span class=\"hljs-title class_\">Object</span>.<span class=\"hljs-title function_\">groupBy</span>(inventory, <span class=\"hljs-function\">(<span class=\"hljs-params\">{ type }</span>) =&gt;</span> type);\n\n<span class=\"hljs-comment\">/*\n{\n  vegetables: [\n    { name: &#x27;salad&#x27;, type: &#x27;vegetables&#x27; },\n  ],\n  fruit: [\n    { name: &quot;banana&quot;, type: &quot;fruit&quot; },\n    { name: &quot;apple&quot;, type: &quot;fruit&quot; }\n  ]\n}\n*/</span>"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/union"
+                        },
+                        "webFeature": {
+                          "id": "set-methods",
+                          "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                          "group": [
+                            "sets"
+                          ],
+                          "name": "Set methods",
+                          "spec": [
+                            "https://tc39.es/proposal-set-methods/"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2024-06-11",
+                            "support": {
+                              "chrome": "122",
+                              "chrome_android": "122",
+                              "edge": "122",
+                              "firefox": "127",
+                              "firefox_android": "127",
+                              "safari": "17",
+                              "safari_ios": "17"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 793,
+                      "id": "array_from_async",
+                      "percentageQuestion": 23.4,
+                      "percentageSurvey": 8.24,
+                      "entity": {
+                        "name": "`array.fromAsync()`\n",
+                        "nameHtml": "<code>array.fromAsync()</code>\n",
+                        "nameClean": "array.fromAsync()",
+                        "description": "Similar to Array.from but for async iterators.",
+                        "descriptionClean": "Similar to Array.from but for async iterators.",
+                        "id": "array_from_async",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "const asyncIterable = (async function* () {\n  for (let i = 0; i < 5; i++) {\n    await new Promise((resolve) => setTimeout(resolve, 10 * i));\n    yield i;\n  }\n})();\n\nArray.fromAsync(asyncIterable).then((array) => console.log(array));\n// [0, 1, 2, 3, 4]\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">const</span> asyncIterable = (<span class=\"hljs-keyword\">async</span> <span class=\"hljs-keyword\">function</span>* () {\n  <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">let</span> i = <span class=\"hljs-number\">0</span>; i &lt; <span class=\"hljs-number\">5</span>; i++) {\n    <span class=\"hljs-keyword\">await</span> <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Promise</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">resolve</span>) =&gt;</span> <span class=\"hljs-built_in\">setTimeout</span>(resolve, <span class=\"hljs-number\">10</span> * i));\n    <span class=\"hljs-keyword\">yield</span> i;\n  }\n})();\n\n<span class=\"hljs-title class_\">Array</span>.<span class=\"hljs-title function_\">fromAsync</span>(asyncIterable).<span class=\"hljs-title function_\">then</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">array</span>) =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(array));\n<span class=\"hljs-comment\">// [0, 1, 2, 3, 4]</span>"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fromAsync"
+                        },
+                        "webFeature": {
+                          "id": "array-fromasync",
+                          "description_html": "The <code>Array.fromAsync()</code> static method copies items from an async iterable object to make a new array.",
+                          "group": [
+                            "arrays"
+                          ],
+                          "name": "Array.fromAsync()",
+                          "spec": [
+                            "https://tc39.es/proposal-array-from-async/#sec-array.fromAsync"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2024-01-25",
+                            "support": {
+                              "chrome": "121",
+                              "chrome_android": "121",
+                              "edge": "121",
+                              "firefox": "115",
+                              "firefox_android": "115",
+                              "safari": "16.4",
+                              "safari_ios": "16.4"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 783,
+                      "id": "temporal",
+                      "percentageQuestion": 23.1,
+                      "percentageSurvey": 8.14,
+                      "entity": {
+                        "name": "Temporal",
+                        "nameClean": "Temporal",
+                        "description": "Provides standard objects and functions for working with dates and times.",
+                        "descriptionClean": "Provides standard objects and functions for working with dates and times.",
+                        "id": "temporal",
+                        "entityType": "feature",
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"
+                        }
+                      }
+                    },
+                    {
+                      "count": 739,
+                      "id": "hashbang_grammar",
+                      "percentageQuestion": 21.81,
+                      "percentageSurvey": 7.68,
+                      "entity": {
+                        "name": "Hashbang Grammar",
+                        "nameClean": "Hashbang Grammar",
+                        "description": "Provide the path to a specific JavaScript interpreter that you want to use to execute the script.\n",
+                        "descriptionClean": "Provide the path to a specific JavaScript interpreter that you want to use to execute the script.\n",
+                        "id": "hashbang_grammar",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "#!/usr/bin/env node\n\nconsole.log(\"Hello world\");\n",
+                          "codeHighlighted": "<span class=\"hljs-meta\">#!/usr/bin/env node</span>\n\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&quot;Hello world&quot;</span>);"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar"
+                        }
+                      }
+                    },
+                    {
+                      "count": 723,
+                      "id": "promise_try",
+                      "percentageQuestion": 21.33,
+                      "percentageSurvey": 7.51,
+                      "entity": {
+                        "name": "`Promise.try()`",
+                        "nameHtml": "<code>Promise.try()</code>",
+                        "nameClean": "Promise.try()",
+                        "description": "Take a callback of any kind and wrap its result in a Promise.\n",
+                        "descriptionClean": "Take a callback of any kind and wrap its result in a Promise.\n",
+                        "id": "promise_try",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "function doSomething(action) {\n  return Promise.try(action)\n    .then((result) => console.log(result))\n    .catch((error) => console.error(error))\n    .finally(() => console.log(\"Done\"));\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">doSomething</span>(<span class=\"hljs-params\">action</span>) {\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-title class_\">Promise</span>.<span class=\"hljs-title function_\">try</span>(action)\n    .<span class=\"hljs-title function_\">then</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">result</span>) =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result))\n    .<span class=\"hljs-title function_\">catch</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">error</span>) =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error))\n    .<span class=\"hljs-title function_\">finally</span>(<span class=\"hljs-function\">() =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&quot;Done&quot;</span>));\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/try"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/javascript_builtins_promise_try"
+                        },
+                        "webFeature": {
+                          "id": "promise-try",
+                          "description_html": "The <code>Promise.try()</code> static method returns a promise that takes a callback of any kind (returns or throws, synchronously or asynchronously) and wraps its result in a <code>Promise</code>.",
+                          "group": [
+                            "promises"
+                          ],
+                          "name": "Promise.try()",
+                          "spec": [
+                            "https://tc39.es/proposal-promise-try/"
+                          ],
+                          "status": {
+                            "baseline": "false",
+                            "support": {
+                              "chrome": "128",
+                              "chrome_android": "128",
+                              "edge": "128"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 679,
+                      "id": "array_with",
+                      "percentageQuestion": 20.04,
+                      "percentageSurvey": 7.06,
+                      "entity": {
+                        "name": "`array.with()`\n",
+                        "nameHtml": "<code>array.with()</code>\n",
+                        "nameClean": "array.with()",
+                        "description": "Returns a new array with the element at the given index replaced with the given value.\n",
+                        "descriptionClean": "Returns a new array with the element at the given index replaced with the given value.\n",
+                        "id": "array_with",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "const arr = [1, 2, 3, 4, 5];\nconsole.log(arr.with(2, 6)); // [1, 2, 6, 4, 5]\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">const</span> arr = [<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">3</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">5</span>];\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(arr.<span class=\"hljs-title function_\">with</span>(<span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">6</span>)); <span class=\"hljs-comment\">// [1, 2, 6, 4, 5]</span>"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/with"
+                        },
+                        "webFeature": {
+                          "id": "array-by-copy",
+                          "description_html": "The <code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code>, and <code>with()</code> methods of arrays and typed arrays return changed copies of arrays. They stand in contrast to methods such as <code>sort()</code> or <code>reverse()</code> that change arrays in place.",
+                          "group": [
+                            "arrays",
+                            "typed-arrays"
+                          ],
+                          "name": "Array by copy",
+                          "spec": [
+                            "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.toreversed",
+                            "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tosorted",
+                            "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tospliced",
+                            "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.with",
+                            "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.toreversed",
+                            "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.tosorted",
+                            "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.with"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2023-07-04",
+                            "support": {
+                              "chrome": "110",
+                              "chrome_android": "110",
+                              "edge": "110",
+                              "firefox": "115",
+                              "firefox_android": "115",
+                              "safari": "16",
+                              "safari_ios": "16"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 664,
+                      "id": "web_authentication_api",
+                      "percentageQuestion": 19.59,
+                      "percentageSurvey": 6.9,
+                      "entity": {
+                        "name": "Web Authentication API",
+                        "nameClean": "Web Authentication API",
+                        "id": "web_authentication_api",
+                        "entityType": "feature",
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API"
+                        }
+                      }
+                    },
+                    {
+                      "count": 632,
+                      "id": "dynamic_import",
+                      "percentageQuestion": 18.65,
+                      "percentageSurvey": 6.57,
+                      "entity": {
+                        "name": "Dynamic Import",
+                        "nameClean": "Dynamic Import",
+                        "description": "Load a module asynchronously and dynamically.\n",
+                        "descriptionClean": "Load a module asynchronously and dynamically.\n",
+                        "id": "dynamic_import",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "await import('/modules/my-module.js')\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">await</span> <span class=\"hljs-keyword\">import</span>(<span class=\"hljs-string\">&#x27;/modules/my-module.js&#x27;</span>)"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import"
+                        }
+                      }
+                    },
+                    {
+                      "count": 479,
+                      "id": "set_intersection",
+                      "percentageQuestion": 14.13,
+                      "percentageSurvey": 4.98,
+                      "entity": {
+                        "name": "`set.intersection()`\n",
+                        "nameHtml": "<code>set.intersection()</code>\n",
+                        "nameClean": "set.intersection()",
+                        "description": "Returns a new set containing elements in both this set and the given set.\n",
+                        "descriptionClean": "Returns a new set containing elements in both this set and the given set.\n",
+                        "id": "set_intersection",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "const odds = new Set([1, 3, 5, 7, 9]);\nconst squares = new Set([1, 4, 9]);\nconsole.log(odds.intersection(squares)); // Set(2) { 1, 9 }\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">const</span> odds = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">3</span>, <span class=\"hljs-number\">5</span>, <span class=\"hljs-number\">7</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-keyword\">const</span> squares = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(odds.<span class=\"hljs-title function_\">intersection</span>(squares)); <span class=\"hljs-comment\">// Set(2) { 1, 9 }</span>"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/intersection"
+                        },
+                        "webFeature": {
+                          "id": "set-methods",
+                          "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                          "group": [
+                            "sets"
+                          ],
+                          "name": "Set methods",
+                          "spec": [
+                            "https://tc39.es/proposal-set-methods/"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2024-06-11",
+                            "support": {
+                              "chrome": "122",
+                              "chrome_android": "122",
+                              "edge": "122",
+                              "firefox": "127",
+                              "firefox_android": "127",
+                              "safari": "17",
+                              "safari_ios": "17"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 472,
+                      "id": "page_visibility",
+                      "percentageQuestion": 13.93,
+                      "percentageSurvey": 4.9,
+                      "entity": {
+                        "name": "Page Visibility API",
+                        "nameClean": "Page Visibility API",
+                        "id": "page_visibility",
+                        "entityType": "feature",
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/pagevisibility"
+                        }
+                      }
+                    },
+                    {
+                      "count": 472,
+                      "id": "regexp_match_indices",
+                      "percentageQuestion": 13.93,
+                      "percentageSurvey": 4.9,
+                      "entity": {
+                        "name": "Regexp Match Indices",
+                        "nameClean": "Regexp Match Indices",
+                        "description": "Store the start and end positions of each matched capture group.\n",
+                        "descriptionClean": "Store the start and end positions of each matched capture group.\n",
+                        "id": "regexp_match_indices",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "const str1 = \"foo bar foo\";\nconst regex1 = /foo/dg;\nconsole.log(regex1.exec(str1).indices[0]); // Output: Array [0, 2]\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">const</span> str1 = <span class=\"hljs-string\">&quot;foo bar foo&quot;</span>;\n<span class=\"hljs-keyword\">const</span> regex1 = <span class=\"hljs-regexp\">/foo/</span>dg;\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(regex1.<span class=\"hljs-title function_\">exec</span>(str1).<span class=\"hljs-property\">indices</span>[<span class=\"hljs-number\">0</span>]); <span class=\"hljs-comment\">// Output: Array [0, 2]</span>"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://v8.dev/features/regexp-match-indices",
+                            "title": "RegExp match indices"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "count": 460,
+                      "id": "private_fields",
+                      "percentageQuestion": 13.57,
+                      "percentageSurvey": 4.78,
+                      "entity": {
+                        "name": "Private Properties",
+                        "nameClean": "Private Properties",
+                        "description": "Properties that cannot be legally referenced outside of the class.\n",
+                        "descriptionClean": "Properties that cannot be legally referenced outside of the class.\n",
+                        "id": "private_fields",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "class ClassWithPrivateField {\n  #privateField\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">class</span> <span class=\"hljs-title class_\">ClassWithPrivateField</span> {\n  #privateField\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties"
+                        }
+                      }
+                    },
+                    {
+                      "count": 444,
+                      "id": "array_to_spliced",
+                      "percentageQuestion": 13.1,
+                      "percentageSurvey": 4.61,
+                      "entity": {
+                        "name": "`array.toSpliced()`\n",
+                        "nameHtml": "<code>array.toSpliced()</code>\n",
+                        "nameClean": "array.toSpliced()",
+                        "description": "Splice without mutating the original array.\n",
+                        "descriptionClean": "Splice without mutating the original array.\n",
+                        "id": "array_to_spliced",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "const months = [\"Jan\", \"Mar\", \"Apr\", \"May\"];\n\n// Inserting an element at index 1\nconst months2 = months.toSpliced(1, 0, \"Feb\");\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">const</span> months = [<span class=\"hljs-string\">&quot;Jan&quot;</span>, <span class=\"hljs-string\">&quot;Mar&quot;</span>, <span class=\"hljs-string\">&quot;Apr&quot;</span>, <span class=\"hljs-string\">&quot;May&quot;</span>];\n\n<span class=\"hljs-comment\">// Inserting an element at index 1</span>\n<span class=\"hljs-keyword\">const</span> months2 = months.<span class=\"hljs-title function_\">toSpliced</span>(<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">0</span>, <span class=\"hljs-string\">&quot;Feb&quot;</span>);"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced"
+                        },
+                        "webFeature": {
+                          "id": "array-by-copy",
+                          "description_html": "The <code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code>, and <code>with()</code> methods of arrays and typed arrays return changed copies of arrays. They stand in contrast to methods such as <code>sort()</code> or <code>reverse()</code> that change arrays in place.",
+                          "group": [
+                            "arrays",
+                            "typed-arrays"
+                          ],
+                          "name": "Array by copy",
+                          "spec": [
+                            "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.toreversed",
+                            "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tosorted",
+                            "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tospliced",
+                            "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.with",
+                            "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.toreversed",
+                            "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.tosorted",
+                            "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.with"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2023-07-04",
+                            "support": {
+                              "chrome": "110",
+                              "chrome_android": "110",
+                              "edge": "110",
+                              "firefox": "115",
+                              "firefox_android": "115",
+                              "safari": "16",
+                              "safari_ios": "16"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 419,
+                      "id": "array_to_sorted",
+                      "percentageQuestion": 12.36,
+                      "percentageSurvey": 4.35,
+                      "entity": {
+                        "name": "`array.toSorted()`\n",
+                        "nameHtml": "<code>array.toSorted()</code>\n",
+                        "nameClean": "array.toSorted()",
+                        "description": "Sort without mutating the original array.\n",
+                        "descriptionClean": "Sort without mutating the original array.\n",
+                        "id": "array_to_sorted",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "const values = [1, 10, 21, 2];\nconst sortedValues = values.toSorted((a, b) => a - b);\nconsole.log(sortedValues); // [1, 2, 10, 21]\nconsole.log(values); // [1, 10, 21, 2]\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">const</span> values = [<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">10</span>, <span class=\"hljs-number\">21</span>, <span class=\"hljs-number\">2</span>];\n<span class=\"hljs-keyword\">const</span> sortedValues = values.<span class=\"hljs-title function_\">toSorted</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">a, b</span>) =&gt;</span> a - b);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(sortedValues); <span class=\"hljs-comment\">// [1, 2, 10, 21]</span>\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(values); <span class=\"hljs-comment\">// [1, 10, 21, 2]</span>"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted"
+                        },
+                        "webFeature": {
+                          "id": "array-by-copy",
+                          "description_html": "The <code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code>, and <code>with()</code> methods of arrays and typed arrays return changed copies of arrays. They stand in contrast to methods such as <code>sort()</code> or <code>reverse()</code> that change arrays in place.",
+                          "group": [
+                            "arrays",
+                            "typed-arrays"
+                          ],
+                          "name": "Array by copy",
+                          "spec": [
+                            "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.toreversed",
+                            "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tosorted",
+                            "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tospliced",
+                            "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.with",
+                            "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.toreversed",
+                            "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.tosorted",
+                            "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.with"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2023-07-04",
+                            "support": {
+                              "chrome": "110",
+                              "chrome_android": "110",
+                              "edge": "110",
+                              "firefox": "115",
+                              "firefox_android": "115",
+                              "safari": "16",
+                              "safari_ios": "16"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 417,
+                      "id": "set_union",
+                      "percentageQuestion": 12.3,
+                      "percentageSurvey": 4.33,
+                      "entity": {
+                        "name": "`set.union()`\n",
+                        "nameHtml": "<code>set.union()</code>\n",
+                        "nameClean": "set.union()",
+                        "description": "Returns a new set containing elements of both this set and the given set.\n",
+                        "descriptionClean": "Returns a new set containing elements of both this set and the given set.\n",
+                        "id": "set_union",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "const evens = new Set([2, 4, 6, 8]);\nconst squares = new Set([1, 4, 9]);\nconsole.log(evens.union(squares)); // Set(6) { 2, 4, 6, 8, 1, 9 }\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">const</span> evens = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">6</span>, <span class=\"hljs-number\">8</span>]);\n<span class=\"hljs-keyword\">const</span> squares = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(evens.<span class=\"hljs-title function_\">union</span>(squares)); <span class=\"hljs-comment\">// Set(6) { 2, 4, 6, 8, 1, 9 }</span>"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/union"
+                        },
+                        "webFeature": {
+                          "id": "set-methods",
+                          "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                          "group": [
+                            "sets"
+                          ],
+                          "name": "Set methods",
+                          "spec": [
+                            "https://tc39.es/proposal-set-methods/"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2024-06-11",
+                            "support": {
+                              "chrome": "122",
+                              "chrome_android": "122",
+                              "edge": "122",
+                              "firefox": "127",
+                              "firefox_android": "127",
+                              "safari": "17",
+                              "safari_ios": "17"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 407,
+                      "id": "set_difference",
+                      "percentageQuestion": 12.01,
+                      "percentageSurvey": 4.23,
+                      "entity": {
+                        "name": "`set.difference()`\n",
+                        "nameHtml": "<code>set.difference()</code>\n",
+                        "nameClean": "set.difference()",
+                        "description": "Returns a new set containing elements in this set but not in the given set.\n",
+                        "descriptionClean": "Returns a new set containing elements in this set but not in the given set.\n",
+                        "id": "set_difference",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "const odds = new Set([1, 3, 5, 7, 9]);\nconst squares = new Set([1, 4, 9]);\nconsole.log(odds.difference(squares)); // Set(3) { 3, 5, 7 }\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">const</span> odds = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">3</span>, <span class=\"hljs-number\">5</span>, <span class=\"hljs-number\">7</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-keyword\">const</span> squares = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(odds.<span class=\"hljs-title function_\">difference</span>(squares)); <span class=\"hljs-comment\">// Set(3) { 3, 5, 7 }</span>"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/difference"
+                        },
+                        "webFeature": {
+                          "id": "set-methods",
+                          "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                          "group": [
+                            "sets"
+                          ],
+                          "name": "Set methods",
+                          "spec": [
+                            "https://tc39.es/proposal-set-methods/"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2024-06-11",
+                            "support": {
+                              "chrome": "122",
+                              "chrome_android": "122",
+                              "edge": "122",
+                              "firefox": "127",
+                              "firefox_android": "127",
+                              "safari": "17",
+                              "safari_ios": "17"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 407,
+                      "id": "set_symmetric_difference",
+                      "percentageQuestion": 12.01,
+                      "percentageSurvey": 4.23,
+                      "entity": {
+                        "name": "`set.symmetricDifference()`\n",
+                        "nameHtml": "<code>set.symmetricDifference()</code>\n",
+                        "nameClean": "set.symmetricDifference()",
+                        "description": "Returns a new set containing elements which are in either this set or the given set, but not in both.\n",
+                        "descriptionClean": "Returns a new set containing elements which are in either this set or the given set, but not in both.\n",
+                        "id": "set_symmetric_difference",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "const evens = new Set([2, 4, 6, 8]);\nconst squares = new Set([1, 4, 9]);\nconsole.log(evens.symmetricDifference(squares)); // Set(5) { 2, 6, 8, 1, 9 }\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">const</span> evens = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">6</span>, <span class=\"hljs-number\">8</span>]);\n<span class=\"hljs-keyword\">const</span> squares = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(evens.<span class=\"hljs-title function_\">symmetricDifference</span>(squares)); <span class=\"hljs-comment\">// Set(5) { 2, 6, 8, 1, 9 }</span>"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/symmetricDifference"
+                        },
+                        "webFeature": {
+                          "id": "set-methods",
+                          "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                          "group": [
+                            "sets"
+                          ],
+                          "name": "Set methods",
+                          "spec": [
+                            "https://tc39.es/proposal-set-methods/"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2024-06-11",
+                            "support": {
+                              "chrome": "122",
+                              "chrome_android": "122",
+                              "edge": "122",
+                              "firefox": "127",
+                              "firefox_android": "127",
+                              "safari": "17",
+                              "safari_ios": "17"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 397,
+                      "id": "js_shadow_realm",
+                      "percentageQuestion": 11.71,
+                      "percentageSurvey": 4.13,
+                      "entity": {
+                        "name": "ShadowRealm API",
+                        "nameClean": "ShadowRealm API",
+                        "description": "A distinct global environment, with its own global object containing its own intrinsics and built-ins.",
+                        "descriptionClean": "A distinct global environment, with its own global object containing its own intrinsics and built-ins.",
+                        "id": "js_shadow_realm",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "js",
+                          "code": "declare class ShadowRealm {\n  constructor();\n  importValue(specifier: string, bindingName: string): Promise<PrimitiveValueOrCallable>;\n  evaluate(sourceText: string): PrimitiveValueOrCallable;\n}\n",
+                          "codeHighlighted": "declare <span class=\"hljs-keyword\">class</span> <span class=\"hljs-title class_\">ShadowRealm</span> {\n  <span class=\"hljs-title function_\">constructor</span>(<span class=\"hljs-params\"></span>);\n  importValue(<span class=\"hljs-attr\">specifier</span>: string, <span class=\"hljs-attr\">bindingName</span>: string): <span class=\"hljs-title class_\">Promise</span>&lt;<span class=\"hljs-title class_\">PrimitiveValueOrCallable</span>&gt;;\n  evaluate(<span class=\"hljs-attr\">sourceText</span>: string): <span class=\"hljs-title class_\">PrimitiveValueOrCallable</span>;\n}"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://github.com/tc39/proposal-shadowrealm",
+                            "title": "ShadowRealm Proposal"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "count": 6234,
+                      "id": "no_answer",
+                      "percentageQuestion": 0,
+                      "percentageSurvey": 64.78
+                    },
+                    {
+                      "count": 30675,
+                      "id": "overlimit_answers",
+                      "percentageQuestion": 905.08,
+                      "percentageSurvey": 318.67
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
