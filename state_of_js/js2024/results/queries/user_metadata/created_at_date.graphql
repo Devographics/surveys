@@ -7,8 +7,13 @@ query {
             id
             responses(
               parameters: {
-                showNoAnswer: true
+                showNoAnswer: false
                 mergeOtherBuckets: false
+                cutoff: 10
+                sort: {
+                  order: asc
+                  property: id
+                }
               }
             ) {
               currentEdition {
