@@ -1,0 +1,31 @@
+query {
+  surveys {
+    state_of_js {
+      js2024 {
+        testing {
+          testing_cardinalities: _cardinalities {
+            id
+            _metadata {
+              sectionId
+            }
+            responses(parameters: { sort: { order: asc, property: id } }) {
+              currentEdition {
+                buckets {
+                  count
+                  id
+                  percentageQuestion
+                  percentageSurvey
+                }
+                completion {
+                  count
+                  percentageSurvey
+                  total
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
