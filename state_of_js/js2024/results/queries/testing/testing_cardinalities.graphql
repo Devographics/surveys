@@ -5,21 +5,44 @@ query {
         testing {
           testing_cardinalities: _cardinalities {
             id
-            _metadata {
-              sectionId
-            }
-            responses(parameters: { sort: { order: asc, property: id } }) {
+            responses(
+              parameters: {
+                cutoff: 1
+                sort: {
+                  order: asc
+                  property: id
+                }
+              }
+            ) {
               currentEdition {
-                buckets {
-                  count
-                  id
-                  percentageQuestion
-                  percentageSurvey
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                  limit
+                  cutoff
                 }
                 completion {
                   count
                   percentageSurvey
                   total
+                }
+                average
+                percentiles {
+                  p50
+                }
+                buckets {
+                  count
+                  id
+                  percentageQuestion
+                  percentageSurvey
+                  isFreeformData
+                  hasInsufficientData
                 }
               }
             }
