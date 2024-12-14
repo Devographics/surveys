@@ -3,20 +3,21 @@ query {
     state_of_js {
       js2024 {
         user_info {
-          race_ethnicity_vs_salary: race_ethnicity {
+          job_title_vs_age: job_title {
             id
             comments {
               currentEdition {
                 count
               }
             }
-            responses(
-              facet: user_info__yearly_salary
+            freeform(
+              facet: user_info__age
               parameters: {
                 showNoAnswer: true
-                cutoff: 10
+                limit: 20
                 sort: {
                   property: medianByFacet
+                  order: asc
                 }
               }
             ) {

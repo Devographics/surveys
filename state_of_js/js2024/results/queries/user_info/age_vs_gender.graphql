@@ -3,7 +3,7 @@ query {
     state_of_js {
       js2024 {
         user_info {
-          race_ethnicity_vs_salary: race_ethnicity {
+          age_vs_gender: age {
             id
             comments {
               currentEdition {
@@ -11,13 +11,9 @@ query {
               }
             }
             responses(
-              facet: user_info__yearly_salary
+              facet: user_info__gender
               parameters: {
                 showNoAnswer: true
-                cutoff: 10
-                sort: {
-                  property: medianByFacet
-                }
               }
             ) {
               currentEdition {
