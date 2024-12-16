@@ -140,10 +140,14 @@
             showNoAnswer: true
             mergeOtherBuckets: false
             cutoff: 10
-            limit: 20
+            limit: 40
           name: multiple_options2
           id: country
           template: multiple_options2
+          chartOptions:
+            limit: 20
+          queryOptions:
+            addBucketsEntities: false
           isMainBlock: true
           path: /demographics/country/
           sectionId: user_info
@@ -153,8 +157,8 @@
           hasData: true
           parameters:
             showNoAnswer: true
-            cutoff: 100
-            limit: 20
+            cutoff: 10
+            limit: 40
             sort:
               property: medianByFacet
               order: desc
@@ -164,6 +168,8 @@
               id: yearly_salary
           name: vs_salary
           template: vs_salary
+          chartOptions:
+            limit: 20
           path: /demographics/country_vs_salary/
           sectionId: user_info
     - id: hint_hint
@@ -211,6 +217,22 @@
           template: vs_salary
           path: /demographics/age_vs_salary/
           sectionId: user_info
+        - id: age_vs_gender
+          fieldId: age
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+          filtersState:
+            options:
+              mode: facet
+            facet:
+              sectionId: user_info
+              id: gender
+          name: vs_gender
+          template: vs_gender
+          path: /demographics/age_vs_gender/
+          sectionId: user_info
         - id: age_vs_disability
           fieldId: age
           blockType: HorizontalBarBlock2
@@ -257,6 +279,22 @@
           name: vs_salary
           template: vs_salary
           path: /demographics/years_of_experience_vs_salary/
+          sectionId: user_info
+        - id: years_of_experience_vs_gender
+          fieldId: years_of_experience
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+          filtersState:
+            options:
+              mode: facet
+            facet:
+              sectionId: user_info
+              id: gender
+          name: vs_gender
+          template: vs_gender
+          path: /demographics/years_of_experience_vs_gender/
           sectionId: user_info
     - id: company_size
       variants:
@@ -374,7 +412,8 @@
           hasData: true
           parameters:
             showNoAnswer: true
-            cutoff: 10
+            cutoff: 100
+            limit: 20
             sort:
               property: medianByFacet
           filtersState:
@@ -383,9 +422,85 @@
               id: yearly_salary
           name: vs_salary
           template: vs_salary
+          chartOptions:
+            limit: 10
           queryOptions:
             subField: freeform
           path: /demographics/job_title_vs_salary/
+          sectionId: user_info
+        - id: job_title_vs_age
+          fieldId: job_title
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            limit: 20
+            cutoff: 100
+            sort:
+              property: medianByFacet
+              order: asc
+          filtersState:
+            options:
+              mode: facet
+            facet:
+              sectionId: user_info
+              id: age
+          name: vs_age
+          template: vs_age
+          chartOptions:
+            limit: 10
+          queryOptions:
+            subField: freeform
+          path: /demographics/job_title_vs_age/
+          sectionId: user_info
+        - id: job_title_vs_years_of_experience
+          fieldId: job_title
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            limit: 20
+            cutoff: 100
+            sort:
+              property: medianByFacet
+              order: asc
+          filtersState:
+            options:
+              mode: facet
+            facet:
+              sectionId: user_info
+              id: years_of_experience
+          name: vs_years_of_experience
+          template: vs_years_of_experience
+          chartOptions:
+            limit: 10
+          queryOptions:
+            subField: freeform
+          path: /demographics/job_title_vs_years_of_experience/
+          sectionId: user_info
+        - id: job_title_vs_gender
+          fieldId: job_title
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            limit: 20
+            cutoff: 100
+          filtersState:
+            options:
+              mode: facet
+              sort: female
+              order: desc
+            facet:
+              sectionId: user_info
+              id: gender
+          name: vs_gender
+          template: vs_gender
+          chartOptions:
+            limit: 10
+          queryOptions:
+            subField: freeform
+          path: /demographics/job_title_vs_gender/
           sectionId: user_info
     - id: tokyodev_resources
       variants:
@@ -461,6 +576,8 @@
           parameters:
             showNoAnswer: true
             cutoff: 10
+            sort:
+              property: medianByFacet
           filtersState:
             facet:
               sectionId: user_info
@@ -480,7 +597,7 @@
             showNoAnswer: true
             mergeOtherBuckets: false
             cutoff: 10
-            limit: 15
+            limit: 20
           name: multiple_options2
           id: country_vs_gender
           fieldId: country
@@ -533,6 +650,8 @@
           parameters:
             showNoAnswer: true
             cutoff: 10
+            sort:
+              property: medianByFacet
           filtersState:
             facet:
               sectionId: user_info
@@ -540,6 +659,24 @@
           name: vs_salary
           template: vs_salary
           path: /demographics/race_ethnicity_vs_salary/
+          sectionId: user_info
+        - id: race_ethnicity_vs_gender
+          fieldId: race_ethnicity
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+          filtersState:
+            options:
+              mode: facet
+              sort: female
+              order: desc
+            facet:
+              sectionId: user_info
+              id: gender
+          name: vs_gender
+          template: vs_gender
+          path: /demographics/race_ethnicity_vs_gender/
           sectionId: user_info
         - id: race_ethnicity_vs_years_of_experience
           fieldId: race_ethnicity
@@ -610,6 +747,7 @@
             showNoAnswer: true
             sort:
               property: medianByFacet
+              order: asc
           filtersState:
             options:
               mode: facet
@@ -1619,17 +1757,6 @@
           isMainBlock: true
           path: /libraries/front-end-frameworks/front_end_frameworks_ratios/
           sectionId: front_end_frameworks
-    - id: tool_modal_hint
-      variants:
-        - blockType: HintBlock
-          wrapBlock: false
-          disableExport: true
-          name: hint
-          id: tool_modal_hint
-          template: hint
-          isMainBlock: true
-          path: /libraries/front-end-frameworks/tool_modal_hint/
-          sectionId: front_end_frameworks
     - id: front_end_frameworks_others
       variants:
         - id: front_end_frameworks_others
@@ -1650,6 +1777,88 @@
           template: section_prenormalized_tools
           isMainBlock: true
           path: /libraries/front-end-frameworks/front_end_frameworks_others/
+          sectionId: front_end_frameworks
+    - id: front_end_frameworks_work
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: front_end_frameworks_work
+          template: multiple_options2
+          i18nNamespace: tools
+          isMainBlock: true
+          path: /libraries/front-end-frameworks/front_end_frameworks_work/
+          sectionId: front_end_frameworks
+        - id: front_end_frameworks_work_vs_salary
+          fieldId: front_end_frameworks_work
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            sort:
+              property: medianByFacet
+              order: desc
+          filtersState:
+            facet:
+              sectionId: user_info
+              id: yearly_salary
+          name: vs_salary
+          template: vs_salary
+          i18nNamespace: tools
+          path: >-
+            /libraries/front-end-frameworks/front_end_frameworks_work_vs_salary/
+          sectionId: front_end_frameworks
+        - id: front_end_frameworks_work_vs_years_of_experience
+          fieldId: front_end_frameworks_work
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            sort:
+              property: medianByFacet
+              order: asc
+          filtersState:
+            options:
+              mode: facet
+            facet:
+              sectionId: user_info
+              id: years_of_experience
+          name: vs_years_of_experience
+          template: vs_years_of_experience
+          i18nNamespace: tools
+          path: >-
+            /libraries/front-end-frameworks/front_end_frameworks_work_vs_years_of_experience/
+          sectionId: front_end_frameworks
+        - id: front_end_frameworks_work_vs_company_size
+          fieldId: front_end_frameworks_work
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            sort:
+              property: medianByFacet
+              order: asc
+          filtersState:
+            options:
+              mode: facet
+            facet:
+              sectionId: user_info
+              id: company_size
+          name: vs_company_size
+          template: vs_company_size
+          i18nNamespace: tools
+          path: >-
+            /libraries/front-end-frameworks/front_end_frameworks_work_vs_company_size/
           sectionId: front_end_frameworks
     - id: tania_rascia
       variants:
@@ -1967,17 +2176,6 @@
           isMainBlock: true
           path: /libraries/meta-frameworks/meta_frameworks_ratios/
           sectionId: meta_frameworks
-    - id: tool_modal_hint
-      variants:
-        - blockType: HintBlock
-          wrapBlock: false
-          disableExport: true
-          name: hint
-          id: tool_modal_hint
-          template: hint
-          isMainBlock: true
-          path: /libraries/meta-frameworks/tool_modal_hint/
-          sectionId: meta_frameworks
     - id: meta_frameworks_others
       variants:
         - id: meta_frameworks_others
@@ -1998,6 +2196,86 @@
           template: section_prenormalized_tools
           isMainBlock: true
           path: /libraries/meta-frameworks/meta_frameworks_others/
+          sectionId: meta_frameworks
+    - id: meta_frameworks_work
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: meta_frameworks_work
+          template: multiple_options2
+          i18nNamespace: tools
+          isMainBlock: true
+          path: /libraries/meta-frameworks/meta_frameworks_work/
+          sectionId: meta_frameworks
+        - id: meta_frameworks_work_vs_salary
+          fieldId: meta_frameworks_work
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            sort:
+              property: medianByFacet
+              order: desc
+          filtersState:
+            facet:
+              sectionId: user_info
+              id: yearly_salary
+          name: vs_salary
+          template: vs_salary
+          i18nNamespace: tools
+          path: /libraries/meta-frameworks/meta_frameworks_work_vs_salary/
+          sectionId: meta_frameworks
+        - id: meta_frameworks_work_vs_years_of_experience
+          fieldId: meta_frameworks_work
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            sort:
+              property: medianByFacet
+              order: asc
+          filtersState:
+            options:
+              mode: facet
+            facet:
+              sectionId: user_info
+              id: years_of_experience
+          name: vs_years_of_experience
+          template: vs_years_of_experience
+          i18nNamespace: tools
+          path: >-
+            /libraries/meta-frameworks/meta_frameworks_work_vs_years_of_experience/
+          sectionId: meta_frameworks
+        - id: meta_frameworks_work_vs_company_size
+          fieldId: meta_frameworks_work
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            sort:
+              property: medianByFacet
+              order: asc
+          filtersState:
+            options:
+              mode: facet
+            facet:
+              sectionId: user_info
+              id: company_size
+          name: vs_company_size
+          template: vs_company_size
+          i18nNamespace: tools
+          path: /libraries/meta-frameworks/meta_frameworks_work_vs_company_size/
           sectionId: meta_frameworks
     - id: salma_alam_naylor
       variants:
@@ -2359,17 +2637,6 @@
           isMainBlock: true
           path: /libraries/testing/testing_ratios/
           sectionId: testing
-    - id: tool_modal_hint
-      variants:
-        - blockType: HintBlock
-          wrapBlock: false
-          disableExport: true
-          name: hint
-          id: tool_modal_hint
-          template: hint
-          isMainBlock: true
-          path: /libraries/testing/tool_modal_hint/
-          sectionId: testing
     - id: testing_others
       variants:
         - id: testing_others
@@ -2390,6 +2657,85 @@
           template: section_prenormalized_tools
           isMainBlock: true
           path: /libraries/testing/testing_others/
+          sectionId: testing
+    - id: testing_work
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: testing_work
+          template: multiple_options2
+          i18nNamespace: tools
+          isMainBlock: true
+          path: /libraries/testing/testing_work/
+          sectionId: testing
+        - id: testing_work_vs_salary
+          fieldId: testing_work
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            sort:
+              property: medianByFacet
+              order: desc
+          filtersState:
+            facet:
+              sectionId: user_info
+              id: yearly_salary
+          name: vs_salary
+          template: vs_salary
+          i18nNamespace: tools
+          path: /libraries/testing/testing_work_vs_salary/
+          sectionId: testing
+        - id: testing_work_vs_years_of_experience
+          fieldId: testing_work
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            sort:
+              property: medianByFacet
+              order: asc
+          filtersState:
+            options:
+              mode: facet
+            facet:
+              sectionId: user_info
+              id: years_of_experience
+          name: vs_years_of_experience
+          template: vs_years_of_experience
+          i18nNamespace: tools
+          path: /libraries/testing/testing_work_vs_years_of_experience/
+          sectionId: testing
+        - id: testing_work_vs_company_size
+          fieldId: testing_work
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            sort:
+              property: medianByFacet
+              order: asc
+          filtersState:
+            options:
+              mode: facet
+            facet:
+              sectionId: user_info
+              id: company_size
+          name: vs_company_size
+          template: vs_company_size
+          i18nNamespace: tools
+          path: /libraries/testing/testing_work_vs_company_size/
           sectionId: testing
     - id: shaundai_person
       variants:
@@ -2751,17 +3097,6 @@
           isMainBlock: true
           path: /libraries/mobile_desktop/mobile_desktop_ratios/
           sectionId: mobile_desktop
-    - id: tool_modal_hint
-      variants:
-        - blockType: HintBlock
-          wrapBlock: false
-          disableExport: true
-          name: hint
-          id: tool_modal_hint
-          template: hint
-          isMainBlock: true
-          path: /libraries/mobile_desktop/tool_modal_hint/
-          sectionId: mobile_desktop
     - id: mobile_desktop_others
       variants:
         - id: mobile_desktop_others
@@ -2782,6 +3117,86 @@
           template: section_prenormalized_tools
           isMainBlock: true
           path: /libraries/mobile_desktop/mobile_desktop_others/
+          sectionId: mobile_desktop
+    - id: mobile_desktop_work
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: mobile_desktop_work
+          template: multiple_options2
+          i18nNamespace: tools
+          isMainBlock: true
+          path: /libraries/mobile_desktop/mobile_desktop_work/
+          sectionId: mobile_desktop
+        - id: mobile_desktop_work_vs_salary
+          fieldId: mobile_desktop_work
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            sort:
+              property: medianByFacet
+              order: desc
+          filtersState:
+            facet:
+              sectionId: user_info
+              id: yearly_salary
+          name: vs_salary
+          template: vs_salary
+          i18nNamespace: tools
+          path: /libraries/mobile_desktop/mobile_desktop_work_vs_salary/
+          sectionId: mobile_desktop
+        - id: mobile_desktop_work_vs_years_of_experience
+          fieldId: mobile_desktop_work
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            sort:
+              property: medianByFacet
+              order: asc
+          filtersState:
+            options:
+              mode: facet
+            facet:
+              sectionId: user_info
+              id: years_of_experience
+          name: vs_years_of_experience
+          template: vs_years_of_experience
+          i18nNamespace: tools
+          path: >-
+            /libraries/mobile_desktop/mobile_desktop_work_vs_years_of_experience/
+          sectionId: mobile_desktop
+        - id: mobile_desktop_work_vs_company_size
+          fieldId: mobile_desktop_work
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            sort:
+              property: medianByFacet
+              order: asc
+          filtersState:
+            options:
+              mode: facet
+            facet:
+              sectionId: user_info
+              id: company_size
+          name: vs_company_size
+          template: vs_company_size
+          i18nNamespace: tools
+          path: /libraries/mobile_desktop/mobile_desktop_work_vs_company_size/
           sectionId: mobile_desktop
     - id: dominik_dorfmeister
       variants:
@@ -3143,17 +3558,6 @@
           isMainBlock: true
           path: /libraries/build_tools/build_tools_ratios/
           sectionId: build_tools
-    - id: tool_modal_hint
-      variants:
-        - blockType: HintBlock
-          wrapBlock: false
-          disableExport: true
-          name: hint
-          id: tool_modal_hint
-          template: hint
-          isMainBlock: true
-          path: /libraries/build_tools/tool_modal_hint/
-          sectionId: build_tools
     - id: build_tools_others
       variants:
         - id: build_tools_others
@@ -3174,6 +3578,85 @@
           template: section_prenormalized_tools
           isMainBlock: true
           path: /libraries/build_tools/build_tools_others/
+          sectionId: build_tools
+    - id: build_tools_work
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: build_tools_work
+          template: multiple_options2
+          i18nNamespace: tools
+          isMainBlock: true
+          path: /libraries/build_tools/build_tools_work/
+          sectionId: build_tools
+        - id: build_tools_work_vs_salary
+          fieldId: build_tools_work
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            sort:
+              property: medianByFacet
+              order: desc
+          filtersState:
+            facet:
+              sectionId: user_info
+              id: yearly_salary
+          name: vs_salary
+          template: vs_salary
+          i18nNamespace: tools
+          path: /libraries/build_tools/build_tools_work_vs_salary/
+          sectionId: build_tools
+        - id: build_tools_work_vs_years_of_experience
+          fieldId: build_tools_work
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            sort:
+              property: medianByFacet
+              order: asc
+          filtersState:
+            options:
+              mode: facet
+            facet:
+              sectionId: user_info
+              id: years_of_experience
+          name: vs_years_of_experience
+          template: vs_years_of_experience
+          i18nNamespace: tools
+          path: /libraries/build_tools/build_tools_work_vs_years_of_experience/
+          sectionId: build_tools
+        - id: build_tools_work_vs_company_size
+          fieldId: build_tools_work
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            sort:
+              property: medianByFacet
+              order: asc
+          filtersState:
+            options:
+              mode: facet
+            facet:
+              sectionId: user_info
+              id: company_size
+          name: vs_company_size
+          template: vs_company_size
+          i18nNamespace: tools
+          path: /libraries/build_tools/build_tools_work_vs_company_size/
           sectionId: build_tools
     - id: sacha_greif
       variants:
@@ -3535,17 +4018,6 @@
           isMainBlock: true
           path: /libraries/monorepo_tools/monorepo_tools_ratios/
           sectionId: monorepo_tools
-    - id: tool_modal_hint
-      variants:
-        - blockType: HintBlock
-          wrapBlock: false
-          disableExport: true
-          name: hint
-          id: tool_modal_hint
-          template: hint
-          isMainBlock: true
-          path: /libraries/monorepo_tools/tool_modal_hint/
-          sectionId: monorepo_tools
     - id: monorepo_tools_others
       variants:
         - id: monorepo_tools_others
@@ -3566,6 +4038,86 @@
           template: section_prenormalized_tools
           isMainBlock: true
           path: /libraries/monorepo_tools/monorepo_tools_others/
+          sectionId: monorepo_tools
+    - id: monorepo_tools_work
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: monorepo_tools_work
+          template: multiple_options2
+          i18nNamespace: tools
+          isMainBlock: true
+          path: /libraries/monorepo_tools/monorepo_tools_work/
+          sectionId: monorepo_tools
+        - id: monorepo_tools_work_vs_salary
+          fieldId: monorepo_tools_work
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            sort:
+              property: medianByFacet
+              order: desc
+          filtersState:
+            facet:
+              sectionId: user_info
+              id: yearly_salary
+          name: vs_salary
+          template: vs_salary
+          i18nNamespace: tools
+          path: /libraries/monorepo_tools/monorepo_tools_work_vs_salary/
+          sectionId: monorepo_tools
+        - id: monorepo_tools_work_vs_years_of_experience
+          fieldId: monorepo_tools_work
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            sort:
+              property: medianByFacet
+              order: asc
+          filtersState:
+            options:
+              mode: facet
+            facet:
+              sectionId: user_info
+              id: years_of_experience
+          name: vs_years_of_experience
+          template: vs_years_of_experience
+          i18nNamespace: tools
+          path: >-
+            /libraries/monorepo_tools/monorepo_tools_work_vs_years_of_experience/
+          sectionId: monorepo_tools
+        - id: monorepo_tools_work_vs_company_size
+          fieldId: monorepo_tools_work
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            sort:
+              property: medianByFacet
+              order: asc
+          filtersState:
+            options:
+              mode: facet
+            facet:
+              sectionId: user_info
+              id: company_size
+          name: vs_company_size
+          template: vs_company_size
+          i18nNamespace: tools
+          path: /libraries/monorepo_tools/monorepo_tools_work_vs_company_size/
           sectionId: monorepo_tools
     - id: sebastien_lorber
       variants:
@@ -4708,9 +5260,9 @@
           wrapBlock: false
           dataPath: dataAPI.entities
           query: >
-            entities(ids:
-            ["vite","esbuild","vitest","playwright","bun","astro","ember","react","nextjs","storybook","jest"])
-            {
+            entities(ids: ["vite", "vitest", "esbuild", "astro",
+            "rolldown","analog", "nitro", "valibot", "angular",
+            "storybook","webpack","react","vuejs"]) {
                 id
                 name
                 nameHtml
@@ -4728,7 +5280,9 @@
           template: awards
           variables:
             entities: >-
-              "vite","esbuild","vitest","playwright","bun","astro","ember","react","nextjs","storybook","jest"
+              "vite", "vitest", "esbuild", "astro", "rolldown","analog",
+              "nitro", "valibot", "angular",
+              "storybook","webpack","react","vuejs"
           awards:
             - id: tool_usage_delta_award
               template: award
@@ -4782,7 +5336,7 @@
                   value: 56%
                 - id: react
                   value: 46.7%
-                - id: vue
+                - id: vuejs
                   value: 42.3%
           isMainBlock: true
           path: /awards/awards/
@@ -4850,6 +5404,38 @@
             entities: '"fernando_herrera"'
           isMainBlock: true
           path: /conclusion/conclusion_fernando/
+          sectionId: conclusion
+    - id: conclusion_shaundai
+      variants:
+        - blockType: ConclusionBlock
+          wrapBlock: false
+          disableExport: true
+          dataPath: dataAPI.conclusion_shaundai_person
+          query: |
+            conclusion_shaundai_person: entity(id: "shaundai_person") {
+                id
+                name
+                homepage{
+                    name
+                    url
+                }
+                twitterName
+                twitter {
+                    name
+                    url
+                }
+                avatar {
+                    url
+                }
+            }
+          name: conclusion
+          id: conclusion_shaundai
+          template: conclusion
+          variables:
+            author: shaundai_person
+            entities: '"shaundai_person"'
+          isMainBlock: true
+          path: /conclusion/conclusion_shaundai/
           sectionId: conclusion
     - id: conclusion_newsletter
       variants:
