@@ -3,194 +3,472 @@
   showTitle: false
   blocks:
     - id: survey_intro
-      blockType: SurveyIntroBlock
-      disableExport: true
-      wrapBlock: false
-
+      variants:
+        - id: survey_intro
+          blockType: SurveyIntroBlock
+          disableExport: true
+          wrapBlock: false
+          isMainBlock: true
+          path: /survey_intro/
+          sectionId: introduction
     - id: survey_sponsors
-      template: sponsors
-
+      variants:
+        - blockType: SponsorsBlock
+          disableExport: true
+          wrapBlock: false
+          name: sponsors
+          id: survey_sponsors
+          template: sponsors
+          isMainBlock: true
+          path: /survey_sponsors/
+          sectionId: introduction
     - id: survey_partners
-      template: sponsors
-      blockType: PartnersBlock
-
+      variants:
+        - blockType: PartnersBlock
+          disableExport: true
+          wrapBlock: false
+          name: sponsors
+          id: survey_partners
+          template: sponsors
+          isMainBlock: true
+          path: /survey_partners/
+          sectionId: introduction
     - id: survey_credits
-      template: credits
-
+      variants:
+        - blockType: CreditsBlock
+          disableExport: true
+          wrapBlock: false
+          name: credits
+          id: survey_credits
+          template: credits
+          isMainBlock: true
+          path: /survey_credits/
+          sectionId: introduction
     - id: survey_newsletter
-      blockType: NewsletterBlock
-      disableExport: true
-      wrapBlock: false
-
+      variants:
+        - id: survey_newsletter
+          blockType: NewsletterBlock
+          disableExport: true
+          wrapBlock: false
+          isMainBlock: true
+          path: /survey_newsletter/
+          sectionId: introduction
     - id: survey_translators
-      blockType: TranslatorsBlock
-      disableExport: true
-      wrapBlock: false
-
+      variants:
+        - id: survey_translators
+          blockType: TranslatorsBlock
+          disableExport: true
+          wrapBlock: false
+          isMainBlock: true
+          path: /survey_translators/
+          sectionId: introduction
+  is_hidden: false
+  children: []
+  pageIndex: 0
+  defaultBlockType: default
+  next:
+    id: tshirt
+    path: /tshirt/
+    showTitle: false
+    pageIndex: 1
+    defaultBlockType: default
 - id: tshirt
-  path: /tshirt
+  path: /tshirt/
   showTitle: false
   blocks:
     - id: tshirt_intro
-      template: page_introduction
+      variants:
+        - id: tshirt_intro
+          blockType: PageIntroductionBlock
+          wrapBlock: false
+          disableExport: true
+          name: page_introduction
+          template: page_introduction
+          isMainBlock: true
+          path: /tshirt/tshirt_intro/
+          sectionId: tshirt
     - id: tshirt_block
-      blockType: TshirtBlock
-      wrapBlock: false
-      disableExport: true
-
-# - id: data_explorer
-#   titleId: sections.data_explorer.title
-#   path: /explorer
-#   blocks:
-#       - template: page_introduction
-
-#       - id: data_explorer
-#         showTitle: false
-#         chartOnly: true
-#         wrapBlock: false
-#         template: data_explorer
-#         parameters: { showNoAnswer: true }
-#         variables:
-#             xAxis: user_info__yearly_salary
-#             yAxis: user_info__years_of_experience
-
-# - id: takeaways
-#   path: /takeaways
-#   blocks:
-#       - id: takeaways
-#         blockType: TakeawaysBlock
-#         disableExport: true
-#         wrapBlock: false
-#         items:
-#             - id: median_salary_2023
-#             - id: previous_compensation_2023
-#             - id: negotiated_compensation_2023
-#             - id: unemployed_respondents_2023
-#             - id: job_search_status_2023
-#             - id: international_subsidiary_2023
-#             - id: remote_work_2023
-#             - id: women_vs_men_experience_2023
-#             - id: women_vs_men_professional_qualifications_2023
-#             - id: overtime_2023
-#             - id: programming_languages_2023
-
+      variants:
+        - id: tshirt_block
+          blockType: TshirtBlock
+          wrapBlock: false
+          disableExport: true
+          isMainBlock: true
+          path: /tshirt/tshirt_block/
+          sectionId: tshirt
+  is_hidden: false
+  children: []
+  pageIndex: 1
+  defaultBlockType: default
+  previous:
+    id: introduction
+    path: /
+    showTitle: false
+    pageIndex: 0
+    defaultBlockType: default
+  next:
+    id: user_info
+    titleId: sections.demographics.title
+    path: /demographics/
+    pageIndex: 2
+    defaultBlockType: default
 - id: user_info
   titleId: sections.demographics.title
-  descriptionId: sections.user_info.description.css2023
-  path: /demographics
+  path: /demographics/
   blocks:
-    - template: page_introduction
-
+    - id: user_info_introduction
+      variants:
+        - id: user_info_introduction
+          blockType: PageIntroductionBlock
+          wrapBlock: false
+          disableExport: true
+          name: page_introduction
+          template: page_introduction
+          isMainBlock: true
+          path: /demographics/user_info_introduction/
+          sectionId: user_info
     - id: country
-      template: multiple_options2
-      parameters: { limit: 20 }
-      description: >
-        While many respondents (**19%**) came from the U.S., we also had strong representation from Germany, France, the U.K., and the Netherlands (**24% combined**), reflecting the liveliness of the front end community in these countries.
       variants:
-        - template: vs_salary
-          parameters:
-            { limit: 20, sort: { property: medianByFacet, order: desc } }
-
-    - id: locale
-      template: multiple_options2
-      parameters: { cutoff: 20 }
-      description: >
-        The language respondents selected to fill out the survey.
-
-    - id: hint_hint
-      template: hint
-
-    - id: completion_stats
-      template: multiple_options2
-      description: >
-        The proportion of the survey filled out by respondents.
-
-    - id: age
-      template: multiple_options2
-      description: >
-        Survey respondents were on average **33.6** years old, slightly higher than the [State of JS](https://2022.stateofjs.com) (**32.2**) and [State of CSS](https://2023.stateofcss.com) (**33.5**) surveys.
-      variants:
-        - template: vs_salary
-
-    - id: years_of_experience
-      template: multiple_options2
-      description: >
-        Respondents had on average **10.7** years of web development experience.
-      variants:
-        - template: vs_salary
-
-    - id: company_size
-      template: multiple_options2
-      description: >
-        Respondents tended to work for mostly mid-sized organizations, with a median company size of **75** employees.
-      variants:
-        - template: vs_salary
-
-        # - id: company_size_vs_gender
-        #   fieldId: company_size
-        #   template: multiple_options2
-        #   parameters:
-        #       showNoAnswer: true
-        #   filtersState:
-        #       options:
-        #           mode: facet
-        #       facet:
-        #           sectionId: user_info
-        #           id: gender
-
-        # - id: company_size_by_gender
-        #   fieldId: company_size
-        #   template: multiple_options2
-        #   parameters:
-        #       showNoAnswer: true
-        #   filtersState:
-        #       options:
-        #           showDefaultSeries: false
-        #           mode: grid
-        #       filters:
-        #           - conditions:
-        #                 - fieldId: gender
-        #                   sectionId: user_info
-        #                   operator: eq
-        #                   value: male
-        #           - conditions:
-        #                 - fieldId: gender
-        #                   sectionId: user_info
-        #                   operator: eq
-        #                   value: female
-        #           - conditions:
-        #                 - fieldId: gender
-        #                   sectionId: user_info
-        #                   operator: eq
-        #                   value: non_binary
-
-    - id: variants_hint
-      template: hint
-
-    - id: yearly_salary
-      template: multiple_options2
-      description: >
-        Respondents had a median income of USD $75,000, noticeably higher than the **$59,970** figure reported by the [Stack Overflow Developer Survey](https://survey.stackoverflow.co/2023/#section-salary-salary-by-developer-type).
-
-    - id: higher_education_degree
-      template: multiple_options2
-      description: >
-        Having a higher-education degree did not translate in meaningful differences in yearly income.
-      variants:
-        - template: vs_salary
-
-    - id: gender
-      template: multiple_options2
-      description: >
-        Gender did not correlate with income gaps, but there were notable differences between countries. Canada and the U.S. led the rankings in terms of diversity, while European countries tended to fare worse.
-      variants:
-        - template: vs_salary
-        - id: country_vs_gender
-          fieldId: country
-          template: multiple_options2
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
           parameters:
             showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+            limit: 20
+          name: multiple_options2
+          id: country
+          template: multiple_options2
+          takeaway: >
+            While many respondents (**19%**) came from the U.S., we also had
+            strong representation from Germany, France, the U.K., and the
+            Netherlands (**24% combined**), reflecting the liveliness of the
+            front end community in these countries.
+          isMainBlock: true
+          path: /demographics/country/
+          sectionId: user_info
+        - id: country_vs_salary
+          fieldId: country
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            limit: 20
+            sort:
+              property: medianByFacet
+              order: desc
+          filtersState:
+            facet:
+              sectionId: user_info
+              id: yearly_salary
+          name: vs_salary
+          template: vs_salary
+          path: /demographics/country_vs_salary/
+          sectionId: user_info
+    - id: locale
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 20
+          name: multiple_options2
+          id: locale
+          template: multiple_options2
+          queryOptions:
+            addQuestionComments: false
+          takeaway: |
+            The language respondents selected to fill out the survey.
+          isMainBlock: true
+          path: /demographics/locale/
+          sectionId: user_info
+    - id: hint_hint
+      variants:
+        - blockType: HintBlock
+          wrapBlock: false
+          disableExport: true
+          name: hint
+          id: hint_hint
+          template: hint
+          isMainBlock: true
+          path: /demographics/hint_hint/
+          sectionId: user_info
+    - id: completion_stats
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: completion_stats
+          template: multiple_options2
+          queryOptions:
+            addQuestionComments: false
+          takeaway: |
+            The proportion of the survey filled out by respondents.
+          isMainBlock: true
+          path: /demographics/completion_stats/
+          sectionId: user_info
+    - id: age
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: age
+          template: multiple_options2
+          takeaway: >
+            Survey respondents were on average **33.6** years old, slightly
+            higher than the [State of JS](https://2022.stateofjs.com)
+            (**32.2**) and [State of CSS](https://2023.stateofcss.com)
+            (**33.5**) surveys.
+          isMainBlock: true
+          path: /demographics/age/
+          sectionId: user_info
+        - id: age_vs_salary
+          fieldId: age
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+          filtersState:
+            facet:
+              sectionId: user_info
+              id: yearly_salary
+          name: vs_salary
+          template: vs_salary
+          path: /demographics/age_vs_salary/
+          sectionId: user_info
+    - id: years_of_experience
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: years_of_experience
+          template: multiple_options2
+          takeaway: >
+            Respondents had on average **10.7** years of web development
+            experience.
+          isMainBlock: true
+          path: /demographics/years_of_experience/
+          sectionId: user_info
+        - id: years_of_experience_vs_salary
+          fieldId: years_of_experience
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+          filtersState:
+            facet:
+              sectionId: user_info
+              id: yearly_salary
+          name: vs_salary
+          template: vs_salary
+          path: /demographics/years_of_experience_vs_salary/
+          sectionId: user_info
+    - id: company_size
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: company_size
+          template: multiple_options2
+          takeaway: >
+            Respondents tended to work for mostly mid-sized organizations,
+            with a median company size of **75** employees.
+          isMainBlock: true
+          path: /demographics/company_size/
+          sectionId: user_info
+        - id: company_size_vs_salary
+          fieldId: company_size
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+          filtersState:
+            facet:
+              sectionId: user_info
+              id: yearly_salary
+          name: vs_salary
+          template: vs_salary
+          path: /demographics/company_size_vs_salary/
+          sectionId: user_info
+    - id: variants_hint
+      variants:
+        - blockType: HintBlock
+          wrapBlock: false
+          disableExport: true
+          name: hint
+          id: variants_hint
+          template: hint
+          isMainBlock: true
+          path: /demographics/variants_hint/
+          sectionId: user_info
+    - id: yearly_salary
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: yearly_salary
+          template: multiple_options2
+          takeaway: >
+            Respondents had a median income of USD $75,000, noticeably higher
+            than the **$59,970** figure reported by the [Stack Overflow
+            Developer
+            Survey](https://survey.stackoverflow.co/2023/#section-salary-salary-by-developer-type).
+          isMainBlock: true
+          path: /demographics/yearly_salary/
+          sectionId: user_info
+    - id: higher_education_degree
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: higher_education_degree
+          template: multiple_options2
+          takeaway: >
+            Having a higher-education degree did not translate in meaningful
+            differences in yearly income.
+          isMainBlock: true
+          path: /demographics/higher_education_degree/
+          sectionId: user_info
+        - id: higher_education_degree_vs_salary
+          fieldId: higher_education_degree
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+          filtersState:
+            facet:
+              sectionId: user_info
+              id: yearly_salary
+          name: vs_salary
+          template: vs_salary
+          path: /demographics/higher_education_degree_vs_salary/
+          sectionId: user_info
+    - id: gender
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: gender
+          template: multiple_options2
+          takeaway: >
+            Gender did not correlate with income gaps, but there were notable
+            differences between countries. Canada and the U.S. led the
+            rankings in terms of diversity, while European countries had a
+            higher proportion of male respondents.
+          isMainBlock: true
+          path: /demographics/gender/
+          sectionId: user_info
+        - id: gender_vs_salary
+          fieldId: gender
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+          filtersState:
+            facet:
+              sectionId: user_info
+              id: yearly_salary
+          name: vs_salary
+          template: vs_salary
+          path: /demographics/gender_vs_salary/
+          sectionId: user_info
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
             limit: 15
+          name: multiple_options2
+          id: country_vs_gender
+          fieldId: country
+          tabId: tabs.by_country
+          template: multiple_options2
           filtersState:
             options:
               mode: facet
@@ -199,455 +477,2938 @@
             facet:
               sectionId: user_info
               id: gender
-
+          path: /demographics/country_vs_gender/
+          sectionId: user_info
     - id: race_ethnicity
-      template: multiple_options2_combined
-      description: >
-        The survey's non-white population tended to be younger and have less experience, confirming a trend first observed in other surveys. This might indicate that the next generation of front end developers will be more diverse than the current one.
       variants:
-        - template: vs_years_of_experience
-        - template: vs_age
-
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          queryOptions:
+            addBucketsEntities: true
+            subField: combined
+            addGroupedBuckets: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            limit: 20
+            mergeOtherBuckets: true
+          chartOptions:
+            limit: 10
+          name: multiple_options2_combined
+          id: race_ethnicity
+          template: multiple_options2_combined
+          takeaway: >
+            The survey's non-white population tended to be younger and have
+            less experience, confirming a trend first observed in other
+            surveys. This might indicate that the next generation of front end
+            developers will be more diverse than the current one.
+          isMainBlock: true
+          path: /demographics/race_ethnicity/
+          sectionId: user_info
+        - id: race_ethnicity_vs_years_of_experience
+          fieldId: race_ethnicity
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+          filtersState:
+            options:
+              mode: facet
+            facet:
+              sectionId: user_info
+              id: years_of_experience
+          name: vs_years_of_experience
+          template: vs_years_of_experience
+          path: /demographics/race_ethnicity_vs_years_of_experience/
+          sectionId: user_info
+        - id: race_ethnicity_vs_age
+          fieldId: race_ethnicity
+          blockType: HorizontalBarBlock2
+          hasData: true
+          parameters:
+            showNoAnswer: true
+          filtersState:
+            options:
+              mode: facet
+            facet:
+              sectionId: user_info
+              id: age
+          name: vs_age
+          template: vs_age
+          path: /demographics/race_ethnicity_vs_age/
+          sectionId: user_info
     - id: disability_status
-      template: multiple_options2_combined
-
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          queryOptions:
+            addBucketsEntities: true
+            subField: combined
+            addGroupedBuckets: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            limit: 20
+            mergeOtherBuckets: true
+          chartOptions:
+            limit: 10
+          name: multiple_options2_combined
+          id: disability_status
+          template: multiple_options2_combined
+          isMainBlock: true
+          path: /demographics/disability_status/
+          sectionId: user_info
     - id: other_surveys
-      template: multiple_options2_combined
-      parameters:
-        cutoff: 20
-
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          queryOptions:
+            addBucketsEntities: true
+            subField: combined
+            addGroupedBuckets: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            cutoff: 20
+            limit: 20
+            mergeOtherBuckets: true
+          chartOptions:
+            limit: 10
+          name: multiple_options2_combined
+          id: other_surveys
+          template: multiple_options2_combined
+          isMainBlock: true
+          path: /demographics/other_surveys/
+          sectionId: user_info
     - id: source
-      template: multiple_options2_freeform
-      parameters:
-        limit: 20
-
-    # - id: how_can_we_improve
-    #   template: multiple_options2_freeform
-
-    # - id: data_explorer
-    #   titleId: sections.data_explorer.title
-    #   descriptionId: sections.data_explorer.description
-    #   showTitle: true
-    #   chartOnly: true
-    #   wrapBlock: true
-    #   template: data_explorer
-    #   parameters: { showNoAnswer: true }
-    #   variables:
-    #       xAxis: user_info__yearly_salary
-    #       yAxis: user_info__years_of_experience
-
-    - items: [renderatl]
-      template: recommended_resources
-      titleId: blocks.recommended_events
-      variables:
-        isEvent: true
-
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          queryOptions:
+            addBucketsEntities: true
+            subField: freeform
+            addGroupedBuckets: true
+            addQuestionComments: false
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            limit: 20
+            mergeOtherBuckets: true
+          chartOptions:
+            limit: 10
+          name: multiple_options2_freeform
+          id: source
+          template: multiple_options2_freeform
+          isMainBlock: true
+          path: /demographics/source/
+          sectionId: user_info
+    - id: user_info_resources
+      variants:
+        - id: user_info_resources
+          titleId: blocks.recommended_events
+          blockType: RecommendedResourcesBlock
+          showDescription: false
+          disableExport: true
+          name: recommended_resources
+          items:
+            - renderatl
+          template: recommended_resources
+          variables:
+            isEvent: true
+          isMainBlock: true
+          path: /demographics/user_info_resources/
+          sectionId: user_info
+  is_hidden: false
+  children: []
+  pageIndex: 2
+  defaultBlockType: default
+  previous:
+    id: tshirt
+    path: /tshirt/
+    showTitle: false
+    pageIndex: 1
+    defaultBlockType: default
+  next:
+    id: features
+    path: /features/
+    descriptionId: sections.features.description.html2023
+    pageIndex: 3
+    defaultBlockType: default
 - id: features
-  path: /features
+  path: /features/
   descriptionId: sections.features.description.html2023
   blocks:
-    - template: page_introduction
-
+    - id: features_introduction
+      variants:
+        - id: features_introduction
+          blockType: PageIntroductionBlock
+          wrapBlock: false
+          disableExport: true
+          name: page_introduction
+          template: page_introduction
+          isMainBlock: true
+          path: /features/features_introduction/
+          sectionId: features
     - id: all_features
-      template: multi_items_experience
-      chartOptions:
-        limit: 10
-
-    # - id: features_overview
-    #   template: features_overview
-
-    # - id: knowledge_score
-    #   template: single_option
-
+      variants:
+        - id: all_features
+          blockType: MultiItemsExperienceBlock
+          hasSponsor: true
+          customizationModes:
+            - filters
+          queryOptions:
+            questionId: _items
+            addBuckets: true
+            addRatios: true
+            addQuestionEntity: true
+            allEditions: false
+          parameters:
+            cutoffPercent: 0
+            facetCutoffPercent: 0
+            limit: 0
+          query: |
+            surveys {
+              state_of_html {
+                html2023 {
+                  features {
+                    all_features: _items {
+                      id
+                      _metadata {
+                        sectionId
+                      }
+                      entity {
+                        name
+                        nameClean
+                        nameHtml
+                        alias
+                        entityType
+                        description
+                        descriptionClean
+                        descriptionHtml
+                        homepage {
+                          url
+                        }
+                        caniuse {
+                          name
+                          url
+                        }
+                        mdn {
+                          locale
+                          url
+                          title
+                          summary
+                        }
+                        example {
+                          label
+                          language
+                          code
+                          codeHighlighted
+                        }
+                        resources {
+                          title
+                          url
+                        }
+                        webFeature {
+                          id
+                          description_html
+                          group
+                          name
+                          spec
+                          status {
+                            baseline
+                            baseline_low_date
+                            support {
+                              chrome
+                              chrome_android
+                              edge
+                              firefox
+                              firefox_android
+                              safari
+                              safari_ios
+                            }
+                          }
+                        }
+                      }
+                      comments {
+                        currentEdition {
+                          count
+                        }
+                      }
+                      responses(facet: _sentiment) {
+                        currentEdition {
+                          ratios {
+                            awareness
+                            interest
+                            usage
+                            retention
+                            positivity
+                            positivityRelative
+                          }
+                          buckets {
+                            count
+                            id
+                            facetBuckets {
+                              count
+                              id
+                              percentageBucket
+                              percentageQuestion
+                              percentageSurvey
+                            }
+                            percentageQuestion
+                            percentageSurvey
+                          }
+                          completion {
+                            count
+                            percentageSurvey
+                            total
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          name: multi_items_experience
+          template: multi_items_experience
+          chartOptions:
+            limit: 10
+          isMainBlock: true
+          path: /features/all_features/
+          sectionId: features
     - id: reading_list
-      # template: reading_list
-      template: multiple_options2
-      parameters: { limit: 10 }
-      queryOptions:
-        sectionId: reading_list
-
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+            limit: 20
+          name: multiple_options2
+          id: reading_list
+          template: multiple_options2
+          queryOptions:
+            sectionId: reading_list
+            addQuestionComments: false
+          chartOptions:
+            dataFilters:
+              - removeOverLimit
+              - removeNoAnswer
+            limit: 10
+          isMainBlock: true
+          path: /features/reading_list/
+          sectionId: features
     - id: features_resources
-      items: [fm-intermediate-html-css]
-      template: recommended_resources
-
-  children:
+      variants:
+        - id: features_resources
+          titleId: blocks.recommended_resources
+          blockType: RecommendedResourcesBlock
+          showDescription: false
+          disableExport: true
+          name: recommended_resources
+          items:
+            - fm-intermediate-html-css
+          template: recommended_resources
+          isMainBlock: true
+          path: /features/features_resources/
+          sectionId: features
+  children: []
+  is_hidden: false
+  pageIndex: 3
+  defaultBlockType: default
+  previous:
+    id: user_info
+    titleId: sections.demographics.title
+    path: /demographics/
+    pageIndex: 2
+    defaultBlockType: default
+  next:
+    id: forms
+    path: /features/forms/
+    parent:
+      id: features
+      path: /features
+      descriptionId: sections.features.description.html2023
+      blocks:
+        - template: page_introduction
+        - id: all_features
+          template: multi_items_experience
+          chartOptions:
+            limit: 10
+        - id: reading_list
+          template: multiple_options2
+          parameters:
+            limit: 20
+          queryOptions:
+            sectionId: reading_list
+            addQuestionComments: false
+          chartOptions:
+            dataFilters:
+              - removeOverLimit
+              - removeNoAnswer
+            limit: 10
+        - id: features_resources
+          items:
+            - fm-intermediate-html-css
+          template: recommended_resources
+    pageIndex: 4
+    defaultBlockType: default
+- id: forms
+  path: /features/forms/
+  blocks:
     - id: forms
-      path: /forms
-      blocks:
+      variants:
         - id: forms
+          blockType: PageIntroductionBlock
+          wrapBlock: false
+          disableExport: true
+          name: page_introduction
           template: page_introduction
-
+          isMainBlock: true
+          path: /features/forms/forms/
+          sectionId: forms
+    - id: forms_features
+      variants:
         - id: forms_features
+          blockType: MultiItemsExperienceBlock
+          hasSponsor: true
+          customizationModes:
+            - filters
+          queryOptions:
+            questionId: _items
+            addBuckets: true
+            addRatios: true
+            addQuestionEntity: true
+            allEditions: false
+          parameters:
+            cutoffPercent: 0
+            facetCutoffPercent: 0
+            limit: 0
+          query: |
+            surveys {
+              state_of_html {
+                html2023 {
+                  forms {
+                    forms_features: _items {
+                      id
+                      _metadata {
+                        sectionId
+                      }
+                      entity {
+                        name
+                        nameClean
+                        nameHtml
+                        alias
+                        entityType
+                        description
+                        descriptionClean
+                        descriptionHtml
+                        homepage {
+                          url
+                        }
+                        caniuse {
+                          name
+                          url
+                        }
+                        mdn {
+                          locale
+                          url
+                          title
+                          summary
+                        }
+                        example {
+                          label
+                          language
+                          code
+                          codeHighlighted
+                        }
+                        resources {
+                          title
+                          url
+                        }
+                        webFeature {
+                          id
+                          description_html
+                          group
+                          name
+                          spec
+                          status {
+                            baseline
+                            baseline_low_date
+                            support {
+                              chrome
+                              chrome_android
+                              edge
+                              firefox
+                              firefox_android
+                              safari
+                              safari_ios
+                            }
+                          }
+                        }
+                      }
+                      comments {
+                        currentEdition {
+                          count
+                        }
+                      }
+                      responses(facet: _sentiment) {
+                        currentEdition {
+                          ratios {
+                            awareness
+                            interest
+                            usage
+                            retention
+                            positivity
+                            positivityRelative
+                          }
+                          buckets {
+                            count
+                            id
+                            facetBuckets {
+                              count
+                              id
+                              percentageBucket
+                              percentageQuestion
+                              percentageSurvey
+                            }
+                            percentageQuestion
+                            percentageSurvey
+                          }
+                          completion {
+                            count
+                            percentageSurvey
+                            total
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          name: multi_items_experience
           template: multi_items_experience
           i18nNamespace: features
-
-        - id: form_input_types
+          isMainBlock: true
+          path: /features/forms/forms_features/
+          sectionId: forms
+    - id: form_input_types
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: form_input_types
           template: multiple_options2
           i18nNamespace: features
-
-        - id: form_validation_features
+          isMainBlock: true
+          path: /features/forms/form_input_types/
+          sectionId: forms
+    - id: form_validation_features
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: form_validation_features
           template: multiple_options2
           i18nNamespace: features
-
-        - id: forms_pain_points
+          isMainBlock: true
+          path: /features/forms/form_validation_features/
+          sectionId: forms
+    - id: forms_pain_points
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          queryOptions:
+            addBucketsEntities: true
+            subField: freeform
+            addGroupedBuckets: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            limit: 10
+            mergeOtherBuckets: true
+          chartOptions:
+            limit: 10
+          name: multiple_options2_freeform
+          id: forms_pain_points
           template: multiple_options2_freeform
           i18nNamespace: features
-          parameters: { limit: 10 }
-
-        # - id: adam_argyle
-        #   template: picks
-        #   variables:
-        #       url: https://zagjs.com/
-
+          isMainBlock: true
+          path: /features/forms/forms_pain_points/
+          sectionId: forms
+    - id: forms_resources
+      variants:
         - id: forms_resources
-          items: [fm-web-development-v3]
+          titleId: blocks.recommended_resources
+          blockType: RecommendedResourcesBlock
+          showDescription: false
+          disableExport: true
+          name: recommended_resources
+          items:
+            - fm-web-development-v3
           template: recommended_resources
-
+          isMainBlock: true
+          path: /features/forms/forms_resources/
+          sectionId: forms
+  parent:
+    id: features
+    path: /features
+    descriptionId: sections.features.description.html2023
+    blocks:
+      - template: page_introduction
+      - id: all_features
+        template: multi_items_experience
+        chartOptions:
+          limit: 10
+      - id: reading_list
+        template: multiple_options2
+        parameters:
+          limit: 20
+        queryOptions:
+          sectionId: reading_list
+          addQuestionComments: false
+        chartOptions:
+          dataFilters:
+            - removeOverLimit
+            - removeNoAnswer
+          limit: 10
+      - id: features_resources
+        items:
+          - fm-intermediate-html-css
+        template: recommended_resources
+  is_hidden: false
+  children: []
+  pageIndex: 4
+  defaultBlockType: default
+  previous:
+    id: features
+    path: /features/
+    descriptionId: sections.features.description.html2023
+    pageIndex: 3
+    defaultBlockType: default
+  next:
+    id: interactivity
+    path: /features/interactivity/
+    parent:
+      id: features
+      path: /features
+      descriptionId: sections.features.description.html2023
+      blocks:
+        - template: page_introduction
+        - id: all_features
+          template: multi_items_experience
+          chartOptions:
+            limit: 10
+        - id: reading_list
+          template: multiple_options2
+          parameters:
+            limit: 20
+          queryOptions:
+            sectionId: reading_list
+            addQuestionComments: false
+          chartOptions:
+            dataFilters:
+              - removeOverLimit
+              - removeNoAnswer
+            limit: 10
+        - id: features_resources
+          items:
+            - fm-intermediate-html-css
+          template: recommended_resources
+    pageIndex: 5
+    defaultBlockType: default
+- id: interactivity
+  path: /features/interactivity/
+  blocks:
     - id: interactivity
-      path: /interactivity
-      blocks:
+      variants:
         - id: interactivity
+          blockType: PageIntroductionBlock
+          wrapBlock: false
+          disableExport: true
+          name: page_introduction
           template: page_introduction
-
+          isMainBlock: true
+          path: /features/interactivity/interactivity/
+          sectionId: interactivity
+    - id: interactivity_features
+      variants:
         - id: interactivity_features
+          blockType: MultiItemsExperienceBlock
+          hasSponsor: true
+          customizationModes:
+            - filters
+          queryOptions:
+            questionId: _items
+            addBuckets: true
+            addRatios: true
+            addQuestionEntity: true
+            allEditions: false
+          parameters:
+            cutoffPercent: 0
+            facetCutoffPercent: 0
+            limit: 0
+          query: |
+            surveys {
+              state_of_html {
+                html2023 {
+                  interactivity {
+                    interactivity_features: _items {
+                      id
+                      _metadata {
+                        sectionId
+                      }
+                      entity {
+                        name
+                        nameClean
+                        nameHtml
+                        alias
+                        entityType
+                        description
+                        descriptionClean
+                        descriptionHtml
+                        homepage {
+                          url
+                        }
+                        caniuse {
+                          name
+                          url
+                        }
+                        mdn {
+                          locale
+                          url
+                          title
+                          summary
+                        }
+                        example {
+                          label
+                          language
+                          code
+                          codeHighlighted
+                        }
+                        resources {
+                          title
+                          url
+                        }
+                        webFeature {
+                          id
+                          description_html
+                          group
+                          name
+                          spec
+                          status {
+                            baseline
+                            baseline_low_date
+                            support {
+                              chrome
+                              chrome_android
+                              edge
+                              firefox
+                              firefox_android
+                              safari
+                              safari_ios
+                            }
+                          }
+                        }
+                      }
+                      comments {
+                        currentEdition {
+                          count
+                        }
+                      }
+                      responses(facet: _sentiment) {
+                        currentEdition {
+                          ratios {
+                            awareness
+                            interest
+                            usage
+                            retention
+                            positivity
+                            positivityRelative
+                          }
+                          buckets {
+                            count
+                            id
+                            facetBuckets {
+                              count
+                              id
+                              percentageBucket
+                              percentageQuestion
+                              percentageSurvey
+                            }
+                            percentageQuestion
+                            percentageSurvey
+                          }
+                          completion {
+                            count
+                            percentageSurvey
+                            total
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          name: multi_items_experience
           template: multi_items_experience
           i18nNamespace: features
-
-        - id: dom_attribute_features
+          isMainBlock: true
+          path: /features/interactivity/interactivity_features/
+          sectionId: interactivity
+    - id: dom_attribute_features
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: dom_attribute_features
           template: multiple_options2
           i18nNamespace: features
-
-        - id: dom_html_features
+          isMainBlock: true
+          path: /features/interactivity/dom_attribute_features/
+          sectionId: interactivity
+    - id: dom_html_features
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: dom_html_features
           template: multiple_options2
           i18nNamespace: features
-
-        - id: dom_moving_element_features
+          isMainBlock: true
+          path: /features/interactivity/dom_html_features/
+          sectionId: interactivity
+    - id: dom_moving_element_features
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: dom_moving_element_features
           template: multiple_options2
           i18nNamespace: features
-
-        - id: interactivity_techniques
+          isMainBlock: true
+          path: /features/interactivity/dom_moving_element_features/
+          sectionId: interactivity
+    - id: interactivity_techniques
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: interactivity_techniques
           template: multiple_options2
           i18nNamespace: features
-
-        - id: interactivity_pain_points
+          isMainBlock: true
+          path: /features/interactivity/interactivity_techniques/
+          sectionId: interactivity
+    - id: interactivity_pain_points
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          queryOptions:
+            addBucketsEntities: true
+            subField: freeform
+            addGroupedBuckets: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            limit: 10
+            mergeOtherBuckets: true
+          chartOptions:
+            limit: 10
+          name: multiple_options2_freeform
+          id: interactivity_pain_points
           template: multiple_options2_freeform
           i18nNamespace: features
-          parameters: { limit: 10 }
-
+          isMainBlock: true
+          path: /features/interactivity/interactivity_pain_points/
+          sectionId: interactivity
+    - id: interactivity_resources
+      variants:
         - id: interactivity_resources
-          items: [fm-vanilla-js-apps]
+          titleId: blocks.recommended_resources
+          blockType: RecommendedResourcesBlock
+          showDescription: false
+          disableExport: true
+          name: recommended_resources
+          items:
+            - fm-vanilla-js-apps
           template: recommended_resources
-
+          isMainBlock: true
+          path: /features/interactivity/interactivity_resources/
+          sectionId: interactivity
+  parent:
+    id: features
+    path: /features
+    descriptionId: sections.features.description.html2023
+    blocks:
+      - template: page_introduction
+      - id: all_features
+        template: multi_items_experience
+        chartOptions:
+          limit: 10
+      - id: reading_list
+        template: multiple_options2
+        parameters:
+          limit: 20
+        queryOptions:
+          sectionId: reading_list
+          addQuestionComments: false
+        chartOptions:
+          dataFilters:
+            - removeOverLimit
+            - removeNoAnswer
+          limit: 10
+      - id: features_resources
+        items:
+          - fm-intermediate-html-css
+        template: recommended_resources
+  is_hidden: false
+  children: []
+  pageIndex: 5
+  defaultBlockType: default
+  previous:
+    id: forms
+    path: /features/forms/
+    parent:
+      id: features
+      path: /features
+      descriptionId: sections.features.description.html2023
+      blocks:
+        - template: page_introduction
+        - id: all_features
+          template: multi_items_experience
+          chartOptions:
+            limit: 10
+        - id: reading_list
+          template: multiple_options2
+          parameters:
+            limit: 20
+          queryOptions:
+            sectionId: reading_list
+            addQuestionComments: false
+          chartOptions:
+            dataFilters:
+              - removeOverLimit
+              - removeNoAnswer
+            limit: 10
+        - id: features_resources
+          items:
+            - fm-intermediate-html-css
+          template: recommended_resources
+    pageIndex: 4
+    defaultBlockType: default
+  next:
+    id: content
+    path: /features/content/
+    parent:
+      id: features
+      path: /features
+      descriptionId: sections.features.description.html2023
+      blocks:
+        - template: page_introduction
+        - id: all_features
+          template: multi_items_experience
+          chartOptions:
+            limit: 10
+        - id: reading_list
+          template: multiple_options2
+          parameters:
+            limit: 20
+          queryOptions:
+            sectionId: reading_list
+            addQuestionComments: false
+          chartOptions:
+            dataFilters:
+              - removeOverLimit
+              - removeNoAnswer
+            limit: 10
+        - id: features_resources
+          items:
+            - fm-intermediate-html-css
+          template: recommended_resources
+    pageIndex: 6
+    defaultBlockType: default
+- id: content
+  path: /features/content/
+  blocks:
     - id: content
-      path: /content
-      blocks:
+      variants:
         - id: content
+          blockType: PageIntroductionBlock
+          wrapBlock: false
+          disableExport: true
+          name: page_introduction
           template: page_introduction
-
+          variables:
+            contents: >
+              SVG implementations have been historically neglected by
+              browsers, despite extremely high usage on the Web (96% of
+              respondents having used the `<svg>` element). It is therefore no
+              surprise that SVG issues were the top [content-related pain
+              point](#content_pain_points).
+          isMainBlock: true
+          path: /features/content/content/
+          sectionId: content
+    - id: content_features
+      variants:
         - id: content_features
+          blockType: MultiItemsExperienceBlock
+          hasSponsor: true
+          customizationModes:
+            - filters
+          queryOptions:
+            questionId: _items
+            addBuckets: true
+            addRatios: true
+            addQuestionEntity: true
+            allEditions: false
+          parameters:
+            cutoffPercent: 0
+            facetCutoffPercent: 0
+            limit: 0
+          query: |
+            surveys {
+              state_of_html {
+                html2023 {
+                  content {
+                    content_features: _items {
+                      id
+                      _metadata {
+                        sectionId
+                      }
+                      entity {
+                        name
+                        nameClean
+                        nameHtml
+                        alias
+                        entityType
+                        description
+                        descriptionClean
+                        descriptionHtml
+                        homepage {
+                          url
+                        }
+                        caniuse {
+                          name
+                          url
+                        }
+                        mdn {
+                          locale
+                          url
+                          title
+                          summary
+                        }
+                        example {
+                          label
+                          language
+                          code
+                          codeHighlighted
+                        }
+                        resources {
+                          title
+                          url
+                        }
+                        webFeature {
+                          id
+                          description_html
+                          group
+                          name
+                          spec
+                          status {
+                            baseline
+                            baseline_low_date
+                            support {
+                              chrome
+                              chrome_android
+                              edge
+                              firefox
+                              firefox_android
+                              safari
+                              safari_ios
+                            }
+                          }
+                        }
+                      }
+                      comments {
+                        currentEdition {
+                          count
+                        }
+                      }
+                      responses(facet: _sentiment) {
+                        currentEdition {
+                          ratios {
+                            awareness
+                            interest
+                            usage
+                            retention
+                            positivity
+                            positivityRelative
+                          }
+                          buckets {
+                            count
+                            id
+                            facetBuckets {
+                              count
+                              id
+                              percentageBucket
+                              percentageQuestion
+                              percentageSurvey
+                            }
+                            percentageQuestion
+                            percentageSurvey
+                          }
+                          completion {
+                            count
+                            percentageSurvey
+                            total
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          name: multi_items_experience
           template: multi_items_experience
           i18nNamespace: features
-
-        - id: external_content_elements
+          isMainBlock: true
+          path: /features/content/content_features/
+          sectionId: content
+    - id: external_content_elements
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: external_content_elements
           template: multiple_options2
           i18nNamespace: features
-
-        - id: privacy_security_features
+          isMainBlock: true
+          path: /features/content/external_content_elements/
+          sectionId: content
+    - id: privacy_security_features
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: privacy_security_features
           template: multiple_options2
           i18nNamespace: features
-
-        - id: machine_readable_features
+          isMainBlock: true
+          path: /features/content/privacy_security_features/
+          sectionId: content
+    - id: machine_readable_features
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: machine_readable_features
           template: multiple_options2
           i18nNamespace: features
-
-        - id: i18n_features
+          isMainBlock: true
+          path: /features/content/machine_readable_features/
+          sectionId: content
+    - id: i18n_features
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: i18n_features
           template: multiple_options2
           i18nNamespace: features
-
-        - id: content_pain_points
+          isMainBlock: true
+          path: /features/content/i18n_features/
+          sectionId: content
+    - id: content_pain_points
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          queryOptions:
+            addBucketsEntities: true
+            subField: freeform
+            addGroupedBuckets: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            limit: 10
+            mergeOtherBuckets: true
+          chartOptions:
+            limit: 10
+          name: multiple_options2_freeform
+          id: content_pain_points
           template: multiple_options2_freeform
           i18nNamespace: features
-          parameters: { limit: 10 }
-
+          isMainBlock: true
+          path: /features/content/content_pain_points/
+          sectionId: content
+    - id: interactivity_resources
+      variants:
         - id: interactivity_resources
-          items: [fm-svg-essentials-animation]
+          titleId: blocks.recommended_resources
+          blockType: RecommendedResourcesBlock
+          showDescription: false
+          disableExport: true
+          name: recommended_resources
+          items:
+            - fm-svg-essentials-animation
           template: recommended_resources
-
+          isMainBlock: true
+          path: /features/content/interactivity_resources/
+          sectionId: content
+  parent:
+    id: features
+    path: /features
+    descriptionId: sections.features.description.html2023
+    blocks:
+      - template: page_introduction
+      - id: all_features
+        template: multi_items_experience
+        chartOptions:
+          limit: 10
+      - id: reading_list
+        template: multiple_options2
+        parameters:
+          limit: 20
+        queryOptions:
+          sectionId: reading_list
+          addQuestionComments: false
+        chartOptions:
+          dataFilters:
+            - removeOverLimit
+            - removeNoAnswer
+          limit: 10
+      - id: features_resources
+        items:
+          - fm-intermediate-html-css
+        template: recommended_resources
+  is_hidden: false
+  children: []
+  pageIndex: 6
+  defaultBlockType: default
+  previous:
+    id: interactivity
+    path: /features/interactivity/
+    parent:
+      id: features
+      path: /features
+      descriptionId: sections.features.description.html2023
+      blocks:
+        - template: page_introduction
+        - id: all_features
+          template: multi_items_experience
+          chartOptions:
+            limit: 10
+        - id: reading_list
+          template: multiple_options2
+          parameters:
+            limit: 20
+          queryOptions:
+            sectionId: reading_list
+            addQuestionComments: false
+          chartOptions:
+            dataFilters:
+              - removeOverLimit
+              - removeNoAnswer
+            limit: 10
+        - id: features_resources
+          items:
+            - fm-intermediate-html-css
+          template: recommended_resources
+    pageIndex: 5
+    defaultBlockType: default
+  next:
+    id: web_components
+    path: /features/web_components/
+    parent:
+      id: features
+      path: /features
+      descriptionId: sections.features.description.html2023
+      blocks:
+        - template: page_introduction
+        - id: all_features
+          template: multi_items_experience
+          chartOptions:
+            limit: 10
+        - id: reading_list
+          template: multiple_options2
+          parameters:
+            limit: 20
+          queryOptions:
+            sectionId: reading_list
+            addQuestionComments: false
+          chartOptions:
+            dataFilters:
+              - removeOverLimit
+              - removeNoAnswer
+            limit: 10
+        - id: features_resources
+          items:
+            - fm-intermediate-html-css
+          template: recommended_resources
+    pageIndex: 7
+    defaultBlockType: default
+- id: web_components
+  path: /features/web_components/
+  blocks:
     - id: web_components
-      path: /web_components
-      blocks:
+      variants:
         - id: web_components
+          blockType: PageIntroductionBlock
+          wrapBlock: false
+          disableExport: true
+          name: page_introduction
           template: page_introduction
+          variables:
+            contents: >
+              Despite JavaScript frameworks being used more widely than ever,
+              there is still a need for native solutions. Yet Web Components
+              currently fall short of addressing developer pain points
+              effectively, with Web Components APIs and especially Shadow DOM
+              dominating the top 10 of worst experiences across all
+              HTML-related technologies. 
 
+
+              This indicates that there is still significant work to be done
+              before they can truly enhance HTML's extensibility and become a
+              strong alternative to framework components. However, the ongoing
+              activity in this area leaves me hopeful.
+          isMainBlock: true
+          path: /features/web_components/web_components/
+          sectionId: web_components
+    - id: web_components_main_features
+      variants:
         - id: web_components_main_features
+          blockType: MultiItemsExperienceBlock
+          hasSponsor: true
+          customizationModes:
+            - filters
+          queryOptions:
+            questionId: _items
+            addBuckets: true
+            addRatios: true
+            addQuestionEntity: true
+            allEditions: false
+          parameters:
+            cutoffPercent: 0
+            facetCutoffPercent: 0
+            limit: 0
+          query: |
+            surveys {
+              state_of_html {
+                html2023 {
+                  web_components {
+                    web_components_main_features: _items {
+                      id
+                      _metadata {
+                        sectionId
+                      }
+                      entity {
+                        name
+                        nameClean
+                        nameHtml
+                        alias
+                        entityType
+                        description
+                        descriptionClean
+                        descriptionHtml
+                        homepage {
+                          url
+                        }
+                        caniuse {
+                          name
+                          url
+                        }
+                        mdn {
+                          locale
+                          url
+                          title
+                          summary
+                        }
+                        example {
+                          label
+                          language
+                          code
+                          codeHighlighted
+                        }
+                        resources {
+                          title
+                          url
+                        }
+                        webFeature {
+                          id
+                          description_html
+                          group
+                          name
+                          spec
+                          status {
+                            baseline
+                            baseline_low_date
+                            support {
+                              chrome
+                              chrome_android
+                              edge
+                              firefox
+                              firefox_android
+                              safari
+                              safari_ios
+                            }
+                          }
+                        }
+                      }
+                      comments {
+                        currentEdition {
+                          count
+                        }
+                      }
+                      responses(facet: _sentiment) {
+                        currentEdition {
+                          ratios {
+                            awareness
+                            interest
+                            usage
+                            retention
+                            positivity
+                            positivityRelative
+                          }
+                          buckets {
+                            count
+                            id
+                            facetBuckets {
+                              count
+                              id
+                              percentageBucket
+                              percentageQuestion
+                              percentageSurvey
+                            }
+                            percentageQuestion
+                            percentageSurvey
+                          }
+                          completion {
+                            count
+                            percentageSurvey
+                            total
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          name: multi_items_experience
           template: multi_items_experience
           i18nNamespace: features
-
-        - id: web_components_features
+          isMainBlock: true
+          path: /features/web_components/web_components_main_features/
+          sectionId: web_components
+    - id: web_components_features
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: web_components_features
           template: multiple_options2
           i18nNamespace: features
-
-        - id: web_components_libraries
-          template: multiple_options2
+          isMainBlock: true
+          path: /features/web_components/web_components_features/
+          sectionId: web_components
+    - id: web_components_libraries
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          queryOptions:
+            addBucketsEntities: true
+            subField: combined
+            addGroupedBuckets: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            limit: 20
+            mergeOtherBuckets: true
+          chartOptions:
+            limit: 10
+          name: multiple_options2_combined
+          id: web_components_libraries
+          template: multiple_options2_combined
           i18nNamespace: features
-
-        - id: using_web_components_pain_points
+          isMainBlock: true
+          path: /features/web_components/web_components_libraries/
+          sectionId: web_components
+    - id: using_web_components_pain_points
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          queryOptions:
+            addBucketsEntities: true
+            subField: freeform
+            addGroupedBuckets: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            limit: 10
+            mergeOtherBuckets: true
+          chartOptions:
+            limit: 10
+          name: multiple_options2_freeform
+          id: using_web_components_pain_points
           template: multiple_options2_freeform
           i18nNamespace: features
-          parameters: { limit: 10 }
-
-        - id: making_web_components_pain_points
+          isMainBlock: true
+          path: /features/web_components/using_web_components_pain_points/
+          sectionId: web_components
+    - id: making_web_components_pain_points
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          queryOptions:
+            addBucketsEntities: true
+            subField: freeform
+            addGroupedBuckets: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            limit: 10
+            mergeOtherBuckets: true
+          chartOptions:
+            limit: 10
+          name: multiple_options2_freeform
+          id: making_web_components_pain_points
           template: multiple_options2_freeform
           i18nNamespace: features
-          parameters: { limit: 10 }
-
+          isMainBlock: true
+          path: /features/web_components/making_web_components_pain_points/
+          sectionId: web_components
+    - id: web_components_resources
+      variants:
         - id: web_components_resources
-          items: [fm-web-components]
+          titleId: blocks.recommended_resources
+          blockType: RecommendedResourcesBlock
+          showDescription: false
+          disableExport: true
+          name: recommended_resources
+          items:
+            - fm-web-components
           template: recommended_resources
-
+          isMainBlock: true
+          path: /features/web_components/web_components_resources/
+          sectionId: web_components
+  parent:
+    id: features
+    path: /features
+    descriptionId: sections.features.description.html2023
+    blocks:
+      - template: page_introduction
+      - id: all_features
+        template: multi_items_experience
+        chartOptions:
+          limit: 10
+      - id: reading_list
+        template: multiple_options2
+        parameters:
+          limit: 20
+        queryOptions:
+          sectionId: reading_list
+          addQuestionComments: false
+        chartOptions:
+          dataFilters:
+            - removeOverLimit
+            - removeNoAnswer
+          limit: 10
+      - id: features_resources
+        items:
+          - fm-intermediate-html-css
+        template: recommended_resources
+  is_hidden: false
+  children: []
+  pageIndex: 7
+  defaultBlockType: default
+  previous:
+    id: content
+    path: /features/content/
+    parent:
+      id: features
+      path: /features
+      descriptionId: sections.features.description.html2023
+      blocks:
+        - template: page_introduction
+        - id: all_features
+          template: multi_items_experience
+          chartOptions:
+            limit: 10
+        - id: reading_list
+          template: multiple_options2
+          parameters:
+            limit: 20
+          queryOptions:
+            sectionId: reading_list
+            addQuestionComments: false
+          chartOptions:
+            dataFilters:
+              - removeOverLimit
+              - removeNoAnswer
+            limit: 10
+        - id: features_resources
+          items:
+            - fm-intermediate-html-css
+          template: recommended_resources
+    pageIndex: 6
+    defaultBlockType: default
+  next:
+    id: accessibility
+    path: /features/accessibility/
+    parent:
+      id: features
+      path: /features
+      descriptionId: sections.features.description.html2023
+      blocks:
+        - template: page_introduction
+        - id: all_features
+          template: multi_items_experience
+          chartOptions:
+            limit: 10
+        - id: reading_list
+          template: multiple_options2
+          parameters:
+            limit: 20
+          queryOptions:
+            sectionId: reading_list
+            addQuestionComments: false
+          chartOptions:
+            dataFilters:
+              - removeOverLimit
+              - removeNoAnswer
+            limit: 10
+        - id: features_resources
+          items:
+            - fm-intermediate-html-css
+          template: recommended_resources
+    pageIndex: 8
+    defaultBlockType: default
+- id: accessibility
+  path: /features/accessibility/
+  blocks:
     - id: accessibility
-      path: /accessibility
-      blocks:
+      variants:
         - id: accessibility
+          blockType: PageIntroductionBlock
+          wrapBlock: false
+          disableExport: true
+          name: page_introduction
           template: page_introduction
-
+          variables:
+            contents: >
+              This was our first survey to study accessibility in such depth.
+              What we found is that while respondents clearly care about
+              accessibility, they struggle to implement it in practice as they
+              lack technical, educational, and organizational support.
+          isMainBlock: true
+          path: /features/accessibility/accessibility/
+          sectionId: accessibility
+    - id: accessibility_features
+      variants:
         - id: accessibility_features
+          blockType: MultiItemsExperienceBlock
+          hasSponsor: true
+          customizationModes:
+            - filters
+          queryOptions:
+            questionId: _items
+            addBuckets: true
+            addRatios: true
+            addQuestionEntity: true
+            allEditions: false
+          parameters:
+            cutoffPercent: 0
+            facetCutoffPercent: 0
+            limit: 0
+          query: |
+            surveys {
+              state_of_html {
+                html2023 {
+                  accessibility {
+                    accessibility_features: _items {
+                      id
+                      _metadata {
+                        sectionId
+                      }
+                      entity {
+                        name
+                        nameClean
+                        nameHtml
+                        alias
+                        entityType
+                        description
+                        descriptionClean
+                        descriptionHtml
+                        homepage {
+                          url
+                        }
+                        caniuse {
+                          name
+                          url
+                        }
+                        mdn {
+                          locale
+                          url
+                          title
+                          summary
+                        }
+                        example {
+                          label
+                          language
+                          code
+                          codeHighlighted
+                        }
+                        resources {
+                          title
+                          url
+                        }
+                        webFeature {
+                          id
+                          description_html
+                          group
+                          name
+                          spec
+                          status {
+                            baseline
+                            baseline_low_date
+                            support {
+                              chrome
+                              chrome_android
+                              edge
+                              firefox
+                              firefox_android
+                              safari
+                              safari_ios
+                            }
+                          }
+                        }
+                      }
+                      comments {
+                        currentEdition {
+                          count
+                        }
+                      }
+                      responses(facet: _sentiment) {
+                        currentEdition {
+                          ratios {
+                            awareness
+                            interest
+                            usage
+                            retention
+                            positivity
+                            positivityRelative
+                          }
+                          buckets {
+                            count
+                            id
+                            facetBuckets {
+                              count
+                              id
+                              percentageBucket
+                              percentageQuestion
+                              percentageSurvey
+                            }
+                            percentageQuestion
+                            percentageSurvey
+                          }
+                          completion {
+                            count
+                            percentageSurvey
+                            total
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          name: multi_items_experience
           template: multi_items_experience
           i18nNamespace: features
-
-        - id: accessibility_disabilities
-          template: multiple_options2
-          i18nNamespace: features
-
-        - id: accessibility_techniques
-          template: multiple_options2
-          i18nNamespace: features
-
-        - id: accessibility_screenreaders
-          template: multiple_options2
-          i18nNamespace: features
-
-        - id: accessibility_tools
-          template: multiple_options2
-          i18nNamespace: features
-
-        - id: accessibility_pain_points
+          isMainBlock: true
+          path: /features/accessibility/accessibility_features/
+          sectionId: accessibility
+    - id: accessibility_disabilities
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          queryOptions:
+            addBucketsEntities: true
+            subField: combined
+            addGroupedBuckets: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            limit: 20
+            mergeOtherBuckets: true
+          chartOptions:
+            limit: 10
+          name: multiple_options2_combined
+          id: accessibility_disabilities
+          titleId: features.accessibility_disabilities
+          questionKey: features.accessibility_disabilities.question
+          template: multiple_options2_combined
+          isMainBlock: true
+          path: /features/accessibility/accessibility_disabilities/
+          sectionId: accessibility
+    - id: accessibility_techniques
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          queryOptions:
+            addBucketsEntities: true
+            subField: combined
+            addGroupedBuckets: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            limit: 20
+            mergeOtherBuckets: true
+          chartOptions:
+            limit: 10
+          name: multiple_options2_combined
+          id: accessibility_techniques
+          titleId: features.accessibility_techniques
+          questionKey: features.accessibility_techniques.question
+          template: multiple_options2_combined
+          isMainBlock: true
+          path: /features/accessibility/accessibility_techniques/
+          sectionId: accessibility
+    - id: accessibility_screenreaders
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          queryOptions:
+            addBucketsEntities: true
+            subField: combined
+            addGroupedBuckets: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            limit: 20
+            mergeOtherBuckets: true
+          chartOptions:
+            limit: 10
+          name: multiple_options2_combined
+          id: accessibility_screenreaders
+          titleId: features.accessibility_screenreaders
+          questionKey: features.accessibility_screenreaders.question
+          template: multiple_options2_combined
+          isMainBlock: true
+          path: /features/accessibility/accessibility_screenreaders/
+          sectionId: accessibility
+    - id: accessibility_tools
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          queryOptions:
+            addBucketsEntities: true
+            subField: combined
+            addGroupedBuckets: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            limit: 20
+            mergeOtherBuckets: true
+          chartOptions:
+            limit: 10
+          name: multiple_options2_combined
+          id: accessibility_tools
+          titleId: features.accessibility_tools
+          questionKey: features.accessibility_tools.question
+          template: multiple_options2_combined
+          isMainBlock: true
+          path: /features/accessibility/accessibility_tools/
+          sectionId: accessibility
+    - id: accessibility_pain_points
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          queryOptions:
+            addBucketsEntities: true
+            subField: freeform
+            addGroupedBuckets: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            limit: 10
+            mergeOtherBuckets: true
+          chartOptions:
+            limit: 10
+          name: multiple_options2_freeform
+          id: accessibility_pain_points
+          titleId: features.accessibility_pain_points
+          questionKey: features.accessibility_pain_points.question
           template: multiple_options2_freeform
-          i18nNamespace: features
-          parameters: { limit: 10 }
-
+          isMainBlock: true
+          path: /features/accessibility/accessibility_pain_points/
+          sectionId: accessibility
+    - id: accessibility_resources
+      variants:
         - id: accessibility_resources
-          items: [fm-react-accessibility]
+          titleId: blocks.recommended_resources
+          blockType: RecommendedResourcesBlock
+          showDescription: false
+          disableExport: true
+          name: recommended_resources
+          items:
+            - fm-react-accessibility
           template: recommended_resources
-
-    - id: mobile_web_apps
-      path: /mobile-web-apps
+          isMainBlock: true
+          path: /features/accessibility/accessibility_resources/
+          sectionId: accessibility
+  parent:
+    id: features
+    path: /features
+    descriptionId: sections.features.description.html2023
+    blocks:
+      - template: page_introduction
+      - id: all_features
+        template: multi_items_experience
+        chartOptions:
+          limit: 10
+      - id: reading_list
+        template: multiple_options2
+        parameters:
+          limit: 20
+        queryOptions:
+          sectionId: reading_list
+          addQuestionComments: false
+        chartOptions:
+          dataFilters:
+            - removeOverLimit
+            - removeNoAnswer
+          limit: 10
+      - id: features_resources
+        items:
+          - fm-intermediate-html-css
+        template: recommended_resources
+  is_hidden: false
+  children: []
+  pageIndex: 8
+  defaultBlockType: default
+  previous:
+    id: web_components
+    path: /features/web_components/
+    parent:
+      id: features
+      path: /features
+      descriptionId: sections.features.description.html2023
       blocks:
+        - template: page_introduction
+        - id: all_features
+          template: multi_items_experience
+          chartOptions:
+            limit: 10
+        - id: reading_list
+          template: multiple_options2
+          parameters:
+            limit: 20
+          queryOptions:
+            sectionId: reading_list
+            addQuestionComments: false
+          chartOptions:
+            dataFilters:
+              - removeOverLimit
+              - removeNoAnswer
+            limit: 10
+        - id: features_resources
+          items:
+            - fm-intermediate-html-css
+          template: recommended_resources
+    pageIndex: 7
+    defaultBlockType: default
+  next:
+    id: mobile_web_apps
+    path: /features/mobile-web-apps/
+    parent:
+      id: features
+      path: /features
+      descriptionId: sections.features.description.html2023
+      blocks:
+        - template: page_introduction
+        - id: all_features
+          template: multi_items_experience
+          chartOptions:
+            limit: 10
+        - id: reading_list
+          template: multiple_options2
+          parameters:
+            limit: 20
+          queryOptions:
+            sectionId: reading_list
+            addQuestionComments: false
+          chartOptions:
+            dataFilters:
+              - removeOverLimit
+              - removeNoAnswer
+            limit: 10
+        - id: features_resources
+          items:
+            - fm-intermediate-html-css
+          template: recommended_resources
+    pageIndex: 9
+    defaultBlockType: default
+- id: mobile_web_apps
+  path: /features/mobile-web-apps/
+  blocks:
+    - id: mobile_web_apps
+      variants:
         - id: mobile_web_apps
+          blockType: PageIntroductionBlock
+          wrapBlock: false
+          disableExport: true
+          name: page_introduction
           template: page_introduction
-
+          variables:
+            contents: >
+              Native-like web apps are another area where respondent interest
+              is high, but the platform fails to deliver. The primary pain
+              point here is interoperability, and while there are promising
+              initiatives such as [Interop
+              2024](https://web.dev/blog/interop-2024), the mobile landscape
+              especially remains very fragmented.
+          isMainBlock: true
+          path: /features/mobile-web-apps/mobile_web_apps/
+          sectionId: mobile_web_apps
+    - id: mobile_web_apps_features
+      variants:
         - id: mobile_web_apps_features
+          blockType: MultiItemsExperienceBlock
+          hasSponsor: true
+          customizationModes:
+            - filters
+          queryOptions:
+            questionId: _items
+            addBuckets: true
+            addRatios: true
+            addQuestionEntity: true
+            allEditions: false
+          parameters:
+            cutoffPercent: 0
+            facetCutoffPercent: 0
+            limit: 0
+          query: |
+            surveys {
+              state_of_html {
+                html2023 {
+                  mobile_web_apps {
+                    mobile_web_apps_features: _items {
+                      id
+                      _metadata {
+                        sectionId
+                      }
+                      entity {
+                        name
+                        nameClean
+                        nameHtml
+                        alias
+                        entityType
+                        description
+                        descriptionClean
+                        descriptionHtml
+                        homepage {
+                          url
+                        }
+                        caniuse {
+                          name
+                          url
+                        }
+                        mdn {
+                          locale
+                          url
+                          title
+                          summary
+                        }
+                        example {
+                          label
+                          language
+                          code
+                          codeHighlighted
+                        }
+                        resources {
+                          title
+                          url
+                        }
+                        webFeature {
+                          id
+                          description_html
+                          group
+                          name
+                          spec
+                          status {
+                            baseline
+                            baseline_low_date
+                            support {
+                              chrome
+                              chrome_android
+                              edge
+                              firefox
+                              firefox_android
+                              safari
+                              safari_ios
+                            }
+                          }
+                        }
+                      }
+                      comments {
+                        currentEdition {
+                          count
+                        }
+                      }
+                      responses(facet: _sentiment) {
+                        currentEdition {
+                          ratios {
+                            awareness
+                            interest
+                            usage
+                            retention
+                            positivity
+                            positivityRelative
+                          }
+                          buckets {
+                            count
+                            id
+                            facetBuckets {
+                              count
+                              id
+                              percentageBucket
+                              percentageQuestion
+                              percentageSurvey
+                            }
+                            percentageQuestion
+                            percentageSurvey
+                          }
+                          completion {
+                            count
+                            percentageSurvey
+                            total
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          name: multi_items_experience
           template: multi_items_experience
           i18nNamespace: features
-
-        - id: native_apps_tools
+          isMainBlock: true
+          path: /features/mobile-web-apps/mobile_web_apps_features/
+          sectionId: mobile_web_apps
+    - id: native_apps_tools
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: native_apps_tools
+          titleId: features.native_apps_tools
+          questionKey: features.native_apps_tools.question
+          template: multiple_options2
+          isMainBlock: true
+          path: /features/mobile-web-apps/native_apps_tools/
+          sectionId: mobile_web_apps
+    - id: local_storage_features
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: local_storage_features
           template: multiple_options2
           i18nNamespace: features
-
-        - id: local_storage_features
+          isMainBlock: true
+          path: /features/mobile-web-apps/local_storage_features/
+          sectionId: mobile_web_apps
+    - id: pwa_features
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: pwa_features
           template: multiple_options2
           i18nNamespace: features
-
-        - id: pwa_features
-          template: multiple_options2
-          i18nNamespace: features
-
-        - id: mobile_web_apps_pain_points
+          isMainBlock: true
+          path: /features/mobile-web-apps/pwa_features/
+          sectionId: mobile_web_apps
+    - id: mobile_web_apps_pain_points
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          queryOptions:
+            addBucketsEntities: true
+            subField: freeform
+            addGroupedBuckets: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            limit: 10
+            mergeOtherBuckets: true
+          chartOptions:
+            limit: 10
+          name: multiple_options2_freeform
+          id: mobile_web_apps_pain_points
           template: multiple_options2_freeform
           i18nNamespace: features
-          parameters: { limit: 10 }
-
+          isMainBlock: true
+          path: /features/mobile-web-apps/mobile_web_apps_pain_points/
+          sectionId: mobile_web_apps
+    - id: mobile_web_apps_resources
+      variants:
         - id: mobile_web_apps_resources
-          items: [fm-pwas]
+          titleId: blocks.recommended_resources
+          blockType: RecommendedResourcesBlock
+          showDescription: false
+          disableExport: true
+          name: recommended_resources
+          items:
+            - fm-pwas
           template: recommended_resources
-
+          isMainBlock: true
+          path: /features/mobile-web-apps/mobile_web_apps_resources/
+          sectionId: mobile_web_apps
+  parent:
+    id: features
+    path: /features
+    descriptionId: sections.features.description.html2023
+    blocks:
+      - template: page_introduction
+      - id: all_features
+        template: multi_items_experience
+        chartOptions:
+          limit: 10
+      - id: reading_list
+        template: multiple_options2
+        parameters:
+          limit: 20
+        queryOptions:
+          sectionId: reading_list
+          addQuestionComments: false
+        chartOptions:
+          dataFilters:
+            - removeOverLimit
+            - removeNoAnswer
+          limit: 10
+      - id: features_resources
+        items:
+          - fm-intermediate-html-css
+        template: recommended_resources
+  is_hidden: false
+  children: []
+  pageIndex: 9
+  defaultBlockType: default
+  previous:
+    id: accessibility
+    path: /features/accessibility/
+    parent:
+      id: features
+      path: /features
+      descriptionId: sections.features.description.html2023
+      blocks:
+        - template: page_introduction
+        - id: all_features
+          template: multi_items_experience
+          chartOptions:
+            limit: 10
+        - id: reading_list
+          template: multiple_options2
+          parameters:
+            limit: 20
+          queryOptions:
+            sectionId: reading_list
+            addQuestionComments: false
+          chartOptions:
+            dataFilters:
+              - removeOverLimit
+              - removeNoAnswer
+            limit: 10
+        - id: features_resources
+          items:
+            - fm-intermediate-html-css
+          template: recommended_resources
+    pageIndex: 8
+    defaultBlockType: default
+  next:
+    id: other_tools
+    path: /other_tools/
+    pageIndex: 10
+    defaultBlockType: default
 - id: other_tools
-  path: /other_tools
+  path: /other_tools/
   blocks:
-    - template: page_introduction
-
+    - id: other_tools_introduction
+      variants:
+        - id: other_tools_introduction
+          blockType: PageIntroductionBlock
+          wrapBlock: false
+          disableExport: true
+          name: page_introduction
+          template: page_introduction
+          isMainBlock: true
+          path: /other_tools/other_tools_introduction/
+          sectionId: other_tools
     - id: site_generators
-      template: multiple_options2_combined
-
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          queryOptions:
+            addBucketsEntities: true
+            subField: combined
+            addGroupedBuckets: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            limit: 20
+            mergeOtherBuckets: true
+          chartOptions:
+            limit: 10
+          name: multiple_options2_combined
+          id: site_generators
+          template: multiple_options2_combined
+          isMainBlock: true
+          path: /other_tools/site_generators/
+          sectionId: other_tools
     - id: ai_tools
-      template: multiple_options2_combined
-
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          queryOptions:
+            addBucketsEntities: true
+            subField: combined
+            addGroupedBuckets: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            limit: 20
+            mergeOtherBuckets: true
+          chartOptions:
+            limit: 10
+          name: multiple_options2_combined
+          id: ai_tools
+          template: multiple_options2_combined
+          isMainBlock: true
+          path: /other_tools/ai_tools/
+          sectionId: other_tools
     - id: blast_from_the_past
-      template: multiple_options2
-
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: blast_from_the_past
+          template: multiple_options2
+          isMainBlock: true
+          path: /other_tools/blast_from_the_past/
+          sectionId: other_tools
     - id: other_tools_resources
-      items: [fm-next-js-v3]
-      template: recommended_resources
-
+      variants:
+        - id: other_tools_resources
+          titleId: blocks.recommended_resources
+          blockType: RecommendedResourcesBlock
+          showDescription: false
+          disableExport: true
+          name: recommended_resources
+          items:
+            - fm-next-js-v3
+          template: recommended_resources
+          isMainBlock: true
+          path: /other_tools/other_tools_resources/
+          sectionId: other_tools
+  is_hidden: false
+  children: []
+  pageIndex: 10
+  defaultBlockType: default
+  previous:
+    id: mobile_web_apps
+    path: /features/mobile-web-apps/
+    parent:
+      id: features
+      path: /features
+      descriptionId: sections.features.description.html2023
+      blocks:
+        - template: page_introduction
+        - id: all_features
+          template: multi_items_experience
+          chartOptions:
+            limit: 10
+        - id: reading_list
+          template: multiple_options2
+          parameters:
+            limit: 20
+          queryOptions:
+            sectionId: reading_list
+            addQuestionComments: false
+          chartOptions:
+            dataFilters:
+              - removeOverLimit
+              - removeNoAnswer
+            limit: 10
+        - id: features_resources
+          items:
+            - fm-intermediate-html-css
+          template: recommended_resources
+    pageIndex: 9
+    defaultBlockType: default
+  next:
+    id: usage
+    path: /usage/
+    pageIndex: 11
+    defaultBlockType: default
 - id: usage
-  path: /usage
+  path: /usage/
   blocks:
-    - template: page_introduction
-
+    - id: usage_introduction
+      variants:
+        - id: usage_introduction
+          blockType: PageIntroductionBlock
+          wrapBlock: false
+          disableExport: true
+          name: page_introduction
+          template: page_introduction
+          isMainBlock: true
+          path: /usage/usage_introduction/
+          sectionId: usage
     - id: html_interoperability_features
-      template: multiple_options2_freeform
-      parameters: { limit: 20 }
-
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          queryOptions:
+            addBucketsEntities: true
+            subField: freeform
+            addGroupedBuckets: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            limit: 20
+            mergeOtherBuckets: true
+          chartOptions:
+            limit: 10
+          name: multiple_options2_freeform
+          id: html_interoperability_features
+          template: multiple_options2_freeform
+          isMainBlock: true
+          path: /usage/html_interoperability_features/
+          sectionId: usage
     - id: html_functionality_features
-      template: multiple_options2_freeform
-      parameters: { limit: 20 }
-
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          queryOptions:
+            addBucketsEntities: true
+            subField: freeform
+            addGroupedBuckets: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            limit: 20
+            mergeOtherBuckets: true
+          chartOptions:
+            limit: 10
+          name: multiple_options2_freeform
+          id: html_functionality_features
+          template: multiple_options2_freeform
+          isMainBlock: true
+          path: /usage/html_functionality_features/
+          sectionId: usage
     - id: html_missing_elements
-      template: multiple_options2_combined
-
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          queryOptions:
+            addBucketsEntities: true
+            subField: combined
+            addGroupedBuckets: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            cutoff: 25
+            limit: 20
+            mergeOtherBuckets: true
+            cutoffPercent: 0
+          chartOptions:
+            limit: 10
+          name: multiple_options2_combined
+          id: html_missing_elements
+          template: multiple_options2_combined
+          isMainBlock: true
+          path: /usage/html_missing_elements/
+          sectionId: usage
     - id: tools_for_other_developers
-      template: multiple_options2
-
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: tools_for_other_developers
+          template: multiple_options2
+          isMainBlock: true
+          path: /usage/tools_for_other_developers/
+          sectionId: usage
     - id: html_css_js_balance
-      template: multiple_options2
-
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          translateData: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            mergeOtherBuckets: false
+            cutoff: 10
+          name: multiple_options2
+          id: html_css_js_balance
+          template: multiple_options2
+          isMainBlock: true
+          path: /usage/html_css_js_balance/
+          sectionId: usage
     - id: what_do_you_use_html_for
-      template: multiple_options2_combined
-
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          queryOptions:
+            addBucketsEntities: true
+            subField: combined
+            addGroupedBuckets: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            limit: 20
+            mergeOtherBuckets: true
+          chartOptions:
+            limit: 10
+          name: multiple_options2_combined
+          id: what_do_you_use_html_for
+          template: multiple_options2_combined
+          isMainBlock: true
+          path: /usage/what_do_you_use_html_for/
+          sectionId: usage
     - id: industry_sector
-      template: multiple_options2_combined
-      chartOptions:
-        limit: 10
-
+      variants:
+        - blockType: HorizontalBarBlock2
+          hasSponsor: true
+          hasData: true
+          queryOptions:
+            addBucketsEntities: true
+            subField: combined
+            addGroupedBuckets: true
+          customizationModes:
+            - filters
+            - facets
+          parameters:
+            showNoAnswer: true
+            cutoff: 10
+            limit: 20
+            mergeOtherBuckets: true
+          chartOptions:
+            limit: 10
+          name: multiple_options2_combined
+          id: industry_sector
+          template: multiple_options2_combined
+          isMainBlock: true
+          path: /usage/industry_sector/
+          sectionId: usage
     - id: sharing_hint
-      template: hint
-
+      variants:
+        - blockType: HintBlock
+          wrapBlock: false
+          disableExport: true
+          name: hint
+          id: sharing_hint
+          template: hint
+          isMainBlock: true
+          path: /usage/sharing_hint/
+          sectionId: usage
     - id: usage_resources
-      items: [fm-homepage]
-      template: recommended_resources
-
-# - id: awards
-#   path: /awards
-#   blocks:
-#       - template: page_introduction
-
-#       - id: awards
-#         template: awards
-#         variables:
-#             entities: '"has_selector","at_container","viewport_percentage_length_units","subgrid","at_container","css_nesting","open_props","css_modules","uno_css","panda_css","material_ui","yandex"'
-#         awards:
-#             - id: feature_adoption_delta_award
-#               template: award
-#               awards:
-#                   - id: has_selector
-#                     value: '+16.4%'
-#                   - id: at_container
-#                     value: '+14.1%'
-#                   - id: viewport_percentage_length_units
-#                     value: '+13%'
-
-#             - id: most_commented_feature_award
-#               template: award
-#               awards:
-#                   - id: subgrid
-#                     value: 531
-#                   - id: at_container
-#                     value: 78
-#                   - id: css_nesting
-#                     value: 65
-
-#             # - id: tool_usage_delta_award
-#             #   template: award
-#             #   awards:
-#             #     - id: tailwind_css
-#             #       value: "+17.8%"
-#             #     - id: atomic_css
-#             #       value: "+10.8%"
-#             #     - id: css_modules
-#             #       value: "+10.1%"
-
-#             - id: tool_satisfaction_award
-#               template: award
-#               awards:
-#                   - id: open_props
-#                     value: '91%'
-#                   - id: css_modules
-#                     value: '84.5%'
-#                   - id: uno_css
-#                     value: '82%'
-
-#             # - id: tool_interest_award
-#             #   template: award
-#             #   awards:
-#             #     - id: css_modules
-#             #       value: "74%"
-#             #     - id: vanilla_extract
-#             #       value: "68%"
-#             #     - id: stitches
-#             #       value: "55%"
-
-#             - id: most_write_ins_award
-#               template: award
-#               awards:
-#                   - id: panda_css
-#                     value: 52
-#                   - id: material_ui
-#                     value: 38
-#                   - id: yandex
-#                     value: 24
-
+      variants:
+        - id: usage_resources
+          titleId: blocks.recommended_resources
+          blockType: RecommendedResourcesBlock
+          showDescription: false
+          disableExport: true
+          name: recommended_resources
+          items:
+            - fm-homepage
+          template: recommended_resources
+          isMainBlock: true
+          path: /usage/usage_resources/
+          sectionId: usage
+  is_hidden: false
+  children: []
+  pageIndex: 11
+  defaultBlockType: default
+  previous:
+    id: other_tools
+    path: /other_tools/
+    pageIndex: 10
+    defaultBlockType: default
+  next:
+    id: conclusion
+    path: /conclusion/
+    pageIndex: 12
+    defaultBlockType: default
 - id: conclusion
-  path: /conclusion
+  path: /conclusion/
   blocks:
     - id: conclusion
-      template: conclusion
-      variables:
-        author: sacha_greif
-
+      variants:
+        - blockType: ConclusionBlock
+          wrapBlock: false
+          disableExport: true
+          dataPath: dataAPI.conclusion_lea_verou
+          query: |
+            conclusion_lea_verou: entity(id: "lea_verou") {
+                id
+                name
+                homepage{
+                    name
+                    url
+                }
+                twitterName
+                twitter {
+                    name
+                    url
+                }
+                avatar {
+                    url
+                }
+            }
+          name: conclusion
+          id: conclusion
+          template: conclusion
+          variables:
+            author: lea_verou
+          isMainBlock: true
+          path: /conclusion/conclusion/
+          sectionId: conclusion
     - id: conclusion_newsletter
-      blockType: NewsletterBlock
-      wrapBlock: false
-      disableExport: true
-
-# note: other pages need to be included in the sitemap too so they can get the proper
-# locale passed to them
-
+      variants:
+        - id: conclusion_newsletter
+          blockType: NewsletterBlock
+          wrapBlock: false
+          disableExport: true
+          isMainBlock: true
+          path: /conclusion/conclusion_newsletter/
+          sectionId: conclusion
+  is_hidden: false
+  children: []
+  pageIndex: 12
+  defaultBlockType: default
+  previous:
+    id: usage
+    path: /usage/
+    pageIndex: 11
+    defaultBlockType: default
+  next:
+    id: about
+    path: /about/
+    pageIndex: 13
+    defaultBlockType: default
 - id: about
-  path: /about
+  path: /about/
   blocks:
     - id: about_contents
-      blockType: AboutBlock
-      wrapBlock: false
-      disableExport: true
-
-# - id: how_to_help
-#   path: /how_to_help
-#   blocks:
-
-#     - id: how_to_help_contents
-#       blockType: HowToHelpBlock
-#       wrapBlock: false
-#       disableExport: true
-
+      variants:
+        - id: about_contents
+          blockType: AboutBlock
+          wrapBlock: false
+          disableExport: true
+          isMainBlock: true
+          path: /about/about_contents/
+          sectionId: about
+  is_hidden: false
+  children: []
+  pageIndex: 13
+  defaultBlockType: default
+  previous:
+    id: conclusion
+    path: /conclusion/
+    pageIndex: 12
+    defaultBlockType: default
 - id: support
-  path: /support
+  path: /support/
   is_hidden: true
   blocks:
     - id: support
-      template: page_introduction
-
+      variants:
+        - id: support
+          blockType: PageIntroductionBlock
+          wrapBlock: false
+          disableExport: true
+          name: page_introduction
+          template: page_introduction
+          isMainBlock: true
+          path: /support/support/
+          sectionId: support
+  children: []
+  pageIndex: 14
+  defaultBlockType: default
 - id: sponsor_finish
-  path: /sponsor-chart-finish
+  path: /sponsor-chart-finish/
   is_hidden: true
   blocks:
     - id: sponsor_finish
-      blockType: SponsorFinishBlock
-      wrapBlock: false
-
+      variants:
+        - id: sponsor_finish
+          blockType: SponsorFinishBlock
+          wrapBlock: false
+          isMainBlock: true
+          path: /sponsor-chart-finish/sponsor_finish/
+          sectionId: sponsor_finish
+  children: []
+  pageIndex: 15
+  defaultBlockType: default
 - id: notfound
   titleId: notfound.title
-  path: /404
+  path: /404/
   is_hidden: true
   blocks:
     - id: notfound
-      blockType: NotFoundBlock
+      variants:
+        - id: notfound
+          blockType: NotFoundBlock
+          isMainBlock: true
+          path: /404/notfound/
+          sectionId: notfound
+  children: []
+  pageIndex: 16
+  defaultBlockType: default
