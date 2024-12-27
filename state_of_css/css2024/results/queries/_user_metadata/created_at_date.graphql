@@ -2,14 +2,18 @@ query {
   surveys {
     state_of_css {
       css2024 {
-        user_metadata {
-          browser: browser {
+        _user_metadata {
+          created_at_date: created_at_date {
             id
             responses(
               parameters: {
-                showNoAnswer: true
+                showNoAnswer: false
                 mergeOtherBuckets: false
                 cutoff: 10
+                sort: {
+                  order: asc
+                  property: id
+                }
               }
             ) {
               currentEdition {

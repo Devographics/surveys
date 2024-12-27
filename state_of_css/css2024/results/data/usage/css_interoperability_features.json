@@ -8,7 +8,7 @@
               "id": "css_interoperability_features",
               "comments": {
                 "currentEdition": {
-                  "count": 23
+                  "count": 54
                 }
               },
               "freeform": {
@@ -17,18 +17,20 @@
                     "axis1Sort": {
                       "property": "count",
                       "order": "desc"
-                    }
+                    },
+                    "limit": 20,
+                    "cutoff": 10
                   },
                   "completion": {
-                    "count": 1549,
-                    "percentageSurvey": 15.96,
-                    "total": 9704
+                    "count": 1547,
+                    "percentageSurvey": 15.94,
+                    "total": 9705
                   },
                   "buckets": [
                     {
                       "count": 165,
                       "id": "anchor_positioning",
-                      "percentageQuestion": 10.65,
+                      "percentageQuestion": 10.67,
                       "percentageSurvey": 1.7,
                       "entity": {
                         "name": "Anchor Positioning",
@@ -77,7 +79,7 @@
                     {
                       "count": 152,
                       "id": "at_container",
-                      "percentageQuestion": 9.81,
+                      "percentageQuestion": 9.83,
                       "percentageSurvey": 1.57,
                       "entity": {
                         "name": "`@container`\n",
@@ -101,7 +103,7 @@
                     {
                       "count": 144,
                       "id": "has_selector",
-                      "percentageQuestion": 9.3,
+                      "percentageQuestion": 9.31,
                       "percentageSurvey": 1.48,
                       "entity": {
                         "name": "`:has()`",
@@ -123,7 +125,9 @@
                         "webFeature": {
                           "id": "has",
                           "description_html": "The <code>:has()</code> CSS functional pseudo-class matches an element if any of the selectors passed as parameters would match at least one element.",
-                          "group": "selectors",
+                          "group": [
+                            "selectors"
+                          ],
                           "name": ":has()",
                           "spec": [
                             "https://drafts.csswg.org/selectors-4/#relational"
@@ -147,7 +151,7 @@
                     {
                       "count": 141,
                       "id": "css_nesting",
-                      "percentageQuestion": 9.1,
+                      "percentageQuestion": 9.11,
                       "percentageSurvey": 1.45,
                       "entity": {
                         "name": "CSS Nesting",
@@ -171,7 +175,9 @@
                         "webFeature": {
                           "id": "nesting",
                           "description_html": "CSS nesting allows for shorter selectors, easier reading, and more modularity by nesting rules inside others.",
-                          "group": "css",
+                          "group": [
+                            "css"
+                          ],
                           "name": "Nesting",
                           "spec": [
                             "https://drafts.csswg.org/css-nesting-1/"
@@ -195,7 +201,7 @@
                     {
                       "count": 134,
                       "id": "view_transitions",
-                      "percentageQuestion": 8.65,
+                      "percentageQuestion": 8.66,
                       "percentageSurvey": 1.38,
                       "entity": {
                         "name": "ViewTransition API",
@@ -208,7 +214,7 @@
                           "codeHighlighted": "::<span class=\"hljs-built_in\">view-transition-old</span>(main-image),\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">transform-origin</span>: right top;\n}\n\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">animation</span>: <span class=\"hljs-number\">400ms</span> ease-out both grow;\n}\n\n<span class=\"hljs-selector-tag\">figure</span> {\n  view-<span class=\"hljs-attribute\">transition</span>-name: main-image;\n}"
                         },
                         "mdn": {
-                          "url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API"
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API"
                         },
                         "caniuse": {
                           "url": "https://caniuse.com/mdn-api_viewtransition"
@@ -218,13 +224,32 @@
                             "url": "https://developer.chrome.com/docs/web-platform/view-transitions/",
                             "title": "Smooth and simple transitions with the View Transitions API"
                           }
-                        ]
+                        ],
+                        "webFeature": {
+                          "id": "cross-document-view-transitions",
+                          "description_html": "The <code>@view-transition</code> CSS rule sets whether a document opts-in to transitions between documents in a multi-page application. Both the old and new document must opt-in for a transition to be triggered.",
+                          "group": [
+                            "view-transitions"
+                          ],
+                          "name": "Cross-document view transitions",
+                          "spec": [
+                            "https://drafts.csswg.org/css-view-transitions-2/#cross-doc-opt-in"
+                          ],
+                          "status": {
+                            "baseline": "false",
+                            "support": {
+                              "chrome": "126",
+                              "chrome_android": "126",
+                              "edge": "126"
+                            }
+                          }
+                        }
                       }
                     },
                     {
                       "count": 104,
                       "id": "subgrid",
-                      "percentageQuestion": 6.71,
+                      "percentageQuestion": 6.72,
                       "percentageSurvey": 1.07,
                       "entity": {
                         "name": "Subgrid",
@@ -245,7 +270,9 @@
                         "webFeature": {
                           "id": "subgrid",
                           "description_html": "The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.",
-                          "group": "grid",
+                          "group": [
+                            "grid"
+                          ],
                           "name": "Subgrid",
                           "spec": [
                             "https://drafts.csswg.org/css-grid-2/#subgrids"
@@ -267,10 +294,10 @@
                       }
                     },
                     {
-                      "count": 95,
+                      "count": 93,
                       "id": "grid",
-                      "percentageQuestion": 6.13,
-                      "percentageSurvey": 0.98,
+                      "percentageQuestion": 6.01,
+                      "percentageSurvey": 0.96,
                       "entity": {
                         "name": "Grid",
                         "nameClean": "Grid",
@@ -285,7 +312,9 @@
                         "webFeature": {
                           "id": "grid",
                           "description_html": "CSS grid is a two-dimensional layout system, which lays content out in rows and columns.",
-                          "group": "grid",
+                          "group": [
+                            "grid"
+                          ],
                           "name": "Grid",
                           "spec": [
                             "https://drafts.csswg.org/css-grid-3/"
@@ -307,10 +336,10 @@
                       }
                     },
                     {
-                      "count": 79,
+                      "count": 80,
                       "id": "scrollbar",
-                      "percentageQuestion": 5.1,
-                      "percentageSurvey": 0.81,
+                      "percentageQuestion": 5.17,
+                      "percentageSurvey": 0.82,
                       "entity": {
                         "name": "Scrollbar Styling",
                         "nameClean": "Scrollbar Styling",
@@ -333,10 +362,10 @@
                       }
                     },
                     {
-                      "count": 58,
+                      "count": 60,
                       "id": "scroll_animations",
-                      "percentageQuestion": 3.74,
-                      "percentageSurvey": 0.6,
+                      "percentageQuestion": 3.88,
+                      "percentageSurvey": 0.62,
                       "entity": {
                         "name": "Animate on Scroll",
                         "nameClean": "Animate on Scroll",
@@ -359,7 +388,7 @@
                     {
                       "count": 47,
                       "id": "cascade_layers",
-                      "percentageQuestion": 3.03,
+                      "percentageQuestion": 3.04,
                       "percentageSurvey": 0.48,
                       "entity": {
                         "id": "cascade_layers",
@@ -378,7 +407,9 @@
                         "webFeature": {
                           "id": "cascade-layers",
                           "description_html": "The <code>@layer</code> CSS at-rule avoids specificity conflicts by providing priority levels for different groups of CSS rules, such as low-priority styles like resets, and high-priority styles like UI components.",
-                          "group": "css",
+                          "group": [
+                            "css"
+                          ],
                           "name": "Cascade layers",
                           "spec": [
                             "https://drafts.csswg.org/css-cascade-5/"
@@ -394,6 +425,50 @@
                               "firefox_android": "97",
                               "safari": "15.4",
                               "safari_ios": "15.4"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 44,
+                      "id": "discrete_properties_animations",
+                      "percentageQuestion": 2.84,
+                      "percentageSurvey": 0.45,
+                      "entity": {
+                        "name": "Discrete Properties Animations",
+                        "nameClean": "Discrete Properties Animations",
+                        "description": "Animate to and from properties such as `display: none`\n",
+                        "descriptionHtml": "Animate to and from properties such as <code>display: none</code>\n",
+                        "descriptionClean": "Animate to and from properties such as display: none",
+                        "id": "discrete_properties_animations",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "/*   IS-OPEN STATE   */\ndialog[open] {\n  translate: 0 0;\n}\n\n/*   EXIT STATE   */\ndialog {\n  transition: translate 0.7s ease-out, display 0.7s ease-out allow-discrete;\n  translate: 0 100vh;\n}\n\n/*   0. BEFORE-OPEN STATE   */\n@starting-style {\n  dialog[open] {\n    translate: 0 100vh;\n  }\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-comment\">/*   IS-OPEN STATE   */</span>\ndialog<span class=\"hljs-selector-attr\">[open]</span> {\n  translate: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">0</span>;\n}\n\n<span class=\"hljs-comment\">/*   EXIT STATE   */</span>\ndialog {\n  <span class=\"hljs-attribute\">transition</span>: translate <span class=\"hljs-number\">0.7s</span> ease-out, display <span class=\"hljs-number\">0.7s</span> ease-out allow-discrete;\n  translate: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n}\n\n<span class=\"hljs-comment\">/*   0. BEFORE-OPEN STATE   */</span>\n<span class=\"hljs-keyword\">@starting-style</span> {\n  dialog<span class=\"hljs-selector-attr\">[open]</span> {\n    translate: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n  }\n}"
+                        },
+                        "webFeature": {
+                          "id": "transition-behavior",
+                          "description_html": "The <code>transition-behavior: allow-discrete</code> CSS declaration allows transitions for properties whose animation behavior is discrete. Such properties can't be interpolated and swap from their start value to the end value at 50%.",
+                          "group": [
+                            "transitions"
+                          ],
+                          "name": "transition-behavior",
+                          "spec": [
+                            "https://drafts.csswg.org/css-transitions-2/#transition-behavior-property"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2024-08-06",
+                            "support": {
+                              "chrome": "117",
+                              "chrome_android": "117",
+                              "edge": "117",
+                              "firefox": "129",
+                              "firefox_android": "129",
+                              "safari": "17.4",
+                              "safari_ios": "17.4"
                             }
                           }
                         }
@@ -424,7 +499,9 @@
                         "webFeature": {
                           "id": "aspect-ratio",
                           "description_html": "The <code>aspect-ratio</code> CSS property controls the width-to-height ratio of elements. For <code>&#x3C;img></code> and <code>&#x3C;video></code> elements, the <code>width</code> and <code>height</code> attributes used together with <code>height: auto</code> control the aspect ratio while the image/video is loading.",
-                          "group": "css",
+                          "group": [
+                            "css"
+                          ],
                           "name": "aspect-ratio",
                           "spec": [
                             "https://drafts.csswg.org/css-sizing-4/#aspect-ratio"
@@ -470,13 +547,19 @@
                         "webFeature": {
                           "id": "line-clamp",
                           "description_html": "The <code>line-clamp</code> CSS property limits the text in a block container to a certain number of lines. The prefixed <code>-webkit-line-clamp</code> is widely supported but only works with <code>-webkit-box-orient: vertical</code> in combination with <code>display: -webkit-box</code> or <code>display: -webkit-inline-box</code>.",
-                          "group": "css",
+                          "group": [
+                            "css"
+                          ],
                           "name": "line-clamp",
                           "spec": [
                             "https://drafts.csswg.org/css-overflow-4/#line-clamp"
                           ],
                           "status": {
-                            "baseline": "false"
+                            "baseline": "false",
+                            "support": {
+                              "safari": "18.2",
+                              "safari_ios": "18.2"
+                            }
                           }
                         }
                       }
@@ -484,7 +567,7 @@
                     {
                       "count": 40,
                       "id": "wide_gamut_colors",
-                      "percentageQuestion": 2.58,
+                      "percentageQuestion": 2.59,
                       "percentageSurvey": 0.41,
                       "entity": {
                         "name": "Wide Gamut Colors",
@@ -508,7 +591,9 @@
                         "webFeature": {
                           "id": "oklab",
                           "description_html": "The Oklab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is, aiming to match how humans perceive colors. Oklch is a variant of Oklab with polar coordinates. These color spaces can be used with the CSS <code>color()</code>, <code>oklab()</code>, and <code>oklch()</code> functions.",
-                          "group": "color-types",
+                          "group": [
+                            "color-types"
+                          ],
                           "name": "Oklab and Oklch",
                           "spec": [
                             "https://drafts.csswg.org/css-color-4/#ok-lab"
@@ -524,48 +609,6 @@
                               "firefox_android": "113",
                               "safari": "15.4",
                               "safari_ios": "15.4"
-                            }
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "count": 36,
-                      "id": "discrete_properties_animations",
-                      "percentageQuestion": 2.32,
-                      "percentageSurvey": 0.37,
-                      "entity": {
-                        "name": "Discrete Properties Animations",
-                        "nameClean": "Discrete Properties Animations",
-                        "description": "Animate to and from properties such as `display: none`\n",
-                        "descriptionHtml": "Animate to and from properties such as <code>display: none</code>\n",
-                        "descriptionClean": "Animate to and from properties such as display: none",
-                        "id": "discrete_properties_animations",
-                        "entityType": "feature",
-                        "example": {
-                          "language": "css",
-                          "code": "/*   IS-OPEN STATE   */\ndialog[open] {\n  translate: 0 0;\n}\n\n/*   EXIT STATE   */\ndialog {\n  transition: translate 0.7s ease-out, display 0.7s ease-out allow-discrete;\n  translate: 0 100vh;\n}\n\n/*   0. BEFORE-OPEN STATE   */\n@starting-style {\n  dialog[open] {\n    translate: 0 100vh;\n  }\n}\n",
-                          "codeHighlighted": "<span class=\"hljs-comment\">/*   IS-OPEN STATE   */</span>\ndialog<span class=\"hljs-selector-attr\">[open]</span> {\n  translate: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">0</span>;\n}\n\n<span class=\"hljs-comment\">/*   EXIT STATE   */</span>\ndialog {\n  <span class=\"hljs-attribute\">transition</span>: translate <span class=\"hljs-number\">0.7s</span> ease-out, display <span class=\"hljs-number\">0.7s</span> ease-out allow-discrete;\n  translate: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n}\n\n<span class=\"hljs-comment\">/*   0. BEFORE-OPEN STATE   */</span>\n<span class=\"hljs-keyword\">@starting-style</span> {\n  dialog<span class=\"hljs-selector-attr\">[open]</span> {\n    translate: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n  }\n}"
-                        },
-                        "webFeature": {
-                          "id": "transition-behavior",
-                          "description_html": "The <code>transition-behavior: allow-discrete</code> CSS declaration allows transitions for properties whose animation behavior is discrete. Such properties can't be interpolated and swap from their start value to the end value at 50%.",
-                          "group": "css",
-                          "name": "transition-behavior",
-                          "spec": [
-                            "https://drafts.csswg.org/css-transitions-2/#transition-behavior-property"
-                          ],
-                          "status": {
-                            "baseline": "low",
-                            "baseline_low_date": "2024-08-06",
-                            "support": {
-                              "chrome": "117",
-                              "chrome_android": "117",
-                              "edge": "117",
-                              "firefox": "129",
-                              "firefox_android": "129",
-                              "safari": "17.4",
-                              "safari_ios": "17.4"
                             }
                           }
                         }
@@ -596,10 +639,12 @@
                         "webFeature": {
                           "id": "container-style-queries",
                           "description_html": "Container style queries with the <code>@container</code> at-rule apply styles to an element based on the values of custom properties of its container.",
-                          "group": "containment",
+                          "group": [
+                            "container-queries"
+                          ],
                           "name": "Container style queries",
                           "spec": [
-                            "https://drafts.csswg.org/css-contain-3/#style-container"
+                            "https://drafts.csswg.org/css-conditional-5/#style-container"
                           ],
                           "status": {
                             "baseline": "false",
@@ -662,102 +707,70 @@
                         "webFeature": {
                           "id": "relative-color",
                           "description_html": "The <code>from</code> keyword for color functions (<code>color()</code>, <code>hsl()</code>, <code>oklch()</code>, etc.) creates a new color based on a given color by modifying the values of the input color. Also known as relative color syntax (RCS).",
-                          "group": "css",
+                          "group": [
+                            "css"
+                          ],
                           "name": "Relative colors",
                           "spec": [
                             "https://drafts.csswg.org/css-color-5/#relative-colors"
                           ],
                           "status": {
                             "baseline": "low",
-                            "baseline_low_date": "2024-07-09",
+                            "baseline_low_date": "2024-09-16",
                             "support": {
-                              "chrome": "119",
-                              "chrome_android": "119",
-                              "edge": "119",
+                              "chrome": "125",
+                              "chrome_android": "125",
+                              "edge": "125",
                               "firefox": "128",
                               "firefox_android": "128",
-                              "safari": "16.4",
-                              "safari_ios": "16.4"
+                              "safari": "18",
+                              "safari_ios": "18"
                             }
                           }
                         }
                       }
                     },
                     {
-                      "count": 27,
-                      "id": "color_mix",
-                      "percentageQuestion": 1.74,
-                      "percentageSurvey": 0.28,
+                      "count": 28,
+                      "id": "conditional_logic",
+                      "percentageQuestion": 1.81,
+                      "percentageSurvey": 0.29,
                       "entity": {
-                        "name": "`color-mix()`",
-                        "nameHtml": "<code>color-mix()</code>",
-                        "nameClean": "color-mix()",
-                        "id": "color_mix",
-                        "entityType": "feature",
-                        "example": {
-                          "language": "css",
-                          "code": ".teal {\n  background: color-mix(in lab, white 20%, #34c9eb);\n}\n",
-                          "codeHighlighted": "<span class=\"hljs-selector-class\">.teal</span> {\n  <span class=\"hljs-attribute\">background</span>: <span class=\"hljs-built_in\">color-mix</span>(in lab, white <span class=\"hljs-number\">20%</span>, <span class=\"hljs-number\">#34c9eb</span>);\n}"
-                        },
-                        "mdn": {
-                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix"
-                        },
-                        "caniuse": {
-                          "url": "https://caniuse.com/mdn-css_types_color_color-mix"
-                        },
-                        "webFeature": {
-                          "id": "color-mix",
-                          "description_html": "The <code>color-mix()</code> function mixes two colors in a given color space and by a given amount. Commonly, lighter or darker variations of a color are created by mixing with white or black.",
-                          "group": "css",
-                          "name": "color-mix()",
-                          "spec": [
-                            "https://drafts.csswg.org/css-color-5/#color-mix"
-                          ],
-                          "status": {
-                            "baseline": "low",
-                            "baseline_low_date": "2023-05-09",
-                            "support": {
-                              "chrome": "111",
-                              "chrome_android": "111",
-                              "edge": "111",
-                              "firefox": "113",
-                              "firefox_android": "113",
-                              "safari": "16.2",
-                              "safari_ios": "16.2"
-                            }
-                          }
-                        }
+                        "name": "Conditional Logic",
+                        "nameClean": "Conditional Logic",
+                        "id": "conditional_logic",
+                        "entityType": "default"
                       }
                     },
                     {
-                      "count": 8155,
+                      "count": 8158,
                       "id": "no_answer",
                       "percentageQuestion": 0,
-                      "percentageSurvey": 84.04
+                      "percentageSurvey": 84.06
                     },
                     {
-                      "count": 1134,
+                      "count": 1180,
                       "id": "other_answers",
-                      "percentageQuestion": 73.14,
-                      "percentageSurvey": 11.59,
+                      "percentageQuestion": 76.12,
+                      "percentageSurvey": 12.05,
                       "groupedBuckets": [
                         {
-                          "count": 320,
+                          "count": 346,
                           "id": "overlimit_answers",
-                          "percentageQuestion": 20.66,
-                          "percentageSurvey": 3.29
+                          "percentageQuestion": 22.38,
+                          "percentageSurvey": 3.56
                         },
                         {
-                          "count": 284,
+                          "count": 344,
                           "id": "cutoff_answers",
-                          "percentageQuestion": 18.26,
-                          "percentageSurvey": 2.84
+                          "percentageQuestion": 22.07,
+                          "percentageSurvey": 3.44
                         },
                         {
-                          "count": 530,
+                          "count": 490,
                           "id": "no_match",
-                          "percentageQuestion": 34.22,
-                          "percentageSurvey": 5.46
+                          "percentageQuestion": 31.67,
+                          "percentageSurvey": 5.05
                         }
                       ]
                     }

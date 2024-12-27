@@ -2,14 +2,14 @@ query {
   surveys {
     state_of_css {
       css2024 {
-        user_metadata {
-          locale: locale {
+        _user_metadata {
+          completion_stats: completion_stats {
             id
             responses(
               parameters: {
                 showNoAnswer: true
                 mergeOtherBuckets: false
-                cutoff: 20
+                cutoff: 10
               }
             ) {
               currentEdition {

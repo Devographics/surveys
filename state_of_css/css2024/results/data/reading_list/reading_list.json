@@ -12,12 +12,14 @@
                     "axis1Sort": {
                       "property": "count",
                       "order": "desc"
-                    }
+                    },
+                    "limit": 20,
+                    "cutoff": 10
                   },
                   "completion": {
                     "count": 3299,
-                    "percentageSurvey": 34,
-                    "total": 9704
+                    "percentageSurvey": 33.99,
+                    "total": 9705
                   },
                   "buckets": [
                     {
@@ -41,6 +43,17 @@
                         },
                         "caniuse": {
                           "url": "https://caniuse.com/css-hanging-punctuation"
+                        },
+                        "webFeature": {
+                          "id": "hanging-punctuation",
+                          "description_html": "The <code>hanging-punctuation</code> CSS property puts punctuation characters outside of the box to align the text with the rest of the document.",
+                          "name": "Hanging punctuation",
+                          "spec": [
+                            "https://drafts.csswg.org/css-text-4/#hanging-punctuation-property"
+                          ],
+                          "status": {
+                            "baseline": "false"
+                          }
                         }
                       }
                     },
@@ -69,7 +82,9 @@
                         "webFeature": {
                           "id": "motion-path",
                           "description_html": "The <code>offset</code> CSS property animates an element along a defined motion path.",
-                          "group": "css",
+                          "group": [
+                            "css"
+                          ],
                           "name": "Motion path",
                           "spec": [
                             "https://drafts.fxtf.org/motion-1/"
@@ -115,7 +130,9 @@
                         "webFeature": {
                           "id": "scope",
                           "description_html": "The <code>@scope</code> CSS at-rule sets the scope for a group of rules.",
-                          "group": "css",
+                          "group": [
+                            "css"
+                          ],
                           "name": "@scope",
                           "spec": [
                             "https://drafts.csswg.org/css-cascade-6/#scope-atrule"
@@ -234,7 +251,7 @@
                       "count": 1459,
                       "id": "discrete_properties_animations",
                       "percentageQuestion": 44.23,
-                      "percentageSurvey": 15.04,
+                      "percentageSurvey": 15.03,
                       "entity": {
                         "name": "Discrete Properties Animations",
                         "nameClean": "Discrete Properties Animations",
@@ -251,7 +268,9 @@
                         "webFeature": {
                           "id": "transition-behavior",
                           "description_html": "The <code>transition-behavior: allow-discrete</code> CSS declaration allows transitions for properties whose animation behavior is discrete. Such properties can't be interpolated and swap from their start value to the end value at 50%.",
-                          "group": "css",
+                          "group": [
+                            "transitions"
+                          ],
                           "name": "transition-behavior",
                           "spec": [
                             "https://drafts.csswg.org/css-transitions-2/#transition-behavior-property"
@@ -324,7 +343,9 @@
                         "webFeature": {
                           "id": "nth-child-of",
                           "description_html": "The <code>of</code> syntax for the <code>:nth-child()</code> and <code>:nth-last-child()</code> CSS functional pseudo-classes match elements by the relative position of elements, counted from the first or last sibling matching a selector list.",
-                          "group": "selectors",
+                          "group": [
+                            "selectors"
+                          ],
                           "name": ":nth-child() of <selector>",
                           "spec": [
                             "https://drafts.csswg.org/selectors-4/#the-nth-child-pseudo",
@@ -371,7 +392,9 @@
                         "webFeature": {
                           "id": "light-dark",
                           "description_html": "The <code>light-dark()</code> CSS function accepts two colors and uses one depending on the current color scheme.",
-                          "group": "css",
+                          "group": [
+                            "css"
+                          ],
                           "name": "light-dark()",
                           "spec": [
                             "https://drafts.csswg.org/css-color-5/#light-dark"
@@ -408,7 +431,7 @@
                           "codeHighlighted": "::<span class=\"hljs-built_in\">view-transition-old</span>(main-image),\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">transform-origin</span>: right top;\n}\n\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">animation</span>: <span class=\"hljs-number\">400ms</span> ease-out both grow;\n}\n\n<span class=\"hljs-selector-tag\">figure</span> {\n  view-<span class=\"hljs-attribute\">transition</span>-name: main-image;\n}"
                         },
                         "mdn": {
-                          "url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API"
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API"
                         },
                         "caniuse": {
                           "url": "https://caniuse.com/mdn-api_viewtransition"
@@ -418,7 +441,26 @@
                             "url": "https://developer.chrome.com/docs/web-platform/view-transitions/",
                             "title": "Smooth and simple transitions with the View Transitions API"
                           }
-                        ]
+                        ],
+                        "webFeature": {
+                          "id": "cross-document-view-transitions",
+                          "description_html": "The <code>@view-transition</code> CSS rule sets whether a document opts-in to transitions between documents in a multi-page application. Both the old and new document must opt-in for a transition to be triggered.",
+                          "group": [
+                            "view-transitions"
+                          ],
+                          "name": "Cross-document view transitions",
+                          "spec": [
+                            "https://drafts.csswg.org/css-view-transitions-2/#cross-doc-opt-in"
+                          ],
+                          "status": {
+                            "baseline": "false",
+                            "support": {
+                              "chrome": "126",
+                              "chrome_android": "126",
+                              "edge": "126"
+                            }
+                          }
+                        }
                       }
                     },
                     {
@@ -446,10 +488,12 @@
                         "webFeature": {
                           "id": "container-style-queries",
                           "description_html": "Container style queries with the <code>@container</code> at-rule apply styles to an element based on the values of custom properties of its container.",
-                          "group": "containment",
+                          "group": [
+                            "container-queries"
+                          ],
                           "name": "Container style queries",
                           "spec": [
-                            "https://drafts.csswg.org/css-contain-3/#style-container"
+                            "https://drafts.csswg.org/css-conditional-5/#style-container"
                           ],
                           "status": {
                             "baseline": "false",
@@ -489,19 +533,24 @@
                         "webFeature": {
                           "id": "scrollbar-gutter",
                           "description_html": "The <code>scrollbar-gutter</code> CSS property reserves space for the scrollbar, preventing unwanted layout changes as the scrollbar appears and disappears.",
-                          "group": "scrolling",
+                          "group": [
+                            "scrolling"
+                          ],
                           "name": "scrollbar-gutter",
                           "spec": [
                             "https://drafts.csswg.org/css-overflow-3/#scrollbar-gutter-property"
                           ],
                           "status": {
-                            "baseline": "false",
+                            "baseline": "low",
+                            "baseline_low_date": "2024-12-11",
                             "support": {
                               "chrome": "94",
                               "chrome_android": "94",
                               "edge": "94",
                               "firefox": "97",
-                              "firefox_android": "97"
+                              "firefox_android": "97",
+                              "safari": "18.2",
+                              "safari_ios": "18.2"
                             }
                           }
                         }
@@ -535,7 +584,9 @@
                         "webFeature": {
                           "id": "text-wrap-pretty",
                           "description_html": "The <code>text-wrap: pretty</code> CSS declaration prioritizes better layout over speed when text is broken into multiple lines.",
-                          "group": "text-wrap",
+                          "group": [
+                            "text-wrap"
+                          ],
                           "name": "text-wrap: pretty",
                           "spec": [
                             "https://drafts.csswg.org/css-text-4/#valdef-text-wrap-style-pretty"
@@ -576,7 +627,9 @@
                         "webFeature": {
                           "id": "initial-letter",
                           "description_html": "The <code>initial-letter</code> CSS property sets the number of lines the first letter of an element occupies. You can use the property to make a raised capital or drop cap.",
-                          "group": "css",
+                          "group": [
+                            "css"
+                          ],
                           "name": "initial-letter",
                           "spec": [
                             "https://drafts.csswg.org/css-inline-3/#sizing-drop-initials"
@@ -617,7 +670,9 @@
                         "webFeature": {
                           "id": "overscroll-behavior",
                           "description_html": "The <code>overscroll-behavior</code> CSS property disables default scrolling behaviors when the edges of a scrolling area are reached.",
-                          "group": "scrolling",
+                          "group": [
+                            "scrolling"
+                          ],
                           "name": "overscroll-behavior",
                           "spec": [
                             "https://drafts.csswg.org/css-overscroll-1/"
@@ -663,7 +718,9 @@
                         "webFeature": {
                           "id": "color-function",
                           "description_html": "The <code>color()</code> function picks a color from a given color space. Wide gamut color spaces like <code>display-p3</code> allow showing more vibrant and saturated colors than the standard <code>srgb</code> color space.",
-                          "group": "color-types",
+                          "group": [
+                            "color-types"
+                          ],
                           "name": "color()",
                           "spec": [
                             "https://drafts.csswg.org/css-color-4/#color-function"
@@ -688,7 +745,7 @@
                       "count": 1199,
                       "id": "image_set",
                       "percentageQuestion": 36.34,
-                      "percentageSurvey": 12.36,
+                      "percentageSurvey": 12.35,
                       "entity": {
                         "name": "`image-set()`",
                         "nameHtml": "<code>image-set()</code>",
@@ -709,7 +766,9 @@
                         "webFeature": {
                           "id": "image-set",
                           "description_html": "The <code>image-set()</code> CSS function provides a set of images at different resolutions or pixel densities, which the browser can pick from, depending on the device capabilities.",
-                          "group": "css",
+                          "group": [
+                            "css"
+                          ],
                           "name": "image-set()",
                           "spec": [
                             "https://drafts.csswg.org/css-images-4/#image-set-notation"
@@ -779,7 +838,7 @@
                       "count": 1165,
                       "id": "forced_colors",
                       "percentageQuestion": 35.31,
-                      "percentageSurvey": 12.01,
+                      "percentageSurvey": 12,
                       "entity": {
                         "name": "`forced-colors`",
                         "nameHtml": "<code>forced-colors</code>",
@@ -800,7 +859,9 @@
                         "webFeature": {
                           "id": "forced-colors",
                           "description_html": "The <code>forced-colors</code> CSS @media rule detects when a user has chosen to use a forced colors mode, also known as high-contrast mode, and the <code>forced-color-adjust</code> CSS property sets whether forced colors apply to an element.",
-                          "group": "css",
+                          "group": [
+                            "css"
+                          ],
                           "name": "Forced colors",
                           "spec": [
                             "https://drafts.csswg.org/mediaqueries-5/#forced-colors",
@@ -823,16 +884,22 @@
                       }
                     },
                     {
-                      "count": 5910,
-                      "id": "no_answer",
-                      "percentageQuestion": 0,
-                      "percentageSurvey": 60.9
+                      "count": 15,
+                      "id": "cutoff_answers",
+                      "percentageQuestion": 0.45,
+                      "percentageSurvey": 0.15
                     },
                     {
-                      "count": 34103,
+                      "count": 6406,
+                      "id": "no_answer",
+                      "percentageQuestion": 0,
+                      "percentageSurvey": 66.01
+                    },
+                    {
+                      "count": 34088,
                       "id": "overlimit_answers",
-                      "percentageQuestion": 1033.72,
-                      "percentageSurvey": 351.39
+                      "percentageQuestion": 1033.27,
+                      "percentageSurvey": 351.23
                     }
                   ]
                 }

@@ -8,7 +8,7 @@
               "id": "css_missing_features",
               "comments": {
                 "currentEdition": {
-                  "count": 8
+                  "count": 26
                 }
               },
               "freeform": {
@@ -17,12 +17,14 @@
                     "axis1Sort": {
                       "property": "count",
                       "order": "desc"
-                    }
+                    },
+                    "limit": 20,
+                    "cutoff": 10
                   },
                   "completion": {
                     "count": 1223,
                     "percentageSurvey": 12.6,
-                    "total": 9704
+                    "total": 9705
                   },
                   "buckets": [
                     {
@@ -66,7 +68,9 @@
                         "webFeature": {
                           "id": "masonry",
                           "description_html": "Masonry is a type of CSS grid layout where the items on one of the axes are tightly packed together, like brickwork, instead of leaving gaps to align across the other axis.",
-                          "group": "layout",
+                          "group": [
+                            "layout"
+                          ],
                           "name": "Masonry",
                           "spec": [
                             "https://drafts.csswg.org/css-grid-3/"
@@ -116,7 +120,9 @@
                         "webFeature": {
                           "id": "nesting",
                           "description_html": "CSS nesting allows for shorter selectors, easier reading, and more modularity by nesting rules inside others.",
-                          "group": "css",
+                          "group": [
+                            "css"
+                          ],
                           "name": "Nesting",
                           "spec": [
                             "https://drafts.csswg.org/css-nesting-1/"
@@ -151,18 +157,6 @@
                     },
                     {
                       "count": 31,
-                      "id": "better_animations",
-                      "percentageQuestion": 2.53,
-                      "percentageSurvey": 0.32,
-                      "entity": {
-                        "name": "Better Animations",
-                        "nameClean": "Better Animations",
-                        "id": "better_animations",
-                        "entityType": "default"
-                      }
-                    },
-                    {
-                      "count": 31,
                       "id": "loops",
                       "percentageQuestion": 2.53,
                       "percentageSurvey": 0.32,
@@ -170,6 +164,18 @@
                         "name": "For Loops",
                         "nameClean": "For Loops",
                         "id": "loops",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 30,
+                      "id": "better_animations",
+                      "percentageQuestion": 2.45,
+                      "percentageSurvey": 0.31,
+                      "entity": {
+                        "name": "Better Animations",
+                        "nameClean": "Better Animations",
+                        "id": "better_animations",
                         "entityType": "default"
                       }
                     },
@@ -213,6 +219,21 @@
                     },
                     {
                       "count": 21,
+                      "id": "improved_attr",
+                      "percentageQuestion": 1.72,
+                      "percentageSurvey": 0.22,
+                      "entity": {
+                        "name": "Improved `attr()`",
+                        "nameHtml": "Improved <code>attr()</code>",
+                        "nameClean": "Improved attr()",
+                        "description": "Support for properties other than content",
+                        "descriptionClean": "Support for properties other than content",
+                        "id": "improved_attr",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 21,
                       "id": "multi_column",
                       "percentageQuestion": 1.72,
                       "percentageSurvey": 0.22,
@@ -226,6 +247,30 @@
                         },
                         "caniuse": {
                           "url": "https://caniuse.com/multicolumn"
+                        },
+                        "webFeature": {
+                          "id": "column-fill",
+                          "description_html": "The <code>column-fill</code> CSS property sets the distribution of content across columns in a multi-column layout.",
+                          "group": [
+                            "multi-column"
+                          ],
+                          "name": "column-fill",
+                          "spec": [
+                            "https://drafts.csswg.org/css-multicol-1/#filling-columns"
+                          ],
+                          "status": {
+                            "baseline": "high",
+                            "baseline_low_date": "2017-03-07",
+                            "support": {
+                              "chrome": "50",
+                              "chrome_android": "50",
+                              "edge": "12",
+                              "firefox": "52",
+                              "firefox_android": "52",
+                              "safari": "9",
+                              "safari_ios": "9"
+                            }
+                          }
                         }
                       }
                     },
@@ -250,6 +295,18 @@
                         "nameClean": "input type=\"number\"",
                         "id": "input_type_number",
                         "entityType": "feature"
+                      }
+                    },
+                    {
+                      "count": 19,
+                      "id": "scroll_animations",
+                      "percentageQuestion": 1.55,
+                      "percentageSurvey": 0.2,
+                      "entity": {
+                        "name": "Animate on Scroll",
+                        "nameClean": "Animate on Scroll",
+                        "id": "scroll_animations",
+                        "entityType": "default"
                       }
                     },
                     {
@@ -289,7 +346,9 @@
                         "webFeature": {
                           "id": "has",
                           "description_html": "The <code>:has()</code> CSS functional pseudo-class matches an element if any of the selectors passed as parameters would match at least one element.",
-                          "group": "selectors",
+                          "group": [
+                            "selectors"
+                          ],
                           "name": ":has()",
                           "spec": [
                             "https://drafts.csswg.org/selectors-4/#relational"
@@ -330,7 +389,9 @@
                         "webFeature": {
                           "id": "sticky-positioning",
                           "description_html": "The <code>position: sticky</code> CSS declaration positions an element in the normal flow until it crosses a specified threshold, at which points it becomes fixed (stuck) at that position.",
-                          "group": "positioning",
+                          "group": [
+                            "positioning"
+                          ],
                           "name": "Sticky positioning",
                           "spec": [
                             "https://drafts.csswg.org/css-position-3/#stickypos-insets"
@@ -349,18 +410,6 @@
                             }
                           }
                         }
-                      }
-                    },
-                    {
-                      "count": 18,
-                      "id": "scroll_animations",
-                      "percentageQuestion": 1.47,
-                      "percentageSurvey": 0.19,
-                      "entity": {
-                        "name": "Animate on Scroll",
-                        "nameClean": "Animate on Scroll",
-                        "id": "scroll_animations",
-                        "entityType": "default"
                       }
                     },
                     {
@@ -413,46 +462,34 @@
                       }
                     },
                     {
-                      "count": 17,
-                      "id": "overflow",
-                      "percentageQuestion": 1.39,
-                      "percentageSurvey": 0.18,
-                      "entity": {
-                        "name": "Overflow",
-                        "nameClean": "Overflow",
-                        "id": "overflow",
-                        "entityType": "default"
-                      }
-                    },
-                    {
-                      "count": 8476,
+                      "count": 8482,
                       "id": "no_answer",
                       "percentageQuestion": 0,
-                      "percentageSurvey": 87.35
+                      "percentageSurvey": 87.4
                     },
                     {
-                      "count": 1200,
+                      "count": 1207,
                       "id": "other_answers",
-                      "percentageQuestion": 98.06,
-                      "percentageSurvey": 12.19,
+                      "percentageQuestion": 98.64,
+                      "percentageSurvey": 12.26,
                       "groupedBuckets": [
                         {
-                          "count": 201,
+                          "count": 221,
                           "id": "overlimit_answers",
-                          "percentageQuestion": 16.43,
-                          "percentageSurvey": 2.02
+                          "percentageQuestion": 18.06,
+                          "percentageSurvey": 2.23
                         },
                         {
-                          "count": 412,
+                          "count": 422,
                           "id": "cutoff_answers",
-                          "percentageQuestion": 33.63,
-                          "percentageSurvey": 4.12
+                          "percentageQuestion": 34.46,
+                          "percentageSurvey": 4.22
                         },
                         {
-                          "count": 587,
+                          "count": 564,
                           "id": "no_match",
-                          "percentageQuestion": 48,
-                          "percentageSurvey": 6.05
+                          "percentageQuestion": 46.12,
+                          "percentageSurvey": 5.81
                         }
                       ]
                     }

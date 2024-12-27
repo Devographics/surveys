@@ -9,6 +9,7 @@ query {
               parameters: {
                 showNoAnswer: true
                 mergeOtherBuckets: false
+                cutoff: 10
                 limit: 20
               }
             ) {
@@ -22,6 +23,8 @@ query {
                     property
                     order
                   }
+                  limit
+                  cutoff
                 }
                 completion {
                   count
@@ -65,6 +68,12 @@ query {
                       url
                     }
                     twitter {
+                      url
+                    }
+                    bluesky {
+                      url
+                    }
+                    threads {
                       url
                     }
                     twitch {

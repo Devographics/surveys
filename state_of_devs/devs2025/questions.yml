@@ -1,0 +1,440 @@
+- id: career
+  slug: career
+  questions:
+    - id: years_of_experience
+      template: years
+
+    - id: higher_education_degree
+      template: higher_education_degree
+
+    - id: how_many_jobs
+      template: single
+
+    - id: employment_status
+      template: singleWithOther
+
+    - id: career_issues
+      template: multipleWithOther
+      options:
+        - id: sexual_harassment
+        - id: gender_discrimination
+        - id: race_discrimination
+        - id: stress
+        - id: overtime
+        - id: underpaid
+
+    - id: career_gender_impact
+      template: single
+      optionsAreNumeric: true
+      options:
+        - id: 0
+        - id: 1
+        - id: 2
+        - id: 3
+        - id: 4
+
+    - id: career_race_impact
+      template: single
+      optionsAreNumeric: true
+      options:
+        - id: 0
+        - id: 1
+        - id: 2
+        - id: 3
+        - id: 4
+
+    - id: past_year_conferences
+      template: single
+      options:
+        - id: range_0
+        - id: range_1
+        - id: range_2_5
+        - id: range_6_10
+        - id: range_11_15
+        - id: range_more_than_15
+
+    - id: past_year_meetups_events
+      template: single
+      options:
+        - id: range_0
+        - id: range_1
+        - id: range_2_5
+        - id: range_6_10
+        - id: range_11_15
+        - id: range_more_than_15
+
+- id: workplace
+  slug: workplace
+  questions:
+    - id: company_size
+      template: company_size
+
+    - id: job_title
+      template: text
+
+    - id: yearly_salary
+      template: yearly_salary_v2
+
+    # - id: how_similar_to_you_are_your_colleagues
+    #   template: slider
+
+    - id: remote_work
+
+    - id: vacation_time
+
+    - id: hours_per_week
+
+    - id: job_happiness
+      template: happiness
+
+    - id: job_ai_threat
+
+    - id: workplace_perks
+
+    - id: workplace_difficulties
+
+    - id: how_much_can_you_be_yourself_at_work
+      template: slider
+
+- id: technology
+  slug: technology
+  questions:
+    - id: mobile_platform
+      template: multipleWithOther
+      options:
+        - id: ios
+        - id: android
+
+    - id: desktop_os
+      template: multipleWithOther
+      options:
+        - id: mac_os
+        - id: windows
+        - id: linux
+
+    - id: front_end_frameworks
+      template: multipleWithOtherSentiment
+      options:
+        - id: react
+        - id: vuejs
+        - id: angular
+        - id: jquery
+        - id: svelte
+
+    - id: back_end_frameworks
+      template: multipleWithOtherSentiment
+      options:
+        - id: nextjs
+        - id: astro
+        - id: rails
+        - id: laravel
+
+    - id: programming_languages
+      template: multipleWithOtherSentiment
+      matchTags: [languages]
+      options:
+        - id: php
+        - id: ruby
+        - id: python
+        - id: golang
+        - id: rust
+        - id: java
+        - id: c_cplusplus
+        - id: objective_c
+        - id: scala
+        - id: swift
+        - id: csharp
+        - id: haskell
+        - id: ocaml
+        - id: dart
+        - id: kotlin
+        - id: elixir
+        - id: bash
+        - id: clojure
+        - id: elm
+        - id: julia
+
+    - id: ai_tools
+      template: multipleWithOtherSentiment
+      order: random
+      options:
+        - id: copilot
+        - id: chat_gpt
+        - id: bard
+        - id: bing
+        - id: perplexity
+        - id: cursor
+        - id: phind
+        - id: codium
+        - id: codeium
+        - id: tabnine
+        - id: code_whisperer
+        - id: cody
+        - id: jetbrains_ai
+        - id: llama
+        - id: claude
+        - id: v0
+        - id: na
+
+    - id: productivity_apps
+      template: multipleWithOther
+      options:
+        - id: ios
+        - id: android
+
+# - id: resources
+#   slug: resources
+#   questions:
+#     - id: video_creators
+
+#     - id: people
+
+- id: health
+  slug: health
+  questions:
+    - id: age
+      template: age_number
+
+    - id: disability_status
+      template: disability_status
+
+    - id: health_issues
+      template: multipleWithOther
+      options:
+        - id: poor_sleep
+        - id: weight_issues
+        - id: respiratory_issues
+        - id: diabetes
+        - id: chronic_fatigue
+        - id: heart_disease
+        - id: cancer
+        - id: mental_health_issues
+        - id: substance_abuse_issues
+        - id: back_pain
+        - id: wrist_hand_pain
+        - id: other_joint_pain
+        - id: skin_issues
+        - id: headaches
+
+    - id: sleep_quantity
+      template: single
+      options:
+        - id: range_5_or_less
+        - id: range_6
+        - id: range_7
+        - id: range_8
+        - id: range_9
+        - id: range_10
+        - id: more_than_10
+
+    - id: sleep_bedtime
+      template: number
+
+    - id: sleep_getuptime
+      template: number
+
+    - id: sleep_measures
+      template: multipleWithOther
+      options:
+        - id: consistent_bedtime
+        - id: darkened_curtains
+        - id: sleep_mask
+        - id: avoid_screens
+        - id: earplugs
+        - id: sleeping_pills
+        - id: supplements
+
+    - id: number_of_kids
+      template: number
+
+    - id: happiness_factors
+      template: multipleWithOther
+      options:
+        - id: health
+        - id: wealth
+        - id: career_progress
+        - id: romantic_relationships
+        - id: other_relationships
+        - id: hobbies
+        - id: family
+        - id: community
+        - id: material_possessions
+        - id: living_environment
+        - id: religion_spirituality
+
+    - id: overall_happiness
+      template: happiness
+
+- id: hobbies
+  slug: hobbies
+  questions:
+    - id: phyiscal_activity
+      template: multipleWithOther
+      options:
+        - id: climbing
+        - id: martial_arts
+        - id: running
+        - id: strength_training
+        - id: swimming
+        - id: yoga
+        - id: gymnastics
+        - id: golf
+        - id: tennis
+        - id: soccer
+        - id: biking
+        - id: hiking
+
+    - id: physical_activity_frequency
+      template: single
+      optionsAreNumeric: true
+      options:
+        - id: 0
+        - id: 1
+        - id: 2
+        - id: 3
+        - id: 4
+        - id: 5
+        - id: 6
+        - id: 7
+
+    - id: hobbies
+      template: multipleWithOther
+      options:
+        - id: woodworking
+        - id: table_top_gaming
+        - id: video_games
+        - id: music
+        - id: cooking
+        - id: reading
+        - id: arts_and_craft
+        - id: electronics
+        - id: gardening
+        - id: camping
+
+    - id: hobbies_frequency
+      options:
+        - id: less_than_once_a_year
+        - id: once_a_year
+        - id: range_2_12_times_a_year
+        - id: once_a_month
+        - id: once_a_week
+        - id: more_once_a_week
+        - id: every_day
+
+    - id: musical_genres
+      template: textList
+      # options:
+      #   - id: rock
+      #   - id: hip_hop
+      #   - id: pop
+      #   - id: edm
+      #   - id: country
+      #   - id: classical
+      #   - id: jazz
+      #   - id: latin
+      #   - id: soul
+      #   - id: funk
+      #   - id: reggae
+      #   - id: metal
+      #   - id: kpop
+      #   - id: ost
+
+    - id: video_game_platforms
+      template: multipleWithOther
+      options:
+        - id: nintendo_switch
+        - id: playstation
+        - id: xbox
+        - id: pc
+        - id: mac
+        - id: ios
+        - id: android
+        - id: steamdeck
+        - id: retro_emulation_console
+
+    - id: video_games
+      template: textList
+
+- id: user_info
+  slug: user_info
+  questions:
+    - id: country
+      template: country
+
+    - id: gender
+      template: gender
+
+    - id: race_ethnicity
+      template: race_ethnicity
+
+    - id: number_of_kids
+      template: number
+
+    - id: relationship_status
+      template: singleWithOther
+      options:
+        - id: single
+        - id: in_a_relationship
+        - id: its_complicated
+
+    - id: how_did_user_find_out_about_the_survey
+      template: text
+      matchType: single
+      matchTags:
+        [
+          people,
+          sites,
+          newsletters,
+          video_creators,
+          podcasts,
+          surveys,
+          events,
+          socialmedia,
+          common_sources,
+          state_of_js_sources,
+        ]
+
+    - id: did_you_run_into_technical_issues
+      template: longtext
+
+    - id: how_can_we_improve
+      template: textList
+
+    - id: receive_notifications
+      template: receive_notifications
+
+    - id: referrer
+      matchType: single
+      matchTags:
+        [
+          people,
+          sites,
+          newsletters,
+          video_creators,
+          podcasts,
+          surveys,
+          events,
+          socialmedia,
+          common_sources,
+          state_of_js_sources,
+        ]
+      hidden: true
+      template: referrer
+
+    - id: sourcetag
+      matchType: single
+      matchTags:
+        [
+          people,
+          sites,
+          newsletters,
+          video_creators,
+          podcasts,
+          surveys,
+          events,
+          socialmedia,
+          common_sources,
+          state_of_js_sources,
+        ]
+      hidden: true
+      template: sourcetag
