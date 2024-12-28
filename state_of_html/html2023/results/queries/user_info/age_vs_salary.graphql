@@ -1,17 +1,35 @@
-query html2023ageVsSalaryQuery {
+query {
   surveys {
     state_of_html {
       html2023 {
         user_info {
           age_vs_salary: age {
+            id
+            comments {
+              currentEdition {
+                count
+              }
+            }
             responses(
               facet: user_info__yearly_salary
               parameters: {
-                enableCache: false
                 showNoAnswer: true
+                cutoff: 10
               }
             ) {
               currentEdition {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                  limit
+                  cutoff
+                }
                 completion {
                   count
                   percentageSurvey
@@ -56,6 +74,12 @@ query html2023ageVsSalaryQuery {
                     twitter {
                       url
                     }
+                    bluesky {
+                      url
+                    }
+                    threads {
+                      url
+                    }
                     twitch {
                       url
                     }
@@ -84,6 +108,26 @@ query html2023ageVsSalaryQuery {
                       url
                       title
                     }
+                    webFeature {
+                      id
+                      description_html
+                      group
+                      name
+                      spec
+                      status {
+                        baseline
+                        baseline_low_date
+                        support {
+                          chrome
+                          chrome_android
+                          edge
+                          firefox
+                          firefox_android
+                          safari
+                          safari_ios
+                        }
+                      }
+                    }
                   }
                   averageByFacet
                   percentilesByFacet {
@@ -99,7 +143,95 @@ query html2023ageVsSalaryQuery {
                     id
                     count
                     percentageBucket
+                    percentageQuestion
                     hasInsufficientData
+                    entity {
+                      name
+                      nameHtml
+                      nameClean
+                      alias
+                      description
+                      descriptionHtml
+                      descriptionClean
+                      id
+                      entityType
+                      example {
+                        label
+                        language
+                        code
+                        codeHighlighted
+                      }
+                      avatar {
+                        url
+                      }
+                      homepage {
+                        url
+                      }
+                      youtube {
+                        url
+                      }
+                      twitter {
+                        url
+                      }
+                      bluesky {
+                        url
+                      }
+                      threads {
+                        url
+                      }
+                      twitch {
+                        url
+                      }
+                      rss {
+                        url
+                      }
+                      blog {
+                        url
+                      }
+                      mastodon {
+                        url
+                      }
+                      github {
+                        url
+                      }
+                      npm {
+                        url
+                      }
+                      mdn {
+                        url
+                      }
+                      caniuse {
+                        url
+                      }
+                      resources {
+                        url
+                        title
+                      }
+                      webFeature {
+                        id
+                        description_html
+                        group
+                        name
+                        spec
+                        status {
+                          baseline
+                          baseline_low_date
+                          support {
+                            chrome
+                            chrome_android
+                            edge
+                            firefox
+                            firefox_android
+                            safari
+                            safari_ios
+                          }
+                        }
+                      }
+                    }
+                    token {
+                      id
+                      parentId
+                    }
                   }
                 }
               }

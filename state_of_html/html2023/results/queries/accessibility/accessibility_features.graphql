@@ -1,10 +1,13 @@
-query html2023itemsQuery {
+query {
   surveys {
     state_of_html {
       html2023 {
         accessibility {
           accessibility_features: _items {
             id
+            _metadata {
+              sectionId
+            }
             entity {
               name
               nameClean
@@ -33,6 +36,30 @@ query html2023itemsQuery {
                 code
                 codeHighlighted
               }
+              resources {
+                title
+                url
+              }
+              webFeature {
+                id
+                description_html
+                group
+                name
+                spec
+                status {
+                  baseline
+                  baseline_low_date
+                  support {
+                    chrome
+                    chrome_android
+                    edge
+                    firefox
+                    firefox_android
+                    safari
+                    safari_ios
+                  }
+                }
+              }
             }
             comments {
               currentEdition {
@@ -47,6 +74,7 @@ query html2023itemsQuery {
                   usage
                   retention
                   positivity
+                  positivityRelative
                 }
                 buckets {
                   count

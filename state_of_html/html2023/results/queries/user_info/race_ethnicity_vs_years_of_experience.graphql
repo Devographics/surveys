@@ -1,17 +1,34 @@
-query html2023raceEthnicityVsYearsOfExperienceQuery {
+query {
   surveys {
     state_of_html {
       html2023 {
         user_info {
           race_ethnicity_vs_years_of_experience: race_ethnicity {
+            id
+            comments {
+              currentEdition {
+                count
+              }
+            }
             responses(
               facet: user_info__years_of_experience
               parameters: {
-                enableCache: false
                 showNoAnswer: true
               }
             ) {
               currentEdition {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                  limit
+                  cutoff
+                }
                 completion {
                   count
                   percentageSurvey
@@ -56,6 +73,12 @@ query html2023raceEthnicityVsYearsOfExperienceQuery {
                     twitter {
                       url
                     }
+                    bluesky {
+                      url
+                    }
+                    threads {
+                      url
+                    }
                     twitch {
                       url
                     }
@@ -84,6 +107,26 @@ query html2023raceEthnicityVsYearsOfExperienceQuery {
                       url
                       title
                     }
+                    webFeature {
+                      id
+                      description_html
+                      group
+                      name
+                      spec
+                      status {
+                        baseline
+                        baseline_low_date
+                        support {
+                          chrome
+                          chrome_android
+                          edge
+                          firefox
+                          firefox_android
+                          safari
+                          safari_ios
+                        }
+                      }
+                    }
                   }
                   averageByFacet
                   percentilesByFacet {
@@ -99,7 +142,95 @@ query html2023raceEthnicityVsYearsOfExperienceQuery {
                     id
                     count
                     percentageBucket
+                    percentageQuestion
                     hasInsufficientData
+                    entity {
+                      name
+                      nameHtml
+                      nameClean
+                      alias
+                      description
+                      descriptionHtml
+                      descriptionClean
+                      id
+                      entityType
+                      example {
+                        label
+                        language
+                        code
+                        codeHighlighted
+                      }
+                      avatar {
+                        url
+                      }
+                      homepage {
+                        url
+                      }
+                      youtube {
+                        url
+                      }
+                      twitter {
+                        url
+                      }
+                      bluesky {
+                        url
+                      }
+                      threads {
+                        url
+                      }
+                      twitch {
+                        url
+                      }
+                      rss {
+                        url
+                      }
+                      blog {
+                        url
+                      }
+                      mastodon {
+                        url
+                      }
+                      github {
+                        url
+                      }
+                      npm {
+                        url
+                      }
+                      mdn {
+                        url
+                      }
+                      caniuse {
+                        url
+                      }
+                      resources {
+                        url
+                        title
+                      }
+                      webFeature {
+                        id
+                        description_html
+                        group
+                        name
+                        spec
+                        status {
+                          baseline
+                          baseline_low_date
+                          support {
+                            chrome
+                            chrome_android
+                            edge
+                            firefox
+                            firefox_android
+                            safari
+                            safari_ios
+                          }
+                        }
+                      }
+                    }
+                    token {
+                      id
+                      parentId
+                    }
                   }
                 }
               }

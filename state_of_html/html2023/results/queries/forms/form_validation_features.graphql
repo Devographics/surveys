@@ -1,18 +1,35 @@
-query html2023formValidationFeaturesQuery {
+query {
   surveys {
     state_of_html {
       html2023 {
         forms {
-          form_validation_features {
+          form_validation_features: form_validation_features {
+            id
+            comments {
+              currentEdition {
+                count
+              }
+            }
             responses(
               parameters: {
                 showNoAnswer: true
-                cutoff: 10
-                limit: 20
                 mergeOtherBuckets: false
+                cutoff: 10
               }
             ) {
               currentEdition {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                  limit
+                  cutoff
+                }
                 completion {
                   count
                   percentageSurvey
@@ -57,6 +74,12 @@ query html2023formValidationFeaturesQuery {
                     twitter {
                       url
                     }
+                    bluesky {
+                      url
+                    }
+                    threads {
+                      url
+                    }
                     twitch {
                       url
                     }
@@ -84,6 +107,26 @@ query html2023formValidationFeaturesQuery {
                     resources {
                       url
                       title
+                    }
+                    webFeature {
+                      id
+                      description_html
+                      group
+                      name
+                      spec
+                      status {
+                        baseline
+                        baseline_low_date
+                        support {
+                          chrome
+                          chrome_android
+                          edge
+                          firefox
+                          firefox_android
+                          safari
+                          safari_ios
+                        }
+                      }
                     }
                   }
                 }

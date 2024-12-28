@@ -1,9 +1,15 @@
-query html2023htmlMissingElementsQuery {
+query {
   surveys {
     state_of_html {
       html2023 {
         usage {
-          html_missing_elements {
+          html_missing_elements: html_missing_elements {
+            id
+            comments {
+              currentEdition {
+                count
+              }
+            }
             combined(
               parameters: {
                 showNoAnswer: true
@@ -14,6 +20,18 @@ query html2023htmlMissingElementsQuery {
               }
             ) {
               currentEdition {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                  limit
+                  cutoff
+                }
                 completion {
                   count
                   percentageSurvey
@@ -58,6 +76,12 @@ query html2023htmlMissingElementsQuery {
                     twitter {
                       url
                     }
+                    bluesky {
+                      url
+                    }
+                    threads {
+                      url
+                    }
                     twitch {
                       url
                     }
@@ -85,6 +109,26 @@ query html2023htmlMissingElementsQuery {
                     resources {
                       url
                       title
+                    }
+                    webFeature {
+                      id
+                      description_html
+                      group
+                      name
+                      spec
+                      status {
+                        baseline
+                        baseline_low_date
+                        support {
+                          chrome
+                          chrome_android
+                          edge
+                          firefox
+                          firefox_android
+                          safari
+                          safari_ios
+                        }
+                      }
                     }
                   }
                   groupedBuckets {
@@ -122,6 +166,12 @@ query html2023htmlMissingElementsQuery {
                       twitter {
                         url
                       }
+                      bluesky {
+                        url
+                      }
+                      threads {
+                        url
+                      }
                       twitch {
                         url
                       }
@@ -149,6 +199,26 @@ query html2023htmlMissingElementsQuery {
                       resources {
                         url
                         title
+                      }
+                      webFeature {
+                        id
+                        description_html
+                        group
+                        name
+                        spec
+                        status {
+                          baseline
+                          baseline_low_date
+                          support {
+                            chrome
+                            chrome_android
+                            edge
+                            firefox
+                            firefox_android
+                            safari
+                            safari_ios
+                          }
+                        }
                       }
                     }
                   }

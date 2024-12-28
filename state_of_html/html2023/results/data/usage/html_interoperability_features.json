@@ -5,8 +5,17 @@
         "html2023": {
           "usage": {
             "html_interoperability_features": {
+              "id": "html_interoperability_features",
               "freeform": {
                 "currentEdition": {
+                  "_metadata": {
+                    "axis1Sort": {
+                      "property": "count",
+                      "order": "desc"
+                    },
+                    "limit": 20,
+                    "cutoff": 10
+                  },
                   "completion": {
                     "count": 1930,
                     "percentageSurvey": 9.23,
@@ -49,7 +58,29 @@
                             "url": "https://open-ui.org/components/popover.research.explainer/",
                             "title": "Popover API (Explainer) | Open UI"
                           }
-                        ]
+                        ],
+                        "webFeature": {
+                          "id": "popover",
+                          "description_html": "The <code>popover</code> HTML attribute creates an overlay to display content on top of other page content. Popovers can be shown declaratively using HTML, or using the <code>showPopover()</code> method.",
+                          "group": [
+                            "html"
+                          ],
+                          "name": "Popover",
+                          "spec": [
+                            "https://html.spec.whatwg.org/multipage/popover.html"
+                          ],
+                          "status": {
+                            "baseline": "false",
+                            "support": {
+                              "chrome": "114",
+                              "chrome_android": "114",
+                              "edge": "114",
+                              "firefox": "125",
+                              "firefox_android": "125",
+                              "safari": "17"
+                            }
+                          }
+                        }
                       }
                     },
                     {
@@ -78,7 +109,31 @@
                             "url": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element",
                             "title": "HTML Standard"
                           }
-                        ]
+                        ],
+                        "webFeature": {
+                          "id": "dialog",
+                          "description_html": "The <code>&#x3C;dialog></code> HTML element represents a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.",
+                          "group": [
+                            "html-elements"
+                          ],
+                          "name": "<dialog>",
+                          "spec": [
+                            "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element"
+                          ],
+                          "status": {
+                            "baseline": "high",
+                            "baseline_low_date": "2022-03-14",
+                            "support": {
+                              "chrome": "37",
+                              "chrome_android": "37",
+                              "edge": "79",
+                              "firefox": "98",
+                              "firefox_android": "98",
+                              "safari": "15.4",
+                              "safari_ios": "15.4"
+                            }
+                          }
+                        }
                       }
                     },
                     {
@@ -97,7 +152,7 @@
                           "codeHighlighted": "::<span class=\"hljs-built_in\">view-transition-old</span>(main-image),\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">transform-origin</span>: right top;\n}\n\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">animation</span>: <span class=\"hljs-number\">400ms</span> ease-out both grow;\n}\n\n<span class=\"hljs-selector-tag\">figure</span> {\n  view-<span class=\"hljs-attribute\">transition</span>-name: main-image;\n}"
                         },
                         "mdn": {
-                          "url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API"
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API"
                         },
                         "caniuse": {
                           "url": "https://caniuse.com/mdn-api_viewtransition"
@@ -107,7 +162,26 @@
                             "url": "https://developer.chrome.com/docs/web-platform/view-transitions/",
                             "title": "Smooth and simple transitions with the View Transitions API"
                           }
-                        ]
+                        ],
+                        "webFeature": {
+                          "id": "cross-document-view-transitions",
+                          "description_html": "The <code>@view-transition</code> CSS rule sets whether a document opts-in to transitions between documents in a multi-page application. Both the old and new document must opt-in for a transition to be triggered.",
+                          "group": [
+                            "view-transitions"
+                          ],
+                          "name": "Cross-document view transitions",
+                          "spec": [
+                            "https://drafts.csswg.org/css-view-transitions-2/#cross-doc-opt-in"
+                          ],
+                          "status": {
+                            "baseline": "false",
+                            "support": {
+                              "chrome": "126",
+                              "chrome_android": "126",
+                              "edge": "126"
+                            }
+                          }
+                        }
                       }
                     },
                     {
@@ -131,6 +205,30 @@
                         },
                         "caniuse": {
                           "url": "https://caniuse.com/css-has"
+                        },
+                        "webFeature": {
+                          "id": "has",
+                          "description_html": "The <code>:has()</code> CSS functional pseudo-class matches an element if any of the selectors passed as parameters would match at least one element.",
+                          "group": [
+                            "selectors"
+                          ],
+                          "name": ":has()",
+                          "spec": [
+                            "https://drafts.csswg.org/selectors-4/#relational"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2023-12-19",
+                            "support": {
+                              "chrome": "105",
+                              "chrome_android": "105",
+                              "edge": "105",
+                              "firefox": "121",
+                              "firefox_android": "121",
+                              "safari": "15.4",
+                              "safari_ios": "15.4"
+                            }
+                          }
                         }
                       }
                     },
@@ -253,6 +351,30 @@
                         },
                         "caniuse": {
                           "url": "https://caniuse.com/css-subgrid"
+                        },
+                        "webFeature": {
+                          "id": "subgrid",
+                          "description_html": "The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.",
+                          "group": [
+                            "grid"
+                          ],
+                          "name": "Subgrid",
+                          "spec": [
+                            "https://drafts.csswg.org/css-grid-2/#subgrids"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2023-09-15",
+                            "support": {
+                              "chrome": "117",
+                              "chrome_android": "117",
+                              "edge": "117",
+                              "firefox": "71",
+                              "firefox_android": "79",
+                              "safari": "16",
+                              "safari_ios": "16"
+                            }
+                          }
                         }
                       }
                     },
@@ -312,7 +434,29 @@
                             "url": "https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element",
                             "title": "The datalist element"
                           }
-                        ]
+                        ],
+                        "webFeature": {
+                          "id": "datalist",
+                          "description_html": "The <code>&#x3C;datalist></code> element sets recommended values for an <code>&#x3C;input></code> element. Browsers may show a dropdown menu of all values or match values as the user types.",
+                          "group": [
+                            "forms"
+                          ],
+                          "name": "<datalist>",
+                          "spec": [
+                            "https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element"
+                          ],
+                          "status": {
+                            "baseline": "false",
+                            "support": {
+                              "chrome": "69",
+                              "chrome_android": "69",
+                              "edge": "12",
+                              "firefox": "110",
+                              "safari": "12.1",
+                              "safari_ios": "12.2"
+                            }
+                          }
+                        }
                       }
                     },
                     {
@@ -352,7 +496,32 @@
                             "url": "https://chromestatus.com/feature/5191745052606464",
                             "title": "Chrome Platform Status"
                           }
-                        ]
+                        ],
+                        "webFeature": {
+                          "id": "declarative-shadow-dom",
+                          "description_html": "The <code>shadowrootmode</code> attribute on <code>&#x3C;template></code> creates a shadow root without the use of JavaScript. It is a declarative alternative to the <code>attachShadow()</code> method.",
+                          "group": [
+                            "html",
+                            "web-components"
+                          ],
+                          "name": "Declarative shadow DOM",
+                          "spec": [
+                            "https://html.spec.whatwg.org/multipage/scripting.html#attr-template-shadowrootmode"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2024-02-20",
+                            "support": {
+                              "chrome": "111",
+                              "chrome_android": "111",
+                              "edge": "111",
+                              "firefox": "123",
+                              "firefox_android": "123",
+                              "safari": "16.4",
+                              "safari_ios": "16.4"
+                            }
+                          }
+                        }
                       }
                     },
                     {
@@ -385,7 +554,25 @@
                             "url": "https://fs.spec.whatwg.org/",
                             "title": "File System API Specification"
                           }
-                        ]
+                        ],
+                        "webFeature": {
+                          "id": "file-system-access",
+                          "description_html": "The <code>showOpenFilePicker()</code>, <code>showDirectoryPicker()</code>, and <code>showSaveFilePicker()</code> methods request access to files and directories on the user's device and returns a handle for reading and writing to them.",
+                          "group": [
+                            "file-system"
+                          ],
+                          "name": "File system access",
+                          "spec": [
+                            "https://wicg.github.io/file-system-access/"
+                          ],
+                          "status": {
+                            "baseline": "false",
+                            "support": {
+                              "chrome": "86",
+                              "edge": "86"
+                            }
+                          }
+                        }
                       }
                     },
                     {
@@ -464,6 +651,12 @@
                           "code": ".slider-link {\n  anchor-name: var(--is);\n}\n",
                           "codeHighlighted": "<span class=\"hljs-selector-class\">.slider-link</span> {\n  anchor-name: <span class=\"hljs-built_in\">var</span>(--is);\n}"
                         },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-anchor-positioning"
+                        },
                         "resources": [
                           {
                             "url": "https://kizu.dev/anchor-positioning-experiments/",
@@ -473,17 +666,30 @@
                             "url": "https://developer.chrome.com/blog/tether-elements-to-each-other-with-css-anchor-positioning/",
                             "title": "Tether elements to each other with CSS anchor positioning\n"
                           }
-                        ]
+                        ],
+                        "webFeature": {
+                          "id": "anchor-positioning",
+                          "description_html": "Anchor positioning places an element based on the position of another element. For example, you can place a tooltip next to the content it references.",
+                          "name": "Anchor positioning",
+                          "spec": [
+                            "https://drafts.csswg.org/css-anchor-position-1/#anchoring"
+                          ],
+                          "status": {
+                            "baseline": "false",
+                            "support": {
+                              "chrome": "125",
+                              "chrome_android": "125",
+                              "edge": "125"
+                            }
+                          }
+                        }
                       }
                     },
                     {
-                      "count": 18970,
+                      "count": 18974,
                       "id": "no_answer",
                       "percentageQuestion": 0,
-                      "percentageSurvey": 90.75,
-                      "entity": {
-                        "entityType": "default"
-                      }
+                      "percentageSurvey": 90.77
                     },
                     {
                       "count": 1693,
@@ -507,10 +713,7 @@
                           "count": 471,
                           "id": "no_match",
                           "percentageQuestion": 24.4,
-                          "percentageSurvey": 2.25,
-                          "entity": {
-                            "entityType": "default"
-                          }
+                          "percentageSurvey": 2.25
                         }
                       ]
                     }

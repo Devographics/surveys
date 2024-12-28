@@ -7,6 +7,9 @@
             "accessibility_features": [
               {
                 "id": "landmark_elements",
+                "_metadata": {
+                  "sectionId": "accessibility"
+                },
                 "entity": {
                   "name": "Landmark elements",
                   "nameClean": "Landmark elements",
@@ -22,51 +25,59 @@
                 },
                 "responses": {
                   "currentEdition": {
+                    "ratios": {
+                      "awareness": 0.99,
+                      "interest": 0.89,
+                      "usage": 0.95,
+                      "retention": 0.98,
+                      "positivity": 0.44,
+                      "positivityRelative": 0.98
+                    },
                     "buckets": [
                       {
-                        "count": 104,
+                        "count": 105,
                         "id": "never_heard",
                         "facetBuckets": [
                           {
-                            "count": 68,
+                            "count": 69,
                             "id": "neutral",
-                            "percentageBucket": 65.38,
+                            "percentageBucket": 65.71,
                             "percentageQuestion": 0.52,
                             "percentageSurvey": 0.33
                           },
                           {
                             "count": 36,
                             "id": "insufficient_data",
-                            "percentageBucket": 35
+                            "percentageBucket": 34
                           }
                         ],
-                        "percentageQuestion": 0.79,
+                        "percentageQuestion": 0.8,
                         "percentageSurvey": 0.5
                       },
                       {
-                        "count": 427,
+                        "count": 428,
                         "id": "heard",
                         "facetBuckets": [
                           {
-                            "count": 17,
-                            "id": "negative",
-                            "percentageBucket": 3.98,
-                            "percentageQuestion": 0.13,
-                            "percentageSurvey": 0.08
-                          },
-                          {
                             "count": 268,
                             "id": "neutral",
-                            "percentageBucket": 62.76,
+                            "percentageBucket": 62.62,
                             "percentageQuestion": 2.03,
                             "percentageSurvey": 1.28
                           },
                           {
-                            "count": 142,
+                            "count": 143,
                             "id": "positive",
-                            "percentageBucket": 33.26,
+                            "percentageBucket": 33.41,
                             "percentageQuestion": 1.08,
                             "percentageSurvey": 0.68
+                          },
+                          {
+                            "count": 17,
+                            "id": "negative",
+                            "percentageBucket": 3.97,
+                            "percentageQuestion": 0.13,
+                            "percentageSurvey": 0.08
                           },
                           {
                             "count": 0,
@@ -75,12 +86,19 @@
                           }
                         ],
                         "percentageQuestion": 3.24,
-                        "percentageSurvey": 2.04
+                        "percentageSurvey": 2.05
                       },
                       {
-                        "count": 12616,
+                        "count": 12658,
                         "id": "used",
                         "facetBuckets": [
+                          {
+                            "count": 5717,
+                            "id": "positive",
+                            "percentageBucket": 45.17,
+                            "percentageQuestion": 43.34,
+                            "percentageSurvey": 27.35
+                          },
                           {
                             "count": 69,
                             "id": "negative",
@@ -89,18 +107,11 @@
                             "percentageSurvey": 0.33
                           },
                           {
-                            "count": 5701,
-                            "id": "positive",
-                            "percentageBucket": 45.19,
-                            "percentageQuestion": 43.22,
-                            "percentageSurvey": 27.27
-                          },
-                          {
-                            "count": 6846,
+                            "count": 6872,
                             "id": "neutral",
-                            "percentageBucket": 54.26,
-                            "percentageQuestion": 51.9,
-                            "percentageSurvey": 32.75
+                            "percentageBucket": 54.29,
+                            "percentageQuestion": 52.1,
+                            "percentageSurvey": 32.87
                           },
                           {
                             "count": 0,
@@ -108,8 +119,8 @@
                             "percentageBucket": 0
                           }
                         ],
-                        "percentageQuestion": 95.64,
-                        "percentageSurvey": 60.35
+                        "percentageQuestion": 95.96,
+                        "percentageSurvey": 60.55
                       }
                     ],
                     "completion": {
@@ -122,6 +133,9 @@
               },
               {
                 "id": "tabindex_attribute",
+                "_metadata": {
+                  "sectionId": "accessibility"
+                },
                 "entity": {
                   "name": "`tabindex` attribute",
                   "nameClean": "tabindex attribute",
@@ -139,6 +153,36 @@
                     "language": "html",
                     "code": "<div role=\"button\" tabindex=\"0\">I’m Tabbable</div>",
                     "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">role</span>=<span class=\"hljs-string\">&quot;button&quot;</span> <span class=\"hljs-attr\">tabindex</span>=<span class=\"hljs-string\">&quot;0&quot;</span>&gt;</span>I’m Tabbable<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>"
+                  },
+                  "resources": [
+                    {
+                      "title": "HTML Standard",
+                      "url": "https://html.spec.whatwg.org/multipage/interaction.html#attr-tabindex"
+                    }
+                  ],
+                  "webFeature": {
+                    "id": "tabindex",
+                    "description_html": "The <code>tabindex</code> HTML attribute make an element focusable, and sets the element's relative ordering for sequential focus navigation.",
+                    "group": [
+                      "html"
+                    ],
+                    "name": "tabindex",
+                    "spec": [
+                      "https://html.spec.whatwg.org/multipage/interaction.html#attr-tabindex"
+                    ],
+                    "status": {
+                      "baseline": "high",
+                      "baseline_low_date": "2018-10-02",
+                      "support": {
+                        "chrome": "1",
+                        "chrome_android": "18",
+                        "edge": "18",
+                        "firefox": "1.5",
+                        "firefox_android": "4",
+                        "safari": "3.1",
+                        "safari_ios": "2"
+                      }
+                    }
                   }
                 },
                 "comments": {
@@ -148,31 +192,39 @@
                 },
                 "responses": {
                   "currentEdition": {
+                    "ratios": {
+                      "awareness": 0.93,
+                      "interest": 0.87,
+                      "usage": 0.82,
+                      "retention": 0.89,
+                      "positivity": 0.34,
+                      "positivityRelative": 0.89
+                    },
                     "buckets": [
                       {
-                        "count": 836,
+                        "count": 839,
                         "id": "never_heard",
                         "facetBuckets": [
                           {
+                            "count": 295,
+                            "id": "positive",
+                            "percentageBucket": 35.16,
+                            "percentageQuestion": 2.24,
+                            "percentageSurvey": 1.41
+                          },
+                          {
                             "count": 24,
                             "id": "negative",
-                            "percentageBucket": 2.87,
+                            "percentageBucket": 2.86,
                             "percentageQuestion": 0.18,
                             "percentageSurvey": 0.11
                           },
                           {
-                            "count": 518,
+                            "count": 520,
                             "id": "neutral",
-                            "percentageBucket": 61.96,
-                            "percentageQuestion": 3.93,
-                            "percentageSurvey": 2.48
-                          },
-                          {
-                            "count": 294,
-                            "id": "positive",
-                            "percentageBucket": 35.17,
-                            "percentageQuestion": 2.23,
-                            "percentageSurvey": 1.41
+                            "percentageBucket": 61.98,
+                            "percentageQuestion": 3.95,
+                            "percentageSurvey": 2.49
                           },
                           {
                             "count": 0,
@@ -180,33 +232,33 @@
                             "percentageBucket": 0
                           }
                         ],
-                        "percentageQuestion": 6.35,
-                        "percentageSurvey": 4
+                        "percentageQuestion": 6.37,
+                        "percentageSurvey": 4.01
                       },
                       {
-                        "count": 1519,
+                        "count": 1524,
                         "id": "heard",
                         "facetBuckets": [
                           {
-                            "count": 63,
+                            "count": 64,
                             "id": "negative",
-                            "percentageBucket": 4.15,
-                            "percentageQuestion": 0.48,
-                            "percentageSurvey": 0.3
+                            "percentageBucket": 4.2,
+                            "percentageQuestion": 0.49,
+                            "percentageSurvey": 0.31
                           },
                           {
-                            "count": 454,
+                            "count": 456,
                             "id": "positive",
-                            "percentageBucket": 29.89,
-                            "percentageQuestion": 3.45,
-                            "percentageSurvey": 2.17
+                            "percentageBucket": 29.92,
+                            "percentageQuestion": 3.46,
+                            "percentageSurvey": 2.18
                           },
                           {
-                            "count": 1002,
+                            "count": 1004,
                             "id": "neutral",
-                            "percentageBucket": 65.96,
-                            "percentageQuestion": 7.61,
-                            "percentageSurvey": 4.79
+                            "percentageBucket": 65.88,
+                            "percentageQuestion": 7.63,
+                            "percentageSurvey": 4.8
                           },
                           {
                             "count": 0,
@@ -214,31 +266,31 @@
                             "percentageBucket": 0
                           }
                         ],
-                        "percentageQuestion": 11.54,
-                        "percentageSurvey": 7.27
+                        "percentageQuestion": 11.58,
+                        "percentageSurvey": 7.29
                       },
                       {
-                        "count": 10765,
+                        "count": 10801,
                         "id": "used",
                         "facetBuckets": [
                           {
-                            "count": 6554,
+                            "count": 6578,
                             "id": "neutral",
-                            "percentageBucket": 60.88,
-                            "percentageQuestion": 49.79,
-                            "percentageSurvey": 31.35
+                            "percentageBucket": 60.9,
+                            "percentageQuestion": 49.97,
+                            "percentageSurvey": 31.47
                           },
                           {
-                            "count": 3748,
+                            "count": 3760,
                             "id": "positive",
-                            "percentageBucket": 34.82,
-                            "percentageQuestion": 28.47,
-                            "percentageSurvey": 17.93
+                            "percentageBucket": 34.81,
+                            "percentageQuestion": 28.56,
+                            "percentageSurvey": 17.99
                           },
                           {
                             "count": 463,
                             "id": "negative",
-                            "percentageBucket": 4.3,
+                            "percentageBucket": 4.29,
                             "percentageQuestion": 3.52,
                             "percentageSurvey": 2.21
                           },
@@ -248,8 +300,8 @@
                             "percentageBucket": 0
                           }
                         ],
-                        "percentageQuestion": 81.78,
-                        "percentageSurvey": 51.5
+                        "percentageQuestion": 82.05,
+                        "percentageSurvey": 51.67
                       }
                     ],
                     "completion": {
@@ -262,6 +314,9 @@
               },
               {
                 "id": "focusgroup_attribute",
+                "_metadata": {
+                  "sectionId": "accessibility"
+                },
                 "entity": {
                   "name": "`focusgroup` attribute",
                   "nameClean": "focusgroup attribute",
@@ -273,7 +328,25 @@
                     "language": "html",
                     "code": "<div focusgroup=\"wrap horizontal\">\n\t<!-- child elements -->\n</div>",
                     "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">focusgroup</span>=<span class=\"hljs-string\">&quot;wrap horizontal&quot;</span>&gt;</span>\n\t<span class=\"hljs-comment\">&lt;!-- child elements --&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>"
-                  }
+                  },
+                  "resources": [
+                    {
+                      "title": "focusgroup (Explainer) | Open UI",
+                      "url": "https://open-ui.org/components/focusgroup.explainer/"
+                    },
+                    {
+                      "title": "focusgroup for HTML and CSS",
+                      "url": "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/Focusgroup/explainer.md?rgh-link-date=2022-02-20T23%3A49%3A02Z"
+                    },
+                    {
+                      "title": "Chrome Platform Status",
+                      "url": "https://chromestatus.com/feature/5637601087193088"
+                    },
+                    {
+                      "title": "1286127 -       chromium -      An open-source project to help move the web forward. -     Monorail",
+                      "url": "https://bugs.chromium.org/p/chromium/issues/detail?id=1286127"
+                    }
+                  ]
                 },
                 "comments": {
                   "currentEdition": {
@@ -282,31 +355,39 @@
                 },
                 "responses": {
                   "currentEdition": {
+                    "ratios": {
+                      "awareness": 0.2,
+                      "interest": 0.94,
+                      "usage": 0.01,
+                      "retention": 0,
+                      "positivity": 0.35,
+                      "positivityRelative": 0.95
+                    },
                     "buckets": [
                       {
-                        "count": 10434,
+                        "count": 10470,
                         "id": "never_heard",
                         "facetBuckets": [
                           {
-                            "count": 3877,
+                            "count": 3892,
                             "id": "positive",
-                            "percentageBucket": 37.16,
-                            "percentageQuestion": 29.58,
-                            "percentageSurvey": 18.55
+                            "percentageBucket": 37.17,
+                            "percentageQuestion": 29.69,
+                            "percentageSurvey": 18.62
                           },
                           {
-                            "count": 6381,
-                            "id": "neutral",
-                            "percentageBucket": 61.16,
-                            "percentageQuestion": 48.68,
-                            "percentageSurvey": 30.53
-                          },
-                          {
-                            "count": 176,
+                            "count": 177,
                             "id": "negative",
                             "percentageBucket": 1.69,
-                            "percentageQuestion": 1.34,
-                            "percentageSurvey": 0.84
+                            "percentageQuestion": 1.35,
+                            "percentageSurvey": 0.85
+                          },
+                          {
+                            "count": 6401,
+                            "id": "neutral",
+                            "percentageBucket": 61.14,
+                            "percentageQuestion": 48.83,
+                            "percentageSurvey": 30.62
                           },
                           {
                             "count": 0,
@@ -314,42 +395,42 @@
                             "percentageBucket": 0
                           }
                         ],
-                        "percentageQuestion": 79.6,
-                        "percentageSurvey": 49.91
+                        "percentageQuestion": 79.87,
+                        "percentageSurvey": 50.09
                       },
                       {
-                        "count": 2404,
+                        "count": 2411,
                         "id": "heard",
                         "facetBuckets": [
                           {
-                            "count": 754,
-                            "id": "positive",
-                            "percentageBucket": 31.36,
-                            "percentageQuestion": 5.75,
-                            "percentageSurvey": 3.61
-                          },
-                          {
-                            "count": 1608,
-                            "id": "neutral",
-                            "percentageBucket": 66.89,
-                            "percentageQuestion": 12.27,
-                            "percentageSurvey": 7.69
-                          },
-                          {
                             "count": 42,
                             "id": "negative",
-                            "percentageBucket": 1.75,
+                            "percentageBucket": 1.74,
                             "percentageQuestion": 0.32,
                             "percentageSurvey": 0.2
                           },
                           {
+                            "count": 757,
+                            "id": "positive",
+                            "percentageBucket": 31.4,
+                            "percentageQuestion": 5.78,
+                            "percentageSurvey": 3.62
+                          },
+                          {
+                            "count": 1612,
+                            "id": "neutral",
+                            "percentageBucket": 66.86,
+                            "percentageQuestion": 12.3,
+                            "percentageSurvey": 7.71
+                          },
+                          {
                             "count": 0,
                             "id": "insufficient_data",
                             "percentageBucket": 0
                           }
                         ],
-                        "percentageQuestion": 18.34,
-                        "percentageSurvey": 11.5
+                        "percentageQuestion": 18.39,
+                        "percentageSurvey": 11.53
                       },
                       {
                         "count": 227,
@@ -382,6 +463,9 @@
               },
               {
                 "id": "search_element",
+                "_metadata": {
+                  "sectionId": "accessibility"
+                },
                 "entity": {
                   "name": "`<search>`",
                   "nameClean": "search",
@@ -403,6 +487,44 @@
                     "language": "html",
                     "code": "<search>\n  <form action=\"search.php\">\n    <label>Find: <input name=\"q\" type=\"search\"></label>\n    <button>Go!</button>\n  </form>\n</search>",
                     "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">search</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">form</span> <span class=\"hljs-attr\">action</span>=<span class=\"hljs-string\">&quot;search.php&quot;</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">label</span>&gt;</span>Find: <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">&quot;q&quot;</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">&quot;search&quot;</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">label</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span>&gt;</span>Go!<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">form</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">search</span>&gt;</span>"
+                  },
+                  "resources": [
+                    {
+                      "title": "HTML Standard",
+                      "url": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-search-element"
+                    },
+                    {
+                      "title": "The search element | scottohara.me",
+                      "url": "https://www.scottohara.me/blog/2023/03/24/search-element.html"
+                    },
+                    {
+                      "title": "&lt;search&gt; HTML element · Issue #714 · w3ctag/design-reviews · GitHub",
+                      "url": "https://github.com/w3ctag/design-reviews/issues/714"
+                    }
+                  ],
+                  "webFeature": {
+                    "id": "search",
+                    "description_html": "The <code>&#x3C;search></code> HTML element is a container that represents the parts of the web page with search functionality.",
+                    "group": [
+                      "html-elements"
+                    ],
+                    "name": "<search>",
+                    "spec": [
+                      "https://html.spec.whatwg.org/multipage/grouping-content.html#the-search-element"
+                    ],
+                    "status": {
+                      "baseline": "low",
+                      "baseline_low_date": "2023-10-13",
+                      "support": {
+                        "chrome": "118",
+                        "chrome_android": "118",
+                        "edge": "118",
+                        "firefox": "118",
+                        "firefox_android": "118",
+                        "safari": "17",
+                        "safari_ios": "17"
+                      }
+                    }
                   }
                 },
                 "comments": {
@@ -412,31 +534,39 @@
                 },
                 "responses": {
                   "currentEdition": {
+                    "ratios": {
+                      "awareness": 0.39,
+                      "interest": 0.94,
+                      "usage": 0.11,
+                      "retention": 0.96,
+                      "positivity": 0.38,
+                      "positivityRelative": 0.96
+                    },
                     "buckets": [
                       {
-                        "count": 7966,
+                        "count": 7990,
                         "id": "never_heard",
                         "facetBuckets": [
                           {
                             "count": 113,
                             "id": "negative",
-                            "percentageBucket": 1.42,
+                            "percentageBucket": 1.41,
                             "percentageQuestion": 0.86,
                             "percentageSurvey": 0.54
                           },
                           {
-                            "count": 4544,
-                            "id": "neutral",
-                            "percentageBucket": 57.04,
-                            "percentageQuestion": 34.54,
-                            "percentageSurvey": 21.74
-                          },
-                          {
-                            "count": 3309,
+                            "count": 3319,
                             "id": "positive",
                             "percentageBucket": 41.54,
-                            "percentageQuestion": 25.15,
-                            "percentageSurvey": 15.83
+                            "percentageQuestion": 25.23,
+                            "percentageSurvey": 15.88
+                          },
+                          {
+                            "count": 4558,
+                            "id": "neutral",
+                            "percentageBucket": 57.05,
+                            "percentageQuestion": 34.65,
+                            "percentageSurvey": 21.8
                           },
                           {
                             "count": 0,
@@ -444,33 +574,33 @@
                             "percentageBucket": 0
                           }
                         ],
-                        "percentageQuestion": 60.55,
-                        "percentageSurvey": 38.11
+                        "percentageQuestion": 60.73,
+                        "percentageSurvey": 38.22
                       },
                       {
-                        "count": 3595,
+                        "count": 3610,
                         "id": "heard",
                         "facetBuckets": [
                           {
-                            "count": 2241,
+                            "count": 2251,
                             "id": "neutral",
-                            "percentageBucket": 62.34,
-                            "percentageQuestion": 17.03,
-                            "percentageSurvey": 10.72
+                            "percentageBucket": 62.35,
+                            "percentageQuestion": 17.11,
+                            "percentageSurvey": 10.77
+                          },
+                          {
+                            "count": 1289,
+                            "id": "positive",
+                            "percentageBucket": 35.71,
+                            "percentageQuestion": 9.8,
+                            "percentageSurvey": 6.17
                           },
                           {
                             "count": 70,
                             "id": "negative",
-                            "percentageBucket": 1.95,
+                            "percentageBucket": 1.94,
                             "percentageQuestion": 0.53,
                             "percentageSurvey": 0.33
-                          },
-                          {
-                            "count": 1284,
-                            "id": "positive",
-                            "percentageBucket": 35.72,
-                            "percentageQuestion": 9.76,
-                            "percentageSurvey": 6.14
                           },
                           {
                             "count": 0,
@@ -478,11 +608,11 @@
                             "percentageBucket": 0
                           }
                         ],
-                        "percentageQuestion": 27.33,
-                        "percentageSurvey": 17.2
+                        "percentageQuestion": 27.44,
+                        "percentageSurvey": 17.27
                       },
                       {
-                        "count": 1552,
+                        "count": 1556,
                         "id": "used",
                         "facetBuckets": [
                           {
@@ -493,18 +623,18 @@
                             "percentageSurvey": 0.09
                           },
                           {
-                            "count": 474,
+                            "count": 476,
                             "id": "positive",
-                            "percentageBucket": 30.54,
-                            "percentageQuestion": 3.6,
-                            "percentageSurvey": 2.27
+                            "percentageBucket": 30.59,
+                            "percentageQuestion": 3.62,
+                            "percentageSurvey": 2.28
                           },
                           {
-                            "count": 1059,
+                            "count": 1061,
                             "id": "neutral",
-                            "percentageBucket": 68.23,
-                            "percentageQuestion": 8.05,
-                            "percentageSurvey": 5.07
+                            "percentageBucket": 68.19,
+                            "percentageQuestion": 8.06,
+                            "percentageSurvey": 5.08
                           },
                           {
                             "count": 0,
@@ -512,8 +642,8 @@
                             "percentageBucket": 0
                           }
                         ],
-                        "percentageQuestion": 11.8,
-                        "percentageSurvey": 7.42
+                        "percentageQuestion": 11.83,
+                        "percentageSurvey": 7.44
                       }
                     ],
                     "completion": {

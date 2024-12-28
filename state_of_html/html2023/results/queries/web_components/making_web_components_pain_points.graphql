@@ -1,19 +1,36 @@
-query html2023makingWebComponentsPainPointsQuery {
+query {
   surveys {
     state_of_html {
       html2023 {
         web_components {
-          making_web_components_pain_points {
+          making_web_components_pain_points: making_web_components_pain_points {
+            id
+            comments {
+              currentEdition {
+                count
+              }
+            }
             freeform(
               parameters: {
                 showNoAnswer: true
                 cutoff: 10
                 limit: 10
                 mergeOtherBuckets: true
-                enableCache: false
               }
             ) {
               currentEdition {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                  limit
+                  cutoff
+                }
                 completion {
                   count
                   percentageSurvey
@@ -58,6 +75,12 @@ query html2023makingWebComponentsPainPointsQuery {
                     twitter {
                       url
                     }
+                    bluesky {
+                      url
+                    }
+                    threads {
+                      url
+                    }
                     twitch {
                       url
                     }
@@ -85,6 +108,26 @@ query html2023makingWebComponentsPainPointsQuery {
                     resources {
                       url
                       title
+                    }
+                    webFeature {
+                      id
+                      description_html
+                      group
+                      name
+                      spec
+                      status {
+                        baseline
+                        baseline_low_date
+                        support {
+                          chrome
+                          chrome_android
+                          edge
+                          firefox
+                          firefox_android
+                          safari
+                          safari_ios
+                        }
+                      }
                     }
                   }
                   groupedBuckets {
@@ -122,6 +165,12 @@ query html2023makingWebComponentsPainPointsQuery {
                       twitter {
                         url
                       }
+                      bluesky {
+                        url
+                      }
+                      threads {
+                        url
+                      }
                       twitch {
                         url
                       }
@@ -149,6 +198,26 @@ query html2023makingWebComponentsPainPointsQuery {
                       resources {
                         url
                         title
+                      }
+                      webFeature {
+                        id
+                        description_html
+                        group
+                        name
+                        spec
+                        status {
+                          baseline
+                          baseline_low_date
+                          support {
+                            chrome
+                            chrome_android
+                            edge
+                            firefox
+                            firefox_android
+                            safari
+                            safari_ios
+                          }
+                        }
                       }
                     }
                   }
