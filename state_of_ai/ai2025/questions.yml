@@ -1,0 +1,412 @@
+- id: chatbots
+  template: toolv3
+  slug: tools
+  messageId: tools.tools_intro.ai2025
+  questions:
+    - id: chatgpt
+    - id: claude
+    - id: gemini
+    - id: microsoft_copilot
+    - id: llama
+    - id: perplexity
+    - id: phind
+
+    - id: chatbots_others
+      intlId: tools.other_tools
+      template: textList
+
+- id: coding_assistants
+  template: toolv3
+  slug: tools
+  questions:
+    - id: qodo
+    # - id: devin
+    - id: tabnine
+    - id: copilot
+    - id: jetbrains_ai
+    - id: amazon_q_developer
+    - id: supermaven
+
+    - id: coding_assistants_others
+      intlId: tools.other_tools
+      template: textList
+
+- id: code_generation
+  template: toolv3
+  slug: tools
+  questions:
+    - id: v0
+    - id: bolt
+    - id: replit_ai
+
+    - id: code_generation_others
+      intlId: tools.other_tools
+      template: textList
+
+- id: ides
+  template: toolv3
+  slug: tools
+  questions:
+    - id: cursor
+    - id: windsurf
+
+    - id: ides_others
+      intlId: tools.other_tools
+      template: textList
+
+- id: image_generation
+  template: toolv3
+  slug: tools
+  questions:
+    - id: midjourney
+    - id: stable_diffusion
+    - id: adobe_firefly
+    - id: dall_e
+
+    - id: image_generation_others
+      intlId: tools.other_tools
+      template: textList
+
+- id: other_tools
+  questions:
+    - id: ai_programming_languages
+      template: multipleWithOtherSentiment
+      matchTags: [languages]
+      options:
+        - id: javascript
+        - id: typescript
+        - id: php
+        - id: ruby
+        - id: python
+        - id: golang
+        - id: rust
+        - id: java
+        - id: c_cplusplus
+        - id: objective_c
+        - id: scala
+        - id: swift
+        - id: csharp
+        - id: haskell
+        - id: ocaml
+        - id: dart
+        - id: kotlin
+        - id: elixir
+        - id: bash
+        - id: clojure
+        - id: elm
+        - id: julia
+        - id: na
+
+    - id: ai_libraries_sdks
+      template: multipleWithOtherSentiment
+      matchTags: [languages]
+      options:
+        - id: pytorch
+        - id: tensorflow
+        - id: scikit
+        - id: vercel_ai_dsk
+
+    - id: ai_tools_others
+      template: textList
+
+- id: usage
+  questions:
+    - id: ai_generated_code_balance
+      template: slider
+
+    - id: ai_generated_code_refactoring
+      template: slider
+      # optionsAreNumeric: true
+      # options:
+      #   - id: 0 # no_refactoring
+      #   - id: 1 # low_refactoring
+      #   - id: 2 # medium_refactoring
+      #   - id: 3 # high_refactoring
+      #   - id: 4 # complete_refactoring
+
+    - id: ai_personal_expenses
+      template: single
+      options:
+        - id: range_0
+        - id: range_1_20
+        - id: range_21_50
+        - id: range_51_100
+        - id: range_101_500
+        - id: range_501_1000
+        - id: range_1001_5000
+        - id: range_over_5000
+
+    - id: ai_company_expenses
+      template: single
+      options:
+        - id: range_0
+        - id: range_1_20
+        - id: range_21_50
+        - id: range_51_100
+        - id: range_101_500
+        - id: range_501_1000
+        - id: range_1001_5000
+        - id: range_over_5000
+
+    - id: ai_code_generation_frequency
+      template: single
+      optionsAreNumeric: true
+      options:
+        - id: 0
+        - id: 1
+        - id: 2
+        - id: 3
+        - id: 4
+        - id: 5
+        - id: 6
+
+    - id: ai_learning_frequency
+      template: single
+      optionsAreNumeric: true
+      options:
+        - id: 0
+        - id: 1
+        - id: 2
+        - id: 3
+        - id: 4
+        - id: 5
+        - id: 6
+
+    - id: what_do_you_use_ai_for
+      template: multipleWithOther
+      matchTags: [js_uses]
+      options:
+        - id: frontend_development
+        - id: backend_development
+        - id: data_analysis
+        - id: machine_learning
+        - id: desktop_apps
+        - id: mobile_apps
+        - id: embedded_apps
+        - id: game_development
+        - id: data_visualization
+        - id: graphics_animation
+
+    # - id: what_tasks_do_you_use_ai_for
+    #   template: multipleWithOther
+    #   matchTags: [js_uses]
+    #   options:
+    #     - id: writing_code
+    #     - id: debugging
+    #     - id: refactoring
+    #     - id: documentation
+    #     - id: testing
+    #     - id: learning
+
+    - id: what_kind_of_code_generated
+      template: multipleWithOther
+      matchTags: [js_uses]
+      options:
+        - id: helper_functions
+        - id: frontend_components
+        - id: css_code
+        - id: core_app_logic
+        - id: api_integrations
+        - id: documentation_comments
+        - id: tests
+
+    - id: industry_sector
+      # intlId: usage.industry_sector_ai
+      template: multipleWithOther
+      matchTags: [industry_sectors]
+      options:
+        # - id: agriculture
+        # - id: automotive
+        # - id: construction
+        - id: consulting #
+        - id: cyber_security
+        - id: ecommerce #
+        - id: education #
+        # - id: energy
+        - id: entertainment #
+        - id: finance #
+        - id: government #
+        - id: healthcare #
+        # - id: hospitality
+        # - id: insurance
+        # - id: logistics
+        # - id: manufacturing
+        - id: marketing_tools #
+        - id: news_media #
+        - id: programming_tools #
+        # - id: real_estate
+        - id: socialmedia #
+        # - id: student
+        # - id: telecommunications
+        # - id: transport
+        # - id: travel
+
+    - id: ai_pain_points
+      template: multipleWithOther
+      limit: 3
+      options:
+        - id: misunderstood_prompt
+        - id: poor_generated_code
+        - id: ethical_concerns
+        - id: integration_difficulties
+        - id: costs
+        - id: environmental_impact
+        - id: lack_of_context
+
+    - id: ai_missing_features
+      template: textList
+
+    - id: ai_happiness
+      template: happiness
+
+- id: resources
+  questions:
+    # - id: courses
+    #   template: textList
+
+    - id: newsletters
+      intlId: resources.ai_newsletters
+      template: textList
+
+    - id: podcasts
+      intlId: resources.ai_podcasts
+      template: textList
+
+    - id: video_creators
+      intlId: resources.ai_video_creators
+      template: textList
+
+    - id: people
+      intlId: resources.ai_people
+      template: textList
+
+    - id: other_surveys
+      template: multipleWithOther
+      matchTags: [surveys]
+      options:
+        # - id: state_of_js_survey
+        - id: state_of_react_survey
+        - id: state_of_css_survey
+        # - id: state_of_graphql_survey
+        - id: state_of_html_survey
+        - id: jetbrains_survey
+        - id: stack_overflow_survey
+        - id: codingame_survey
+        - id: uxtools_survey
+        - id: postman_survey
+        - id: netlify_survey
+        - id: state_of_react_native
+        - id: state_of_frontend # TODO: add in 2025
+        - id: na
+
+- id: opinions
+  messageId: opinions.opinions_intro
+  questions:
+    - id: integral_workflow
+      template: opinion
+
+    - id: interested_in_developing_tools
+      template: opinion
+
+    - id: ai_reliance_worse_developers
+      template: opinion
+
+    - id: job_security_threat
+      template: opinion
+
+    - id: existential_risk
+      template: opinion
+
+    - id: reach_agi
+      template: opinion
+
+### DEMOGRAPHICS ###
+
+- id: user_info
+  slug: user_info
+  questions:
+    - id: age
+      template: age_number
+
+    - id: years_of_experience
+      template: years
+
+    - id: company_size
+      template: company_size
+
+    - id: yearly_salary
+      template: yearly_salary_v2
+
+    - id: higher_education_degree
+      template: higher_education_degree
+
+    - id: country
+      template: country
+
+    - id: gender
+      template: gender
+
+    - id: race_ethnicity
+      template: race_ethnicity
+
+    - id: disability_status
+      template: disability_status
+
+    - id: how_did_user_find_out_about_the_survey
+      template: text
+      matchType: single
+      matchTags:
+        [
+          people,
+          sites,
+          newsletters,
+          video_creators,
+          podcasts,
+          surveys,
+          events,
+          socialmedia,
+          common_sources,
+          state_of_css_sources,
+        ]
+
+    - id: how_can_we_improve
+      template: textList
+
+    - id: receive_notifications
+      template: receive_notifications
+
+    - id: referrer
+      matchType: single
+      matchTags:
+        [
+          people,
+          sites,
+          newsletters,
+          video_creators,
+          podcasts,
+          surveys,
+          events,
+          socialmedia,
+          common_sources,
+          state_of_css_sources,
+        ]
+      hidden: true
+      template: referrer
+
+    - id: sourcetag
+      matchType: single
+      matchTags:
+        [
+          people,
+          sites,
+          newsletters,
+          video_creators,
+          podcasts,
+          surveys,
+          events,
+          socialmedia,
+          common_sources,
+          state_of_css_sources,
+        ]
+      hidden: true
+      template: sourcetag
