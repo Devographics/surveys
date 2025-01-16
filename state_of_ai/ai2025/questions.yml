@@ -26,6 +26,7 @@
     - id: jetbrains_ai
     - id: amazon_q_developer
     - id: supermaven
+    - id: aider
 
     - id: coding_assistants_others
       intlId: tools.other_tools
@@ -103,26 +104,109 @@
       options:
         - id: pytorch
         - id: tensorflow
-        - id: scikit
-        - id: vercel_ai_dsk
+        - id: scikit_learn
+        - id: vercel_ai_sdk
+
+    - id: ai_browser_apis
+      template: multipleWithOther
+      limit: 3
+      options:
+        - id: translation
+        - id: language_detection
+        - id: summarization
+        - id: text_generation
+        - id: image_generation
+        - id: speech_generation
+        - id: speech_recognition
+        - id: computer_vision
+        - id: sentiment_analysis
+        - id: caption_generation
 
     - id: ai_tools_others
       template: textList
 
 - id: usage
   questions:
+    - id: ai_uses
+      template: multipleWithOther
+      options:
+        - id: code_generation
+        - id: translation
+        - id: summarization
+        - id: text_generation
+        - id: image_generation
+        - id: speech_generation
+        - id: speech_recognition
+        - id: computer_vision
+        - id: learning_research
+
     - id: ai_generated_code_balance
       template: slider
 
     - id: ai_generated_code_refactoring
       template: slider
-      # optionsAreNumeric: true
-      # options:
-      #   - id: 0 # no_refactoring
-      #   - id: 1 # low_refactoring
-      #   - id: 2 # medium_refactoring
-      #   - id: 3 # high_refactoring
-      #   - id: 4 # complete_refactoring
+
+    - id: ai_code_generation_frequency
+      template: single
+      optionsAreNumeric: true
+      options:
+        - id: 0
+        - id: 1
+        - id: 2
+        - id: 3
+        - id: 4
+        - id: 5
+        - id: 6
+
+    - id: ai_other_tasks_frequency
+      template: single
+      optionsAreNumeric: true
+      options:
+        - id: 0
+        - id: 1
+        - id: 2
+        - id: 3
+        - id: 4
+        - id: 5
+        - id: 6
+
+    # - id: ai_project_type
+    #   template: multipleWithOther
+    #   matchTags: [js_uses]
+    #   options:
+    #     - id: frontend_development
+    #     - id: backend_development
+    #     - id: data_analysis
+    #     - id: machine_learning
+    #     - id: desktop_apps
+    #     - id: mobile_apps
+    #     - id: embedded_apps
+    #     - id: game_development
+    #     - id: data_visualization
+    #     - id: graphics_animation
+
+    # - id: what_tasks_do_you_use_ai_for
+    #   template: multipleWithOther
+    #   matchTags: [js_uses]
+    #   options:
+    #     - id: writing_code
+    #     - id: debugging
+    #     - id: refactoring
+    #     - id: documentation
+    #     - id: testing
+    #     - id: learning
+
+    - id: ai_generated_code_type
+      template: multipleWithOther
+      matchTags: [js_uses]
+      options:
+        - id: helper_functions
+        - id: frontend_components
+        - id: css_code
+        - id: core_app_logic
+        - id: api_integrations
+        - id: documentation_comments
+        - id: tests
 
     - id: ai_personal_expenses
       template: single
@@ -147,68 +231,6 @@
         - id: range_501_1000
         - id: range_1001_5000
         - id: range_over_5000
-
-    - id: ai_code_generation_frequency
-      template: single
-      optionsAreNumeric: true
-      options:
-        - id: 0
-        - id: 1
-        - id: 2
-        - id: 3
-        - id: 4
-        - id: 5
-        - id: 6
-
-    - id: ai_learning_frequency
-      template: single
-      optionsAreNumeric: true
-      options:
-        - id: 0
-        - id: 1
-        - id: 2
-        - id: 3
-        - id: 4
-        - id: 5
-        - id: 6
-
-    - id: what_do_you_use_ai_for
-      template: multipleWithOther
-      matchTags: [js_uses]
-      options:
-        - id: frontend_development
-        - id: backend_development
-        - id: data_analysis
-        - id: machine_learning
-        - id: desktop_apps
-        - id: mobile_apps
-        - id: embedded_apps
-        - id: game_development
-        - id: data_visualization
-        - id: graphics_animation
-
-    # - id: what_tasks_do_you_use_ai_for
-    #   template: multipleWithOther
-    #   matchTags: [js_uses]
-    #   options:
-    #     - id: writing_code
-    #     - id: debugging
-    #     - id: refactoring
-    #     - id: documentation
-    #     - id: testing
-    #     - id: learning
-
-    - id: what_kind_of_code_generated
-      template: multipleWithOther
-      matchTags: [js_uses]
-      options:
-        - id: helper_functions
-        - id: frontend_components
-        - id: css_code
-        - id: core_app_logic
-        - id: api_integrations
-        - id: documentation_comments
-        - id: tests
 
     - id: industry_sector
       # intlId: usage.industry_sector_ai
@@ -247,11 +269,12 @@
       options:
         - id: misunderstood_prompt
         - id: poor_generated_code
-        - id: ethical_concerns
+        - id: training_data_concerns
         - id: integration_difficulties
         - id: costs
         - id: environmental_impact
         - id: lack_of_context
+        - id: privacy_concerns
 
     - id: ai_missing_features
       template: textList
@@ -284,7 +307,7 @@
       template: multipleWithOther
       matchTags: [surveys]
       options:
-        # - id: state_of_js_survey
+        - id: state_of_js_survey
         - id: state_of_react_survey
         - id: state_of_css_survey
         # - id: state_of_graphql_survey
@@ -305,8 +328,11 @@
     - id: integral_workflow
       template: opinion
 
-    - id: interested_in_developing_tools
+    - id: more_productive
       template: opinion
+
+    # - id: interested_in_developing_tools
+    #   template: opinion
 
     - id: ai_reliance_worse_developers
       template: opinion
@@ -329,6 +355,7 @@
       template: age_number
 
     - id: years_of_experience
+      intlId: user_info.years_of_experience.state_of_ai
       template: years
 
     - id: company_size
@@ -368,6 +395,12 @@
           common_sources,
           state_of_css_sources,
         ]
+
+    - id: did_you_run_into_technical_issues
+      template: textList
+
+    - id: missing_questions
+      template: textList
 
     - id: how_can_we_improve
       template: textList
