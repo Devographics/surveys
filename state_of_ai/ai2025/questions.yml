@@ -10,6 +10,7 @@
     - id: llama
     - id: perplexity
     - id: phind
+    - id: mistral
 
     - id: chatbots_others
       intlId: tools.other_tools
@@ -50,6 +51,8 @@
   questions:
     - id: cursor
     - id: windsurf
+    - id: zed
+    - id: void_editor
 
     - id: ides_others
       intlId: tools.other_tools
@@ -102,10 +105,12 @@
       template: multipleWithOtherSentiment
       matchTags: [languages]
       options:
-        - id: pytorch
-        - id: tensorflow
-        - id: scikit_learn
+        # - id: pytorch
+        # - id: tensorflow
+        # - id: scikit_learn
         - id: vercel_ai_sdk
+        - id: onnx_runtime
+        - id: transformers_js
 
     - id: ai_browser_apis
       template: multipleWithOther
@@ -145,6 +150,16 @@
 
     - id: ai_generated_code_refactoring
       template: slider
+
+    - id: ai_code_refactoring_reasons
+      template: multipleWithOther
+      options:
+        - id: excessive_repetition
+        - id: performance_issues
+        - id: outdated_imports
+        - id: security_issues
+        - id: variable_renaming
+        - id: improving_readability
 
     - id: ai_code_generation_frequency
       template: single
