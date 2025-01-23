@@ -16,6 +16,9 @@
       intlId: tools.other_tools
       template: textList
 
+    - id: chatbots_pain_points
+      template: textList
+
 - id: coding_assistants
   template: toolv3
   slug: tools
@@ -33,6 +36,9 @@
       intlId: tools.other_tools
       template: textList
 
+    - id: coding_assistants_pain_points
+      template: textList
+
 - id: code_generation
   template: toolv3
   slug: tools
@@ -43,6 +49,9 @@
 
     - id: code_generation_others
       intlId: tools.other_tools
+      template: textList
+
+    - id: code_generation_pain_points
       template: textList
 
 - id: ides
@@ -58,18 +67,21 @@
       intlId: tools.other_tools
       template: textList
 
-- id: image_generation
-  template: toolv3
-  slug: tools
-  questions:
-    - id: midjourney
-    - id: stable_diffusion
-    - id: adobe_firefly
-    - id: dall_e
-
-    - id: image_generation_others
-      intlId: tools.other_tools
+    - id: ides_pain_points
       template: textList
+
+# - id: image_generation
+#   template: toolv3
+#   slug: tools
+#   questions:
+#     - id: midjourney
+#     - id: stable_diffusion
+#     - id: adobe_firefly
+#     - id: dall_e
+
+#     - id: image_generation_others
+#       intlId: tools.other_tools
+#       template: textList
 
 - id: other_tools
   questions:
@@ -99,6 +111,15 @@
         - id: clojure
         - id: elm
         - id: julia
+
+    - id: image_generation
+      template: multipleWithOtherSentiment
+      matchTags: [ai_tools]
+      options:
+        - id: midjourney
+        - id: stable_diffusion
+        - id: adobe_firefly
+        - id: dall_e
         - id: na
 
     - id: ai_libraries_sdks
@@ -111,6 +132,7 @@
         - id: vercel_ai_sdk
         - id: onnx_runtime
         - id: transformers_js
+        - id: na
 
     - id: ai_browser_apis
       template: multipleWithOther
