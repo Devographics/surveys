@@ -1,4 +1,4 @@
-- id: chatbots
+- id: models
   template: toolv3
   slug: tools
   messageId: tools.tools_intro.ai2025
@@ -11,12 +11,29 @@
     - id: perplexity
     - id: phind
     - id: mistral
+    - id: deepseek
 
-    - id: chatbots_others
+    - id: models_others
       intlId: tools.other_tools
       template: textList
 
-    - id: chatbots_pain_points
+    - id: models_pain_points
+      template: textList
+
+- id: ides
+  template: toolv3
+  slug: tools
+  questions:
+    - id: cursor
+    - id: windsurf
+    - id: zed
+    - id: void_editor
+
+    - id: ides_others
+      intlId: tools.other_tools
+      template: textList
+
+    - id: ides_pain_points
       template: textList
 
 - id: coding_assistants
@@ -46,28 +63,14 @@
     - id: v0
     - id: bolt
     - id: replit_ai
+    - id: openui_ai
+    - id: lovable
 
     - id: code_generation_others
       intlId: tools.other_tools
       template: textList
 
     - id: code_generation_pain_points
-      template: textList
-
-- id: ides
-  template: toolv3
-  slug: tools
-  questions:
-    - id: cursor
-    - id: windsurf
-    - id: zed
-    - id: void_editor
-
-    - id: ides_others
-      intlId: tools.other_tools
-      template: textList
-
-    - id: ides_pain_points
       template: textList
 
 # - id: image_generation
@@ -120,6 +123,9 @@
         - id: stable_diffusion
         - id: adobe_firefly
         - id: dall_e
+        - id: ideogram
+        - id: imagen_3
+        - id: grok
         - id: na
 
     - id: ai_libraries_sdks
@@ -133,6 +139,13 @@
         - id: onnx_runtime
         - id: transformers_js
         - id: na
+
+    # - id: ai_local_models
+    #   template: multipleWithOther
+    #   options:
+    #     - id: ollama
+    #     - id: lm_studio
+    #     - id: ggml
 
     - id: ai_browser_apis
       template: multipleWithOther
@@ -299,6 +312,13 @@
         # - id: telecommunications
         # - id: transport
         # - id: travel
+
+    - id: ai_running_locally
+      template: singleWithOther
+      options:
+        - id: no_not_interested
+        - id: no_but_interested
+        - id: yes_interested
 
     - id: ai_pain_points
       template: multipleWithOther
