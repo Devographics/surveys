@@ -1,46 +1,54 @@
 - id: career
   questions:
     - id: years_of_experience
+      intlId: user_info.years_of_experience
+      sectionSlug: user_info
       template: years
 
     - id: higher_education_degree
+      intlId: user_info.higher_education_degree
+      sectionSlug: user_info
       template: higher_education_degree
 
     - id: how_many_jobs
-      template: single
+      template: number
 
     - id: employment_status
-      template: singleWithOther
+      template: multipleWithOther
+      options:
+        - id: employed_full_time
+        - id: freelance
+        - id: employed_part_time
+        - id: student_full_time
+        - id: student_part_time
+        - id: looking_for_job
+        - id: not_employed_not_looking
+        - id: retired
 
     - id: career_issues
       template: multipleWithOther
       options:
         - id: sexual_harassment
+        - id: non_sexual_harassment
         - id: gender_discrimination
         - id: race_discrimination
-        - id: stress
-        - id: overtime
-        - id: underpaid
+        - id: mental_health_issues
+        - id: excessive_overtime
+        - id: underpaid_work
+        - id: burnout
+        - id: job_insecurity
+        - id: bad_management
 
-    - id: career_gender_impact
-      template: single
-      optionsAreNumeric: true
-      options:
-        - id: 0
-        - id: 1
-        - id: 2
-        - id: 3
-        - id: 4
-
-    - id: career_race_impact
-      template: single
-      optionsAreNumeric: true
-      options:
-        - id: 0
-        - id: 1
-        - id: 2
-        - id: 3
-        - id: 4
+    # TODO: delete?
+    # - id: career_impact_factors
+    #   template: likert
+    #   options:
+    #     - id: gender
+    #     - id: race
+    #     - id: disabilities
+    #     - id: country
+    #     - id: sexual_orientation
+    #     - id:
 
     - id: past_year_conferences
       template: single
@@ -65,66 +73,129 @@
 - id: workplace
   questions:
     - id: company_size
+      intlId: user_info.company_size
+      sectionSlug: user_info
       template: company_size
 
     - id: job_title
+      intlId: user_info.job_title
+      sectionSlug: user_info
       template: text
 
     - id: yearly_salary
+      intlId: user_info.yearly_salary
+      sectionSlug: user_info
       template: yearly_salary_v2
 
+    # TODO: delete?
     # - id: how_similar_to_you_are_your_colleagues
     #   template: slider
 
-    - id: remote_work
+    - id: remote_work_policy
+      template: singleWithOther
+      options:
+        - id: no_remote_work
+        - id: hybrid
+        - id: up_to_employee
+        - id: fully_remote
 
-    - id: vacation_time
+    # TODO: delete?
+    # - id: vacation_time
 
-    - id: hours_per_week
+    - id: work_hours_per_week
+      template: number
+      units: hours
+      groups:
+        - id: range_under_30
+          upperBound: 31
+          average: 15
+        - id: range_31_35
+          average: 33.5
+          lowerBound: 31
+          upperBound: 36
+        - id: range_36_40
+          average: 38.5
+          lowerBound: 36
+          upperBound: 41
+        - id: range_41_45
+          average: 43.5
+          lowerBound: 41
+          upperBound: 46
+        - id: range_46_50
+          average: 48.5
+          lowerBound: 46
+          upperBound: 51
+        - id: range_over_50
+          average: 55
+          lowerBound: 51
 
     - id: job_happiness
       template: happiness
 
-    - id: job_ai_threat
+    # - id: job_ai_threat
 
     - id: workplace_perks
+      template: multipleWithOther
+      options:
+        - id: coworker_relations
+        - id: company_culture
+        - id: working_conditions
+        - id: job_security
+        - id: work_content
+        - id: work_life_balance
+        - id: compensation
+        - id: training
 
     - id: workplace_difficulties
+      template: multipleWithOther
+      options:
+        - id: coworker_relations
+        - id: company_culture
+        - id: working_conditions
+        - id: job_security
+        - id: work_content
+        - id: work_life_balance
+        - id: compensation
+        - id: training
 
-    - id: how_much_can_you_be_yourself_at_work
-      template: slider
+    # TODO: delete?
+    # - id: how_much_can_you_be_yourself_at_work
+    #   template: slider
 
 - id: technology
   questions:
-    - id: mobile_platform
-      template: multipleWithOther
+    - id: mobile_os
+      template: singleWithOther
       options:
         - id: ios
         - id: android
+        - id: no_smartphone
 
     - id: desktop_os
-      template: multipleWithOther
+      template: singleWithOther
       options:
         - id: mac_os
         - id: windows
         - id: linux
 
-    - id: front_end_frameworks
-      template: multipleWithOtherSentiment
-      options:
-        - id: react
-        - id: vuejs
-        - id: angular
-        - id: jquery
-        - id: svelte
+    # TODO: delete?
+    # - id: front_end_frameworks
+    #   template: multipleWithOtherSentiment
+    #   options:
+    #     - id: react
+    #     - id: vuejs
+    #     - id: angular
+    #     - id: jquery
+    #     - id: svelte
 
-    - id: back_end_frameworks
-      template: multipleWithOtherSentiment
-      options:
-        - id: nextjs
-        - id: astro
-        - id: rails
-        - id: laravel
+    # TODO: delete?
+    # - id: back_end_frameworks
+    #   template: multipleWithOtherSentiment
+    #   options:
+    #     - id: nextjs
+    #     - id: astro
+    #     - id: rails
+    #     - id: laravel
 
     - id: programming_languages
       template: multipleWithOtherSentiment
@@ -176,8 +247,37 @@
     - id: productivity_apps
       template: multipleWithOther
       options:
-        - id: ios
-        - id: android
+        - id: notion
+        - id: trello
+        - id: asana
+        - id: evernote
+        - id: jira
+        - id: linear
+        - id: github_projects
+        - id: coda
+
+    - id: chat_apps
+      template: multipleWithOther
+      options:
+        - id: whatsapp
+        - id: slack
+        - id: discord
+        - id: telegram
+        - id: signal
+        - id: wechat
+        - id: messenger
+        - id: microsoft_teams
+        - id: imessage
+
+    - id: social_media
+      template: multipleWithOther
+      options:
+        - id: facebook
+        - id: twitter
+        - id: instagram
+        - id: tiktok
+        - id: linkedin
+        - id: reddit
 
 # - id: resources
 #   slug: resources
@@ -190,9 +290,11 @@
   questions:
     - id: age
       template: age_number
+      sectionSlug: user_info
 
     - id: disability_status
       template: disability_status
+      sectionSlug: user_info
 
     - id: health_issues
       template: multipleWithOther
@@ -240,14 +342,75 @@
         - id: sleeping_pills
         - id: supplements
 
-    - id: number_of_kids
-      template: number
+- id: worldview
+  questions:
+    - id: left_right
+      template: slider
+
+    # - id: how_religious_are_you
+    #   template: slider
+
+    - id: global_issues
+      template: multipleWithOther
+      limit: 3
+      options:
+        - id: climate_change
+        - id: global_pandemics
+        - id: refugees_immigration
+        - id: healthcare_access
+        - id: geopolitical_tensions
+        - id: ai_threats
+        - id: rising_intolerance
+        - id: erosion_traditional_values
+        - id: lack_of_free_speech
+        - id: globalization
+        - id: rising_authoritarianism
+        - id: economic_inequality
+
+    # - id: keyword_sentiment
+    #   template: multipleWithOther
+    #   options:
+    #     - id: maga
+    #     - id: trump
+    #     - id: elon
+    #     - id: dei
+    #     - id: woke
+    #     - id: blm
+    #     - id: capitalism
+    #     - id: socialism
+
+    # - id: ideology
+    #   template: multipleWithOther
+    #   options:
+    #     - id: communist
+    #     - id: socialist
+    #     - id: libertarian
+    #     - id: conservative
+    #     - id: fascist
+    #     - id: anarchist
+    #     - id: liberal
+
+    - id: companies_opinion
+      template: multipleWithOther
+      options:
+        - id: apple
+        - id: open_ai
+        - id: microsoft
+        - id: google
+        - id: meta
+        - id: amazon
+        - id: x
+
+    - id: optimism_level # how optimistic are you about the future of the world?
+      template: single
+      options:
+        - id: foo
 
     - id: happiness_factors
       template: multipleWithOther
+      limit: 3
       options:
         - id: health
-        - id: wealth
         - id: career_progress
         - id: romantic_relationships
         - id: other_relationships
@@ -260,68 +423,6 @@
 
     - id: overall_happiness
       template: happiness
-
-- id: worldview
-  questions:
-    - id: left_right
-      template: slider
-
-    - id: how_religious_are_you
-      template: slider
-
-    - id: global_issues
-      template: multipleWithOther
-      options:
-        - id: climate_change
-        - id: global_pandemics
-        - id: refugees_immigration
-        - id: economic_inequality
-        - id: healthcare_access
-        - id: geopolitical_tensions
-        - id: ai_threats
-        - id: rising_authoritarianism
-        - id: rising_intolerance
-        - id: political_correctness
-        - id: globalization
-
-    - id: keyword_sentiment
-      template: multipleWithOther
-      options:
-        - id: maga
-        - id: trump
-        - id: elon
-        - id: dei
-        - id: woke
-        - id: blm
-        - id: capitalism
-        - id: socialism
-
-    - id: ideology
-      template: multipleWithOther
-      options:
-        - id: communist
-        - id: socialist
-        - id: libertarian
-        - id: conservative
-        - id: fascist
-        - id: anarchist
-        - id: liberal
-
-    - id: companies_opinion
-      template: multipleWithOther
-      options:
-        - id: apple
-        - id: open_ai
-        - id: microsoft
-        - id: google
-        - id: meta
-        - id:
-        - id:
-
-    - id: optimism_level # how optimistic are you about the future of the world?
-      template: single
-      options:
-        - id: foo
 
 - id: hobbies
   questions:
