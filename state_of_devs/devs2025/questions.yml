@@ -291,10 +291,12 @@
     - id: age
       template: age_number
       sectionSlug: user_info
+      intlId: user_info.age
 
     - id: disability_status
       template: disability_status
       sectionSlug: user_info
+      intlId: user_info.disability_status
 
     - id: health_issues
       template: multipleWithOther
@@ -325,10 +327,12 @@
         - id: range_10
         - id: more_than_10
 
+    # TODO: create new "time" template
     - id: sleep_bedtime
       template: number
 
-    - id: sleep_getuptime
+    # TODO: create new "time" template
+    - id: sleep_wakeuptime
       template: number
 
     - id: sleep_measures
@@ -390,21 +394,21 @@
     #     - id: anarchist
     #     - id: liberal
 
-    - id: companies_opinion
-      template: multipleWithOther
-      options:
-        - id: apple
-        - id: open_ai
-        - id: microsoft
-        - id: google
-        - id: meta
-        - id: amazon
-        - id: x
+    # - id: companies_opinion
+    #   template: multipleWithOther
+    #   options:
+    #     - id: apple
+    #     - id: open_ai
+    #     - id: microsoft
+    #     - id: google
+    #     - id: meta
+    #     - id: amazon
+    #     - id: x
 
-    - id: optimism_level # how optimistic are you about the future of the world?
-      template: single
-      options:
-        - id: foo
+    # - id: optimism_level # how optimistic are you about the future of the world?
+    #   template: single
+    #   options:
+    #     - id: foo
 
     - id: happiness_factors
       template: multipleWithOther
@@ -464,38 +468,37 @@
         - id: music
         - id: cooking
         - id: reading
-        - id: arts_and_craft
+        - id: arts_and_crafts
         - id: electronics
         - id: gardening
         - id: camping
 
     - id: hobbies_frequency
+      template: single
       options:
-        - id: less_than_once_a_year
-        - id: once_a_year
-        - id: range_2_12_times_a_year
-        - id: once_a_month
-        - id: once_a_week
-        - id: more_once_a_week
+        - id: once_a_year_or_less
+        - id: few_times_per_year
+        - id: few_times_per_month
+        - id: few_times_per_week
         - id: every_day
 
-    - id: musical_genres
-      template: textList
-      # options:
-      #   - id: rock
-      #   - id: hip_hop
-      #   - id: pop
-      #   - id: edm
-      #   - id: country
-      #   - id: classical
-      #   - id: jazz
-      #   - id: latin
-      #   - id: soul
-      #   - id: funk
-      #   - id: reggae
-      #   - id: metal
-      #   - id: kpop
-      #   - id: ost
+    # - id: musical_genres
+    #   template: textList
+    # options:
+    #   - id: rock
+    #   - id: hip_hop
+    #   - id: pop
+    #   - id: edm
+    #   - id: country
+    #   - id: classical
+    #   - id: jazz
+    #   - id: latin
+    #   - id: soul
+    #   - id: funk
+    #   - id: reggae
+    #   - id: metal
+    #   - id: kpop
+    #   - id: ost
 
     - id: video_game_platforms
       template: multipleWithOther
@@ -511,6 +514,7 @@
         - id: retro_emulation_console
 
     - id: video_games
+      limit: 3
       template: textList
 
 - id: user_info
