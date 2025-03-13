@@ -20,6 +20,7 @@
 
     - id: models_pain_points
       template: textList
+      matchTags: [ai_common_pain_points]
 
 - id: ides
   template: toolv3
@@ -33,10 +34,11 @@
     - id: ides_others
       intlId: tools.other_tools
       template: textList
-      matchTags: [ai_tools]
+      matchTags: [ai_tools, text_editors]
 
     - id: ides_pain_points
       template: textList
+      matchTags: [ai_common_pain_points]
 
 - id: coding_assistants
   template: toolv3
@@ -58,6 +60,7 @@
 
     - id: coding_assistants_pain_points
       template: textList
+      matchTags: [ai_common_pain_points]
 
 - id: code_generation
   template: toolv3
@@ -76,6 +79,7 @@
 
     - id: code_generation_pain_points
       template: textList
+      matchTags: [ai_common_pain_points]
 
 # - id: image_generation
 #   template: toolv3
@@ -193,6 +197,7 @@
 
     - id: ai_code_refactoring_reasons
       template: multipleWithOther
+      matchTags: [ai_common_pain_points]
       options:
         - id: excessive_repetition
         - id: performance_issues
@@ -328,6 +333,7 @@
     - id: ai_pain_points
       template: multipleWithOther
       limit: 3
+      matchTags: [ai_common_pain_points]
       options:
         - id: misunderstood_prompt
         - id: poor_generated_code
@@ -456,7 +462,7 @@
           events,
           socialmedia,
           common_sources,
-          state_of_css_sources,
+          state_of_ai_sources,
         ]
 
     - id: did_you_run_into_technical_issues
@@ -484,7 +490,7 @@
           events,
           socialmedia,
           common_sources,
-          state_of_css_sources,
+          state_of_ai_sources,
         ]
       hidden: true
       template: referrer
@@ -502,7 +508,7 @@
           events,
           socialmedia,
           common_sources,
-          state_of_css_sources,
+          state_of_ai_sources,
         ]
       hidden: true
       template: sourcetag
