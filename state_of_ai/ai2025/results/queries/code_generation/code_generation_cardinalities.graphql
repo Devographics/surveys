@@ -2,20 +2,16 @@ query {
   surveys {
     state_of_ai {
       ai2025 {
-        user_info {
-          country: country {
+        code_generation {
+          code_generation_cardinalities: _cardinalities {
             id
-            comments {
-              currentEdition {
-                count
-              }
-            }
             responses(
               parameters: {
-                showNoAnswer: true
-                mergeOtherBuckets: false
-                cutoff: 10
-                limit: 40
+                cutoff: 1
+                sort: {
+                  order: asc
+                  property: id
+                }
               }
             ) {
               currentEdition {
