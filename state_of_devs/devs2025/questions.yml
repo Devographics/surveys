@@ -126,6 +126,15 @@
       sectionSlug: user_info
       template: yearly_salary_v2
 
+    - id: income_evolution
+      intlId: user_info.income_evolution
+      sectionSlug: user_info
+      template: single
+      options:
+        - id: increased
+        - id: stayed_same
+        - id: decreased
+
     - id: job_finding_application_count
       template: multipleWithOther
       options:
@@ -289,26 +298,18 @@
     #   template: multipleWithOtherSentiment
     #   order: random
     #   options:
-    #     - id: copilot
     #     - id: chat_gpt
-    #     - id: bard
-    #     - id: bing
-    #     - id: perplexity
-    #     - id: cursor
-    #     - id: phind
-    #     - id: codium
-    #     - id: codeium
-    #     - id: tabnine
-    #     - id: code_whisperer
-    #     - id: cody
-    #     - id: jetbrains_ai
-    #     - id: llama
+    #     - id: gemini
+    #     - id: microsoft_copilot
     #     - id: claude
+    #     - id: deepseek
+    #     - id: cursor
+    #     - id: copilot
     #     - id: v0
     #     - id: na
 
     - id: productivity_apps
-      template: multipleWithOther
+      template: multipleWithOtherSentiment
       options:
         - id: notion
         - id: trello
@@ -335,7 +336,7 @@
         - id: na
 
     - id: social_media
-      template: multipleWithOther
+      template: multipleWithOtherSentiment
       options:
         - id: facebook
         - id: twitter
