@@ -1,0 +1,59 @@
+query {
+  surveys {
+    state_of_devs {
+      devs2025 {
+        user_info {
+          country: country {
+            id
+            comments {
+              currentEdition {
+                count
+              }
+            }
+            responses(
+              parameters: {
+                showNoAnswer: true
+                mergeOtherBuckets: false
+                cutoff: 10
+                limit: 40
+              }
+            ) {
+              currentEdition {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                  limit
+                  cutoff
+                }
+                completion {
+                  count
+                  percentageSurvey
+                  total
+                }
+                average
+                percentiles {
+                  p50
+                }
+                buckets {
+                  count
+                  id
+                  value
+                  percentageQuestion
+                  percentageSurvey
+                  isFreeformData
+                  hasInsufficientData
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
