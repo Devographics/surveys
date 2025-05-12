@@ -1,16 +1,20 @@
 - id: layout
   template: featurev3
   slug: features
-  messageId: features.features_intro_css2024
+  messageId: features.features_intro_css2025
   questions:
     # - id: features_intro_css
     #   template: help
 
     - id: subgrid
       showCommentInput: true
-    - id: writing_modes
+      yearAdded: 2020
+    # - id: writing_modes # removed in 2025
+    #   yearAdded: 2020
     - id: logical_properties
+      yearAdded: 2020
     - id: aspect_ratio
+      yearAdded: 2020
     # - id: content_visibility # removed in 2024 (too niche)
     # - id: flexbox_gap # removed in 2024 (broad usage)
     #   yearAdded: 2021
@@ -39,10 +43,14 @@
   slug: features
   questions:
     - id: blend_modes
-    - id: filter_effects # 2023: quick win
+      yearAdded: 2020
+    # - id: filter_effects # removed in 2025
+    #   yearAdded: 2020
     - id: backdrop_filter
+      yearAdded: 2020
 
     - id: linear_easing_function # 2023
+      yearAdded: 2023
 
     # - id: quiz_dave_shea
     #   intlId: quiz.quiz_dave_shea
@@ -93,7 +101,9 @@
   slug: features
   questions:
     - id: scroll_snap
+      yearAdded: 2020
     - id: overscroll_behavior
+      yearAdded: 2020
     # - id: touch_action # removed in 2024, too niche
 
     - id: scroll_behavior
@@ -117,9 +127,12 @@
   template: featurev3
   slug: features
   questions:
-    - id: font_display
+    # - id: font_display # removed in 2025
+    #   yearAdded: 2020
     - id: line_clamp
+      yearAdded: 2020
     - id: variable_fonts
+      yearAdded: 2020
 
     # - id: font_palette # removed in 2024 (too niche)
     #   yearAdded: 2022
@@ -147,7 +160,9 @@
   slug: features
   questions:
     - id: prefers_reduced_motion
+      yearAdded: 2020
     - id: prefers_color_scheme
+      yearAdded: 2020
     - id: prefers_reduced_data
       yearAdded: 2021
     - id: color_scheme
@@ -186,6 +201,7 @@
   slug: features
   questions:
     - id: comparison_functions
+      yearAdded: 2020
 
     - id: trigonometric_functions # too new?
       yearAdded: 2022
@@ -205,6 +221,7 @@
   questions:
     # - id: variables # removed in 2024 (too widespread)
     - id: feature_support_queries # (@supports)
+      yearAdded: 2020
 
     - id: at_property #(@property)
       yearAdded: 2021
@@ -511,13 +528,13 @@
         - id: tourism
         - id: transport
 
-    - id: usage_type
-      yearAdded: 2023
-      template: singleWithOther
-      options:
-        - id: professionally
-        - id: student
-        - id: hobby
+    # - id: usage_type
+    #   yearAdded: 2023
+    #   template: singleWithOther
+    #   options:
+    #     - id: professionally
+    #     - id: student
+    #     - id: hobby
 
     - id: design_methodology
       yearAdded: 2024
@@ -573,6 +590,16 @@
       #   - id: scroll_driven_animations
       #   - id: anchor_positioning
       #   - id: discrete_properties_animations
+
+    - id: baseline_awareness
+      yearAdded: 2025
+      template: single
+      options:
+        - never_heard
+        - heard_not_sure
+        - know_what_it_is
+        - know_three_stages
+        - actively_use_it
 
     - id: css_missing_features
       # template: multipleWithOther
@@ -640,6 +667,12 @@
       template: textList
       limit: 3
 
+    - id: gamechanger_feature
+      matchTags: [css_features, browser_interoperability, css_missing_features]
+      yearAdded: 2025
+      disallowedTokenIds: [styling_customization]
+      template: text
+
     - id: state_of_the_web_happiness
       template: happiness
       sectionSlug: happiness
@@ -681,6 +714,21 @@
           socialmedia,
         ]
       disallowedTokenIds: [youtube]
+
+    - id: web_platform_resources
+      template: multipleWithOther
+      matchTags: [sites, people]
+      options:
+        - id: w3c
+        - id: mdn
+        - id: web_dev
+        - id: caniuse
+        - id: chrome_platform_status
+        - id: webkit_blog
+        - id: http_archive
+        - id: web_features_explorer
+        - id: web_platform_status
+        # - id: rum_archive # for 2025
 
     - id: other_surveys
       template: multipleWithOther
