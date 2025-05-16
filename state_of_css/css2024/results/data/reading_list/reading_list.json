@@ -19,7 +19,7 @@
                   "completion": {
                     "count": 3299,
                     "percentageSurvey": 33.99,
-                    "total": 9705
+                    "total": 9706
                   },
                   "buckets": [
                     {
@@ -61,7 +61,7 @@
                       "count": 1632,
                       "id": "offset_path",
                       "percentageQuestion": 49.47,
-                      "percentageSurvey": 16.82,
+                      "percentageSurvey": 16.81,
                       "entity": {
                         "name": "`offset-path`\n",
                         "nameHtml": "<code>offset-path</code>\n",
@@ -154,7 +154,7 @@
                       "count": 1600,
                       "id": "anchor_positioning",
                       "percentageQuestion": 48.5,
-                      "percentageSurvey": 16.49,
+                      "percentageSurvey": 16.48,
                       "entity": {
                         "name": "Anchor Positioning",
                         "nameClean": "Anchor Positioning",
@@ -162,8 +162,8 @@
                         "entityType": "feature",
                         "example": {
                           "language": "css",
-                          "code": ".slider-link {\n  anchor-name: var(--is);\n}\n",
-                          "codeHighlighted": "<span class=\"hljs-selector-class\">.slider-link</span> {\n  anchor-name: <span class=\"hljs-built_in\">var</span>(--is);\n}"
+                          "code": ".anchor {\n  anchor-name: --my-anchor;\n}\n.target {\n  position: absolute;\n  position-anchor: --my-anchor;\n  position-area: start end;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.anchor</span> {\n  anchor-name: --my-anchor;\n}\n<span class=\"hljs-selector-class\">.target</span> {\n  <span class=\"hljs-attribute\">position</span>: absolute;\n  <span class=\"hljs-attribute\">position</span>-anchor: --my-anchor;\n  <span class=\"hljs-attribute\">position</span>-area: start end;\n}"
                         },
                         "mdn": {
                           "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning"
@@ -179,6 +179,10 @@
                           {
                             "url": "https://developer.chrome.com/blog/tether-elements-to-each-other-with-css-anchor-positioning/",
                             "title": "Tether elements to each other with CSS anchor positioning\n"
+                          },
+                          {
+                            "url": "https://css-tricks.com/css-anchor-positioning-guide/",
+                            "title": "CSS Anchor Positioning Guide"
                           }
                         ],
                         "webFeature": {
@@ -203,7 +207,7 @@
                       "count": 1563,
                       "id": "view_timeline",
                       "percentageQuestion": 47.38,
-                      "percentageSurvey": 16.11,
+                      "percentageSurvey": 16.1,
                       "entity": {
                         "name": "`view-timeline`",
                         "nameHtml": "<code>view-timeline</code>",
@@ -220,6 +224,26 @@
                         },
                         "caniuse": {
                           "url": "https://caniuse.com/css-view-timeline"
+                        },
+                        "webFeature": {
+                          "id": "scroll-driven-animations",
+                          "description_html": "The <code>animation-timeline</code>, <code>scroll-timeline</code>, and <code>view-timeline</code> CSS properties advance animations based on the user's scroll position.",
+                          "group": [
+                            "scrolling",
+                            "animation"
+                          ],
+                          "name": "Scroll-driven animations",
+                          "spec": [
+                            "https://drafts.csswg.org/scroll-animations-1/"
+                          ],
+                          "status": {
+                            "baseline": "false",
+                            "support": {
+                              "chrome": "115",
+                              "chrome_android": "115",
+                              "edge": "115"
+                            }
+                          }
                         }
                       }
                     },
@@ -244,6 +268,26 @@
                         },
                         "caniuse": {
                           "url": "https://caniuse.com/css-scroll-timeline"
+                        },
+                        "webFeature": {
+                          "id": "scroll-driven-animations",
+                          "description_html": "The <code>animation-timeline</code>, <code>scroll-timeline</code>, and <code>view-timeline</code> CSS properties advance animations based on the user's scroll position.",
+                          "group": [
+                            "scrolling",
+                            "animation"
+                          ],
+                          "name": "Scroll-driven animations",
+                          "spec": [
+                            "https://drafts.csswg.org/scroll-animations-1/"
+                          ],
+                          "status": {
+                            "baseline": "false",
+                            "support": {
+                              "chrome": "115",
+                              "chrome_android": "115",
+                              "edge": "115"
+                            }
+                          }
                         }
                       }
                     },
@@ -262,8 +306,8 @@
                         "entityType": "feature",
                         "example": {
                           "language": "css",
-                          "code": "/*   IS-OPEN STATE   */\ndialog[open] {\n  translate: 0 0;\n}\n\n/*   EXIT STATE   */\ndialog {\n  transition: translate 0.7s ease-out, display 0.7s ease-out allow-discrete;\n  translate: 0 100vh;\n}\n\n/*   0. BEFORE-OPEN STATE   */\n@starting-style {\n  dialog[open] {\n    translate: 0 100vh;\n  }\n}\n",
-                          "codeHighlighted": "<span class=\"hljs-comment\">/*   IS-OPEN STATE   */</span>\ndialog<span class=\"hljs-selector-attr\">[open]</span> {\n  translate: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">0</span>;\n}\n\n<span class=\"hljs-comment\">/*   EXIT STATE   */</span>\ndialog {\n  <span class=\"hljs-attribute\">transition</span>: translate <span class=\"hljs-number\">0.7s</span> ease-out, display <span class=\"hljs-number\">0.7s</span> ease-out allow-discrete;\n  translate: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n}\n\n<span class=\"hljs-comment\">/*   0. BEFORE-OPEN STATE   */</span>\n<span class=\"hljs-keyword\">@starting-style</span> {\n  dialog<span class=\"hljs-selector-attr\">[open]</span> {\n    translate: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n  }\n}"
+                          "code": "/*   IS-OPEN STATE   */\ndialog[open] {\n  translate: 0 0;\n}\n\n/*   EXIT STATE   */\ndialog {\n  transition: opacity 1s, display 1s allow-discrete, overlay 1s allow-discrete;\n  translate: 0 100vh;\n}\n\n/*   0. BEFORE-OPEN STATE   */\n@starting-style {\n  dialog[open] {\n    translate: 0 100vh;\n  }\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-comment\">/*   IS-OPEN STATE   */</span>\ndialog<span class=\"hljs-selector-attr\">[open]</span> {\n  translate: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">0</span>;\n}\n\n<span class=\"hljs-comment\">/*   EXIT STATE   */</span>\ndialog {\n  <span class=\"hljs-attribute\">transition</span>: opacity <span class=\"hljs-number\">1s</span>, display <span class=\"hljs-number\">1s</span> allow-discrete, overlay <span class=\"hljs-number\">1s</span> allow-discrete;\n  translate: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n}\n\n<span class=\"hljs-comment\">/*   0. BEFORE-OPEN STATE   */</span>\n<span class=\"hljs-keyword\">@starting-style</span> {\n  dialog<span class=\"hljs-selector-attr\">[open]</span> {\n    translate: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n  }\n}"
                         },
                         "webFeature": {
                           "id": "transition-behavior",
@@ -380,8 +424,8 @@
                         "entityType": "feature",
                         "example": {
                           "language": "css",
-                          "code": "code {\n  color: light-dark(var(--light-code), var(--dark-code));\n}\n",
-                          "codeHighlighted": "<span class=\"hljs-selector-tag\">code</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">light-dark</span>(<span class=\"hljs-built_in\">var</span>(--light-code), <span class=\"hljs-built_in\">var</span>(--dark-code));\n}"
+                          "code": "code {\n  color: light-dark(black, white);\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-tag\">code</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">light-dark</span>(black, white);\n}"
                         },
                         "mdn": {
                           "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark"
@@ -421,8 +465,8 @@
                       "percentageQuestion": 41.01,
                       "percentageSurvey": 13.94,
                       "entity": {
-                        "name": "ViewTransition API",
-                        "nameClean": "ViewTransition API",
+                        "name": "View Transition API",
+                        "nameClean": "View Transition API",
                         "id": "view_transitions",
                         "entityType": "feature",
                         "example": {
@@ -476,8 +520,8 @@
                         "entityType": "feature",
                         "example": {
                           "language": "css",
-                          "code": "@container style(color: green) {\n  /* <stylesheet> */\n}\n",
-                          "codeHighlighted": "<span class=\"hljs-keyword\">@container</span> style(<span class=\"hljs-attribute\">color</span>: green) {\n  <span class=\"hljs-comment\">/* &lt;stylesheet&gt; */</span>\n}"
+                          "code": "@container style(--fontColor: green) {\n  /* <stylesheet> */\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">@container</span> style(<span class=\"hljs-attribute\">--fontColor</span>: green) {\n  <span class=\"hljs-comment\">/* &lt;stylesheet&gt; */</span>\n}"
                         },
                         "mdn": {
                           "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries"
@@ -606,7 +650,7 @@
                       "count": 1269,
                       "id": "initial_letter",
                       "percentageQuestion": 38.47,
-                      "percentageSurvey": 13.08,
+                      "percentageSurvey": 13.07,
                       "entity": {
                         "name": "`initial-letter`",
                         "nameHtml": "<code>initial-letter</code>",
@@ -793,7 +837,7 @@
                       "count": 1169,
                       "id": "at_property",
                       "percentageQuestion": 35.43,
-                      "percentageSurvey": 12.05,
+                      "percentageSurvey": 12.04,
                       "entity": {
                         "name": "`@property`",
                         "nameHtml": "<code>@property</code>",
@@ -890,7 +934,7 @@
                       "percentageSurvey": 0.15
                     },
                     {
-                      "count": 6406,
+                      "count": 6407,
                       "id": "no_answer",
                       "percentageQuestion": 0,
                       "percentageSurvey": 66.01
@@ -899,7 +943,7 @@
                       "count": 34088,
                       "id": "overlimit_answers",
                       "percentageQuestion": 1033.27,
-                      "percentageSurvey": 351.23
+                      "percentageSurvey": 351.21
                     }
                   ]
                 }
