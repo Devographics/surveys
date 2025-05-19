@@ -148,6 +148,7 @@
 
     - id: job_finding_methods
       template: multipleWithOther
+      matchTags: [sites]
       options:
         - id: company_founder
         - id: job_board
@@ -272,7 +273,7 @@
 
     - id: programming_languages
       template: multipleWithOtherSentiment
-      matchTags: [languages]
+      matchTags: [languages, libraries]
       options:
         - id: javascript
         - id: typescript
@@ -315,6 +316,7 @@
 
     - id: productivity_apps
       template: multipleWithOtherSentiment
+      matchTags: [apps, ai_tools, sites, services]
       options:
         - id: notion
         - id: trello
@@ -329,6 +331,7 @@
 
     - id: chat_apps
       template: multipleWithOther
+      matchTags: [apps]
       options:
         - id: whatsapp
         - id: slack
@@ -343,6 +346,7 @@
 
     - id: social_media
       template: multipleWithOtherSentiment
+      matchTags: [socialmedia, sites]
       options:
         - id: facebook
         - id: twitter
@@ -357,6 +361,7 @@
 
     - id: community_involvement
       template: multipleWithOther
+      matchTags: [sites, newsletters]
       options:
         - id: social_media
         - id: conferences
@@ -409,9 +414,11 @@
       template: disability_status2
       sectionSlug: user_info
       intlId: user_info.disability_status
+      matchTags: [disabilities]
 
     - id: health_issues
       template: multipleWithOther
+      matchTags: [disabilities]
       options:
         - id: poor_sleep
         - id: weight_issues
@@ -612,6 +619,7 @@
     #     - id: every_day
 
     - id: physical_activity
+      matchTags: [hobbies]
       template: multipleWithOther
       options:
         - id: climbing
@@ -717,7 +725,7 @@
           events,
           socialmedia,
           common_sources,
-          state_of_js_sources,
+          state_of_devs_sources,
         ]
 
     - id: did_you_run_into_technical_issues
@@ -745,7 +753,7 @@
           events,
           socialmedia,
           common_sources,
-          state_of_js_sources,
+          state_of_devs_sources,
         ]
       hidden: true
       template: referrer
@@ -763,7 +771,7 @@
           events,
           socialmedia,
           common_sources,
-          state_of_js_sources,
+          state_of_devs_sources,
         ]
       hidden: true
       template: sourcetag
