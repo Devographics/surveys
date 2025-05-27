@@ -134,11 +134,14 @@
     - id: view_transitions
       yearAdded: 2023
 
-    - id: scroll_timeline
-      yearAdded: 2024
+    - id: scroll_driven_animations
+      yearAdded: 2025
 
-    - id: view_timeline
-      yearAdded: 2024
+    # - id: scroll_timeline # replaced with scroll_driven_animations in 2025
+    #   yearAdded: 2024
+
+    # - id: view_timeline # replaced with scroll_driven_animations in 2025
+    #   yearAdded: 2024
 
     - id: discrete_properties_animations
       yearAdded: 2024
@@ -414,10 +417,17 @@
         # - id: pure_css # removed in 2024
         - id: open_props
           yearAdded: 2023
-        - id: blaze_ui
-          yearAdded: 2023
+        # - id: blaze_ui # removed in 2025
+        #   yearAdded: 2023
         - id: uno_css
           yearAdded: 2023
+        - id: shadcn_ui
+          yearAdded: 2025
+        - id: pico_css
+          yearAdded: 2025
+        - id: custom_framework
+          yearAdded: 2025
+        - id: na
 
     - id: css_in_js
       template: multipleWithOtherSentiment
@@ -444,23 +454,25 @@
           yearAdded: 2024
         - id: style_x
           yearAdded: 2024
+        - id: na
 
     - id: pre_post_processors
       template: multipleWithOtherSentiment
       matchTags: [libraries]
       options:
-        - id: na
         - id: sass
         - id: less
         - id: post_css
         - id: stylus
         - id: assembler_css
+        - id: lightning_css
+          yearAdded: 2025
+        - id: na
 
     - id: utilities
       template: multipleWithOtherSentiment
       matchTags: [libraries]
       options:
-        - id: na
         - id: stylelint
         - id: purge_css
         - id: prettier
@@ -470,6 +482,9 @@
         - id: lightning_css
         - id: project_wallace
         - id: post_css_preset_env
+        - id: biome
+          yearAdded: 2025
+        - id: na
 
     - id: browsers
       template: multipleWithOtherSentiment
@@ -729,13 +744,13 @@
 
 - id: resources
   questions:
-    - id: blogs_news_magazines
-      template: textList
-      matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
+    # - id: blogs_news_magazines # removed in 2025 because of staleness
+    #   template: textList
+    #   matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
 
-    - id: courses
-      template: textList
-      matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
+    # - id: courses # removed in 2025 because of staleness
+    #   template: textList
+    #   matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
 
     - id: podcasts
       template: textList
@@ -844,7 +859,7 @@
         ]
 
     - id: did_you_run_into_technical_issues
-      template: longtext
+      template: textList
 
     - id: missing_questions
       template: textList
