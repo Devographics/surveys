@@ -522,6 +522,7 @@
         - id: gaming_console
         - id: keyboard_only
         - id: print
+        - id: pdf_export
         - id: screen_reader
         - id: smart_watch
         - id: smartphone
@@ -563,6 +564,7 @@
         - id: marketing_sites
         - id: mobile_apps
         - id: printed_documents
+        - id: pdf_documents
         - id: web_apps
 
     - id: industry_sector
@@ -597,7 +599,6 @@
     #     - id: professionally
     #     - id: student
     #     - id: hobby
-
     # - id: design_methodology
     #   yearAdded: 2024
     #   template: singleWithOther
@@ -605,11 +606,9 @@
     #     - id: implement_other_peoples_designs
     #     - id: design_in_design_apps
     #     - id: design_in_css
-
-    - id: css_js_balance
-      yearAdded: 2022
-      template: slider
-
+    # - id: css_js_balance
+    #   yearAdded: 2022
+    #   template: slider
     # - id: interop_features
     #   yearAdded: 2022
     #   template: top_n
@@ -657,9 +656,11 @@
       yearAdded: 2025
       template: single
       options:
-        - id: never_heard
-        - id: heard_not_sure
-        - id: know_what_it_is
+        - id: text_formatting
+        - id: performance_testing_tool
+        - id: supported_apis
+        - id: code_examples
+        - id: no_idea
 
     - id: css_missing_features
       # template: multipleWithOther
@@ -733,9 +734,21 @@
       disallowedTokenIds: [styling_customization]
       template: text
 
+    - id: css_pace_of_change
+      template: single
+      optionsAreNumeric: true
+      yearAdded: 2025
+      options:
+        - id: 1
+        - id: 2
+        - id: 3
+        - id: 4
+        - id: 5
+
     - id: state_of_the_web_happiness
       template: happiness
       sectionSlug: happiness
+
     - id: state_of_css_happiness
       template: happiness
       sectionSlug: happiness
