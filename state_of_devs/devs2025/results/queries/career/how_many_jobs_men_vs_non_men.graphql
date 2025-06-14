@@ -149,7 +149,11 @@ query {
             responses(
               filters: {
                 user_info__gender: {
-                  nin: male
+                  in: [
+                    female
+                    non_binary
+                    not_listed
+                  ]
                 }
               }
               parameters: {

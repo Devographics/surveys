@@ -168,14 +168,36 @@
 
     - id: job_finding_application_count
       template: single
+      optionsAreRange: true
+      optionsAreSequential: true
       options:
         - id: range_0
+          average: 0
+          lowerBound: 0
+          upperBound: 1
         - id: range_1
+          average: 1
+          lowerBound: 1
+          upperBound: 2
         - id: range_2_5
+          average: 4
+          lowerBound: 2
+          upperBound: 6
         - id: range_5_10
+          average: 7.5
+          lowerBound: 5
+          upperBound: 11
         - id: range_10_50
+          average: 30
+          lowerBound: 10
+          upperBound: 51
         - id: range_50_100
+          average: 75
+          lowerBound: 50
+          upperBound: 101
         - id: range_over_100
+          average: 100
+          lowerBound: 101
 
     - id: job_finding_methods
       template: multipleWithOther
@@ -469,14 +491,35 @@
 
     - id: sleep_quantity
       template: single
+      optionsAreRange: true
+      optionsAreSequential: true
       options:
         - id: range_5_or_less
+          average: 5
+          upperBound: 6
         - id: range_6
+          average: 6
+          lowerBound: 6
+          upperBound: 7
         - id: range_7
+          average: 7
+          lowerBound: 7
+          upperBound: 8
         - id: range_8
+          average: 8
+          lowerBound: 8
+          upperBound: 9
         - id: range_9
+          average: 9
+          lowerBound: 9
+          upperBound: 10
         - id: range_10
+          average: 10
+          lowerBound: 10
+          upperBound: 11
         - id: more_than_10
+          average: 11
+          lowerBound: 11
 
     # TODO: create new "time" template
     # - id: sleep_bedtime

@@ -2,8 +2,8 @@ query {
   surveys {
     state_of_devs {
       devs2025 {
-        workplace {
-          work_hours_per_week_per_country: country {
+        career {
+          years_of_experience_vs_job_finding_application_count: years_of_experience {
             id
             comments {
               currentEdition {
@@ -11,12 +11,10 @@ query {
               }
             }
             responses(
-              facet: user_info__country
+              facet: workplace__job_finding_application_count
               parameters: {
                 showNoAnswer: true
-                mergeOtherBuckets: false
                 cutoff: 10
-                limit: 20
               }
             ) {
               currentEdition {
