@@ -3,7 +3,7 @@ query {
     state_of_devs {
       devs2025 {
         health {
-          disability_status_vs_salary: disability_status {
+          sleep_measures_vs_sleep_quantity: sleep_measures {
             id
             comments {
               currentEdition {
@@ -11,13 +11,10 @@ query {
               }
             }
             responses(
-              facet: workplace__yearly_salary
+              facet: health__sleep_quantity
               parameters: {
                 showNoAnswer: true
                 cutoff: 10
-                sort: {
-                  property: medianByFacet
-                }
               }
             ) {
               currentEdition {
