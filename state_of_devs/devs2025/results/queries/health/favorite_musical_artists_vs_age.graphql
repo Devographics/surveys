@@ -3,7 +3,7 @@ query {
     state_of_devs {
       devs2025 {
         health {
-          age_vs_salary: age {
+          favorite_musical_artists_vs_age: age {
             id
             comments {
               currentEdition {
@@ -11,10 +11,14 @@ query {
               }
             }
             responses(
-              facet: workplace__yearly_salary
+              facet: hobbies__favorite_musical_artists
               parameters: {
                 showNoAnswer: true
                 cutoff: 10
+                sort: {
+                  property: medianByFacet
+                  order: asc
+                }
               }
             ) {
               currentEdition {

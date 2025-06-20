@@ -2,8 +2,8 @@ query {
   surveys {
     state_of_devs {
       devs2025 {
-        health {
-          age_vs_salary: age {
+        user_info {
+          gender_vs_relationship_status: gender {
             id
             comments {
               currentEdition {
@@ -11,10 +11,12 @@ query {
               }
             }
             responses(
-              facet: workplace__yearly_salary
+              facet: user_info__relationship_status
               parameters: {
                 showNoAnswer: true
+                mergeOtherBuckets: true
                 cutoff: 10
+                limit: 20
               }
             ) {
               currentEdition {

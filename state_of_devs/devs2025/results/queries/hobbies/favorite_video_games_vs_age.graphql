@@ -2,8 +2,8 @@ query {
   surveys {
     state_of_devs {
       devs2025 {
-        health {
-          age_vs_salary: age {
+        hobbies {
+          favorite_video_games_vs_age: favorite_video_games {
             id
             comments {
               currentEdition {
@@ -11,10 +11,14 @@ query {
               }
             }
             responses(
-              facet: workplace__yearly_salary
+              facet: health__age
               parameters: {
                 showNoAnswer: true
-                cutoff: 10
+                cutoff: 40
+                sort: {
+                  property: medianByFacet
+                  order: asc
+                }
               }
             ) {
               currentEdition {
