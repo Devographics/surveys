@@ -10,7 +10,7 @@ query {
                 count
               }
             }
-            responses(
+            combined(
               filters: {
                 user_info__gender: {
                   in: [
@@ -20,7 +20,7 @@ query {
               }
               parameters: {
                 showNoAnswer: true
-                cutoff: 10
+                cutoff: 20
                 limit: 20
               }
             ) {
@@ -148,7 +148,7 @@ query {
                 count
               }
             }
-            responses(
+            combined(
               filters: {
                 user_info__gender: {
                   nin: [
@@ -158,7 +158,7 @@ query {
               }
               parameters: {
                 showNoAnswer: true
-                cutoff: 10
+                cutoff: 20
                 limit: 20
               }
             ) {

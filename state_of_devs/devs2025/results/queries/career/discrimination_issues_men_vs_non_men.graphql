@@ -10,7 +10,7 @@ query {
                 count
               }
             }
-            responses(
+            combined(
               filters: {
                 user_info__gender: {
                   in: [
@@ -20,6 +20,7 @@ query {
               }
               parameters: {
                 showNoAnswer: true
+                cutoff: 20
               }
             ) {
               currentEdition {
@@ -146,7 +147,7 @@ query {
                 count
               }
             }
-            responses(
+            combined(
               filters: {
                 user_info__gender: {
                   in: [
@@ -158,6 +159,7 @@ query {
               }
               parameters: {
                 showNoAnswer: true
+                cutoff: 20
               }
             ) {
               currentEdition {
