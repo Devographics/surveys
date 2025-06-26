@@ -10,7 +10,13 @@ query {
                 count
               }
             }
-            combined(facet: health__age, parameters: { showNoAnswer: true }) {
+            combined(
+              facet: health__age
+              parameters: {
+                showNoAnswer: true
+                cutoff: 20
+              }
+            ) {
               currentEdition {
                 _metadata {
                   axis1Sort {
