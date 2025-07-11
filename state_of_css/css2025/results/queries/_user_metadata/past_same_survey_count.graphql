@@ -5,10 +5,10 @@ query {
         _user_metadata {
           past_same_survey_count: past_same_survey_count {
             id
-            responses(
+            combined(
               parameters: {
                 showNoAnswer: true
-                mergeOtherBuckets: false
+                mergeOtherBuckets: true
                 cutoff: 10
               }
             ) {

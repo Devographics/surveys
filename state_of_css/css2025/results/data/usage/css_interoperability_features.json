@@ -8,7 +8,7 @@
               "id": "css_interoperability_features",
               "comments": {
                 "currentEdition": {
-                  "count": 1
+                  "count": 5
                 }
               },
               "freeform": {
@@ -22,16 +22,16 @@
                     "cutoff": 10
                   },
                   "completion": {
-                    "count": 37,
-                    "percentageSurvey": 14.8,
-                    "total": 250
+                    "count": 526,
+                    "percentageSurvey": 9.73,
+                    "total": 5407
                   },
                   "buckets": [
                     {
-                      "count": 14,
+                      "count": 104,
                       "id": "anchor_positioning",
-                      "percentageQuestion": 37.84,
-                      "percentageSurvey": 5.6,
+                      "percentageQuestion": 19.77,
+                      "percentageSurvey": 1.92,
                       "entity": {
                         "name": "Anchor Positioning",
                         "nameClean": "Anchor Positioning",
@@ -81,28 +81,628 @@
                       }
                     },
                     {
-                      "count": 213,
-                      "id": "no_answer",
-                      "percentageQuestion": 0,
-                      "percentageSurvey": 85.2
+                      "count": 47,
+                      "id": "scroll_driven_animations",
+                      "percentageQuestion": 8.94,
+                      "percentageSurvey": 0.87,
+                      "entity": {
+                        "name": "Scroll-driven animations",
+                        "nameClean": "Scroll-driven animations",
+                        "id": "scroll_driven_animations",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "html {\n  scroll-timeline: --page-scroll block;\n}\n\n@keyframes grow-progress {\n  from { transform: scaleX(0); }\n  to { transform: scaleX(1); }\n}\n\n#progress {\n  animation: grow-progress auto linear;\n  animation-timeline: --page-scroll;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-tag\">html</span> {\n  <span class=\"hljs-attribute\">scroll-timeline</span>: --page-scroll block;\n}\n\n<span class=\"hljs-keyword\">@keyframes</span> grow-progress {\n  <span class=\"hljs-selector-tag\">from</span> { <span class=\"hljs-attribute\">transform</span>: <span class=\"hljs-built_in\">scaleX</span>(<span class=\"hljs-number\">0</span>); }\n  <span class=\"hljs-selector-tag\">to</span> { <span class=\"hljs-attribute\">transform</span>: <span class=\"hljs-built_in\">scaleX</span>(<span class=\"hljs-number\">1</span>); }\n}\n\n<span class=\"hljs-selector-id\">#progress</span> {\n  <span class=\"hljs-attribute\">animation</span>: grow-progress auto linear;\n  <span class=\"hljs-attribute\">animation-timeline</span>: --page-scroll;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-css_properties_animation-timeline"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://scroll-driven-animations.style/",
+                            "title": "Scroll-driven Animations"
+                          },
+                          {
+                            "url": "https://css-tricks.com/unleash-the-power-of-scroll-driven-animations/",
+                            "title": "Unleash the Power of Scroll-Driven Animations"
+                          },
+                          {
+                            "url": "https://developer.chrome.com/docs/css-ui/scroll-driven-animations",
+                            "title": "Animate elements on scroll with Scroll-driven animations"
+                          }
+                        ],
+                        "webFeature": {
+                          "id": "scroll-driven-animations",
+                          "description_html": "The <code>animation-timeline</code>, <code>scroll-timeline</code>, and <code>view-timeline</code> CSS properties advance animations based on the user's scroll position.",
+                          "group": [
+                            "scrolling",
+                            "animation"
+                          ],
+                          "name": "Scroll-driven animations",
+                          "spec": [
+                            "https://drafts.csswg.org/scroll-animations-1/"
+                          ],
+                          "status": {
+                            "baseline": "false",
+                            "support": {
+                              "chrome": "115",
+                              "chrome_android": "115",
+                              "edge": "115"
+                            }
+                          }
+                        }
+                      }
                     },
                     {
-                      "count": 45,
+                      "count": 47,
+                      "id": "view_transitions",
+                      "percentageQuestion": 8.94,
+                      "percentageSurvey": 0.87,
+                      "entity": {
+                        "name": "View Transition API",
+                        "nameClean": "View Transition API",
+                        "id": "view_transitions",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "::view-transition-old(main-image),\n::view-transition-new(main-image) {\n  transform-origin: right top;\n}\n\n::view-transition-new(main-image) {\n  animation: 400ms ease-out both grow;\n}\n\nfigure {\n  view-transition-name: main-image;\n}\n",
+                          "codeHighlighted": "::<span class=\"hljs-built_in\">view-transition-old</span>(main-image),\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">transform-origin</span>: right top;\n}\n\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">animation</span>: <span class=\"hljs-number\">400ms</span> ease-out both grow;\n}\n\n<span class=\"hljs-selector-tag\">figure</span> {\n  <span class=\"hljs-attribute\">view-transition-name</span>: main-image;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-api_viewtransition"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://developer.chrome.com/docs/web-platform/view-transitions/",
+                            "title": "Smooth and simple transitions with the View Transitions API"
+                          }
+                        ],
+                        "webFeature": {
+                          "id": "cross-document-view-transitions",
+                          "description_html": "The <code>@view-transition</code> CSS rule sets whether a document opts-in to transitions between documents in a multi-page application. Both the old and new document must opt-in for a transition to be triggered.",
+                          "group": [
+                            "view-transitions"
+                          ],
+                          "name": "Cross-document view transitions",
+                          "spec": [
+                            "https://drafts.csswg.org/css-view-transitions-2/#cross-doc-opt-in"
+                          ],
+                          "status": {
+                            "baseline": "false",
+                            "support": {
+                              "chrome": "126",
+                              "chrome_android": "126",
+                              "edge": "126"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 37,
+                      "id": "browser_support",
+                      "percentageQuestion": 7.03,
+                      "percentageSurvey": 0.68,
+                      "entity": {
+                        "name": "Browser support",
+                        "nameClean": "Browser support",
+                        "description": "Browser support, compatibility, and consistency issues",
+                        "descriptionClean": "Browser support, compatibility, and consistency issues",
+                        "id": "browser_support",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 29,
+                      "id": "safari_unsupported_features",
+                      "percentageQuestion": 5.51,
+                      "percentageSurvey": 0.54,
+                      "entity": {
+                        "id": "safari_unsupported_features",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 26,
+                      "id": "at_container_style",
+                      "percentageQuestion": 4.94,
+                      "percentageSurvey": 0.48,
+                      "entity": {
+                        "name": "`@container` style queries\n",
+                        "nameHtml": "<code>@container</code> style queries\n",
+                        "nameClean": "@container style queries",
+                        "id": "at_container_style",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "@container style(--fontColor: green) {\n  /* <stylesheet> */\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">@container</span> style(<span class=\"hljs-attribute\">--fontColor</span>: green) {\n  <span class=\"hljs-comment\">/* &lt;stylesheet&gt; */</span>\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-container-queries-style"
+                        },
+                        "webFeature": {
+                          "id": "container-style-queries",
+                          "description_html": "Container style queries with the <code>@container</code> at-rule apply styles to an element based on the values of custom properties of its container.",
+                          "group": [
+                            "container-queries"
+                          ],
+                          "name": "Container style queries",
+                          "spec": [
+                            "https://drafts.csswg.org/css-conditional-5/#style-container"
+                          ],
+                          "status": {
+                            "baseline": "false",
+                            "support": {
+                              "chrome": "111",
+                              "chrome_android": "111",
+                              "edge": "111",
+                              "safari": "18",
+                              "safari_ios": "18"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 24,
+                      "id": "css_nesting",
+                      "percentageQuestion": 4.56,
+                      "percentageSurvey": 0.44,
+                      "entity": {
+                        "name": "CSS Nesting",
+                        "nameClean": "CSS Nesting",
+                        "id": "css_nesting",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".parent {\n  color: blue;\n\n  .child {\n    color: red;\n  }\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.parent</span> {\n  <span class=\"hljs-attribute\">color</span>: blue;\n\n  <span class=\"hljs-selector-class\">.child</span> {\n    <span class=\"hljs-attribute\">color</span>: red;\n  }\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://developer.chrome.com/articles/css-nesting/",
+                            "title": "CSS Nesting"
+                          }
+                        ],
+                        "webFeature": {
+                          "id": "nesting",
+                          "description_html": "CSS nesting allows for shorter selectors, easier reading, and more modularity by nesting rules inside others.",
+                          "group": [
+                            "css"
+                          ],
+                          "name": "Nesting",
+                          "spec": [
+                            "https://drafts.csswg.org/css-nesting-1/"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2023-12-11",
+                            "support": {
+                              "chrome": "120",
+                              "chrome_android": "120",
+                              "edge": "120",
+                              "firefox": "117",
+                              "firefox_android": "117",
+                              "safari": "17.2",
+                              "safari_ios": "17.2"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 23,
+                      "id": "at_container",
+                      "percentageQuestion": 4.37,
+                      "percentageSurvey": 0.43,
+                      "entity": {
+                        "name": "`@container`\n",
+                        "nameHtml": "<code>@container</code>\n",
+                        "nameClean": "@container",
+                        "id": "at_container",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "@container (min-width: 700px) {\n  .card {\n    display: grid;\n    grid-template-columns: 2fr 1fr;\n  }\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">@container</span> (<span class=\"hljs-attribute\">min-width</span>: <span class=\"hljs-number\">700px</span>) {\n  <span class=\"hljs-selector-class\">.card</span> {\n    <span class=\"hljs-attribute\">display</span>: grid;\n    <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">2</span>fr <span class=\"hljs-number\">1</span>fr;\n  }\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-container-queries"
+                        }
+                      }
+                    },
+                    {
+                      "count": 23,
+                      "id": "has_selector",
+                      "percentageQuestion": 4.37,
+                      "percentageSurvey": 0.43,
+                      "entity": {
+                        "name": "`:has()`",
+                        "nameHtml": "<code>:has()</code>",
+                        "nameClean": ":has()",
+                        "id": "has_selector",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "a:has(> img) {\n  border: 2px solid grey;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-tag\">a</span><span class=\"hljs-selector-pseudo\">:has</span>(&gt; <span class=\"hljs-selector-tag\">img</span>) {\n  <span class=\"hljs-attribute\">border</span>: <span class=\"hljs-number\">2px</span> solid grey;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/:has"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-has"
+                        },
+                        "webFeature": {
+                          "id": "has",
+                          "description_html": "The <code>:has()</code> CSS functional pseudo-class matches an element if any of the selectors passed as parameters would match at least one element.",
+                          "group": [
+                            "selectors"
+                          ],
+                          "name": ":has()",
+                          "spec": [
+                            "https://drafts.csswg.org/selectors-4/#relational"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2023-12-19",
+                            "support": {
+                              "chrome": "105",
+                              "chrome_android": "105",
+                              "edge": "105",
+                              "firefox": "121",
+                              "firefox_android": "121",
+                              "safari": "15.4",
+                              "safari_ios": "15.4"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 20,
+                      "id": "better_scoping",
+                      "percentageQuestion": 3.8,
+                      "percentageSurvey": 0.37,
+                      "entity": {
+                        "name": "Scoping",
+                        "nameClean": "Scoping",
+                        "id": "better_scoping",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 18,
+                      "id": "conditional_logic",
+                      "percentageQuestion": 3.42,
+                      "percentageSurvey": 0.33,
+                      "entity": {
+                        "name": "Conditional Logic",
+                        "nameClean": "Conditional Logic",
+                        "id": "conditional_logic",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 14,
+                      "id": "grid",
+                      "percentageQuestion": 2.66,
+                      "percentageSurvey": 0.26,
+                      "entity": {
+                        "name": "Grid",
+                        "nameClean": "Grid",
+                        "id": "grid",
+                        "entityType": "feature",
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-grid"
+                        },
+                        "webFeature": {
+                          "id": "grid",
+                          "description_html": "CSS grid is a two-dimensional layout system, which lays content out in rows and columns.",
+                          "group": [
+                            "grid"
+                          ],
+                          "name": "Grid",
+                          "spec": [
+                            "https://drafts.csswg.org/css-grid-3/"
+                          ],
+                          "status": {
+                            "baseline": "high",
+                            "baseline_low_date": "2017-10-17",
+                            "support": {
+                              "chrome": "57",
+                              "chrome_android": "57",
+                              "edge": "16",
+                              "firefox": "52",
+                              "firefox_android": "52",
+                              "safari": "10.1",
+                              "safari_ios": "10.3"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 13,
+                      "id": "subgrid",
+                      "percentageQuestion": 2.47,
+                      "percentageSurvey": 0.24,
+                      "entity": {
+                        "name": "Subgrid",
+                        "nameClean": "Subgrid",
+                        "id": "subgrid",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".wrapper {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.item {\n  grid-row: 1 / 4;\n  display: grid;\n  grid-template-rows: subgrid;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.wrapper</span> {\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">1</span>fr <span class=\"hljs-number\">1</span>fr;\n}\n\n<span class=\"hljs-selector-class\">.item</span> {\n  <span class=\"hljs-attribute\">grid-row</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">4</span>;\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-rows</span>: subgrid;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-subgrid"
+                        },
+                        "webFeature": {
+                          "id": "subgrid",
+                          "description_html": "The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.",
+                          "group": [
+                            "grid"
+                          ],
+                          "name": "Subgrid",
+                          "spec": [
+                            "https://drafts.csswg.org/css-grid-2/#subgrids"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2023-09-15",
+                            "support": {
+                              "chrome": "117",
+                              "chrome_android": "117",
+                              "edge": "117",
+                              "firefox": "71",
+                              "firefox_android": "79",
+                              "safari": "16",
+                              "safari_ios": "16"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 12,
+                      "id": "cascade_layers",
+                      "percentageQuestion": 2.28,
+                      "percentageSurvey": 0.22,
+                      "entity": {
+                        "name": "Cascade Layers",
+                        "nameClean": "Cascade Layers",
+                        "id": "cascade_layers",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "@layer layer-name {rules}\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">@layer</span> layer-name {rules}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@layer"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-cascade-layers"
+                        },
+                        "webFeature": {
+                          "id": "cascade-layers",
+                          "description_html": "The <code>@layer</code> CSS at-rule avoids specificity conflicts by providing priority levels for different groups of CSS rules, such as low-priority styles like resets, and high-priority styles like UI components.",
+                          "group": [
+                            "css"
+                          ],
+                          "name": "Cascade layers",
+                          "spec": [
+                            "https://drafts.csswg.org/css-cascade-5/"
+                          ],
+                          "status": {
+                            "baseline": "high",
+                            "baseline_low_date": "2022-03-14",
+                            "support": {
+                              "chrome": "99",
+                              "chrome_android": "99",
+                              "edge": "99",
+                              "firefox": "97",
+                              "firefox_android": "97",
+                              "safari": "15.4",
+                              "safari_ios": "15.4"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 11,
+                      "id": "color_function",
+                      "percentageQuestion": 2.09,
+                      "percentageSurvey": 0.2,
+                      "entity": {
+                        "name": "`color()`",
+                        "nameHtml": "<code>color()</code>",
+                        "nameClean": "color()",
+                        "id": "color_function",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".brightest-green {\n  background: color(display-p3 0 1 0);\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.brightest-green</span> {\n  <span class=\"hljs-attribute\">background</span>: <span class=\"hljs-built_in\">color</span>(display-p3 <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">1</span> <span class=\"hljs-number\">0</span>);\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-color-function"
+                        },
+                        "webFeature": {
+                          "id": "color-function",
+                          "description_html": "The <code>color()</code> function picks a color from a given color space. Wide gamut color spaces like <code>display-p3</code> allow showing more vibrant and saturated colors than the standard <code>srgb</code> color space.",
+                          "group": [
+                            "color-types"
+                          ],
+                          "name": "color()",
+                          "spec": [
+                            "https://drafts.csswg.org/css-color-4/#color-function"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2023-05-09",
+                            "support": {
+                              "chrome": "111",
+                              "chrome_android": "111",
+                              "edge": "111",
+                              "firefox": "113",
+                              "firefox_android": "113",
+                              "safari": "15",
+                              "safari_ios": "15"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 11,
+                      "id": "discrete_properties_animations",
+                      "percentageQuestion": 2.09,
+                      "percentageSurvey": 0.2,
+                      "entity": {
+                        "name": "Discrete Properties Animations",
+                        "nameClean": "Discrete Properties Animations",
+                        "description": "Animate to and from properties such as `display: none`\n",
+                        "descriptionHtml": "Animate to and from properties such as <code>display: none</code>\n",
+                        "descriptionClean": "Animate to and from properties such as display: none",
+                        "id": "discrete_properties_animations",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "/*   IS-OPEN STATE   */\ndialog[open] {\n  translate: 0 0;\n}\n\n/*   EXIT STATE   */\ndialog {\n  transition: opacity 1s, display 1s allow-discrete, overlay 1s allow-discrete;\n  translate: 0 100vh;\n}\n\n/*   0. BEFORE-OPEN STATE   */\n@starting-style {\n  dialog[open] {\n    translate: 0 100vh;\n  }\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-comment\">/*   IS-OPEN STATE   */</span>\ndialog<span class=\"hljs-selector-attr\">[open]</span> {\n  <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">0</span>;\n}\n\n<span class=\"hljs-comment\">/*   EXIT STATE   */</span>\ndialog {\n  <span class=\"hljs-attribute\">transition</span>: opacity <span class=\"hljs-number\">1s</span>, display <span class=\"hljs-number\">1s</span> allow-discrete, overlay <span class=\"hljs-number\">1s</span> allow-discrete;\n  <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n}\n\n<span class=\"hljs-comment\">/*   0. BEFORE-OPEN STATE   */</span>\n<span class=\"hljs-keyword\">@starting-style</span> {\n  dialog<span class=\"hljs-selector-attr\">[open]</span> {\n    <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n  }\n}"
+                        },
+                        "webFeature": {
+                          "id": "transition-behavior",
+                          "description_html": "The <code>transition-behavior: allow-discrete</code> CSS declaration allows transitions for properties whose animation behavior is discrete. Such properties can't be interpolated and swap from their start value to the end value at 50%.",
+                          "group": [
+                            "transitions"
+                          ],
+                          "name": "transition-behavior",
+                          "spec": [
+                            "https://drafts.csswg.org/css-transitions-2/#transition-behavior-property"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2024-08-06",
+                            "support": {
+                              "chrome": "117",
+                              "chrome_android": "117",
+                              "edge": "117",
+                              "firefox": "129",
+                              "firefox_android": "129",
+                              "safari": "17.4",
+                              "safari_ios": "17.4"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 11,
+                      "id": "scrollbar",
+                      "percentageQuestion": 2.09,
+                      "percentageSurvey": 0.2,
+                      "entity": {
+                        "name": "Scrollbar Styling",
+                        "nameClean": "Scrollbar Styling",
+                        "id": "scrollbar",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 10,
+                      "id": "popups_popovers",
+                      "percentageQuestion": 1.9,
+                      "percentageSurvey": 0.18,
+                      "entity": {
+                        "name": "Popups & Popovers",
+                        "nameHtml": "Popups &amp; Popovers",
+                        "nameClean": "Popups  Popovers",
+                        "id": "popups_popovers",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 10,
+                      "id": "text_box_trim",
+                      "percentageQuestion": 1.9,
+                      "percentageSurvey": 0.18,
+                      "entity": {
+                        "name": "`text-box-edge`/`text-box-trim`",
+                        "nameHtml": "<code>text-box-edge</code>/<code>text-box-trim</code>",
+                        "nameClean": "text-box-edge/text-box-trim",
+                        "id": "text_box_trim",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "p {\n  text-box-edge: cap alphabetic;\n  text-box-trim: trim-both;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-tag\">p</span> {\n  <span class=\"hljs-selector-tag\">text</span>-box-edge: cap alphabetic;\n  <span class=\"hljs-selector-tag\">text</span>-box-trim: trim-both;\n}"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-text-box-trim"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://medium.com/microsoft-design/leading-trim-the-future-of-digital-typesetting-d082d84b202",
+                            "title": "Leading-Trim: The Future of Digital Typesetting"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "count": 4881,
+                      "id": "no_answer",
+                      "percentageQuestion": 0,
+                      "percentageSurvey": 90.27
+                    },
+                    {
+                      "count": 370,
                       "id": "other_answers",
-                      "percentageQuestion": 121.61,
-                      "percentageSurvey": 18,
+                      "percentageQuestion": 70.32,
+                      "percentageSurvey": 6.98,
                       "groupedBuckets": [
                         {
-                          "count": 30,
+                          "count": 204,
                           "id": "cutoff_answers",
-                          "percentageQuestion": 81.07,
-                          "percentageSurvey": 12
+                          "percentageQuestion": 38.76,
+                          "percentageSurvey": 3.91
                         },
                         {
-                          "count": 15,
+                          "count": 166,
                           "id": "no_match",
-                          "percentageQuestion": 40.54,
-                          "percentageSurvey": 6
+                          "percentageQuestion": 31.56,
+                          "percentageSurvey": 3.07
                         }
                       ]
                     }

@@ -6,6 +6,11 @@
           "usage": {
             "favorite_new_features": {
               "id": "favorite_new_features",
+              "comments": {
+                "currentEdition": {
+                  "count": 6
+                }
+              },
               "freeform": {
                 "currentEdition": {
                   "_metadata": {
@@ -17,16 +22,16 @@
                     "cutoff": 10
                   },
                   "completion": {
-                    "count": 80,
-                    "percentageSurvey": 32,
-                    "total": 250
+                    "count": 1125,
+                    "percentageSurvey": 20.81,
+                    "total": 5407
                   },
                   "buckets": [
                     {
-                      "count": 21,
+                      "count": 363,
                       "id": "has_selector",
-                      "percentageQuestion": 26.25,
-                      "percentageSurvey": 8.4,
+                      "percentageQuestion": 32.27,
+                      "percentageSurvey": 6.71,
                       "entity": {
                         "name": "`:has()`",
                         "nameHtml": "<code>:has()</code>",
@@ -71,10 +76,10 @@
                       }
                     },
                     {
-                      "count": 11,
+                      "count": 175,
                       "id": "css_nesting",
-                      "percentageQuestion": 13.75,
-                      "percentageSurvey": 4.4,
+                      "percentageQuestion": 15.56,
+                      "percentageSurvey": 3.24,
                       "entity": {
                         "name": "CSS Nesting",
                         "nameClean": "CSS Nesting",
@@ -121,10 +126,10 @@
                       }
                     },
                     {
-                      "count": 10,
+                      "count": 169,
                       "id": "at_container",
-                      "percentageQuestion": 12.5,
-                      "percentageSurvey": 4,
+                      "percentageQuestion": 15.02,
+                      "percentageSurvey": 3.13,
                       "entity": {
                         "name": "`@container`\n",
                         "nameHtml": "<code>@container</code>\n",
@@ -145,28 +150,860 @@
                       }
                     },
                     {
-                      "count": 170,
-                      "id": "no_answer",
-                      "percentageQuestion": 0,
-                      "percentageSurvey": 68
+                      "count": 73,
+                      "id": "view_transitions",
+                      "percentageQuestion": 6.49,
+                      "percentageSurvey": 1.35,
+                      "entity": {
+                        "name": "View Transition API",
+                        "nameClean": "View Transition API",
+                        "id": "view_transitions",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "::view-transition-old(main-image),\n::view-transition-new(main-image) {\n  transform-origin: right top;\n}\n\n::view-transition-new(main-image) {\n  animation: 400ms ease-out both grow;\n}\n\nfigure {\n  view-transition-name: main-image;\n}\n",
+                          "codeHighlighted": "::<span class=\"hljs-built_in\">view-transition-old</span>(main-image),\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">transform-origin</span>: right top;\n}\n\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">animation</span>: <span class=\"hljs-number\">400ms</span> ease-out both grow;\n}\n\n<span class=\"hljs-selector-tag\">figure</span> {\n  <span class=\"hljs-attribute\">view-transition-name</span>: main-image;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-api_viewtransition"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://developer.chrome.com/docs/web-platform/view-transitions/",
+                            "title": "Smooth and simple transitions with the View Transitions API"
+                          }
+                        ],
+                        "webFeature": {
+                          "id": "cross-document-view-transitions",
+                          "description_html": "The <code>@view-transition</code> CSS rule sets whether a document opts-in to transitions between documents in a multi-page application. Both the old and new document must opt-in for a transition to be triggered.",
+                          "group": [
+                            "view-transitions"
+                          ],
+                          "name": "Cross-document view transitions",
+                          "spec": [
+                            "https://drafts.csswg.org/css-view-transitions-2/#cross-doc-opt-in"
+                          ],
+                          "status": {
+                            "baseline": "false",
+                            "support": {
+                              "chrome": "126",
+                              "chrome_android": "126",
+                              "edge": "126"
+                            }
+                          }
+                        }
+                      }
                     },
                     {
-                      "count": 118,
+                      "count": 67,
+                      "id": "anchor_positioning",
+                      "percentageQuestion": 5.96,
+                      "percentageSurvey": 1.24,
+                      "entity": {
+                        "name": "Anchor Positioning",
+                        "nameClean": "Anchor Positioning",
+                        "id": "anchor_positioning",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".anchor {\n  anchor-name: --my-anchor;\n}\n.target {\n  position: absolute;\n  position-anchor: --my-anchor;\n  position-area: start end;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.anchor</span> {\n  <span class=\"hljs-attribute\">anchor-name</span>: --my-anchor;\n}\n<span class=\"hljs-selector-class\">.target</span> {\n  <span class=\"hljs-attribute\">position</span>: absolute;\n  <span class=\"hljs-attribute\">position-anchor</span>: --my-anchor;\n  <span class=\"hljs-attribute\">position</span>-area: start end;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-anchor-positioning"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://kizu.dev/anchor-positioning-experiments/",
+                            "title": "Future CSS: Anchor Positioning\n"
+                          },
+                          {
+                            "url": "https://developer.chrome.com/blog/tether-elements-to-each-other-with-css-anchor-positioning/",
+                            "title": "Tether elements to each other with CSS anchor positioning\n"
+                          },
+                          {
+                            "url": "https://css-tricks.com/css-anchor-positioning-guide/",
+                            "title": "CSS Anchor Positioning Guide"
+                          }
+                        ],
+                        "webFeature": {
+                          "id": "anchor-positioning",
+                          "description_html": "Anchor positioning places an element based on the position of another element. For example, you can place a tooltip next to the content it references.",
+                          "name": "Anchor positioning",
+                          "spec": [
+                            "https://drafts.csswg.org/css-anchor-position-1/#anchoring"
+                          ],
+                          "status": {
+                            "baseline": "false",
+                            "support": {
+                              "chrome": "125",
+                              "chrome_android": "125",
+                              "edge": "125"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 67,
+                      "id": "subgrid",
+                      "percentageQuestion": 5.96,
+                      "percentageSurvey": 1.24,
+                      "entity": {
+                        "name": "Subgrid",
+                        "nameClean": "Subgrid",
+                        "id": "subgrid",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".wrapper {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.item {\n  grid-row: 1 / 4;\n  display: grid;\n  grid-template-rows: subgrid;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.wrapper</span> {\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">1</span>fr <span class=\"hljs-number\">1</span>fr;\n}\n\n<span class=\"hljs-selector-class\">.item</span> {\n  <span class=\"hljs-attribute\">grid-row</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">4</span>;\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-rows</span>: subgrid;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-subgrid"
+                        },
+                        "webFeature": {
+                          "id": "subgrid",
+                          "description_html": "The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.",
+                          "group": [
+                            "grid"
+                          ],
+                          "name": "Subgrid",
+                          "spec": [
+                            "https://drafts.csswg.org/css-grid-2/#subgrids"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2023-09-15",
+                            "support": {
+                              "chrome": "117",
+                              "chrome_android": "117",
+                              "edge": "117",
+                              "firefox": "71",
+                              "firefox_android": "79",
+                              "safari": "16",
+                              "safari_ios": "16"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 66,
+                      "id": "cascade_layers",
+                      "percentageQuestion": 5.87,
+                      "percentageSurvey": 1.22,
+                      "entity": {
+                        "name": "Cascade Layers",
+                        "nameClean": "Cascade Layers",
+                        "id": "cascade_layers",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "@layer layer-name {rules}\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">@layer</span> layer-name {rules}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@layer"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-cascade-layers"
+                        },
+                        "webFeature": {
+                          "id": "cascade-layers",
+                          "description_html": "The <code>@layer</code> CSS at-rule avoids specificity conflicts by providing priority levels for different groups of CSS rules, such as low-priority styles like resets, and high-priority styles like UI components.",
+                          "group": [
+                            "css"
+                          ],
+                          "name": "Cascade layers",
+                          "spec": [
+                            "https://drafts.csswg.org/css-cascade-5/"
+                          ],
+                          "status": {
+                            "baseline": "high",
+                            "baseline_low_date": "2022-03-14",
+                            "support": {
+                              "chrome": "99",
+                              "chrome_android": "99",
+                              "edge": "99",
+                              "firefox": "97",
+                              "firefox_android": "97",
+                              "safari": "15.4",
+                              "safari_ios": "15.4"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 57,
+                      "id": "color_mix",
+                      "percentageQuestion": 5.07,
+                      "percentageSurvey": 1.05,
+                      "entity": {
+                        "name": "`color-mix()`",
+                        "nameHtml": "<code>color-mix()</code>",
+                        "nameClean": "color-mix()",
+                        "id": "color_mix",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".teal {\n  background: color-mix(in lab, white 20%, #34c9eb);\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.teal</span> {\n  <span class=\"hljs-attribute\">background</span>: <span class=\"hljs-built_in\">color-mix</span>(in lab, white <span class=\"hljs-number\">20%</span>, <span class=\"hljs-number\">#34c9eb</span>);\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-css_types_color_color-mix"
+                        },
+                        "webFeature": {
+                          "id": "color-mix",
+                          "description_html": "The <code>color-mix()</code> function mixes two colors in a given color space and by a given amount. Commonly, lighter or darker variations of a color are created by mixing with white or black.",
+                          "group": [
+                            "css"
+                          ],
+                          "name": "color-mix()",
+                          "spec": [
+                            "https://drafts.csswg.org/css-color-5/#color-mix"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2023-05-09",
+                            "support": {
+                              "chrome": "111",
+                              "chrome_android": "111",
+                              "edge": "111",
+                              "firefox": "113",
+                              "firefox_android": "113",
+                              "safari": "16.2",
+                              "safari_ios": "16.2"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 45,
+                      "id": "relative_colors",
+                      "percentageQuestion": 4,
+                      "percentageSurvey": 0.83,
+                      "entity": {
+                        "name": "Relative Colors",
+                        "nameClean": "Relative Colors",
+                        "id": "relative_colors",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".foo {\n  --color: #4488dd;\n  background-color: hsl(from var(--color) h s calc(l * 1.2))\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attr\">--color</span>: <span class=\"hljs-number\">#4488dd</span>;\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">hsl</span>(from <span class=\"hljs-built_in\">var</span>(--color) h s <span class=\"hljs-built_in\">calc</span>(l * <span class=\"hljs-number\">1.2</span>))\n}"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://www.bram.us/2021/04/28/create-a-color-theme-with-css-relative-color-syntax-css-color-mix-and-css-color-contrast/",
+                            "title": "Create a color theme with CSS Relative Color Syntax, CSS color-mix(), and CSS color-contrast()"
+                          }
+                        ],
+                        "webFeature": {
+                          "id": "relative-color",
+                          "description_html": "The <code>from</code> keyword for color functions (<code>color()</code>, <code>hsl()</code>, <code>oklch()</code>, etc.) creates a new color based on a given color by modifying the values of the input color. Also known as relative color syntax (RCS).",
+                          "group": [
+                            "css"
+                          ],
+                          "name": "Relative colors",
+                          "spec": [
+                            "https://drafts.csswg.org/css-color-5/#relative-colors"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2024-09-16",
+                            "support": {
+                              "chrome": "125",
+                              "chrome_android": "125",
+                              "edge": "125",
+                              "firefox": "128",
+                              "firefox_android": "128",
+                              "safari": "18",
+                              "safari_ios": "18"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 44,
+                      "id": "where_selector",
+                      "percentageQuestion": 3.91,
+                      "percentageSurvey": 0.81,
+                      "entity": {
+                        "name": "`:where()`",
+                        "nameHtml": "<code>:where()</code>",
+                        "nameClean": ":where()",
+                        "id": "where_selector",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ":where(header, main, footer) p:hover {\n  color: red;\n  cursor: pointer;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-pseudo\">:where</span>(<span class=\"hljs-selector-tag\">header</span>, <span class=\"hljs-selector-tag\">main</span>, <span class=\"hljs-selector-tag\">footer</span>) <span class=\"hljs-selector-tag\">p</span><span class=\"hljs-selector-pseudo\">:hover</span> {\n  <span class=\"hljs-attribute\">color</span>: red;\n  <span class=\"hljs-attribute\">cursor</span>: pointer;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/:where"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-where"
+                        },
+                        "webFeature": {
+                          "id": "where",
+                          "description_html": "The <code>:where()</code> CSS functional pseudo-class takes a selector list as its argument, and matches any element that can be selected by one of the selectors in that list. It is functionally equivalent to the selectors in the list, but doesn't affect the CSS rule specificity.",
+                          "group": [
+                            "selectors"
+                          ],
+                          "name": ":where()",
+                          "spec": [
+                            "https://drafts.csswg.org/selectors-4/#zero-matches"
+                          ],
+                          "status": {
+                            "baseline": "high",
+                            "baseline_low_date": "2021-01-21",
+                            "support": {
+                              "chrome": "88",
+                              "chrome_android": "88",
+                              "edge": "88",
+                              "firefox": "82",
+                              "firefox_android": "82",
+                              "safari": "14",
+                              "safari_ios": "14"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 43,
+                      "id": "grid",
+                      "percentageQuestion": 3.82,
+                      "percentageSurvey": 0.8,
+                      "entity": {
+                        "name": "Grid",
+                        "nameClean": "Grid",
+                        "id": "grid",
+                        "entityType": "feature",
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-grid"
+                        },
+                        "webFeature": {
+                          "id": "grid",
+                          "description_html": "CSS grid is a two-dimensional layout system, which lays content out in rows and columns.",
+                          "group": [
+                            "grid"
+                          ],
+                          "name": "Grid",
+                          "spec": [
+                            "https://drafts.csswg.org/css-grid-3/"
+                          ],
+                          "status": {
+                            "baseline": "high",
+                            "baseline_low_date": "2017-10-17",
+                            "support": {
+                              "chrome": "57",
+                              "chrome_android": "57",
+                              "edge": "16",
+                              "firefox": "52",
+                              "firefox_android": "52",
+                              "safari": "10.1",
+                              "safari_ios": "10.3"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 43,
+                      "id": "light_dark",
+                      "percentageQuestion": 3.82,
+                      "percentageSurvey": 0.8,
+                      "entity": {
+                        "name": "`light-dark()`",
+                        "nameHtml": "<code>light-dark()</code>",
+                        "nameClean": "light-dark()",
+                        "id": "light_dark",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "code {\n  color: light-dark(black, white);\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-tag\">code</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">light-dark</span>(black, white);\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-css_types_color_light-dark"
+                        },
+                        "webFeature": {
+                          "id": "light-dark",
+                          "description_html": "The <code>light-dark()</code> CSS function accepts two colors and uses one depending on the current color scheme.",
+                          "group": [
+                            "css"
+                          ],
+                          "name": "light-dark()",
+                          "spec": [
+                            "https://drafts.csswg.org/css-color-5/#light-dark"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2024-05-13",
+                            "support": {
+                              "chrome": "123",
+                              "chrome_android": "123",
+                              "edge": "123",
+                              "firefox": "120",
+                              "firefox_android": "120",
+                              "safari": "17.5",
+                              "safari_ios": "17.5"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 43,
+                      "id": "scroll_driven_animations",
+                      "percentageQuestion": 3.82,
+                      "percentageSurvey": 0.8,
+                      "entity": {
+                        "name": "Scroll-driven animations",
+                        "nameClean": "Scroll-driven animations",
+                        "id": "scroll_driven_animations",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "html {\n  scroll-timeline: --page-scroll block;\n}\n\n@keyframes grow-progress {\n  from { transform: scaleX(0); }\n  to { transform: scaleX(1); }\n}\n\n#progress {\n  animation: grow-progress auto linear;\n  animation-timeline: --page-scroll;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-tag\">html</span> {\n  <span class=\"hljs-attribute\">scroll-timeline</span>: --page-scroll block;\n}\n\n<span class=\"hljs-keyword\">@keyframes</span> grow-progress {\n  <span class=\"hljs-selector-tag\">from</span> { <span class=\"hljs-attribute\">transform</span>: <span class=\"hljs-built_in\">scaleX</span>(<span class=\"hljs-number\">0</span>); }\n  <span class=\"hljs-selector-tag\">to</span> { <span class=\"hljs-attribute\">transform</span>: <span class=\"hljs-built_in\">scaleX</span>(<span class=\"hljs-number\">1</span>); }\n}\n\n<span class=\"hljs-selector-id\">#progress</span> {\n  <span class=\"hljs-attribute\">animation</span>: grow-progress auto linear;\n  <span class=\"hljs-attribute\">animation-timeline</span>: --page-scroll;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-css_properties_animation-timeline"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://scroll-driven-animations.style/",
+                            "title": "Scroll-driven Animations"
+                          },
+                          {
+                            "url": "https://css-tricks.com/unleash-the-power-of-scroll-driven-animations/",
+                            "title": "Unleash the Power of Scroll-Driven Animations"
+                          },
+                          {
+                            "url": "https://developer.chrome.com/docs/css-ui/scroll-driven-animations",
+                            "title": "Animate elements on scroll with Scroll-driven animations"
+                          }
+                        ],
+                        "webFeature": {
+                          "id": "scroll-driven-animations",
+                          "description_html": "The <code>animation-timeline</code>, <code>scroll-timeline</code>, and <code>view-timeline</code> CSS properties advance animations based on the user's scroll position.",
+                          "group": [
+                            "scrolling",
+                            "animation"
+                          ],
+                          "name": "Scroll-driven animations",
+                          "spec": [
+                            "https://drafts.csswg.org/scroll-animations-1/"
+                          ],
+                          "status": {
+                            "baseline": "false",
+                            "support": {
+                              "chrome": "115",
+                              "chrome_android": "115",
+                              "edge": "115"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 42,
+                      "id": "discrete_properties_animations",
+                      "percentageQuestion": 3.73,
+                      "percentageSurvey": 0.78,
+                      "entity": {
+                        "name": "Discrete Properties Animations",
+                        "nameClean": "Discrete Properties Animations",
+                        "description": "Animate to and from properties such as `display: none`\n",
+                        "descriptionHtml": "Animate to and from properties such as <code>display: none</code>\n",
+                        "descriptionClean": "Animate to and from properties such as display: none",
+                        "id": "discrete_properties_animations",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "/*   IS-OPEN STATE   */\ndialog[open] {\n  translate: 0 0;\n}\n\n/*   EXIT STATE   */\ndialog {\n  transition: opacity 1s, display 1s allow-discrete, overlay 1s allow-discrete;\n  translate: 0 100vh;\n}\n\n/*   0. BEFORE-OPEN STATE   */\n@starting-style {\n  dialog[open] {\n    translate: 0 100vh;\n  }\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-comment\">/*   IS-OPEN STATE   */</span>\ndialog<span class=\"hljs-selector-attr\">[open]</span> {\n  <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">0</span>;\n}\n\n<span class=\"hljs-comment\">/*   EXIT STATE   */</span>\ndialog {\n  <span class=\"hljs-attribute\">transition</span>: opacity <span class=\"hljs-number\">1s</span>, display <span class=\"hljs-number\">1s</span> allow-discrete, overlay <span class=\"hljs-number\">1s</span> allow-discrete;\n  <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n}\n\n<span class=\"hljs-comment\">/*   0. BEFORE-OPEN STATE   */</span>\n<span class=\"hljs-keyword\">@starting-style</span> {\n  dialog<span class=\"hljs-selector-attr\">[open]</span> {\n    <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n  }\n}"
+                        },
+                        "webFeature": {
+                          "id": "transition-behavior",
+                          "description_html": "The <code>transition-behavior: allow-discrete</code> CSS declaration allows transitions for properties whose animation behavior is discrete. Such properties can't be interpolated and swap from their start value to the end value at 50%.",
+                          "group": [
+                            "transitions"
+                          ],
+                          "name": "transition-behavior",
+                          "spec": [
+                            "https://drafts.csswg.org/css-transitions-2/#transition-behavior-property"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2024-08-06",
+                            "support": {
+                              "chrome": "117",
+                              "chrome_android": "117",
+                              "edge": "117",
+                              "firefox": "129",
+                              "firefox_android": "129",
+                              "safari": "17.4",
+                              "safari_ios": "17.4"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 36,
+                      "id": "logical_properties",
+                      "percentageQuestion": 3.2,
+                      "percentageSurvey": 0.67,
+                      "entity": {
+                        "name": "CSS Logical Properties",
+                        "nameClean": "CSS Logical Properties",
+                        "description": "`margin-block-start`, `padding-inline-end`, `border-inline-start`…\n",
+                        "descriptionHtml": "<code>margin-block-start</code>, <code>padding-inline-end</code>, <code>border-inline-start</code>…\n",
+                        "descriptionClean": "margin-block-start, padding-inline-end, border-inline-start…",
+                        "id": "logical_properties",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "section {\n  border-block: 8px solid blue;\n  border-inline: 8px solid green;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-tag\">section</span> {\n  <span class=\"hljs-attribute\">border-block</span>: <span class=\"hljs-number\">8px</span> solid blue;\n  <span class=\"hljs-attribute\">border-inline</span>: <span class=\"hljs-number\">8px</span> solid green;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-logical-props"
+                        },
+                        "webFeature": {
+                          "id": "logical-properties",
+                          "description_html": "CSS logical properties control borders, size, margin, and padding with directions and dimensions relative to the writing mode. For example, in a left to right, top to bottom writing mode, <code>block-end</code> refers to the bottom. Also known as flow relative.",
+                          "group": [
+                            "css"
+                          ],
+                          "name": "Logical properties",
+                          "spec": [
+                            "https://drafts.csswg.org/css-logical-1/"
+                          ],
+                          "status": {
+                            "baseline": "high",
+                            "baseline_low_date": "2021-09-20",
+                            "support": {
+                              "chrome": "89",
+                              "chrome_android": "89",
+                              "edge": "89",
+                              "firefox": "66",
+                              "firefox_android": "66",
+                              "safari": "15",
+                              "safari_ios": "15"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 34,
+                      "id": "color_function",
+                      "percentageQuestion": 3.02,
+                      "percentageSurvey": 0.63,
+                      "entity": {
+                        "name": "`color()`",
+                        "nameHtml": "<code>color()</code>",
+                        "nameClean": "color()",
+                        "id": "color_function",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".brightest-green {\n  background: color(display-p3 0 1 0);\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.brightest-green</span> {\n  <span class=\"hljs-attribute\">background</span>: <span class=\"hljs-built_in\">color</span>(display-p3 <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">1</span> <span class=\"hljs-number\">0</span>);\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-color-function"
+                        },
+                        "webFeature": {
+                          "id": "color-function",
+                          "description_html": "The <code>color()</code> function picks a color from a given color space. Wide gamut color spaces like <code>display-p3</code> allow showing more vibrant and saturated colors than the standard <code>srgb</code> color space.",
+                          "group": [
+                            "color-types"
+                          ],
+                          "name": "color()",
+                          "spec": [
+                            "https://drafts.csswg.org/css-color-4/#color-function"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2023-05-09",
+                            "support": {
+                              "chrome": "111",
+                              "chrome_android": "111",
+                              "edge": "111",
+                              "firefox": "113",
+                              "firefox_android": "113",
+                              "safari": "15",
+                              "safari_ios": "15"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 33,
+                      "id": "comparison_functions",
+                      "percentageQuestion": 2.93,
+                      "percentageSurvey": 0.61,
+                      "entity": {
+                        "name": "Comparison Functions",
+                        "nameClean": "Comparison Functions",
+                        "description": "`min()`, `max()`, `clamp()`\n",
+                        "descriptionHtml": "<code>min()</code>, <code>max()</code>, <code>clamp()</code>\n",
+                        "descriptionClean": "min(), max(), clamp()",
+                        "id": "comparison_functions",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".element {\n  width: clamp(100px, 50vw, 600px);\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.element</span> {\n  <span class=\"hljs-attribute\">width</span>: <span class=\"hljs-built_in\">clamp</span>(<span class=\"hljs-number\">100px</span>, <span class=\"hljs-number\">50vw</span>, <span class=\"hljs-number\">600px</span>);\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-math-functions"
+                        },
+                        "webFeature": {
+                          "id": "min-max-clamp",
+                          "description_html": "The <code>min()</code> and <code>max()</code> CSS functions return the minimum or maximum of the arguments, while <code>clamp()</code> clamps a value to a given range.",
+                          "group": [
+                            "css"
+                          ],
+                          "name": "min(), max(), and clamp()",
+                          "spec": [
+                            "https://drafts.csswg.org/css-values-4/#comp-func"
+                          ],
+                          "status": {
+                            "baseline": "high",
+                            "baseline_low_date": "2020-07-28",
+                            "support": {
+                              "chrome": "79",
+                              "chrome_android": "79",
+                              "edge": "79",
+                              "firefox": "75",
+                              "firefox_android": "79",
+                              "safari": "13.1",
+                              "safari_ios": "13.4"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 31,
+                      "id": "aspect_ratio",
+                      "percentageQuestion": 2.76,
+                      "percentageSurvey": 0.57,
+                      "entity": {
+                        "name": "`aspect-ratio`",
+                        "nameHtml": "<code>aspect-ratio</code>",
+                        "nameClean": "aspect-ratio",
+                        "id": "aspect_ratio",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".square {\n  aspect-ratio: 1 / 1;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.square</span> {\n  <span class=\"hljs-attribute\">aspect-ratio</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">1</span>;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-css_properties_aspect-ratio"
+                        },
+                        "webFeature": {
+                          "id": "aspect-ratio",
+                          "description_html": "The <code>aspect-ratio</code> CSS property controls the width-to-height ratio of elements. For <code>&#x3C;img></code> and <code>&#x3C;video></code> elements, the <code>width</code> and <code>height</code> attributes used together with <code>height: auto</code> control the aspect ratio while the image/video is loading.",
+                          "group": [
+                            "css"
+                          ],
+                          "name": "aspect-ratio",
+                          "spec": [
+                            "https://drafts.csswg.org/css-sizing-4/#aspect-ratio"
+                          ],
+                          "status": {
+                            "baseline": "high",
+                            "baseline_low_date": "2021-09-20",
+                            "support": {
+                              "chrome": "88",
+                              "chrome_android": "88",
+                              "edge": "88",
+                              "firefox": "89",
+                              "firefox_android": "89",
+                              "safari": "15",
+                              "safari_ios": "15"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 30,
+                      "id": "wide_gamut_colors",
+                      "percentageQuestion": 2.67,
+                      "percentageSurvey": 0.55,
+                      "entity": {
+                        "name": "Wide Gamut Colors",
+                        "nameClean": "Wide Gamut Colors",
+                        "description": "`lch()`, `lab()`, `oklch()`, `oklab()`\n",
+                        "descriptionHtml": "<code>lch()</code>, <code>lab()</code>, <code>oklch()</code>, <code>oklab()</code>\n",
+                        "descriptionClean": "lch(), lab(), oklch(), oklab()",
+                        "id": "wide_gamut_colors",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".foo {\n  background-color: lab(29.2345% 39.3825 20.0664);\n  background-color: lch(29.2345% 44.2 27);\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">lab</span>(<span class=\"hljs-number\">29.2345%</span> <span class=\"hljs-number\">39.3825</span> <span class=\"hljs-number\">20.0664</span>);\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">lch</span>(<span class=\"hljs-number\">29.2345%</span> <span class=\"hljs-number\">44.2</span> <span class=\"hljs-number\">27</span>);\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lch"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-lch-lab"
+                        },
+                        "webFeature": {
+                          "id": "oklab",
+                          "description_html": "The Oklab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is, aiming to match how humans perceive colors. Oklch is a variant of Oklab with polar coordinates. These color spaces can be used with the CSS <code>color()</code>, <code>oklab()</code>, and <code>oklch()</code> functions.",
+                          "group": [
+                            "color-types"
+                          ],
+                          "name": "Oklab and Oklch",
+                          "spec": [
+                            "https://drafts.csswg.org/css-color-4/#ok-lab"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2023-05-09",
+                            "support": {
+                              "chrome": "111",
+                              "chrome_android": "111",
+                              "edge": "111",
+                              "firefox": "113",
+                              "firefox_android": "113",
+                              "safari": "15.4",
+                              "safari_ios": "15.4"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 27,
+                      "id": "text_wrap_balance",
+                      "percentageQuestion": 2.4,
+                      "percentageSurvey": 0.5,
+                      "entity": {
+                        "name": "`text-wrap: balance`",
+                        "nameHtml": "<code>text-wrap: balance</code>",
+                        "nameClean": "text-wrap: balance",
+                        "id": "text_wrap_balance",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".balanced {\n  max-inline-size: 50ch;\n  text-wrap: balance;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.balanced</span> {\n  <span class=\"hljs-attribute\">max-inline-size</span>: <span class=\"hljs-number\">50ch</span>;\n  <span class=\"hljs-attribute\">text-wrap</span>: balance;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://developer.chrome.com/blog/css-text-wrap-balance/",
+                            "title": "CSS text-wrap: balance\n"
+                          }
+                        ],
+                        "webFeature": {
+                          "id": "text-wrap-balance",
+                          "description_html": "The <code>text-wrap: balance</code> CSS declaration balances the length of each line when text is broken into multiple lines. Also known as headline balancing.",
+                          "group": [
+                            "text-wrap"
+                          ],
+                          "name": "text-wrap: balance",
+                          "spec": [
+                            "https://drafts.csswg.org/css-text-4/#valdef-text-wrap-style-balance"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2024-05-13",
+                            "support": {
+                              "chrome": "114",
+                              "chrome_android": "114",
+                              "edge": "114",
+                              "firefox": "121",
+                              "firefox_android": "121",
+                              "safari": "17.5",
+                              "safari_ios": "17.5"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 4282,
+                      "id": "no_answer",
+                      "percentageQuestion": 0,
+                      "percentageSurvey": 79.19
+                    },
+                    {
+                      "count": 600,
                       "id": "other_answers",
-                      "percentageQuestion": 147.5,
-                      "percentageSurvey": 47.2,
+                      "percentageQuestion": 53.39,
+                      "percentageSurvey": 11.17,
                       "groupedBuckets": [
                         {
-                          "count": 95,
-                          "id": "cutoff_answers",
-                          "percentageQuestion": 118.75,
-                          "percentageSurvey": 38
+                          "count": 227,
+                          "id": "overlimit_answers",
+                          "percentageQuestion": 20.17,
+                          "percentageSurvey": 4.19
                         },
                         {
-                          "count": 23,
+                          "count": 210,
+                          "id": "cutoff_answers",
+                          "percentageQuestion": 18.73,
+                          "percentageSurvey": 3.97
+                        },
+                        {
+                          "count": 163,
                           "id": "no_match",
-                          "percentageQuestion": 28.75,
-                          "percentageSurvey": 9.2
+                          "percentageQuestion": 14.49,
+                          "percentageSurvey": 3.01
                         }
                       ]
                     }

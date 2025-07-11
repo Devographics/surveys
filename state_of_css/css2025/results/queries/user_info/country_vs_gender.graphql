@@ -10,11 +10,11 @@ query {
                 count
               }
             }
-            responses(
+            combined(
               facet: user_info__gender
               parameters: {
                 showNoAnswer: true
-                mergeOtherBuckets: false
+                mergeOtherBuckets: true
                 cutoff: 10
                 limit: 15
               }

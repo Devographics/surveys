@@ -6,6 +6,11 @@
           "other_features": {
             "other_features_pain_points": {
               "id": "other_features_pain_points",
+              "comments": {
+                "currentEdition": {
+                  "count": 1
+                }
+              },
               "freeform": {
                 "currentEdition": {
                   "_metadata": {
@@ -17,34 +22,160 @@
                     "cutoff": 10
                   },
                   "completion": {
-                    "count": 18,
-                    "percentageSurvey": 7.2,
-                    "total": 250
+                    "count": 180,
+                    "percentageSurvey": 3.33,
+                    "total": 5407
                   },
                   "buckets": [
                     {
-                      "count": 232,
-                      "id": "no_answer",
-                      "percentageQuestion": 0,
-                      "percentageSurvey": 92.8
+                      "count": 36,
+                      "id": "browser_support",
+                      "percentageQuestion": 20,
+                      "percentageSurvey": 0.67,
+                      "entity": {
+                        "name": "Browser support",
+                        "nameClean": "Browser support",
+                        "description": "Browser support, compatibility, and consistency issues",
+                        "descriptionClean": "Browser support, compatibility, and consistency issues",
+                        "id": "browser_support",
+                        "entityType": "default"
+                      }
                     },
                     {
-                      "count": 32,
+                      "count": 14,
+                      "id": "css_nesting",
+                      "percentageQuestion": 7.78,
+                      "percentageSurvey": 0.26,
+                      "entity": {
+                        "name": "CSS Nesting",
+                        "nameClean": "CSS Nesting",
+                        "id": "css_nesting",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".parent {\n  color: blue;\n\n  .child {\n    color: red;\n  }\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.parent</span> {\n  <span class=\"hljs-attribute\">color</span>: blue;\n\n  <span class=\"hljs-selector-class\">.child</span> {\n    <span class=\"hljs-attribute\">color</span>: red;\n  }\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://developer.chrome.com/articles/css-nesting/",
+                            "title": "CSS Nesting"
+                          }
+                        ],
+                        "webFeature": {
+                          "id": "nesting",
+                          "description_html": "CSS nesting allows for shorter selectors, easier reading, and more modularity by nesting rules inside others.",
+                          "group": [
+                            "css"
+                          ],
+                          "name": "Nesting",
+                          "spec": [
+                            "https://drafts.csswg.org/css-nesting-1/"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2023-12-11",
+                            "support": {
+                              "chrome": "120",
+                              "chrome_android": "120",
+                              "edge": "120",
+                              "firefox": "117",
+                              "firefox_android": "117",
+                              "safari": "17.2",
+                              "safari_ios": "17.2"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 13,
+                      "id": "has_selector",
+                      "percentageQuestion": 7.22,
+                      "percentageSurvey": 0.24,
+                      "entity": {
+                        "name": "`:has()`",
+                        "nameHtml": "<code>:has()</code>",
+                        "nameClean": ":has()",
+                        "id": "has_selector",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "a:has(> img) {\n  border: 2px solid grey;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-tag\">a</span><span class=\"hljs-selector-pseudo\">:has</span>(&gt; <span class=\"hljs-selector-tag\">img</span>) {\n  <span class=\"hljs-attribute\">border</span>: <span class=\"hljs-number\">2px</span> solid grey;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/:has"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-has"
+                        },
+                        "webFeature": {
+                          "id": "has",
+                          "description_html": "The <code>:has()</code> CSS functional pseudo-class matches an element if any of the selectors passed as parameters would match at least one element.",
+                          "group": [
+                            "selectors"
+                          ],
+                          "name": ":has()",
+                          "spec": [
+                            "https://drafts.csswg.org/selectors-4/#relational"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2023-12-19",
+                            "support": {
+                              "chrome": "105",
+                              "chrome_android": "105",
+                              "edge": "105",
+                              "firefox": "121",
+                              "firefox_android": "121",
+                              "safari": "15.4",
+                              "safari_ios": "15.4"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 11,
+                      "id": "excessive_complexity",
+                      "percentageQuestion": 6.11,
+                      "percentageSurvey": 0.2,
+                      "entity": {
+                        "name": "Excessive complexity",
+                        "nameClean": "Excessive complexity",
+                        "description": "Too much complexity",
+                        "descriptionClean": "Too much complexity",
+                        "id": "excessive_complexity",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 5225,
+                      "id": "no_answer",
+                      "percentageQuestion": 0,
+                      "percentageSurvey": 96.63
+                    },
+                    {
+                      "count": 181,
                       "id": "other_answers",
-                      "percentageQuestion": 177.82,
-                      "percentageSurvey": 12.8,
+                      "percentageQuestion": 100.63,
+                      "percentageSurvey": 3.37,
                       "groupedBuckets": [
                         {
-                          "count": 19,
+                          "count": 74,
                           "id": "cutoff_answers",
-                          "percentageQuestion": 105.6,
-                          "percentageSurvey": 7.6
+                          "percentageQuestion": 41.19,
+                          "percentageSurvey": 1.39
                         },
                         {
-                          "count": 13,
+                          "count": 107,
                           "id": "no_match",
-                          "percentageQuestion": 72.22,
-                          "percentageSurvey": 5.2
+                          "percentageQuestion": 59.44,
+                          "percentageSurvey": 1.98
                         }
                       ]
                     }

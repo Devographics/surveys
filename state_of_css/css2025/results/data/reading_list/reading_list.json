@@ -6,7 +6,7 @@
           "reading_list": {
             "reading_list": {
               "id": "reading_list",
-              "responses": {
+              "combined": {
                 "currentEdition": {
                   "_metadata": {
                     "axis1Sort": {
@@ -17,16 +17,86 @@
                     "cutoff": 10
                   },
                   "completion": {
-                    "count": 63,
-                    "percentageSurvey": 25.2,
-                    "total": 250
+                    "count": 1710,
+                    "percentageSurvey": 31.63,
+                    "total": 5407
                   },
                   "buckets": [
                     {
-                      "count": 27,
+                      "count": 865,
+                      "id": "target_text_selector",
+                      "percentageQuestion": 50.58,
+                      "percentageSurvey": 16,
+                      "entity": {
+                        "name": "`::target-text`",
+                        "nameHtml": "<code>::target-text</code>",
+                        "nameClean": "::target-text",
+                        "id": "target_text_selector",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "::target-text {\n  background-color: pink;\n}\n",
+                          "codeHighlighted": "::target-text {\n  <span class=\"hljs-attribute\">background-color</span>: pink;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/::target-text"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-css_selectors_target-text"
+                        }
+                      }
+                    },
+                    {
+                      "count": 855,
+                      "id": "calc_size",
+                      "percentageQuestion": 50,
+                      "percentageSurvey": 15.81,
+                      "entity": {
+                        "name": "`calc-size()`",
+                        "nameHtml": "<code>calc-size()</code>",
+                        "nameClean": "calc-size()",
+                        "id": "calc_size",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".element {\n  height: 0;\n  overflow: hidden;\n  transition: height 0.3s;\n}\n\n.element.open {\n  height: calc-size(auto);\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.element</span> {\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-number\">0</span>;\n  <span class=\"hljs-attribute\">overflow</span>: hidden;\n  <span class=\"hljs-attribute\">transition</span>: height <span class=\"hljs-number\">0.3s</span>;\n}\n\n<span class=\"hljs-selector-class\">.element</span><span class=\"hljs-selector-class\">.open</span> {\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-built_in\">calc-size</span>(auto);\n}"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-css_types_calc-size"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://chromestatus.com/feature/5196713071738880",
+                            "title": "CSS interpolate-size property and calc-size() function"
+                          }
+                        ],
+                        "webFeature": {
+                          "id": "calc-size",
+                          "description_html": "The <code>calc-size()</code> CSS function computes mathematical expressions that include <code>height</code> and <code>width</code> keyword values, for example <code>calc-size(fit-content, size / 2)</code>. Not to be confused with the <code>calc()</code> CSS function, which cannot use keyword values.",
+                          "group": [
+                            "css"
+                          ],
+                          "name": "calc-size()",
+                          "spec": [
+                            "https://drafts.csswg.org/css-values-5/#calc-size"
+                          ],
+                          "status": {
+                            "baseline": "false",
+                            "support": {
+                              "chrome": "129",
+                              "chrome_android": "129",
+                              "edge": "129"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 797,
                       "id": "offset_path",
-                      "percentageQuestion": 42.86,
-                      "percentageSurvey": 10.8,
+                      "percentageQuestion": 46.61,
+                      "percentageSurvey": 14.74,
                       "entity": {
                         "name": "`offset-path`\n",
                         "nameHtml": "<code>offset-path</code>\n",
@@ -71,34 +141,61 @@
                       }
                     },
                     {
-                      "count": 27,
-                      "id": "target_text_selector",
-                      "percentageQuestion": 42.86,
-                      "percentageSurvey": 10.8,
+                      "count": 793,
+                      "id": "field_sizing",
+                      "percentageQuestion": 46.37,
+                      "percentageSurvey": 14.67,
                       "entity": {
-                        "name": "`::target-text`",
-                        "nameHtml": "<code>::target-text</code>",
-                        "nameClean": "::target-text",
-                        "id": "target_text_selector",
+                        "name": "`field-sizing`",
+                        "nameHtml": "<code>field-sizing</code>",
+                        "nameClean": "field-sizing",
+                        "id": "field_sizing",
                         "entityType": "feature",
                         "example": {
                           "language": "css",
-                          "code": "::target-text {\n  background-color: pink;\n}\n",
-                          "codeHighlighted": "::target-text {\n  <span class=\"hljs-attribute\">background-color</span>: pink;\n}"
+                          "code": "input,\ntextarea {\n  field-sizing: content;\n  min-width: 50px;\n  max-width: 350px;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-tag\">input</span>,\n<span class=\"hljs-selector-tag\">textarea</span> {\n  <span class=\"hljs-attribute\">field-sizing</span>: content;\n  <span class=\"hljs-attribute\">min-width</span>: <span class=\"hljs-number\">50px</span>;\n  <span class=\"hljs-attribute\">max-width</span>: <span class=\"hljs-number\">350px</span>;\n}"
                         },
                         "mdn": {
-                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/::target-text"
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/field-sizing"
                         },
                         "caniuse": {
-                          "url": "https://caniuse.com/mdn-css_selectors_target-text"
+                          "url": "https://caniuse.com/mdn-css_properties_field-sizing"
                         }
                       }
                     },
                     {
-                      "count": 22,
+                      "count": 783,
+                      "id": "text_box_trim",
+                      "percentageQuestion": 45.79,
+                      "percentageSurvey": 14.48,
+                      "entity": {
+                        "name": "`text-box-edge`/`text-box-trim`",
+                        "nameHtml": "<code>text-box-edge</code>/<code>text-box-trim</code>",
+                        "nameClean": "text-box-edge/text-box-trim",
+                        "id": "text_box_trim",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "p {\n  text-box-edge: cap alphabetic;\n  text-box-trim: trim-both;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-tag\">p</span> {\n  <span class=\"hljs-selector-tag\">text</span>-box-edge: cap alphabetic;\n  <span class=\"hljs-selector-tag\">text</span>-box-trim: trim-both;\n}"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-text-box-trim"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://medium.com/microsoft-design/leading-trim-the-future-of-digital-typesetting-d082d84b202",
+                            "title": "Leading-Trim: The Future of Digital Typesetting"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "count": 776,
                       "id": "hanging_punctuation",
-                      "percentageQuestion": 34.92,
-                      "percentageSurvey": 8.8,
+                      "percentageQuestion": 45.38,
+                      "percentageSurvey": 14.35,
                       "entity": {
                         "name": "`hanging-punctuation`",
                         "nameHtml": "<code>hanging-punctuation</code>",
@@ -130,173 +227,55 @@
                       }
                     },
                     {
-                      "count": 21,
-                      "id": "sibling_index",
-                      "percentageQuestion": 33.33,
-                      "percentageSurvey": 8.4,
+                      "count": 767,
+                      "id": "at_scope",
+                      "percentageQuestion": 44.85,
+                      "percentageSurvey": 14.19,
                       "entity": {
-                        "name": "`sibling-index()`",
-                        "nameHtml": "<code>sibling-index()</code>",
-                        "nameClean": "sibling-index()",
-                        "id": "sibling_index",
-                        "entityType": "feature",
-                        "resources": [
-                          {
-                            "url": "https://www.w3.org/TR/css-values-5/#tree-counting",
-                            "title": "Tree Counting Functions: the sibling-count() and sibling-index() notations"
-                          },
-                          {
-                            "url": "https://nerdy.dev/sibling-index",
-                            "title": "Let the stagger experiments begin"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "count": 20,
-                      "id": "at_function",
-                      "percentageQuestion": 31.75,
-                      "percentageSurvey": 8,
-                      "entity": {
-                        "name": "`@function`",
-                        "nameHtml": "<code>@function</code>",
-                        "nameClean": "@function",
-                        "id": "at_function",
+                        "name": "`@scope`",
+                        "nameHtml": "<code>@scope</code>",
+                        "nameClean": "@scope",
+                        "id": "at_scope",
                         "entityType": "feature",
                         "example": {
                           "language": "css",
-                          "code": "@function --negate(--value) {\n  result: calc(-1 * var(--value));\n}\n",
-                          "codeHighlighted": "<span class=\"hljs-keyword\">@function</span> --negate(--value) {\n  result: <span class=\"hljs-built_in\">calc</span>(-<span class=\"hljs-number\">1</span> * <span class=\"hljs-built_in\">var</span>(--value));\n}"
-                        },
-                        "resources": [
-                          {
-                            "url": "https://css-tricks.com/functions-in-css/",
-                            "title": "Functions in CSS?!"
-                          },
-                          {
-                            "url": "https://www.bram.us/2025/02/09/css-custom-functions-teaser/",
-                            "title": "CSS Custom Functions are coming … and they are going to be a game changer!"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "count": 20,
-                      "id": "field_sizing",
-                      "percentageQuestion": 31.75,
-                      "percentageSurvey": 8,
-                      "entity": {
-                        "name": "`field-sizing`",
-                        "nameHtml": "<code>field-sizing</code>",
-                        "nameClean": "field-sizing",
-                        "id": "field_sizing",
-                        "entityType": "feature",
-                        "example": {
-                          "language": "css",
-                          "code": "input,\ntextarea {\n  field-sizing: content;\n  min-width: 50px;\n  max-width: 350px;\n}\n",
-                          "codeHighlighted": "<span class=\"hljs-selector-tag\">input</span>,\n<span class=\"hljs-selector-tag\">textarea</span> {\n  <span class=\"hljs-attribute\">field-sizing</span>: content;\n  <span class=\"hljs-attribute\">min-width</span>: <span class=\"hljs-number\">50px</span>;\n  <span class=\"hljs-attribute\">max-width</span>: <span class=\"hljs-number\">350px</span>;\n}"
+                          "code": "@scope (.card) {\n  :scope {\n    padding: 1rem;\n  }\n\n  .title {\n    font-size: 1.2rem;\n  }\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">@scope</span> (.card) {\n  <span class=\"hljs-selector-pseudo\">:scope</span> {\n    <span class=\"hljs-attribute\">padding</span>: <span class=\"hljs-number\">1rem</span>;\n  }\n\n  <span class=\"hljs-selector-class\">.title</span> {\n    <span class=\"hljs-attribute\">font-size</span>: <span class=\"hljs-number\">1.2rem</span>;\n  }\n}"
                         },
                         "mdn": {
-                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/field-sizing"
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@scope"
                         },
                         "caniuse": {
-                          "url": "https://caniuse.com/mdn-css_properties_field-sizing"
-                        }
-                      }
-                    },
-                    {
-                      "count": 20,
-                      "id": "scroll_state",
-                      "percentageQuestion": 31.75,
-                      "percentageSurvey": 8,
-                      "entity": {
-                        "name": "Container scroll-state queries",
-                        "nameClean": "Container scroll-state queries",
-                        "id": "scroll_state",
-                        "entityType": "feature",
-                        "example": {
-                          "language": "css",
-                          "code": "@container scroller scroll-state(scrollable: top) {\n  .back-to-top {\n    translate: 0 0;\n  }\n}\n",
-                          "codeHighlighted": "<span class=\"hljs-keyword\">@container</span> scroller scroll-state(<span class=\"hljs-attribute\">scrollable</span>: top) {\n  <span class=\"hljs-selector-class\">.back-to-top</span> {\n    <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">0</span>;\n  }\n}"
+                          "url": "https://caniuse.com/css-cascade-scope"
                         },
-                        "mdn": {
-                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries"
-                        },
-                        "caniuse": {
-                          "url": "https://caniuse.com/mdn-css_at-rules_container_scroll-state_queries"
-                        }
-                      }
-                    },
-                    {
-                      "count": 20,
-                      "id": "sibling_count",
-                      "percentageQuestion": 31.75,
-                      "percentageSurvey": 8,
-                      "entity": {
-                        "name": "`sibling-count()`",
-                        "nameHtml": "<code>sibling-count()</code>",
-                        "nameClean": "sibling-count()",
-                        "id": "sibling_count",
-                        "entityType": "feature",
-                        "resources": [
-                          {
-                            "url": "https://www.w3.org/TR/css-values-5/#tree-counting",
-                            "title": "Tree Counting Functions: the sibling-count() and sibling-index() notations"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "count": 19,
-                      "id": "calc_size",
-                      "percentageQuestion": 30.16,
-                      "percentageSurvey": 7.6,
-                      "entity": {
-                        "name": "`calc-size()`",
-                        "nameHtml": "<code>calc-size()</code>",
-                        "nameClean": "calc-size()",
-                        "id": "calc_size",
-                        "entityType": "feature",
-                        "example": {
-                          "language": "css",
-                          "code": ".element {\n  height: 0;\n  overflow: hidden;\n  transition: height 0.3s;\n}\n\n.element.open {\n  height: calc-size(auto);\n}\n",
-                          "codeHighlighted": "<span class=\"hljs-selector-class\">.element</span> {\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-number\">0</span>;\n  <span class=\"hljs-attribute\">overflow</span>: hidden;\n  <span class=\"hljs-attribute\">transition</span>: height <span class=\"hljs-number\">0.3s</span>;\n}\n\n<span class=\"hljs-selector-class\">.element</span><span class=\"hljs-selector-class\">.open</span> {\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-built_in\">calc-size</span>(auto);\n}"
-                        },
-                        "caniuse": {
-                          "url": "https://caniuse.com/mdn-css_types_calc-size"
-                        },
-                        "resources": [
-                          {
-                            "url": "https://chromestatus.com/feature/5196713071738880",
-                            "title": "CSS interpolate-size property and calc-size() function"
-                          }
-                        ],
                         "webFeature": {
-                          "id": "calc-size",
-                          "description_html": "The <code>calc-size()</code> CSS function computes mathematical expressions that include <code>height</code> and <code>width</code> keyword values, for example <code>calc-size(fit-content, size / 2)</code>. Not to be confused with the <code>calc()</code> CSS function, which cannot use keyword values.",
+                          "id": "scope",
+                          "description_html": "The <code>@scope</code> CSS at-rule sets the scope for a group of rules.",
                           "group": [
                             "css"
                           ],
-                          "name": "calc-size()",
+                          "name": "@scope",
                           "spec": [
-                            "https://drafts.csswg.org/css-values-5/#calc-size"
+                            "https://drafts.csswg.org/css-cascade-6/#scope-atrule"
                           ],
                           "status": {
                             "baseline": "false",
                             "support": {
-                              "chrome": "129",
-                              "chrome_android": "129",
-                              "edge": "129"
+                              "chrome": "118",
+                              "chrome_android": "118",
+                              "edge": "118",
+                              "safari": "17.4",
+                              "safari_ios": "17.4"
                             }
                           }
                         }
                       }
                     },
                     {
-                      "count": 19,
+                      "count": 748,
                       "id": "css_carousels",
-                      "percentageQuestion": 30.16,
-                      "percentageSurvey": 7.6,
+                      "percentageQuestion": 43.74,
+                      "percentageSurvey": 13.83,
                       "entity": {
                         "name": "CSS Carousels",
                         "nameClean": "CSS Carousels",
@@ -330,85 +309,131 @@
                       }
                     },
                     {
-                      "count": 19,
-                      "id": "image_set",
-                      "percentageQuestion": 30.16,
-                      "percentageSurvey": 7.6,
+                      "count": 745,
+                      "id": "scroll_state",
+                      "percentageQuestion": 43.57,
+                      "percentageSurvey": 13.78,
                       "entity": {
-                        "name": "`image-set()`",
-                        "nameHtml": "<code>image-set()</code>",
-                        "nameClean": "image-set()",
-                        "id": "image_set",
+                        "name": "Container scroll-state queries",
+                        "nameClean": "Container scroll-state queries",
+                        "id": "scroll_state",
                         "entityType": "feature",
                         "example": {
                           "language": "css",
-                          "code": ".box {\n  background-image: image-set(\n    url(\"small-balloons.jpg\") 1x,\n    url(\"large-balloons.jpg\") 2x);\n}\n",
-                          "codeHighlighted": "<span class=\"hljs-selector-class\">.box</span> {\n  <span class=\"hljs-attribute\">background-image</span>: <span class=\"hljs-built_in\">image-set</span>(\n    <span class=\"hljs-built_in\">url</span>(<span class=\"hljs-string\">&quot;small-balloons.jpg&quot;</span>) <span class=\"hljs-number\">1</span>x,\n    <span class=\"hljs-built_in\">url</span>(<span class=\"hljs-string\">&quot;large-balloons.jpg&quot;</span>) <span class=\"hljs-number\">2</span>x);\n}"
+                          "code": "@container scroller scroll-state(scrollable: top) {\n  .back-to-top {\n    translate: 0 0;\n  }\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">@container</span> scroller scroll-state(<span class=\"hljs-attribute\">scrollable</span>: top) {\n  <span class=\"hljs-selector-class\">.back-to-top</span> {\n    <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">0</span>;\n  }\n}"
                         },
                         "mdn": {
-                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set"
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries"
                         },
                         "caniuse": {
-                          "url": "https://caniuse.com/css-image-set"
-                        },
-                        "webFeature": {
-                          "id": "image-set",
-                          "description_html": "The <code>image-set()</code> CSS function provides a set of images at different resolutions or pixel densities, which the browser can pick from, depending on the device capabilities.",
-                          "group": [
-                            "css"
-                          ],
-                          "name": "image-set()",
-                          "spec": [
-                            "https://drafts.csswg.org/css-images-4/#image-set-notation"
-                          ],
-                          "status": {
-                            "baseline": "low",
-                            "baseline_low_date": "2023-09-18",
-                            "support": {
-                              "chrome": "113",
-                              "chrome_android": "113",
-                              "edge": "113",
-                              "firefox": "89",
-                              "firefox_android": "89",
-                              "safari": "17",
-                              "safari_ios": "17"
-                            }
-                          }
+                          "url": "https://caniuse.com/mdn-css_at-rules_container_scroll-state_queries"
                         }
                       }
                     },
                     {
-                      "count": 19,
-                      "id": "text_box_trim",
-                      "percentageQuestion": 30.16,
-                      "percentageSurvey": 7.6,
+                      "count": 741,
+                      "id": "at_function",
+                      "percentageQuestion": 43.33,
+                      "percentageSurvey": 13.7,
                       "entity": {
-                        "name": "`text-box-edge`/`text-box-trim`",
-                        "nameHtml": "<code>text-box-edge</code>/<code>text-box-trim</code>",
-                        "nameClean": "text-box-edge/text-box-trim",
-                        "id": "text_box_trim",
+                        "name": "`@function`",
+                        "nameHtml": "<code>@function</code>",
+                        "nameClean": "@function",
+                        "id": "at_function",
                         "entityType": "feature",
                         "example": {
                           "language": "css",
-                          "code": "p {\n  text-box-edge: cap alphabetic;\n  text-box-trim: trim-both;\n}\n",
-                          "codeHighlighted": "<span class=\"hljs-selector-tag\">p</span> {\n  <span class=\"hljs-selector-tag\">text</span>-box-edge: cap alphabetic;\n  <span class=\"hljs-selector-tag\">text</span>-box-trim: trim-both;\n}"
-                        },
-                        "caniuse": {
-                          "url": "https://caniuse.com/css-text-box-trim"
+                          "code": "@function --negate(--value) {\n  result: calc(-1 * var(--value));\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">@function</span> --negate(--value) {\n  result: <span class=\"hljs-built_in\">calc</span>(-<span class=\"hljs-number\">1</span> * <span class=\"hljs-built_in\">var</span>(--value));\n}"
                         },
                         "resources": [
                           {
-                            "url": "https://medium.com/microsoft-design/leading-trim-the-future-of-digital-typesetting-d082d84b202",
-                            "title": "Leading-Trim: The Future of Digital Typesetting"
+                            "url": "https://css-tricks.com/functions-in-css/",
+                            "title": "Functions in CSS?!"
+                          },
+                          {
+                            "url": "https://www.bram.us/2025/02/09/css-custom-functions-teaser/",
+                            "title": "CSS Custom Functions are coming … and they are going to be a game changer!"
                           }
                         ]
                       }
                     },
                     {
-                      "count": 18,
+                      "count": 735,
+                      "id": "sibling_index",
+                      "percentageQuestion": 42.98,
+                      "percentageSurvey": 13.59,
+                      "entity": {
+                        "name": "`sibling-index()`",
+                        "nameHtml": "<code>sibling-index()</code>",
+                        "nameClean": "sibling-index()",
+                        "id": "sibling_index",
+                        "entityType": "feature",
+                        "resources": [
+                          {
+                            "url": "https://www.w3.org/TR/css-values-5/#tree-counting",
+                            "title": "Tree Counting Functions: the sibling-count() and sibling-index() notations"
+                          },
+                          {
+                            "url": "https://nerdy.dev/sibling-index",
+                            "title": "Let the stagger experiments begin"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "count": 703,
+                      "id": "if_function",
+                      "percentageQuestion": 41.11,
+                      "percentageSurvey": 13,
+                      "entity": {
+                        "name": "`if()`",
+                        "nameHtml": "<code>if()</code>",
+                        "nameClean": "if()",
+                        "id": "if_function",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "div {\n  color: var(--color);\n  background-color: if(style(--color: white): black; else: white);\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-tag\">div</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">var</span>(--color);\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">if</span>(<span class=\"hljs-built_in\">style</span>(--color: white): black; else: white);\n}"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://chromestatus.com/feature/6313805904347136",
+                            "title": "Feature: CSS if() function"
+                          },
+                          {
+                            "url": "https://css-tricks.com/if-css-gets-inline-conditionals/",
+                            "title": "“If” CSS Gets Inline Conditionals"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "count": 678,
+                      "id": "sibling_count",
+                      "percentageQuestion": 39.65,
+                      "percentageSurvey": 12.54,
+                      "entity": {
+                        "name": "`sibling-count()`",
+                        "nameHtml": "<code>sibling-count()</code>",
+                        "nameClean": "sibling-count()",
+                        "id": "sibling_count",
+                        "entityType": "feature",
+                        "resources": [
+                          {
+                            "url": "https://www.w3.org/TR/css-values-5/#tree-counting",
+                            "title": "Tree Counting Functions: the sibling-count() and sibling-index() notations"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "count": 659,
                       "id": "anchor_positioning",
-                      "percentageQuestion": 28.57,
-                      "percentageSurvey": 7.2,
+                      "percentageQuestion": 38.54,
+                      "percentageSurvey": 12.19,
                       "entity": {
                         "name": "Anchor Positioning",
                         "nameClean": "Anchor Positioning",
@@ -458,10 +483,142 @@
                       }
                     },
                     {
-                      "count": 18,
+                      "count": 641,
+                      "id": "display_contents",
+                      "percentageQuestion": 37.49,
+                      "percentageSurvey": 11.86,
+                      "entity": {
+                        "name": "`display: contents`",
+                        "nameHtml": "<code>display: contents</code>",
+                        "nameClean": "display: contents",
+                        "id": "display_contents",
+                        "entityType": "feature"
+                      }
+                    },
+                    {
+                      "count": 639,
+                      "id": "discrete_properties_animations",
+                      "percentageQuestion": 37.37,
+                      "percentageSurvey": 11.82,
+                      "entity": {
+                        "name": "Discrete Properties Animations",
+                        "nameClean": "Discrete Properties Animations",
+                        "description": "Animate to and from properties such as `display: none`\n",
+                        "descriptionHtml": "Animate to and from properties such as <code>display: none</code>\n",
+                        "descriptionClean": "Animate to and from properties such as display: none",
+                        "id": "discrete_properties_animations",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "/*   IS-OPEN STATE   */\ndialog[open] {\n  translate: 0 0;\n}\n\n/*   EXIT STATE   */\ndialog {\n  transition: opacity 1s, display 1s allow-discrete, overlay 1s allow-discrete;\n  translate: 0 100vh;\n}\n\n/*   0. BEFORE-OPEN STATE   */\n@starting-style {\n  dialog[open] {\n    translate: 0 100vh;\n  }\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-comment\">/*   IS-OPEN STATE   */</span>\ndialog<span class=\"hljs-selector-attr\">[open]</span> {\n  <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">0</span>;\n}\n\n<span class=\"hljs-comment\">/*   EXIT STATE   */</span>\ndialog {\n  <span class=\"hljs-attribute\">transition</span>: opacity <span class=\"hljs-number\">1s</span>, display <span class=\"hljs-number\">1s</span> allow-discrete, overlay <span class=\"hljs-number\">1s</span> allow-discrete;\n  <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n}\n\n<span class=\"hljs-comment\">/*   0. BEFORE-OPEN STATE   */</span>\n<span class=\"hljs-keyword\">@starting-style</span> {\n  dialog<span class=\"hljs-selector-attr\">[open]</span> {\n    <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n  }\n}"
+                        },
+                        "webFeature": {
+                          "id": "transition-behavior",
+                          "description_html": "The <code>transition-behavior: allow-discrete</code> CSS declaration allows transitions for properties whose animation behavior is discrete. Such properties can't be interpolated and swap from their start value to the end value at 50%.",
+                          "group": [
+                            "transitions"
+                          ],
+                          "name": "transition-behavior",
+                          "spec": [
+                            "https://drafts.csswg.org/css-transitions-2/#transition-behavior-property"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2024-08-06",
+                            "support": {
+                              "chrome": "117",
+                              "chrome_android": "117",
+                              "edge": "117",
+                              "firefox": "129",
+                              "firefox_android": "129",
+                              "safari": "17.4",
+                              "safari_ios": "17.4"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 621,
+                      "id": "at_container_style",
+                      "percentageQuestion": 36.32,
+                      "percentageSurvey": 11.49,
+                      "entity": {
+                        "name": "`@container` style queries\n",
+                        "nameHtml": "<code>@container</code> style queries\n",
+                        "nameClean": "@container style queries",
+                        "id": "at_container_style",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "@container style(--fontColor: green) {\n  /* <stylesheet> */\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-keyword\">@container</span> style(<span class=\"hljs-attribute\">--fontColor</span>: green) {\n  <span class=\"hljs-comment\">/* &lt;stylesheet&gt; */</span>\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-container-queries-style"
+                        },
+                        "webFeature": {
+                          "id": "container-style-queries",
+                          "description_html": "Container style queries with the <code>@container</code> at-rule apply styles to an element based on the values of custom properties of its container.",
+                          "group": [
+                            "container-queries"
+                          ],
+                          "name": "Container style queries",
+                          "spec": [
+                            "https://drafts.csswg.org/css-conditional-5/#style-container"
+                          ],
+                          "status": {
+                            "baseline": "false",
+                            "support": {
+                              "chrome": "111",
+                              "chrome_android": "111",
+                              "edge": "111",
+                              "safari": "18",
+                              "safari_ios": "18"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 609,
+                      "id": "advanced_attr_function",
+                      "percentageQuestion": 35.61,
+                      "percentageSurvey": 11.26,
+                      "entity": {
+                        "name": "Advanced `attr()`",
+                        "nameHtml": "Advanced <code>attr()</code>",
+                        "nameClean": "Advanced attr()",
+                        "description": "Support for properties other than content",
+                        "descriptionClean": "Support for properties other than content",
+                        "id": "advanced_attr_function",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".title {\n  background-color: attr(data-color type(<color>));\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.title</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">attr</span>(data-color <span class=\"hljs-built_in\">type</span>(&lt;color&gt;));\n}"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://una.im/advanced-attr/",
+                            "title": "New capabilities for attr()"
+                          },
+                          {
+                            "url": "https://ishadeed.com/article/modern-attr/",
+                            "title": "First Look at The Modern attr()"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "count": 605,
                       "id": "nth_child_of_s",
-                      "percentageQuestion": 28.57,
-                      "percentageSurvey": 7.2,
+                      "percentageQuestion": 35.38,
+                      "percentageSurvey": 11.19,
                       "entity": {
                         "name": "`nth-child of S`",
                         "nameHtml": "<code>nth-child of S</code>",
@@ -510,179 +667,10 @@
                       }
                     },
                     {
-                      "count": 17,
-                      "id": "css_shape_function",
-                      "percentageQuestion": 26.98,
-                      "percentageSurvey": 6.8,
-                      "entity": {
-                        "name": "`shape()`",
-                        "nameHtml": "<code>shape()</code>",
-                        "nameClean": "shape()",
-                        "id": "css_shape_function",
-                        "entityType": "feature",
-                        "example": {
-                          "language": "css",
-                          "code": ".clipped {\n  clip-path: shape(\n    from top left,\n    hline to 100%,\n    vline to 100%,\n    curve to 0% 100% with 50% 0%,\n  );\n}\n",
-                          "codeHighlighted": "<span class=\"hljs-selector-class\">.clipped</span> {\n  <span class=\"hljs-attribute\">clip-path</span>: <span class=\"hljs-built_in\">shape</span>(\n    from top left,\n    hline to <span class=\"hljs-number\">100%</span>,\n    vline to <span class=\"hljs-number\">100%</span>,\n    curve to <span class=\"hljs-number\">0%</span> <span class=\"hljs-number\">100%</span> with <span class=\"hljs-number\">50%</span> <span class=\"hljs-number\">0%</span>,\n  );\n}"
-                        },
-                        "mdn": {
-                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/basic-shape/shape"
-                        },
-                        "caniuse": {
-                          "url": "https://caniuse.com/mdn-css_types_basic-shape_shape"
-                        },
-                        "resources": [
-                          {
-                            "url": "https://css-tricks.com/css-shape-commands/",
-                            "title": "CSS shape() Commands"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "count": 15,
-                      "id": "display_contents",
-                      "percentageQuestion": 23.81,
-                      "percentageSurvey": 6,
-                      "entity": {
-                        "name": "`display: contents`",
-                        "nameHtml": "<code>display: contents</code>",
-                        "nameClean": "display: contents",
-                        "id": "display_contents",
-                        "entityType": "feature"
-                      }
-                    },
-                    {
-                      "count": 15,
-                      "id": "if_function",
-                      "percentageQuestion": 23.81,
-                      "percentageSurvey": 6,
-                      "entity": {
-                        "name": "`if()`",
-                        "nameHtml": "<code>if()</code>",
-                        "nameClean": "if()",
-                        "id": "if_function",
-                        "entityType": "feature",
-                        "example": {
-                          "language": "css",
-                          "code": "div {\n  color: var(--color);\n  background-color: if(style(--color: white): black; else: white);\n}\n",
-                          "codeHighlighted": "<span class=\"hljs-selector-tag\">div</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">var</span>(--color);\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">if</span>(<span class=\"hljs-built_in\">style</span>(--color: white): black; else: white);\n}"
-                        },
-                        "resources": [
-                          {
-                            "url": "https://chromestatus.com/feature/6313805904347136",
-                            "title": "Feature: CSS if() function"
-                          },
-                          {
-                            "url": "https://css-tricks.com/if-css-gets-inline-conditionals/",
-                            "title": "“If” CSS Gets Inline Conditionals"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "count": 15,
-                      "id": "stepped_value_functions",
-                      "percentageQuestion": 23.81,
-                      "percentageSurvey": 6,
-                      "entity": {
-                        "name": "Stepped Value Functions",
-                        "nameClean": "Stepped Value Functions",
-                        "description": "`round()`, `mod()`, `rem()`\n",
-                        "descriptionHtml": "<code>round()</code>, <code>mod()</code>, <code>rem()</code>\n",
-                        "descriptionClean": "round(), mod(), rem()",
-                        "id": "stepped_value_functions",
-                        "entityType": "feature",
-                        "example": {
-                          "language": "css",
-                          "code": "div {\n  width: round(var(--width), 50px);\n  line-height: mod(7, 2); /* 1 */\n}\n",
-                          "codeHighlighted": "<span class=\"hljs-selector-tag\">div</span> {\n  <span class=\"hljs-attribute\">width</span>: <span class=\"hljs-built_in\">round</span>(<span class=\"hljs-built_in\">var</span>(--width), <span class=\"hljs-number\">50px</span>);\n  <span class=\"hljs-attribute\">line-height</span>: <span class=\"hljs-built_in\">mod</span>(<span class=\"hljs-number\">7</span>, <span class=\"hljs-number\">2</span>); <span class=\"hljs-comment\">/* 1 */</span>\n}"
-                        },
-                        "mdn": {
-                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions"
-                        },
-                        "caniuse": {
-                          "url": "https://caniuse.com/mdn-css_types_round"
-                        },
-                        "webFeature": {
-                          "id": "round-mod-rem",
-                          "description_html": "The <code>round()</code>, <code>mod()</code>, and <code>rem()</code> CSS functions compute rounded values and the remainder after division.",
-                          "group": [
-                            "css"
-                          ],
-                          "name": "round(), mod(), and rem()",
-                          "spec": [
-                            "https://drafts.csswg.org/css-values-4/#round-func"
-                          ],
-                          "status": {
-                            "baseline": "low",
-                            "baseline_low_date": "2024-05-17",
-                            "support": {
-                              "chrome": "125",
-                              "chrome_android": "125",
-                              "edge": "125",
-                              "firefox": "118",
-                              "firefox_android": "118",
-                              "safari": "15.4",
-                              "safari_ios": "15.4"
-                            }
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "count": 14,
-                      "id": "light_dark",
-                      "percentageQuestion": 22.22,
-                      "percentageSurvey": 5.6,
-                      "entity": {
-                        "name": "`light-dark()`",
-                        "nameHtml": "<code>light-dark()</code>",
-                        "nameClean": "light-dark()",
-                        "id": "light_dark",
-                        "entityType": "feature",
-                        "example": {
-                          "language": "css",
-                          "code": "code {\n  color: light-dark(black, white);\n}\n",
-                          "codeHighlighted": "<span class=\"hljs-selector-tag\">code</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">light-dark</span>(black, white);\n}"
-                        },
-                        "mdn": {
-                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark"
-                        },
-                        "caniuse": {
-                          "url": "https://caniuse.com/mdn-css_types_color_light-dark"
-                        },
-                        "webFeature": {
-                          "id": "light-dark",
-                          "description_html": "The <code>light-dark()</code> CSS function accepts two colors and uses one depending on the current color scheme.",
-                          "group": [
-                            "css"
-                          ],
-                          "name": "light-dark()",
-                          "spec": [
-                            "https://drafts.csswg.org/css-color-5/#light-dark"
-                          ],
-                          "status": {
-                            "baseline": "low",
-                            "baseline_low_date": "2024-05-13",
-                            "support": {
-                              "chrome": "123",
-                              "chrome_android": "123",
-                              "edge": "123",
-                              "firefox": "120",
-                              "firefox_android": "120",
-                              "safari": "17.5",
-                              "safari_ios": "17.5"
-                            }
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "count": 14,
+                      "count": 594,
                       "id": "scroll_driven_animations",
-                      "percentageQuestion": 22.22,
-                      "percentageSurvey": 5.6,
+                      "percentageQuestion": 34.74,
+                      "percentageSurvey": 10.99,
                       "entity": {
                         "name": "Scroll-driven animations",
                         "nameClean": "Scroll-driven animations",
@@ -736,22 +724,16 @@
                       }
                     },
                     {
-                      "count": 250,
-                      "id": "cutoff_answers",
-                      "percentageQuestion": 396.81,
-                      "percentageSurvey": 100
-                    },
-                    {
-                      "count": 187,
+                      "count": 3697,
                       "id": "no_answer",
                       "percentageQuestion": 0,
-                      "percentageSurvey": 74.8
+                      "percentageSurvey": 68.37
                     },
                     {
-                      "count": 153,
-                      "id": "overlimit_answers",
-                      "percentageQuestion": 242.84,
-                      "percentageSurvey": 61.2
+                      "count": 17695,
+                      "id": "other_answers",
+                      "percentageQuestion": 1034.75,
+                      "percentageSurvey": 327.26
                     }
                   ]
                 }

@@ -10,7 +10,7 @@ query {
                 count
               }
             }
-            responses(filters: { user_info__country: { in: [USA] } }) {
+            combined(filters: { user_info__country: { in: [USA] } }) {
               currentEdition {
                 _metadata {
                   axis1Sort {
@@ -135,7 +135,7 @@ query {
                 count
               }
             }
-            responses(filters: { user_info__country: { nin: [USA] } }) {
+            combined(filters: { user_info__country: { nin: [USA] } }) {
               currentEdition {
                 _metadata {
                   axis1Sort {

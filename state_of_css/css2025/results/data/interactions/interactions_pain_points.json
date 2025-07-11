@@ -17,34 +17,285 @@
                     "cutoff": 10
                   },
                   "completion": {
-                    "count": 31,
-                    "percentageSurvey": 12.4,
-                    "total": 250
+                    "count": 317,
+                    "percentageSurvey": 5.86,
+                    "total": 5407
                   },
                   "buckets": [
                     {
-                      "count": 219,
-                      "id": "no_answer",
-                      "percentageQuestion": 0,
-                      "percentageSurvey": 87.6
+                      "count": 49,
+                      "id": "browser_support",
+                      "percentageQuestion": 15.46,
+                      "percentageSurvey": 0.91,
+                      "entity": {
+                        "name": "Browser support",
+                        "nameClean": "Browser support",
+                        "description": "Browser support, compatibility, and consistency issues",
+                        "descriptionClean": "Browser support, compatibility, and consistency issues",
+                        "id": "browser_support",
+                        "entityType": "default"
+                      }
                     },
                     {
-                      "count": 44,
+                      "count": 33,
+                      "id": "animation_issues",
+                      "percentageQuestion": 10.41,
+                      "percentageSurvey": 0.61,
+                      "entity": {
+                        "name": "Animations",
+                        "nameClean": "Animations",
+                        "description": "Animation issues",
+                        "descriptionClean": "Animation issues",
+                        "id": "animation_issues",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 33,
+                      "id": "scrolling_issues",
+                      "percentageQuestion": 10.41,
+                      "percentageSurvey": 0.61,
+                      "entity": {
+                        "id": "scrolling_issues",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 24,
+                      "id": "accessibility",
+                      "percentageQuestion": 7.57,
+                      "percentageSurvey": 0.44,
+                      "entity": {
+                        "name": "Accessibility",
+                        "nameClean": "Accessibility",
+                        "description": "Accessibility improvements",
+                        "descriptionClean": "Accessibility improvements",
+                        "id": "accessibility",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 24,
+                      "id": "scroll_driven_animations",
+                      "percentageQuestion": 7.57,
+                      "percentageSurvey": 0.44,
+                      "entity": {
+                        "name": "Scroll-driven animations",
+                        "nameClean": "Scroll-driven animations",
+                        "id": "scroll_driven_animations",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "html {\n  scroll-timeline: --page-scroll block;\n}\n\n@keyframes grow-progress {\n  from { transform: scaleX(0); }\n  to { transform: scaleX(1); }\n}\n\n#progress {\n  animation: grow-progress auto linear;\n  animation-timeline: --page-scroll;\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-tag\">html</span> {\n  <span class=\"hljs-attribute\">scroll-timeline</span>: --page-scroll block;\n}\n\n<span class=\"hljs-keyword\">@keyframes</span> grow-progress {\n  <span class=\"hljs-selector-tag\">from</span> { <span class=\"hljs-attribute\">transform</span>: <span class=\"hljs-built_in\">scaleX</span>(<span class=\"hljs-number\">0</span>); }\n  <span class=\"hljs-selector-tag\">to</span> { <span class=\"hljs-attribute\">transform</span>: <span class=\"hljs-built_in\">scaleX</span>(<span class=\"hljs-number\">1</span>); }\n}\n\n<span class=\"hljs-selector-id\">#progress</span> {\n  <span class=\"hljs-attribute\">animation</span>: grow-progress auto linear;\n  <span class=\"hljs-attribute\">animation-timeline</span>: --page-scroll;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-css_properties_animation-timeline"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://scroll-driven-animations.style/",
+                            "title": "Scroll-driven Animations"
+                          },
+                          {
+                            "url": "https://css-tricks.com/unleash-the-power-of-scroll-driven-animations/",
+                            "title": "Unleash the Power of Scroll-Driven Animations"
+                          },
+                          {
+                            "url": "https://developer.chrome.com/docs/css-ui/scroll-driven-animations",
+                            "title": "Animate elements on scroll with Scroll-driven animations"
+                          }
+                        ],
+                        "webFeature": {
+                          "id": "scroll-driven-animations",
+                          "description_html": "The <code>animation-timeline</code>, <code>scroll-timeline</code>, and <code>view-timeline</code> CSS properties advance animations based on the user's scroll position.",
+                          "group": [
+                            "scrolling",
+                            "animation"
+                          ],
+                          "name": "Scroll-driven animations",
+                          "spec": [
+                            "https://drafts.csswg.org/scroll-animations-1/"
+                          ],
+                          "status": {
+                            "baseline": "false",
+                            "support": {
+                              "chrome": "115",
+                              "chrome_android": "115",
+                              "edge": "115"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 22,
+                      "id": "view_transitions",
+                      "percentageQuestion": 6.94,
+                      "percentageSurvey": 0.41,
+                      "entity": {
+                        "name": "View Transition API",
+                        "nameClean": "View Transition API",
+                        "id": "view_transitions",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "::view-transition-old(main-image),\n::view-transition-new(main-image) {\n  transform-origin: right top;\n}\n\n::view-transition-new(main-image) {\n  animation: 400ms ease-out both grow;\n}\n\nfigure {\n  view-transition-name: main-image;\n}\n",
+                          "codeHighlighted": "::<span class=\"hljs-built_in\">view-transition-old</span>(main-image),\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">transform-origin</span>: right top;\n}\n\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">animation</span>: <span class=\"hljs-number\">400ms</span> ease-out both grow;\n}\n\n<span class=\"hljs-selector-tag\">figure</span> {\n  <span class=\"hljs-attribute\">view-transition-name</span>: main-image;\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-api_viewtransition"
+                        },
+                        "resources": [
+                          {
+                            "url": "https://developer.chrome.com/docs/web-platform/view-transitions/",
+                            "title": "Smooth and simple transitions with the View Transitions API"
+                          }
+                        ],
+                        "webFeature": {
+                          "id": "cross-document-view-transitions",
+                          "description_html": "The <code>@view-transition</code> CSS rule sets whether a document opts-in to transitions between documents in a multi-page application. Both the old and new document must opt-in for a transition to be triggered.",
+                          "group": [
+                            "view-transitions"
+                          ],
+                          "name": "Cross-document view transitions",
+                          "spec": [
+                            "https://drafts.csswg.org/css-view-transitions-2/#cross-doc-opt-in"
+                          ],
+                          "status": {
+                            "baseline": "false",
+                            "support": {
+                              "chrome": "126",
+                              "chrome_android": "126",
+                              "edge": "126"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 18,
+                      "id": "scrollbar_issues",
+                      "percentageQuestion": 5.68,
+                      "percentageSurvey": 0.33,
+                      "entity": {
+                        "id": "scrollbar_issues",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 16,
+                      "id": "state_management",
+                      "percentageQuestion": 5.05,
+                      "percentageSurvey": 0.3,
+                      "entity": {
+                        "name": "State management",
+                        "nameClean": "State management",
+                        "id": "state_management",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 12,
+                      "id": "excessive_complexity",
+                      "percentageQuestion": 3.79,
+                      "percentageSurvey": 0.22,
+                      "entity": {
+                        "name": "Excessive complexity",
+                        "nameClean": "Excessive complexity",
+                        "description": "Too much complexity",
+                        "descriptionClean": "Too much complexity",
+                        "id": "excessive_complexity",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 11,
+                      "id": "discrete_properties_animations",
+                      "percentageQuestion": 3.47,
+                      "percentageSurvey": 0.2,
+                      "entity": {
+                        "name": "Discrete Properties Animations",
+                        "nameClean": "Discrete Properties Animations",
+                        "description": "Animate to and from properties such as `display: none`\n",
+                        "descriptionHtml": "Animate to and from properties such as <code>display: none</code>\n",
+                        "descriptionClean": "Animate to and from properties such as display: none",
+                        "id": "discrete_properties_animations",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "/*   IS-OPEN STATE   */\ndialog[open] {\n  translate: 0 0;\n}\n\n/*   EXIT STATE   */\ndialog {\n  transition: opacity 1s, display 1s allow-discrete, overlay 1s allow-discrete;\n  translate: 0 100vh;\n}\n\n/*   0. BEFORE-OPEN STATE   */\n@starting-style {\n  dialog[open] {\n    translate: 0 100vh;\n  }\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-comment\">/*   IS-OPEN STATE   */</span>\ndialog<span class=\"hljs-selector-attr\">[open]</span> {\n  <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">0</span>;\n}\n\n<span class=\"hljs-comment\">/*   EXIT STATE   */</span>\ndialog {\n  <span class=\"hljs-attribute\">transition</span>: opacity <span class=\"hljs-number\">1s</span>, display <span class=\"hljs-number\">1s</span> allow-discrete, overlay <span class=\"hljs-number\">1s</span> allow-discrete;\n  <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n}\n\n<span class=\"hljs-comment\">/*   0. BEFORE-OPEN STATE   */</span>\n<span class=\"hljs-keyword\">@starting-style</span> {\n  dialog<span class=\"hljs-selector-attr\">[open]</span> {\n    <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n  }\n}"
+                        },
+                        "webFeature": {
+                          "id": "transition-behavior",
+                          "description_html": "The <code>transition-behavior: allow-discrete</code> CSS declaration allows transitions for properties whose animation behavior is discrete. Such properties can't be interpolated and swap from their start value to the end value at 50%.",
+                          "group": [
+                            "transitions"
+                          ],
+                          "name": "transition-behavior",
+                          "spec": [
+                            "https://drafts.csswg.org/css-transitions-2/#transition-behavior-property"
+                          ],
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2024-08-06",
+                            "support": {
+                              "chrome": "117",
+                              "chrome_android": "117",
+                              "edge": "117",
+                              "firefox": "129",
+                              "firefox_android": "129",
+                              "safari": "17.4",
+                              "safari_ios": "17.4"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 11,
+                      "id": "focus_management",
+                      "percentageQuestion": 3.47,
+                      "percentageSurvey": 0.2,
+                      "entity": {
+                        "name": "Focus management",
+                        "nameClean": "Focus management",
+                        "description": "Managing user focus",
+                        "descriptionClean": "Managing user focus",
+                        "id": "focus_management",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 5090,
+                      "id": "no_answer",
+                      "percentageQuestion": 0,
+                      "percentageSurvey": 94.14
+                    },
+                    {
+                      "count": 216,
                       "id": "other_answers",
-                      "percentageQuestion": 141.95,
-                      "percentageSurvey": 17.6,
+                      "percentageQuestion": 68.2,
+                      "percentageSurvey": 4.03,
                       "groupedBuckets": [
                         {
-                          "count": 32,
+                          "count": 98,
                           "id": "cutoff_answers",
-                          "percentageQuestion": 103.24,
-                          "percentageSurvey": 12.8
+                          "percentageQuestion": 30.98,
+                          "percentageSurvey": 1.85
                         },
                         {
-                          "count": 12,
+                          "count": 118,
                           "id": "no_match",
-                          "percentageQuestion": 38.71,
-                          "percentageSurvey": 4.8
+                          "percentageQuestion": 37.22,
+                          "percentageSurvey": 2.18
                         }
                       ]
                     }
