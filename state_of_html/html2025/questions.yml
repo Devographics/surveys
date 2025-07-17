@@ -157,23 +157,23 @@
     - id: has_slotted
       yearAdded: 2025
 
-    - id: web_components_libraries
-      template: multipleWithOther
-      matchTags: [libraries]
-      options:
-        - id: shoelace
-        - id: spectrum_wc
-        - id: lightning_wc
-        - id: fast_design
-        - id: elix
-        - id: lion_wc
-        - id: material_wc
-        - id: litelement
-        - id: stencil
-        - id: polymer
-        - id: svelte
-        - id: ionic
-        - id: na
+    # - id: web_components_libraries
+    #   template: multipleWithOther
+    #   matchTags: [libraries]
+    #   options:
+    #     - id: shoelace
+    #     - id: spectrum_wc
+    #     - id: lightning_wc
+    #     - id: fast_design
+    #     - id: elix
+    #     - id: lion_wc
+    #     - id: material_wc
+    #     - id: litelement
+    #     - id: stencil
+    #     - id: polymer
+    #     - id: svelte
+    #     - id: ionic
+    #     - id: na
 
     # - id: reasons_for_not_using_web_components
     #   template: multipleWithOther
@@ -207,20 +207,6 @@
     - id: hidden_until_found
       yearAdded: 2025
 
-    - id: accessibility_disabilities
-      template: multipleWithOther
-      matchTags: [accessibility, disabilities]
-      allowComment: true
-      options:
-        - id: low_vision
-        - id: atypical_vision
-        - id: mobility_impairments
-        - id: vestibular_disorders
-        - id: learning_disabilities
-        - id: cognitive_impairments
-        - id: hearing_impairments
-        - id: na
-
     - id: accessibility_techniques
       template: multipleWithOther
       matchTags: [accessibility]
@@ -242,6 +228,20 @@
         - id: prefers_reduced_motion
         - id: prefers_contrast
         - id: prefers_color_scheme
+        - id: na
+
+    - id: accessibility_disabilities
+      template: multipleWithOther
+      matchTags: [accessibility, disabilities]
+      allowComment: true
+      options:
+        - id: low_vision
+        - id: atypical_vision
+        - id: mobility_impairments
+        - id: vestibular_disorders
+        - id: learning_disabilities
+        - id: cognitive_impairments
+        - id: hearing_impairments
         - id: na
 
     - id: accessibility_screenreaders
@@ -293,12 +293,13 @@
     # - id: client_hints
     - id: filesystem_access
     - id: web_share_api
+
+    - id: app_manifest_share_target
+      yearAdded: 2025
+
     - id: file_handling_api
 
     - id: register_protocol_handler
-      yearAdded: 2025
-
-    - id: app_manifest_share_target
       yearAdded: 2025
 
     - id: web_bluetooth_api
@@ -452,29 +453,48 @@
       matchTags:
         [features_html, features_js, css_features, html_missing_features]
       options:
-        # - id: accordion
-        # - id: alert
-        # - id: calendar
-        # - id: carousel
+        - id: alert
         - id: combobox_autocomplete
-        # - id: command_palette
         - id: context_menu
         - id: datatable
-        # - id: dropdown_menu
+        - id: dropdown_menu
+        - id: html_include
         - id: image_zoom
-        # - id: progress_bar
+        - id: offcanvas
+        - id: range_slider
+        - id: scroll_area
+        - id: segmented_button
         - id: skeleton_loading_placeholder
+        - id: sortable_list
+        - id: star_rating
         - id: switch
         - id: tabs
+
+        # - id: accordion
+        # - id: calendar
+        # - id: carousel
+        # - id: command_palette
+        # - id: progress_bar
         # - id: toast_message
         # - id: tooltip
-        # - id: offcanvas
         # - id: spinner
-        - id: segmented_button
-        - id: scroll_area
         # - id: icon
-        - id: star_rating
         - id: na
+
+    - id: html_styling_issues
+      limit: 3
+      template: multipleWithOther
+      options:
+        - id: details_element
+        - id: dialog_element
+        - id: input_type_checkbox
+        - id: input_type_date
+        - id: input_type_number
+        - id: input_type_radio
+        - id: input_type_range
+        - id: select_element
+        - id: select_multiple_element
+        - id: svg_element
 
     # - id: html_interoperability_features
     #   template: longtext
@@ -637,7 +657,7 @@
       template: race_ethnicity
 
     - id: disability_status
-      template: disability_status
+      template: disability_status2
 
     - id: other_surveys
       sectionId: resources
