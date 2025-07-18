@@ -25,8 +25,6 @@
 
     - id: contenteditable_plaintext
 
-    - id: sanitizer_api
-
     - id: forms_pain_points
       disallowedTokenIds: [form_issues]
       matchTags: [common_pain_points, features_html]
@@ -54,13 +52,35 @@
     - id: invokers
       yearAdded: 2025
 
-    - id: element_move_before
-      yearAdded: 2025
-
     - id: element_before
       yearAdded: 2025
 
+    - id: element_move_before
+      yearAdded: 2025
+
     - id: interactivity_pain_points
+      matchTags: [common_pain_points, features_html]
+      template: textList
+
+- id: content
+  template: featurev3
+  slug: features
+  questions:
+    - id: math_element
+
+    - id: mapviewer_element
+      yearAdded: 2025
+
+    - id: content_security_policy
+    - id: sanitizer_api
+
+    - id: hidden_until_found
+      yearAdded: 2025
+
+    - id: intl_segmenter
+      yearAdded: 2024
+
+    - id: content_pain_points
       matchTags: [common_pain_points, features_html]
       template: textList
 
@@ -69,11 +89,6 @@
   slug: features
   questions:
     - id: svg_element
-
-    - id: math_element
-
-    - id: mapviewer_element
-      yearAdded: 2025
 
     - id: model_element
 
@@ -204,8 +219,6 @@
     - id: tabindex_attribute
     - id: focusgroup_attribute
     - id: search_element
-    - id: hidden_until_found
-      yearAdded: 2025
 
     - id: accessibility_techniques
       template: multipleWithOther
@@ -607,6 +620,9 @@
   messageId: opinions.opinions_intro
   questions:
     - id: accessibility_is_valued
+      template: opinion
+
+    - id: validation_is_important
       template: opinion
 
     - id: keeping_informed_is_challenging
