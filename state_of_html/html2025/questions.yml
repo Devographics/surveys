@@ -80,6 +80,9 @@
     - id: intl_segmenter
       yearAdded: 2024
 
+    - id: intl_locale
+      yearAdded: 2025
+
     - id: html_modules
 
     - id: template_element
@@ -200,17 +203,33 @@
     #     - id: use_frameworks_instead
     #     - id: compatibility_issues
 
-    - id: using_web_components_pain_points
-      matchTags: [common_pain_points, features_html, web_components_pain_points]
-      template: textList
-
-    - id: making_web_components_pain_points
-      matchTags: [common_pain_points, features_html, web_components_pain_points]
-      template: textList
-
-    # - id: web_components_pain_points
+    # - id: using_web_components_pain_points
     #   matchTags: [common_pain_points, features_html, web_components_pain_points]
     #   template: textList
+
+    # - id: making_web_components_pain_points
+    #   matchTags: [common_pain_points, features_html, web_components_pain_points]
+    #   template: textList
+
+    - id: web_components_common_pain_points
+      matchTags: [common_pain_points, features_html, web_components_pain_points]
+      template: multiple
+      options:
+        - id: complex_apis
+        - id: a11y_issues
+        - id: i18n_issues
+        - id: low_shadow_dom_specificity
+        - id: overly_strict_encapsulation
+        - id: overreliance_on_js
+        - id: design_tokens_access
+        - id: native_element_extension
+        - id: slotted_descendants_style
+        - id: poor_ssr_support
+        - id: na
+
+    - id: web_components_other_pain_points
+      matchTags: [common_pain_points, features_html, web_components_pain_points]
+      template: textList
 
 - id: accessibility
   template: featurev3
