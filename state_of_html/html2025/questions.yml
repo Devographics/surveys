@@ -11,8 +11,8 @@
     # - id: media_capture # removed in 2024
     # - id: formdata # removed in 2024
 
-    - id: input_checkbox_switch
-      yearAdded: 2025
+    # - id: input_checkbox_switch
+    #   yearAdded: 2025
 
     - id: input_type_color
       yearAdded: 2025
@@ -62,6 +62,38 @@
       matchTags: [common_pain_points, features_html]
       template: textList
 
+- id: graphics_multimedia
+  template: featurev3
+  slug: features
+  questions:
+    - id: svg_element
+
+    - id: canvas_element
+
+    - id: canvas_colorspace
+      yearAdded: 2025
+
+    - id: canvas_drawelement
+      yearAdded: 2025
+
+    - id: model_element
+
+    - id: webxr
+      yearAdded: 2025
+
+    - id: webgpu
+      yearAdded: 2025
+
+    - id: webgl
+      yearAdded: 2025
+
+    - id: jpeg_xl
+      yearAdded: 2025
+
+    - id: graphics_pain_points
+      matchTags: [common_pain_points, features_html]
+      template: textList
+
 - id: content
   template: featurev3
   slug: features
@@ -88,38 +120,6 @@
     - id: template_element
 
     - id: content_pain_points
-      matchTags: [common_pain_points, features_html]
-      template: textList
-
-- id: graphics_multimedia
-  template: featurev3
-  slug: features
-  questions:
-    - id: svg_element
-
-    - id: model_element
-
-    - id: webxr
-      yearAdded: 2025
-
-    - id: webgpu
-      yearAdded: 2025
-
-    - id: canvas_element
-
-    - id: canvas_colorspace
-      yearAdded: 2025
-
-    - id: canvas_drawelement
-      yearAdded: 2025
-
-    - id: webgl
-      yearAdded: 2025
-
-    - id: jpeg_xl
-      yearAdded: 2025
-
-    - id: graphics_pain_points
       matchTags: [common_pain_points, features_html]
       template: textList
 
@@ -162,6 +162,10 @@
   questions:
     - id: custom_elements_using
     - id: custom_elements_defining
+
+    - id: declarative_custom_elements
+      yearAdded: 2025
+
     - id: scoped_element_registries
     - id: shadow_dom
     - id: declarative_shadow_dom
@@ -169,8 +173,6 @@
     - id: imperative_slot
     - id: element_internals
 
-    - id: declarative_custom_elements
-      yearAdded: 2025
     - id: reference_target_api
       yearAdded: 2025
     - id: has_slotted
@@ -528,12 +530,20 @@
         - id: dialog_element
         - id: input_type_checkbox
         - id: input_type_date
+        - id: input_type_time
         - id: input_type_number
         - id: input_type_radio
         - id: input_type_range
+        - id: input_type_color
         - id: select_element
         - id: select_multiple_element
         - id: svg_element
+        - id: datalist_element
+
+        - id: fieldset_and_legend
+        - id: progress_element
+        - id: popover_api
+        - id: validation_errors
 
     # - id: html_interoperability_features
     #   template: longtext
@@ -565,26 +575,6 @@
     #     - id: less_than_1000
     #     - id: more_than_1000
     #     - id: more_than_1000000
-
-    - id: html_css_js_balance
-      template: slider
-      allowComment: true
-
-    - id: what_do_you_use_html_for
-      template: multipleWithOther
-      matchTags: [use_cases]
-      order: alphabetical
-      allowComment: true
-      options:
-        - id: blogs
-        - id: design_systems
-        - id: desktop_apps
-        - id: emails
-        - id: marketing_sites
-        - id: mobile_apps
-        - id: printed_documents
-        - id: web_apps
-        - id: na
 
     # - id: industry_sector
     #   intlId: user_info.industry_sector
@@ -634,6 +624,26 @@
         - id: utilities
         - id: guidelines
         - id: patterns
+        - id: na
+
+    - id: html_css_js_balance
+      template: slider
+      allowComment: true
+
+    - id: what_do_you_use_html_for
+      template: multipleWithOther
+      matchTags: [use_cases]
+      order: alphabetical
+      allowComment: true
+      options:
+        - id: blogs
+        - id: design_systems
+        - id: desktop_apps
+        - id: emails
+        - id: marketing_sites
+        - id: mobile_apps
+        - id: printed_documents
+        - id: web_apps
         - id: na
 
     # did not have time to find proper wording, maybe in 2026?
