@@ -11,7 +11,7 @@ query {
               }
             }
             combined(filters: { user_info__country: { in: [USA] } }) {
-              currentEdition {
+              allEditions(editionCount: 2) {
                 _metadata {
                   axis1Sort {
                     property
@@ -24,6 +24,8 @@ query {
                   limit
                   cutoff
                 }
+                editionId
+                year
                 completion {
                   count
                   percentageSurvey
@@ -137,7 +139,7 @@ query {
               }
             }
             combined(filters: { user_info__country: { nin: [USA] } }) {
-              currentEdition {
+              allEditions(editionCount: 2) {
                 _metadata {
                   axis1Sort {
                     property
@@ -150,6 +152,8 @@ query {
                   limit
                   cutoff
                 }
+                editionId
+                year
                 completion {
                   count
                   percentageSurvey
