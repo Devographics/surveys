@@ -28,10 +28,10 @@
                   },
                   "buckets": [
                     {
-                      "count": 46,
+                      "count": 47,
                       "id": "theming_issues",
-                      "percentageQuestion": 11.03,
-                      "percentageSurvey": 0.84,
+                      "percentageQuestion": 11.27,
+                      "percentageSurvey": 0.85,
                       "entity": {
                         "id": "theming_issues",
                         "entityType": "default"
@@ -39,41 +39,12 @@
                     },
                     {
                       "count": 40,
-                      "id": "contrast_color",
+                      "id": "contrast_issues",
                       "percentageQuestion": 9.59,
                       "percentageSurvey": 0.73,
                       "entity": {
-                        "name": "`contrast-color()`",
-                        "nameHtml": "<code>contrast-color()</code>",
-                        "nameClean": "contrast-color()",
-                        "id": "contrast_color",
-                        "entityType": "feature",
-                        "example": {
-                          "language": "css",
-                          "code": "button {\n  --background-color: darkblue;\n  background-color: var(--background-color);\n  color: contrast-color(var(--background-color));\n}\n",
-                          "codeHighlighted": "<span class=\"hljs-selector-tag\">button</span> {\n  <span class=\"hljs-attr\">--background-color</span>: darkblue;\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--background-color);\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">contrast-color</span>(<span class=\"hljs-built_in\">var</span>(--background-color));\n}"
-                        },
-                        "mdn": {
-                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/contrast-color"
-                        },
-                        "caniuse": {
-                          "url": "https://caniuse.com/mdn-css_types_color_contrast-color"
-                        },
-                        "webFeature": {
-                          "id": "contrast-color",
-                          "description_html": "The <code>contrast-color()</code> CSS function picks a color that has guaranteed contrast against a specified foreground or background color.",
-                          "group": [
-                            "color-types"
-                          ],
-                          "name": "contrast-color()",
-                          "spec": [
-                            "https://drafts.csswg.org/css-color-6/#funcdef-contrast-color"
-                          ],
-                          "url": "https://web-platform-dx.github.io/web-features-explorer/features/contrast-color/",
-                          "status": {
-                            "baseline": "false"
-                          }
-                        }
+                        "id": "contrast_issues",
+                        "entityType": "default"
                       }
                     },
                     {
@@ -91,13 +62,52 @@
                       }
                     },
                     {
-                      "count": 27,
-                      "id": "contrast_issues",
-                      "percentageQuestion": 6.47,
-                      "percentageSurvey": 0.49,
+                      "count": 26,
+                      "id": "light_dark",
+                      "percentageQuestion": 6.24,
+                      "percentageSurvey": 0.47,
                       "entity": {
-                        "id": "contrast_issues",
-                        "entityType": "default"
+                        "name": "`light-dark()`",
+                        "nameHtml": "<code>light-dark()</code>",
+                        "nameClean": "light-dark()",
+                        "id": "light_dark",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "code {\n  color: light-dark(black, white);\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-tag\">code</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">light-dark</span>(black, white);\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-css_types_color_light-dark"
+                        },
+                        "webFeature": {
+                          "id": "light-dark",
+                          "description_html": "The <code>light-dark()</code> CSS function accepts two colors and uses one depending on the current color scheme.",
+                          "group": [
+                            "css"
+                          ],
+                          "name": "light-dark()",
+                          "spec": [
+                            "https://drafts.csswg.org/css-color-5/#light-dark"
+                          ],
+                          "url": "https://web-platform-dx.github.io/web-features-explorer/features/light-dark/",
+                          "status": {
+                            "baseline": "low",
+                            "baseline_low_date": "2024-05-13",
+                            "support": {
+                              "chrome": "123",
+                              "chrome_android": "123",
+                              "edge": "123",
+                              "firefox": "120",
+                              "firefox_android": "120",
+                              "safari": "17.5",
+                              "safari_ios": "17.5"
+                            }
+                          }
+                        }
                       }
                     },
                     {
@@ -153,58 +163,9 @@
                     },
                     {
                       "count": 25,
-                      "id": "light_dark",
+                      "id": "dark_mode_issues",
                       "percentageQuestion": 6,
                       "percentageSurvey": 0.45,
-                      "entity": {
-                        "name": "`light-dark()`",
-                        "nameHtml": "<code>light-dark()</code>",
-                        "nameClean": "light-dark()",
-                        "id": "light_dark",
-                        "entityType": "feature",
-                        "example": {
-                          "language": "css",
-                          "code": "code {\n  color: light-dark(black, white);\n}\n",
-                          "codeHighlighted": "<span class=\"hljs-selector-tag\">code</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">light-dark</span>(black, white);\n}"
-                        },
-                        "mdn": {
-                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark"
-                        },
-                        "caniuse": {
-                          "url": "https://caniuse.com/mdn-css_types_color_light-dark"
-                        },
-                        "webFeature": {
-                          "id": "light-dark",
-                          "description_html": "The <code>light-dark()</code> CSS function accepts two colors and uses one depending on the current color scheme.",
-                          "group": [
-                            "css"
-                          ],
-                          "name": "light-dark()",
-                          "spec": [
-                            "https://drafts.csswg.org/css-color-5/#light-dark"
-                          ],
-                          "url": "https://web-platform-dx.github.io/web-features-explorer/features/light-dark/",
-                          "status": {
-                            "baseline": "low",
-                            "baseline_low_date": "2024-05-13",
-                            "support": {
-                              "chrome": "123",
-                              "chrome_android": "123",
-                              "edge": "123",
-                              "firefox": "120",
-                              "firefox_android": "120",
-                              "safari": "17.5",
-                              "safari_ios": "17.5"
-                            }
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "count": 24,
-                      "id": "dark_mode_issues",
-                      "percentageQuestion": 5.76,
-                      "percentageSurvey": 0.44,
                       "entity": {
                         "id": "dark_mode_issues",
                         "entityType": "default"
@@ -221,40 +182,34 @@
                       }
                     },
                     {
-                      "count": 19,
+                      "count": 20,
                       "id": "color_variables_issues",
-                      "percentageQuestion": 4.56,
-                      "percentageSurvey": 0.35,
+                      "percentageQuestion": 4.8,
+                      "percentageSurvey": 0.36,
                       "entity": {
                         "id": "color_variables_issues",
                         "entityType": "default"
                       }
                     },
                     {
-                      "count": 16,
-                      "id": "color_manipulation_issues",
-                      "percentageQuestion": 3.84,
-                      "percentageSurvey": 0.29,
+                      "count": 19,
+                      "id": "accessibility",
+                      "percentageQuestion": 4.56,
+                      "percentageSurvey": 0.35,
                       "entity": {
-                        "id": "color_manipulation_issues",
+                        "name": "Accessibility",
+                        "nameClean": "Accessibility",
+                        "description": "Accessibility improvements",
+                        "descriptionClean": "Accessibility improvements",
+                        "id": "accessibility",
                         "entityType": "default"
                       }
                     },
                     {
-                      "count": 16,
-                      "id": "gradients_issues",
-                      "percentageQuestion": 3.84,
-                      "percentageSurvey": 0.29,
-                      "entity": {
-                        "id": "gradients_issues",
-                        "entityType": "default"
-                      }
-                    },
-                    {
-                      "count": 16,
+                      "count": 17,
                       "id": "relative_colors",
-                      "percentageQuestion": 3.84,
-                      "percentageSurvey": 0.29,
+                      "percentageQuestion": 4.08,
+                      "percentageSurvey": 0.31,
                       "entity": {
                         "name": "Relative Colors",
                         "nameClean": "Relative Colors",
@@ -299,16 +254,22 @@
                       }
                     },
                     {
-                      "count": 15,
-                      "id": "accessibility",
-                      "percentageQuestion": 3.6,
-                      "percentageSurvey": 0.27,
+                      "count": 16,
+                      "id": "color_manipulation_issues",
+                      "percentageQuestion": 3.84,
+                      "percentageSurvey": 0.29,
                       "entity": {
-                        "name": "Accessibility",
-                        "nameClean": "Accessibility",
-                        "description": "Accessibility improvements",
-                        "descriptionClean": "Accessibility improvements",
-                        "id": "accessibility",
+                        "id": "color_manipulation_issues",
+                        "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 16,
+                      "id": "gradient_issues",
+                      "percentageQuestion": 3.84,
+                      "percentageSurvey": 0.29,
+                      "entity": {
+                        "id": "gradient_issues",
                         "entityType": "default"
                       }
                     },
@@ -369,6 +330,92 @@
                       "entity": {
                         "id": "color_syntax_issues",
                         "entityType": "default"
+                      }
+                    },
+                    {
+                      "count": 13,
+                      "id": "color_contrast",
+                      "percentageQuestion": 3.12,
+                      "percentageSurvey": 0.24,
+                      "entity": {
+                        "name": "`color-contrast()`",
+                        "nameHtml": "<code>color-contrast()</code>",
+                        "nameClean": "color-contrast()",
+                        "id": "color_contrast",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ".high-contrast {\n  color: color-contrast(#008080 vs olive, var(--myColor), #d2691e);\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-class\">.high-contrast</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">color-contrast</span>(<span class=\"hljs-number\">#008080</span> vs olive, <span class=\"hljs-built_in\">var</span>(--myColor), <span class=\"hljs-number\">#d2691e</span>);\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/contrast-color"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-css_types_color_color-contrast"
+                        }
+                      }
+                    },
+                    {
+                      "count": 12,
+                      "id": "contrast_color",
+                      "percentageQuestion": 2.88,
+                      "percentageSurvey": 0.22,
+                      "entity": {
+                        "name": "`contrast-color()`",
+                        "nameHtml": "<code>contrast-color()</code>",
+                        "nameClean": "contrast-color()",
+                        "id": "contrast_color",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": "button {\n  --background-color: darkblue;\n  background-color: var(--background-color);\n  color: contrast-color(var(--background-color));\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-tag\">button</span> {\n  <span class=\"hljs-attr\">--background-color</span>: darkblue;\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--background-color);\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">contrast-color</span>(<span class=\"hljs-built_in\">var</span>(--background-color));\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/contrast-color"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/mdn-css_types_color_contrast-color"
+                        },
+                        "webFeature": {
+                          "id": "contrast-color",
+                          "description_html": "The <code>contrast-color()</code> CSS function picks a color that has guaranteed contrast against a specified foreground or background color.",
+                          "group": [
+                            "color-types"
+                          ],
+                          "name": "contrast-color()",
+                          "spec": [
+                            "https://drafts.csswg.org/css-color-6/#funcdef-contrast-color"
+                          ],
+                          "url": "https://web-platform-dx.github.io/web-features-explorer/features/contrast-color/",
+                          "status": {
+                            "baseline": "false"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "count": 11,
+                      "id": "css_custom_properties",
+                      "percentageQuestion": 2.64,
+                      "percentageSurvey": 0.2,
+                      "entity": {
+                        "name": "Custom Properties (Variables)",
+                        "nameClean": "Custom Properties (Variables)",
+                        "id": "css_custom_properties",
+                        "entityType": "feature",
+                        "example": {
+                          "language": "css",
+                          "code": ":root {\n  --main-bg-color: brown;\n}\n.foo {\n  background-color: var(--main-bg-color);\n}\n",
+                          "codeHighlighted": "<span class=\"hljs-selector-pseudo\">:root</span> {\n  <span class=\"hljs-attr\">--main-bg-color</span>: brown;\n}\n<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--main-bg-color);\n}"
+                        },
+                        "mdn": {
+                          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables"
+                        },
+                        "caniuse": {
+                          "url": "https://caniuse.com/css-variables"
+                        }
                       }
                     },
                     {
@@ -459,38 +506,34 @@
                       }
                     },
                     {
-                      "count": 10,
-                      "id": "new_color_spaces_adoption_issues",
-                      "percentageQuestion": 2.4,
-                      "percentageSurvey": 0.18,
-                      "entity": {
-                        "id": "new_color_spaces_adoption_issues",
-                        "entityType": "default"
-                      }
-                    },
-                    {
                       "count": 5085,
                       "id": "no_answer",
                       "percentageQuestion": 0,
                       "percentageSurvey": 92.35
                     },
                     {
-                      "count": 239,
+                      "count": 250,
                       "id": "other_answers",
-                      "percentageQuestion": 57.34,
-                      "percentageSurvey": 4.35,
+                      "percentageQuestion": 59.98,
+                      "percentageSurvey": 4.55,
                       "groupedBuckets": [
                         {
-                          "count": 124,
-                          "id": "cutoff_answers",
-                          "percentageQuestion": 29.76,
-                          "percentageSurvey": 2.26
+                          "count": 20,
+                          "id": "overlimit_answers",
+                          "percentageQuestion": 4.8,
+                          "percentageSurvey": 0.36
                         },
                         {
-                          "count": 115,
+                          "count": 112,
+                          "id": "cutoff_answers",
+                          "percentageQuestion": 26.88,
+                          "percentageSurvey": 2.05
+                        },
+                        {
+                          "count": 118,
                           "id": "no_match",
-                          "percentageQuestion": 27.58,
-                          "percentageSurvey": 2.09
+                          "percentageQuestion": 28.3,
+                          "percentageSurvey": 2.14
                         }
                       ]
                     }
