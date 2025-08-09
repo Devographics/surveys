@@ -3,23 +3,19 @@ query {
     state_of_css {
       css2025 {
         user_info {
-          job_title_vs_years_of_experience: job_title {
+          age_vs_baseline_awareness: age {
             id
             comments {
               currentEdition {
                 count
               }
             }
-            freeform(
-              facet: user_info__years_of_experience
+            combined(
+              facet: usage__baseline_awareness
               parameters: {
                 showNoAnswer: true
-                cutoff: 100
-                limit: 20
-                sort: {
-                  property: medianByFacet
-                  order: asc
-                }
+                mergeOtherBuckets: false
+                cutoff: 10
               }
             ) {
               allEditions(editionCount: 2) {

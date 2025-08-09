@@ -2,23 +2,21 @@ query {
   surveys {
     state_of_css {
       css2025 {
-        user_info {
-          job_title_vs_years_of_experience: job_title {
+        other_tools {
+          pre_post_processors_vs_years_of_experience: pre_post_processors {
             id
             comments {
               currentEdition {
                 count
               }
             }
-            freeform(
+            combined(
               facet: user_info__years_of_experience
               parameters: {
                 showNoAnswer: true
-                cutoff: 100
-                limit: 20
+                cutoff: 20
                 sort: {
                   property: medianByFacet
-                  order: asc
                 }
               }
             ) {
