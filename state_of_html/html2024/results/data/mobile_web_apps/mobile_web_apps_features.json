@@ -14,9 +14,9 @@
                   "name": "File System Access API",
                   "nameClean": "File System Access API",
                   "entityType": "feature",
-                  "description": "Access files and directories on the user's local device.",
-                  "descriptionClean": "Access files and directories on the user's local device.",
-                  "descriptionHtml": "Access files and directories on the user's local device.",
+                  "description": "Access files and directories on the user's local device and create writable files that can be updated.\n",
+                  "descriptionClean": "Access files and directories on the user's local device and create writable files that can be updated.",
+                  "descriptionHtml": "Access files and directories on the user's local device and create writable files that can be updated.\n",
                   "mdn": {
                     "locale": "en-US",
                     "url": "https://developer.mozilla.org/en-US/docs/Web/API/File_System_API",
@@ -25,8 +25,8 @@
                   },
                   "example": {
                     "language": "js",
-                    "code": "const handle = await window.showSaveFilePicker(opts);",
-                    "codeHighlighted": "<span class=\"hljs-keyword\">const</span> handle = <span class=\"hljs-keyword\">await</span> <span class=\"hljs-variable language_\">window</span>.<span class=\"hljs-title function_\">showSaveFilePicker</span>(opts);"
+                    "code": "const handle = await window.showSaveFilePicker();\nconst writable = await handle.createWritable();\nawait writable.write(\"Hello, world!\");\nawait writable.close();\n",
+                    "codeHighlighted": "<span class=\"hljs-keyword\">const</span> handle = <span class=\"hljs-keyword\">await</span> <span class=\"hljs-variable language_\">window</span>.<span class=\"hljs-title function_\">showSaveFilePicker</span>();\n<span class=\"hljs-keyword\">const</span> writable = <span class=\"hljs-keyword\">await</span> handle.<span class=\"hljs-title function_\">createWritable</span>();\n<span class=\"hljs-keyword\">await</span> writable.<span class=\"hljs-title function_\">write</span>(<span class=\"hljs-string\">&quot;Hello, world!&quot;</span>);\n<span class=\"hljs-keyword\">await</span> writable.<span class=\"hljs-title function_\">close</span>();"
                   },
                   "resources": [
                     {
@@ -41,15 +41,19 @@
                   "webFeature": {
                     "id": "file-system-access",
                     "description_html": "The <code>showOpenFilePicker()</code>, <code>showDirectoryPicker()</code>, and <code>showSaveFilePicker()</code> methods request access to files and directories on the user's device and returns a handle for reading and writing to them.",
-                    "group": "file-system",
+                    "group": [
+                      "file-system"
+                    ],
                     "name": "File system access",
                     "spec": [
                       "https://wicg.github.io/file-system-access/"
                     ],
+                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/file-system-access/",
                     "status": {
                       "baseline": "false",
                       "support": {
                         "chrome": "86",
+                        "chrome_android": "132",
                         "edge": "86"
                       }
                     }
@@ -67,19 +71,20 @@
                       "interest": 0.91,
                       "usage": 0.12,
                       "retention": 0.93,
-                      "positivity": 0.32
+                      "positivity": 0.32,
+                      "positivityRelative": 0.93
                     },
                     "buckets": [
                       {
-                        "count": 2059,
+                        "count": 2058,
                         "id": "never_heard",
                         "facetBuckets": [
                           {
-                            "count": 685,
-                            "id": "positive",
-                            "percentageBucket": 33.27,
-                            "percentageQuestion": 18.01,
-                            "percentageSurvey": 12.68
+                            "count": 1332,
+                            "id": "neutral",
+                            "percentageBucket": 64.72,
+                            "percentageQuestion": 35.03,
+                            "percentageSurvey": 24.66
                           },
                           {
                             "count": 41,
@@ -89,32 +94,20 @@
                             "percentageSurvey": 0.76
                           },
                           {
-                            "count": 1333,
-                            "id": "neutral",
-                            "percentageBucket": 64.74,
-                            "percentageQuestion": 35.05,
-                            "percentageSurvey": 24.68
-                          },
-                          {
-                            "count": 0,
-                            "id": "insufficient_data",
-                            "percentageBucket": 0
+                            "count": 685,
+                            "id": "positive",
+                            "percentageBucket": 33.28,
+                            "percentageQuestion": 18.02,
+                            "percentageSurvey": 12.68
                           }
                         ],
-                        "percentageQuestion": 54.14,
-                        "percentageSurvey": 38.12
+                        "percentageQuestion": 54.13,
+                        "percentageSurvey": 38.1
                       },
                       {
                         "count": 1262,
                         "id": "heard",
                         "facetBuckets": [
-                          {
-                            "count": 380,
-                            "id": "positive",
-                            "percentageBucket": 30.11,
-                            "percentageQuestion": 9.99,
-                            "percentageSurvey": 7.03
-                          },
                           {
                             "count": 848,
                             "id": "neutral",
@@ -123,32 +116,27 @@
                             "percentageSurvey": 15.7
                           },
                           {
+                            "count": 380,
+                            "id": "positive",
+                            "percentageBucket": 30.11,
+                            "percentageQuestion": 9.99,
+                            "percentageSurvey": 7.04
+                          },
+                          {
                             "count": 34,
                             "id": "negative",
                             "percentageBucket": 2.69,
                             "percentageQuestion": 0.89,
                             "percentageSurvey": 0.63
-                          },
-                          {
-                            "count": 0,
-                            "id": "insufficient_data",
-                            "percentageBucket": 0
                           }
                         ],
-                        "percentageQuestion": 33.18,
-                        "percentageSurvey": 23.36
+                        "percentageQuestion": 33.19,
+                        "percentageSurvey": 23.37
                       },
                       {
                         "count": 456,
                         "id": "used",
                         "facetBuckets": [
-                          {
-                            "count": 274,
-                            "id": "neutral",
-                            "percentageBucket": 60.09,
-                            "percentageQuestion": 7.2,
-                            "percentageSurvey": 5.07
-                          },
                           {
                             "count": 170,
                             "id": "positive",
@@ -157,16 +145,18 @@
                             "percentageSurvey": 3.15
                           },
                           {
+                            "count": 274,
+                            "id": "neutral",
+                            "percentageBucket": 60.09,
+                            "percentageQuestion": 7.21,
+                            "percentageSurvey": 5.07
+                          },
+                          {
                             "count": 12,
                             "id": "negative",
                             "percentageBucket": 2.63,
                             "percentageQuestion": 0.32,
                             "percentageSurvey": 0.22
-                          },
-                          {
-                            "count": 0,
-                            "id": "insufficient_data",
-                            "percentageBucket": 0
                           }
                         ],
                         "percentageQuestion": 11.99,
@@ -174,9 +164,9 @@
                       }
                     ],
                     "completion": {
-                      "count": 3803,
-                      "percentageSurvey": 70.4,
-                      "total": 5402
+                      "count": 3802,
+                      "percentageSurvey": 70.39,
+                      "total": 5401
                     }
                   }
                 }
@@ -221,12 +211,13 @@
                       "awareness": 0.2,
                       "interest": 0.9,
                       "usage": 0.02,
-                      "retention": 0,
-                      "positivity": 0.33
+                      "retention": 0.83,
+                      "positivity": 0.34,
+                      "positivityRelative": 0.92
                     },
                     "buckets": [
                       {
-                        "count": 3004,
+                        "count": 3003,
                         "id": "never_heard",
                         "facetBuckets": [
                           {
@@ -237,38 +228,33 @@
                             "percentageSurvey": 1.44
                           },
                           {
-                            "count": 1879,
+                            "count": 1878,
                             "id": "neutral",
-                            "percentageBucket": 62.55,
-                            "percentageQuestion": 49.51,
-                            "percentageSurvey": 34.78
+                            "percentageBucket": 62.54,
+                            "percentageQuestion": 49.5,
+                            "percentageSurvey": 34.77
                           },
                           {
                             "count": 1047,
                             "id": "positive",
-                            "percentageBucket": 34.85,
-                            "percentageQuestion": 27.59,
-                            "percentageSurvey": 19.38
-                          },
-                          {
-                            "count": 0,
-                            "id": "insufficient_data",
-                            "percentageBucket": 0
+                            "percentageBucket": 34.87,
+                            "percentageQuestion": 27.6,
+                            "percentageSurvey": 19.39
                           }
                         ],
-                        "percentageQuestion": 79.16,
-                        "percentageSurvey": 55.61
+                        "percentageQuestion": 79.15,
+                        "percentageSurvey": 55.6
                       },
                       {
                         "count": 675,
                         "id": "heard",
                         "facetBuckets": [
                           {
-                            "count": 212,
-                            "id": "positive",
-                            "percentageBucket": 31.41,
-                            "percentageQuestion": 5.59,
-                            "percentageSurvey": 3.92
+                            "count": 441,
+                            "id": "neutral",
+                            "percentageBucket": 65.33,
+                            "percentageQuestion": 11.62,
+                            "percentageSurvey": 8.17
                           },
                           {
                             "count": 22,
@@ -278,16 +264,11 @@
                             "percentageSurvey": 0.41
                           },
                           {
-                            "count": 441,
-                            "id": "neutral",
-                            "percentageBucket": 65.33,
-                            "percentageQuestion": 11.62,
-                            "percentageSurvey": 8.16
-                          },
-                          {
-                            "count": 0,
-                            "id": "insufficient_data",
-                            "percentageBucket": 0
+                            "count": 212,
+                            "id": "positive",
+                            "percentageBucket": 31.41,
+                            "percentageQuestion": 5.59,
+                            "percentageSurvey": 3.93
                           }
                         ],
                         "percentageQuestion": 17.79,
@@ -298,16 +279,25 @@
                         "id": "used",
                         "facetBuckets": [
                           {
+                            "count": 7,
+                            "id": "negative",
+                            "percentageBucket": 7.29,
+                            "percentageQuestion": 0.18,
+                            "percentageSurvey": 0.13
+                          },
+                          {
+                            "count": 35,
+                            "id": "positive",
+                            "percentageBucket": 36.46,
+                            "percentageQuestion": 0.92,
+                            "percentageSurvey": 0.65
+                          },
+                          {
                             "count": 54,
                             "id": "neutral",
                             "percentageBucket": 56.25,
                             "percentageQuestion": 1.42,
                             "percentageSurvey": 1
-                          },
-                          {
-                            "count": 42,
-                            "id": "insufficient_data",
-                            "percentageBucket": 44
                           }
                         ],
                         "percentageQuestion": 2.53,
@@ -315,9 +305,9 @@
                       }
                     ],
                     "completion": {
-                      "count": 3795,
+                      "count": 3794,
                       "percentageSurvey": 70.25,
-                      "total": 5402
+                      "total": 5401
                     }
                   }
                 }
@@ -353,7 +343,27 @@
                       "title": "Integrate with the OS sharing UI with the Web Share API",
                       "url": "https://web.dev/web-share/"
                     }
-                  ]
+                  ],
+                  "webFeature": {
+                    "id": "share",
+                    "description_html": "The <code>navigator.share()</code> method invokes the device's native sharing mechanism and passes text, links, files, and other content to share targets.",
+                    "name": "navigator.share()",
+                    "spec": [
+                      "https://w3c.github.io/web-share/"
+                    ],
+                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/share/",
+                    "status": {
+                      "baseline": "false",
+                      "support": {
+                        "chrome": "128",
+                        "chrome_android": "61",
+                        "edge": "93",
+                        "firefox_android": "79",
+                        "safari": "12.1",
+                        "safari_ios": "12.2"
+                      }
+                    }
+                  }
                 },
                 "comments": {
                   "currentEdition": {
@@ -367,20 +377,14 @@
                       "interest": 0.92,
                       "usage": 0.17,
                       "retention": 0.87,
-                      "positivity": 0.32
+                      "positivity": 0.32,
+                      "positivityRelative": 0.88
                     },
                     "buckets": [
                       {
-                        "count": 2265,
+                        "count": 2264,
                         "id": "never_heard",
                         "facetBuckets": [
-                          {
-                            "count": 643,
-                            "id": "positive",
-                            "percentageBucket": 28.39,
-                            "percentageQuestion": 17.01,
-                            "percentageSurvey": 11.9
-                          },
                           {
                             "count": 89,
                             "id": "negative",
@@ -389,25 +393,34 @@
                             "percentageSurvey": 1.65
                           },
                           {
-                            "count": 1533,
-                            "id": "neutral",
-                            "percentageBucket": 67.68,
-                            "percentageQuestion": 40.54,
-                            "percentageSurvey": 28.38
+                            "count": 643,
+                            "id": "positive",
+                            "percentageBucket": 28.4,
+                            "percentageQuestion": 17.01,
+                            "percentageSurvey": 11.91
                           },
                           {
-                            "count": 0,
-                            "id": "insufficient_data",
-                            "percentageBucket": 0
+                            "count": 1532,
+                            "id": "neutral",
+                            "percentageBucket": 67.67,
+                            "percentageQuestion": 40.53,
+                            "percentageSurvey": 28.37
                           }
                         ],
-                        "percentageQuestion": 59.9,
-                        "percentageSurvey": 41.93
+                        "percentageQuestion": 59.89,
+                        "percentageSurvey": 41.92
                       },
                       {
                         "count": 852,
                         "id": "heard",
                         "facetBuckets": [
+                          {
+                            "count": 545,
+                            "id": "neutral",
+                            "percentageBucket": 63.97,
+                            "percentageQuestion": 14.42,
+                            "percentageSurvey": 10.09
+                          },
                           {
                             "count": 23,
                             "id": "negative",
@@ -416,39 +429,20 @@
                             "percentageSurvey": 0.43
                           },
                           {
-                            "count": 545,
-                            "id": "neutral",
-                            "percentageBucket": 63.97,
-                            "percentageQuestion": 14.41,
-                            "percentageSurvey": 10.09
-                          },
-                          {
                             "count": 284,
                             "id": "positive",
                             "percentageBucket": 33.33,
                             "percentageQuestion": 7.51,
                             "percentageSurvey": 5.26
-                          },
-                          {
-                            "count": 0,
-                            "id": "insufficient_data",
-                            "percentageBucket": 0
                           }
                         ],
-                        "percentageQuestion": 22.53,
+                        "percentageQuestion": 22.54,
                         "percentageSurvey": 15.77
                       },
                       {
                         "count": 640,
                         "id": "used",
                         "facetBuckets": [
-                          {
-                            "count": 276,
-                            "id": "positive",
-                            "percentageBucket": 43.13,
-                            "percentageQuestion": 7.3,
-                            "percentageSurvey": 5.11
-                          },
                           {
                             "count": 41,
                             "id": "negative",
@@ -464,9 +458,11 @@
                             "percentageSurvey": 5.98
                           },
                           {
-                            "count": 0,
-                            "id": "insufficient_data",
-                            "percentageBucket": 0
+                            "count": 276,
+                            "id": "positive",
+                            "percentageBucket": 43.13,
+                            "percentageQuestion": 7.3,
+                            "percentageSurvey": 5.11
                           }
                         ],
                         "percentageQuestion": 16.93,
@@ -474,9 +470,9 @@
                       }
                     ],
                     "completion": {
-                      "count": 3781,
+                      "count": 3780,
                       "percentageSurvey": 69.99,
-                      "total": 5402
+                      "total": 5401
                     }
                   }
                 }
@@ -494,7 +490,7 @@
                   "descriptionClean": "Allows PWAs to control how they are launched, e.g. in a new window or tab.",
                   "mdn": {
                     "locale": "en-US",
-                    "url": "https://developer.mozilla.org/en-US/docs/Web/Manifest/launch_handler",
+                    "url": "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/launch_handler",
                     "title": "launch_handler",
                     "summary": "The launch_handler member defines values that control the launch of a web application. Currently it can only contain a single value, client_mode, which specifies the context in which the app should be loaded when launched. For example, in an existing web app client containing an instance of the app, or in a new web app client. This leaves scope for more launch_handler values to be defined in the future."
                   },
@@ -526,20 +522,21 @@
                       "awareness": 0.18,
                       "interest": 0.9,
                       "usage": 0.05,
-                      "retention": 0,
-                      "positivity": 0.21
+                      "retention": 0.89,
+                      "positivity": 0.23,
+                      "positivityRelative": 0.81
                     },
                     "buckets": [
                       {
-                        "count": 3050,
+                        "count": 3049,
                         "id": "never_heard",
                         "facetBuckets": [
                           {
-                            "count": 672,
-                            "id": "positive",
-                            "percentageBucket": 22.03,
-                            "percentageQuestion": 17.81,
-                            "percentageSurvey": 12.44
+                            "count": 2205,
+                            "id": "neutral",
+                            "percentageBucket": 72.32,
+                            "percentageQuestion": 58.44,
+                            "percentageSurvey": 40.83
                           },
                           {
                             "count": 172,
@@ -549,20 +546,15 @@
                             "percentageSurvey": 3.18
                           },
                           {
-                            "count": 2206,
-                            "id": "neutral",
-                            "percentageBucket": 72.33,
-                            "percentageQuestion": 58.45,
-                            "percentageSurvey": 40.84
-                          },
-                          {
-                            "count": 0,
-                            "id": "insufficient_data",
-                            "percentageBucket": 0
+                            "count": 672,
+                            "id": "positive",
+                            "percentageBucket": 22.04,
+                            "percentageQuestion": 17.81,
+                            "percentageSurvey": 12.44
                           }
                         ],
-                        "percentageQuestion": 80.82,
-                        "percentageSurvey": 56.46
+                        "percentageQuestion": 80.81,
+                        "percentageSurvey": 56.45
                       },
                       {
                         "count": 499,
@@ -576,13 +568,6 @@
                             "percentageSurvey": 6.46
                           },
                           {
-                            "count": 135,
-                            "id": "positive",
-                            "percentageBucket": 27.05,
-                            "percentageQuestion": 3.58,
-                            "percentageSurvey": 2.5
-                          },
-                          {
                             "count": 15,
                             "id": "negative",
                             "percentageBucket": 3.01,
@@ -590,12 +575,14 @@
                             "percentageSurvey": 0.28
                           },
                           {
-                            "count": 0,
-                            "id": "insufficient_data",
-                            "percentageBucket": 0
+                            "count": 135,
+                            "id": "positive",
+                            "percentageBucket": 27.05,
+                            "percentageQuestion": 3.58,
+                            "percentageSurvey": 2.5
                           }
                         ],
-                        "percentageQuestion": 13.22,
+                        "percentageQuestion": 13.23,
                         "percentageSurvey": 9.24
                       },
                       {
@@ -610,19 +597,28 @@
                             "percentageSurvey": 2.63
                           },
                           {
-                            "count": 65,
-                            "id": "insufficient_data",
-                            "percentageBucket": 31
+                            "count": 7,
+                            "id": "negative",
+                            "percentageBucket": 3.38,
+                            "percentageQuestion": 0.19,
+                            "percentageSurvey": 0.13
+                          },
+                          {
+                            "count": 58,
+                            "id": "positive",
+                            "percentageBucket": 28.02,
+                            "percentageQuestion": 1.54,
+                            "percentageSurvey": 1.07
                           }
                         ],
-                        "percentageQuestion": 5.48,
+                        "percentageQuestion": 5.49,
                         "percentageSurvey": 3.83
                       }
                     ],
                     "completion": {
-                      "count": 3774,
+                      "count": 3773,
                       "percentageSurvey": 69.86,
-                      "total": 5402
+                      "total": 5401
                     }
                   }
                 }
@@ -633,14 +629,15 @@
                   "sectionId": "mobile_web_apps"
                 },
                 "entity": {
-                  "name": "File Handling API",
-                  "nameClean": "File Handling API",
+                  "name": "`file_handlers` manifest field\n",
+                  "nameClean": "file_handlers manifest field",
+                  "nameHtml": "<code>file_handlers</code> manifest field\n",
                   "entityType": "feature",
                   "description": "Allows PWAs to register themselves as handlers for certain file types.",
                   "descriptionClean": "Allows PWAs to register themselves as handlers for certain file types.",
                   "mdn": {
                     "locale": "en-US",
-                    "url": "https://developer.mozilla.org/en-US/docs/Web/Manifest/file_handlers",
+                    "url": "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/file_handlers",
                     "title": "file_handlers",
                     "summary": "The file_handlers member specifies an array of objects representing the types of files an installed progressive web app (PWA) can handle."
                   },
@@ -655,7 +652,26 @@
                       "title": "File Handling API: Register your PWA as a handler for file types.\n",
                       "url": "https://web.dev/file-handling/"
                     }
-                  ]
+                  ],
+                  "webFeature": {
+                    "id": "app-file-handlers",
+                    "description_html": "The <code>file_handlers</code> web app manifest member registers an installed web app as a handler for files with specific file extensions or MIME types.",
+                    "group": [
+                      "progressive-web-app"
+                    ],
+                    "name": "File handlers",
+                    "spec": [
+                      "https://wicg.github.io/manifest-incubations/#file_handlers-member"
+                    ],
+                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/app-file-handlers/",
+                    "status": {
+                      "baseline": "false",
+                      "support": {
+                        "chrome": "102",
+                        "edge": "102"
+                      }
+                    }
+                  }
                 },
                 "comments": {
                   "currentEdition": {
@@ -668,14 +684,22 @@
                       "awareness": 0.26,
                       "interest": 0.9,
                       "usage": 0.05,
-                      "retention": 0,
-                      "positivity": 0.24
+                      "retention": 0.88,
+                      "positivity": 0.25,
+                      "positivityRelative": 0.85
                     },
                     "buckets": [
                       {
-                        "count": 2772,
+                        "count": 2771,
                         "id": "never_heard",
                         "facetBuckets": [
+                          {
+                            "count": 696,
+                            "id": "positive",
+                            "percentageBucket": 25.12,
+                            "percentageQuestion": 18.43,
+                            "percentageSurvey": 12.89
+                          },
                           {
                             "count": 130,
                             "id": "negative",
@@ -684,26 +708,14 @@
                             "percentageSurvey": 2.41
                           },
                           {
-                            "count": 696,
-                            "id": "positive",
-                            "percentageBucket": 25.11,
-                            "percentageQuestion": 18.43,
-                            "percentageSurvey": 12.88
-                          },
-                          {
-                            "count": 1946,
+                            "count": 1945,
                             "id": "neutral",
-                            "percentageBucket": 70.2,
-                            "percentageQuestion": 51.52,
-                            "percentageSurvey": 36.02
-                          },
-                          {
-                            "count": 0,
-                            "id": "insufficient_data",
-                            "percentageBucket": 0
+                            "percentageBucket": 70.19,
+                            "percentageQuestion": 51.51,
+                            "percentageSurvey": 36.01
                           }
                         ],
-                        "percentageQuestion": 73.39,
+                        "percentageQuestion": 73.38,
                         "percentageSurvey": 51.31
                       },
                       {
@@ -714,7 +726,7 @@
                             "count": 558,
                             "id": "neutral",
                             "percentageBucket": 70.28,
-                            "percentageQuestion": 14.77,
+                            "percentageQuestion": 14.78,
                             "percentageSurvey": 10.33
                           },
                           {
@@ -730,14 +742,9 @@
                             "percentageBucket": 26.83,
                             "percentageQuestion": 5.64,
                             "percentageSurvey": 3.94
-                          },
-                          {
-                            "count": 0,
-                            "id": "insufficient_data",
-                            "percentageBucket": 0
                           }
                         ],
-                        "percentageQuestion": 21.02,
+                        "percentageQuestion": 21.03,
                         "percentageSurvey": 14.7
                       },
                       {
@@ -745,16 +752,25 @@
                         "id": "used",
                         "facetBuckets": [
                           {
+                            "count": 8,
+                            "id": "negative",
+                            "percentageBucket": 4.02,
+                            "percentageQuestion": 0.21,
+                            "percentageSurvey": 0.15
+                          },
+                          {
+                            "count": 64,
+                            "id": "positive",
+                            "percentageBucket": 32.16,
+                            "percentageQuestion": 1.69,
+                            "percentageSurvey": 1.18
+                          },
+                          {
                             "count": 127,
                             "id": "neutral",
                             "percentageBucket": 63.82,
                             "percentageQuestion": 3.36,
                             "percentageSurvey": 2.35
-                          },
-                          {
-                            "count": 72,
-                            "id": "insufficient_data",
-                            "percentageBucket": 36
                           }
                         ],
                         "percentageQuestion": 5.27,
@@ -762,9 +778,9 @@
                       }
                     ],
                     "completion": {
-                      "count": 3777,
-                      "percentageSurvey": 69.92,
-                      "total": 5402
+                      "count": 3776,
+                      "percentageSurvey": 69.91,
+                      "total": 5401
                     }
                   }
                 }
@@ -784,7 +800,7 @@
                     "locale": "en-US",
                     "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window_Controls_Overlay_API",
                     "title": "Window Controls Overlay API",
-                    "summary": "The Window Controls Overlay API gives Progressive Web Apps installed on desktop operating systems the ability to hide the default window title bar and display their own content\n  over the full surface area of the app window, turning the control buttons (maximize, minimize, and close) into an overlay."
+                    "summary": "The Window Controls Overlay API gives Progressive Web Apps installed on desktop operating systems the ability to hide the default window title bar and display their own content\nover the full surface area of the app window, turning the control buttons (maximize, minimize, and close) into an overlay."
                   },
                   "example": {
                     "label": "manifest.json",
@@ -809,11 +825,14 @@
                   "webFeature": {
                     "id": "window-controls-overlay",
                     "description_html": "The <code>display_override:\\ [\"window-controls-overlay\"]</code> web application manifest member shows content in the title bar area of a progressive web app that is installed on a desktop device.",
-                    "group": "progressive-web-app",
+                    "group": [
+                      "progressive-web-app"
+                    ],
                     "name": "Window Controls Overlay",
                     "spec": [
                       "https://wicg.github.io/window-controls-overlay/"
                     ],
+                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/window-controls-overlay/",
                     "status": {
                       "baseline": "false",
                       "support": {
@@ -834,21 +853,15 @@
                       "awareness": 0.14,
                       "interest": 0.91,
                       "usage": 0.03,
-                      "retention": 0,
-                      "positivity": 0.21
+                      "retention": 0.86,
+                      "positivity": 0.22,
+                      "positivityRelative": 0.82
                     },
                     "buckets": [
                       {
-                        "count": 3200,
+                        "count": 3199,
                         "id": "never_heard",
                         "facetBuckets": [
-                          {
-                            "count": 698,
-                            "id": "positive",
-                            "percentageBucket": 21.81,
-                            "percentageQuestion": 18.56,
-                            "percentageSurvey": 12.92
-                          },
                           {
                             "count": 162,
                             "id": "negative",
@@ -857,32 +870,27 @@
                             "percentageSurvey": 3
                           },
                           {
-                            "count": 2340,
-                            "id": "neutral",
-                            "percentageBucket": 73.13,
-                            "percentageQuestion": 62.22,
-                            "percentageSurvey": 43.32
+                            "count": 698,
+                            "id": "positive",
+                            "percentageBucket": 21.82,
+                            "percentageQuestion": 18.56,
+                            "percentageSurvey": 12.92
                           },
                           {
-                            "count": 0,
-                            "id": "insufficient_data",
-                            "percentageBucket": 0
+                            "count": 2339,
+                            "id": "neutral",
+                            "percentageBucket": 73.12,
+                            "percentageQuestion": 62.21,
+                            "percentageSurvey": 43.31
                           }
                         ],
                         "percentageQuestion": 85.08,
-                        "percentageSurvey": 59.24
+                        "percentageSurvey": 59.23
                       },
                       {
                         "count": 432,
                         "id": "heard",
                         "facetBuckets": [
-                          {
-                            "count": 124,
-                            "id": "positive",
-                            "percentageBucket": 28.7,
-                            "percentageQuestion": 3.3,
-                            "percentageSurvey": 2.3
-                          },
                           {
                             "count": 296,
                             "id": "neutral",
@@ -898,9 +906,11 @@
                             "percentageSurvey": 0.22
                           },
                           {
-                            "count": 0,
-                            "id": "insufficient_data",
-                            "percentageBucket": 0
+                            "count": 124,
+                            "id": "positive",
+                            "percentageBucket": 28.7,
+                            "percentageQuestion": 3.3,
+                            "percentageSurvey": 2.3
                           }
                         ],
                         "percentageQuestion": 11.49,
@@ -911,6 +921,13 @@
                         "id": "used",
                         "facetBuckets": [
                           {
+                            "count": 40,
+                            "id": "positive",
+                            "percentageBucket": 33.33,
+                            "percentageQuestion": 1.06,
+                            "percentageSurvey": 0.74
+                          },
+                          {
                             "count": 74,
                             "id": "neutral",
                             "percentageBucket": 61.67,
@@ -918,9 +935,11 @@
                             "percentageSurvey": 1.37
                           },
                           {
-                            "count": 46,
-                            "id": "insufficient_data",
-                            "percentageBucket": 38
+                            "count": 6,
+                            "id": "negative",
+                            "percentageBucket": 5,
+                            "percentageQuestion": 0.16,
+                            "percentageSurvey": 0.11
                           }
                         ],
                         "percentageQuestion": 3.19,
@@ -928,9 +947,9 @@
                       }
                     ],
                     "completion": {
-                      "count": 3761,
+                      "count": 3760,
                       "percentageSurvey": 69.62,
-                      "total": 5402
+                      "total": 5401
                     }
                   }
                 }
@@ -977,27 +996,21 @@
                       "awareness": 0.1,
                       "interest": 0.8,
                       "usage": 0,
-                      "retention": 0,
-                      "positivity": 0.22
+                      "retention": 0.28,
+                      "positivity": 0.22,
+                      "positivityRelative": 0.81
                     },
                     "buckets": [
                       {
-                        "count": 3373,
+                        "count": 3372,
                         "id": "never_heard",
                         "facetBuckets": [
                           {
-                            "count": 2437,
+                            "count": 2436,
                             "id": "neutral",
-                            "percentageBucket": 72.25,
-                            "percentageQuestion": 64.8,
-                            "percentageSurvey": 45.11
-                          },
-                          {
-                            "count": 763,
-                            "id": "positive",
-                            "percentageBucket": 22.62,
-                            "percentageQuestion": 20.29,
-                            "percentageSurvey": 14.12
+                            "percentageBucket": 72.24,
+                            "percentageQuestion": 64.79,
+                            "percentageSurvey": 45.1
                           },
                           {
                             "count": 173,
@@ -1007,32 +1020,20 @@
                             "percentageSurvey": 3.2
                           },
                           {
-                            "count": 0,
-                            "id": "insufficient_data",
-                            "percentageBucket": 0
+                            "count": 763,
+                            "id": "positive",
+                            "percentageBucket": 22.63,
+                            "percentageQuestion": 20.29,
+                            "percentageSurvey": 14.13
                           }
                         ],
                         "percentageQuestion": 89.68,
-                        "percentageSurvey": 62.44
+                        "percentageSurvey": 62.43
                       },
                       {
                         "count": 354,
                         "id": "heard",
                         "facetBuckets": [
-                          {
-                            "count": 239,
-                            "id": "neutral",
-                            "percentageBucket": 67.51,
-                            "percentageQuestion": 6.35,
-                            "percentageSurvey": 4.42
-                          },
-                          {
-                            "count": 22,
-                            "id": "negative",
-                            "percentageBucket": 6.21,
-                            "percentageQuestion": 0.58,
-                            "percentageSurvey": 0.41
-                          },
                           {
                             "count": 93,
                             "id": "positive",
@@ -1041,9 +1042,18 @@
                             "percentageSurvey": 1.72
                           },
                           {
-                            "count": 0,
-                            "id": "insufficient_data",
-                            "percentageBucket": 0
+                            "count": 22,
+                            "id": "negative",
+                            "percentageBucket": 6.21,
+                            "percentageQuestion": 0.59,
+                            "percentageSurvey": 0.41
+                          },
+                          {
+                            "count": 239,
+                            "id": "neutral",
+                            "percentageBucket": 67.51,
+                            "percentageQuestion": 6.36,
+                            "percentageSurvey": 4.43
                           }
                         ],
                         "percentageQuestion": 9.41,
@@ -1057,13 +1067,22 @@
                             "count": 22,
                             "id": "neutral",
                             "percentageBucket": 75.86,
-                            "percentageQuestion": 0.58,
+                            "percentageQuestion": 0.59,
                             "percentageSurvey": 0.41
                           },
                           {
-                            "count": 7,
-                            "id": "insufficient_data",
-                            "percentageBucket": 24
+                            "count": 5,
+                            "id": "negative",
+                            "percentageBucket": 17.24,
+                            "percentageQuestion": 0.13,
+                            "percentageSurvey": 0.09
+                          },
+                          {
+                            "count": 2,
+                            "id": "positive",
+                            "percentageBucket": 6.9,
+                            "percentageQuestion": 0.05,
+                            "percentageSurvey": 0.04
                           }
                         ],
                         "percentageQuestion": 0.77,
@@ -1071,9 +1090,9 @@
                       }
                     ],
                     "completion": {
-                      "count": 3761,
+                      "count": 3760,
                       "percentageSurvey": 69.62,
-                      "total": 5402
+                      "total": 5401
                     }
                   }
                 }

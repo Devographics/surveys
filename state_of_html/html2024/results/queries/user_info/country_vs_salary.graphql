@@ -10,11 +10,11 @@ query {
                 count
               }
             }
-            responses(
+            combined(
               facet: user_info__yearly_salary
               parameters: {
                 showNoAnswer: true
-                cutoff: 10
+                cutoff: 20
                 limit: 20
                 sort: {
                   property: medianByFacet
@@ -22,7 +22,7 @@ query {
                 }
               }
             ) {
-              currentEdition {
+              allEditions(editionCount: 2) {
                 _metadata {
                   axis1Sort {
                     property
@@ -35,6 +35,8 @@ query {
                   limit
                   cutoff
                 }
+                editionId
+                year
                 completion {
                   count
                   percentageSurvey
@@ -47,6 +49,8 @@ query {
                 buckets {
                   count
                   id
+                  value
+                  index
                   percentageQuestion
                   percentageSurvey
                   isFreeformData
@@ -77,6 +81,12 @@ query {
                       url
                     }
                     twitter {
+                      url
+                    }
+                    bluesky {
+                      url
+                    }
+                    threads {
                       url
                     }
                     twitch {
@@ -113,6 +123,7 @@ query {
                       group
                       name
                       spec
+                      url
                       status {
                         baseline
                         baseline_low_date
@@ -172,6 +183,12 @@ query {
                       twitter {
                         url
                       }
+                      bluesky {
+                        url
+                      }
+                      threads {
+                        url
+                      }
                       twitch {
                         url
                       }
@@ -206,6 +223,7 @@ query {
                         group
                         name
                         spec
+                        url
                         status {
                           baseline
                           baseline_low_date

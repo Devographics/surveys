@@ -10,15 +10,16 @@ query {
                 count
               }
             }
-            responses(
+            combined(
               facet: user_info__gender
               parameters: {
                 showNoAnswer: true
-                mergeOtherBuckets: false
+                mergeOtherBuckets: true
+                cutoff: 10
                 limit: 15
               }
             ) {
-              currentEdition {
+              allEditions(editionCount: 2) {
                 _metadata {
                   axis1Sort {
                     property
@@ -31,6 +32,8 @@ query {
                   limit
                   cutoff
                 }
+                editionId
+                year
                 completion {
                   count
                   percentageSurvey
@@ -43,6 +46,8 @@ query {
                 buckets {
                   count
                   id
+                  value
+                  index
                   percentageQuestion
                   percentageSurvey
                   isFreeformData
@@ -73,6 +78,12 @@ query {
                       url
                     }
                     twitter {
+                      url
+                    }
+                    bluesky {
+                      url
+                    }
+                    threads {
                       url
                     }
                     twitch {
@@ -109,6 +120,7 @@ query {
                       group
                       name
                       spec
+                      url
                       status {
                         baseline
                         baseline_low_date
@@ -168,6 +180,12 @@ query {
                       twitter {
                         url
                       }
+                      bluesky {
+                        url
+                      }
+                      threads {
+                        url
+                      }
                       twitch {
                         url
                       }
@@ -202,6 +220,7 @@ query {
                         group
                         name
                         spec
+                        url
                         status {
                           baseline
                           baseline_low_date

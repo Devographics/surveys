@@ -10,8 +10,8 @@ query {
                 count
               }
             }
-            responses(filters: { user_info__country: { in: [USA] } }) {
-              currentEdition {
+            combined(filters: { user_info__country: { in: [USA] } }) {
+              allEditions(editionCount: 2) {
                 _metadata {
                   axis1Sort {
                     property
@@ -24,6 +24,8 @@ query {
                   limit
                   cutoff
                 }
+                editionId
+                year
                 completion {
                   count
                   percentageSurvey
@@ -36,6 +38,8 @@ query {
                 buckets {
                   count
                   id
+                  value
+                  index
                   percentageQuestion
                   percentageSurvey
                   isFreeformData
@@ -66,6 +70,12 @@ query {
                       url
                     }
                     twitter {
+                      url
+                    }
+                    bluesky {
+                      url
+                    }
+                    threads {
                       url
                     }
                     twitch {
@@ -102,6 +112,7 @@ query {
                       group
                       name
                       spec
+                      url
                       status {
                         baseline
                         baseline_low_date
@@ -128,8 +139,8 @@ query {
                 count
               }
             }
-            responses(filters: { user_info__country: { nin: [USA] } }) {
-              currentEdition {
+            combined(filters: { user_info__country: { nin: [USA] } }) {
+              allEditions(editionCount: 2) {
                 _metadata {
                   axis1Sort {
                     property
@@ -142,6 +153,8 @@ query {
                   limit
                   cutoff
                 }
+                editionId
+                year
                 completion {
                   count
                   percentageSurvey
@@ -154,6 +167,8 @@ query {
                 buckets {
                   count
                   id
+                  value
+                  index
                   percentageQuestion
                   percentageSurvey
                   isFreeformData
@@ -184,6 +199,12 @@ query {
                       url
                     }
                     twitter {
+                      url
+                    }
+                    bluesky {
+                      url
+                    }
+                    threads {
                       url
                     }
                     twitch {
@@ -220,6 +241,7 @@ query {
                       group
                       name
                       spec
+                      url
                       status {
                         baseline
                         baseline_low_date

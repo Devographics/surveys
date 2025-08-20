@@ -13,7 +13,7 @@ query {
                 mergeOtherBuckets: true
               }
             ) {
-              currentEdition {
+              allEditions(editionCount: 2) {
                 _metadata {
                   axis1Sort {
                     property
@@ -26,6 +26,8 @@ query {
                   limit
                   cutoff
                 }
+                editionId
+                year
                 completion {
                   count
                   percentageSurvey
@@ -38,6 +40,8 @@ query {
                 buckets {
                   count
                   id
+                  value
+                  index
                   percentageQuestion
                   percentageSurvey
                   isFreeformData
@@ -68,6 +72,12 @@ query {
                       url
                     }
                     twitter {
+                      url
+                    }
+                    bluesky {
+                      url
+                    }
+                    threads {
                       url
                     }
                     twitch {
@@ -104,6 +114,7 @@ query {
                       group
                       name
                       spec
+                      url
                       status {
                         baseline
                         baseline_low_date
@@ -122,6 +133,8 @@ query {
                   groupedBuckets {
                     count
                     id
+                    value
+                    index
                     percentageQuestion
                     percentageSurvey
                     isFreeformData
@@ -152,6 +165,12 @@ query {
                         url
                       }
                       twitter {
+                        url
+                      }
+                      bluesky {
+                        url
+                      }
+                      threads {
                         url
                       }
                       twitch {
@@ -188,6 +207,7 @@ query {
                         group
                         name
                         spec
+                        url
                         status {
                           baseline
                           baseline_low_date
