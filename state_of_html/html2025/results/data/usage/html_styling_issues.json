@@ -11,7 +11,7 @@
                   "count": 23
                 }
               },
-              "freeform": {
+              "combined": {
                 "allEditions": [
                   {
                     "_metadata": {
@@ -25,30 +25,502 @@
                     "editionId": "html2025",
                     "year": 2025,
                     "completion": {
-                      "count": 72,
-                      "percentageSurvey": 1.16,
+                      "count": 3331,
+                      "percentageSurvey": 53.53,
                       "total": 6223
                     },
                     "buckets": [
                       {
-                        "count": 6151,
-                        "id": "no_answer",
+                        "count": 1699,
+                        "id": "select_element",
                         "index": 0,
+                        "percentageQuestion": 51.01,
+                        "percentageSurvey": 27.3,
+                        "entity": {
+                          "name": "`<select>`\n",
+                          "nameHtml": "<code>&lt;select&gt;</code>\n",
+                          "nameClean": "<select>",
+                          "id": "select_element",
+                          "entityType": "feature"
+                        }
+                      },
+                      {
+                        "count": 1178,
+                        "id": "input_type_date",
+                        "index": 1,
+                        "percentageQuestion": 35.36,
+                        "percentageSurvey": 18.93,
+                        "entity": {
+                          "name": "`<input type=\"date\">`\n",
+                          "nameHtml": "<code>&lt;input type=\"date\"&gt;</code>\n",
+                          "nameClean": "<input type=\"date\">",
+                          "id": "input_type_date",
+                          "entityType": "feature"
+                        }
+                      },
+                      {
+                        "count": 792,
+                        "id": "select_multiple_element",
+                        "index": 2,
+                        "percentageQuestion": 23.78,
+                        "percentageSurvey": 12.73,
+                        "entity": {
+                          "name": "`<select multiple>`\n",
+                          "nameHtml": "<code>&lt;select multiple&gt;</code>\n",
+                          "nameClean": "<select multiple>",
+                          "id": "select_multiple_element",
+                          "entityType": "feature"
+                        }
+                      },
+                      {
+                        "count": 791,
+                        "id": "input_type_checkbox",
+                        "index": 3,
+                        "percentageQuestion": 23.75,
+                        "percentageSurvey": 12.71,
+                        "entity": {
+                          "name": "`<input type=\"checkbox\">`\n",
+                          "nameHtml": "<code>&lt;input type=\"checkbox\"&gt;</code>\n",
+                          "nameClean": "<input type=\"checkbox\">",
+                          "id": "input_type_checkbox",
+                          "entityType": "feature"
+                        }
+                      },
+                      {
+                        "count": 491,
+                        "id": "validation_errors",
+                        "index": 4,
+                        "percentageQuestion": 14.74,
+                        "percentageSurvey": 7.89
+                      },
+                      {
+                        "count": 432,
+                        "id": "details_element",
+                        "index": 5,
+                        "percentageQuestion": 12.97,
+                        "percentageSurvey": 6.94,
+                        "entity": {
+                          "name": "`<details>` and `<summary>`",
+                          "nameHtml": "<code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code>",
+                          "nameClean": "<details> and <summary>",
+                          "description": "A disclosure widget that can be toggled to hide or show content interactively.",
+                          "descriptionClean": "A disclosure widget that can be toggled to hide or show content interactively.",
+                          "id": "details_element",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<details>\n    <summary>Details</summary>\n    Longer content\n</details>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">details</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">summary</span>&gt;</span>Details<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">summary</span>&gt;</span>\n    Longer content\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">details</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element",
+                              "title": "HTML Standard"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "details",
+                            "description_html": "The <code>&#x3C;details></code> element is a disclosure widget which can be expanded to reveal additional content. When closed, only the nested <code>&#x3C;summary></code> element is visible.",
+                            "group": [
+                              "html-elements"
+                            ],
+                            "name": "<details>",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/details/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-01-15",
+                              "support": {
+                                "chrome": "12",
+                                "chrome_android": "18",
+                                "edge": "79",
+                                "firefox": "49",
+                                "firefox_android": "49",
+                                "safari": "6",
+                                "safari_ios": "6"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 401,
+                        "id": "input_type_time",
+                        "index": 6,
+                        "percentageQuestion": 12.04,
+                        "percentageSurvey": 6.44,
+                        "entity": {
+                          "name": "`<input type=\"time\">`\n",
+                          "nameHtml": "<code>&lt;input type=\"time\"&gt;</code>\n",
+                          "nameClean": "<input type=\"time\">",
+                          "id": "input_type_time",
+                          "entityType": "feature"
+                        }
+                      },
+                      {
+                        "count": 369,
+                        "id": "input_type_radio",
+                        "index": 7,
+                        "percentageQuestion": 11.08,
+                        "percentageSurvey": 5.93,
+                        "entity": {
+                          "name": "`<input type=\"radio\">`\n",
+                          "nameHtml": "<code>&lt;input type=\"radio\"&gt;</code>\n",
+                          "nameClean": "<input type=\"radio\">",
+                          "id": "input_type_radio",
+                          "entityType": "feature"
+                        }
+                      },
+                      {
+                        "count": 317,
+                        "id": "input_type_range",
+                        "index": 8,
+                        "percentageQuestion": 9.52,
+                        "percentageSurvey": 5.09,
+                        "entity": {
+                          "name": "`<input type=\"range\">`\n",
+                          "nameHtml": "<code>&lt;input type=\"range\"&gt;</code>\n",
+                          "nameClean": "<input type=\"range\">",
+                          "id": "input_type_range",
+                          "entityType": "feature"
+                        }
+                      },
+                      {
+                        "count": 314,
+                        "id": "dialog_element",
+                        "index": 9,
+                        "percentageQuestion": 9.43,
+                        "percentageSurvey": 5.05,
+                        "entity": {
+                          "name": "`<dialog>`",
+                          "nameHtml": "<code>&lt;dialog&gt;</code>",
+                          "nameClean": "<dialog>",
+                          "description": "Creates a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.\n",
+                          "descriptionClean": "Creates a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.\n",
+                          "id": "dialog_element",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<dialog id=\"confirm\">\n\t<form method=\"dialog\">\n\t\tAre you sure?\n\t\t<button value=\"1\">Yes</button>\n\t\t<button value=\"0\">No</button>\n\t</form>\n</dialog>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">dialog</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;confirm&quot;</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">form</span> <span class=\"hljs-attr\">method</span>=<span class=\"hljs-string\">&quot;dialog&quot;</span>&gt;</span>\n\t\tAre you sure?\n\t\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">value</span>=<span class=\"hljs-string\">&quot;1&quot;</span>&gt;</span>Yes<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n\t\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">value</span>=<span class=\"hljs-string\">&quot;0&quot;</span>&gt;</span>No<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">form</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">dialog</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element",
+                              "title": "HTML Standard"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "dialog",
+                            "description_html": "The <code>&#x3C;dialog></code> HTML element represents a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.",
+                            "group": [
+                              "html-elements"
+                            ],
+                            "name": "<dialog>",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/dialog/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2022-03-14",
+                              "support": {
+                                "chrome": "37",
+                                "chrome_android": "37",
+                                "edge": "79",
+                                "firefox": "98",
+                                "firefox_android": "98",
+                                "safari": "15.4",
+                                "safari_ios": "15.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 270,
+                        "id": "progress_element",
+                        "index": 10,
+                        "percentageQuestion": 8.11,
+                        "percentageSurvey": 4.34,
+                        "entity": {
+                          "name": "`<progress>`",
+                          "nameHtml": "<code>&lt;progress&gt;</code>",
+                          "nameClean": "<progress>",
+                          "id": "progress_element",
+                          "entityType": "feature"
+                        }
+                      },
+                      {
+                        "count": 246,
+                        "id": "datalist_element",
+                        "index": 11,
+                        "percentageQuestion": 7.39,
+                        "percentageSurvey": 3.95,
+                        "entity": {
+                          "name": "`<datalist>`",
+                          "nameHtml": "<code>&lt;datalist&gt;</code>",
+                          "nameClean": "<datalist>",
+                          "description": "Method of providing a list of presets for a user to select in a form control, while still allowing custom options.",
+                          "descriptionClean": "Method of providing a list of presets for a user to select in a form control, while still allowing custom options.",
+                          "id": "datalist_element",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<input name=\"country\" list=\"countries\">\n<datalist id=\"countries\">\n  <option>Afghanistan</option>\n  ...\n</datalist>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">&quot;country&quot;</span> <span class=\"hljs-attr\">list</span>=<span class=\"hljs-string\">&quot;countries&quot;</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">datalist</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;countries&quot;</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">option</span>&gt;</span>Afghanistan<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">option</span>&gt;</span>\n  ...\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">datalist</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/datalist"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/datalist"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element",
+                              "title": "The datalist element"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "datalist",
+                            "description_html": "The <code>&#x3C;datalist></code> element sets recommended values for an <code>&#x3C;input></code> element. Browsers may show a dropdown menu of all values or match values as the user types.",
+                            "group": [
+                              "forms"
+                            ],
+                            "name": "<datalist>",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/datalist/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "69",
+                                "chrome_android": "69",
+                                "edge": "12",
+                                "firefox": "110",
+                                "safari": "12.1",
+                                "safari_ios": "12.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 246,
+                        "id": "svg_element",
+                        "index": 12,
+                        "percentageQuestion": 7.39,
+                        "percentageSurvey": 3.95,
+                        "entity": {
+                          "name": "`<svg>` (Inline SVG)",
+                          "nameHtml": "<code>&lt;svg&gt;</code> (Inline SVG)",
+                          "nameClean": "<svg> (Inline SVG)",
+                          "description": "Embed SVG vector graphics directly in markup",
+                          "descriptionClean": "Embed SVG vector graphics directly in markup",
+                          "id": "svg_element",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<svg>\n  <circle cx=\"50\" cy=\"50\" r=\"50\" />\n</svg>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">svg</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">circle</span> <span class=\"hljs-attr\">cx</span>=<span class=\"hljs-string\">&quot;50&quot;</span> <span class=\"hljs-attr\">cy</span>=<span class=\"hljs-string\">&quot;50&quot;</span> <span class=\"hljs-attr\">r</span>=<span class=\"hljs-string\">&quot;50&quot;</span> /&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">svg</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/svg"
+                          },
+                          "webFeature": {
+                            "id": "svg",
+                            "description_html": "The SVG image format, represented by the <code>&#x3C;svg></code> element, creates two-dimensional vector graphics with declarative or scripted interaction and animation.",
+                            "group": [
+                              "svg"
+                            ],
+                            "name": "SVG",
+                            "spec": [
+                              "https://svgwg.org/svg2-draft/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/svg/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-01-15",
+                              "support": {
+                                "chrome": "1",
+                                "chrome_android": "18",
+                                "edge": "79",
+                                "firefox": "3",
+                                "firefox_android": "4",
+                                "safari": "3",
+                                "safari_ios": "2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 220,
+                        "id": "input_type_color",
+                        "index": 13,
+                        "percentageQuestion": 6.6,
+                        "percentageSurvey": 3.54,
+                        "entity": {
+                          "name": "`<input type=\"color\">`\n",
+                          "nameHtml": "<code>&lt;input type=\"color\"&gt;</code>\n",
+                          "nameClean": "<input type=\"color\">",
+                          "description": "Creates a color picker from which users can choose a color value.\n",
+                          "descriptionClean": "Creates a color picker from which users can choose a color value.\n",
+                          "id": "input_type_color",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/color"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://html.spec.whatwg.org/multipage/input.html#color-state-(type=color)",
+                              "title": "HTML Standard"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "input-color",
+                            "description_html": "The <code>&#x3C;input type=\"color\"></code> HTML element shows a color picker from which users can choose a color value.",
+                            "group": [
+                              "forms",
+                              "html-elements"
+                            ],
+                            "name": "<input type=\"color\">",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/input.html#color-state-(type=color)"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/input-color/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "20",
+                                "chrome_android": "25",
+                                "edge": "14",
+                                "firefox": "29",
+                                "safari": "12.1",
+                                "safari_ios": "12.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 214,
+                        "id": "popover_api",
+                        "index": 14,
+                        "percentageQuestion": 6.42,
+                        "percentageSurvey": 3.44,
+                        "entity": {
+                          "name": "`popover` attribute (Popover API)",
+                          "nameHtml": "<code>popover</code> attribute (Popover API)",
+                          "nameClean": "popover attribute (Popover API)",
+                          "description": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
+                          "descriptionClean": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
+                          "id": "popover_api",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<button popovertarget=\"foo\">Toggle the popover</button>\n<div id=\"foo\" popover>Popover content</div>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">popovertarget</span>=<span class=\"hljs-string\">&quot;foo&quot;</span>&gt;</span>Toggle the popover<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;foo&quot;</span> <span class=\"hljs-attr\">popover</span>&gt;</span>Popover content<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Popover_API"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-html_global_attributes_popover"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://html.spec.whatwg.org/multipage/popover.html#dom-popover",
+                              "title": "HTML Standard"
+                            },
+                            {
+                              "url": "https://github.com/w3ctag/design-reviews/issues/743",
+                              "title": "The Popover API (previously Popup) · Issue #743 · w3ctag/design-reviews · GitHub"
+                            },
+                            {
+                              "url": "https://open-ui.org/components/popover.research.explainer/",
+                              "title": "Popover API (Explainer) | Open UI"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "popover",
+                            "description_html": "The <code>popover</code> HTML attribute creates an overlay to display content on top of other page content. Popovers can be shown declaratively using HTML, or using the <code>showPopover()</code> method.",
+                            "group": [
+                              "html"
+                            ],
+                            "name": "Popover",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/popover.html"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/popover/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2025-01-27",
+                              "support": {
+                                "chrome": "116",
+                                "chrome_android": "116",
+                                "edge": "116",
+                                "firefox": "125",
+                                "firefox_android": "125",
+                                "safari": "17",
+                                "safari_ios": "18.3"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 203,
+                        "id": "input_type_number",
+                        "index": 15,
+                        "percentageQuestion": 6.09,
+                        "percentageSurvey": 3.26,
+                        "entity": {
+                          "name": "`<input type=\"number\">`\n",
+                          "nameHtml": "<code>&lt;input type=\"number\"&gt;</code>\n",
+                          "nameClean": "<input type=\"number\">",
+                          "id": "input_type_number",
+                          "entityType": "feature"
+                        }
+                      },
+                      {
+                        "count": 167,
+                        "id": "fieldset_and_legend",
+                        "index": 16,
+                        "percentageQuestion": 5.01,
+                        "percentageSurvey": 2.68
+                      },
+                      {
+                        "count": 2892,
+                        "id": "no_answer",
+                        "index": 17,
                         "percentageQuestion": 0,
-                        "percentageSurvey": 98.84
+                        "percentageSurvey": 46.47
                       },
                       {
                         "count": 77,
                         "id": "other_answers",
-                        "index": 1,
-                        "percentageQuestion": 106.94,
+                        "index": 18,
+                        "percentageQuestion": 2.31,
                         "percentageSurvey": 1.24,
                         "groupedBuckets": [
                           {
                             "count": 77,
                             "id": "no_match",
-                            "percentageQuestion": 106.94,
-                            "percentageSurvey": 1.24
+                            "index": 0,
+                            "percentageQuestion": 2.31,
+                            "percentageSurvey": 1.24,
+                            "isFreeformData": true
                           }
                         ]
                       }
