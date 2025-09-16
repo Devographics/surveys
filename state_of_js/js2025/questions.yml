@@ -462,6 +462,55 @@
 #       template: happiness
 #       sectionSlug: happiness
 
+- id: back_end_frameworks
+  template: toolv3
+  slug: tools
+  yearAdded: 2025
+  questions:
+    - id: express
+    - id: nest
+    - id: fastify
+    - id: strapi
+    - id: hono
+    - id: koa
+    - id: elysia
+    - id: adonis
+    - id: hapi
+    - id: directus
+    - id: trpc
+    - id: nitro
+
+    - id: back_end_frameworks_others
+      intlId: tools.other_tools
+      template: projects
+
+    - id: back_end_frameworks_work
+      template: multipleWithOther
+      yearAdded: 2024
+      matchTags: [libraries]
+      options:
+        - id: express
+        - id: nest
+        - id: fastify
+        - id: strapi
+        - id: hono
+        - id: koa
+        - id: elysia
+        - id: adonis
+        - id: hapi
+        - id: directus
+        - id: trpc
+        - id: nitro
+        - id: na
+
+    - id: back_end_frameworks_happiness
+      template: happiness
+
+    - id: back_end_frameworks_pain_points
+      template: textList
+      matchTags:
+        - common_pain_points
+
 - id: testing
   template: toolv3
   slug: tools
@@ -555,55 +604,56 @@
 #       template: happiness
 #       sectionSlug: happiness
 
-- id: mobile_desktop
-  template: toolv3
-  slug: tools
-  questions:
-    - id: electron
-    - id: reactnative
-    - id: nativeapps
-    - id: cordova
-    - id: ionic
-    - id: capacitor
-    - id: nwjs
-    - id: expo
-    - id: quasar
-    - id: tauri
-      yearAdded: 2021
-    - id: nativescript
-      yearAdded: 2022
+# commented out in 2025 to make space for back end frameworks
+# - id: mobile_desktop
+#   template: toolv3
+#   slug: tools
+#   questions:
+#     - id: electron
+#     - id: reactnative
+#     - id: nativeapps
+#     - id: cordova
+#     - id: ionic
+#     - id: capacitor
+#     - id: nwjs
+#     - id: expo
+#     - id: quasar
+#     - id: tauri
+#       yearAdded: 2021
+#     - id: nativescript
+#       yearAdded: 2022
 
-    - id: mobile_desktop_others
-      intlId: tools.other_tools
-      template: projects
+#     - id: mobile_desktop_others
+#       intlId: tools.other_tools
+#       template: projects
 
-    - id: mobile_desktop_work
-      template: multipleWithOther
-      yearAdded: 2024
-      matchTags: [libraries]
-      options:
-        - id: electron
-        - id: reactnative
-        - id: nativeapps
-        - id: cordova
-        - id: ionic
-        - id: capacitor
-        - id: nwjs
-        - id: expo
-        - id: quasar
-        - id: tauri
-        - id: nativescript
-        - id: na
+#     - id: mobile_desktop_work
+#       template: multipleWithOther
+#       yearAdded: 2024
+#       matchTags: [libraries]
+#       options:
+#         - id: electron
+#         - id: reactnative
+#         - id: nativeapps
+#         - id: cordova
+#         - id: ionic
+#         - id: capacitor
+#         - id: nwjs
+#         - id: expo
+#         - id: quasar
+#         - id: tauri
+#         - id: nativescript
+#         - id: na
 
-    - id: mobile_desktop_happiness
-      template: happiness
+#     - id: mobile_desktop_happiness
+#       template: happiness
 
-    - id: mobile_desktop_pain_points
-      template: textList
-      matchTags:
-        - common_pain_points
-        - mobile_web_apps_pain_points
-        - libraries
+#     - id: mobile_desktop_pain_points
+#       template: textList
+#       matchTags:
+#         - common_pain_points
+#         - mobile_web_apps_pain_points
+#         - libraries
 
 - id: build_tools
   template: toolv3
@@ -641,6 +691,8 @@
       yearAdded: 2024
     - id: rolldown
       yearAdded: 2024
+    - id: bun
+      yearAdded: 2025
 
     - id: build_tools_others
       intlId: tools.other_tools
@@ -674,54 +726,55 @@
       matchTags:
         - common_pain_points
 
-- id: monorepo_tools
-  template: toolv3
-  slug: tools
-  yearAdded: 2021
-  questions:
-    - id: rush
-      yearAdded: 2021
-    - id: turborepo
-      yearAdded: 2021
-    - id: yarn_workspaces
-      yearAdded: 2021
-    - id: yalc
-      yearAdded: 2021
-    - id: lerna
-      yearAdded: 2021
-    - id: npm_workspaces
-      yearAdded: 2021
-    - id: pnpm
-      yearAdded: 2021
-    - id: nx
-      yearAdded: 2021
+# downgraded in 2025
+# - id: monorepo_tools
+#   template: toolv3
+#   slug: tools
+#   yearAdded: 2021
+#   questions:
+#     - id: rush
+#       yearAdded: 2021
+#     - id: turborepo
+#       yearAdded: 2021
+#     - id: yarn_workspaces
+#       yearAdded: 2021
+#     - id: yalc
+#       yearAdded: 2021
+#     - id: lerna
+#       yearAdded: 2021
+#     - id: npm_workspaces
+#       yearAdded: 2021
+#     - id: pnpm
+#       yearAdded: 2021
+#     - id: nx
+#       yearAdded: 2021
 
-    - id: monorepo_tools_others
-      intlId: tools.other_tools
-      template: projects
+#     - id: monorepo_tools_others
+#       intlId: tools.other_tools
+#       template: projects
 
-    - id: monorepo_tools_work
-      template: multipleWithOther
-      yearAdded: 2024
-      matchTags: [libraries]
-      options:
-        - id: rush
-        - id: turborepo
-        - id: yarn_workspaces
-        - id: yalc
-        - id: lerna
-        - id: npm_workspaces
-        - id: pnpm
-        - id: nx
-        - id: na
+#     - id: monorepo_tools_work
+#       template: multipleWithOther
+#       yearAdded: 2024
+#       matchTags: [libraries]
+#       options:
+#         - id: rush
+#         - id: turborepo
+#         - id: yarn_workspaces
+#         - id: yalc
+#         - id: lerna
+#         - id: npm_workspaces
+#         - id: pnpm
+#         - id: nx
+#         - id: na
 
-    - id: monorepo_tools_happiness
-      template: happiness
+#     - id: monorepo_tools_happiness
+#       template: happiness
 
-    - id: monorepo_tools_pain_points
-      template: textList
-      matchTags:
-        - common_pain_points
+#     - id: monorepo_tools_pain_points
+#       template: textList
+#       matchTags:
+#         - common_pain_points
 
 ######################################################
 #########             OTHER TOOLS            #########
@@ -807,40 +860,40 @@
     #     - id: swr
     #     - id: relay
 
-    - id: backend_frameworks
-      yearAdded: 2022
-      template: multipleWithOtherSentiment
-      # allowPrenormalized: true
-      matchTags:
-        - libraries
-        - runtimes
-      options:
-        - id: express
-        - id: nest
-        - id: strapi
-        - id: fastify
-        - id: meteor
-        - id: hapi
-        - id: koa # added again in 2022
-        - id: adonis
-          yearAdded: 2022
-        - id: keystone
-          yearAdded: 2022
-        - id: redwood
-          yearAdded: 2021
-        - id: sails # added again in 2022
-        # new in 2022
-        - id: directus
-          yearAdded: 2022
-        - id: amplication
-          yearAdded: 2022
-        - id: blitz # removed in 2022?
-          yearAdded: 2021
-        - id: hono
-          yearAdded: 2024
-        - id: elysia
-          yearAdded: 2024
-        - id: na
+    # - id: backend_frameworks
+    #   yearAdded: 2022
+    #   template: multipleWithOtherSentiment
+    #   # allowPrenormalized: true
+    #   matchTags:
+    #     - libraries
+    #     - runtimes
+    #   options:
+    #     - id: express
+    #     - id: nest
+    #     - id: strapi
+    #     - id: fastify
+    #     - id: meteor
+    #     - id: hapi
+    #     - id: koa # added again in 2022
+    #     - id: adonis
+    #       yearAdded: 2022
+    #     - id: keystone
+    #       yearAdded: 2022
+    #     - id: redwood
+    #       yearAdded: 2021
+    #     - id: sails # added again in 2022
+    #     # new in 2022
+    #     - id: directus
+    #       yearAdded: 2022
+    #     - id: amplication
+    #       yearAdded: 2022
+    #     - id: blitz # removed in 2022?
+    #       yearAdded: 2021
+    #     - id: hono
+    #       yearAdded: 2024
+    #     - id: elysia
+    #       yearAdded: 2024
+    #     - id: na
 
     - id: utilities
       template: multipleWithOtherSentiment
@@ -851,6 +904,7 @@
         - id: nvm
         - id: "n"
         - id: biome
+          yearAdded: 2025
 
     - id: runtimes
       template: multipleWithOtherSentiment
@@ -886,20 +940,17 @@
           yearAdded: 2024
         - id: na
 
-    # - id: javascript_flavors
-    #   yearAdded: 2021
-    #   template: multipleWithOtherSentiment
-    #   matchTags: [javascript_flavors, libraries]
-    #   options:
-    #     - id: typescript
-    #     - id: reason
-    #     - id: flow
-    #     - id: elm
-    #     - id: clojurescript
-    #     - id: purescript
-    #     - id: coffeescript
-    #     - id: rescript
-    #     - id: imba
+    - id: text_editors
+      template: multipleWithOtherSentiment
+      options:
+        - id: vs_code
+        - id: sublime_text
+        - id: vim
+        - id: emacs
+        - id: webstorm
+        - id: cursor
+        - id: windsurf
+        - id: zed
 
     - id: non_js_languages
       template: multipleWithOtherSentiment
@@ -933,20 +984,45 @@
       options:
         - id: copilot
         - id: chat_gpt
-        - id: bard # todo: rename to gemini in future surveys
-        - id: bing
+        - id: gemini
+        - id: claude
+        - id: deepseek
         - id: perplexity
         - id: cursor
-        - id: phind
-        - id: codium
-        - id: codeium
         - id: tabnine
-        - id: code_whisperer
-        - id: cody
         - id: jetbrains_ai
-        - id: llama
-        - id: claude
         - id: v0
+        - id: bolt
+        - id: na
+
+    - id: mobile_desktop
+      template: multipleWithOtherSentiment
+      order: random
+      options:
+        - id: electron
+        - id: reactnative
+        - id: cordova
+        - id: ionic
+        - id: capacitor
+        - id: nwjs
+        - id: expo
+        - id: quasar
+        - id: tauri
+        - id: nativescript
+        - id: na
+
+    - id: monorepo_tools
+      template: multipleWithOtherSentiment
+      order: random
+      options:
+        - id: rush
+        - id: turborepo
+        - id: yarn_workspaces
+        - id: yalc
+        - id: lerna
+        - id: npm_workspaces
+        - id: pnpm
+        - id: nx
         - id: na
 
     - id: hosting
