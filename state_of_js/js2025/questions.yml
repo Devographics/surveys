@@ -189,6 +189,73 @@
         # - js_pain_points
         - features
 
+    - id: js_new_features
+      sectionSlug: usage
+      yearAdded: 2024
+      template: multipleWithOther
+      limit: 3
+      matchTags: [js_features]
+      options:
+        - id: temporal
+        - id: js_decorators
+        # - id: array_from_async
+        - id: js_explicit_resource_management
+        - id: js_source_phase_imports
+        # - id: js_dynamic_code_brand_checks
+        - id: regexp_escape
+        - id: js_shadow_realm
+        - id: js_deferring_module_evaluation
+        - id: js_joint_iteration
+        - id: js_iterator_sequencing
+        - id: js_json_parse_source_access
+        - id: js_decorator_metadata
+        - id: js_float16_arrays
+
+    - id: top_currently_missing_from_js
+      sectionSlug: usage
+      yearAdded: 2021
+      # template: bracket
+      # template: top_n
+      template: multipleWithOther
+      limit: 3
+      matchTags: [js_missing_features]
+      options:
+        - id: static_typing
+        - id: standard_library
+        - id: js_pattern_matching
+        - id: js_pipeline_operator
+        # - id: decorators
+        # - id: immutable_data_structures
+        # - id: better_date_management
+        - id: js_observable
+        - id: js_signals
+          yearAdded: 2024
+        - id: js_async_context
+          yearAdded: 2024
+        - id: js_extractors
+          yearAdded: 2024
+        - id: js_iterator_chunking
+          yearAdded: 2024
+        - id: js_get_or_insert
+          yearAdded: 2024
+        - id: js_structs
+          yearAdded: 2024
+        # - id: js_record_tuple # removed in 2025
+        #   yearAdded: 2024
+        - id: js_composites
+          yearAdded: 2025
+        - id: na
+
+    - id: native_types_proposal
+      sectionSlug: usage
+      yearAdded: 2024
+      template: singleWithOther
+      options:
+        - id: runtime_types
+        - id: type_annotations
+        - id: jsdoc_types
+        - id: no_types
+
     # new in 2023
     # - id: array_to_sorted
     #   yearAdded: 2023
@@ -394,6 +461,11 @@
       yearAdded: 2023
     - id: fresh
       yearAdded: 2023
+
+    - id: analog
+      yearAdded: 2025
+    - id: quasar
+      yearAdded: 2025
 
     - id: meta_frameworks_others
       intlId: tools.other_tools
@@ -1006,7 +1078,6 @@
         - id: capacitor
         - id: nwjs
         - id: expo
-        - id: quasar
         - id: tauri
         - id: nativescript
         - id: na
@@ -1260,85 +1331,10 @@
         - id: build_tools
         - id: typing
 
-    - id: js_new_features
-      yearAdded: 2024
-      template: multipleWithOther
-      limit: 3
-      matchTags: [js_features]
-      options:
-        - id: temporal
-        - id: js_decorators
-        # - id: array_from_async
-        - id: js_explicit_resource_management
-        - id: js_source_phase_imports
-        # - id: js_dynamic_code_brand_checks
-        - id: regexp_escape
-        - id: js_shadow_realm
-        - id: js_deferring_module_evaluation
-        - id: js_joint_iteration
-        - id: js_iterator_sequencing
-        - id: js_json_parse_source_access
-        - id: js_decorator_metadata
-        - id: js_float16_arrays
+    - id: js_ecosystem_changing_to_fast
+      template: opinion
 
-    - id: top_currently_missing_from_js
-      yearAdded: 2021
-      # template: bracket
-      # template: top_n
-      template: multipleWithOther
-      limit: 3
-      matchTags: [js_missing_features]
-      options:
-        - id: static_typing
-        - id: standard_library
-        - id: js_pattern_matching
-        - id: js_pipeline_operator
-        # - id: decorators
-        # - id: immutable_data_structures
-        # - id: better_date_management
-        - id: js_observable
-        - id: js_signals
-          yearAdded: 2024
-        - id: js_async_context
-          yearAdded: 2024
-        - id: js_extractors
-          yearAdded: 2024
-        - id: js_iterator_chunking
-          yearAdded: 2024
-        - id: js_get_or_insert
-          yearAdded: 2024
-        - id: js_structs
-          yearAdded: 2024
-        - id: js_record_tuple
-          yearAdded: 2024
-
-    # - id: pick_of_the_year
-    #   yearAdded: 2022
-    #   sectionSlug: opinions_others
-    #   template: others
-    #   matchTags: [js_missing_features]
-
-    # TC39 said people don't have an accurate idea of what the proposal is,
-    # so don't include the question for now
-    # - id: js_sugar_proposal
-    #   yearAdded: 2024
-    #   template: singleWithOther
-    #   options:
-    #     - id: strongly_oppose
-    #     - id: oppose
-    #     - id: neutral
-    #     - id: support
-    #     - id: strongly_support
-
-    - id: native_types_proposal
-      yearAdded: 2024
-      template: singleWithOther
-      options:
-        - id: typescript_like_types
-        - id: jsdoc_like_types
-        - id: no_types
-
-    - id: i_would_prefer_to_use_js_without_build_step
+    - id: prefer_no_build_step
       template: opinion
 
     - id: state_of_the_web_happiness
@@ -1687,6 +1683,17 @@
 
     - id: disability_status
       template: disability_status
+
+    - id: why_did_you_take_the_survey
+      template: multipleWithOther
+      limit: 3
+      options:
+        - id: stay_informed
+        - id: interested_in_data
+        - id: help_with_representation
+        - id: for_fun
+        - id: affect_change
+        - id: gauge_my_knowledge
 
     - id: how_did_user_find_out_about_the_survey
       template: text
