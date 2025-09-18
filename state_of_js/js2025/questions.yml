@@ -214,6 +214,7 @@
         # - id: js_float16_arrays # now available in 2025
         - id: js_get_or_insert
           yearAdded: 2025
+        - id: na
 
     - id: top_currently_missing_from_js
       sectionSlug: usage
@@ -259,6 +260,17 @@
         - id: type_annotations
         - id: jsdoc_types
         - id: no_types
+
+    - id: js_pace_of_change
+      template: single
+      optionsAreNumeric: true
+      yearAdded: 2025
+      options:
+        - id: 1
+        - id: 2
+        - id: 3
+        - id: 4
+        - id: 5
 
     # new in 2023
     # - id: array_to_sorted
@@ -1240,13 +1252,13 @@
       #   - id: range_75_100
       #   - id: range_100
 
-    - id: usage_type
-      yearAdded: 2022
-      template: multipleWithOther
-      options:
-        - id: professionally
-        - id: student
-        - id: hobby
+    # - id: usage_type # removed in 2025
+    #   yearAdded: 2022
+    #   template: multipleWithOther
+    #   options:
+    #     - id: professionally
+    #     - id: student
+    #     - id: hobby
 
     - id: what_do_you_use_js_for
       yearAdded: 2022
@@ -1335,10 +1347,15 @@
         - id: build_tools
         - id: typing
 
-    - id: js_ecosystem_changing_to_fast
-      template: opinion
+    # - id: js_ecosystem_changing_to_fast
+    #   sectionSlug: opinions
+    #   template: opinion
+
+    # - id: what_should_browsers_focus_on
+    #   template: opinion
 
     - id: prefer_no_build_step
+      sectionSlug: opinions
       template: opinion
 
     - id: state_of_the_web_happiness
@@ -1636,11 +1653,11 @@
       template: multipleWithOther
       matchTags: [surveys]
       options:
-        # - id: state_of_js_survey
-        - id: state_of_react_survey
         - id: state_of_css_survey
-        # - id: state_of_graphql_survey
         - id: state_of_html_survey
+        - id: state_of_devs_survey
+        - id: state_of_ai_survey
+        - id: state_of_react_survey
         - id: jetbrains_survey
         - id: stack_overflow_survey
         - id: codingame_survey
@@ -1648,7 +1665,7 @@
         - id: postman_survey
         - id: netlify_survey
         - id: state_of_react_native
-        # - id: state_of_frontend # TODO: add in 2025
+        - id: state_of_frontend
         - id: na
 
 ######################################################
