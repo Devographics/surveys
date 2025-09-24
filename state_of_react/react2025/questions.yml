@@ -50,7 +50,7 @@
   questions:
     - id: cache
     - id: react_server_components
-    - id: server_actions
+    - id: server_actions # displayed as Server Functions
     - id: starttransition
     - id: suspense
     - id: taint_api
@@ -64,6 +64,26 @@
       yearAdded: 2024
     - id: useoptimistic
       yearAdded: 2024
+    - id: react_form_component_actions
+      yearAdded: 2025
+    - id: react_view_transition
+      yearAdded: 2025
+    - id: react_activity
+      yearAdded: 2025
+    - id: react_forget # displayed as React Compiler
+      yearAdded: 2025
+
+    - id: rsc_production_usage
+      template: multipleWithOther
+      options:
+        - id: tried_out
+        - id: used_in_production
+
+    - id: rsf_production_usage
+      template: multipleWithOther
+      options:
+        - id: tried_out
+        - id: used_in_production
 
     - id: new_apis_pain_points
       matchTags: [common_pain_points, react_features]
@@ -84,6 +104,8 @@
     - id: react_aria
     - id: mantine
       yearAdded: 2024
+    - id: magic_ui
+      yearAdded: 2025
 
     - id: component_libraries_others
       disallowedTokenIds: [react]
@@ -133,6 +155,10 @@
           yearAdded: 2024
         - id: highcharts
           yearAdded: 2024
+        - id: echarts
+          yearAdded: 2025
+        - id: apex_charts
+          yearAdded: 2025
         - id: na
       matchTags: [libraries]
 
@@ -150,6 +176,10 @@
           yearAdded: 2024
         - id: redux_form
           yearAdded: 2024
+        - id: conform
+          yearAdded: 2025
+        - id: tanstack_form
+          yearAdded: 2025
         - id: na
       matchTags: [libraries]
 
@@ -177,6 +207,10 @@
         - id: vanilla_extract
         - id: panda_css
           yearAdded: 2024
+        - id: less
+          yearAdded: 2025
+        - id: linaria
+          yearAdded: 2025
         - id: na
       matchTags: [libraries]
 
@@ -283,6 +317,8 @@
     - id: create_vite
       yearAdded: 2025
     - id: waku
+      yearAdded: 2025
+    - id: react_router
       yearAdded: 2025
 
     - id: meta_frameworks_others
@@ -507,7 +543,7 @@
         - id: react_v16x
         - id: react_v17x
         - id: react_v18x
-        # - id: react_v19x # todo 2025: add this
+        - id: react_v19x # todo 2025: add this
         - id: react_canary
         - id: not_sure
 
@@ -595,6 +631,24 @@
     # - id: react_moving_right_direction
     #   template: opinion
 
+    - id: meta_involvement_opinion
+      template: single
+      options:
+        - id: very_negative
+        - id: mostly_negative
+        - id: neutral
+        - id: mostly_positive
+        - id: very_positive
+
+    - id: vercel_involvement_opinion
+      template: single
+      options:
+        - id: very_negative
+        - id: mostly_negative
+        - id: neutral
+        - id: mostly_positive
+        - id: very_positive
+
     - id: state_of_react
       template: happiness
 
@@ -610,7 +664,7 @@
       options:
         - id: asset_loading
         - id: cache
-        - id: react_forget
+        - id: react_forget # displayed as React Compiler
         - id: new_docs
         - id: react_activity
         - id: react_server_components
