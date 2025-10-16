@@ -1,7 +1,7 @@
 - id: main_apis
   template: featurev3
   slug: features
-  messageId: features.features_intro.react2024
+  messageId: features.features_intro.react2025
   questions:
     - id: createcontext
     - id: createportal
@@ -72,18 +72,20 @@
       yearAdded: 2025
     - id: react_forget # displayed as React Compiler
       yearAdded: 2025
+    - id: useeffectevent
+      yearAdded: 2025
 
-    - id: rsc_production_usage
-      template: multipleWithOther
-      options:
-        - id: tried_out
-        - id: used_in_production
+    # - id: rsc_production_usage
+    #   template: multipleWithOther
+    #   options:
+    #     - id: tried_out
+    #     - id: used_in_production
 
-    - id: rsf_production_usage
-      template: multipleWithOther
-      options:
-        - id: tried_out
-        - id: used_in_production
+    # - id: rsf_production_usage
+    #   template: multipleWithOther
+    #   options:
+    #     - id: tried_out
+    #     - id: used_in_production
 
     - id: new_apis_pain_points
       matchTags: [common_pain_points, react_features]
@@ -92,7 +94,7 @@
 - id: component_libraries
   template: toolv3
   slug: tools
-  messageId: tools.tools_intro.react2024
+  messageId: tools.tools_intro.react2025
   questions:
     - id: ant_design
     - id: chakra_ui
@@ -105,6 +107,8 @@
     - id: mantine
       yearAdded: 2024
     - id: magic_ui
+      yearAdded: 2025
+    - id: next_ui
       yearAdded: 2025
 
     - id: component_libraries_others
@@ -157,7 +161,7 @@
           yearAdded: 2024
         - id: echarts
           yearAdded: 2025
-        - id: apex_charts
+        - id: apexcharts
           yearAdded: 2025
         - id: na
       matchTags: [libraries]
@@ -227,7 +231,7 @@
     - id: recoil
     - id: redux
     - id: redux_toolkit
-    - id: usestate
+    # - id: usestate
     - id: xstate
     - id: zustand
     - id: effector
@@ -256,7 +260,7 @@
     - id: swr
     - id: tanstack_query
     - id: trpc
-    - id: fetch
+    # - id: fetch
     - id: axios
 
     - id: data_loading_others
@@ -503,22 +507,22 @@
           yearAdded: 2024
         - id: na
 
-    - id: other_frontend_frameworks
-      template: multipleWithOtherSentiment
-      matchTags: [libraries]
-      options:
-        - id: alpinejs
-        - id: angular
-        - id: ember
-        - id: litelement
-        - id: preact
-        - id: qwik
-        - id: solid
-        - id: svelte
-        - id: vuejs
-        - id: htmx
-          yearAdded: 2024
-        - id: na
+    # - id: other_frontend_frameworks
+    #   template: multipleWithOtherSentiment
+    #   matchTags: [libraries]
+    #   options:
+    #     - id: alpinejs
+    #     - id: angular
+    #     - id: ember
+    #     - id: litelement
+    #     - id: preact
+    #     - id: qwik
+    #     - id: solid
+    #     - id: svelte
+    #     - id: vuejs
+    #     - id: htmx
+    #       yearAdded: 2024
+    #     - id: na
 
     # - id: other_tools_pain_points
     #   template: textList
@@ -543,49 +547,49 @@
         - id: react_v16x
         - id: react_v17x
         - id: react_v18x
-        - id: react_v19x # todo 2025: add this
+        - id: react_v19x
         - id: react_canary
         - id: not_sure
 
-    - id: usage_type
-      intlId: usage.react_usage_type
-      template: singleWithOther
-      allowOther: true
-      options:
-        - id: professionally
-        - id: student
-        - id: hobby
+    # - id: usage_type
+    #   intlId: usage.react_usage_type
+    #   template: singleWithOther
+    #   allowOther: true
+    #   options:
+    #     - id: professionally
+    #     - id: student
+    #     - id: hobby
 
-    - id: industry_sector
-      template: multipleWithOther
-      matchTags: [industry_sectors]
-      options:
-        - id: agriculture
-        - id: automotive
-        - id: construction
-        - id: consulting
-        - id: cyber_security
-        - id: ecommerce
-        - id: education
-        - id: energy
-        - id: entertainment
-        - id: finance
-        - id: government
-        - id: healthcare
-        - id: hospitality
-        - id: insurance
-        - id: logistics
-        - id: manufacturing
-        - id: marketing_tools
-        - id: news_media
-        - id: programming_tools
-        - id: real_estate
-        - id: socialmedia
-        - id: student
-        - id: telecommunications
-        - id: transport
-        - id: travel
-        - id: na
+    # - id: industry_sector
+    #   template: multipleWithOther
+    #   matchTags: [industry_sectors]
+    #   options:
+    #     - id: agriculture
+    #     - id: automotive
+    #     - id: construction
+    #     - id: consulting
+    #     - id: cyber_security
+    #     - id: ecommerce
+    #     - id: education
+    #     - id: energy
+    #     - id: entertainment
+    #     - id: finance
+    #     - id: government
+    #     - id: healthcare
+    #     - id: hospitality
+    #     - id: insurance
+    #     - id: logistics
+    #     - id: manufacturing
+    #     - id: marketing_tools
+    #     - id: news_media
+    #     - id: programming_tools
+    #     - id: real_estate
+    #     - id: socialmedia
+    #     - id: student
+    #     - id: telecommunications
+    #     - id: transport
+    #     - id: travel
+    #     - id: na
 
     - id: js_app_patterns
       template: multipleWithOther
@@ -631,27 +635,6 @@
     # - id: react_moving_right_direction
     #   template: opinion
 
-    - id: meta_involvement_opinion
-      template: single
-      options:
-        - id: very_negative
-        - id: mostly_negative
-        - id: neutral
-        - id: mostly_positive
-        - id: very_positive
-
-    - id: vercel_involvement_opinion
-      template: single
-      options:
-        - id: very_negative
-        - id: mostly_negative
-        - id: neutral
-        - id: mostly_positive
-        - id: very_positive
-
-    - id: state_of_react
-      template: happiness
-
     # - id: state_of_javascript
     #   template: happiness
 
@@ -686,6 +669,36 @@
           react_usage_pain_points,
         ]
       template: textList
+
+    - id: meta_involvement_opinion
+      template: single
+      options:
+        - id: 0
+        - id: 1
+        - id: 2
+        - id: 3
+        - id: 4
+
+    - id: vercel_involvement_opinion
+      template: single
+      options:
+        - id: 0
+        - id: 1
+        - id: 2
+        - id: 3
+        - id: 4
+
+    - id: react_foundation_involvement_opinion
+      template: single
+      options:
+        - id: 0
+        - id: 1
+        - id: 2
+        - id: 3
+        - id: 4
+
+    - id: state_of_react
+      template: happiness
 
 - id: resources
   questions:
@@ -943,7 +956,8 @@
       options:
         - id: state_of_js_survey
         - id: state_of_css_survey
-        - id: state_of_graphql_survey
+        - id: state_of_devs_survey
+        - id: state_of_ai_survey
         - id: state_of_html_survey
         - id: jetbrains_survey
         - id: stack_overflow_survey
