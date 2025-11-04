@@ -87,8 +87,8 @@
                         "entity": {
                           "name": "Browser support",
                           "nameClean": "Browser support",
-                          "description": "Browser support, compatibility, and consistency issues",
-                          "descriptionClean": "Browser support, compatibility, and consistency issues",
+                          "description": "Browser support, compatibility, and consistency issues.",
+                          "descriptionClean": "Browser support, compatibility, and consistency issues.",
                           "id": "browser_support",
                           "entityType": "default"
                         }
@@ -107,7 +107,22 @@
                           "descriptionClean": "CSS styling and customization issues.",
                           "id": "styling_customization",
                           "entityType": "default"
-                        }
+                        },
+                        "groupedBuckets": [
+                          {
+                            "count": 5,
+                            "id": "responsive_design",
+                            "percentageQuestion": 1.26,
+                            "percentageSurvey": 0.09,
+                            "entity": {
+                              "name": "Responsive design",
+                              "nameClean": "Responsive design",
+                              "id": "responsive_design",
+                              "parentId": "styling_customization",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 27,
@@ -122,7 +137,41 @@
                           "descriptionClean": "Managing images",
                           "id": "image_management",
                           "entityType": "default"
-                        }
+                        },
+                        "groupedBuckets": [
+                          {
+                            "count": 18,
+                            "id": "image_dimension_management",
+                            "percentageQuestion": 4.52,
+                            "percentageSurvey": 0.33,
+                            "entity": {
+                              "name": "Image dimensions",
+                              "nameClean": "Image dimensions",
+                              "description": "Issues with properly sizing images",
+                              "descriptionClean": "Issues with properly sizing images",
+                              "id": "image_dimension_management",
+                              "parentId": "image_management",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 23,
+                            "id": "srcset_sizes",
+                            "percentageQuestion": 5.78,
+                            "percentageSurvey": 0.43,
+                            "entity": {
+                              "name": "`srcset`\n",
+                              "nameHtml": "<code>srcset</code>\n",
+                              "nameClean": "srcset",
+                              "description": "Confusing `srcset` syntax",
+                              "descriptionHtml": "Confusing <code>srcset</code> syntax",
+                              "descriptionClean": "Confusing srcset syntax",
+                              "id": "srcset_sizes",
+                              "parentId": "image_management",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 26,
@@ -153,7 +202,24 @@
                           "descriptionClean": "Lack of security and privacy",
                           "id": "security_privacy",
                           "entityType": "default"
-                        }
+                        },
+                        "groupedBuckets": [
+                          {
+                            "count": 2,
+                            "id": "cors_issues",
+                            "percentageQuestion": 0.5,
+                            "percentageSurvey": 0.04,
+                            "entity": {
+                              "name": "CORS issues",
+                              "nameClean": "CORS issues",
+                              "description": "Issues with implementing CORS",
+                              "descriptionClean": "Issues with implementing CORS",
+                              "id": "cors_issues",
+                              "parentId": "security_privacy",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 23,
@@ -169,41 +235,9 @@
                         }
                       },
                       {
-                        "count": 23,
-                        "id": "srcset_sizes",
-                        "index": 9,
-                        "percentageQuestion": 5.78,
-                        "percentageSurvey": 0.43,
-                        "entity": {
-                          "name": "`srcset`\n",
-                          "nameHtml": "<code>srcset</code>\n",
-                          "nameClean": "srcset",
-                          "description": "Confusing `srcset` syntax",
-                          "descriptionHtml": "Confusing <code>srcset</code> syntax",
-                          "descriptionClean": "Confusing srcset syntax",
-                          "id": "srcset_sizes",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 18,
-                        "id": "image_dimension_management",
-                        "index": 10,
-                        "percentageQuestion": 4.52,
-                        "percentageSurvey": 0.33,
-                        "entity": {
-                          "name": "Image dimensions",
-                          "nameClean": "Image dimensions",
-                          "description": "Issues with properly sizing images",
-                          "descriptionClean": "Issues with properly sizing images",
-                          "id": "image_dimension_management",
-                          "entityType": "default"
-                        }
-                      },
-                      {
                         "count": 15,
                         "id": "date_management",
-                        "index": 11,
+                        "index": 9,
                         "percentageQuestion": 3.77,
                         "percentageSurvey": 0.28,
                         "entity": {
@@ -213,12 +247,29 @@
                           "descriptionClean": "Managing dates and times",
                           "id": "date_management",
                           "entityType": "default"
-                        }
+                        },
+                        "groupedBuckets": [
+                          {
+                            "count": 1,
+                            "id": "time_zones",
+                            "percentageQuestion": 0.25,
+                            "percentageSurvey": 0.02,
+                            "entity": {
+                              "name": "Timezones",
+                              "nameClean": "Timezones",
+                              "description": "Managing timezones",
+                              "descriptionClean": "Managing timezones",
+                              "id": "time_zones",
+                              "parentId": "date_management",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 15,
                         "id": "excessive_complexity",
-                        "index": 12,
+                        "index": 10,
                         "percentageQuestion": 3.77,
                         "percentageSurvey": 0.28,
                         "entity": {
@@ -233,7 +284,7 @@
                       {
                         "count": 12,
                         "id": "accessibility",
-                        "index": 13,
+                        "index": 11,
                         "percentageQuestion": 3.02,
                         "percentageSurvey": 0.22,
                         "entity": {
@@ -248,7 +299,7 @@
                       {
                         "count": 12,
                         "id": "html_imports",
-                        "index": 14,
+                        "index": 12,
                         "percentageQuestion": 3.02,
                         "percentageSurvey": 0.22,
                         "entity": {
@@ -263,7 +314,7 @@
                       {
                         "count": 11,
                         "id": "cors",
-                        "index": 15,
+                        "index": 13,
                         "percentageQuestion": 2.76,
                         "percentageSurvey": 0.2,
                         "entity": {
@@ -292,7 +343,7 @@
                       {
                         "count": 11,
                         "id": "sanitization_issues",
-                        "index": 16,
+                        "index": 14,
                         "percentageQuestion": 2.76,
                         "percentageSurvey": 0.2,
                         "entity": {
@@ -305,22 +356,342 @@
                       {
                         "count": 5003,
                         "id": "no_answer",
-                        "index": 17,
+                        "index": 15,
                         "percentageQuestion": 0,
                         "percentageSurvey": 92.63
                       },
                       {
-                        "count": 224,
+                        "count": 210,
                         "id": "other_answers",
-                        "index": 18,
-                        "percentageQuestion": 56.27,
-                        "percentageSurvey": 4.18,
+                        "index": 16,
+                        "percentageQuestion": 52.75,
+                        "percentageSurvey": 3.92,
                         "groupedBuckets": [
                           {
-                            "count": 75,
+                            "count": 61,
                             "id": "cutoff_answers",
-                            "percentageQuestion": 18.83,
-                            "percentageSurvey": 1.42
+                            "percentageQuestion": 15.31,
+                            "percentageSurvey": 1.16,
+                            "groupedBuckets": [
+                              {
+                                "count": 1,
+                                "id": "debugging",
+                                "percentageQuestion": 0.25,
+                                "percentageSurvey": 0.02,
+                                "entity": {
+                                  "name": "Debugging",
+                                  "nameClean": "Debugging",
+                                  "description": "Debugging issues",
+                                  "descriptionClean": "Debugging issues",
+                                  "id": "debugging",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 1,
+                                "id": "bundle_size",
+                                "percentageQuestion": 0.25,
+                                "percentageSurvey": 0.02,
+                                "entity": {
+                                  "name": "Bundle size",
+                                  "nameClean": "Bundle size",
+                                  "description": "Excessive bundle size",
+                                  "descriptionClean": "Excessive bundle size",
+                                  "id": "bundle_size",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 2,
+                                "id": "too_many_choices",
+                                "percentageQuestion": 0.5,
+                                "percentageSurvey": 0.04,
+                                "entity": {
+                                  "name": "Choice overload",
+                                  "nameClean": "Choice overload",
+                                  "description": "Overwhelming amount of options and choices",
+                                  "descriptionClean": "Overwhelming amount of options and choices",
+                                  "id": "too_many_choices",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 7,
+                                "id": "reliance_on_javascript",
+                                "percentageQuestion": 1.76,
+                                "percentageSurvey": 0.13,
+                                "entity": {
+                                  "name": "Reliance on JavaScript",
+                                  "nameClean": "Reliance on JavaScript",
+                                  "description": "Excessive reliance on JavaScript",
+                                  "descriptionClean": "Excessive reliance on JavaScript",
+                                  "id": "reliance_on_javascript",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 1,
+                                "id": "bundler_issues",
+                                "percentageQuestion": 0.25,
+                                "percentageSurvey": 0.02,
+                                "entity": {
+                                  "name": "Bundlers",
+                                  "nameClean": "Bundlers",
+                                  "description": "Bundlers issues",
+                                  "descriptionClean": "Bundlers issues",
+                                  "id": "bundler_issues",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 2,
+                                "id": "missing_features",
+                                "percentageQuestion": 0.5,
+                                "percentageSurvey": 0.04,
+                                "entity": {
+                                  "name": "Lack of features",
+                                  "nameClean": "Lack of features",
+                                  "description": "Lack of features",
+                                  "descriptionClean": "Lack of features",
+                                  "id": "missing_features",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 1,
+                                "id": "jsx",
+                                "percentageQuestion": 0.25,
+                                "percentageSurvey": 0.02,
+                                "entity": {
+                                  "name": "JSX",
+                                  "nameClean": "JSX",
+                                  "id": "jsx",
+                                  "entityType": "library",
+                                  "homepage": {
+                                    "url": "https://reactjs.org/docs/introducing-jsx.html"
+                                  }
+                                }
+                              },
+                              {
+                                "count": 2,
+                                "id": "error_handling",
+                                "percentageQuestion": 0.5,
+                                "percentageSurvey": 0.04,
+                                "entity": {
+                                  "name": "Error handling",
+                                  "nameClean": "Error handling",
+                                  "id": "error_handling",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 6,
+                                "id": "state_management",
+                                "percentageQuestion": 1.51,
+                                "percentageSurvey": 0.11,
+                                "entity": {
+                                  "name": "State management",
+                                  "nameClean": "State management",
+                                  "id": "state_management",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 1,
+                                "id": "lack_of_flexibility",
+                                "percentageQuestion": 0.25,
+                                "percentageSurvey": 0.02,
+                                "entity": {
+                                  "id": "lack_of_flexibility",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 4,
+                                "id": "machine_readable_data",
+                                "percentageQuestion": 1.01,
+                                "percentageSurvey": 0.07,
+                                "entity": {
+                                  "id": "machine_readable_data",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 1,
+                                "id": "dependencies",
+                                "percentageQuestion": 0.25,
+                                "percentageSurvey": 0.02,
+                                "entity": {
+                                  "name": "Dependencies",
+                                  "nameClean": "Dependencies",
+                                  "description": "Too many dependencies",
+                                  "descriptionClean": "Too many dependencies",
+                                  "id": "dependencies",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 5,
+                                "id": "configuration",
+                                "percentageQuestion": 1.26,
+                                "percentageSurvey": 0.09,
+                                "entity": {
+                                  "name": "Configuration",
+                                  "nameClean": "Configuration",
+                                  "description": "Difficulties with set-up and configuration",
+                                  "descriptionClean": "Difficulties with set-up and configuration",
+                                  "id": "configuration",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 3,
+                                "id": "animation_issues",
+                                "percentageQuestion": 0.75,
+                                "percentageSurvey": 0.06,
+                                "entity": {
+                                  "name": "Animations",
+                                  "nameClean": "Animations",
+                                  "description": "Animation issues",
+                                  "descriptionClean": "Animation issues",
+                                  "id": "animation_issues",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 2,
+                                "id": "form_issues",
+                                "percentageQuestion": 0.5,
+                                "percentageSurvey": 0.04,
+                                "entity": {
+                                  "name": "Form issues",
+                                  "nameClean": "Form issues",
+                                  "id": "form_issues",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 2,
+                                "id": "seo",
+                                "percentageQuestion": 0.5,
+                                "percentageSurvey": 0.04,
+                                "entity": {
+                                  "id": "seo",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 1,
+                                "id": "handling_math_content",
+                                "percentageQuestion": 0.25,
+                                "percentageSurvey": 0.02,
+                                "entity": {
+                                  "id": "handling_math_content",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 7,
+                                "id": "safari",
+                                "percentageQuestion": 1.76,
+                                "percentageSurvey": 0.13,
+                                "entity": {
+                                  "name": "Safari",
+                                  "nameClean": "Safari",
+                                  "id": "safari",
+                                  "entityType": "default",
+                                  "homepage": {
+                                    "url": "https://www.apple.com/safari/"
+                                  }
+                                }
+                              },
+                              {
+                                "count": 1,
+                                "id": "headings_issues",
+                                "percentageQuestion": 0.25,
+                                "percentageSurvey": 0.02,
+                                "entity": {
+                                  "id": "headings_issues",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 1,
+                                "id": "lack_of_tools",
+                                "percentageQuestion": 0.25,
+                                "percentageSurvey": 0.02,
+                                "entity": {
+                                  "name": "Lack of tools",
+                                  "nameClean": "Lack of tools",
+                                  "id": "lack_of_tools",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 2,
+                                "id": "testing",
+                                "percentageQuestion": 0.5,
+                                "percentageSurvey": 0.04,
+                                "entity": {
+                                  "name": "Testing",
+                                  "nameClean": "Testing",
+                                  "id": "testing",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 1,
+                                "id": "ecosystem",
+                                "percentageQuestion": 0.25,
+                                "percentageSurvey": 0.02,
+                                "entity": {
+                                  "name": "Ecosystem issues",
+                                  "nameClean": "Ecosystem issues",
+                                  "id": "ecosystem",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 4,
+                                "id": "maintenance",
+                                "percentageQuestion": 1.01,
+                                "percentageSurvey": 0.07,
+                                "entity": {
+                                  "name": "Maintenance",
+                                  "nameClean": "Maintenance",
+                                  "id": "maintenance",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 2,
+                                "id": "discoverability",
+                                "percentageQuestion": 0.5,
+                                "percentageSurvey": 0.04,
+                                "entity": {
+                                  "name": "Discoverability",
+                                  "nameClean": "Discoverability",
+                                  "description": "Hard to discover relevant resources",
+                                  "descriptionClean": "Hard to discover relevant resources",
+                                  "id": "discoverability",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 1,
+                                "id": "build_tool_issues",
+                                "percentageQuestion": 0.25,
+                                "percentageSurvey": 0.02,
+                                "entity": {
+                                  "name": "Build tools",
+                                  "nameClean": "Build tools",
+                                  "description": "Build tools issues",
+                                  "descriptionClean": "Build tools issues",
+                                  "id": "build_tool_issues",
+                                  "entityType": "default"
+                                }
+                              }
+                            ]
                           },
                           {
                             "count": 149,
@@ -410,8 +781,8 @@
                         "entity": {
                           "name": "Browser support",
                           "nameClean": "Browser support",
-                          "description": "Browser support, compatibility, and consistency issues",
-                          "descriptionClean": "Browser support, compatibility, and consistency issues",
+                          "description": "Browser support, compatibility, and consistency issues.",
+                          "descriptionClean": "Browser support, compatibility, and consistency issues.",
                           "id": "browser_support",
                           "entityType": "default"
                         }
@@ -471,7 +842,39 @@
                           "descriptionClean": "Lack of security and privacy",
                           "id": "security_privacy",
                           "entityType": "default"
-                        }
+                        },
+                        "groupedBuckets": [
+                          {
+                            "count": 1,
+                            "id": "csp_issues",
+                            "percentageQuestion": 0.22,
+                            "percentageSurvey": 0.02,
+                            "entity": {
+                              "name": "CSP issues",
+                              "nameClean": "CSP issues",
+                              "description": "Issues with implementing a Content Security Policy",
+                              "descriptionClean": "Issues with implementing a Content Security Policy",
+                              "id": "csp_issues",
+                              "parentId": "security_privacy",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 1,
+                            "id": "cors_issues",
+                            "percentageQuestion": 0.22,
+                            "percentageSurvey": 0.02,
+                            "entity": {
+                              "name": "CORS issues",
+                              "nameClean": "CORS issues",
+                              "description": "Issues with implementing CORS",
+                              "descriptionClean": "Issues with implementing CORS",
+                              "id": "cors_issues",
+                              "parentId": "security_privacy",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 15,
@@ -487,7 +890,22 @@
                           "descriptionClean": "CSS styling and customization issues.",
                           "id": "styling_customization",
                           "entityType": "default"
-                        }
+                        },
+                        "groupedBuckets": [
+                          {
+                            "count": 12,
+                            "id": "responsive_design",
+                            "percentageQuestion": 2.67,
+                            "percentageSurvey": 0.19,
+                            "entity": {
+                              "name": "Responsive design",
+                              "nameClean": "Responsive design",
+                              "id": "responsive_design",
+                              "parentId": "styling_customization",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 12,
@@ -502,7 +920,24 @@
                           "descriptionClean": "Managing dates and times",
                           "id": "date_management",
                           "entityType": "default"
-                        }
+                        },
+                        "groupedBuckets": [
+                          {
+                            "count": 6,
+                            "id": "time_zones",
+                            "percentageQuestion": 1.33,
+                            "percentageSurvey": 0.1,
+                            "entity": {
+                              "name": "Timezones",
+                              "nameClean": "Timezones",
+                              "description": "Managing timezones",
+                              "descriptionClean": "Managing timezones",
+                              "id": "time_zones",
+                              "parentId": "date_management",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 12,
@@ -531,22 +966,9 @@
                         }
                       },
                       {
-                        "count": 12,
-                        "id": "responsive_design",
-                        "index": 12,
-                        "percentageQuestion": 2.67,
-                        "percentageSurvey": 0.19,
-                        "entity": {
-                          "name": "Responsive design",
-                          "nameClean": "Responsive design",
-                          "id": "responsive_design",
-                          "entityType": "default"
-                        }
-                      },
-                      {
                         "count": 10,
                         "id": "state_management",
-                        "index": 13,
+                        "index": 12,
                         "percentageQuestion": 2.22,
                         "percentageSurvey": 0.16,
                         "entity": {
@@ -559,22 +981,450 @@
                       {
                         "count": 5768,
                         "id": "no_answer",
-                        "index": 14,
+                        "index": 13,
                         "percentageQuestion": 0,
                         "percentageSurvey": 92.69
                       },
                       {
-                        "count": 346,
+                        "count": 320,
                         "id": "other_answers",
-                        "index": 15,
-                        "percentageQuestion": 76.84,
-                        "percentageSurvey": 5.57,
+                        "index": 14,
+                        "percentageQuestion": 71.07,
+                        "percentageSurvey": 5.15,
                         "groupedBuckets": [
                           {
-                            "count": 120,
+                            "count": 94,
                             "id": "cutoff_answers",
-                            "percentageQuestion": 26.62,
-                            "percentageSurvey": 1.94
+                            "percentageQuestion": 20.85,
+                            "percentageSurvey": 1.52,
+                            "groupedBuckets": [
+                              {
+                                "count": 3,
+                                "id": "lack_of_tools",
+                                "percentageQuestion": 0.67,
+                                "percentageSurvey": 0.05,
+                                "entity": {
+                                  "name": "Lack of tools",
+                                  "nameClean": "Lack of tools",
+                                  "id": "lack_of_tools",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 5,
+                                "id": "focus_management",
+                                "percentageQuestion": 1.11,
+                                "percentageSurvey": 0.08,
+                                "entity": {
+                                  "name": "Focus management",
+                                  "nameClean": "Focus management",
+                                  "description": "Managing user focus",
+                                  "descriptionClean": "Managing user focus",
+                                  "id": "focus_management",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 5,
+                                "id": "seo",
+                                "percentageQuestion": 1.11,
+                                "percentageSurvey": 0.08,
+                                "entity": {
+                                  "id": "seo",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 1,
+                                "id": "lack_of_adoption",
+                                "percentageQuestion": 0.22,
+                                "percentageSurvey": 0.02,
+                                "entity": {
+                                  "name": "Lack of adoption",
+                                  "nameClean": "Lack of adoption",
+                                  "id": "lack_of_adoption",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 1,
+                                "id": "build_tool_issues",
+                                "percentageQuestion": 0.22,
+                                "percentageSurvey": 0.02,
+                                "entity": {
+                                  "name": "Build tools",
+                                  "nameClean": "Build tools",
+                                  "description": "Build tools issues",
+                                  "descriptionClean": "Build tools issues",
+                                  "id": "build_tool_issues",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 1,
+                                "id": "authentication",
+                                "percentageQuestion": 0.22,
+                                "percentageSurvey": 0.02,
+                                "entity": {
+                                  "name": "Authentication",
+                                  "nameClean": "Authentication",
+                                  "id": "authentication",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 2,
+                                "id": "animation_issues",
+                                "percentageQuestion": 0.44,
+                                "percentageSurvey": 0.03,
+                                "entity": {
+                                  "name": "Animations",
+                                  "nameClean": "Animations",
+                                  "description": "Animation issues",
+                                  "descriptionClean": "Animation issues",
+                                  "id": "animation_issues",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 1,
+                                "id": "build_times",
+                                "percentageQuestion": 0.22,
+                                "percentageSurvey": 0.02,
+                                "entity": {
+                                  "name": "Build times",
+                                  "nameClean": "Build times",
+                                  "id": "build_times",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 1,
+                                "id": "version_updates",
+                                "percentageQuestion": 0.22,
+                                "percentageSurvey": 0.02,
+                                "entity": {
+                                  "name": "Breaking changes",
+                                  "nameClean": "Breaking changes",
+                                  "description": "Breaking changes and other updating issues",
+                                  "descriptionClean": "Breaking changes and other updating issues",
+                                  "id": "version_updates",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 6,
+                                "id": "verbosity",
+                                "percentageQuestion": 1.33,
+                                "percentageSurvey": 0.1,
+                                "entity": {
+                                  "name": "Excessive verbosity",
+                                  "nameClean": "Excessive verbosity",
+                                  "description": "APIs that are overly verbose",
+                                  "descriptionClean": "APIs that are overly verbose",
+                                  "id": "verbosity",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 2,
+                                "id": "machine_readable_data",
+                                "percentageQuestion": 0.44,
+                                "percentageSurvey": 0.03,
+                                "entity": {
+                                  "id": "machine_readable_data",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 9,
+                                "id": "sanitization_issues",
+                                "percentageQuestion": 2,
+                                "percentageSurvey": 0.14,
+                                "entity": {
+                                  "name": "Sanitization issues",
+                                  "nameClean": "Sanitization issues",
+                                  "id": "sanitization_issues",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 1,
+                                "id": "dependencies",
+                                "percentageQuestion": 0.22,
+                                "percentageSurvey": 0.02,
+                                "entity": {
+                                  "name": "Dependencies",
+                                  "nameClean": "Dependencies",
+                                  "description": "Too many dependencies",
+                                  "descriptionClean": "Too many dependencies",
+                                  "id": "dependencies",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 4,
+                                "id": "ssr",
+                                "percentageQuestion": 0.89,
+                                "percentageSurvey": 0.06,
+                                "entity": {
+                                  "name": "SSR",
+                                  "nameClean": "SSR",
+                                  "description": "Server-side rendering issues",
+                                  "descriptionClean": "Server-side rendering issues",
+                                  "id": "ssr",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 2,
+                                "id": "cache_issues",
+                                "percentageQuestion": 0.44,
+                                "percentageSurvey": 0.03,
+                                "entity": {
+                                  "id": "cache_issues",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 1,
+                                "id": "None",
+                                "percentageQuestion": 0.22,
+                                "percentageSurvey": 0.02
+                              },
+                              {
+                                "count": 3,
+                                "id": "configuration",
+                                "percentageQuestion": 0.67,
+                                "percentageSurvey": 0.05,
+                                "entity": {
+                                  "name": "Configuration",
+                                  "nameClean": "Configuration",
+                                  "description": "Difficulties with set-up and configuration",
+                                  "descriptionClean": "Difficulties with set-up and configuration",
+                                  "id": "configuration",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 7,
+                                "id": "safari",
+                                "percentageQuestion": 1.56,
+                                "percentageSurvey": 0.11,
+                                "entity": {
+                                  "name": "Safari",
+                                  "nameClean": "Safari",
+                                  "id": "safari",
+                                  "entityType": "default",
+                                  "homepage": {
+                                    "url": "https://www.apple.com/safari/"
+                                  }
+                                }
+                              },
+                              {
+                                "count": 4,
+                                "id": "svg_issues",
+                                "percentageQuestion": 0.89,
+                                "percentageSurvey": 0.06,
+                                "entity": {
+                                  "id": "svg_issues",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 2,
+                                "id": "hydration",
+                                "percentageQuestion": 0.44,
+                                "percentageSurvey": 0.03,
+                                "entity": {
+                                  "name": "Hydration",
+                                  "nameClean": "Hydration",
+                                  "description": "Hydration issues",
+                                  "descriptionClean": "Hydration issues",
+                                  "id": "hydration",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 2,
+                                "id": "form_issues",
+                                "percentageQuestion": 0.44,
+                                "percentageSurvey": 0.03,
+                                "entity": {
+                                  "name": "Form issues",
+                                  "nameClean": "Form issues",
+                                  "id": "form_issues",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 1,
+                                "id": "ecosystem",
+                                "percentageQuestion": 0.22,
+                                "percentageSurvey": 0.02,
+                                "entity": {
+                                  "name": "Ecosystem issues",
+                                  "nameClean": "Ecosystem issues",
+                                  "id": "ecosystem",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 4,
+                                "id": "bloat",
+                                "percentageQuestion": 0.89,
+                                "percentageSurvey": 0.06,
+                                "entity": {
+                                  "name": "Bloat",
+                                  "nameClean": "Bloat",
+                                  "id": "bloat",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 2,
+                                "id": "hard_to_memorize",
+                                "percentageQuestion": 0.44,
+                                "percentageSurvey": 0.03,
+                                "entity": {
+                                  "id": "hard_to_memorize",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 3,
+                                "id": "debugging",
+                                "percentageQuestion": 0.67,
+                                "percentageSurvey": 0.05,
+                                "entity": {
+                                  "name": "Debugging",
+                                  "nameClean": "Debugging",
+                                  "description": "Debugging issues",
+                                  "descriptionClean": "Debugging issues",
+                                  "id": "debugging",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 1,
+                                "id": "maintenance",
+                                "percentageQuestion": 0.22,
+                                "percentageSurvey": 0.02,
+                                "entity": {
+                                  "name": "Maintenance",
+                                  "nameClean": "Maintenance",
+                                  "id": "maintenance",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 1,
+                                "id": "error_handling",
+                                "percentageQuestion": 0.22,
+                                "percentageSurvey": 0.02,
+                                "entity": {
+                                  "name": "Error handling",
+                                  "nameClean": "Error handling",
+                                  "id": "error_handling",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 1,
+                                "id": "lack_of_templating",
+                                "percentageQuestion": 0.22,
+                                "percentageSurvey": 0.02,
+                                "entity": {
+                                  "id": "lack_of_templating",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 2,
+                                "id": "image_management",
+                                "percentageQuestion": 0.44,
+                                "percentageSurvey": 0.03,
+                                "entity": {
+                                  "name": "Image management",
+                                  "nameClean": "Image management",
+                                  "description": "Managing images",
+                                  "descriptionClean": "Managing images",
+                                  "id": "image_management",
+                                  "entityType": "default"
+                                },
+                                "groupedBuckets": [
+                                  {
+                                    "count": 9,
+                                    "id": "image_dimension_management",
+                                    "percentageQuestion": 2,
+                                    "percentageSurvey": 0.14,
+                                    "entity": {
+                                      "name": "Image dimensions",
+                                      "nameClean": "Image dimensions",
+                                      "description": "Issues with properly sizing images",
+                                      "descriptionClean": "Issues with properly sizing images",
+                                      "id": "image_dimension_management",
+                                      "parentId": "image_management",
+                                      "entityType": "default"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "count": 4,
+                                "id": "cors",
+                                "percentageQuestion": 0.89,
+                                "percentageSurvey": 0.06,
+                                "entity": {
+                                  "name": "CORS",
+                                  "nameClean": "CORS",
+                                  "description": "Opt-in to allowing requests from different origins.",
+                                  "descriptionClean": "Opt-in to allowing requests from different origins.",
+                                  "id": "cors",
+                                  "entityType": "feature",
+                                  "example": {
+                                    "language": "http",
+                                    "code": "Access-Control-Allow-Origin: *\nAccess-Control-Allow-Methods: POST, GET, OPTIONS",
+                                    "codeHighlighted": "<span class=\"hljs-attribute\">Access-Control-Allow-Origin</span><span class=\"hljs-punctuation\">: </span>*\n<span class=\"hljs-attribute\">Access-Control-Allow-Methods</span><span class=\"hljs-punctuation\">: </span>POST, GET, OPTIONS"
+                                  },
+                                  "mdn": {
+                                    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS"
+                                  },
+                                  "resources": [
+                                    {
+                                      "url": "https://fetch.spec.whatwg.org/#http-access-control-allow-origin",
+                                      "title": "Fetch Standard"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "count": 4,
+                                "id": "performance",
+                                "percentageQuestion": 0.89,
+                                "percentageSurvey": 0.06,
+                                "entity": {
+                                  "name": "Performance",
+                                  "nameClean": "Performance",
+                                  "description": "Performance issues",
+                                  "descriptionClean": "Performance issues",
+                                  "id": "performance",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 8,
+                                "id": "embedding_issues",
+                                "percentageQuestion": 1.78,
+                                "percentageSurvey": 0.13,
+                                "entity": {
+                                  "name": "Embedding issues",
+                                  "nameClean": "Embedding issues",
+                                  "id": "embedding_issues",
+                                  "entityType": "default"
+                                }
+                              }
+                            ]
                           },
                           {
                             "count": 226,
