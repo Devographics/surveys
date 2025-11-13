@@ -196,7 +196,7 @@
       yearAdded: 2024
       template: multipleWithOther
       limit: 3
-      matchTags: [js_features]
+      matchTags: [js_features, js_missing_features]
       options:
         - id: temporal
         - id: js_decorators
@@ -223,7 +223,7 @@
       # template: top_n
       template: multipleWithOther
       limit: 3
-      matchTags: [js_missing_features]
+      matchTags: [js_features, js_missing_features]
       options:
         - id: static_typing
         - id: standard_library
@@ -1035,6 +1035,7 @@
 
     - id: text_editors
       template: multipleWithOtherSentiment
+      matchTags: [ai_tools]
       options:
         - id: vs_code
         - id: sublime_text
@@ -1124,6 +1125,7 @@
 
     - id: non_js_languages_features
       yearAdded: 2025
+      matchTags: [languages, js_missing_features]
       template: textList
 
     # - id: performance_testing
@@ -1503,7 +1505,8 @@
     - id: courses
       template: multipleWithOther
       # template: textList
-      matchTags: [courses, people, youtube, sites, newsletters, socialmedia]
+      matchTags:
+        [courses, people, video_creators, sites, newsletters, socialmedia]
       options:
         - id: udemy
         - id: frontendmasters
