@@ -1,0 +1,768 @@
+{
+  "dataAPI": {
+    "surveys": {
+      "state_of_js": {
+        "js2025": {
+          "features": {
+            "array_features": {
+              "id": "array_features",
+              "comments": {
+                "currentEdition": {
+                  "count": 14
+                }
+              },
+              "combined": {
+                "allEditions": [
+                  {
+                    "_metadata": {
+                      "axis1Sort": {
+                        "property": "count",
+                        "order": "desc"
+                      },
+                      "limit": 50,
+                      "cutoff": 10
+                    },
+                    "editionId": "js2024",
+                    "year": 2024,
+                    "completion": {
+                      "count": 12404,
+                      "percentageSurvey": 88.51,
+                      "total": 14015
+                    },
+                    "buckets": [
+                      {
+                        "count": 4940,
+                        "id": "array_to_sorted",
+                        "index": 0,
+                        "percentageQuestion": 39.83,
+                        "percentageSurvey": 35.25,
+                        "entity": {
+                          "name": "`array.toSorted()`",
+                          "nameHtml": "<code>array.toSorted()</code>",
+                          "nameClean": "array.toSorted()",
+                          "description": "Sort without mutating the original array.",
+                          "descriptionHtml": "Sort without mutating the original array.",
+                          "descriptionClean": "Sort without mutating the original array.",
+                          "id": "array_to_sorted",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const values = [1, 10, 21, 2];\nconst sortedValues = values.toSorted((a, b) => a - b);\nconsole.log(sortedValues); // [1, 2, 10, 21]\nconsole.log(values); // [1, 10, 21, 2]\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> values = [<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">10</span>, <span class=\"hljs-number\">21</span>, <span class=\"hljs-number\">2</span>];\n<span class=\"hljs-keyword\">const</span> sortedValues = values.<span class=\"hljs-title function_\">toSorted</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">a, b</span>) =&gt;</span> a - b);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(sortedValues); <span class=\"hljs-comment\">// [1, 2, 10, 21]</span>\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(values); <span class=\"hljs-comment\">// [1, 10, 21, 2]</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted"
+                          },
+                          "webFeature": {
+                            "id": "array-by-copy",
+                            "description_html": "The <code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code>, and <code>with()</code> methods of arrays and typed arrays return changed copies of arrays. They stand in contrast to methods such as <code>sort()</code> or <code>reverse()</code> that change arrays in place.",
+                            "group": [
+                              "arrays",
+                              "typed-arrays"
+                            ],
+                            "name": "Array by copy",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.toreversed",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tosorted",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tospliced",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.with",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.toreversed",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.tosorted",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.with"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/array-by-copy/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2023-07-04",
+                              "support": {
+                                "chrome": "110",
+                                "chrome_android": "110",
+                                "edge": "110",
+                                "firefox": "115",
+                                "firefox_android": "115",
+                                "safari": "16",
+                                "safari_ios": "16"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 3954,
+                        "id": "array_findlast",
+                        "index": 1,
+                        "percentageQuestion": 31.88,
+                        "percentageSurvey": 28.21,
+                        "entity": {
+                          "name": "`array.findLast()`",
+                          "nameHtml": "<code>array.findLast()</code>",
+                          "nameClean": "array.findLast()",
+                          "id": "array_findlast",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const inventory = [\n  { name: \"bananas\", quantity: 0 },\n  { name: \"fish\", quantity: 1 },\n  { name: \"cherries\", quantity: 5 },\n];\nconsole.log(inventory.findLast(item => item.quantity <2));\n// { name: \"fish\", quantity: 1 }\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> inventory = [\n  { <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">&quot;bananas&quot;</span>, <span class=\"hljs-attr\">quantity</span>: <span class=\"hljs-number\">0</span> },\n  { <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">&quot;fish&quot;</span>, <span class=\"hljs-attr\">quantity</span>: <span class=\"hljs-number\">1</span> },\n  { <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">&quot;cherries&quot;</span>, <span class=\"hljs-attr\">quantity</span>: <span class=\"hljs-number\">5</span> },\n];\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(inventory.<span class=\"hljs-title function_\">findLast</span>(<span class=\"hljs-function\"><span class=\"hljs-params\">item</span> =&gt;</span> item.<span class=\"hljs-property\">quantity</span> &lt;<span class=\"hljs-number\">2</span>));\n<span class=\"hljs-comment\">// { name: &quot;fish&quot;, quantity: 1 }</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast"
+                          },
+                          "webFeature": {
+                            "id": "array-findlast",
+                            "description_html": "The <code>findLast()</code> and <code>findLastIndex()</code> methods of arrays and typed arrays search an array in reverse order for the first item that satisfies a test function.",
+                            "group": [
+                              "arrays",
+                              "typed-arrays"
+                            ],
+                            "name": "Array findLast() and findLastIndex()",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.findlast",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.findlastindex",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.findlast",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.findlastindex"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/array-findlast/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2022-08-23",
+                              "support": {
+                                "chrome": "97",
+                                "chrome_android": "97",
+                                "edge": "97",
+                                "firefox": "104",
+                                "firefox_android": "104",
+                                "safari": "15.4",
+                                "safari_ios": "15.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 3925,
+                        "id": "array_to_reversed",
+                        "index": 2,
+                        "percentageQuestion": 31.64,
+                        "percentageSurvey": 28.01,
+                        "entity": {
+                          "name": "`array.toReversed()`",
+                          "nameHtml": "<code>array.toReversed()</code>",
+                          "nameClean": "array.toReversed()",
+                          "description": "Reverse without mutating the original array.",
+                          "descriptionHtml": "Reverse without mutating the original array.",
+                          "descriptionClean": "Reverse without mutating the original array.",
+                          "id": "array_to_reversed",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const items = [1, 2, 3];\nconst reversedItems = items.toReversed();\nconsole.log(reversedItems); // [3, 2, 1]\nconsole.log(items); // [1, 2, 3]\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> items = [<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">3</span>];\n<span class=\"hljs-keyword\">const</span> reversedItems = items.<span class=\"hljs-title function_\">toReversed</span>();\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(reversedItems); <span class=\"hljs-comment\">// [3, 2, 1]</span>\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(items); <span class=\"hljs-comment\">// [1, 2, 3]</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed"
+                          },
+                          "webFeature": {
+                            "id": "array-by-copy",
+                            "description_html": "The <code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code>, and <code>with()</code> methods of arrays and typed arrays return changed copies of arrays. They stand in contrast to methods such as <code>sort()</code> or <code>reverse()</code> that change arrays in place.",
+                            "group": [
+                              "arrays",
+                              "typed-arrays"
+                            ],
+                            "name": "Array by copy",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.toreversed",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tosorted",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tospliced",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.with",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.toreversed",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.tosorted",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.with"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/array-by-copy/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2023-07-04",
+                              "support": {
+                                "chrome": "110",
+                                "chrome_android": "110",
+                                "edge": "110",
+                                "firefox": "115",
+                                "firefox_android": "115",
+                                "safari": "16",
+                                "safari_ios": "16"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 2374,
+                        "id": "array_to_spliced",
+                        "index": 3,
+                        "percentageQuestion": 19.14,
+                        "percentageSurvey": 16.94,
+                        "entity": {
+                          "name": "`array.toSpliced()`",
+                          "nameHtml": "<code>array.toSpliced()</code>",
+                          "nameClean": "array.toSpliced()",
+                          "description": "Splice without mutating the original array.",
+                          "descriptionHtml": "Splice without mutating the original array.",
+                          "descriptionClean": "Splice without mutating the original array.",
+                          "id": "array_to_spliced",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const months = [\"Jan\", \"Mar\", \"Apr\", \"May\"];\n\n// Inserting an element at index 1\nconst months2 = months.toSpliced(1, 0, \"Feb\");\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> months = [<span class=\"hljs-string\">&quot;Jan&quot;</span>, <span class=\"hljs-string\">&quot;Mar&quot;</span>, <span class=\"hljs-string\">&quot;Apr&quot;</span>, <span class=\"hljs-string\">&quot;May&quot;</span>];\n\n<span class=\"hljs-comment\">// Inserting an element at index 1</span>\n<span class=\"hljs-keyword\">const</span> months2 = months.<span class=\"hljs-title function_\">toSpliced</span>(<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">0</span>, <span class=\"hljs-string\">&quot;Feb&quot;</span>);"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced"
+                          },
+                          "webFeature": {
+                            "id": "array-by-copy",
+                            "description_html": "The <code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code>, and <code>with()</code> methods of arrays and typed arrays return changed copies of arrays. They stand in contrast to methods such as <code>sort()</code> or <code>reverse()</code> that change arrays in place.",
+                            "group": [
+                              "arrays",
+                              "typed-arrays"
+                            ],
+                            "name": "Array by copy",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.toreversed",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tosorted",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tospliced",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.with",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.toreversed",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.tosorted",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.with"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/array-by-copy/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2023-07-04",
+                              "support": {
+                                "chrome": "110",
+                                "chrome_android": "110",
+                                "edge": "110",
+                                "firefox": "115",
+                                "firefox_android": "115",
+                                "safari": "16",
+                                "safari_ios": "16"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 1651,
+                        "id": "array_with",
+                        "index": 4,
+                        "percentageQuestion": 13.31,
+                        "percentageSurvey": 11.78,
+                        "entity": {
+                          "name": "`array.with()`",
+                          "nameHtml": "<code>array.with()</code>",
+                          "nameClean": "array.with()",
+                          "description": "Returns a new array with the element at the given index replaced with the given value.",
+                          "descriptionHtml": "Returns a new array with the element at the given index replaced with the given value.",
+                          "descriptionClean": "Returns a new array with the element at the given index replaced with the given value.",
+                          "id": "array_with",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const arr = [1, 2, 3, 4, 5];\nconsole.log(arr.with(2, 6)); // [1, 2, 6, 4, 5]\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> arr = [<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">3</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">5</span>];\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(arr.<span class=\"hljs-title function_\">with</span>(<span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">6</span>)); <span class=\"hljs-comment\">// [1, 2, 6, 4, 5]</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/with"
+                          },
+                          "webFeature": {
+                            "id": "array-by-copy",
+                            "description_html": "The <code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code>, and <code>with()</code> methods of arrays and typed arrays return changed copies of arrays. They stand in contrast to methods such as <code>sort()</code> or <code>reverse()</code> that change arrays in place.",
+                            "group": [
+                              "arrays",
+                              "typed-arrays"
+                            ],
+                            "name": "Array by copy",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.toreversed",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tosorted",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tospliced",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.with",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.toreversed",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.tosorted",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.with"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/array-by-copy/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2023-07-04",
+                              "support": {
+                                "chrome": "110",
+                                "chrome_android": "110",
+                                "edge": "110",
+                                "firefox": "115",
+                                "firefox_android": "115",
+                                "safari": "16",
+                                "safari_ios": "16"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 603,
+                        "id": "array_from_async",
+                        "index": 5,
+                        "percentageQuestion": 4.86,
+                        "percentageSurvey": 4.3,
+                        "entity": {
+                          "name": "`array.fromAsync()`",
+                          "nameHtml": "<code>array.fromAsync()</code>",
+                          "nameClean": "array.fromAsync()",
+                          "description": "Similar to Array.from but for async iterators.",
+                          "descriptionHtml": "Similar to Array.from but for async iterators.",
+                          "descriptionClean": "Similar to Array.from but for async iterators.",
+                          "id": "array_from_async",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const asyncIterable = (async function* () {\n  for (let i = 0; i < 5; i++) {\n    await new Promise((resolve) => setTimeout(resolve, 10 * i));\n    yield i;\n  }\n})();\n\nArray.fromAsync(asyncIterable).then((array) => console.log(array));\n// [0, 1, 2, 3, 4]\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> asyncIterable = (<span class=\"hljs-keyword\">async</span> <span class=\"hljs-keyword\">function</span>* () {\n  <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">let</span> i = <span class=\"hljs-number\">0</span>; i &lt; <span class=\"hljs-number\">5</span>; i++) {\n    <span class=\"hljs-keyword\">await</span> <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Promise</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">resolve</span>) =&gt;</span> <span class=\"hljs-built_in\">setTimeout</span>(resolve, <span class=\"hljs-number\">10</span> * i));\n    <span class=\"hljs-keyword\">yield</span> i;\n  }\n})();\n\n<span class=\"hljs-title class_\">Array</span>.<span class=\"hljs-title function_\">fromAsync</span>(asyncIterable).<span class=\"hljs-title function_\">then</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">array</span>) =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(array));\n<span class=\"hljs-comment\">// [0, 1, 2, 3, 4]</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fromAsync"
+                          },
+                          "webFeature": {
+                            "id": "array-fromasync",
+                            "description_html": "The <code>Array.fromAsync()</code> static method copies items from an async iterable object to make a new array.",
+                            "group": [
+                              "arrays"
+                            ],
+                            "name": "Array.fromAsync()",
+                            "spec": [
+                              "https://tc39.es/proposal-array-from-async/#sec-array.fromAsync"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/array-fromasync/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-01-25",
+                              "support": {
+                                "chrome": "121",
+                                "chrome_android": "121",
+                                "edge": "121",
+                                "firefox": "115",
+                                "firefox_android": "115",
+                                "safari": "16.4",
+                                "safari_ios": "16.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 4803,
+                        "id": "na",
+                        "index": 6,
+                        "percentageQuestion": 38.72,
+                        "percentageSurvey": 34.27,
+                        "entity": {
+                          "name": "Not applicable",
+                          "nameHtml": "Not applicable",
+                          "nameClean": "Not applicable",
+                          "description": "No use cases, no pain, no issues.",
+                          "descriptionHtml": "No use cases, no pain, no issues.",
+                          "descriptionClean": "No use cases, no pain, no issues.",
+                          "id": "na",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 1611,
+                        "id": "no_answer",
+                        "index": 7,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 11.49
+                      }
+                    ]
+                  },
+                  {
+                    "_metadata": {
+                      "axis1Sort": {
+                        "property": "count",
+                        "order": "desc"
+                      },
+                      "limit": 50,
+                      "cutoff": 10
+                    },
+                    "editionId": "js2025",
+                    "year": 2025,
+                    "completion": {
+                      "count": 11604,
+                      "percentageSurvey": 89.25,
+                      "total": 13002
+                    },
+                    "buckets": [
+                      {
+                        "count": 5419,
+                        "id": "array_to_sorted",
+                        "index": 0,
+                        "percentageQuestion": 46.7,
+                        "percentageSurvey": 41.68,
+                        "entity": {
+                          "name": "`array.toSorted()`",
+                          "nameHtml": "<code>array.toSorted()</code>",
+                          "nameClean": "array.toSorted()",
+                          "description": "Sort without mutating the original array.",
+                          "descriptionHtml": "Sort without mutating the original array.",
+                          "descriptionClean": "Sort without mutating the original array.",
+                          "id": "array_to_sorted",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const values = [1, 10, 21, 2];\nconst sortedValues = values.toSorted((a, b) => a - b);\nconsole.log(sortedValues); // [1, 2, 10, 21]\nconsole.log(values); // [1, 10, 21, 2]\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> values = [<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">10</span>, <span class=\"hljs-number\">21</span>, <span class=\"hljs-number\">2</span>];\n<span class=\"hljs-keyword\">const</span> sortedValues = values.<span class=\"hljs-title function_\">toSorted</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">a, b</span>) =&gt;</span> a - b);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(sortedValues); <span class=\"hljs-comment\">// [1, 2, 10, 21]</span>\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(values); <span class=\"hljs-comment\">// [1, 10, 21, 2]</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted"
+                          },
+                          "webFeature": {
+                            "id": "array-by-copy",
+                            "description_html": "The <code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code>, and <code>with()</code> methods of arrays and typed arrays return changed copies of arrays. They stand in contrast to methods such as <code>sort()</code> or <code>reverse()</code> that change arrays in place.",
+                            "group": [
+                              "arrays",
+                              "typed-arrays"
+                            ],
+                            "name": "Array by copy",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.toreversed",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tosorted",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tospliced",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.with",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.toreversed",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.tosorted",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.with"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/array-by-copy/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2023-07-04",
+                              "support": {
+                                "chrome": "110",
+                                "chrome_android": "110",
+                                "edge": "110",
+                                "firefox": "115",
+                                "firefox_android": "115",
+                                "safari": "16",
+                                "safari_ios": "16"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 4264,
+                        "id": "array_to_reversed",
+                        "index": 1,
+                        "percentageQuestion": 36.75,
+                        "percentageSurvey": 32.79,
+                        "entity": {
+                          "name": "`array.toReversed()`",
+                          "nameHtml": "<code>array.toReversed()</code>",
+                          "nameClean": "array.toReversed()",
+                          "description": "Reverse without mutating the original array.",
+                          "descriptionHtml": "Reverse without mutating the original array.",
+                          "descriptionClean": "Reverse without mutating the original array.",
+                          "id": "array_to_reversed",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const items = [1, 2, 3];\nconst reversedItems = items.toReversed();\nconsole.log(reversedItems); // [3, 2, 1]\nconsole.log(items); // [1, 2, 3]\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> items = [<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">3</span>];\n<span class=\"hljs-keyword\">const</span> reversedItems = items.<span class=\"hljs-title function_\">toReversed</span>();\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(reversedItems); <span class=\"hljs-comment\">// [3, 2, 1]</span>\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(items); <span class=\"hljs-comment\">// [1, 2, 3]</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed"
+                          },
+                          "webFeature": {
+                            "id": "array-by-copy",
+                            "description_html": "The <code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code>, and <code>with()</code> methods of arrays and typed arrays return changed copies of arrays. They stand in contrast to methods such as <code>sort()</code> or <code>reverse()</code> that change arrays in place.",
+                            "group": [
+                              "arrays",
+                              "typed-arrays"
+                            ],
+                            "name": "Array by copy",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.toreversed",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tosorted",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tospliced",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.with",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.toreversed",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.tosorted",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.with"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/array-by-copy/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2023-07-04",
+                              "support": {
+                                "chrome": "110",
+                                "chrome_android": "110",
+                                "edge": "110",
+                                "firefox": "115",
+                                "firefox_android": "115",
+                                "safari": "16",
+                                "safari_ios": "16"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 4082,
+                        "id": "array_findlast",
+                        "index": 2,
+                        "percentageQuestion": 35.18,
+                        "percentageSurvey": 31.4,
+                        "entity": {
+                          "name": "`array.findLast()`",
+                          "nameHtml": "<code>array.findLast()</code>",
+                          "nameClean": "array.findLast()",
+                          "id": "array_findlast",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const inventory = [\n  { name: \"bananas\", quantity: 0 },\n  { name: \"fish\", quantity: 1 },\n  { name: \"cherries\", quantity: 5 },\n];\nconsole.log(inventory.findLast(item => item.quantity <2));\n// { name: \"fish\", quantity: 1 }\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> inventory = [\n  { <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">&quot;bananas&quot;</span>, <span class=\"hljs-attr\">quantity</span>: <span class=\"hljs-number\">0</span> },\n  { <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">&quot;fish&quot;</span>, <span class=\"hljs-attr\">quantity</span>: <span class=\"hljs-number\">1</span> },\n  { <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">&quot;cherries&quot;</span>, <span class=\"hljs-attr\">quantity</span>: <span class=\"hljs-number\">5</span> },\n];\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(inventory.<span class=\"hljs-title function_\">findLast</span>(<span class=\"hljs-function\"><span class=\"hljs-params\">item</span> =&gt;</span> item.<span class=\"hljs-property\">quantity</span> &lt;<span class=\"hljs-number\">2</span>));\n<span class=\"hljs-comment\">// { name: &quot;fish&quot;, quantity: 1 }</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast"
+                          },
+                          "webFeature": {
+                            "id": "array-findlast",
+                            "description_html": "The <code>findLast()</code> and <code>findLastIndex()</code> methods of arrays and typed arrays search an array in reverse order for the first item that satisfies a test function.",
+                            "group": [
+                              "arrays",
+                              "typed-arrays"
+                            ],
+                            "name": "Array findLast() and findLastIndex()",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.findlast",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.findlastindex",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.findlast",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.findlastindex"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/array-findlast/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2022-08-23",
+                              "support": {
+                                "chrome": "97",
+                                "chrome_android": "97",
+                                "edge": "97",
+                                "firefox": "104",
+                                "firefox_android": "104",
+                                "safari": "15.4",
+                                "safari_ios": "15.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 2349,
+                        "id": "array_to_spliced",
+                        "index": 3,
+                        "percentageQuestion": 20.24,
+                        "percentageSurvey": 18.07,
+                        "entity": {
+                          "name": "`array.toSpliced()`",
+                          "nameHtml": "<code>array.toSpliced()</code>",
+                          "nameClean": "array.toSpliced()",
+                          "description": "Splice without mutating the original array.",
+                          "descriptionHtml": "Splice without mutating the original array.",
+                          "descriptionClean": "Splice without mutating the original array.",
+                          "id": "array_to_spliced",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const months = [\"Jan\", \"Mar\", \"Apr\", \"May\"];\n\n// Inserting an element at index 1\nconst months2 = months.toSpliced(1, 0, \"Feb\");\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> months = [<span class=\"hljs-string\">&quot;Jan&quot;</span>, <span class=\"hljs-string\">&quot;Mar&quot;</span>, <span class=\"hljs-string\">&quot;Apr&quot;</span>, <span class=\"hljs-string\">&quot;May&quot;</span>];\n\n<span class=\"hljs-comment\">// Inserting an element at index 1</span>\n<span class=\"hljs-keyword\">const</span> months2 = months.<span class=\"hljs-title function_\">toSpliced</span>(<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">0</span>, <span class=\"hljs-string\">&quot;Feb&quot;</span>);"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced"
+                          },
+                          "webFeature": {
+                            "id": "array-by-copy",
+                            "description_html": "The <code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code>, and <code>with()</code> methods of arrays and typed arrays return changed copies of arrays. They stand in contrast to methods such as <code>sort()</code> or <code>reverse()</code> that change arrays in place.",
+                            "group": [
+                              "arrays",
+                              "typed-arrays"
+                            ],
+                            "name": "Array by copy",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.toreversed",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tosorted",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tospliced",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.with",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.toreversed",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.tosorted",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.with"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/array-by-copy/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2023-07-04",
+                              "support": {
+                                "chrome": "110",
+                                "chrome_android": "110",
+                                "edge": "110",
+                                "firefox": "115",
+                                "firefox_android": "115",
+                                "safari": "16",
+                                "safari_ios": "16"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 1421,
+                        "id": "array_with",
+                        "index": 4,
+                        "percentageQuestion": 12.25,
+                        "percentageSurvey": 10.93,
+                        "entity": {
+                          "name": "`array.with()`",
+                          "nameHtml": "<code>array.with()</code>",
+                          "nameClean": "array.with()",
+                          "description": "Returns a new array with the element at the given index replaced with the given value.",
+                          "descriptionHtml": "Returns a new array with the element at the given index replaced with the given value.",
+                          "descriptionClean": "Returns a new array with the element at the given index replaced with the given value.",
+                          "id": "array_with",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const arr = [1, 2, 3, 4, 5];\nconsole.log(arr.with(2, 6)); // [1, 2, 6, 4, 5]\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> arr = [<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">3</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">5</span>];\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(arr.<span class=\"hljs-title function_\">with</span>(<span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">6</span>)); <span class=\"hljs-comment\">// [1, 2, 6, 4, 5]</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/with"
+                          },
+                          "webFeature": {
+                            "id": "array-by-copy",
+                            "description_html": "The <code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code>, and <code>with()</code> methods of arrays and typed arrays return changed copies of arrays. They stand in contrast to methods such as <code>sort()</code> or <code>reverse()</code> that change arrays in place.",
+                            "group": [
+                              "arrays",
+                              "typed-arrays"
+                            ],
+                            "name": "Array by copy",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.toreversed",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tosorted",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tospliced",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.with",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.toreversed",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.tosorted",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.with"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/array-by-copy/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2023-07-04",
+                              "support": {
+                                "chrome": "110",
+                                "chrome_android": "110",
+                                "edge": "110",
+                                "firefox": "115",
+                                "firefox_android": "115",
+                                "safari": "16",
+                                "safari_ios": "16"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 860,
+                        "id": "array_from_async",
+                        "index": 5,
+                        "percentageQuestion": 7.41,
+                        "percentageSurvey": 6.61,
+                        "entity": {
+                          "name": "`array.fromAsync()`",
+                          "nameHtml": "<code>array.fromAsync()</code>",
+                          "nameClean": "array.fromAsync()",
+                          "description": "Similar to Array.from but for async iterators.",
+                          "descriptionHtml": "Similar to Array.from but for async iterators.",
+                          "descriptionClean": "Similar to Array.from but for async iterators.",
+                          "id": "array_from_async",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const asyncIterable = (async function* () {\n  for (let i = 0; i < 5; i++) {\n    await new Promise((resolve) => setTimeout(resolve, 10 * i));\n    yield i;\n  }\n})();\n\nArray.fromAsync(asyncIterable).then((array) => console.log(array));\n// [0, 1, 2, 3, 4]\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> asyncIterable = (<span class=\"hljs-keyword\">async</span> <span class=\"hljs-keyword\">function</span>* () {\n  <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">let</span> i = <span class=\"hljs-number\">0</span>; i &lt; <span class=\"hljs-number\">5</span>; i++) {\n    <span class=\"hljs-keyword\">await</span> <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Promise</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">resolve</span>) =&gt;</span> <span class=\"hljs-built_in\">setTimeout</span>(resolve, <span class=\"hljs-number\">10</span> * i));\n    <span class=\"hljs-keyword\">yield</span> i;\n  }\n})();\n\n<span class=\"hljs-title class_\">Array</span>.<span class=\"hljs-title function_\">fromAsync</span>(asyncIterable).<span class=\"hljs-title function_\">then</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">array</span>) =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(array));\n<span class=\"hljs-comment\">// [0, 1, 2, 3, 4]</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fromAsync"
+                          },
+                          "webFeature": {
+                            "id": "array-fromasync",
+                            "description_html": "The <code>Array.fromAsync()</code> static method copies items from an async iterable object to make a new array.",
+                            "group": [
+                              "arrays"
+                            ],
+                            "name": "Array.fromAsync()",
+                            "spec": [
+                              "https://tc39.es/proposal-array-from-async/#sec-array.fromAsync"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/array-fromasync/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-01-25",
+                              "support": {
+                                "chrome": "121",
+                                "chrome_android": "121",
+                                "edge": "121",
+                                "firefox": "115",
+                                "firefox_android": "115",
+                                "safari": "16.4",
+                                "safari_ios": "16.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 3879,
+                        "id": "na",
+                        "index": 6,
+                        "percentageQuestion": 33.43,
+                        "percentageSurvey": 29.83,
+                        "entity": {
+                          "name": "Not applicable",
+                          "nameHtml": "Not applicable",
+                          "nameClean": "Not applicable",
+                          "description": "No use cases, no pain, no issues.",
+                          "descriptionHtml": "No use cases, no pain, no issues.",
+                          "descriptionClean": "No use cases, no pain, no issues.",
+                          "id": "na",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 1398,
+                        "id": "no_answer",
+                        "index": 7,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 10.75
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

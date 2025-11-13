@@ -1,0 +1,1392 @@
+{
+  "dataAPI": {
+    "surveys": {
+      "state_of_js": {
+        "js2025": {
+          "reading_list": {
+            "reading_list": {
+              "id": "reading_list",
+              "combined": {
+                "allEditions": [
+                  {
+                    "_metadata": {
+                      "axis1Sort": {
+                        "property": "count",
+                        "order": "desc"
+                      },
+                      "limit": 20,
+                      "cutoff": 10
+                    },
+                    "editionId": "js2024",
+                    "year": 2024,
+                    "completion": {
+                      "count": 5033,
+                      "percentageSurvey": 35.91,
+                      "total": 14015
+                    },
+                    "buckets": [
+                      {
+                        "count": 1560,
+                        "id": "error_cause",
+                        "index": 0,
+                        "percentageQuestion": 31,
+                        "percentageSurvey": 11.13,
+                        "entity": {
+                          "name": "`error.cause`",
+                          "nameHtml": "<code>error.cause</code>",
+                          "nameClean": "error.cause",
+                          "description": "Indicate the specific original cause of the error.",
+                          "descriptionHtml": "Indicate the specific original cause of the error.",
+                          "descriptionClean": "Indicate the specific original cause of the error.",
+                          "id": "error_cause",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "try {\n  connectToDatabase();\n} catch (err) {\n  throw new Error('Connecting to database failed.', { cause: err });\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">try</span> {\n  <span class=\"hljs-title function_\">connectToDatabase</span>();\n} <span class=\"hljs-keyword\">catch</span> (err) {\n  <span class=\"hljs-keyword\">throw</span> <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Error</span>(<span class=\"hljs-string\">&#x27;Connecting to database failed.&#x27;</span>, { <span class=\"hljs-attr\">cause</span>: err });\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause"
+                          },
+                          "webFeature": {
+                            "id": "error-cause",
+                            "description_html": "The <code>cause</code> property of errors records the specific original cause of the error, particularly for errors that have been re-thrown.",
+                            "name": "Error cause",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-installerrorcause"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/error-cause/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2021-09-20",
+                              "support": {
+                                "chrome": "93",
+                                "chrome_android": "93",
+                                "edge": "93",
+                                "firefox": "91",
+                                "firefox_android": "91",
+                                "safari": "15",
+                                "safari_ios": "15"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 1379,
+                        "id": "logical_assignment",
+                        "index": 1,
+                        "percentageQuestion": 27.4,
+                        "percentageSurvey": 9.84,
+                        "entity": {
+                          "name": "Logical Assignment",
+                          "nameHtml": "Logical Assignment",
+                          "nameClean": "Logical Assignment",
+                          "description": "Operators to assign a value to a variable based on its own truthy/falsy status.",
+                          "descriptionHtml": "Operators to assign a value to a variable based on its own truthy/falsy status.",
+                          "descriptionClean": "Operators to assign a value to a variable based on its own truthy/falsy status.",
+                          "id": "logical_assignment",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const a = { duration: 50, title: '' };\n\na.duration ||= 10;\nconsole.log(a.duration);\n// expected output: 50\n\na.title ||= 'title is empty.';\nconsole.log(a.title);\n// expected output: \"title is empty\"\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> a = { <span class=\"hljs-attr\">duration</span>: <span class=\"hljs-number\">50</span>, <span class=\"hljs-attr\">title</span>: <span class=\"hljs-string\">&#x27;&#x27;</span> };\n\na.<span class=\"hljs-property\">duration</span> ||= <span class=\"hljs-number\">10</span>;\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(a.<span class=\"hljs-property\">duration</span>);\n<span class=\"hljs-comment\">// expected output: 50</span>\n\na.<span class=\"hljs-property\">title</span> ||= <span class=\"hljs-string\">&#x27;title is empty.&#x27;</span>;\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(a.<span class=\"hljs-property\">title</span>);\n<span class=\"hljs-comment\">// expected output: &quot;title is empty&quot;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-javascript_operators_logical_and_assignment"
+                          },
+                          "webFeature": {
+                            "id": "logical-assignments",
+                            "description_html": "The logical AND assignment (<code>&#x26;&#x26;=</code>) and the logical OR assignment (<code>||=</code>) operators short-circuit the respective binary logical operators.",
+                            "group": [
+                              "javascript"
+                            ],
+                            "name": "Logical assignments",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-assignment-operators"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/logical-assignments/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-09-16",
+                              "support": {
+                                "chrome": "85",
+                                "chrome_android": "85",
+                                "edge": "85",
+                                "firefox": "79",
+                                "firefox_android": "79",
+                                "safari": "14",
+                                "safari_ios": "14"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 1347,
+                        "id": "object_group_by",
+                        "index": 2,
+                        "percentageQuestion": 26.76,
+                        "percentageSurvey": 9.61,
+                        "entity": {
+                          "name": "`Object.groupBy()`",
+                          "nameHtml": "<code>Object.groupBy()</code>",
+                          "nameClean": "Object.groupBy()",
+                          "description": "Group the elements of a given iterable according to the string values returned by a provided function.",
+                          "descriptionHtml": "Group the elements of a given iterable according to the string values returned by a provided function.",
+                          "descriptionClean": "Group the elements of a given iterable according to the string values returned by a provided function.",
+                          "id": "object_group_by",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const inventory = [\n  { name: \"salad\", type: \"vegetables\" },\n  { name: \"banana\", type: \"fruit\" },\n  { name: \"apple\", type: \"fruit\" },\n];\n\nconst result = Object.groupBy(inventory, ({ type }) => type);\n\n/*\n{\n  vegetables: [\n    { name: 'salad', type: 'vegetables' },\n  ],\n  fruit: [\n    { name: \"banana\", type: \"fruit\" },\n    { name: \"apple\", type: \"fruit\" }\n  ]\n}\n*/\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> inventory = [\n  { <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">&quot;salad&quot;</span>, <span class=\"hljs-attr\">type</span>: <span class=\"hljs-string\">&quot;vegetables&quot;</span> },\n  { <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">&quot;banana&quot;</span>, <span class=\"hljs-attr\">type</span>: <span class=\"hljs-string\">&quot;fruit&quot;</span> },\n  { <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">&quot;apple&quot;</span>, <span class=\"hljs-attr\">type</span>: <span class=\"hljs-string\">&quot;fruit&quot;</span> },\n];\n\n<span class=\"hljs-keyword\">const</span> result = <span class=\"hljs-title class_\">Object</span>.<span class=\"hljs-title function_\">groupBy</span>(inventory, <span class=\"hljs-function\">(<span class=\"hljs-params\">{ type }</span>) =&gt;</span> type);\n\n<span class=\"hljs-comment\">/*\n{\n  vegetables: [\n    { name: &#x27;salad&#x27;, type: &#x27;vegetables&#x27; },\n  ],\n  fruit: [\n    { name: &quot;banana&quot;, type: &quot;fruit&quot; },\n    { name: &quot;apple&quot;, type: &quot;fruit&quot; }\n  ]\n}\n*/</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/union"
+                          },
+                          "webFeature": {
+                            "id": "set-methods",
+                            "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                            "group": [
+                              "sets"
+                            ],
+                            "name": "Set methods",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-properties-of-the-set-prototype-object"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/set-methods/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-06-11",
+                              "support": {
+                                "chrome": "122",
+                                "chrome_android": "122",
+                                "edge": "122",
+                                "firefox": "127",
+                                "firefox_android": "127",
+                                "safari": "17",
+                                "safari_ios": "17"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 1219,
+                        "id": "array_from_async",
+                        "index": 3,
+                        "percentageQuestion": 24.22,
+                        "percentageSurvey": 8.7,
+                        "entity": {
+                          "name": "`array.fromAsync()`",
+                          "nameHtml": "<code>array.fromAsync()</code>",
+                          "nameClean": "array.fromAsync()",
+                          "description": "Similar to Array.from but for async iterators.",
+                          "descriptionHtml": "Similar to Array.from but for async iterators.",
+                          "descriptionClean": "Similar to Array.from but for async iterators.",
+                          "id": "array_from_async",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const asyncIterable = (async function* () {\n  for (let i = 0; i < 5; i++) {\n    await new Promise((resolve) => setTimeout(resolve, 10 * i));\n    yield i;\n  }\n})();\n\nArray.fromAsync(asyncIterable).then((array) => console.log(array));\n// [0, 1, 2, 3, 4]\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> asyncIterable = (<span class=\"hljs-keyword\">async</span> <span class=\"hljs-keyword\">function</span>* () {\n  <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">let</span> i = <span class=\"hljs-number\">0</span>; i &lt; <span class=\"hljs-number\">5</span>; i++) {\n    <span class=\"hljs-keyword\">await</span> <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Promise</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">resolve</span>) =&gt;</span> <span class=\"hljs-built_in\">setTimeout</span>(resolve, <span class=\"hljs-number\">10</span> * i));\n    <span class=\"hljs-keyword\">yield</span> i;\n  }\n})();\n\n<span class=\"hljs-title class_\">Array</span>.<span class=\"hljs-title function_\">fromAsync</span>(asyncIterable).<span class=\"hljs-title function_\">then</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">array</span>) =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(array));\n<span class=\"hljs-comment\">// [0, 1, 2, 3, 4]</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fromAsync"
+                          },
+                          "webFeature": {
+                            "id": "array-fromasync",
+                            "description_html": "The <code>Array.fromAsync()</code> static method copies items from an async iterable object to make a new array.",
+                            "group": [
+                              "arrays"
+                            ],
+                            "name": "Array.fromAsync()",
+                            "spec": [
+                              "https://tc39.es/proposal-array-from-async/#sec-array.fromAsync"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/array-fromasync/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-01-25",
+                              "support": {
+                                "chrome": "121",
+                                "chrome_android": "121",
+                                "edge": "121",
+                                "firefox": "115",
+                                "firefox_android": "115",
+                                "safari": "16.4",
+                                "safari_ios": "16.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 1216,
+                        "id": "temporal",
+                        "index": 4,
+                        "percentageQuestion": 24.16,
+                        "percentageSurvey": 8.68,
+                        "entity": {
+                          "name": "Temporal",
+                          "nameHtml": "Temporal",
+                          "nameClean": "Temporal",
+                          "description": "Provides standard objects and functions for working with dates and times.",
+                          "descriptionHtml": "Provides standard objects and functions for working with dates and times.",
+                          "descriptionClean": "Provides standard objects and functions for working with dates and times.",
+                          "id": "temporal",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"
+                          },
+                          "webFeature": {
+                            "id": "temporal",
+                            "description_html": "The <code>Temporal</code> API allows you to work with dates, times, time zones, and durations. It is more powerful than the <code>Date</code> API.",
+                            "group": [
+                              "javascript"
+                            ],
+                            "name": "Temporal",
+                            "spec": [
+                              "https://tc39.es/proposal-temporal/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/temporal/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "firefox": "139",
+                                "firefox_android": "139"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 1165,
+                        "id": "hashbang_grammar",
+                        "index": 5,
+                        "percentageQuestion": 23.15,
+                        "percentageSurvey": 8.31,
+                        "entity": {
+                          "name": "Hashbang Grammar",
+                          "nameHtml": "Hashbang Grammar",
+                          "nameClean": "Hashbang Grammar",
+                          "description": "Provide the path to a specific JavaScript interpreter that you want to use to execute the script.",
+                          "descriptionHtml": "Provide the path to a specific JavaScript interpreter that you want to use to execute the script.",
+                          "descriptionClean": "Provide the path to a specific JavaScript interpreter that you want to use to execute the script.",
+                          "id": "hashbang_grammar",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "#!/usr/bin/env node\n\nconsole.log(\"Hello world\");\n",
+                            "codeHighlighted": "<span class=\"hljs-meta\">#!/usr/bin/env node</span>\n\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&quot;Hello world&quot;</span>);"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar"
+                          },
+                          "webFeature": {
+                            "id": "hashbang-comments",
+                            "description_html": "The <code>#!</code> comment at the absolute start of a script or module is treated as a normal comment and is ignored by the JavaScript engine.",
+                            "group": [
+                              "javascript"
+                            ],
+                            "name": "Hashbang comments",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html#sec-hashbang"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/hashbang-comments/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-03-24",
+                              "support": {
+                                "chrome": "74",
+                                "chrome_android": "74",
+                                "edge": "79",
+                                "firefox": "67",
+                                "firefox_android": "67",
+                                "safari": "13.1",
+                                "safari_ios": "13.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 1112,
+                        "id": "promise_try",
+                        "index": 6,
+                        "percentageQuestion": 22.09,
+                        "percentageSurvey": 7.93,
+                        "entity": {
+                          "name": "`Promise.try()`",
+                          "nameHtml": "<code>Promise.try()</code>",
+                          "nameClean": "Promise.try()",
+                          "description": "Take a callback of any kind and wrap its result in a Promise.",
+                          "descriptionHtml": "Take a callback of any kind and wrap its result in a Promise.",
+                          "descriptionClean": "Take a callback of any kind and wrap its result in a Promise.",
+                          "id": "promise_try",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "function doSomething(action) {\n  return Promise.try(action)\n    .then((result) => console.log(result))\n    .catch((error) => console.error(error))\n    .finally(() => console.log(\"Done\"));\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">doSomething</span>(<span class=\"hljs-params\">action</span>) {\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-title class_\">Promise</span>.<span class=\"hljs-title function_\">try</span>(action)\n    .<span class=\"hljs-title function_\">then</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">result</span>) =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result))\n    .<span class=\"hljs-title function_\">catch</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">error</span>) =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error))\n    .<span class=\"hljs-title function_\">finally</span>(<span class=\"hljs-function\">() =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&quot;Done&quot;</span>));\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/try"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/javascript_builtins_promise_try"
+                          },
+                          "webFeature": {
+                            "id": "promise-try",
+                            "description_html": "The <code>Promise.try()</code> static method returns a promise that takes a callback of any kind (returns or throws, synchronously or asynchronously) and wraps its result in a <code>Promise</code>.",
+                            "group": [
+                              "promises"
+                            ],
+                            "name": "Promise.try()",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-promise.try"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/promise-try/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2025-01-07",
+                              "support": {
+                                "chrome": "128",
+                                "chrome_android": "128",
+                                "edge": "128",
+                                "firefox": "134",
+                                "firefox_android": "134",
+                                "safari": "18.2",
+                                "safari_ios": "18.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 1048,
+                        "id": "array_with",
+                        "index": 7,
+                        "percentageQuestion": 20.82,
+                        "percentageSurvey": 7.48,
+                        "entity": {
+                          "name": "`array.with()`",
+                          "nameHtml": "<code>array.with()</code>",
+                          "nameClean": "array.with()",
+                          "description": "Returns a new array with the element at the given index replaced with the given value.",
+                          "descriptionHtml": "Returns a new array with the element at the given index replaced with the given value.",
+                          "descriptionClean": "Returns a new array with the element at the given index replaced with the given value.",
+                          "id": "array_with",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const arr = [1, 2, 3, 4, 5];\nconsole.log(arr.with(2, 6)); // [1, 2, 6, 4, 5]\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> arr = [<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">3</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">5</span>];\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(arr.<span class=\"hljs-title function_\">with</span>(<span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">6</span>)); <span class=\"hljs-comment\">// [1, 2, 6, 4, 5]</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/with"
+                          },
+                          "webFeature": {
+                            "id": "array-by-copy",
+                            "description_html": "The <code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code>, and <code>with()</code> methods of arrays and typed arrays return changed copies of arrays. They stand in contrast to methods such as <code>sort()</code> or <code>reverse()</code> that change arrays in place.",
+                            "group": [
+                              "arrays",
+                              "typed-arrays"
+                            ],
+                            "name": "Array by copy",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.toreversed",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tosorted",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tospliced",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.with",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.toreversed",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.tosorted",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.with"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/array-by-copy/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2023-07-04",
+                              "support": {
+                                "chrome": "110",
+                                "chrome_android": "110",
+                                "edge": "110",
+                                "firefox": "115",
+                                "firefox_android": "115",
+                                "safari": "16",
+                                "safari_ios": "16"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 999,
+                        "id": "web_authentication_api",
+                        "index": 8,
+                        "percentageQuestion": 19.85,
+                        "percentageSurvey": 7.13,
+                        "entity": {
+                          "name": "Web Authentication API",
+                          "nameHtml": "Web Authentication API",
+                          "nameClean": "Web Authentication API",
+                          "id": "web_authentication_api",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API"
+                          },
+                          "webFeature": {
+                            "id": "webauthn",
+                            "description_html": "The web authentication API allows you to create public key-based credentials and use them for authentication, such as when signing in. Also known as WebAuthn.",
+                            "name": "Web authentication",
+                            "spec": [
+                              "https://w3c.github.io/webauthn/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/webauthn/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2021-09-07",
+                              "support": {
+                                "chrome": "67",
+                                "chrome_android": "70",
+                                "edge": "18",
+                                "firefox": "60",
+                                "firefox_android": "92",
+                                "safari": "13",
+                                "safari_ios": "13"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 957,
+                        "id": "dynamic_import",
+                        "index": 9,
+                        "percentageQuestion": 19.01,
+                        "percentageSurvey": 6.83,
+                        "entity": {
+                          "name": "Dynamic Import",
+                          "nameHtml": "Dynamic Import",
+                          "nameClean": "Dynamic Import",
+                          "description": "Load a module asynchronously and dynamically.",
+                          "descriptionHtml": "Load a module asynchronously and dynamically.",
+                          "descriptionClean": "Load a module asynchronously and dynamically.",
+                          "id": "dynamic_import",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "await import('/modules/my-module.js')\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">await</span> <span class=\"hljs-keyword\">import</span>(<span class=\"hljs-string\">&#x27;/modules/my-module.js&#x27;</span>)"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import"
+                          }
+                        }
+                      },
+                      {
+                        "count": 765,
+                        "id": "set_intersection",
+                        "index": 10,
+                        "percentageQuestion": 15.2,
+                        "percentageSurvey": 5.46,
+                        "entity": {
+                          "name": "`set.intersection()`",
+                          "nameHtml": "<code>set.intersection()</code>",
+                          "nameClean": "set.intersection()",
+                          "description": "Returns a new set containing elements in both this set and the given set.",
+                          "descriptionHtml": "Returns a new set containing elements in both this set and the given set.",
+                          "descriptionClean": "Returns a new set containing elements in both this set and the given set.",
+                          "id": "set_intersection",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const odds = new Set([1, 3, 5, 7, 9]);\nconst squares = new Set([1, 4, 9]);\nconsole.log(odds.intersection(squares)); // Set(2) { 1, 9 }\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> odds = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">3</span>, <span class=\"hljs-number\">5</span>, <span class=\"hljs-number\">7</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-keyword\">const</span> squares = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(odds.<span class=\"hljs-title function_\">intersection</span>(squares)); <span class=\"hljs-comment\">// Set(2) { 1, 9 }</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/intersection"
+                          },
+                          "webFeature": {
+                            "id": "set-methods",
+                            "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                            "group": [
+                              "sets"
+                            ],
+                            "name": "Set methods",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-properties-of-the-set-prototype-object"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/set-methods/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-06-11",
+                              "support": {
+                                "chrome": "122",
+                                "chrome_android": "122",
+                                "edge": "122",
+                                "firefox": "127",
+                                "firefox_android": "127",
+                                "safari": "17",
+                                "safari_ios": "17"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 745,
+                        "id": "regexp_match_indices",
+                        "index": 11,
+                        "percentageQuestion": 14.8,
+                        "percentageSurvey": 5.32,
+                        "entity": {
+                          "name": "Regexp Match Indices",
+                          "nameHtml": "Regexp Match Indices",
+                          "nameClean": "Regexp Match Indices",
+                          "description": "Store the start and end positions of each matched capture group.",
+                          "descriptionHtml": "Store the start and end positions of each matched capture group.",
+                          "descriptionClean": "Store the start and end positions of each matched capture group.",
+                          "id": "regexp_match_indices",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const str1 = \"foo bar foo\";\nconst regex1 = /foo/dg;\nconsole.log(regex1.exec(str1).indices[0]); // Output: Array [0, 2]\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> str1 = <span class=\"hljs-string\">&quot;foo bar foo&quot;</span>;\n<span class=\"hljs-keyword\">const</span> regex1 = <span class=\"hljs-regexp\">/foo/</span>dg;\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(regex1.<span class=\"hljs-title function_\">exec</span>(str1).<span class=\"hljs-property\">indices</span>[<span class=\"hljs-number\">0</span>]); <span class=\"hljs-comment\">// Output: Array [0, 2]</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://v8.dev/features/regexp-match-indices",
+                              "title": "RegExp match indices"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "count": 726,
+                        "id": "private_fields",
+                        "index": 12,
+                        "percentageQuestion": 14.42,
+                        "percentageSurvey": 5.18,
+                        "entity": {
+                          "name": "Private Properties",
+                          "nameHtml": "Private Properties",
+                          "nameClean": "Private Properties",
+                          "description": "Properties that cannot be legally referenced outside of the class.",
+                          "descriptionHtml": "Properties that cannot be legally referenced outside of the class.",
+                          "descriptionClean": "Properties that cannot be legally referenced outside of the class.",
+                          "id": "private_fields",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "class ClassWithPrivateField {\n  #privateField\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">class</span> <span class=\"hljs-title class_\">ClassWithPrivateField</span> {\n  #privateField\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements"
+                          }
+                        }
+                      },
+                      {
+                        "count": 715,
+                        "id": "page_visibility",
+                        "index": 13,
+                        "percentageQuestion": 14.21,
+                        "percentageSurvey": 5.1,
+                        "entity": {
+                          "name": "Page Visibility API",
+                          "nameHtml": "Page Visibility API",
+                          "nameClean": "Page Visibility API",
+                          "id": "page_visibility",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/pagevisibility"
+                          },
+                          "webFeature": {
+                            "id": "page-visibility",
+                            "description_html": "The <code>document.visibilityState</code> and <code>document.hidden</code> properties tell you whether the page is visible to the user (for example, it's not minimized or in a background tab).",
+                            "name": "Page visibility",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/interaction.html#page-visibility"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/page-visibility/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2015-07-29",
+                              "support": {
+                                "chrome": "33",
+                                "chrome_android": "33",
+                                "edge": "12",
+                                "firefox": "18",
+                                "firefox_android": "18",
+                                "safari": "7",
+                                "safari_ios": "7"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 701,
+                        "id": "array_to_spliced",
+                        "index": 14,
+                        "percentageQuestion": 13.93,
+                        "percentageSurvey": 5,
+                        "entity": {
+                          "name": "`array.toSpliced()`",
+                          "nameHtml": "<code>array.toSpliced()</code>",
+                          "nameClean": "array.toSpliced()",
+                          "description": "Splice without mutating the original array.",
+                          "descriptionHtml": "Splice without mutating the original array.",
+                          "descriptionClean": "Splice without mutating the original array.",
+                          "id": "array_to_spliced",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const months = [\"Jan\", \"Mar\", \"Apr\", \"May\"];\n\n// Inserting an element at index 1\nconst months2 = months.toSpliced(1, 0, \"Feb\");\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> months = [<span class=\"hljs-string\">&quot;Jan&quot;</span>, <span class=\"hljs-string\">&quot;Mar&quot;</span>, <span class=\"hljs-string\">&quot;Apr&quot;</span>, <span class=\"hljs-string\">&quot;May&quot;</span>];\n\n<span class=\"hljs-comment\">// Inserting an element at index 1</span>\n<span class=\"hljs-keyword\">const</span> months2 = months.<span class=\"hljs-title function_\">toSpliced</span>(<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">0</span>, <span class=\"hljs-string\">&quot;Feb&quot;</span>);"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced"
+                          },
+                          "webFeature": {
+                            "id": "array-by-copy",
+                            "description_html": "The <code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code>, and <code>with()</code> methods of arrays and typed arrays return changed copies of arrays. They stand in contrast to methods such as <code>sort()</code> or <code>reverse()</code> that change arrays in place.",
+                            "group": [
+                              "arrays",
+                              "typed-arrays"
+                            ],
+                            "name": "Array by copy",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.toreversed",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tosorted",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tospliced",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.with",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.toreversed",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.tosorted",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.with"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/array-by-copy/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2023-07-04",
+                              "support": {
+                                "chrome": "110",
+                                "chrome_android": "110",
+                                "edge": "110",
+                                "firefox": "115",
+                                "firefox_android": "115",
+                                "safari": "16",
+                                "safari_ios": "16"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 661,
+                        "id": "set_union",
+                        "index": 15,
+                        "percentageQuestion": 13.13,
+                        "percentageSurvey": 4.72,
+                        "entity": {
+                          "name": "`set.union()`",
+                          "nameHtml": "<code>set.union()</code>",
+                          "nameClean": "set.union()",
+                          "description": "Returns a new set containing elements of both this set and the given set.",
+                          "descriptionHtml": "Returns a new set containing elements of both this set and the given set.",
+                          "descriptionClean": "Returns a new set containing elements of both this set and the given set.",
+                          "id": "set_union",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const evens = new Set([2, 4, 6, 8]);\nconst squares = new Set([1, 4, 9]);\nconsole.log(evens.union(squares)); // Set(6) { 2, 4, 6, 8, 1, 9 }\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> evens = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">6</span>, <span class=\"hljs-number\">8</span>]);\n<span class=\"hljs-keyword\">const</span> squares = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(evens.<span class=\"hljs-title function_\">union</span>(squares)); <span class=\"hljs-comment\">// Set(6) { 2, 4, 6, 8, 1, 9 }</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/union"
+                          },
+                          "webFeature": {
+                            "id": "set-methods",
+                            "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                            "group": [
+                              "sets"
+                            ],
+                            "name": "Set methods",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-properties-of-the-set-prototype-object"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/set-methods/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-06-11",
+                              "support": {
+                                "chrome": "122",
+                                "chrome_android": "122",
+                                "edge": "122",
+                                "firefox": "127",
+                                "firefox_android": "127",
+                                "safari": "17",
+                                "safari_ios": "17"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 652,
+                        "id": "set_symmetric_difference",
+                        "index": 16,
+                        "percentageQuestion": 12.95,
+                        "percentageSurvey": 4.65,
+                        "entity": {
+                          "name": "`set.symmetricDifference()`",
+                          "nameHtml": "<code>set.symmetricDifference()</code>",
+                          "nameClean": "set.symmetricDifference()",
+                          "description": "Returns a new set containing elements which are in either this set or the given set, but not in both.",
+                          "descriptionHtml": "Returns a new set containing elements which are in either this set or the given set, but not in both.",
+                          "descriptionClean": "Returns a new set containing elements which are in either this set or the given set, but not in both.",
+                          "id": "set_symmetric_difference",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const evens = new Set([2, 4, 6, 8]);\nconst squares = new Set([1, 4, 9]);\nconsole.log(evens.symmetricDifference(squares)); // Set(5) { 2, 6, 8, 1, 9 }\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> evens = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">6</span>, <span class=\"hljs-number\">8</span>]);\n<span class=\"hljs-keyword\">const</span> squares = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(evens.<span class=\"hljs-title function_\">symmetricDifference</span>(squares)); <span class=\"hljs-comment\">// Set(5) { 2, 6, 8, 1, 9 }</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/symmetricDifference"
+                          },
+                          "webFeature": {
+                            "id": "set-methods",
+                            "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                            "group": [
+                              "sets"
+                            ],
+                            "name": "Set methods",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-properties-of-the-set-prototype-object"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/set-methods/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-06-11",
+                              "support": {
+                                "chrome": "122",
+                                "chrome_android": "122",
+                                "edge": "122",
+                                "firefox": "127",
+                                "firefox_android": "127",
+                                "safari": "17",
+                                "safari_ios": "17"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 650,
+                        "id": "array_to_sorted",
+                        "index": 17,
+                        "percentageQuestion": 12.91,
+                        "percentageSurvey": 4.64,
+                        "entity": {
+                          "name": "`array.toSorted()`",
+                          "nameHtml": "<code>array.toSorted()</code>",
+                          "nameClean": "array.toSorted()",
+                          "description": "Sort without mutating the original array.",
+                          "descriptionHtml": "Sort without mutating the original array.",
+                          "descriptionClean": "Sort without mutating the original array.",
+                          "id": "array_to_sorted",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const values = [1, 10, 21, 2];\nconst sortedValues = values.toSorted((a, b) => a - b);\nconsole.log(sortedValues); // [1, 2, 10, 21]\nconsole.log(values); // [1, 10, 21, 2]\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> values = [<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">10</span>, <span class=\"hljs-number\">21</span>, <span class=\"hljs-number\">2</span>];\n<span class=\"hljs-keyword\">const</span> sortedValues = values.<span class=\"hljs-title function_\">toSorted</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">a, b</span>) =&gt;</span> a - b);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(sortedValues); <span class=\"hljs-comment\">// [1, 2, 10, 21]</span>\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(values); <span class=\"hljs-comment\">// [1, 10, 21, 2]</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted"
+                          },
+                          "webFeature": {
+                            "id": "array-by-copy",
+                            "description_html": "The <code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code>, and <code>with()</code> methods of arrays and typed arrays return changed copies of arrays. They stand in contrast to methods such as <code>sort()</code> or <code>reverse()</code> that change arrays in place.",
+                            "group": [
+                              "arrays",
+                              "typed-arrays"
+                            ],
+                            "name": "Array by copy",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.toreversed",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tosorted",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tospliced",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.with",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.toreversed",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.tosorted",
+                              "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.with"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/array-by-copy/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2023-07-04",
+                              "support": {
+                                "chrome": "110",
+                                "chrome_android": "110",
+                                "edge": "110",
+                                "firefox": "115",
+                                "firefox_android": "115",
+                                "safari": "16",
+                                "safari_ios": "16"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 649,
+                        "id": "set_difference",
+                        "index": 18,
+                        "percentageQuestion": 12.89,
+                        "percentageSurvey": 4.63,
+                        "entity": {
+                          "name": "`set.difference()`",
+                          "nameHtml": "<code>set.difference()</code>",
+                          "nameClean": "set.difference()",
+                          "description": "Returns a new set containing elements in this set but not in the given set.",
+                          "descriptionHtml": "Returns a new set containing elements in this set but not in the given set.",
+                          "descriptionClean": "Returns a new set containing elements in this set but not in the given set.",
+                          "id": "set_difference",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const odds = new Set([1, 3, 5, 7, 9]);\nconst squares = new Set([1, 4, 9]);\nconsole.log(odds.difference(squares)); // Set(3) { 3, 5, 7 }\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> odds = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">3</span>, <span class=\"hljs-number\">5</span>, <span class=\"hljs-number\">7</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-keyword\">const</span> squares = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(odds.<span class=\"hljs-title function_\">difference</span>(squares)); <span class=\"hljs-comment\">// Set(3) { 3, 5, 7 }</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/difference"
+                          },
+                          "webFeature": {
+                            "id": "set-methods",
+                            "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                            "group": [
+                              "sets"
+                            ],
+                            "name": "Set methods",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-properties-of-the-set-prototype-object"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/set-methods/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-06-11",
+                              "support": {
+                                "chrome": "122",
+                                "chrome_android": "122",
+                                "edge": "122",
+                                "firefox": "127",
+                                "firefox_android": "127",
+                                "safari": "17",
+                                "safari_ios": "17"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 617,
+                        "id": "set_is_subset_of",
+                        "index": 19,
+                        "percentageQuestion": 12.26,
+                        "percentageSurvey": 4.4,
+                        "entity": {
+                          "name": "`set.isSubsetOf()`",
+                          "nameHtml": "<code>set.isSubsetOf()</code>",
+                          "nameClean": "set.isSubsetOf()",
+                          "description": "Returns a boolean indicating if all elements of this set are in the given set.",
+                          "descriptionHtml": "Returns a boolean indicating if all elements of this set are in the given set.",
+                          "descriptionClean": "Returns a boolean indicating if all elements of this set are in the given set.",
+                          "id": "set_is_subset_of",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const fours = new Set([4, 8, 12, 16]);\nconst evens = new Set([2, 4, 6, 8, 10, 12, 14, 16, 18]);\nconsole.log(fours.isSubsetOf(evens)); // true\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> fours = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">8</span>, <span class=\"hljs-number\">12</span>, <span class=\"hljs-number\">16</span>]);\n<span class=\"hljs-keyword\">const</span> evens = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">6</span>, <span class=\"hljs-number\">8</span>, <span class=\"hljs-number\">10</span>, <span class=\"hljs-number\">12</span>, <span class=\"hljs-number\">14</span>, <span class=\"hljs-number\">16</span>, <span class=\"hljs-number\">18</span>]);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(fours.<span class=\"hljs-title function_\">isSubsetOf</span>(evens)); <span class=\"hljs-comment\">// true</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isSubsetOf"
+                          },
+                          "webFeature": {
+                            "id": "set-methods",
+                            "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                            "group": [
+                              "sets"
+                            ],
+                            "name": "Set methods",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-properties-of-the-set-prototype-object"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/set-methods/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-06-11",
+                              "support": {
+                                "chrome": "122",
+                                "chrome_android": "122",
+                                "edge": "122",
+                                "firefox": "127",
+                                "firefox_android": "127",
+                                "safari": "17",
+                                "safari_ios": "17"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 8982,
+                        "id": "no_answer",
+                        "index": 20,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 64.09
+                      },
+                      {
+                        "count": 48244,
+                        "id": "other_answers",
+                        "index": 21,
+                        "percentageQuestion": 958.6,
+                        "percentageSurvey": 344.27
+                      }
+                    ]
+                  },
+                  {
+                    "_metadata": {
+                      "axis1Sort": {
+                        "property": "count",
+                        "order": "desc"
+                      },
+                      "limit": 20,
+                      "cutoff": 10
+                    },
+                    "editionId": "js2025",
+                    "year": 2025,
+                    "completion": {
+                      "count": 8987,
+                      "percentageSurvey": 69.12,
+                      "total": 13002
+                    },
+                    "buckets": [
+                      {
+                        "count": 2702,
+                        "id": "svelte",
+                        "index": 0,
+                        "percentageQuestion": 30.07,
+                        "percentageSurvey": 20.78,
+                        "entity": {
+                          "name": "Svelte",
+                          "nameHtml": "Svelte",
+                          "nameClean": "Svelte",
+                          "id": "svelte",
+                          "entityType": "library",
+                          "homepage": {
+                            "url": "https://svelte.dev"
+                          }
+                        }
+                      },
+                      {
+                        "count": 2296,
+                        "id": "solid",
+                        "index": 1,
+                        "percentageQuestion": 25.55,
+                        "percentageSurvey": 17.66,
+                        "entity": {
+                          "name": "Solid",
+                          "nameHtml": "Solid",
+                          "nameClean": "Solid",
+                          "id": "solid",
+                          "entityType": "library",
+                          "homepage": {
+                            "url": "https://www.solidjs.com/"
+                          },
+                          "npm": {
+                            "url": "https://www.npmjs.com/package/solid-js"
+                          }
+                        }
+                      },
+                      {
+                        "count": 2004,
+                        "id": "astro",
+                        "index": 2,
+                        "percentageQuestion": 22.3,
+                        "percentageSurvey": 15.41,
+                        "entity": {
+                          "name": "Astro",
+                          "nameHtml": "Astro",
+                          "nameClean": "Astro",
+                          "id": "astro",
+                          "entityType": "library",
+                          "homepage": {
+                            "url": "https://astro.build/"
+                          },
+                          "npm": {
+                            "url": "https://www.npmjs.com/package/astro"
+                          }
+                        }
+                      },
+                      {
+                        "count": 1882,
+                        "id": "sveltekit",
+                        "index": 3,
+                        "percentageQuestion": 20.94,
+                        "percentageSurvey": 14.47,
+                        "entity": {
+                          "name": "SvelteKit",
+                          "nameHtml": "SvelteKit",
+                          "nameClean": "SvelteKit",
+                          "id": "sveltekit",
+                          "entityType": "library",
+                          "homepage": {
+                            "url": "https://kit.svelte.dev/"
+                          },
+                          "npm": {
+                            "url": "https://www.npmjs.com/package/@sveltejs/kit"
+                          }
+                        }
+                      },
+                      {
+                        "count": 1825,
+                        "id": "bun",
+                        "index": 4,
+                        "percentageQuestion": 20.31,
+                        "percentageSurvey": 14.04,
+                        "entity": {
+                          "name": "Bun",
+                          "nameHtml": "Bun",
+                          "nameClean": "Bun",
+                          "id": "bun",
+                          "entityType": "library",
+                          "homepage": {
+                            "url": "https://bun.sh/"
+                          }
+                        }
+                      },
+                      {
+                        "count": 1817,
+                        "id": "htmx",
+                        "index": 5,
+                        "percentageQuestion": 20.22,
+                        "percentageSurvey": 13.97,
+                        "entity": {
+                          "name": "HTMX",
+                          "nameHtml": "HTMX",
+                          "nameClean": "HTMX",
+                          "id": "htmx",
+                          "entityType": "library",
+                          "homepage": {
+                            "url": "https://htmx.org/"
+                          }
+                        }
+                      },
+                      {
+                        "count": 1782,
+                        "id": "rolldown",
+                        "index": 6,
+                        "percentageQuestion": 19.83,
+                        "percentageSurvey": 13.71,
+                        "entity": {
+                          "name": "Rolldown",
+                          "nameHtml": "Rolldown",
+                          "nameClean": "Rolldown",
+                          "id": "rolldown",
+                          "entityType": "library",
+                          "homepage": {
+                            "url": "https://rolldown.rs/"
+                          }
+                        }
+                      },
+                      {
+                        "count": 1768,
+                        "id": "trpc",
+                        "index": 7,
+                        "percentageQuestion": 19.67,
+                        "percentageSurvey": 13.6,
+                        "entity": {
+                          "name": "tRPC",
+                          "nameHtml": "tRPC",
+                          "nameClean": "tRPC",
+                          "id": "trpc",
+                          "entityType": "library",
+                          "homepage": {
+                            "url": "https://trpc.io/"
+                          }
+                        }
+                      },
+                      {
+                        "count": 1475,
+                        "id": "bun_test",
+                        "index": 8,
+                        "percentageQuestion": 16.41,
+                        "percentageSurvey": 11.34,
+                        "entity": {
+                          "name": "`bun test`",
+                          "nameHtml": "<code>bun test</code>",
+                          "nameClean": "bun test",
+                          "id": "bun_test",
+                          "entityType": "library",
+                          "homepage": {
+                            "url": "https://bun.com/docs/cli/test"
+                          }
+                        }
+                      },
+                      {
+                        "count": 1450,
+                        "id": "vuejs",
+                        "index": 9,
+                        "percentageQuestion": 16.13,
+                        "percentageSurvey": 11.15,
+                        "entity": {
+                          "name": "Vue.js",
+                          "nameHtml": "Vue.js",
+                          "nameClean": "Vue.js",
+                          "id": "vuejs",
+                          "entityType": "library",
+                          "homepage": {
+                            "url": "http://vuejs.org"
+                          },
+                          "npm": {
+                            "url": "https://www.npmjs.com/package/vue"
+                          }
+                        }
+                      },
+                      {
+                        "count": 1414,
+                        "id": "fresh",
+                        "index": 10,
+                        "percentageQuestion": 15.73,
+                        "percentageSurvey": 10.88,
+                        "entity": {
+                          "name": "Deno Fresh",
+                          "nameHtml": "Deno Fresh",
+                          "nameClean": "Deno Fresh",
+                          "id": "fresh",
+                          "entityType": "library",
+                          "homepage": {
+                            "url": "https://fresh.deno.dev/"
+                          }
+                        }
+                      },
+                      {
+                        "count": 1398,
+                        "id": "hono",
+                        "index": 11,
+                        "percentageQuestion": 15.56,
+                        "percentageSurvey": 10.75,
+                        "entity": {
+                          "name": "Hono",
+                          "nameHtml": "Hono",
+                          "nameClean": "Hono",
+                          "id": "hono",
+                          "entityType": "library",
+                          "homepage": {
+                            "url": "https://hono.dev/"
+                          }
+                        }
+                      },
+                      {
+                        "count": 1378,
+                        "id": "nuxt",
+                        "index": 12,
+                        "percentageQuestion": 15.33,
+                        "percentageSurvey": 10.6,
+                        "entity": {
+                          "name": "Nuxt",
+                          "nameHtml": "Nuxt",
+                          "nameClean": "Nuxt",
+                          "id": "nuxt",
+                          "entityType": "library",
+                          "homepage": {
+                            "url": "https://nuxt.com/"
+                          },
+                          "npm": {
+                            "url": "https://www.npmjs.com/package/nuxt"
+                          }
+                        }
+                      },
+                      {
+                        "count": 1297,
+                        "id": "remix",
+                        "index": 13,
+                        "percentageQuestion": 14.43,
+                        "percentageSurvey": 9.98,
+                        "entity": {
+                          "name": "Remix",
+                          "nameHtml": "Remix",
+                          "nameClean": "Remix",
+                          "id": "remix",
+                          "entityType": "library",
+                          "homepage": {
+                            "url": "https://remix.run/"
+                          },
+                          "npm": {
+                            "url": "https://www.npmjs.com/package/create-remix"
+                          }
+                        }
+                      },
+                      {
+                        "count": 1295,
+                        "id": "qwik",
+                        "index": 14,
+                        "percentageQuestion": 14.41,
+                        "percentageSurvey": 9.96,
+                        "entity": {
+                          "name": "Qwik",
+                          "nameHtml": "Qwik",
+                          "nameClean": "Qwik",
+                          "id": "qwik",
+                          "entityType": "library",
+                          "homepage": {
+                            "url": "https://qwik.builder.io/"
+                          }
+                        }
+                      },
+                      {
+                        "count": 1292,
+                        "id": "preact",
+                        "index": 15,
+                        "percentageQuestion": 14.38,
+                        "percentageSurvey": 9.94,
+                        "entity": {
+                          "name": "Preact",
+                          "nameHtml": "Preact",
+                          "nameClean": "Preact",
+                          "description": "Fast 3kB React alternative with the same modern API. Components & Virtual DOM.",
+                          "descriptionHtml": "Fast 3kB React alternative with the same modern API. Components &amp; Virtual DOM.",
+                          "descriptionClean": "Fast 3kB React alternative with the same modern API. Components & Virtual DOM.",
+                          "id": "preact",
+                          "entityType": "library",
+                          "homepage": {
+                            "url": "https://preactjs.com"
+                          },
+                          "npm": {
+                            "url": "https://www.npmjs.com/package/preact"
+                          }
+                        }
+                      },
+                      {
+                        "count": 1291,
+                        "id": "fastify",
+                        "index": 16,
+                        "percentageQuestion": 14.37,
+                        "percentageSurvey": 9.93,
+                        "entity": {
+                          "name": "Fastify",
+                          "nameHtml": "Fastify",
+                          "nameClean": "Fastify",
+                          "description": "Fast and low overhead web framework, for Node.js",
+                          "descriptionHtml": "Fast and low overhead web framework, for Node.js",
+                          "descriptionClean": "Fast and low overhead web framework, for Node.js",
+                          "id": "fastify",
+                          "entityType": "library",
+                          "homepage": {
+                            "url": "https://www.fastify.io"
+                          },
+                          "npm": {
+                            "url": "https://www.npmjs.com/package/fastify"
+                          }
+                        }
+                      },
+                      {
+                        "count": 1275,
+                        "id": "solidstart",
+                        "index": 17,
+                        "percentageQuestion": 14.19,
+                        "percentageSurvey": 9.81,
+                        "entity": {
+                          "name": "SolidStart",
+                          "nameHtml": "SolidStart",
+                          "nameClean": "SolidStart",
+                          "id": "solidstart",
+                          "entityType": "library",
+                          "homepage": {
+                            "url": "https://start.solidjs.com/"
+                          }
+                        }
+                      },
+                      {
+                        "count": 1268,
+                        "id": "playwright",
+                        "index": 18,
+                        "percentageQuestion": 14.11,
+                        "percentageSurvey": 9.75,
+                        "entity": {
+                          "name": "Playwright",
+                          "nameHtml": "Playwright",
+                          "nameClean": "Playwright",
+                          "description": "Node.js library to automate Chromium, Firefox and WebKit with a single API",
+                          "descriptionHtml": "Node.js library to automate Chromium, Firefox and WebKit with a single API",
+                          "descriptionClean": "Node.js library to automate Chromium, Firefox and WebKit with a single API",
+                          "id": "playwright",
+                          "entityType": "library",
+                          "homepage": {
+                            "url": "https://playwright.dev"
+                          },
+                          "npm": {
+                            "url": "https://www.npmjs.com/package/playwright"
+                          }
+                        }
+                      },
+                      {
+                        "count": 1240,
+                        "id": "vitest",
+                        "index": 19,
+                        "percentageQuestion": 13.8,
+                        "percentageSurvey": 9.54,
+                        "entity": {
+                          "name": "Vitest",
+                          "nameHtml": "Vitest",
+                          "nameClean": "Vitest",
+                          "description": "A blazing fast unit-test framework powered by Vite",
+                          "descriptionHtml": "A blazing fast unit-test framework powered by Vite",
+                          "descriptionClean": "A blazing fast unit-test framework powered by Vite",
+                          "id": "vitest",
+                          "entityType": "library",
+                          "homepage": {
+                            "url": "https://vitest.dev/"
+                          },
+                          "npm": {
+                            "url": "https://www.npmjs.com/package/vitest"
+                          }
+                        }
+                      },
+                      {
+                        "count": 4015,
+                        "id": "no_answer",
+                        "index": 20,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 30.88
+                      },
+                      {
+                        "count": 76564,
+                        "id": "other_answers",
+                        "index": 21,
+                        "percentageQuestion": 851.94,
+                        "percentageSurvey": 588.84
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,756 @@
+{
+  "dataAPI": {
+    "surveys": {
+      "state_of_js": {
+        "js2025": {
+          "features": {
+            "syntax_features": {
+              "id": "syntax_features",
+              "comments": {
+                "currentEdition": {
+                  "count": 6
+                }
+              },
+              "combined": {
+                "allEditions": [
+                  {
+                    "_metadata": {
+                      "axis1Sort": {
+                        "property": "count",
+                        "order": "desc"
+                      },
+                      "limit": 50,
+                      "cutoff": 10
+                    },
+                    "editionId": "js2024",
+                    "year": 2024,
+                    "completion": {
+                      "count": 13452,
+                      "percentageSurvey": 95.98,
+                      "total": 14015
+                    },
+                    "buckets": [
+                      {
+                        "count": 11467,
+                        "id": "nullish_coalescing",
+                        "index": 0,
+                        "percentageQuestion": 85.24,
+                        "percentageSurvey": 81.82,
+                        "entity": {
+                          "name": "Nullish Coalescing",
+                          "nameHtml": "Nullish Coalescing",
+                          "nameClean": "Nullish Coalescing",
+                          "description": "Return first value, or second value if first value is `null` or `undefined`.",
+                          "descriptionHtml": "Return first value, or second value if first value is <code>null</code> or <code>undefined</code>.",
+                          "descriptionClean": "Return first value, or second value if first value is null or undefined.",
+                          "id": "nullish_coalescing",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const foo = null ?? 'default string';\nconsole.log(foo);\n// expected output: \"default string\"\n\nconst baz = 0 ?? 42;\nconsole.log(baz);\n// expected output: 0\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> foo = <span class=\"hljs-literal\">null</span> ?? <span class=\"hljs-string\">&#x27;default string&#x27;</span>;\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(foo);\n<span class=\"hljs-comment\">// expected output: &quot;default string&quot;</span>\n\n<span class=\"hljs-keyword\">const</span> baz = <span class=\"hljs-number\">0</span> ?? <span class=\"hljs-number\">42</span>;\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(baz);\n<span class=\"hljs-comment\">// expected output: 0</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing"
+                          },
+                          "webFeature": {
+                            "id": "nullish-coalescing",
+                            "description_html": "The nullish coalescing (<code>??</code>) and nullish coalescing assignment (<code>??=</code>) operators return (or assign) its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.",
+                            "group": [
+                              "javascript"
+                            ],
+                            "name": "Nullish coalescing",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-CoalesceExpression"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/nullish-coalescing/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-09-16",
+                              "support": {
+                                "chrome": "85",
+                                "chrome_android": "85",
+                                "edge": "85",
+                                "firefox": "79",
+                                "firefox_android": "79",
+                                "safari": "14",
+                                "safari_ios": "14"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 9060,
+                        "id": "dynamic_import",
+                        "index": 1,
+                        "percentageQuestion": 67.35,
+                        "percentageSurvey": 64.65,
+                        "entity": {
+                          "name": "Dynamic Import",
+                          "nameHtml": "Dynamic Import",
+                          "nameClean": "Dynamic Import",
+                          "description": "Load a module asynchronously and dynamically.",
+                          "descriptionHtml": "Load a module asynchronously and dynamically.",
+                          "descriptionClean": "Load a module asynchronously and dynamically.",
+                          "id": "dynamic_import",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "await import('/modules/my-module.js')\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">await</span> <span class=\"hljs-keyword\">import</span>(<span class=\"hljs-string\">&#x27;/modules/my-module.js&#x27;</span>)"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import"
+                          }
+                        }
+                      },
+                      {
+                        "count": 6080,
+                        "id": "private_fields",
+                        "index": 2,
+                        "percentageQuestion": 45.2,
+                        "percentageSurvey": 43.38,
+                        "entity": {
+                          "name": "Private Properties",
+                          "nameHtml": "Private Properties",
+                          "nameClean": "Private Properties",
+                          "description": "Properties that cannot be legally referenced outside of the class.",
+                          "descriptionHtml": "Properties that cannot be legally referenced outside of the class.",
+                          "descriptionClean": "Properties that cannot be legally referenced outside of the class.",
+                          "id": "private_fields",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "class ClassWithPrivateField {\n  #privateField\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">class</span> <span class=\"hljs-title class_\">ClassWithPrivateField</span> {\n  #privateField\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements"
+                          }
+                        }
+                      },
+                      {
+                        "count": 5865,
+                        "id": "logical_assignment",
+                        "index": 3,
+                        "percentageQuestion": 43.6,
+                        "percentageSurvey": 41.85,
+                        "entity": {
+                          "name": "Logical Assignment",
+                          "nameHtml": "Logical Assignment",
+                          "nameClean": "Logical Assignment",
+                          "description": "Operators to assign a value to a variable based on its own truthy/falsy status.",
+                          "descriptionHtml": "Operators to assign a value to a variable based on its own truthy/falsy status.",
+                          "descriptionClean": "Operators to assign a value to a variable based on its own truthy/falsy status.",
+                          "id": "logical_assignment",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const a = { duration: 50, title: '' };\n\na.duration ||= 10;\nconsole.log(a.duration);\n// expected output: 50\n\na.title ||= 'title is empty.';\nconsole.log(a.title);\n// expected output: \"title is empty\"\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> a = { <span class=\"hljs-attr\">duration</span>: <span class=\"hljs-number\">50</span>, <span class=\"hljs-attr\">title</span>: <span class=\"hljs-string\">&#x27;&#x27;</span> };\n\na.<span class=\"hljs-property\">duration</span> ||= <span class=\"hljs-number\">10</span>;\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(a.<span class=\"hljs-property\">duration</span>);\n<span class=\"hljs-comment\">// expected output: 50</span>\n\na.<span class=\"hljs-property\">title</span> ||= <span class=\"hljs-string\">&#x27;title is empty.&#x27;</span>;\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(a.<span class=\"hljs-property\">title</span>);\n<span class=\"hljs-comment\">// expected output: &quot;title is empty&quot;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-javascript_operators_logical_and_assignment"
+                          },
+                          "webFeature": {
+                            "id": "logical-assignments",
+                            "description_html": "The logical AND assignment (<code>&#x26;&#x26;=</code>) and the logical OR assignment (<code>||=</code>) operators short-circuit the respective binary logical operators.",
+                            "group": [
+                              "javascript"
+                            ],
+                            "name": "Logical assignments",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-assignment-operators"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/logical-assignments/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-09-16",
+                              "support": {
+                                "chrome": "85",
+                                "chrome_android": "85",
+                                "edge": "85",
+                                "firefox": "79",
+                                "firefox_android": "79",
+                                "safari": "14",
+                                "safari_ios": "14"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 2639,
+                        "id": "hashbang_grammar",
+                        "index": 4,
+                        "percentageQuestion": 19.62,
+                        "percentageSurvey": 18.83,
+                        "entity": {
+                          "name": "Hashbang Grammar",
+                          "nameHtml": "Hashbang Grammar",
+                          "nameClean": "Hashbang Grammar",
+                          "description": "Provide the path to a specific JavaScript interpreter that you want to use to execute the script.",
+                          "descriptionHtml": "Provide the path to a specific JavaScript interpreter that you want to use to execute the script.",
+                          "descriptionClean": "Provide the path to a specific JavaScript interpreter that you want to use to execute the script.",
+                          "id": "hashbang_grammar",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "#!/usr/bin/env node\n\nconsole.log(\"Hello world\");\n",
+                            "codeHighlighted": "<span class=\"hljs-meta\">#!/usr/bin/env node</span>\n\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&quot;Hello world&quot;</span>);"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar"
+                          },
+                          "webFeature": {
+                            "id": "hashbang-comments",
+                            "description_html": "The <code>#!</code> comment at the absolute start of a script or module is treated as a normal comment and is ignored by the JavaScript engine.",
+                            "group": [
+                              "javascript"
+                            ],
+                            "name": "Hashbang comments",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html#sec-hashbang"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/hashbang-comments/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-03-24",
+                              "support": {
+                                "chrome": "74",
+                                "chrome_android": "74",
+                                "edge": "79",
+                                "firefox": "67",
+                                "firefox_android": "67",
+                                "safari": "13.1",
+                                "safari_ios": "13.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 2370,
+                        "id": "error_cause",
+                        "index": 5,
+                        "percentageQuestion": 17.62,
+                        "percentageSurvey": 16.91,
+                        "entity": {
+                          "name": "`error.cause`",
+                          "nameHtml": "<code>error.cause</code>",
+                          "nameClean": "error.cause",
+                          "description": "Indicate the specific original cause of the error.",
+                          "descriptionHtml": "Indicate the specific original cause of the error.",
+                          "descriptionClean": "Indicate the specific original cause of the error.",
+                          "id": "error_cause",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "try {\n  connectToDatabase();\n} catch (err) {\n  throw new Error('Connecting to database failed.', { cause: err });\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">try</span> {\n  <span class=\"hljs-title function_\">connectToDatabase</span>();\n} <span class=\"hljs-keyword\">catch</span> (err) {\n  <span class=\"hljs-keyword\">throw</span> <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Error</span>(<span class=\"hljs-string\">&#x27;Connecting to database failed.&#x27;</span>, { <span class=\"hljs-attr\">cause</span>: err });\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause"
+                          },
+                          "webFeature": {
+                            "id": "error-cause",
+                            "description_html": "The <code>cause</code> property of errors records the specific original cause of the error, particularly for errors that have been re-thrown.",
+                            "name": "Error cause",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-installerrorcause"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/error-cause/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2021-09-20",
+                              "support": {
+                                "chrome": "93",
+                                "chrome_android": "93",
+                                "edge": "93",
+                                "firefox": "91",
+                                "firefox_android": "91",
+                                "safari": "15",
+                                "safari_ios": "15"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 668,
+                        "id": "na",
+                        "index": 6,
+                        "percentageQuestion": 4.97,
+                        "percentageSurvey": 4.77,
+                        "entity": {
+                          "name": "Not applicable",
+                          "nameHtml": "Not applicable",
+                          "nameClean": "Not applicable",
+                          "description": "No use cases, no pain, no issues.",
+                          "descriptionHtml": "No use cases, no pain, no issues.",
+                          "descriptionClean": "No use cases, no pain, no issues.",
+                          "id": "na",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 563,
+                        "id": "no_answer",
+                        "index": 7,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 4.02
+                      }
+                    ]
+                  },
+                  {
+                    "_metadata": {
+                      "axis1Sort": {
+                        "property": "count",
+                        "order": "desc"
+                      },
+                      "limit": 50,
+                      "cutoff": 10
+                    },
+                    "editionId": "js2025",
+                    "year": 2025,
+                    "completion": {
+                      "count": 12367,
+                      "percentageSurvey": 95.12,
+                      "total": 13002
+                    },
+                    "buckets": [
+                      {
+                        "count": 10717,
+                        "id": "nullish_coalescing",
+                        "index": 0,
+                        "percentageQuestion": 86.66,
+                        "percentageSurvey": 82.43,
+                        "entity": {
+                          "name": "Nullish Coalescing",
+                          "nameHtml": "Nullish Coalescing",
+                          "nameClean": "Nullish Coalescing",
+                          "description": "Return first value, or second value if first value is `null` or `undefined`.",
+                          "descriptionHtml": "Return first value, or second value if first value is <code>null</code> or <code>undefined</code>.",
+                          "descriptionClean": "Return first value, or second value if first value is null or undefined.",
+                          "id": "nullish_coalescing",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const foo = null ?? 'default string';\nconsole.log(foo);\n// expected output: \"default string\"\n\nconst baz = 0 ?? 42;\nconsole.log(baz);\n// expected output: 0\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> foo = <span class=\"hljs-literal\">null</span> ?? <span class=\"hljs-string\">&#x27;default string&#x27;</span>;\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(foo);\n<span class=\"hljs-comment\">// expected output: &quot;default string&quot;</span>\n\n<span class=\"hljs-keyword\">const</span> baz = <span class=\"hljs-number\">0</span> ?? <span class=\"hljs-number\">42</span>;\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(baz);\n<span class=\"hljs-comment\">// expected output: 0</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing"
+                          },
+                          "webFeature": {
+                            "id": "nullish-coalescing",
+                            "description_html": "The nullish coalescing (<code>??</code>) and nullish coalescing assignment (<code>??=</code>) operators return (or assign) its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.",
+                            "group": [
+                              "javascript"
+                            ],
+                            "name": "Nullish coalescing",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-CoalesceExpression"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/nullish-coalescing/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-09-16",
+                              "support": {
+                                "chrome": "85",
+                                "chrome_android": "85",
+                                "edge": "85",
+                                "firefox": "79",
+                                "firefox_android": "79",
+                                "safari": "14",
+                                "safari_ios": "14"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 8222,
+                        "id": "dynamic_import",
+                        "index": 1,
+                        "percentageQuestion": 66.48,
+                        "percentageSurvey": 63.24,
+                        "entity": {
+                          "name": "Dynamic Import",
+                          "nameHtml": "Dynamic Import",
+                          "nameClean": "Dynamic Import",
+                          "description": "Load a module asynchronously and dynamically.",
+                          "descriptionHtml": "Load a module asynchronously and dynamically.",
+                          "descriptionClean": "Load a module asynchronously and dynamically.",
+                          "id": "dynamic_import",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "await import('/modules/my-module.js')\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">await</span> <span class=\"hljs-keyword\">import</span>(<span class=\"hljs-string\">&#x27;/modules/my-module.js&#x27;</span>)"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import"
+                          }
+                        }
+                      },
+                      {
+                        "count": 5314,
+                        "id": "private_fields",
+                        "index": 2,
+                        "percentageQuestion": 42.97,
+                        "percentageSurvey": 40.87,
+                        "entity": {
+                          "name": "Private Properties",
+                          "nameHtml": "Private Properties",
+                          "nameClean": "Private Properties",
+                          "description": "Properties that cannot be legally referenced outside of the class.",
+                          "descriptionHtml": "Properties that cannot be legally referenced outside of the class.",
+                          "descriptionClean": "Properties that cannot be legally referenced outside of the class.",
+                          "id": "private_fields",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "class ClassWithPrivateField {\n  #privateField\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">class</span> <span class=\"hljs-title class_\">ClassWithPrivateField</span> {\n  #privateField\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements"
+                          }
+                        }
+                      },
+                      {
+                        "count": 4327,
+                        "id": "logical_assignment",
+                        "index": 3,
+                        "percentageQuestion": 34.99,
+                        "percentageSurvey": 33.28,
+                        "entity": {
+                          "name": "Logical Assignment",
+                          "nameHtml": "Logical Assignment",
+                          "nameClean": "Logical Assignment",
+                          "description": "Operators to assign a value to a variable based on its own truthy/falsy status.",
+                          "descriptionHtml": "Operators to assign a value to a variable based on its own truthy/falsy status.",
+                          "descriptionClean": "Operators to assign a value to a variable based on its own truthy/falsy status.",
+                          "id": "logical_assignment",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const a = { duration: 50, title: '' };\n\na.duration ||= 10;\nconsole.log(a.duration);\n// expected output: 50\n\na.title ||= 'title is empty.';\nconsole.log(a.title);\n// expected output: \"title is empty\"\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> a = { <span class=\"hljs-attr\">duration</span>: <span class=\"hljs-number\">50</span>, <span class=\"hljs-attr\">title</span>: <span class=\"hljs-string\">&#x27;&#x27;</span> };\n\na.<span class=\"hljs-property\">duration</span> ||= <span class=\"hljs-number\">10</span>;\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(a.<span class=\"hljs-property\">duration</span>);\n<span class=\"hljs-comment\">// expected output: 50</span>\n\na.<span class=\"hljs-property\">title</span> ||= <span class=\"hljs-string\">&#x27;title is empty.&#x27;</span>;\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(a.<span class=\"hljs-property\">title</span>);\n<span class=\"hljs-comment\">// expected output: &quot;title is empty&quot;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-javascript_operators_logical_and_assignment"
+                          },
+                          "webFeature": {
+                            "id": "logical-assignments",
+                            "description_html": "The logical AND assignment (<code>&#x26;&#x26;=</code>) and the logical OR assignment (<code>||=</code>) operators short-circuit the respective binary logical operators.",
+                            "group": [
+                              "javascript"
+                            ],
+                            "name": "Logical assignments",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-assignment-operators"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/logical-assignments/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-09-16",
+                              "support": {
+                                "chrome": "85",
+                                "chrome_android": "85",
+                                "edge": "85",
+                                "firefox": "79",
+                                "firefox_android": "79",
+                                "safari": "14",
+                                "safari_ios": "14"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 4041,
+                        "id": "js_iterator_methods",
+                        "index": 4,
+                        "percentageQuestion": 32.68,
+                        "percentageSurvey": 31.08,
+                        "entity": {
+                          "name": "Iterator Methods",
+                          "nameHtml": "Iterator Methods",
+                          "nameClean": "Iterator Methods",
+                          "description": "Helper methods such as `map`, `filter`, `reduce`, and others applied to Iterators.",
+                          "descriptionHtml": "Helper methods such as <code>map</code>, <code>filter</code>, <code>reduce</code>, and others applied to Iterators.",
+                          "descriptionClean": "Helper methods such as map, filter, reduce, and others applied to Iterators.",
+                          "id": "js_iterator_methods",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "function* factorials (n) {\n  let result = 1;\n  for (let i = 1; i <= n; i++) {\n    result *= i;\n    yield result;\n  }\n}\n\nconst filteredFactorials = factorials(128).filter(x => x % 8 === 0);\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">function</span>* <span class=\"hljs-title function_\">factorials</span> (n) {\n  <span class=\"hljs-keyword\">let</span> result = <span class=\"hljs-number\">1</span>;\n  <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">let</span> i = <span class=\"hljs-number\">1</span>; i &lt;= n; i++) {\n    result *= i;\n    <span class=\"hljs-keyword\">yield</span> result;\n  }\n}\n\n<span class=\"hljs-keyword\">const</span> filteredFactorials = <span class=\"hljs-title function_\">factorials</span>(<span class=\"hljs-number\">128</span>).<span class=\"hljs-title function_\">filter</span>(<span class=\"hljs-function\"><span class=\"hljs-params\">x</span> =&gt;</span> x % <span class=\"hljs-number\">8</span> === <span class=\"hljs-number\">0</span>);"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://web.dev/blog/baseline-iterator-helpers",
+                              "title": "Iterator helpers have become Baseline Newly available"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "iterator-methods",
+                            "description_html": "The <code>Iterator</code> object is an abstract base for objects that implement the iterator protocol. It provides methods common to built-in iterators, such as <code>filter()</code>, <code>find()</code>, <code>map()</code>, and <code>reduce()</code>. You can also use the static method <code>Iterator.from()</code> to convert an existing iterable into an <code>Iterator</code>.",
+                            "group": [
+                              "iterators"
+                            ],
+                            "name": "Iterator methods",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-iterator-helper-objects"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/iterator-methods/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2025-03-31",
+                              "support": {
+                                "chrome": "122",
+                                "chrome_android": "122",
+                                "edge": "122",
+                                "firefox": "131",
+                                "firefox_android": "131",
+                                "safari": "18.4",
+                                "safari_ios": "18.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 3383,
+                        "id": "hashbang_grammar",
+                        "index": 5,
+                        "percentageQuestion": 27.36,
+                        "percentageSurvey": 26.02,
+                        "entity": {
+                          "name": "Hashbang Grammar",
+                          "nameHtml": "Hashbang Grammar",
+                          "nameClean": "Hashbang Grammar",
+                          "description": "Provide the path to a specific JavaScript interpreter that you want to use to execute the script.",
+                          "descriptionHtml": "Provide the path to a specific JavaScript interpreter that you want to use to execute the script.",
+                          "descriptionClean": "Provide the path to a specific JavaScript interpreter that you want to use to execute the script.",
+                          "id": "hashbang_grammar",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "#!/usr/bin/env node\n\nconsole.log(\"Hello world\");\n",
+                            "codeHighlighted": "<span class=\"hljs-meta\">#!/usr/bin/env node</span>\n\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&quot;Hello world&quot;</span>);"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar"
+                          },
+                          "webFeature": {
+                            "id": "hashbang-comments",
+                            "description_html": "The <code>#!</code> comment at the absolute start of a script or module is treated as a normal comment and is ignored by the JavaScript engine.",
+                            "group": [
+                              "javascript"
+                            ],
+                            "name": "Hashbang comments",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html#sec-hashbang"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/hashbang-comments/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-03-24",
+                              "support": {
+                                "chrome": "74",
+                                "chrome_android": "74",
+                                "edge": "79",
+                                "firefox": "67",
+                                "firefox_android": "67",
+                                "safari": "13.1",
+                                "safari_ios": "13.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 2795,
+                        "id": "error_cause",
+                        "index": 6,
+                        "percentageQuestion": 22.6,
+                        "percentageSurvey": 21.5,
+                        "entity": {
+                          "name": "`error.cause`",
+                          "nameHtml": "<code>error.cause</code>",
+                          "nameClean": "error.cause",
+                          "description": "Indicate the specific original cause of the error.",
+                          "descriptionHtml": "Indicate the specific original cause of the error.",
+                          "descriptionClean": "Indicate the specific original cause of the error.",
+                          "id": "error_cause",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "try {\n  connectToDatabase();\n} catch (err) {\n  throw new Error('Connecting to database failed.', { cause: err });\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">try</span> {\n  <span class=\"hljs-title function_\">connectToDatabase</span>();\n} <span class=\"hljs-keyword\">catch</span> (err) {\n  <span class=\"hljs-keyword\">throw</span> <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Error</span>(<span class=\"hljs-string\">&#x27;Connecting to database failed.&#x27;</span>, { <span class=\"hljs-attr\">cause</span>: err });\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause"
+                          },
+                          "webFeature": {
+                            "id": "error-cause",
+                            "description_html": "The <code>cause</code> property of errors records the specific original cause of the error, particularly for errors that have been re-thrown.",
+                            "name": "Error cause",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-installerrorcause"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/error-cause/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2021-09-20",
+                              "support": {
+                                "chrome": "93",
+                                "chrome_android": "93",
+                                "edge": "93",
+                                "firefox": "91",
+                                "firefox_android": "91",
+                                "safari": "15",
+                                "safari_ios": "15"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 873,
+                        "id": "regexp_escape",
+                        "index": 7,
+                        "percentageQuestion": 7.06,
+                        "percentageSurvey": 6.71,
+                        "entity": {
+                          "name": "`RegExp.escape`",
+                          "nameHtml": "<code>RegExp.escape</code>",
+                          "nameClean": "RegExp.escape",
+                          "description": "Escaping a string for use inside a Regular Expression.",
+                          "descriptionHtml": "Escaping a string for use inside a Regular Expression.",
+                          "descriptionClean": "Escaping a string for use inside a Regular Expression.",
+                          "id": "regexp_escape",
+                          "entityType": "feature",
+                          "resources": [
+                            {
+                              "url": "https://github.com/tc39/proposal-regex-escaping",
+                              "title": "RegExp Escaping Proposal"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "regexp-escape",
+                            "description_html": "The <code>RegExp.escape()</code> static method takes a string and replaces any characters that are potentially special characters of a regular expression with equivalent escape sequences. For example, <code>RegExp.escape(\"[abc]\")</code> returns <code>\"\\\\[abc\\\\]\"</code>.",
+                            "name": "RegExp.escape()",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/text-processing.html#sec-regexp.escape"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/regexp-escape/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2025-05-01",
+                              "support": {
+                                "chrome": "136",
+                                "chrome_android": "136",
+                                "edge": "136",
+                                "firefox": "134",
+                                "firefox_android": "134",
+                                "safari": "18.2",
+                                "safari_ios": "18.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 533,
+                        "id": "js_float16_arrays",
+                        "index": 8,
+                        "percentageQuestion": 4.31,
+                        "percentageSurvey": 4.1,
+                        "entity": {
+                          "name": "Float16Array",
+                          "nameHtml": "Float16Array",
+                          "nameClean": "Float16Array",
+                          "description": "Add float16 (aka half-precision or binary16) TypedArrays to JavaScript.",
+                          "descriptionHtml": "Add float16 (aka half-precision or binary16) TypedArrays to JavaScript.",
+                          "descriptionClean": "Add float16 (aka half-precision or binary16) TypedArrays to JavaScript.",
+                          "id": "js_float16_arrays",
+                          "entityType": "feature",
+                          "resources": [
+                            {
+                              "url": "https://github.com/tc39/proposal-float16array",
+                              "title": "Float16Array Proposal"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "float16array",
+                            "description_html": "Float16Array is a typed array of 16-bit floating point numbers.",
+                            "group": [
+                              "typed-arrays"
+                            ],
+                            "name": "Float16Array",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/global-object.html#sec-float16array"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/float16array/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2025-04-04",
+                              "support": {
+                                "chrome": "135",
+                                "chrome_android": "135",
+                                "edge": "135",
+                                "firefox": "129",
+                                "firefox_android": "129",
+                                "safari": "18.2",
+                                "safari_ios": "18.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 628,
+                        "id": "na",
+                        "index": 9,
+                        "percentageQuestion": 5.08,
+                        "percentageSurvey": 4.83,
+                        "entity": {
+                          "name": "Not applicable",
+                          "nameHtml": "Not applicable",
+                          "nameClean": "Not applicable",
+                          "description": "No use cases, no pain, no issues.",
+                          "descriptionHtml": "No use cases, no pain, no issues.",
+                          "descriptionClean": "No use cases, no pain, no issues.",
+                          "id": "na",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 635,
+                        "id": "no_answer",
+                        "index": 10,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 4.88
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

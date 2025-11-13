@@ -1,0 +1,439 @@
+{
+  "dataAPI": {
+    "surveys": {
+      "state_of_js": {
+        "js2025": {
+          "features": {
+            "async_features": {
+              "id": "async_features",
+              "comments": {
+                "currentEdition": {
+                  "count": 6
+                }
+              },
+              "combined": {
+                "allEditions": [
+                  {
+                    "_metadata": {
+                      "axis1Sort": {
+                        "property": "count",
+                        "order": "desc"
+                      },
+                      "limit": 50,
+                      "cutoff": 10
+                    },
+                    "editionId": "js2024",
+                    "year": 2024,
+                    "completion": {
+                      "count": 12241,
+                      "percentageSurvey": 87.34,
+                      "total": 14015
+                    },
+                    "buckets": [
+                      {
+                        "count": 5813,
+                        "id": "promise_all_settled",
+                        "index": 0,
+                        "percentageQuestion": 47.49,
+                        "percentageSurvey": 41.48,
+                        "entity": {
+                          "name": "`Promise.allSettled()`",
+                          "nameHtml": "<code>Promise.allSettled()</code>",
+                          "nameClean": "Promise.allSettled()",
+                          "description": "Returns a single Promise that fulfills when all of the input's promises fulfills.",
+                          "descriptionHtml": "Returns a single Promise that fulfills when all of the input's promises fulfills.",
+                          "descriptionClean": "Returns a single Promise that fulfills when all of the input's promises fulfills.",
+                          "id": "promise_all_settled",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const promises = [promise1, promise2];\n\nPromise.allSettled(promises).then((results) =>\n  results.forEach((result) => console.log(result.status)),\n);\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> promises = [promise1, promise2];\n\n<span class=\"hljs-title class_\">Promise</span>.<span class=\"hljs-title function_\">allSettled</span>(promises).<span class=\"hljs-title function_\">then</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">results</span>) =&gt;</span>\n  results.<span class=\"hljs-title function_\">forEach</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">result</span>) =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result.<span class=\"hljs-property\">status</span>)),\n);"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled"
+                          },
+                          "webFeature": {
+                            "id": "promise-allsettled",
+                            "description_html": "The <code>Promise.allSettled()</code> static method waits for an array of promises to settle (resolve or reject).",
+                            "group": [
+                              "promises"
+                            ],
+                            "name": "Promise.allSettled()",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-promise.allsettled"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/promise-allsettled/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-07-28",
+                              "support": {
+                                "chrome": "76",
+                                "chrome_android": "76",
+                                "edge": "79",
+                                "firefox": "71",
+                                "firefox_android": "79",
+                                "safari": "13",
+                                "safari_ios": "13"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 5302,
+                        "id": "promise_any",
+                        "index": 1,
+                        "percentageQuestion": 43.31,
+                        "percentageSurvey": 37.83,
+                        "entity": {
+                          "name": "`Promise.any()`",
+                          "nameHtml": "<code>Promise.any()</code>",
+                          "nameClean": "Promise.any()",
+                          "description": "Returns a single Promise that fulfills when any of the input's promises fulfills.",
+                          "descriptionHtml": "Returns a single Promise that fulfills when any of the input's promises fulfills.",
+                          "descriptionClean": "Returns a single Promise that fulfills when any of the input's promises fulfills.",
+                          "id": "promise_any",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const promises = [promise1, promise2, promise3];\n\nPromise.any(promises).then((value) => console.log(value));\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> promises = [promise1, promise2, promise3];\n\n<span class=\"hljs-title class_\">Promise</span>.<span class=\"hljs-title function_\">any</span>(promises).<span class=\"hljs-title function_\">then</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">value</span>) =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(value));"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-javascript_builtins_promise_any"
+                          },
+                          "webFeature": {
+                            "id": "promise-any",
+                            "description_html": "The <code>Promise.any()</code> static method returns a promise that fulfills as soon as the first of an iterable of promises fulfills, with that promise's value. Otherwise, it rejects with an <code>AggregateError</code> when all of the promises have rejected.",
+                            "group": [
+                              "promises"
+                            ],
+                            "name": "Promise.any()",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-promise.any"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/promise-any/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-09-16",
+                              "support": {
+                                "chrome": "85",
+                                "chrome_android": "85",
+                                "edge": "85",
+                                "firefox": "79",
+                                "firefox_android": "79",
+                                "safari": "14",
+                                "safari_ios": "14"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 1855,
+                        "id": "promise_try",
+                        "index": 2,
+                        "percentageQuestion": 15.15,
+                        "percentageSurvey": 13.24,
+                        "entity": {
+                          "name": "`Promise.try()`",
+                          "nameHtml": "<code>Promise.try()</code>",
+                          "nameClean": "Promise.try()",
+                          "description": "Take a callback of any kind and wrap its result in a Promise.",
+                          "descriptionHtml": "Take a callback of any kind and wrap its result in a Promise.",
+                          "descriptionClean": "Take a callback of any kind and wrap its result in a Promise.",
+                          "id": "promise_try",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "function doSomething(action) {\n  return Promise.try(action)\n    .then((result) => console.log(result))\n    .catch((error) => console.error(error))\n    .finally(() => console.log(\"Done\"));\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">doSomething</span>(<span class=\"hljs-params\">action</span>) {\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-title class_\">Promise</span>.<span class=\"hljs-title function_\">try</span>(action)\n    .<span class=\"hljs-title function_\">then</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">result</span>) =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result))\n    .<span class=\"hljs-title function_\">catch</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">error</span>) =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error))\n    .<span class=\"hljs-title function_\">finally</span>(<span class=\"hljs-function\">() =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&quot;Done&quot;</span>));\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/try"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/javascript_builtins_promise_try"
+                          },
+                          "webFeature": {
+                            "id": "promise-try",
+                            "description_html": "The <code>Promise.try()</code> static method returns a promise that takes a callback of any kind (returns or throws, synchronously or asynchronously) and wraps its result in a <code>Promise</code>.",
+                            "group": [
+                              "promises"
+                            ],
+                            "name": "Promise.try()",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-promise.try"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/promise-try/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2025-01-07",
+                              "support": {
+                                "chrome": "128",
+                                "chrome_android": "128",
+                                "edge": "128",
+                                "firefox": "134",
+                                "firefox_android": "134",
+                                "safari": "18.2",
+                                "safari_ios": "18.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 13,
+                        "id": "top_level_await",
+                        "index": 3,
+                        "percentageQuestion": 0.11,
+                        "percentageSurvey": 0.09,
+                        "entity": {
+                          "name": "Top-level `await`",
+                          "nameHtml": "Top-level <code>await</code>",
+                          "nameClean": "Top-level await",
+                          "id": "top_level_await",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await"
+                          }
+                        }
+                      },
+                      {
+                        "count": 3842,
+                        "id": "na",
+                        "index": 4,
+                        "percentageQuestion": 31.39,
+                        "percentageSurvey": 27.41,
+                        "entity": {
+                          "name": "Not applicable",
+                          "nameHtml": "Not applicable",
+                          "nameClean": "Not applicable",
+                          "description": "No use cases, no pain, no issues.",
+                          "descriptionHtml": "No use cases, no pain, no issues.",
+                          "descriptionClean": "No use cases, no pain, no issues.",
+                          "id": "na",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 1774,
+                        "id": "no_answer",
+                        "index": 5,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 12.66
+                      }
+                    ]
+                  },
+                  {
+                    "_metadata": {
+                      "axis1Sort": {
+                        "property": "count",
+                        "order": "desc"
+                      },
+                      "limit": 50,
+                      "cutoff": 10
+                    },
+                    "editionId": "js2025",
+                    "year": 2025,
+                    "completion": {
+                      "count": 11506,
+                      "percentageSurvey": 88.49,
+                      "total": 13002
+                    },
+                    "buckets": [
+                      {
+                        "count": 6035,
+                        "id": "promise_all_settled",
+                        "index": 0,
+                        "percentageQuestion": 52.45,
+                        "percentageSurvey": 46.42,
+                        "entity": {
+                          "name": "`Promise.allSettled()`",
+                          "nameHtml": "<code>Promise.allSettled()</code>",
+                          "nameClean": "Promise.allSettled()",
+                          "description": "Returns a single Promise that fulfills when all of the input's promises fulfills.",
+                          "descriptionHtml": "Returns a single Promise that fulfills when all of the input's promises fulfills.",
+                          "descriptionClean": "Returns a single Promise that fulfills when all of the input's promises fulfills.",
+                          "id": "promise_all_settled",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const promises = [promise1, promise2];\n\nPromise.allSettled(promises).then((results) =>\n  results.forEach((result) => console.log(result.status)),\n);\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> promises = [promise1, promise2];\n\n<span class=\"hljs-title class_\">Promise</span>.<span class=\"hljs-title function_\">allSettled</span>(promises).<span class=\"hljs-title function_\">then</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">results</span>) =&gt;</span>\n  results.<span class=\"hljs-title function_\">forEach</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">result</span>) =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result.<span class=\"hljs-property\">status</span>)),\n);"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled"
+                          },
+                          "webFeature": {
+                            "id": "promise-allsettled",
+                            "description_html": "The <code>Promise.allSettled()</code> static method waits for an array of promises to settle (resolve or reject).",
+                            "group": [
+                              "promises"
+                            ],
+                            "name": "Promise.allSettled()",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-promise.allsettled"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/promise-allsettled/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-07-28",
+                              "support": {
+                                "chrome": "76",
+                                "chrome_android": "76",
+                                "edge": "79",
+                                "firefox": "71",
+                                "firefox_android": "79",
+                                "safari": "13",
+                                "safari_ios": "13"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 5386,
+                        "id": "promise_any",
+                        "index": 1,
+                        "percentageQuestion": 46.81,
+                        "percentageSurvey": 41.42,
+                        "entity": {
+                          "name": "`Promise.any()`",
+                          "nameHtml": "<code>Promise.any()</code>",
+                          "nameClean": "Promise.any()",
+                          "description": "Returns a single Promise that fulfills when any of the input's promises fulfills.",
+                          "descriptionHtml": "Returns a single Promise that fulfills when any of the input's promises fulfills.",
+                          "descriptionClean": "Returns a single Promise that fulfills when any of the input's promises fulfills.",
+                          "id": "promise_any",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const promises = [promise1, promise2, promise3];\n\nPromise.any(promises).then((value) => console.log(value));\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> promises = [promise1, promise2, promise3];\n\n<span class=\"hljs-title class_\">Promise</span>.<span class=\"hljs-title function_\">any</span>(promises).<span class=\"hljs-title function_\">then</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">value</span>) =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(value));"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-javascript_builtins_promise_any"
+                          },
+                          "webFeature": {
+                            "id": "promise-any",
+                            "description_html": "The <code>Promise.any()</code> static method returns a promise that fulfills as soon as the first of an iterable of promises fulfills, with that promise's value. Otherwise, it rejects with an <code>AggregateError</code> when all of the promises have rejected.",
+                            "group": [
+                              "promises"
+                            ],
+                            "name": "Promise.any()",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-promise.any"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/promise-any/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-09-16",
+                              "support": {
+                                "chrome": "85",
+                                "chrome_android": "85",
+                                "edge": "85",
+                                "firefox": "79",
+                                "firefox_android": "79",
+                                "safari": "14",
+                                "safari_ios": "14"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 1838,
+                        "id": "promise_try",
+                        "index": 2,
+                        "percentageQuestion": 15.97,
+                        "percentageSurvey": 14.14,
+                        "entity": {
+                          "name": "`Promise.try()`",
+                          "nameHtml": "<code>Promise.try()</code>",
+                          "nameClean": "Promise.try()",
+                          "description": "Take a callback of any kind and wrap its result in a Promise.",
+                          "descriptionHtml": "Take a callback of any kind and wrap its result in a Promise.",
+                          "descriptionClean": "Take a callback of any kind and wrap its result in a Promise.",
+                          "id": "promise_try",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "function doSomething(action) {\n  return Promise.try(action)\n    .then((result) => console.log(result))\n    .catch((error) => console.error(error))\n    .finally(() => console.log(\"Done\"));\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">doSomething</span>(<span class=\"hljs-params\">action</span>) {\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-title class_\">Promise</span>.<span class=\"hljs-title function_\">try</span>(action)\n    .<span class=\"hljs-title function_\">then</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">result</span>) =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result))\n    .<span class=\"hljs-title function_\">catch</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">error</span>) =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error))\n    .<span class=\"hljs-title function_\">finally</span>(<span class=\"hljs-function\">() =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&quot;Done&quot;</span>));\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/try"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/javascript_builtins_promise_try"
+                          },
+                          "webFeature": {
+                            "id": "promise-try",
+                            "description_html": "The <code>Promise.try()</code> static method returns a promise that takes a callback of any kind (returns or throws, synchronously or asynchronously) and wraps its result in a <code>Promise</code>.",
+                            "group": [
+                              "promises"
+                            ],
+                            "name": "Promise.try()",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-promise.try"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/promise-try/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2025-01-07",
+                              "support": {
+                                "chrome": "128",
+                                "chrome_android": "128",
+                                "edge": "128",
+                                "firefox": "134",
+                                "firefox_android": "134",
+                                "safari": "18.2",
+                                "safari_ios": "18.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 3186,
+                        "id": "na",
+                        "index": 3,
+                        "percentageQuestion": 27.69,
+                        "percentageSurvey": 24.5,
+                        "entity": {
+                          "name": "Not applicable",
+                          "nameHtml": "Not applicable",
+                          "nameClean": "Not applicable",
+                          "description": "No use cases, no pain, no issues.",
+                          "descriptionHtml": "No use cases, no pain, no issues.",
+                          "descriptionClean": "No use cases, no pain, no issues.",
+                          "id": "na",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 1496,
+                        "id": "no_answer",
+                        "index": 4,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 11.51
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

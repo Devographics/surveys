@@ -1,0 +1,82 @@
+query {
+  surveys {
+    state_of_js {
+      js2025 {
+        libraries {
+          tools_arrows: _items {
+            id
+            _metadata {
+              sectionId
+            }
+            entity {
+              name
+              nameClean
+              nameHtml
+              alias
+              entityType
+              description
+              descriptionClean
+              descriptionHtml
+              homepage {
+                url
+              }
+              caniuse {
+                name
+                url
+              }
+              mdn {
+                locale
+                url
+                title
+                summary
+              }
+              example {
+                label
+                language
+                code
+                codeHighlighted
+              }
+            }
+            comments {
+              currentEdition {
+                count
+              }
+            }
+            responses(facet: _sentiment) {
+              allEditions {
+                year
+                ratios {
+                  awareness
+                  interest
+                  usage
+                  retention
+                  positivity
+                  positivityRelative
+                  appreciation
+                }
+                buckets {
+                  count
+                  id
+                  facetBuckets {
+                    count
+                    id
+                    percentageBucket
+                    percentageQuestion
+                    percentageSurvey
+                  }
+                  percentageQuestion
+                  percentageSurvey
+                }
+                completion {
+                  count
+                  percentageSurvey
+                  total
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

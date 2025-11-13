@@ -1,0 +1,810 @@
+{
+  "dataAPI": {
+    "surveys": {
+      "state_of_js": {
+        "js2025": {
+          "features": {
+            "set_features": {
+              "id": "set_features",
+              "comments": {
+                "currentEdition": {
+                  "count": 24
+                }
+              },
+              "combined": {
+                "allEditions": [
+                  {
+                    "_metadata": {
+                      "axis1Sort": {
+                        "property": "count",
+                        "order": "desc"
+                      },
+                      "limit": 50,
+                      "cutoff": 10
+                    },
+                    "editionId": "js2024",
+                    "year": 2024,
+                    "completion": {
+                      "count": 11379,
+                      "percentageSurvey": 81.19,
+                      "total": 14015
+                    },
+                    "buckets": [
+                      {
+                        "count": 1800,
+                        "id": "set_union",
+                        "index": 0,
+                        "percentageQuestion": 15.82,
+                        "percentageSurvey": 12.84,
+                        "entity": {
+                          "name": "`set.union()`",
+                          "nameHtml": "<code>set.union()</code>",
+                          "nameClean": "set.union()",
+                          "description": "Returns a new set containing elements of both this set and the given set.",
+                          "descriptionHtml": "Returns a new set containing elements of both this set and the given set.",
+                          "descriptionClean": "Returns a new set containing elements of both this set and the given set.",
+                          "id": "set_union",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const evens = new Set([2, 4, 6, 8]);\nconst squares = new Set([1, 4, 9]);\nconsole.log(evens.union(squares)); // Set(6) { 2, 4, 6, 8, 1, 9 }\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> evens = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">6</span>, <span class=\"hljs-number\">8</span>]);\n<span class=\"hljs-keyword\">const</span> squares = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(evens.<span class=\"hljs-title function_\">union</span>(squares)); <span class=\"hljs-comment\">// Set(6) { 2, 4, 6, 8, 1, 9 }</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/union"
+                          },
+                          "webFeature": {
+                            "id": "set-methods",
+                            "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                            "group": [
+                              "sets"
+                            ],
+                            "name": "Set methods",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-properties-of-the-set-prototype-object"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/set-methods/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-06-11",
+                              "support": {
+                                "chrome": "122",
+                                "chrome_android": "122",
+                                "edge": "122",
+                                "firefox": "127",
+                                "firefox_android": "127",
+                                "safari": "17",
+                                "safari_ios": "17"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 1715,
+                        "id": "set_intersection",
+                        "index": 1,
+                        "percentageQuestion": 15.07,
+                        "percentageSurvey": 12.24,
+                        "entity": {
+                          "name": "`set.intersection()`",
+                          "nameHtml": "<code>set.intersection()</code>",
+                          "nameClean": "set.intersection()",
+                          "description": "Returns a new set containing elements in both this set and the given set.",
+                          "descriptionHtml": "Returns a new set containing elements in both this set and the given set.",
+                          "descriptionClean": "Returns a new set containing elements in both this set and the given set.",
+                          "id": "set_intersection",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const odds = new Set([1, 3, 5, 7, 9]);\nconst squares = new Set([1, 4, 9]);\nconsole.log(odds.intersection(squares)); // Set(2) { 1, 9 }\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> odds = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">3</span>, <span class=\"hljs-number\">5</span>, <span class=\"hljs-number\">7</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-keyword\">const</span> squares = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(odds.<span class=\"hljs-title function_\">intersection</span>(squares)); <span class=\"hljs-comment\">// Set(2) { 1, 9 }</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/intersection"
+                          },
+                          "webFeature": {
+                            "id": "set-methods",
+                            "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                            "group": [
+                              "sets"
+                            ],
+                            "name": "Set methods",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-properties-of-the-set-prototype-object"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/set-methods/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-06-11",
+                              "support": {
+                                "chrome": "122",
+                                "chrome_android": "122",
+                                "edge": "122",
+                                "firefox": "127",
+                                "firefox_android": "127",
+                                "safari": "17",
+                                "safari_ios": "17"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 1687,
+                        "id": "set_difference",
+                        "index": 2,
+                        "percentageQuestion": 14.83,
+                        "percentageSurvey": 12.04,
+                        "entity": {
+                          "name": "`set.difference()`",
+                          "nameHtml": "<code>set.difference()</code>",
+                          "nameClean": "set.difference()",
+                          "description": "Returns a new set containing elements in this set but not in the given set.",
+                          "descriptionHtml": "Returns a new set containing elements in this set but not in the given set.",
+                          "descriptionClean": "Returns a new set containing elements in this set but not in the given set.",
+                          "id": "set_difference",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const odds = new Set([1, 3, 5, 7, 9]);\nconst squares = new Set([1, 4, 9]);\nconsole.log(odds.difference(squares)); // Set(3) { 3, 5, 7 }\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> odds = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">3</span>, <span class=\"hljs-number\">5</span>, <span class=\"hljs-number\">7</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-keyword\">const</span> squares = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(odds.<span class=\"hljs-title function_\">difference</span>(squares)); <span class=\"hljs-comment\">// Set(3) { 3, 5, 7 }</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/difference"
+                          },
+                          "webFeature": {
+                            "id": "set-methods",
+                            "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                            "group": [
+                              "sets"
+                            ],
+                            "name": "Set methods",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-properties-of-the-set-prototype-object"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/set-methods/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-06-11",
+                              "support": {
+                                "chrome": "122",
+                                "chrome_android": "122",
+                                "edge": "122",
+                                "firefox": "127",
+                                "firefox_android": "127",
+                                "safari": "17",
+                                "safari_ios": "17"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 877,
+                        "id": "set_is_subset_of",
+                        "index": 3,
+                        "percentageQuestion": 7.71,
+                        "percentageSurvey": 6.26,
+                        "entity": {
+                          "name": "`set.isSubsetOf()`",
+                          "nameHtml": "<code>set.isSubsetOf()</code>",
+                          "nameClean": "set.isSubsetOf()",
+                          "description": "Returns a boolean indicating if all elements of this set are in the given set.",
+                          "descriptionHtml": "Returns a boolean indicating if all elements of this set are in the given set.",
+                          "descriptionClean": "Returns a boolean indicating if all elements of this set are in the given set.",
+                          "id": "set_is_subset_of",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const fours = new Set([4, 8, 12, 16]);\nconst evens = new Set([2, 4, 6, 8, 10, 12, 14, 16, 18]);\nconsole.log(fours.isSubsetOf(evens)); // true\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> fours = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">8</span>, <span class=\"hljs-number\">12</span>, <span class=\"hljs-number\">16</span>]);\n<span class=\"hljs-keyword\">const</span> evens = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">6</span>, <span class=\"hljs-number\">8</span>, <span class=\"hljs-number\">10</span>, <span class=\"hljs-number\">12</span>, <span class=\"hljs-number\">14</span>, <span class=\"hljs-number\">16</span>, <span class=\"hljs-number\">18</span>]);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(fours.<span class=\"hljs-title function_\">isSubsetOf</span>(evens)); <span class=\"hljs-comment\">// true</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isSubsetOf"
+                          },
+                          "webFeature": {
+                            "id": "set-methods",
+                            "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                            "group": [
+                              "sets"
+                            ],
+                            "name": "Set methods",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-properties-of-the-set-prototype-object"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/set-methods/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-06-11",
+                              "support": {
+                                "chrome": "122",
+                                "chrome_android": "122",
+                                "edge": "122",
+                                "firefox": "127",
+                                "firefox_android": "127",
+                                "safari": "17",
+                                "safari_ios": "17"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 528,
+                        "id": "set_is_superset_of",
+                        "index": 4,
+                        "percentageQuestion": 4.64,
+                        "percentageSurvey": 3.77,
+                        "entity": {
+                          "name": "`set.isSupersetOf()`",
+                          "nameHtml": "<code>set.isSupersetOf()</code>",
+                          "nameClean": "set.isSupersetOf()",
+                          "description": "Returns a boolean indicating if all elements of the given set are in this set.",
+                          "descriptionHtml": "Returns a boolean indicating if all elements of the given set are in this set.",
+                          "descriptionClean": "Returns a boolean indicating if all elements of the given set are in this set.",
+                          "id": "set_is_superset_of",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const evens = new Set([2, 4, 6, 8, 10, 12, 14, 16, 18]);\nconst fours = new Set([4, 8, 12, 16]);\nconsole.log(evens.isSupersetOf(fours)); // true\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> evens = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">6</span>, <span class=\"hljs-number\">8</span>, <span class=\"hljs-number\">10</span>, <span class=\"hljs-number\">12</span>, <span class=\"hljs-number\">14</span>, <span class=\"hljs-number\">16</span>, <span class=\"hljs-number\">18</span>]);\n<span class=\"hljs-keyword\">const</span> fours = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">8</span>, <span class=\"hljs-number\">12</span>, <span class=\"hljs-number\">16</span>]);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(evens.<span class=\"hljs-title function_\">isSupersetOf</span>(fours)); <span class=\"hljs-comment\">// true</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isSupersetOf"
+                          },
+                          "webFeature": {
+                            "id": "set-methods",
+                            "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                            "group": [
+                              "sets"
+                            ],
+                            "name": "Set methods",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-properties-of-the-set-prototype-object"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/set-methods/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-06-11",
+                              "support": {
+                                "chrome": "122",
+                                "chrome_android": "122",
+                                "edge": "122",
+                                "firefox": "127",
+                                "firefox_android": "127",
+                                "safari": "17",
+                                "safari_ios": "17"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 364,
+                        "id": "set_symmetric_difference",
+                        "index": 5,
+                        "percentageQuestion": 3.2,
+                        "percentageSurvey": 2.6,
+                        "entity": {
+                          "name": "`set.symmetricDifference()`",
+                          "nameHtml": "<code>set.symmetricDifference()</code>",
+                          "nameClean": "set.symmetricDifference()",
+                          "description": "Returns a new set containing elements which are in either this set or the given set, but not in both.",
+                          "descriptionHtml": "Returns a new set containing elements which are in either this set or the given set, but not in both.",
+                          "descriptionClean": "Returns a new set containing elements which are in either this set or the given set, but not in both.",
+                          "id": "set_symmetric_difference",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const evens = new Set([2, 4, 6, 8]);\nconst squares = new Set([1, 4, 9]);\nconsole.log(evens.symmetricDifference(squares)); // Set(5) { 2, 6, 8, 1, 9 }\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> evens = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">6</span>, <span class=\"hljs-number\">8</span>]);\n<span class=\"hljs-keyword\">const</span> squares = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(evens.<span class=\"hljs-title function_\">symmetricDifference</span>(squares)); <span class=\"hljs-comment\">// Set(5) { 2, 6, 8, 1, 9 }</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/symmetricDifference"
+                          },
+                          "webFeature": {
+                            "id": "set-methods",
+                            "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                            "group": [
+                              "sets"
+                            ],
+                            "name": "Set methods",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-properties-of-the-set-prototype-object"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/set-methods/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-06-11",
+                              "support": {
+                                "chrome": "122",
+                                "chrome_android": "122",
+                                "edge": "122",
+                                "firefox": "127",
+                                "firefox_android": "127",
+                                "safari": "17",
+                                "safari_ios": "17"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 295,
+                        "id": "set_is_disjoint_from",
+                        "index": 6,
+                        "percentageQuestion": 2.59,
+                        "percentageSurvey": 2.1,
+                        "entity": {
+                          "name": "`set.isDisjointFrom()`",
+                          "nameHtml": "<code>set.isDisjointFrom()</code>",
+                          "nameClean": "set.isDisjointFrom()",
+                          "description": "Returns a boolean indicating if this set has no elements in common with the given set.",
+                          "descriptionHtml": "Returns a boolean indicating if this set has no elements in common with the given set.",
+                          "descriptionClean": "Returns a boolean indicating if this set has no elements in common with the given set.",
+                          "id": "set_is_disjoint_from",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const primes = new Set([2, 3, 5, 7, 11, 13, 17, 19]);\nconst squares = new Set([1, 4, 9, 16]);\nconsole.log(primes.isDisjointFrom(squares)); // true\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> primes = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">3</span>, <span class=\"hljs-number\">5</span>, <span class=\"hljs-number\">7</span>, <span class=\"hljs-number\">11</span>, <span class=\"hljs-number\">13</span>, <span class=\"hljs-number\">17</span>, <span class=\"hljs-number\">19</span>]);\n<span class=\"hljs-keyword\">const</span> squares = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">9</span>, <span class=\"hljs-number\">16</span>]);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(primes.<span class=\"hljs-title function_\">isDisjointFrom</span>(squares)); <span class=\"hljs-comment\">// true</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isDisjointFrom"
+                          },
+                          "webFeature": {
+                            "id": "set-methods",
+                            "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                            "group": [
+                              "sets"
+                            ],
+                            "name": "Set methods",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-properties-of-the-set-prototype-object"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/set-methods/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-06-11",
+                              "support": {
+                                "chrome": "122",
+                                "chrome_android": "122",
+                                "edge": "122",
+                                "firefox": "127",
+                                "firefox_android": "127",
+                                "safari": "17",
+                                "safari_ios": "17"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 8632,
+                        "id": "na",
+                        "index": 7,
+                        "percentageQuestion": 75.86,
+                        "percentageSurvey": 61.59,
+                        "entity": {
+                          "name": "Not applicable",
+                          "nameHtml": "Not applicable",
+                          "nameClean": "Not applicable",
+                          "description": "No use cases, no pain, no issues.",
+                          "descriptionHtml": "No use cases, no pain, no issues.",
+                          "descriptionClean": "No use cases, no pain, no issues.",
+                          "id": "na",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 2636,
+                        "id": "no_answer",
+                        "index": 8,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 18.81
+                      }
+                    ]
+                  },
+                  {
+                    "_metadata": {
+                      "axis1Sort": {
+                        "property": "count",
+                        "order": "desc"
+                      },
+                      "limit": 50,
+                      "cutoff": 10
+                    },
+                    "editionId": "js2025",
+                    "year": 2025,
+                    "completion": {
+                      "count": 10913,
+                      "percentageSurvey": 83.93,
+                      "total": 13002
+                    },
+                    "buckets": [
+                      {
+                        "count": 2561,
+                        "id": "set_union",
+                        "index": 0,
+                        "percentageQuestion": 23.47,
+                        "percentageSurvey": 19.7,
+                        "entity": {
+                          "name": "`set.union()`",
+                          "nameHtml": "<code>set.union()</code>",
+                          "nameClean": "set.union()",
+                          "description": "Returns a new set containing elements of both this set and the given set.",
+                          "descriptionHtml": "Returns a new set containing elements of both this set and the given set.",
+                          "descriptionClean": "Returns a new set containing elements of both this set and the given set.",
+                          "id": "set_union",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const evens = new Set([2, 4, 6, 8]);\nconst squares = new Set([1, 4, 9]);\nconsole.log(evens.union(squares)); // Set(6) { 2, 4, 6, 8, 1, 9 }\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> evens = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">6</span>, <span class=\"hljs-number\">8</span>]);\n<span class=\"hljs-keyword\">const</span> squares = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(evens.<span class=\"hljs-title function_\">union</span>(squares)); <span class=\"hljs-comment\">// Set(6) { 2, 4, 6, 8, 1, 9 }</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/union"
+                          },
+                          "webFeature": {
+                            "id": "set-methods",
+                            "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                            "group": [
+                              "sets"
+                            ],
+                            "name": "Set methods",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-properties-of-the-set-prototype-object"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/set-methods/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-06-11",
+                              "support": {
+                                "chrome": "122",
+                                "chrome_android": "122",
+                                "edge": "122",
+                                "firefox": "127",
+                                "firefox_android": "127",
+                                "safari": "17",
+                                "safari_ios": "17"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 2487,
+                        "id": "set_intersection",
+                        "index": 1,
+                        "percentageQuestion": 22.79,
+                        "percentageSurvey": 19.13,
+                        "entity": {
+                          "name": "`set.intersection()`",
+                          "nameHtml": "<code>set.intersection()</code>",
+                          "nameClean": "set.intersection()",
+                          "description": "Returns a new set containing elements in both this set and the given set.",
+                          "descriptionHtml": "Returns a new set containing elements in both this set and the given set.",
+                          "descriptionClean": "Returns a new set containing elements in both this set and the given set.",
+                          "id": "set_intersection",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const odds = new Set([1, 3, 5, 7, 9]);\nconst squares = new Set([1, 4, 9]);\nconsole.log(odds.intersection(squares)); // Set(2) { 1, 9 }\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> odds = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">3</span>, <span class=\"hljs-number\">5</span>, <span class=\"hljs-number\">7</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-keyword\">const</span> squares = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(odds.<span class=\"hljs-title function_\">intersection</span>(squares)); <span class=\"hljs-comment\">// Set(2) { 1, 9 }</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/intersection"
+                          },
+                          "webFeature": {
+                            "id": "set-methods",
+                            "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                            "group": [
+                              "sets"
+                            ],
+                            "name": "Set methods",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-properties-of-the-set-prototype-object"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/set-methods/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-06-11",
+                              "support": {
+                                "chrome": "122",
+                                "chrome_android": "122",
+                                "edge": "122",
+                                "firefox": "127",
+                                "firefox_android": "127",
+                                "safari": "17",
+                                "safari_ios": "17"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 2243,
+                        "id": "set_difference",
+                        "index": 2,
+                        "percentageQuestion": 20.55,
+                        "percentageSurvey": 17.25,
+                        "entity": {
+                          "name": "`set.difference()`",
+                          "nameHtml": "<code>set.difference()</code>",
+                          "nameClean": "set.difference()",
+                          "description": "Returns a new set containing elements in this set but not in the given set.",
+                          "descriptionHtml": "Returns a new set containing elements in this set but not in the given set.",
+                          "descriptionClean": "Returns a new set containing elements in this set but not in the given set.",
+                          "id": "set_difference",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const odds = new Set([1, 3, 5, 7, 9]);\nconst squares = new Set([1, 4, 9]);\nconsole.log(odds.difference(squares)); // Set(3) { 3, 5, 7 }\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> odds = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">3</span>, <span class=\"hljs-number\">5</span>, <span class=\"hljs-number\">7</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-keyword\">const</span> squares = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(odds.<span class=\"hljs-title function_\">difference</span>(squares)); <span class=\"hljs-comment\">// Set(3) { 3, 5, 7 }</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/difference"
+                          },
+                          "webFeature": {
+                            "id": "set-methods",
+                            "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                            "group": [
+                              "sets"
+                            ],
+                            "name": "Set methods",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-properties-of-the-set-prototype-object"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/set-methods/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-06-11",
+                              "support": {
+                                "chrome": "122",
+                                "chrome_android": "122",
+                                "edge": "122",
+                                "firefox": "127",
+                                "firefox_android": "127",
+                                "safari": "17",
+                                "safari_ios": "17"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 1216,
+                        "id": "set_is_subset_of",
+                        "index": 3,
+                        "percentageQuestion": 11.14,
+                        "percentageSurvey": 9.35,
+                        "entity": {
+                          "name": "`set.isSubsetOf()`",
+                          "nameHtml": "<code>set.isSubsetOf()</code>",
+                          "nameClean": "set.isSubsetOf()",
+                          "description": "Returns a boolean indicating if all elements of this set are in the given set.",
+                          "descriptionHtml": "Returns a boolean indicating if all elements of this set are in the given set.",
+                          "descriptionClean": "Returns a boolean indicating if all elements of this set are in the given set.",
+                          "id": "set_is_subset_of",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const fours = new Set([4, 8, 12, 16]);\nconst evens = new Set([2, 4, 6, 8, 10, 12, 14, 16, 18]);\nconsole.log(fours.isSubsetOf(evens)); // true\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> fours = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">8</span>, <span class=\"hljs-number\">12</span>, <span class=\"hljs-number\">16</span>]);\n<span class=\"hljs-keyword\">const</span> evens = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">6</span>, <span class=\"hljs-number\">8</span>, <span class=\"hljs-number\">10</span>, <span class=\"hljs-number\">12</span>, <span class=\"hljs-number\">14</span>, <span class=\"hljs-number\">16</span>, <span class=\"hljs-number\">18</span>]);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(fours.<span class=\"hljs-title function_\">isSubsetOf</span>(evens)); <span class=\"hljs-comment\">// true</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isSubsetOf"
+                          },
+                          "webFeature": {
+                            "id": "set-methods",
+                            "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                            "group": [
+                              "sets"
+                            ],
+                            "name": "Set methods",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-properties-of-the-set-prototype-object"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/set-methods/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-06-11",
+                              "support": {
+                                "chrome": "122",
+                                "chrome_android": "122",
+                                "edge": "122",
+                                "firefox": "127",
+                                "firefox_android": "127",
+                                "safari": "17",
+                                "safari_ios": "17"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 723,
+                        "id": "set_is_superset_of",
+                        "index": 4,
+                        "percentageQuestion": 6.63,
+                        "percentageSurvey": 5.56,
+                        "entity": {
+                          "name": "`set.isSupersetOf()`",
+                          "nameHtml": "<code>set.isSupersetOf()</code>",
+                          "nameClean": "set.isSupersetOf()",
+                          "description": "Returns a boolean indicating if all elements of the given set are in this set.",
+                          "descriptionHtml": "Returns a boolean indicating if all elements of the given set are in this set.",
+                          "descriptionClean": "Returns a boolean indicating if all elements of the given set are in this set.",
+                          "id": "set_is_superset_of",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const evens = new Set([2, 4, 6, 8, 10, 12, 14, 16, 18]);\nconst fours = new Set([4, 8, 12, 16]);\nconsole.log(evens.isSupersetOf(fours)); // true\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> evens = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">6</span>, <span class=\"hljs-number\">8</span>, <span class=\"hljs-number\">10</span>, <span class=\"hljs-number\">12</span>, <span class=\"hljs-number\">14</span>, <span class=\"hljs-number\">16</span>, <span class=\"hljs-number\">18</span>]);\n<span class=\"hljs-keyword\">const</span> fours = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">8</span>, <span class=\"hljs-number\">12</span>, <span class=\"hljs-number\">16</span>]);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(evens.<span class=\"hljs-title function_\">isSupersetOf</span>(fours)); <span class=\"hljs-comment\">// true</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isSupersetOf"
+                          },
+                          "webFeature": {
+                            "id": "set-methods",
+                            "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                            "group": [
+                              "sets"
+                            ],
+                            "name": "Set methods",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-properties-of-the-set-prototype-object"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/set-methods/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-06-11",
+                              "support": {
+                                "chrome": "122",
+                                "chrome_android": "122",
+                                "edge": "122",
+                                "firefox": "127",
+                                "firefox_android": "127",
+                                "safari": "17",
+                                "safari_ios": "17"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 500,
+                        "id": "set_symmetric_difference",
+                        "index": 5,
+                        "percentageQuestion": 4.58,
+                        "percentageSurvey": 3.85,
+                        "entity": {
+                          "name": "`set.symmetricDifference()`",
+                          "nameHtml": "<code>set.symmetricDifference()</code>",
+                          "nameClean": "set.symmetricDifference()",
+                          "description": "Returns a new set containing elements which are in either this set or the given set, but not in both.",
+                          "descriptionHtml": "Returns a new set containing elements which are in either this set or the given set, but not in both.",
+                          "descriptionClean": "Returns a new set containing elements which are in either this set or the given set, but not in both.",
+                          "id": "set_symmetric_difference",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const evens = new Set([2, 4, 6, 8]);\nconst squares = new Set([1, 4, 9]);\nconsole.log(evens.symmetricDifference(squares)); // Set(5) { 2, 6, 8, 1, 9 }\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> evens = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">6</span>, <span class=\"hljs-number\">8</span>]);\n<span class=\"hljs-keyword\">const</span> squares = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">9</span>]);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(evens.<span class=\"hljs-title function_\">symmetricDifference</span>(squares)); <span class=\"hljs-comment\">// Set(5) { 2, 6, 8, 1, 9 }</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/symmetricDifference"
+                          },
+                          "webFeature": {
+                            "id": "set-methods",
+                            "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                            "group": [
+                              "sets"
+                            ],
+                            "name": "Set methods",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-properties-of-the-set-prototype-object"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/set-methods/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-06-11",
+                              "support": {
+                                "chrome": "122",
+                                "chrome_android": "122",
+                                "edge": "122",
+                                "firefox": "127",
+                                "firefox_android": "127",
+                                "safari": "17",
+                                "safari_ios": "17"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 420,
+                        "id": "set_is_disjoint_from",
+                        "index": 6,
+                        "percentageQuestion": 3.85,
+                        "percentageSurvey": 3.23,
+                        "entity": {
+                          "name": "`set.isDisjointFrom()`",
+                          "nameHtml": "<code>set.isDisjointFrom()</code>",
+                          "nameClean": "set.isDisjointFrom()",
+                          "description": "Returns a boolean indicating if this set has no elements in common with the given set.",
+                          "descriptionHtml": "Returns a boolean indicating if this set has no elements in common with the given set.",
+                          "descriptionClean": "Returns a boolean indicating if this set has no elements in common with the given set.",
+                          "id": "set_is_disjoint_from",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const primes = new Set([2, 3, 5, 7, 11, 13, 17, 19]);\nconst squares = new Set([1, 4, 9, 16]);\nconsole.log(primes.isDisjointFrom(squares)); // true\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> primes = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">3</span>, <span class=\"hljs-number\">5</span>, <span class=\"hljs-number\">7</span>, <span class=\"hljs-number\">11</span>, <span class=\"hljs-number\">13</span>, <span class=\"hljs-number\">17</span>, <span class=\"hljs-number\">19</span>]);\n<span class=\"hljs-keyword\">const</span> squares = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">9</span>, <span class=\"hljs-number\">16</span>]);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(primes.<span class=\"hljs-title function_\">isDisjointFrom</span>(squares)); <span class=\"hljs-comment\">// true</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isDisjointFrom"
+                          },
+                          "webFeature": {
+                            "id": "set-methods",
+                            "description_html": "The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.",
+                            "group": [
+                              "sets"
+                            ],
+                            "name": "Set methods",
+                            "spec": [
+                              "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-properties-of-the-set-prototype-object"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/set-methods/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-06-11",
+                              "support": {
+                                "chrome": "122",
+                                "chrome_android": "122",
+                                "edge": "122",
+                                "firefox": "127",
+                                "firefox_android": "127",
+                                "safari": "17",
+                                "safari_ios": "17"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 7328,
+                        "id": "na",
+                        "index": 7,
+                        "percentageQuestion": 67.15,
+                        "percentageSurvey": 56.36,
+                        "entity": {
+                          "name": "Not applicable",
+                          "nameHtml": "Not applicable",
+                          "nameClean": "Not applicable",
+                          "description": "No use cases, no pain, no issues.",
+                          "descriptionHtml": "No use cases, no pain, no issues.",
+                          "descriptionClean": "No use cases, no pain, no issues.",
+                          "id": "na",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 2089,
+                        "id": "no_answer",
+                        "index": 8,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 16.07
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
