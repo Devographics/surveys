@@ -2,8 +2,8 @@ query {
   surveys {
     state_of_html {
       html2025 {
-        performance {
-          performance_pain_points: performance_pain_points {
+        interactivity {
+          interactivity_pain_points_interop3: interactivity_pain_points {
             id
             comments {
               currentEdition {
@@ -16,11 +16,13 @@ query {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
+                enableBucketNesting: false
               }
               bucketsFilter: {
                 nin: [
                   limitations
                   dx
+                  interop
                 ]
               }
             ) {

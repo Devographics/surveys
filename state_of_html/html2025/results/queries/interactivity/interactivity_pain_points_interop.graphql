@@ -3,7 +3,7 @@ query {
     state_of_html {
       html2025 {
         interactivity {
-          interactivity_pain_points_interop_1: interactivity_pain_points {
+          interactivity_pain_points_interop: interactivity_pain_points {
             id
             comments {
               currentEdition {
@@ -11,21 +11,12 @@ query {
               }
             }
             freeform(
-              filters: {
-                interactivity__interactivity_pain_points: {
-                  in: [
-                    interop
-                  ]
-                }
-              }
               parameters: {
                 showNoAnswer: true
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-              }
-              bucketsFilter: {
-                nin: interop
+                enableBucketNesting: false
               }
             ) {
               allEditions(editionCount: 2) {

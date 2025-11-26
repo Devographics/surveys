@@ -1,0 +1,191 @@
+{
+  "dataAPI": {
+    "surveys": {
+      "state_of_html": {
+        "html2025": {
+          "performance": {
+            "performance_pain_points_features": {
+              "id": "performance_pain_points",
+              "comments": {
+                "currentEdition": {
+                  "count": 4
+                }
+              },
+              "freeform": {
+                "allEditions": [
+                  {
+                    "_metadata": {
+                      "axis1Sort": {
+                        "property": "count",
+                        "order": "desc"
+                      },
+                      "limit": 20,
+                      "cutoff": 10
+                    },
+                    "editionId": "html2025",
+                    "year": 2025,
+                    "completion": {
+                      "count": 355,
+                      "percentageSurvey": 5.7,
+                      "total": 6223
+                    },
+                    "buckets": [
+                      {
+                        "count": 26,
+                        "id": "lazy_loading",
+                        "index": 0,
+                        "percentageQuestion": 7.32,
+                        "percentageSurvey": 0.42,
+                        "entity": {
+                          "name": "`loading=\"lazy\"`",
+                          "nameHtml": "<code>loading=\"lazy\"</code>",
+                          "nameClean": "loading=\"lazy\"",
+                          "description": "Load certain resources only when needed.",
+                          "descriptionHtml": "Load certain resources only when needed.",
+                          "descriptionClean": "Load certain resources only when needed.",
+                          "id": "lazy_loading",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<img src=\"picture.jpg\" loading=\"lazy\" />\n<iframe src=\"supplementary.html\" loading=\"lazy\"></iframe>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">img</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;picture.jpg&quot;</span> <span class=\"hljs-attr\">loading</span>=<span class=\"hljs-string\">&quot;lazy&quot;</span> /&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">iframe</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;supplementary.html&quot;</span> <span class=\"hljs-attr\">loading</span>=<span class=\"hljs-string\">&quot;lazy&quot;</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">iframe</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Lazy_loading"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/loading-lazy-attr"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#lazy-loading-attributes",
+                              "title": "HTML Standard"
+                            },
+                            {
+                              "url": "https://web.dev/browser-level-image-lazy-loading/",
+                              "title": "Browser-level image lazy loading for the web"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "loading-lazy",
+                            "description_html": "The <code>loading=\"lazy\"</code> attribute for <code>&#x3C;img></code> and <code>&#x3C;iframe></code> elements blocks loading the external resource until the user scrolls to that element's part of the page.",
+                            "name": "Lazy-loading images and iframes",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#lazy-loading-attributes"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/loading-lazy/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2023-12-19",
+                              "support": {
+                                "chrome": "77",
+                                "chrome_android": "77",
+                                "edge": "79",
+                                "firefox": "121",
+                                "firefox_android": "121",
+                                "safari": "16.4",
+                                "safari_ios": "16.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 16,
+                        "id": "resource_hints",
+                        "index": 1,
+                        "percentageQuestion": 4.51,
+                        "percentageSurvey": 0.26,
+                        "entity": {
+                          "name": "Resource Hints",
+                          "nameHtml": "Resource Hints",
+                          "nameClean": "Resource Hints",
+                          "description": "Begin work on certain resources early to improve performance.\nSyntax: `<link rel=\"pre* | dns-prefetch | modulepreload\">`.",
+                          "descriptionHtml": "Begin work on certain resources early to improve performance.\nSyntax: <code>&lt;link rel=\"pre* | dns-prefetch | modulepreload\"&gt;</code>.",
+                          "descriptionClean": "Begin work on certain resources early to improve performance.Syntax: <link rel=\"pre* | dns-prefetch | modulepreload\">.",
+                          "id": "resource_hints",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<link rel=\"preload\" href=\"picture.jpg\" />\n<link rel=\"dns-prefetch\" href=\"https://fonts.googleapis.com/\" />",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">link</span> <span class=\"hljs-attr\">rel</span>=<span class=\"hljs-string\">&quot;preload&quot;</span> <span class=\"hljs-attr\">href</span>=<span class=\"hljs-string\">&quot;picture.jpg&quot;</span> /&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">link</span> <span class=\"hljs-attr\">rel</span>=<span class=\"hljs-string\">&quot;dns-prefetch&quot;</span> <span class=\"hljs-attr\">href</span>=<span class=\"hljs-string\">&quot;https://fonts.googleapis.com/&quot;</span> /&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Performance/Best_practices"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://blog.logrocket.com/understanding-css-preload-other-resource-hints/",
+                              "title": "Understanding CSS preload and other resource hints - LogRocket Blog"
+                            },
+                            {
+                              "url": "https://medium.com/@luisvieira_gmr/html5-prefetch-1e54f6dda15d",
+                              "title": "Resource Hints"
+                            }
+                          ]
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 7,
+                            "id": "preload",
+                            "percentageQuestion": 1.97,
+                            "percentageSurvey": 0.11,
+                            "entity": {
+                              "name": "Preload",
+                              "nameHtml": "Preload",
+                              "nameClean": "Preload",
+                              "description": "Pain points related to using `<link rel=\"preload\">` to fetch resources declaratively.",
+                              "descriptionHtml": "Pain points related to using <code>&lt;link rel=\"preload\"&gt;</code> to fetch resources declaratively.",
+                              "descriptionClean": "Pain points related to using <link rel=\"preload\"> to fetch resources declaratively.",
+                              "id": "preload",
+                              "parentId": "resource_hints",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 4,
+                            "id": "prefetch",
+                            "percentageQuestion": 1.13,
+                            "percentageSurvey": 0.06,
+                            "entity": {
+                              "name": "Prefetch",
+                              "nameHtml": "Prefetch",
+                              "nameClean": "Prefetch",
+                              "description": "Pain points related to using `<link rel=\"prefetch\">` or other prefetching mechanisms.",
+                              "descriptionHtml": "Pain points related to using <code>&lt;link rel=\"prefetch\"&gt;</code> or other prefetching mechanisms.",
+                              "descriptionClean": "Pain points related to using <link rel=\"prefetch\"> or other prefetching mechanisms.",
+                              "id": "prefetch",
+                              "parentId": "resource_hints",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 1,
+                            "id": "preconnect",
+                            "percentageQuestion": 0.28,
+                            "percentageSurvey": 0.02,
+                            "entity": {
+                              "name": "Preconnect",
+                              "nameHtml": "Preconnect",
+                              "nameClean": "Preconnect",
+                              "description": "Issues with using `<link rel=\"preconnect\">` to establish early connections.",
+                              "descriptionHtml": "Issues with using <code>&lt;link rel=\"preconnect\"&gt;</code> to establish early connections.",
+                              "descriptionClean": "Issues with using <link rel=\"preconnect\"> to establish early connections.",
+                              "id": "preconnect",
+                              "parentId": "resource_hints",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@ query {
   surveys {
     state_of_html {
       html2025 {
-        performance {
+        features {
           performance_pain_points: performance_pain_points {
             id
             comments {
@@ -16,12 +16,6 @@ query {
                 cutoff: 10
                 limit: 20
                 mergeOtherBuckets: true
-              }
-              bucketsFilter: {
-                nin: [
-                  limitations
-                  dx
-                ]
               }
             ) {
               allEditions(editionCount: 2) {

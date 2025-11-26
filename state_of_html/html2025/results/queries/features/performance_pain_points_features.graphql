@@ -2,8 +2,8 @@ query {
   surveys {
     state_of_html {
       html2025 {
-        performance {
-          performance_pain_points: performance_pain_points {
+        features {
+          performance_pain_points_features: performance_pain_points {
             id
             comments {
               currentEdition {
@@ -18,9 +18,8 @@ query {
                 mergeOtherBuckets: true
               }
               bucketsFilter: {
-                nin: [
-                  limitations
-                  dx
+                hasTags: [
+                  features
                 ]
               }
             ) {

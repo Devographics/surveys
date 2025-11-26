@@ -2,8 +2,8 @@ query {
   surveys {
     state_of_html {
       html2025 {
-        performance {
-          performance_pain_points: performance_pain_points {
+        web_components {
+          web_components_other_pain_points_limitations_1: web_components_other_pain_points {
             id
             comments {
               currentEdition {
@@ -11,6 +11,13 @@ query {
               }
             }
             freeform(
+              filters: {
+                web_components__web_components_other_pain_points: {
+                  in: [
+                    limitations
+                  ]
+                }
+              }
               parameters: {
                 showNoAnswer: true
                 cutoff: 10
@@ -20,7 +27,6 @@ query {
               bucketsFilter: {
                 nin: [
                   limitations
-                  dx
                 ]
               }
             ) {
