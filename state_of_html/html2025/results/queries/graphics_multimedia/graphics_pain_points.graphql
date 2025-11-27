@@ -17,6 +17,12 @@ query {
                 limit: 20
                 mergeOtherBuckets: true
               }
+              bucketsFilter: {
+                nin: [
+                  limitations
+                  dx
+                ]
+              }
             ) {
               allEditions(editionCount: 2) {
                 _metadata {

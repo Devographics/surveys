@@ -2,8 +2,8 @@ query {
   surveys {
     state_of_html {
       html2025 {
-        web_components {
-          web_components_other_pain_points_interop_1: web_components_other_pain_points {
+        interactivity {
+          interactivity_pain_points_limitations_1: interactivity_pain_points {
             id
             comments {
               currentEdition {
@@ -12,9 +12,9 @@ query {
             }
             freeform(
               filters: {
-                web_components__web_components_other_pain_points: {
+                interactivity__interactivity_pain_points: {
                   in: [
-                    interop
+                    limitations
                   ]
                 }
               }
@@ -26,7 +26,6 @@ query {
               }
               bucketsFilter: {
                 nin: [
-                  interop
                   limitations
                   dx
                 ]
