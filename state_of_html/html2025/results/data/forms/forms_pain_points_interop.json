@@ -113,18 +113,84 @@
                         },
                         "nestedBuckets": [
                           {
-                            "count": 8,
-                            "id": "select_element_search",
-                            "percentageQuestion": 2.2,
-                            "percentageSurvey": 0.13,
+                            "count": 63,
+                            "id": "customizable_select",
+                            "percentageQuestion": 17.31,
+                            "percentageSurvey": 1.01,
                             "entity": {
-                              "name": "Searchable select",
-                              "nameHtml": "Searchable select",
-                              "nameClean": "Searchable select",
-                              "description": "The lack of a built-in ability to search or filter the options within a `<select>` element.",
-                              "descriptionHtml": "The lack of a built-in ability to search or filter the options within a <code>&lt;select&gt;</code> element.",
-                              "descriptionClean": "The lack of a built-in ability to search or filter the options within a <select> element.",
-                              "id": "select_element_search",
+                              "name": "Customizable Select",
+                              "nameHtml": "Customizable Select",
+                              "nameClean": "Customizable Select",
+                              "description": "Stylable, customizable dropdown control. Previously `<selectlist>` and `<selectmenu>`.",
+                              "descriptionHtml": "Stylable, customizable dropdown control. Previously <code>&lt;selectlist&gt;</code> and <code>&lt;selectmenu&gt;</code>.",
+                              "descriptionClean": "Stylable, customizable dropdown control. Previously <selectlist> and <selectmenu>.",
+                              "id": "customizable_select",
+                              "parentId": "select_element",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": "select,\n::picker(select) {\n  appearance: base-select;\n}",
+                                "codeHighlighted": "<span class=\"hljs-selector-tag\">select</span>,\n::<span class=\"hljs-built_in\">picker</span>(select) {\n  <span class=\"hljs-attribute\">appearance</span>: base-select;\n}"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://open-ui.org/components/customizableselect/",
+                                  "title": "Customizable Select Element (Explainer)"
+                                },
+                                {
+                                  "url": "https://web.dev/state-of-css-2022/#customizing-select-elements",
+                                  "title": "State of CSS 2022"
+                                },
+                                {
+                                  "url": "https://css-tricks.com/the-selectmenu-element/",
+                                  "title": "The selectmenu HTML Tag | CSS-Tricks - CSS-Tricks"
+                                },
+                                {
+                                  "url": "https://www.smashingmagazine.com/2023/06/advanced-form-control-styling-selectmenu-anchoring-api/",
+                                  "title": "Advanced Form Control Styling With Selectmenu And Anchoring API — Smashing Magazine"
+                                },
+                                {
+                                  "url": "https://hidde.blog/custom-select-with-selectmenu/",
+                                  "title": "Two levels of customising <selectlist>\n"
+                                },
+                                {
+                                  "url": "https://microsoftedge.github.io/Demos/selectmenu/",
+                                  "title": "Open UI's selectmenu demos"
+                                }
+                              ],
+                              "webFeature": {
+                                "id": "customizable-select",
+                                "description_html": "The <code>&#x3C;select></code> element's appearance, including the button, selected option, picker dropdown, and options, can be customized using CSS.",
+                                "group": [
+                                  "forms",
+                                  "html-elements"
+                                ],
+                                "name": "Customizable <select>",
+                                "spec": [
+                                  "https://open-ui.org/components/customizableselect/"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/customizable-select/",
+                                "status": {
+                                  "baseline": "false",
+                                  "support": {
+                                    "chrome": "135",
+                                    "chrome_android": "135",
+                                    "edge": "135"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "count": 11,
+                            "id": "select_element_multiselect",
+                            "percentageQuestion": 3.02,
+                            "percentageSurvey": 0.18,
+                            "entity": {
+                              "name": "MultiSelect",
+                              "nameHtml": "MultiSelect",
+                              "nameClean": "MultiSelect",
+                              "id": "select_element_multiselect",
                               "parentId": "select_element",
                               "entityType": "default"
                             }
@@ -162,20 +228,6 @@
                               "descriptionHtml": "Pain points related to <code>&lt;input type=\"date\"&gt;</code> and its associated picker UI.",
                               "descriptionClean": "Pain points related to <input type=\"date\"> and its associated picker UI.",
                               "id": "date_picker",
-                              "parentId": "pickers",
-                              "entityType": "default"
-                            }
-                          },
-                          {
-                            "count": 2,
-                            "id": "input_showpicker",
-                            "percentageQuestion": 0.55,
-                            "percentageSurvey": 0.03,
-                            "entity": {
-                              "name": "input.showPicker()",
-                              "nameHtml": "input.showPicker()",
-                              "nameClean": "input.showPicker()",
-                              "id": "input_showpicker",
                               "parentId": "pickers",
                               "entityType": "default"
                             }
@@ -229,116 +281,13 @@
                               "parentId": "form_validation",
                               "entityType": "default"
                             }
-                          },
-                          {
-                            "count": 6,
-                            "id": "cross_field_validation",
-                            "percentageQuestion": 1.65,
-                            "percentageSurvey": 0.1,
-                            "entity": {
-                              "name": "Cross-Field Validation",
-                              "nameHtml": "Cross-Field Validation",
-                              "nameClean": "Cross-Field Validation",
-                              "description": "Difficulties in implementing validation logic where the validity of one field depends on the value of another field.",
-                              "descriptionHtml": "Difficulties in implementing validation logic where the validity of one field depends on the value of another field.",
-                              "descriptionClean": "Difficulties in implementing validation logic where the validity of one field depends on the value of another field.",
-                              "id": "cross_field_validation",
-                              "parentId": "form_validation",
-                              "entityType": "default"
-                            }
-                          },
-                          {
-                            "count": 2,
-                            "id": "form_validation_api",
-                            "percentageQuestion": 0.55,
-                            "percentageSurvey": 0.03,
-                            "entity": {
-                              "name": "Validation API",
-                              "nameHtml": "Validation API",
-                              "nameClean": "Validation API",
-                              "description": "Issues with the programmatic aspects of the Constraint Validation API (e.g., `setCustomValidity()`).",
-                              "descriptionHtml": "Issues with the programmatic aspects of the Constraint Validation API (e.g., <code>setCustomValidity()</code>).",
-                              "descriptionClean": "Issues with the programmatic aspects of the Constraint Validation API (e.g., setCustomValidity()).",
-                              "id": "form_validation_api",
-                              "parentId": "form_validation",
-                              "entityType": "default"
-                            }
                           }
                         ]
                       },
                       {
-                        "count": 63,
-                        "id": "customizable_select",
-                        "index": 4,
-                        "percentageQuestion": 17.31,
-                        "percentageSurvey": 1.01,
-                        "entity": {
-                          "name": "Customizable Select",
-                          "nameHtml": "Customizable Select",
-                          "nameClean": "Customizable Select",
-                          "description": "Stylable, customizable dropdown control. Previously `<selectlist>` and `<selectmenu>`.",
-                          "descriptionHtml": "Stylable, customizable dropdown control. Previously <code>&lt;selectlist&gt;</code> and <code>&lt;selectmenu&gt;</code>.",
-                          "descriptionClean": "Stylable, customizable dropdown control. Previously <selectlist> and <selectmenu>.",
-                          "id": "customizable_select",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": "select,\n::picker(select) {\n  appearance: base-select;\n}",
-                            "codeHighlighted": "<span class=\"hljs-selector-tag\">select</span>,\n::<span class=\"hljs-built_in\">picker</span>(select) {\n  <span class=\"hljs-attribute\">appearance</span>: base-select;\n}"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://open-ui.org/components/customizableselect/",
-                              "title": "Customizable Select Element (Explainer)"
-                            },
-                            {
-                              "url": "https://web.dev/state-of-css-2022/#customizing-select-elements",
-                              "title": "State of CSS 2022"
-                            },
-                            {
-                              "url": "https://css-tricks.com/the-selectmenu-element/",
-                              "title": "The selectmenu HTML Tag | CSS-Tricks - CSS-Tricks"
-                            },
-                            {
-                              "url": "https://www.smashingmagazine.com/2023/06/advanced-form-control-styling-selectmenu-anchoring-api/",
-                              "title": "Advanced Form Control Styling With Selectmenu And Anchoring API — Smashing Magazine"
-                            },
-                            {
-                              "url": "https://hidde.blog/custom-select-with-selectmenu/",
-                              "title": "Two levels of customising <selectlist>\n"
-                            },
-                            {
-                              "url": "https://microsoftedge.github.io/Demos/selectmenu/",
-                              "title": "Open UI's selectmenu demos"
-                            }
-                          ],
-                          "webFeature": {
-                            "id": "customizable-select",
-                            "description_html": "The <code>&#x3C;select></code> element's appearance, including the button, selected option, picker dropdown, and options, can be customized using CSS.",
-                            "group": [
-                              "forms",
-                              "html-elements"
-                            ],
-                            "name": "Customizable <select>",
-                            "spec": [
-                              "https://open-ui.org/components/customizableselect/"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/customizable-select/",
-                            "status": {
-                              "baseline": "false",
-                              "support": {
-                                "chrome": "135",
-                                "chrome_android": "135",
-                                "edge": "135"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
                         "count": 57,
                         "id": "specific_platforms_vendors",
-                        "index": 5,
+                        "index": 4,
                         "percentageQuestion": 15.66,
                         "percentageSurvey": 0.92,
                         "entity": {
@@ -385,23 +334,6 @@
                                     "url": "https://www.apple.com/safari/"
                                   }
                                 }
-                              },
-                              {
-                                "count": 2,
-                                "id": "macos",
-                                "percentageQuestion": 0.55,
-                                "percentageSurvey": 0.03,
-                                "entity": {
-                                  "name": "macOS",
-                                  "nameHtml": "macOS",
-                                  "nameClean": "macOS",
-                                  "description": "Issues specific to macOS as a platform.",
-                                  "descriptionHtml": "Issues specific to macOS as a platform.",
-                                  "descriptionClean": "Issues specific to macOS as a platform.",
-                                  "id": "macos",
-                                  "parentId": "apple",
-                                  "entityType": "default"
-                                }
                               }
                             ]
                           },
@@ -440,30 +372,13 @@
                                 }
                               }
                             ]
-                          },
-                          {
-                            "count": 3,
-                            "id": "microsoft",
-                            "percentageQuestion": 0.82,
-                            "percentageSurvey": 0.05,
-                            "entity": {
-                              "name": "Microsoft",
-                              "nameHtml": "Microsoft",
-                              "nameClean": "Microsoft",
-                              "description": "Issues specific to Microsoft as a platform or vendor.",
-                              "descriptionHtml": "Issues specific to Microsoft as a platform or vendor.",
-                              "descriptionClean": "Issues specific to Microsoft as a platform or vendor.",
-                              "id": "microsoft",
-                              "parentId": "specific_platforms_vendors",
-                              "entityType": "default"
-                            }
                           }
                         ]
                       },
                       {
                         "count": 46,
                         "id": "accessibility",
-                        "index": 6,
+                        "index": 5,
                         "percentageQuestion": 12.64,
                         "percentageSurvey": 0.74,
                         "entity": {
@@ -480,7 +395,7 @@
                       {
                         "count": 43,
                         "id": "input_element",
-                        "index": 7,
+                        "index": 6,
                         "percentageQuestion": 11.81,
                         "percentageSurvey": 0.69,
                         "entity": {
@@ -489,48 +404,12 @@
                           "nameClean": "<input>",
                           "id": "input_element",
                           "entityType": "feature"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 6,
-                            "id": "input_masking",
-                            "percentageQuestion": 1.65,
-                            "percentageSurvey": 0.1,
-                            "entity": {
-                              "name": "Input Masking",
-                              "nameHtml": "Input Masking",
-                              "nameClean": "Input Masking",
-                              "description": "The lack of a native feature for formatting user input in real-time, such as for phone numbers or currency.",
-                              "descriptionHtml": "The lack of a native feature for formatting user input in real-time, such as for phone numbers or currency.",
-                              "descriptionClean": "The lack of a native feature for formatting user input in real-time, such as for phone numbers or currency.",
-                              "id": "input_masking",
-                              "parentId": "input_element",
-                              "entityType": "default"
-                            }
-                          },
-                          {
-                            "count": 2,
-                            "id": "input_inset_content",
-                            "percentageQuestion": 0.55,
-                            "percentageSurvey": 0.03,
-                            "entity": {
-                              "name": "Input Groups (Prefix/Suffix)",
-                              "nameHtml": "Input Groups (Prefix/Suffix)",
-                              "nameClean": "Input Groups (Prefix/Suffix)",
-                              "description": "Pain points related to the inability to declaratively add prefixes or suffixes (text or icons) inside or alongside an input field, such as for currency symbols or units.",
-                              "descriptionHtml": "Pain points related to the inability to declaratively add prefixes or suffixes (text or icons) inside or alongside an input field, such as for currency symbols or units.",
-                              "descriptionClean": "Pain points related to the inability to declaratively add prefixes or suffixes (text or icons) inside or alongside an input field, such as for currency symbols or units.",
-                              "id": "input_inset_content",
-                              "parentId": "input_element",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
+                        }
                       },
                       {
                         "count": 25,
                         "id": "end-user_ux",
-                        "index": 8,
+                        "index": 7,
                         "percentageQuestion": 6.87,
                         "percentageSurvey": 0.4,
                         "entity": {
@@ -547,7 +426,7 @@
                       {
                         "count": 25,
                         "id": "missing_elements",
-                        "index": 9,
+                        "index": 8,
                         "percentageQuestion": 6.87,
                         "percentageSurvey": 0.4,
                         "entity": {
@@ -559,31 +438,12 @@
                           "descriptionClean": "The need to build common UI patterns from scratch due to the lack of built-in, accessible HTML elements.",
                           "id": "missing_elements",
                           "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 7,
-                            "id": "switch_control",
-                            "percentageQuestion": 1.92,
-                            "percentageSurvey": 0.11,
-                            "entity": {
-                              "name": "Switch Control",
-                              "nameHtml": "Switch Control",
-                              "nameClean": "Switch Control",
-                              "description": "The lack of a native switch or toggle control, forcing developers to build one from a checkbox.",
-                              "descriptionHtml": "The lack of a native switch or toggle control, forcing developers to build one from a checkbox.",
-                              "descriptionClean": "The lack of a native switch or toggle control, forcing developers to build one from a checkbox.",
-                              "id": "switch_control",
-                              "parentId": "missing_elements",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
+                        }
                       },
                       {
                         "count": 23,
                         "id": "editing_apis",
-                        "index": 10,
+                        "index": 9,
                         "percentageQuestion": 6.32,
                         "percentageSurvey": 0.37,
                         "entity": {
@@ -600,7 +460,7 @@
                       {
                         "count": 23,
                         "id": "environments_consumers",
-                        "index": 11,
+                        "index": 10,
                         "percentageQuestion": 6.32,
                         "percentageSurvey": 0.37,
                         "entity": {
@@ -612,48 +472,12 @@
                           "descriptionClean": "Issues relevant to specific environments or consumers of web content, e.g. devices, bots, viewing modes, etc.",
                           "id": "environments_consumers",
                           "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 7,
-                            "id": "mobile_vs_desktop",
-                            "percentageQuestion": 1.92,
-                            "percentageSurvey": 0.11,
-                            "entity": {
-                              "name": "Mobile vs Desktop",
-                              "nameHtml": "Mobile vs Desktop",
-                              "nameClean": "Mobile vs Desktop",
-                              "description": "Challenges around supporting both mobile and desktop, but not specifically about either of the two.",
-                              "descriptionHtml": "Challenges around supporting both mobile and desktop, but not specifically about either of the two.",
-                              "descriptionClean": "Challenges around supporting both mobile and desktop, but not specifically about either of the two.",
-                              "id": "mobile_vs_desktop",
-                              "parentId": "environments_consumers",
-                              "entityType": "default"
-                            }
-                          },
-                          {
-                            "count": 1,
-                            "id": "printing",
-                            "percentageQuestion": 0.27,
-                            "percentageSurvey": 0.02,
-                            "entity": {
-                              "name": "Printing",
-                              "nameHtml": "Printing",
-                              "nameClean": "Printing",
-                              "description": "Issues related to styling and controlling the printing of web pages, including paged media features.",
-                              "descriptionHtml": "Issues related to styling and controlling the printing of web pages, including paged media features.",
-                              "descriptionClean": "Issues related to styling and controlling the printing of web pages, including paged media features.",
-                              "id": "printing",
-                              "parentId": "environments_consumers",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
+                        }
                       },
                       {
                         "count": 22,
                         "id": "autocomplete",
-                        "index": 12,
+                        "index": 11,
                         "percentageQuestion": 6.04,
                         "percentageSurvey": 0.35,
                         "entity": {
@@ -671,7 +495,7 @@
                       {
                         "count": 22,
                         "id": "reliance_on_javascript",
-                        "index": 13,
+                        "index": 12,
                         "percentageQuestion": 6.04,
                         "percentageSurvey": 0.35,
                         "entity": {
@@ -688,7 +512,7 @@
                       {
                         "count": 22,
                         "id": "rich_text_editing",
-                        "index": 14,
+                        "index": 13,
                         "percentageQuestion": 6.04,
                         "percentageSurvey": 0.35,
                         "entity": {
@@ -702,7 +526,7 @@
                       {
                         "count": 22,
                         "id": "textarea_element",
-                        "index": 15,
+                        "index": 14,
                         "percentageQuestion": 6.04,
                         "percentageSurvey": 0.35,
                         "entity": {
@@ -729,30 +553,14 @@
                               "id": "auto_growing_text_fields",
                               "parentId": "textarea_element",
                               "entityType": "default"
-                            },
-                            "nestedBuckets": [
-                              {
-                                "count": 6,
-                                "id": "field_sizing_content",
-                                "percentageQuestion": 1.65,
-                                "percentageSurvey": 0.1,
-                                "entity": {
-                                  "name": "field-sizing: content",
-                                  "nameHtml": "field-sizing: content",
-                                  "nameClean": "field-sizing: content",
-                                  "id": "field_sizing_content",
-                                  "parentId": "auto_growing_text_fields",
-                                  "entityType": "default"
-                                }
-                              }
-                            ]
+                            }
                           }
                         ]
                       },
                       {
                         "count": 19,
                         "id": "checkbox_input",
-                        "index": 16,
+                        "index": 15,
                         "percentageQuestion": 5.22,
                         "percentageSurvey": 0.31,
                         "entity": {
@@ -764,7 +572,7 @@
                       {
                         "count": 19,
                         "id": "datalist_element",
-                        "index": 17,
+                        "index": 16,
                         "percentageQuestion": 5.22,
                         "percentageSurvey": 0.31,
                         "entity": {
@@ -822,7 +630,7 @@
                       {
                         "count": 19,
                         "id": "radio_input",
-                        "index": 18,
+                        "index": 17,
                         "percentageQuestion": 5.22,
                         "percentageSurvey": 0.31,
                         "entity": {
@@ -835,31 +643,12 @@
                           "id": "radio_input",
                           "parentId": "forms",
                           "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 1,
-                            "id": "radio_input_nullable",
-                            "percentageQuestion": 0.27,
-                            "percentageSurvey": 0.02,
-                            "entity": {
-                              "name": "Nullable Radio Inputs",
-                              "nameHtml": "Nullable Radio Inputs",
-                              "nameClean": "Nullable Radio Inputs",
-                              "description": "The desire for a native way to deselect all radio buttons in a group, allowing for a 'none' or null state without custom JavaScript.",
-                              "descriptionHtml": "The desire for a native way to deselect all radio buttons in a group, allowing for a 'none' or null state without custom JavaScript.",
-                              "descriptionClean": "The desire for a native way to deselect all radio buttons in a group, allowing for a 'none' or null state without custom JavaScript.",
-                              "id": "radio_input_nullable",
-                              "parentId": "radio_input",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
+                        }
                       },
                       {
                         "count": 18,
                         "id": "form_submission",
-                        "index": 19,
+                        "index": 18,
                         "percentageQuestion": 4.95,
                         "percentageSurvey": 0.29,
                         "entity": {
@@ -872,33 +661,31 @@
                           "id": "form_submission",
                           "parentId": "forms",
                           "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 1,
-                            "id": "http_methods",
-                            "percentageQuestion": 0.27,
-                            "percentageSurvey": 0.02,
-                            "entity": {
-                              "name": "HTTP Methods",
-                              "nameHtml": "HTTP Methods",
-                              "nameClean": "HTTP Methods",
-                              "description": "The limitation of `<form>` elements to only support GET and POST methods, lacking support for PUT, PATCH, DELETE, etc.",
-                              "descriptionHtml": "The limitation of <code>&lt;form&gt;</code> elements to only support GET and POST methods, lacking support for PUT, PATCH, DELETE, etc.",
-                              "descriptionClean": "The limitation of <form> elements to only support GET and POST methods, lacking support for PUT, PATCH, DELETE, etc.",
-                              "id": "http_methods",
-                              "parentId": "form_submission",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
+                        }
                       },
                       {
-                        "count": 301,
+                        "count": 18,
+                        "id": "google",
+                        "index": 19,
+                        "percentageQuestion": 4.95,
+                        "percentageSurvey": 0.29,
+                        "entity": {
+                          "name": "Google",
+                          "nameHtml": "Google",
+                          "nameClean": "Google",
+                          "id": "google",
+                          "entityType": "default",
+                          "homepage": {
+                            "url": "https://google.com"
+                          }
+                        }
+                      },
+                      {
+                        "count": 401,
                         "id": "other_answers",
                         "index": 20,
-                        "percentageQuestion": 82.61,
-                        "percentageSurvey": 4.87
+                        "percentageQuestion": 110.01,
+                        "percentageSurvey": 6.49
                       }
                     ]
                   }

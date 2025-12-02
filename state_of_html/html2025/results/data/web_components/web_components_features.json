@@ -1,0 +1,1720 @@
+{
+  "dataAPI": {
+    "surveys": {
+      "state_of_html": {
+        "html2025": {
+          "web_components": {
+            "web_components_features": [
+              {
+                "id": "custom_elements_using",
+                "_metadata": {
+                  "sectionId": "web_components"
+                },
+                "entity": {
+                  "name": "Using Custom Elements",
+                  "nameClean": "Using Custom Elements",
+                  "nameHtml": "Using Custom Elements",
+                  "entityType": "feature",
+                  "description": "Using custom elements, that you or someone else defined.",
+                  "descriptionClean": "Using custom elements, that you or someone else defined.",
+                  "descriptionHtml": "Using custom elements, that you or someone else defined.",
+                  "mdn": {
+                    "locale": "en-US",
+                    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements",
+                    "title": "Using custom elements",
+                    "summary": "One of the key features of web components is the ability to create custom elements: that is, HTML elements whose behavior is defined by the web developer, that extend the set of elements available in the browser."
+                  },
+                  "example": {
+                    "language": "html",
+                    "code": "<my-switch start=\"On\" end=\"Off\">Wi-Fi</my-switch>\n",
+                    "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">my-switch</span> <span class=\"hljs-attr\">start</span>=<span class=\"hljs-string\">&quot;On&quot;</span> <span class=\"hljs-attr\">end</span>=<span class=\"hljs-string\">&quot;Off&quot;</span>&gt;</span>Wi-Fi<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">my-switch</span>&gt;</span>"
+                  }
+                },
+                "comments": {
+                  "currentEdition": {
+                    "count": 43
+                  }
+                },
+                "responses": {
+                  "currentEdition": {
+                    "ratios": {
+                      "awareness": 0.89,
+                      "interest": 0.7,
+                      "usage": 0.53,
+                      "retention": 0.87,
+                      "positivity": 0.31,
+                      "positivityRelative": 0.81
+                    },
+                    "buckets": [
+                      {
+                        "count": 463,
+                        "id": "never_heard",
+                        "facetBuckets": [
+                          {
+                            "count": 161,
+                            "id": "positive",
+                            "percentageBucket": 34.77,
+                            "percentageQuestion": 3.61,
+                            "percentageSurvey": 2.59
+                          },
+                          {
+                            "count": 31,
+                            "id": "negative",
+                            "percentageBucket": 6.7,
+                            "percentageQuestion": 0.7,
+                            "percentageSurvey": 0.5
+                          },
+                          {
+                            "count": 271,
+                            "id": "neutral",
+                            "percentageBucket": 58.53,
+                            "percentageQuestion": 6.08,
+                            "percentageSurvey": 4.35
+                          }
+                        ],
+                        "percentageQuestion": 10.39,
+                        "percentageSurvey": 7.44
+                      },
+                      {
+                        "count": 1595,
+                        "id": "heard",
+                        "facetBuckets": [
+                          {
+                            "count": 1072,
+                            "id": "neutral",
+                            "percentageBucket": 67.21,
+                            "percentageQuestion": 24.05,
+                            "percentageSurvey": 17.23
+                          },
+                          {
+                            "count": 370,
+                            "id": "positive",
+                            "percentageBucket": 23.2,
+                            "percentageQuestion": 8.3,
+                            "percentageSurvey": 5.95
+                          },
+                          {
+                            "count": 153,
+                            "id": "negative",
+                            "percentageBucket": 9.59,
+                            "percentageQuestion": 3.43,
+                            "percentageSurvey": 2.46
+                          }
+                        ],
+                        "percentageQuestion": 35.79,
+                        "percentageSurvey": 25.63
+                      },
+                      {
+                        "count": 2344,
+                        "id": "used",
+                        "facetBuckets": [
+                          {
+                            "count": 1386,
+                            "id": "neutral",
+                            "percentageBucket": 59.13,
+                            "percentageQuestion": 31.1,
+                            "percentageSurvey": 22.27
+                          },
+                          {
+                            "count": 118,
+                            "id": "negative",
+                            "percentageBucket": 5.03,
+                            "percentageQuestion": 2.65,
+                            "percentageSurvey": 1.9
+                          },
+                          {
+                            "count": 840,
+                            "id": "positive",
+                            "percentageBucket": 35.84,
+                            "percentageQuestion": 18.85,
+                            "percentageSurvey": 13.5
+                          }
+                        ],
+                        "percentageQuestion": 52.59,
+                        "percentageSurvey": 37.67
+                      }
+                    ],
+                    "completion": {
+                      "count": 4457,
+                      "percentageSurvey": 71.62,
+                      "total": 6223
+                    }
+                  }
+                }
+              },
+              {
+                "id": "custom_elements_defining",
+                "_metadata": {
+                  "sectionId": "web_components"
+                },
+                "entity": {
+                  "name": "Defining Custom Elements",
+                  "nameClean": "Defining Custom Elements",
+                  "nameHtml": "Defining Custom Elements",
+                  "entityType": "feature",
+                  "description": "Defining custom elements for use by others.",
+                  "descriptionClean": "Defining custom elements for use by others.",
+                  "descriptionHtml": "Defining custom elements for use by others.",
+                  "mdn": {
+                    "locale": "en-US",
+                    "url": "https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define",
+                    "title": "CustomElementRegistry: define() method",
+                    "summary": "The define() method of the CustomElementRegistry interface adds a definition for a custom element to the custom element registry, mapping its name to the constructor which will be used to create it."
+                  },
+                  "example": {
+                    "language": "js",
+                    "code": "class MyElement extends HTMLElement { … }\ncustomElements.define(\"my-element\", MyElement);",
+                    "codeHighlighted": "<span class=\"hljs-keyword\">class</span> <span class=\"hljs-title class_\">MyElement</span> <span class=\"hljs-keyword\">extends</span> <span class=\"hljs-title class_ inherited__\">HTMLElement</span> { … }\ncustomElements.<span class=\"hljs-title function_\">define</span>(<span class=\"hljs-string\">&quot;my-element&quot;</span>, <span class=\"hljs-title class_\">MyElement</span>);"
+                  },
+                  "resources": [
+                    {
+                      "title": "HTML Standard",
+                      "url": "https://html.spec.whatwg.org/multipage/custom-elements.html#dom-customelementregistry-define-dev"
+                    }
+                  ]
+                },
+                "comments": {
+                  "currentEdition": {
+                    "count": 20
+                  }
+                },
+                "responses": {
+                  "currentEdition": {
+                    "ratios": {
+                      "awareness": 0.85,
+                      "interest": 0.68,
+                      "usage": 0.47,
+                      "retention": 0.8,
+                      "positivity": 0.26,
+                      "positivityRelative": 0.76
+                    },
+                    "buckets": [
+                      {
+                        "count": 663,
+                        "id": "never_heard",
+                        "facetBuckets": [
+                          {
+                            "count": 48,
+                            "id": "negative",
+                            "percentageBucket": 7.24,
+                            "percentageQuestion": 1.08,
+                            "percentageSurvey": 0.77
+                          },
+                          {
+                            "count": 178,
+                            "id": "positive",
+                            "percentageBucket": 26.85,
+                            "percentageQuestion": 4,
+                            "percentageSurvey": 2.86
+                          },
+                          {
+                            "count": 437,
+                            "id": "neutral",
+                            "percentageBucket": 65.91,
+                            "percentageQuestion": 9.83,
+                            "percentageSurvey": 7.02
+                          }
+                        ],
+                        "percentageQuestion": 14.92,
+                        "percentageSurvey": 10.65
+                      },
+                      {
+                        "count": 1673,
+                        "id": "heard",
+                        "facetBuckets": [
+                          {
+                            "count": 1191,
+                            "id": "neutral",
+                            "percentageBucket": 71.19,
+                            "percentageQuestion": 26.79,
+                            "percentageSurvey": 19.14
+                          },
+                          {
+                            "count": 328,
+                            "id": "positive",
+                            "percentageBucket": 19.61,
+                            "percentageQuestion": 7.38,
+                            "percentageSurvey": 5.27
+                          },
+                          {
+                            "count": 154,
+                            "id": "negative",
+                            "percentageBucket": 9.21,
+                            "percentageQuestion": 3.46,
+                            "percentageSurvey": 2.47
+                          }
+                        ],
+                        "percentageQuestion": 37.64,
+                        "percentageSurvey": 26.88
+                      },
+                      {
+                        "count": 2085,
+                        "id": "used",
+                        "facetBuckets": [
+                          {
+                            "count": 155,
+                            "id": "negative",
+                            "percentageBucket": 7.43,
+                            "percentageQuestion": 3.49,
+                            "percentageSurvey": 2.49
+                          },
+                          {
+                            "count": 658,
+                            "id": "positive",
+                            "percentageBucket": 31.56,
+                            "percentageQuestion": 14.8,
+                            "percentageSurvey": 10.57
+                          },
+                          {
+                            "count": 1272,
+                            "id": "neutral",
+                            "percentageBucket": 61.01,
+                            "percentageQuestion": 28.62,
+                            "percentageSurvey": 20.44
+                          }
+                        ],
+                        "percentageQuestion": 46.91,
+                        "percentageSurvey": 33.5
+                      }
+                    ],
+                    "completion": {
+                      "count": 4445,
+                      "percentageSurvey": 71.43,
+                      "total": 6223
+                    }
+                  }
+                }
+              },
+              {
+                "id": "declarative_custom_elements",
+                "_metadata": {
+                  "sectionId": "web_components"
+                },
+                "entity": {
+                  "name": "Declarative Custom Elements",
+                  "nameClean": "Declarative Custom Elements",
+                  "nameHtml": "Declarative Custom Elements",
+                  "entityType": "feature",
+                  "description": "Create web components declaratively through HTML, with or without JS.",
+                  "descriptionClean": "Create web components declaratively through HTML, with or without JS.",
+                  "descriptionHtml": "Create web components declaratively through HTML, with or without JS.",
+                  "example": {
+                    "language": "html",
+                    "code": "<definition name=\"progress-ring\">\n  <template shadowmode=\"open\">\n    <div id=\"base\" role=\"progressbar\" aria-valuemin=\"0\" aria-valuemax=\"100\" aria-valuenow=\"{{root.attributes.percentage.value}}\">\n      <slot>{{ root.attributes.percentage.value }}%</slot>\n    </div>\n    <style>#base { /* ... */ }</style>\n  </template>\n</definition>\n\n<progress-ring value=\"50\"></progress-ring>\n",
+                    "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">definition</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">&quot;progress-ring&quot;</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">template</span> <span class=\"hljs-attr\">shadowmode</span>=<span class=\"hljs-string\">&quot;open&quot;</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;base&quot;</span> <span class=\"hljs-attr\">role</span>=<span class=\"hljs-string\">&quot;progressbar&quot;</span> <span class=\"hljs-attr\">aria-valuemin</span>=<span class=\"hljs-string\">&quot;0&quot;</span> <span class=\"hljs-attr\">aria-valuemax</span>=<span class=\"hljs-string\">&quot;100&quot;</span> <span class=\"hljs-attr\">aria-valuenow</span>=<span class=\"hljs-string\">&quot;{{root.attributes.percentage.value}}&quot;</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">slot</span>&gt;</span>{{ root.attributes.percentage.value }}%<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">slot</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">style</span>&gt;</span><span class=\"language-css\"><span class=\"hljs-selector-id\">#base</span> { <span class=\"hljs-comment\">/* ... */</span> }</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">style</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">template</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">definition</span>&gt;</span>\n\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">progress-ring</span> <span class=\"hljs-attr\">value</span>=<span class=\"hljs-string\">&quot;50&quot;</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">progress-ring</span>&gt;</span>"
+                  },
+                  "resources": [
+                    {
+                      "title": "Declarative Syntax for Custom Elements",
+                      "url": "https://github.com/WICG/webcomponents/blob/gh-pages/proposals/Declarative-Custom-Elements-Strawman.md"
+                    }
+                  ]
+                },
+                "comments": {
+                  "currentEdition": {
+                    "count": 26
+                  }
+                },
+                "responses": {
+                  "currentEdition": {
+                    "ratios": {
+                      "awareness": 0.39,
+                      "interest": 0.79,
+                      "usage": 0.09,
+                      "retention": 0.78,
+                      "positivity": 0.33,
+                      "positivityRelative": 0.85
+                    },
+                    "buckets": [
+                      {
+                        "count": 2664,
+                        "id": "never_heard",
+                        "facetBuckets": [
+                          {
+                            "count": 1002,
+                            "id": "positive",
+                            "percentageBucket": 37.61,
+                            "percentageQuestion": 22.64,
+                            "percentageSurvey": 16.1
+                          },
+                          {
+                            "count": 114,
+                            "id": "negative",
+                            "percentageBucket": 4.28,
+                            "percentageQuestion": 2.58,
+                            "percentageSurvey": 1.83
+                          },
+                          {
+                            "count": 1548,
+                            "id": "neutral",
+                            "percentageBucket": 58.11,
+                            "percentageQuestion": 34.98,
+                            "percentageSurvey": 24.88
+                          }
+                        ],
+                        "percentageQuestion": 60.2,
+                        "percentageSurvey": 42.81
+                      },
+                      {
+                        "count": 1309,
+                        "id": "heard",
+                        "facetBuckets": [
+                          {
+                            "count": 858,
+                            "id": "neutral",
+                            "percentageBucket": 65.55,
+                            "percentageQuestion": 19.39,
+                            "percentageSurvey": 13.79
+                          },
+                          {
+                            "count": 357,
+                            "id": "positive",
+                            "percentageBucket": 27.27,
+                            "percentageQuestion": 8.07,
+                            "percentageSurvey": 5.74
+                          },
+                          {
+                            "count": 94,
+                            "id": "negative",
+                            "percentageBucket": 7.18,
+                            "percentageQuestion": 2.12,
+                            "percentageSurvey": 1.51
+                          }
+                        ],
+                        "percentageQuestion": 29.58,
+                        "percentageSurvey": 21.03
+                      },
+                      {
+                        "count": 437,
+                        "id": "used",
+                        "facetBuckets": [
+                          {
+                            "count": 34,
+                            "id": "negative",
+                            "percentageBucket": 7.78,
+                            "percentageQuestion": 0.77,
+                            "percentageSurvey": 0.55
+                          },
+                          {
+                            "count": 123,
+                            "id": "positive",
+                            "percentageBucket": 28.15,
+                            "percentageQuestion": 2.78,
+                            "percentageSurvey": 1.98
+                          },
+                          {
+                            "count": 280,
+                            "id": "neutral",
+                            "percentageBucket": 64.07,
+                            "percentageQuestion": 6.33,
+                            "percentageSurvey": 4.5
+                          }
+                        ],
+                        "percentageQuestion": 9.88,
+                        "percentageSurvey": 7.02
+                      }
+                    ],
+                    "completion": {
+                      "count": 4425,
+                      "percentageSurvey": 71.11,
+                      "total": 6223
+                    }
+                  }
+                }
+              },
+              {
+                "id": "scoped_element_registries",
+                "_metadata": {
+                  "sectionId": "web_components"
+                },
+                "entity": {
+                  "name": "Scoped Custom Element Registries",
+                  "nameClean": "Scoped Custom Element Registries",
+                  "nameHtml": "Scoped Custom Element Registries",
+                  "entityType": "feature",
+                  "description": "Allow multiple custom element definitions for a single tag name to exist within a page.",
+                  "descriptionClean": "Allow multiple custom element definitions for a single tag name to exist within a page.",
+                  "descriptionHtml": "Allow multiple custom element definitions for a single tag name to exist within a page.",
+                  "example": {
+                    "language": "js",
+                    "code": "const registry = new CustomElementRegistry();\nregistry.define('sub-element', SubElement);",
+                    "codeHighlighted": "<span class=\"hljs-keyword\">const</span> registry = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">CustomElementRegistry</span>();\nregistry.<span class=\"hljs-title function_\">define</span>(<span class=\"hljs-string\">&#x27;sub-element&#x27;</span>, <span class=\"hljs-title class_\">SubElement</span>);"
+                  },
+                  "resources": [
+                    {
+                      "title": "Scoped Custom Element Registries",
+                      "url": "https://github.com/WICG/webcomponents/blob/gh-pages/proposals/Scoped-Custom-Element-Registries.md"
+                    },
+                    {
+                      "title": "Chrome Platform Status",
+                      "url": "https://chromestatus.com/feature/5090435261792256"
+                    }
+                  ]
+                },
+                "comments": {
+                  "currentEdition": {
+                    "count": 10
+                  }
+                },
+                "responses": {
+                  "currentEdition": {
+                    "ratios": {
+                      "awareness": 0.22,
+                      "interest": 0.69,
+                      "usage": 0.04,
+                      "retention": 0.79,
+                      "positivity": 0.21,
+                      "positivityRelative": 0.73
+                    },
+                    "buckets": [
+                      {
+                        "count": 3415,
+                        "id": "never_heard",
+                        "facetBuckets": [
+                          {
+                            "count": 684,
+                            "id": "positive",
+                            "percentageBucket": 20.03,
+                            "percentageQuestion": 15.54,
+                            "percentageSurvey": 10.99
+                          },
+                          {
+                            "count": 241,
+                            "id": "negative",
+                            "percentageBucket": 7.06,
+                            "percentageQuestion": 5.47,
+                            "percentageSurvey": 3.87
+                          },
+                          {
+                            "count": 2490,
+                            "id": "neutral",
+                            "percentageBucket": 72.91,
+                            "percentageQuestion": 56.57,
+                            "percentageSurvey": 40.01
+                          }
+                        ],
+                        "percentageQuestion": 77.58,
+                        "percentageSurvey": 54.88
+                      },
+                      {
+                        "count": 754,
+                        "id": "heard",
+                        "facetBuckets": [
+                          {
+                            "count": 78,
+                            "id": "negative",
+                            "percentageBucket": 10.34,
+                            "percentageQuestion": 1.77,
+                            "percentageSurvey": 1.25
+                          },
+                          {
+                            "count": 495,
+                            "id": "neutral",
+                            "percentageBucket": 65.65,
+                            "percentageQuestion": 11.24,
+                            "percentageSurvey": 7.95
+                          },
+                          {
+                            "count": 181,
+                            "id": "positive",
+                            "percentageBucket": 24.01,
+                            "percentageQuestion": 4.11,
+                            "percentageSurvey": 2.91
+                          }
+                        ],
+                        "percentageQuestion": 17.13,
+                        "percentageSurvey": 12.12
+                      },
+                      {
+                        "count": 212,
+                        "id": "used",
+                        "facetBuckets": [
+                          {
+                            "count": 128,
+                            "id": "neutral",
+                            "percentageBucket": 60.38,
+                            "percentageQuestion": 2.91,
+                            "percentageSurvey": 2.06
+                          },
+                          {
+                            "count": 17,
+                            "id": "negative",
+                            "percentageBucket": 8.02,
+                            "percentageQuestion": 0.39,
+                            "percentageSurvey": 0.27
+                          },
+                          {
+                            "count": 67,
+                            "id": "positive",
+                            "percentageBucket": 31.6,
+                            "percentageQuestion": 1.52,
+                            "percentageSurvey": 1.08
+                          }
+                        ],
+                        "percentageQuestion": 4.82,
+                        "percentageSurvey": 3.41
+                      }
+                    ],
+                    "completion": {
+                      "count": 4402,
+                      "percentageSurvey": 70.74,
+                      "total": 6223
+                    }
+                  }
+                }
+              },
+              {
+                "id": "shadow_dom",
+                "_metadata": {
+                  "sectionId": "web_components"
+                },
+                "entity": {
+                  "name": "Shadow DOM",
+                  "nameClean": "Shadow DOM",
+                  "nameHtml": "Shadow DOM",
+                  "entityType": "feature",
+                  "description": "Encapsulate elements not visible from the outside, and style them with CSS not affecting the rest of the page.",
+                  "descriptionClean": "Encapsulate elements not visible from the outside, and style them with CSS not affecting the rest of the page.",
+                  "descriptionHtml": "Encapsulate elements not visible from the outside, and style them with CSS not affecting the rest of the page.",
+                  "mdn": {
+                    "locale": "en-US",
+                    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM",
+                    "title": "Using shadow DOM",
+                    "summary": "An important aspect of custom elements is encapsulation, because a custom element, by definition, is a piece of reusable functionality: it might be dropped into any web page and be expected to work. So it's important that code running in the page should not be able to accidentally break a custom element by modifying its internal implementation. Shadow DOM enables you to attach a DOM tree to an element, and have the internals of this tree hidden from JavaScript and CSS running in the page."
+                  },
+                  "example": {
+                    "language": "js",
+                    "code": "this.shadowRoot = this.attachShadow({mode: \"open\"});",
+                    "codeHighlighted": "<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">shadowRoot</span> = <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">attachShadow</span>({<span class=\"hljs-attr\">mode</span>: <span class=\"hljs-string\">&quot;open&quot;</span>});"
+                  },
+                  "webFeature": {
+                    "id": "shadow-dom",
+                    "description_html": "Shadow DOM allows you to attach encapsulated \"shadow\" DOM trees to elements. A shadow DOM tree is a separate component, isolated from the scripts and styles in other parts of the document. This is a part of Web Components.",
+                    "group": [
+                      "dom",
+                      "web-components"
+                    ],
+                    "name": "Shadow DOM",
+                    "spec": [
+                      "https://dom.spec.whatwg.org/#shadow-trees"
+                    ],
+                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/shadow-dom/",
+                    "status": {
+                      "baseline": "high",
+                      "baseline_low_date": "2020-01-15",
+                      "support": {
+                        "chrome": "53",
+                        "chrome_android": "53",
+                        "edge": "79",
+                        "firefox": "63",
+                        "firefox_android": "63",
+                        "safari": "10",
+                        "safari_ios": "10"
+                      }
+                    }
+                  }
+                },
+                "comments": {
+                  "currentEdition": {
+                    "count": 35
+                  }
+                },
+                "responses": {
+                  "currentEdition": {
+                    "ratios": {
+                      "awareness": 0.84,
+                      "interest": 0.71,
+                      "usage": 0.4,
+                      "retention": 0.65,
+                      "positivity": 0.22,
+                      "positivityRelative": 0.69
+                    },
+                    "buckets": [
+                      {
+                        "count": 698,
+                        "id": "never_heard",
+                        "facetBuckets": [
+                          {
+                            "count": 181,
+                            "id": "positive",
+                            "percentageBucket": 25.93,
+                            "percentageQuestion": 4.08,
+                            "percentageSurvey": 2.91
+                          },
+                          {
+                            "count": 51,
+                            "id": "negative",
+                            "percentageBucket": 7.31,
+                            "percentageQuestion": 1.15,
+                            "percentageSurvey": 0.82
+                          },
+                          {
+                            "count": 466,
+                            "id": "neutral",
+                            "percentageBucket": 66.76,
+                            "percentageQuestion": 10.5,
+                            "percentageSurvey": 7.49
+                          }
+                        ],
+                        "percentageQuestion": 15.73,
+                        "percentageSurvey": 11.22
+                      },
+                      {
+                        "count": 1938,
+                        "id": "heard",
+                        "facetBuckets": [
+                          {
+                            "count": 146,
+                            "id": "negative",
+                            "percentageBucket": 7.53,
+                            "percentageQuestion": 3.29,
+                            "percentageSurvey": 2.35
+                          },
+                          {
+                            "count": 1433,
+                            "id": "neutral",
+                            "percentageBucket": 73.94,
+                            "percentageQuestion": 32.3,
+                            "percentageSurvey": 23.03
+                          },
+                          {
+                            "count": 359,
+                            "id": "positive",
+                            "percentageBucket": 18.52,
+                            "percentageQuestion": 8.09,
+                            "percentageSurvey": 5.77
+                          }
+                        ],
+                        "percentageQuestion": 43.68,
+                        "percentageSurvey": 31.14
+                      },
+                      {
+                        "count": 1773,
+                        "id": "used",
+                        "facetBuckets": [
+                          {
+                            "count": 437,
+                            "id": "positive",
+                            "percentageBucket": 24.65,
+                            "percentageQuestion": 9.85,
+                            "percentageSurvey": 7.02
+                          },
+                          {
+                            "count": 1110,
+                            "id": "neutral",
+                            "percentageBucket": 62.61,
+                            "percentageQuestion": 25.02,
+                            "percentageSurvey": 17.84
+                          },
+                          {
+                            "count": 226,
+                            "id": "negative",
+                            "percentageBucket": 12.75,
+                            "percentageQuestion": 5.09,
+                            "percentageSurvey": 3.63
+                          }
+                        ],
+                        "percentageQuestion": 39.96,
+                        "percentageSurvey": 28.49
+                      }
+                    ],
+                    "completion": {
+                      "count": 4437,
+                      "percentageSurvey": 71.3,
+                      "total": 6223
+                    }
+                  }
+                }
+              },
+              {
+                "id": "declarative_shadow_dom",
+                "_metadata": {
+                  "sectionId": "web_components"
+                },
+                "entity": {
+                  "name": "Declarative Shadow DOM",
+                  "nameClean": "Declarative Shadow DOM",
+                  "nameHtml": "Declarative Shadow DOM",
+                  "entityType": "feature",
+                  "description": "Define shadow trees with HTML, such as when server-side-rendering web components.",
+                  "descriptionClean": "Define shadow trees with HTML, such as when server-side-rendering web components.",
+                  "descriptionHtml": "Define shadow trees with HTML, such as when server-side-rendering web components.",
+                  "caniuse": {
+                    "name": "declarative-shadow-dom",
+                    "url": "https://caniuse.com/declarative-shadow-dom"
+                  },
+                  "example": {
+                    "language": "html",
+                    "code": "<host-element>\n    <template shadowrootmode=\"open\">\n        <!-- Shadow content -->\n    </template>\n</host-element>",
+                    "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">host-element</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">template</span> <span class=\"hljs-attr\">shadowrootmode</span>=<span class=\"hljs-string\">&quot;open&quot;</span>&gt;</span>\n        <span class=\"hljs-comment\">&lt;!-- Shadow content --&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">template</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">host-element</span>&gt;</span>"
+                  },
+                  "resources": [
+                    {
+                      "title": "GitHub - mfreed7/declarative-shadow-dom: Declarative Shadow DOM feature development",
+                      "url": "https://github.com/mfreed7/declarative-shadow-dom"
+                    },
+                    {
+                      "title": "Declarative Shadow DOM - Chrome Developers",
+                      "url": "https://developer.chrome.com/en/articles/declarative-shadow-dom/"
+                    },
+                    {
+                      "title": "Declarative Shadow DOM | WebKit",
+                      "url": "https://webkit.org/blog/13851/declarative-shadow-dom/"
+                    },
+                    {
+                      "title": "Chrome Platform Status",
+                      "url": "https://chromestatus.com/feature/5191745052606464"
+                    }
+                  ],
+                  "webFeature": {
+                    "id": "declarative-shadow-dom",
+                    "description_html": "The <code>shadowrootmode</code> attribute on <code>&#x3C;template></code> creates a shadow root without the use of JavaScript. It is a declarative alternative to the <code>attachShadow()</code> method.",
+                    "group": [
+                      "html",
+                      "dom",
+                      "web-components"
+                    ],
+                    "name": "Declarative shadow DOM",
+                    "spec": [
+                      "https://html.spec.whatwg.org/multipage/scripting.html#attr-template-shadowrootmode"
+                    ],
+                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/declarative-shadow-dom/",
+                    "status": {
+                      "baseline": "low",
+                      "baseline_low_date": "2024-02-20",
+                      "support": {
+                        "chrome": "111",
+                        "chrome_android": "111",
+                        "edge": "111",
+                        "firefox": "123",
+                        "firefox_android": "123",
+                        "safari": "16.4",
+                        "safari_ios": "16.4"
+                      }
+                    }
+                  }
+                },
+                "comments": {
+                  "currentEdition": {
+                    "count": 15
+                  }
+                },
+                "responses": {
+                  "currentEdition": {
+                    "ratios": {
+                      "awareness": 0.47,
+                      "interest": 0.72,
+                      "usage": 0.12,
+                      "retention": 0.73,
+                      "positivity": 0.22,
+                      "positivityRelative": 0.75
+                    },
+                    "buckets": [
+                      {
+                        "count": 2312,
+                        "id": "never_heard",
+                        "facetBuckets": [
+                          {
+                            "count": 1659,
+                            "id": "neutral",
+                            "percentageBucket": 71.76,
+                            "percentageQuestion": 37.67,
+                            "percentageSurvey": 26.66
+                          },
+                          {
+                            "count": 510,
+                            "id": "positive",
+                            "percentageBucket": 22.06,
+                            "percentageQuestion": 11.58,
+                            "percentageSurvey": 8.2
+                          },
+                          {
+                            "count": 143,
+                            "id": "negative",
+                            "percentageBucket": 6.19,
+                            "percentageQuestion": 3.25,
+                            "percentageSurvey": 2.3
+                          }
+                        ],
+                        "percentageQuestion": 52.5,
+                        "percentageSurvey": 37.15
+                      },
+                      {
+                        "count": 1508,
+                        "id": "heard",
+                        "facetBuckets": [
+                          {
+                            "count": 1069,
+                            "id": "neutral",
+                            "percentageBucket": 70.89,
+                            "percentageQuestion": 24.27,
+                            "percentageSurvey": 17.18
+                          },
+                          {
+                            "count": 119,
+                            "id": "negative",
+                            "percentageBucket": 7.89,
+                            "percentageQuestion": 2.7,
+                            "percentageSurvey": 1.91
+                          },
+                          {
+                            "count": 320,
+                            "id": "positive",
+                            "percentageBucket": 21.22,
+                            "percentageQuestion": 7.27,
+                            "percentageSurvey": 5.14
+                          }
+                        ],
+                        "percentageQuestion": 34.24,
+                        "percentageSurvey": 24.23
+                      },
+                      {
+                        "count": 568,
+                        "id": "used",
+                        "facetBuckets": [
+                          {
+                            "count": 367,
+                            "id": "neutral",
+                            "percentageBucket": 64.61,
+                            "percentageQuestion": 8.33,
+                            "percentageSurvey": 5.9
+                          },
+                          {
+                            "count": 147,
+                            "id": "positive",
+                            "percentageBucket": 25.88,
+                            "percentageQuestion": 3.34,
+                            "percentageSurvey": 2.36
+                          },
+                          {
+                            "count": 54,
+                            "id": "negative",
+                            "percentageBucket": 9.51,
+                            "percentageQuestion": 1.23,
+                            "percentageSurvey": 0.87
+                          }
+                        ],
+                        "percentageQuestion": 12.9,
+                        "percentageSurvey": 9.13
+                      }
+                    ],
+                    "completion": {
+                      "count": 4404,
+                      "percentageSurvey": 70.77,
+                      "total": 6223
+                    }
+                  }
+                }
+              },
+              {
+                "id": "slot_attribute",
+                "_metadata": {
+                  "sectionId": "web_components"
+                },
+                "entity": {
+                  "name": "`slot` attribute",
+                  "nameClean": "slot attribute",
+                  "nameHtml": "<code>slot</code> attribute",
+                  "entityType": "feature",
+                  "description": "Replacing predefined parts of a component UI with your own elements.",
+                  "descriptionClean": "Replacing predefined parts of a component UI with your own elements.",
+                  "descriptionHtml": "Replacing predefined parts of a component UI with your own elements.",
+                  "mdn": {
+                    "locale": "en-US",
+                    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/slot",
+                    "title": "HTML slot global attribute",
+                    "summary": "The slot global attribute assigns a slot in a shadow DOM shadow tree to an element: An element with a slot attribute is assigned to the slot created by the <slot> element whose name attribute's value matches that slot attribute's value. You can have multiple elements assigned to the same slot by using the same slot name. Elements without a slot attribute are assigned to the unnamed slot, if one exists."
+                  },
+                  "example": {
+                    "language": "html",
+                    "code": "<my-switch>\n  Wi-Fi\n  <i slot=\"start\" class=\"icon-on\">On</i>\n  <i slot=\"end\" class=\"icon-off\">Off</i>\n</my-switch>\n",
+                    "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">my-switch</span>&gt;</span>\n  Wi-Fi\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">i</span> <span class=\"hljs-attr\">slot</span>=<span class=\"hljs-string\">&quot;start&quot;</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">&quot;icon-on&quot;</span>&gt;</span>On<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">i</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">i</span> <span class=\"hljs-attr\">slot</span>=<span class=\"hljs-string\">&quot;end&quot;</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">&quot;icon-off&quot;</span>&gt;</span>Off<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">i</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">my-switch</span>&gt;</span>"
+                  },
+                  "webFeature": {
+                    "id": "slot",
+                    "description_html": "The <code>&#x3C;slot></code> HTML element is a placeholder inside a web component where consumers of the component can insert their own markup.",
+                    "group": [
+                      "html-elements",
+                      "web-components"
+                    ],
+                    "name": "<slot>",
+                    "spec": [
+                      "https://html.spec.whatwg.org/multipage/scripting.html#the-slot-element"
+                    ],
+                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/slot/",
+                    "status": {
+                      "baseline": "high",
+                      "baseline_low_date": "2020-01-15",
+                      "support": {
+                        "chrome": "53",
+                        "chrome_android": "53",
+                        "edge": "79",
+                        "firefox": "63",
+                        "firefox_android": "63",
+                        "safari": "10",
+                        "safari_ios": "10"
+                      }
+                    }
+                  }
+                },
+                "comments": {
+                  "currentEdition": {
+                    "count": 12
+                  }
+                },
+                "responses": {
+                  "currentEdition": {
+                    "ratios": {
+                      "awareness": 0.62,
+                      "interest": 0.81,
+                      "usage": 0.31,
+                      "retention": 0.91,
+                      "positivity": 0.27,
+                      "positivityRelative": 0.85
+                    },
+                    "buckets": [
+                      {
+                        "count": 1656,
+                        "id": "never_heard",
+                        "facetBuckets": [
+                          {
+                            "count": 456,
+                            "id": "positive",
+                            "percentageBucket": 27.54,
+                            "percentageQuestion": 10.29,
+                            "percentageSurvey": 7.33
+                          },
+                          {
+                            "count": 85,
+                            "id": "negative",
+                            "percentageBucket": 5.13,
+                            "percentageQuestion": 1.92,
+                            "percentageSurvey": 1.37
+                          },
+                          {
+                            "count": 1115,
+                            "id": "neutral",
+                            "percentageBucket": 67.33,
+                            "percentageQuestion": 25.17,
+                            "percentageSurvey": 17.92
+                          }
+                        ],
+                        "percentageQuestion": 37.38,
+                        "percentageSurvey": 26.61
+                      },
+                      {
+                        "count": 1367,
+                        "id": "heard",
+                        "facetBuckets": [
+                          {
+                            "count": 68,
+                            "id": "negative",
+                            "percentageBucket": 4.97,
+                            "percentageQuestion": 1.53,
+                            "percentageSurvey": 1.09
+                          },
+                          {
+                            "count": 1004,
+                            "id": "neutral",
+                            "percentageBucket": 73.45,
+                            "percentageQuestion": 22.66,
+                            "percentageSurvey": 16.13
+                          },
+                          {
+                            "count": 295,
+                            "id": "positive",
+                            "percentageBucket": 21.58,
+                            "percentageQuestion": 6.66,
+                            "percentageSurvey": 4.74
+                          }
+                        ],
+                        "percentageQuestion": 30.86,
+                        "percentageSurvey": 21.97
+                      },
+                      {
+                        "count": 1391,
+                        "id": "used",
+                        "facetBuckets": [
+                          {
+                            "count": 456,
+                            "id": "positive",
+                            "percentageBucket": 32.78,
+                            "percentageQuestion": 10.29,
+                            "percentageSurvey": 7.33
+                          },
+                          {
+                            "count": 890,
+                            "id": "neutral",
+                            "percentageBucket": 63.98,
+                            "percentageQuestion": 20.09,
+                            "percentageSurvey": 14.3
+                          },
+                          {
+                            "count": 45,
+                            "id": "negative",
+                            "percentageBucket": 3.24,
+                            "percentageQuestion": 1.02,
+                            "percentageSurvey": 0.72
+                          }
+                        ],
+                        "percentageQuestion": 31.4,
+                        "percentageSurvey": 22.35
+                      }
+                    ],
+                    "completion": {
+                      "count": 4430,
+                      "percentageSurvey": 71.19,
+                      "total": 6223
+                    }
+                  }
+                }
+              },
+              {
+                "id": "imperative_slot",
+                "_metadata": {
+                  "sectionId": "web_components"
+                },
+                "entity": {
+                  "name": "`slotAssignment: \"manual\"` (Imperative slot assignment)",
+                  "nameClean": "slotAssignment: \"manual\" (Imperative slot assignment)",
+                  "nameHtml": "<code>slotAssignment: \"manual\"</code> (Imperative slot assignment)",
+                  "entityType": "feature",
+                  "description": "A way to assign elements to slots manually via JS, so that slot assignment does not have to be managed by the component consumers.",
+                  "descriptionClean": "A way to assign elements to slots manually via JS, so that slot assignment does not have to be managed by the component consumers.",
+                  "descriptionHtml": "A way to assign elements to slots manually via JS, so that slot assignment does not have to be managed by the component consumers.",
+                  "caniuse": {
+                    "name": "mdn-api_shadowroot_slotassignment",
+                    "url": "https://caniuse.com/mdn-api_shadowroot_slotassignment"
+                  },
+                  "mdn": {
+                    "locale": "en-US",
+                    "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/assign",
+                    "title": "HTMLSlotElement: assign() method",
+                    "summary": "The assign() method of the HTMLSlotElement interface sets the slot's manually assigned nodes to an ordered set of slottables. The manually assigned nodes set is initially empty until nodes are assigned using assign()."
+                  },
+                  "example": {
+                    "language": "js",
+                    "code": "this.attachShadow({mode: \"open\", slotAssignment: \"manual\" });\nlet headerSlot = this.shadowRoot.querySelector(\"slot[name=header]\");\nlet header = this.querySelector(\"header\");\nif (header) headerSlot.assign(header);",
+                    "codeHighlighted": "<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">attachShadow</span>({<span class=\"hljs-attr\">mode</span>: <span class=\"hljs-string\">&quot;open&quot;</span>, <span class=\"hljs-attr\">slotAssignment</span>: <span class=\"hljs-string\">&quot;manual&quot;</span> });\n<span class=\"hljs-keyword\">let</span> headerSlot = <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">shadowRoot</span>.<span class=\"hljs-title function_\">querySelector</span>(<span class=\"hljs-string\">&quot;slot[name=header]&quot;</span>);\n<span class=\"hljs-keyword\">let</span> header = <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">querySelector</span>(<span class=\"hljs-string\">&quot;header&quot;</span>);\n<span class=\"hljs-keyword\">if</span> (header) headerSlot.<span class=\"hljs-title function_\">assign</span>(header);"
+                  },
+                  "resources": [
+                    {
+                      "title": "HTML Standard",
+                      "url": "https://html.spec.whatwg.org/multipage/scripting.html#dom-slot-assign"
+                    }
+                  ],
+                  "webFeature": {
+                    "id": "slot-assign",
+                    "description_html": "The <code>assign()</code> method for <code>&#x3C;slot></code> elements assigns nodes to the slot, as an alternative to using the <code>slot</code> and <code>name</code> HTML attributes. The nodes must be children of a shadow host and the shadow root must be created with the <code>slotAssignment</code> set to \"manual\". Also known as manual slot assignment.",
+                    "group": [
+                      "web-components"
+                    ],
+                    "name": "Imperative slot assignment",
+                    "spec": [
+                      "https://html.spec.whatwg.org/multipage/scripting.html#dom-slot-assign"
+                    ],
+                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/slot-assign/",
+                    "status": {
+                      "baseline": "low",
+                      "baseline_low_date": "2023-03-27",
+                      "support": {
+                        "chrome": "86",
+                        "chrome_android": "86",
+                        "edge": "86",
+                        "firefox": "92",
+                        "firefox_android": "92",
+                        "safari": "16.4",
+                        "safari_ios": "16.4"
+                      }
+                    }
+                  }
+                },
+                "comments": {
+                  "currentEdition": {
+                    "count": 4
+                  }
+                },
+                "responses": {
+                  "currentEdition": {
+                    "ratios": {
+                      "awareness": 0.24,
+                      "interest": 0.7,
+                      "usage": 0.07,
+                      "retention": 0.87,
+                      "positivity": 0.19,
+                      "positivityRelative": 0.76
+                    },
+                    "buckets": [
+                      {
+                        "count": 3288,
+                        "id": "never_heard",
+                        "facetBuckets": [
+                          {
+                            "count": 201,
+                            "id": "negative",
+                            "percentageBucket": 6.11,
+                            "percentageQuestion": 4.58,
+                            "percentageSurvey": 3.23
+                          },
+                          {
+                            "count": 626,
+                            "id": "positive",
+                            "percentageBucket": 19.04,
+                            "percentageQuestion": 14.27,
+                            "percentageSurvey": 10.06
+                          },
+                          {
+                            "count": 2461,
+                            "id": "neutral",
+                            "percentageBucket": 74.85,
+                            "percentageQuestion": 56.1,
+                            "percentageSurvey": 39.55
+                          }
+                        ],
+                        "percentageQuestion": 74.95,
+                        "percentageSurvey": 52.84
+                      },
+                      {
+                        "count": 764,
+                        "id": "heard",
+                        "facetBuckets": [
+                          {
+                            "count": 562,
+                            "id": "neutral",
+                            "percentageBucket": 73.56,
+                            "percentageQuestion": 12.81,
+                            "percentageSurvey": 9.03
+                          },
+                          {
+                            "count": 143,
+                            "id": "positive",
+                            "percentageBucket": 18.72,
+                            "percentageQuestion": 3.26,
+                            "percentageSurvey": 2.3
+                          },
+                          {
+                            "count": 59,
+                            "id": "negative",
+                            "percentageBucket": 7.72,
+                            "percentageQuestion": 1.34,
+                            "percentageSurvey": 0.95
+                          }
+                        ],
+                        "percentageQuestion": 17.42,
+                        "percentageSurvey": 12.28
+                      },
+                      {
+                        "count": 319,
+                        "id": "used",
+                        "facetBuckets": [
+                          {
+                            "count": 14,
+                            "id": "negative",
+                            "percentageBucket": 4.39,
+                            "percentageQuestion": 0.32,
+                            "percentageSurvey": 0.22
+                          },
+                          {
+                            "count": 99,
+                            "id": "positive",
+                            "percentageBucket": 31.03,
+                            "percentageQuestion": 2.26,
+                            "percentageSurvey": 1.59
+                          },
+                          {
+                            "count": 206,
+                            "id": "neutral",
+                            "percentageBucket": 64.58,
+                            "percentageQuestion": 4.7,
+                            "percentageSurvey": 3.31
+                          }
+                        ],
+                        "percentageQuestion": 7.27,
+                        "percentageSurvey": 5.13
+                      }
+                    ],
+                    "completion": {
+                      "count": 4387,
+                      "percentageSurvey": 70.5,
+                      "total": 6223
+                    }
+                  }
+                }
+              },
+              {
+                "id": "element_internals",
+                "_metadata": {
+                  "sectionId": "web_components"
+                },
+                "entity": {
+                  "name": "`ElementInternals`",
+                  "nameClean": "ElementInternals",
+                  "nameHtml": "<code>ElementInternals</code>",
+                  "entityType": "feature",
+                  "description": "Assign hidden semantics to custom elements, facilitating accessibility and allowing them to participate fully in forms.",
+                  "descriptionClean": "Assign hidden semantics to custom elements, facilitating accessibility and allowing them to participate fully in forms.",
+                  "descriptionHtml": "Assign hidden semantics to custom elements, facilitating accessibility and allowing them to participate fully in forms.",
+                  "caniuse": {
+                    "name": "mdn-api_elementinternals",
+                    "url": "https://caniuse.com/mdn-api_elementinternals"
+                  },
+                  "mdn": {
+                    "locale": "en-US",
+                    "url": "https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals",
+                    "title": "ElementInternals",
+                    "summary": "The ElementInternals interface of the Document Object Model gives web developers a way to allow custom elements to fully participate in HTML forms. It provides utilities for working with these elements in the same way you would work with any standard HTML form element, and also exposes the Accessibility Object Model to the element."
+                  },
+                  "example": {
+                    "language": "js",
+                    "code": "this._internals = this.attachInternals();\nthis._internals.role = \"progressbar\";",
+                    "codeHighlighted": "<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">_internals</span> = <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">attachInternals</span>();\n<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">_internals</span>.<span class=\"hljs-property\">role</span> = <span class=\"hljs-string\">&quot;progressbar&quot;</span>;"
+                  },
+                  "resources": [
+                    {
+                      "title": "HTML Standard",
+                      "url": "https://html.spec.whatwg.org/multipage/custom-elements.html#the-elementinternals-interface"
+                    }
+                  ],
+                  "webFeature": {
+                    "id": "form-associated-custom-elements",
+                    "description_html": "Custom elements may act like built-in form elements, via the the <code>attachInternals()</code> method of <code>HTMLElement</code> and the <code>ElementInternals</code> API.",
+                    "group": [
+                      "custom-elements",
+                      "forms"
+                    ],
+                    "name": "Form-associated custom elements",
+                    "spec": [
+                      "https://html.spec.whatwg.org/multipage/custom-elements.html#form-associated-custom-elements"
+                    ],
+                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/form-associated-custom-elements/",
+                    "status": {
+                      "baseline": "low",
+                      "baseline_low_date": "2023-03-27",
+                      "support": {
+                        "chrome": "77",
+                        "chrome_android": "77",
+                        "edge": "79",
+                        "firefox": "98",
+                        "firefox_android": "98",
+                        "safari": "16.4",
+                        "safari_ios": "16.4"
+                      }
+                    }
+                  }
+                },
+                "comments": {
+                  "currentEdition": {
+                    "count": 15
+                  }
+                },
+                "responses": {
+                  "currentEdition": {
+                    "ratios": {
+                      "awareness": 0.17,
+                      "interest": 0.83,
+                      "usage": 0.05,
+                      "retention": 0.83,
+                      "positivity": 0.23,
+                      "positivityRelative": 0.8
+                    },
+                    "buckets": [
+                      {
+                        "count": 3578,
+                        "id": "never_heard",
+                        "facetBuckets": [
+                          {
+                            "count": 758,
+                            "id": "positive",
+                            "percentageBucket": 21.19,
+                            "percentageQuestion": 17.34,
+                            "percentageSurvey": 12.18
+                          },
+                          {
+                            "count": 200,
+                            "id": "negative",
+                            "percentageBucket": 5.59,
+                            "percentageQuestion": 4.57,
+                            "percentageSurvey": 3.21
+                          },
+                          {
+                            "count": 2620,
+                            "id": "neutral",
+                            "percentageBucket": 73.23,
+                            "percentageQuestion": 59.93,
+                            "percentageSurvey": 42.1
+                          }
+                        ],
+                        "percentageQuestion": 81.84,
+                        "percentageSurvey": 57.5
+                      },
+                      {
+                        "count": 522,
+                        "id": "heard",
+                        "facetBuckets": [
+                          {
+                            "count": 30,
+                            "id": "negative",
+                            "percentageBucket": 5.75,
+                            "percentageQuestion": 0.69,
+                            "percentageSurvey": 0.48
+                          },
+                          {
+                            "count": 153,
+                            "id": "positive",
+                            "percentageBucket": 29.31,
+                            "percentageQuestion": 3.5,
+                            "percentageSurvey": 2.46
+                          },
+                          {
+                            "count": 339,
+                            "id": "neutral",
+                            "percentageBucket": 64.94,
+                            "percentageQuestion": 7.75,
+                            "percentageSurvey": 5.45
+                          }
+                        ],
+                        "percentageQuestion": 11.94,
+                        "percentageSurvey": 8.39
+                      },
+                      {
+                        "count": 259,
+                        "id": "used",
+                        "facetBuckets": [
+                          {
+                            "count": 140,
+                            "id": "neutral",
+                            "percentageBucket": 54.05,
+                            "percentageQuestion": 3.2,
+                            "percentageSurvey": 2.25
+                          },
+                          {
+                            "count": 20,
+                            "id": "negative",
+                            "percentageBucket": 7.72,
+                            "percentageQuestion": 0.46,
+                            "percentageSurvey": 0.32
+                          },
+                          {
+                            "count": 99,
+                            "id": "positive",
+                            "percentageBucket": 38.22,
+                            "percentageQuestion": 2.26,
+                            "percentageSurvey": 1.59
+                          }
+                        ],
+                        "percentageQuestion": 5.92,
+                        "percentageSurvey": 4.16
+                      }
+                    ],
+                    "completion": {
+                      "count": 4372,
+                      "percentageSurvey": 70.26,
+                      "total": 6223
+                    }
+                  }
+                }
+              },
+              {
+                "id": "reference_target_api",
+                "_metadata": {
+                  "sectionId": "web_components"
+                },
+                "entity": {
+                  "name": "Reference Target API",
+                  "nameClean": "Reference Target API",
+                  "nameHtml": "Reference Target API",
+                  "entityType": "feature",
+                  "description": "A way to “redirect” id references to a component to elements in its shadow DOM (for ARIA, labels, popovers etc).",
+                  "descriptionClean": "A way to “redirect” id references to a component to elements in its shadow DOM (for ARIA, labels, popovers etc).",
+                  "descriptionHtml": "A way to “redirect” id references to a component to elements in its shadow DOM (for ARIA, labels, popovers etc).",
+                  "example": {
+                    "language": "js",
+                    "code": "this.attachShadow({ \n  mode: \"open\",\n  referenceTarget: \"real-input\",\n});\nthis.shadowRoot.innerHTML = `<input id=\"real-input\">`;\n",
+                    "codeHighlighted": "<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">attachShadow</span>({ \n  <span class=\"hljs-attr\">mode</span>: <span class=\"hljs-string\">&quot;open&quot;</span>,\n  <span class=\"hljs-attr\">referenceTarget</span>: <span class=\"hljs-string\">&quot;real-input&quot;</span>,\n});\n<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">shadowRoot</span>.<span class=\"hljs-property\">innerHTML</span> = <span class=\"hljs-string\">`&lt;input id=&quot;real-input&quot;&gt;`</span>;"
+                  },
+                  "resources": [
+                    {
+                      "title": "Reference Target for Cross-Root ARIA",
+                      "url": "https://github.com/WICG/webcomponents/blob/gh-pages/proposals/reference-target-explainer.md"
+                    }
+                  ]
+                },
+                "comments": {
+                  "currentEdition": {
+                    "count": 7
+                  }
+                },
+                "responses": {
+                  "currentEdition": {
+                    "ratios": {
+                      "awareness": 0.1,
+                      "interest": 0.82,
+                      "usage": 0.01,
+                      "retention": 0.84,
+                      "positivity": 0.21,
+                      "positivityRelative": 0.77
+                    },
+                    "buckets": [
+                      {
+                        "count": 3921,
+                        "id": "never_heard",
+                        "facetBuckets": [
+                          {
+                            "count": 2848,
+                            "id": "neutral",
+                            "percentageBucket": 72.63,
+                            "percentageQuestion": 65.26,
+                            "percentageSurvey": 45.77
+                          },
+                          {
+                            "count": 824,
+                            "id": "positive",
+                            "percentageBucket": 21.02,
+                            "percentageQuestion": 18.88,
+                            "percentageSurvey": 13.24
+                          },
+                          {
+                            "count": 249,
+                            "id": "negative",
+                            "percentageBucket": 6.35,
+                            "percentageQuestion": 5.71,
+                            "percentageSurvey": 4
+                          }
+                        ],
+                        "percentageQuestion": 89.85,
+                        "percentageSurvey": 63.01
+                      },
+                      {
+                        "count": 357,
+                        "id": "heard",
+                        "facetBuckets": [
+                          {
+                            "count": 20,
+                            "id": "negative",
+                            "percentageBucket": 5.6,
+                            "percentageQuestion": 0.46,
+                            "percentageSurvey": 0.32
+                          },
+                          {
+                            "count": 92,
+                            "id": "positive",
+                            "percentageBucket": 25.77,
+                            "percentageQuestion": 2.11,
+                            "percentageSurvey": 1.48
+                          },
+                          {
+                            "count": 245,
+                            "id": "neutral",
+                            "percentageBucket": 68.63,
+                            "percentageQuestion": 5.61,
+                            "percentageSurvey": 3.94
+                          }
+                        ],
+                        "percentageQuestion": 8.18,
+                        "percentageSurvey": 5.74
+                      },
+                      {
+                        "count": 80,
+                        "id": "used",
+                        "facetBuckets": [
+                          {
+                            "count": 22,
+                            "id": "positive",
+                            "percentageBucket": 27.5,
+                            "percentageQuestion": 0.5,
+                            "percentageSurvey": 0.35
+                          },
+                          {
+                            "count": 4,
+                            "id": "negative",
+                            "percentageBucket": 5,
+                            "percentageQuestion": 0.09,
+                            "percentageSurvey": 0.06
+                          },
+                          {
+                            "count": 54,
+                            "id": "neutral",
+                            "percentageBucket": 67.5,
+                            "percentageQuestion": 1.24,
+                            "percentageSurvey": 0.87
+                          }
+                        ],
+                        "percentageQuestion": 1.83,
+                        "percentageSurvey": 1.29
+                      }
+                    ],
+                    "completion": {
+                      "count": 4364,
+                      "percentageSurvey": 70.13,
+                      "total": 6223
+                    }
+                  }
+                }
+              },
+              {
+                "id": "has_slotted",
+                "_metadata": {
+                  "sectionId": "web_components"
+                },
+                "entity": {
+                  "name": "`:has-slotted`",
+                  "nameClean": ":has-slotted",
+                  "nameHtml": "<code>:has-slotted</code>",
+                  "entityType": "feature",
+                  "description": "CSS pseudo-class that allows targeting `<slot>` elements only when they have slotted nodes.",
+                  "descriptionClean": "CSS pseudo-class that allows targeting <slot> elements only when they have slotted nodes.",
+                  "descriptionHtml": "CSS pseudo-class that allows targeting <code>&lt;slot&gt;</code> elements only when they have slotted nodes.",
+                  "mdn": {
+                    "locale": "en-US",
+                    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:has-slotted",
+                    "title": ":has-slotted",
+                    "summary": "The :has-slotted CSS pseudo-class matches when the content of a <slot> element is not empty or not using the default value (see Using templates and slots for more information)."
+                  },
+                  "example": {
+                    "language": "css",
+                    "code": "slot[name=icon]:not(:has-slotted) + .icon-label {\n  display: none;\n}\n",
+                    "codeHighlighted": "slot<span class=\"hljs-selector-attr\">[name=icon]</span><span class=\"hljs-selector-pseudo\">:not</span>(<span class=\"hljs-selector-pseudo\">:has</span>-slotted) + <span class=\"hljs-selector-class\">.icon-label</span> {\n  <span class=\"hljs-attribute\">display</span>: none;\n}"
+                  },
+                  "webFeature": {
+                    "id": "has-slotted",
+                    "description_html": "The <code>:has-slotted</code> CSS pseudo-class matches <code>&#x3C;slot></code> elements where the fallback content is not shown. The pseudo-class matches any slotted content, including white space, text nodes, or elements.",
+                    "group": [
+                      "selectors",
+                      "web-components"
+                    ],
+                    "name": ":has-slotted",
+                    "spec": [
+                      "https://drafts.csswg.org/css-scoping-1/#the-has-slotted-pseudo"
+                    ],
+                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/has-slotted/",
+                    "status": {
+                      "baseline": "false",
+                      "support": {
+                        "chrome": "134",
+                        "chrome_android": "134",
+                        "edge": "134",
+                        "firefox": "136",
+                        "firefox_android": "136"
+                      }
+                    }
+                  }
+                },
+                "comments": {
+                  "currentEdition": {
+                    "count": 6
+                  }
+                },
+                "responses": {
+                  "currentEdition": {
+                    "ratios": {
+                      "awareness": 0.2,
+                      "interest": 0.89,
+                      "usage": 0.05,
+                      "retention": 0.85,
+                      "positivity": 0.2,
+                      "positivityRelative": 0.78
+                    },
+                    "buckets": [
+                      {
+                        "count": 3479,
+                        "id": "never_heard",
+                        "facetBuckets": [
+                          {
+                            "count": 2578,
+                            "id": "neutral",
+                            "percentageBucket": 74.1,
+                            "percentageQuestion": 59.05,
+                            "percentageSurvey": 41.43
+                          },
+                          {
+                            "count": 211,
+                            "id": "negative",
+                            "percentageBucket": 6.06,
+                            "percentageQuestion": 4.83,
+                            "percentageSurvey": 3.39
+                          },
+                          {
+                            "count": 690,
+                            "id": "positive",
+                            "percentageBucket": 19.83,
+                            "percentageQuestion": 15.8,
+                            "percentageSurvey": 11.09
+                          }
+                        ],
+                        "percentageQuestion": 79.68,
+                        "percentageSurvey": 55.91
+                      },
+                      {
+                        "count": 654,
+                        "id": "heard",
+                        "facetBuckets": [
+                          {
+                            "count": 16,
+                            "id": "negative",
+                            "percentageBucket": 2.45,
+                            "percentageQuestion": 0.37,
+                            "percentageSurvey": 0.26
+                          },
+                          {
+                            "count": 502,
+                            "id": "neutral",
+                            "percentageBucket": 76.76,
+                            "percentageQuestion": 11.5,
+                            "percentageSurvey": 8.07
+                          },
+                          {
+                            "count": 136,
+                            "id": "positive",
+                            "percentageBucket": 20.8,
+                            "percentageQuestion": 3.11,
+                            "percentageSurvey": 2.19
+                          }
+                        ],
+                        "percentageQuestion": 14.98,
+                        "percentageSurvey": 10.51
+                      },
+                      {
+                        "count": 221,
+                        "id": "used",
+                        "facetBuckets": [
+                          {
+                            "count": 60,
+                            "id": "positive",
+                            "percentageBucket": 27.15,
+                            "percentageQuestion": 1.37,
+                            "percentageSurvey": 0.96
+                          },
+                          {
+                            "count": 10,
+                            "id": "negative",
+                            "percentageBucket": 4.52,
+                            "percentageQuestion": 0.23,
+                            "percentageSurvey": 0.16
+                          },
+                          {
+                            "count": 151,
+                            "id": "neutral",
+                            "percentageBucket": 68.33,
+                            "percentageQuestion": 3.46,
+                            "percentageSurvey": 2.43
+                          }
+                        ],
+                        "percentageQuestion": 5.06,
+                        "percentageSurvey": 3.55
+                      }
+                    ],
+                    "completion": {
+                      "count": 4366,
+                      "percentageSurvey": 70.16,
+                      "total": 6223
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
