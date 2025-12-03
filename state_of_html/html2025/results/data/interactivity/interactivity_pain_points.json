@@ -20,7 +20,7 @@
                         "order": "desc"
                       },
                       "limit": 20,
-                      "cutoff": 10
+                      "cutoff": 5
                     },
                     "editionId": "html2024",
                     "year": 2024,
@@ -54,14 +54,15 @@
                         "percentageQuestion": 12.85,
                         "percentageSurvey": 1.46,
                         "entity": {
-                          "name": "`<dialog>`",
-                          "nameHtml": "<code>&lt;dialog&gt;</code>",
-                          "nameClean": "<dialog>",
-                          "description": "Creates a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.",
-                          "descriptionHtml": "Creates a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.",
-                          "descriptionClean": "Creates a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.",
+                          "name": "<​dialog> Element",
+                          "nameHtml": "&lt;​dialog&gt; Element",
+                          "nameClean": "<​dialog> Element",
+                          "description": "Pain points related to the native HTML `<dialog>` element.",
+                          "descriptionHtml": "Pain points related to the native HTML <code>&lt;dialog&gt;</code> element.",
+                          "descriptionClean": "Pain points related to the native HTML <dialog> element.",
                           "id": "dialog_element",
-                          "entityType": "feature",
+                          "parentId": "interactivity",
+                          "entityType": "default",
                           "example": {
                             "language": "html",
                             "code": "<dialog id=\"confirm\">\n\t<form method=\"dialog\">\n\t\tAre you sure?\n\t\t<button value=\"1\">Yes</button>\n\t\t<button value=\"0\">No</button>\n\t</form>\n</dialog>",
@@ -101,7 +102,26 @@
                               }
                             }
                           }
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 20,
+                            "id": "modal_issues",
+                            "percentageQuestion": 3.25,
+                            "percentageSurvey": 0.37,
+                            "entity": {
+                              "name": "Modal Issues",
+                              "nameHtml": "Modal Issues",
+                              "nameClean": "Modal Issues",
+                              "description": "Common accessibility, usability, and focus-management problems when implementing modals with the `<dialog>` element.",
+                              "descriptionHtml": "Common accessibility, usability, and focus-management problems when implementing modals with the <code>&lt;dialog&gt;</code> element.",
+                              "descriptionClean": "Common accessibility, usability, and focus-management problems when implementing modals with the <dialog> element.",
+                              "id": "modal_issues",
+                              "parentId": "dialog_element",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 61,
@@ -127,14 +147,15 @@
                         "percentageQuestion": 8.78,
                         "percentageSurvey": 1,
                         "entity": {
-                          "name": "`popover` attribute (Popover API)",
-                          "nameHtml": "<code>popover</code> attribute (Popover API)",
-                          "nameClean": "popover attribute (Popover API)",
-                          "description": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
-                          "descriptionHtml": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
-                          "descriptionClean": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
+                          "name": "Popover API",
+                          "nameHtml": "Popover API",
+                          "nameClean": "Popover API",
+                          "description": "Pain points specific to Popover API.",
+                          "descriptionHtml": "Pain points specific to Popover API.",
+                          "descriptionClean": "Pain points specific to Popover API.",
                           "id": "popover_api",
-                          "entityType": "feature",
+                          "parentId": "interactivity",
+                          "entityType": "default",
                           "example": {
                             "language": "html",
                             "code": "<button popovertarget=\"foo\">Toggle the popover</button>\n<div id=\"foo\" popover>Popover content</div>",
@@ -194,13 +215,14 @@
                         "percentageQuestion": 7.97,
                         "percentageSurvey": 0.91,
                         "entity": {
-                          "name": "Styling & customization",
-                          "nameHtml": "Styling &amp; customization",
-                          "nameClean": "Styling & customization",
-                          "description": "CSS styling and customization issues.",
-                          "descriptionHtml": "CSS styling and customization issues.",
-                          "descriptionClean": "CSS styling and customization issues.",
+                          "name": "Styling and UI customization",
+                          "nameHtml": "Styling and UI customization",
+                          "nameClean": "Styling and UI customization",
+                          "description": "Issues around styling and customizing browser-generated UI.",
+                          "descriptionHtml": "Issues around styling and customizing browser-generated UI.",
+                          "descriptionClean": "Issues around styling and customizing browser-generated UI.",
                           "id": "styling_customization",
+                          "parentId": "a11y_technical_issues",
                           "entityType": "default"
                         }
                       },
@@ -214,9 +236,9 @@
                           "name": "Accessibility",
                           "nameHtml": "Accessibility",
                           "nameClean": "Accessibility",
-                          "description": "Accessibility improvements",
-                          "descriptionHtml": "Accessibility improvements",
-                          "descriptionClean": "Accessibility improvements",
+                          "description": "Accessibility issues",
+                          "descriptionHtml": "Accessibility issues",
+                          "descriptionClean": "Accessibility issues",
                           "id": "accessibility",
                           "entityType": "default"
                         }
@@ -248,9 +270,9 @@
                           "name": "Reliance on JavaScript",
                           "nameHtml": "Reliance on JavaScript",
                           "nameClean": "Reliance on JavaScript",
-                          "description": "Excessive reliance on JavaScript",
-                          "descriptionHtml": "Excessive reliance on JavaScript",
-                          "descriptionClean": "Excessive reliance on JavaScript",
+                          "description": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "descriptionHtml": "Lack of declarative APIs, slow rendering due to dependence on correct loading &amp; execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "descriptionClean": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
                           "id": "reliance_on_javascript",
                           "entityType": "default"
                         }
@@ -274,20 +296,9 @@
                         }
                       },
                       {
-                        "count": 20,
-                        "id": "modal_issues",
-                        "index": 9,
-                        "percentageQuestion": 3.25,
-                        "percentageSurvey": 0.37,
-                        "entity": {
-                          "id": "modal_issues",
-                          "entityType": "default"
-                        }
-                      },
-                      {
                         "count": 17,
                         "id": "transitions",
-                        "index": 10,
+                        "index": 9,
                         "percentageQuestion": 2.76,
                         "percentageSurvey": 0.31,
                         "entity": {
@@ -295,19 +306,23 @@
                           "nameHtml": "Transitions",
                           "nameClean": "Transitions",
                           "id": "transitions",
+                          "parentId": "ux_issues",
                           "entityType": "default"
                         }
                       },
                       {
                         "count": 16,
                         "id": "state_management",
-                        "index": 11,
+                        "index": 10,
                         "percentageQuestion": 2.6,
                         "percentageSurvey": 0.3,
                         "entity": {
-                          "name": "State management",
-                          "nameHtml": "State management",
-                          "nameClean": "State management",
+                          "name": "State Management",
+                          "nameHtml": "State Management",
+                          "nameClean": "State Management",
+                          "description": "Difficulties with managing and preserving UI state (e.g., focus, scroll position, form input values, component state) during DOM manipulations.",
+                          "descriptionHtml": "Difficulties with managing and preserving UI state (e.g., focus, scroll position, form input values, component state) during DOM manipulations.",
+                          "descriptionClean": "Difficulties with managing and preserving UI state (e.g., focus, scroll position, form input values, component state) during DOM manipulations.",
                           "id": "state_management",
                           "entityType": "default"
                         }
@@ -315,32 +330,36 @@
                       {
                         "count": 15,
                         "id": "focus_management",
-                        "index": 12,
+                        "index": 11,
                         "percentageQuestion": 2.44,
                         "percentageSurvey": 0.28,
                         "entity": {
-                          "name": "Focus management",
-                          "nameHtml": "Focus management",
-                          "nameClean": "Focus management",
-                          "description": "Managing user focus",
-                          "descriptionHtml": "Managing user focus",
-                          "descriptionClean": "Managing user focus",
+                          "name": "Focus Management",
+                          "nameHtml": "Focus Management",
+                          "nameClean": "Focus Management",
+                          "description": "Challenges with managing focus, especially in dynamic contexts. Includes focus trapping, roving tabindex, moving focus programmatically, and preserving focus when DOM elements are added, removed, or moved.",
+                          "descriptionHtml": "Challenges with managing focus, especially in dynamic contexts. Includes focus trapping, roving tabindex, moving focus programmatically, and preserving focus when DOM elements are added, removed, or moved.",
+                          "descriptionClean": "Challenges with managing focus, especially in dynamic contexts. Includes focus trapping, roving tabindex, moving focus programmatically, and preserving focus when DOM elements are added, removed, or moved.",
                           "id": "focus_management",
+                          "parentId": "a11y_technical_issues",
                           "entityType": "default"
                         }
                       },
                       {
                         "count": 15,
                         "id": "safari",
-                        "index": 13,
+                        "index": 12,
                         "percentageQuestion": 2.44,
                         "percentageSurvey": 0.28,
                         "entity": {
-                          "name": "Safari",
-                          "nameHtml": "Safari",
-                          "nameClean": "Safari",
+                          "name": "Safari browser",
+                          "nameHtml": "Safari browser",
+                          "nameClean": "Safari browser",
+                          "description": "Issues specific to the Safari browser, across all platforms.",
+                          "descriptionHtml": "Issues specific to the Safari browser, across all platforms.",
+                          "descriptionClean": "Issues specific to the Safari browser, across all platforms.",
                           "id": "safari",
-                          "parentId": "apple",
+                          "parentId": "interop_issues",
                           "entityType": "default",
                           "homepage": {
                             "url": "https://www.apple.com/safari/"
@@ -350,7 +369,7 @@
                       {
                         "count": 14,
                         "id": "lack_of_declarative_apis",
-                        "index": 14,
+                        "index": 13,
                         "percentageQuestion": 2.28,
                         "percentageSurvey": 0.26,
                         "entity": {
@@ -367,44 +386,120 @@
                       {
                         "count": 11,
                         "id": "html_imports",
-                        "index": 15,
+                        "index": 14,
                         "percentageQuestion": 1.79,
                         "percentageSurvey": 0.2,
                         "entity": {
-                          "name": "HTML imports",
-                          "nameHtml": "HTML imports",
-                          "nameClean": "HTML imports",
-                          "description": "Lack of native HTML imports or templating",
-                          "descriptionHtml": "Lack of native HTML imports or templating",
-                          "descriptionClean": "Lack of native HTML imports or templating",
+                          "name": "HTML Imports",
+                          "nameHtml": "HTML Imports",
+                          "nameClean": "HTML Imports",
+                          "description": "Lack of native HTML imports or templating.",
+                          "descriptionHtml": "Lack of native HTML imports or templating.",
+                          "descriptionClean": "Lack of native HTML imports or templating.",
                           "id": "html_imports",
+                          "parentId": "html_reuse",
                           "entityType": "default"
                         }
                       },
                       {
                         "count": 10,
                         "id": "native_htmx_like_features",
-                        "index": 16,
+                        "index": 15,
                         "percentageQuestion": 1.63,
                         "percentageSurvey": 0.19,
                         "entity": {
+                          "name": "htmx Features",
+                          "nameHtml": "htmx Features",
+                          "nameClean": "htmx Features",
+                          "description": "The lack of native access to WebSockets, Server Sent Events, and other features supported by htmx directly in HTML.",
+                          "descriptionHtml": "The lack of native access to WebSockets, Server Sent Events, and other features supported by htmx directly in HTML.",
+                          "descriptionClean": "The lack of native access to WebSockets, Server Sent Events, and other features supported by htmx directly in HTML.",
                           "id": "native_htmx_like_features",
+                          "parentId": "declarative_apis",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 9,
+                        "id": "excessive_complexity",
+                        "index": 16,
+                        "percentageQuestion": 1.46,
+                        "percentageSurvey": 0.17,
+                        "entity": {
+                          "name": "Excessive complexity",
+                          "nameHtml": "Excessive complexity",
+                          "nameClean": "Excessive complexity",
+                          "description": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
+                          "descriptionHtml": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
+                          "descriptionClean": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
+                          "id": "excessive_complexity",
+                          "parentId": "cognitive_overload",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 9,
+                        "id": "lack_of_reactivity_support",
+                        "index": 17,
+                        "percentageQuestion": 1.46,
+                        "percentageSurvey": 0.17,
+                        "entity": {
+                          "name": "Reactivity",
+                          "nameHtml": "Reactivity",
+                          "nameClean": "Reactivity",
+                          "description": "Lack of support for reactivity",
+                          "descriptionHtml": "Lack of support for reactivity",
+                          "descriptionClean": "Lack of support for reactivity",
+                          "id": "lack_of_reactivity_support",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 9,
+                        "id": "shadow_dom_issues",
+                        "index": 18,
+                        "percentageQuestion": 1.46,
+                        "percentageSurvey": 0.17,
+                        "entity": {
+                          "name": "Shadow DOM Issues",
+                          "nameHtml": "Shadow DOM Issues",
+                          "nameClean": "Shadow DOM Issues",
+                          "id": "shadow_dom_issues",
+                          "parentId": "interacting_with_dom",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 9,
+                        "id": "tooltips",
+                        "index": 19,
+                        "percentageQuestion": 1.46,
+                        "percentageSurvey": 0.17,
+                        "entity": {
+                          "name": "Tooltips",
+                          "nameHtml": "Tooltips",
+                          "nameClean": "Tooltips",
+                          "description": "Pain points related to creating accessible, reliable tooltips.",
+                          "descriptionHtml": "Pain points related to creating accessible, reliable tooltips.",
+                          "descriptionClean": "Pain points related to creating accessible, reliable tooltips.",
+                          "id": "tooltips",
+                          "parentId": "interactivity",
                           "entityType": "default"
                         }
                       },
                       {
                         "count": 4786,
                         "id": "no_answer",
-                        "index": 17,
+                        "index": 20,
                         "percentageQuestion": 0,
                         "percentageSurvey": 88.61
                       },
                       {
-                        "count": 353,
+                        "count": 317,
                         "id": "other_answers",
-                        "index": 18,
-                        "percentageQuestion": 57.42,
-                        "percentageSurvey": 6.61
+                        "index": 21,
+                        "percentageQuestion": 51.58,
+                        "percentageSurvey": 5.93
                       }
                     ]
                   },
@@ -415,7 +510,7 @@
                         "order": "desc"
                       },
                       "limit": 20,
-                      "cutoff": 10
+                      "cutoff": 5
                     },
                     "editionId": "html2025",
                     "year": 2025,
@@ -427,7 +522,7 @@
                     "buckets": [
                       {
                         "count": 202,
-                        "id": "interop",
+                        "id": "interop_issues",
                         "index": 0,
                         "percentageQuestion": 27.19,
                         "percentageSurvey": 3.25,
@@ -438,14 +533,73 @@
                           "description": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
                           "descriptionHtml": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
                           "descriptionClean": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
-                          "id": "interop",
+                          "id": "interop_issues",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 22,
+                            "id": "safari",
+                            "percentageQuestion": 2.96,
+                            "percentageSurvey": 0.35,
+                            "entity": {
+                              "name": "Safari browser",
+                              "nameHtml": "Safari browser",
+                              "nameClean": "Safari browser",
+                              "description": "Issues specific to the Safari browser, across all platforms.",
+                              "descriptionHtml": "Issues specific to the Safari browser, across all platforms.",
+                              "descriptionClean": "Issues specific to the Safari browser, across all platforms.",
+                              "id": "safari",
+                              "parentId": "interop_issues",
+                              "entityType": "default",
+                              "homepage": {
+                                "url": "https://www.apple.com/safari/"
+                              }
+                            }
+                          },
+                          {
+                            "count": 15,
+                            "id": "firefox",
+                            "percentageQuestion": 2.02,
+                            "percentageSurvey": 0.24,
+                            "entity": {
+                              "name": "Firefox browser",
+                              "nameHtml": "Firefox browser",
+                              "nameClean": "Firefox browser",
+                              "description": "Issues specific to the Firefox browser, across all platforms.",
+                              "descriptionHtml": "Issues specific to the Firefox browser, across all platforms.",
+                              "descriptionClean": "Issues specific to the Firefox browser, across all platforms.",
+                              "id": "firefox",
+                              "parentId": "interop_issues",
+                              "entityType": "default",
+                              "homepage": {
+                                "url": "https://www.mozilla.org/en-US/firefox/new/"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 189,
+                        "id": "high_cognitive_load",
+                        "index": 1,
+                        "percentageQuestion": 25.44,
+                        "percentageSurvey": 3.04,
+                        "entity": {
+                          "name": "🗑️ High cognitive load",
+                          "nameHtml": "🗑️ High cognitive load",
+                          "nameClean": "🗑️ High cognitive load",
+                          "description": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "descriptionHtml": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "descriptionClean": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "id": "high_cognitive_load",
                           "entityType": "default"
                         }
                       },
                       {
                         "count": 94,
                         "id": "dom_apis",
-                        "index": 1,
+                        "index": 2,
                         "percentageQuestion": 12.65,
                         "percentageSurvey": 1.51,
                         "entity": {
@@ -458,40 +612,148 @@
                           "id": "dom_apis",
                           "parentId": "interactivity",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 8,
+                            "id": "creating_elements",
+                            "percentageQuestion": 1.08,
+                            "percentageSurvey": 0.13,
+                            "entity": {
+                              "name": "Creating elements",
+                              "nameHtml": "Creating elements",
+                              "nameClean": "Creating elements",
+                              "description": "Issues around creating elements, complex DOM trees, etc.",
+                              "descriptionHtml": "Issues around creating elements, complex DOM trees, etc.",
+                              "descriptionClean": "Issues around creating elements, complex DOM trees, etc.",
+                              "id": "creating_elements",
+                              "parentId": "dom_apis",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 6,
+                            "id": "reparenting",
+                            "percentageQuestion": 0.81,
+                            "percentageSurvey": 0.1,
+                            "entity": {
+                              "name": "Stable reparenting",
+                              "nameHtml": "Stable reparenting",
+                              "nameClean": "Stable reparenting",
+                              "description": "The need for reparenting that preserves state",
+                              "descriptionHtml": "The need for reparenting that preserves state",
+                              "descriptionClean": "The need for reparenting that preserves state",
+                              "id": "reparenting",
+                              "parentId": "dom_apis",
+                              "entityType": "default"
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 6,
+                                "id": "element_movebefore",
+                                "percentageQuestion": 0.81,
+                                "percentageSurvey": 0.1,
+                                "entity": {
+                                  "name": "element.moveBefore()",
+                                  "nameHtml": "element.moveBefore()",
+                                  "nameClean": "element.moveBefore()",
+                                  "id": "element_movebefore",
+                                  "parentId": "reparenting",
+                                  "entityType": "default"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "count": 5,
+                            "id": "incremental_dom_updates",
+                            "percentageQuestion": 0.67,
+                            "percentageSurvey": 0.08,
+                            "entity": {
+                              "name": "Incremental DOM updates",
+                              "nameHtml": "Incremental DOM updates",
+                              "nameClean": "Incremental DOM updates",
+                              "description": "Challenges related to updating parts of DOM trees to reflect state, including strategies like DOM diffing, virtual DOM or API proposals such as DOM parts.",
+                              "descriptionHtml": "Challenges related to updating parts of DOM trees to reflect state, including strategies like DOM diffing, virtual DOM or API proposals such as DOM parts.",
+                              "descriptionClean": "Challenges related to updating parts of DOM trees to reflect state, including strategies like DOM diffing, virtual DOM or API proposals such as DOM parts.",
+                              "id": "incremental_dom_updates",
+                              "parentId": "dom_apis",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 84,
-                        "id": "accessibility",
-                        "index": 2,
+                        "id": "accessibility_issues",
+                        "index": 3,
                         "percentageQuestion": 11.31,
                         "percentageSurvey": 1.35,
                         "entity": {
                           "name": "Accessibility",
                           "nameHtml": "Accessibility",
                           "nameClean": "Accessibility",
-                          "description": "Accessibility improvements",
-                          "descriptionHtml": "Accessibility improvements",
-                          "descriptionClean": "Accessibility improvements",
-                          "id": "accessibility",
+                          "description": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "descriptionHtml": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "descriptionClean": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "id": "accessibility_issues",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 18,
+                            "id": "aria_issues",
+                            "percentageQuestion": 2.42,
+                            "percentageSurvey": 0.29,
+                            "entity": {
+                              "name": "ARIA",
+                              "nameHtml": "ARIA",
+                              "nameClean": "ARIA",
+                              "description": "Issues related to using Accessible Rich Internet Applications (ARIA) attributes and patterns.",
+                              "descriptionHtml": "Issues related to using Accessible Rich Internet Applications (ARIA) attributes and patterns.",
+                              "descriptionClean": "Issues related to using Accessible Rich Internet Applications (ARIA) attributes and patterns.",
+                              "id": "aria_issues",
+                              "parentId": "accessibility_issues",
+                              "entityType": "default"
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 16,
+                                "id": "aria_live_regions",
+                                "percentageQuestion": 2.15,
+                                "percentageSurvey": 0.26,
+                                "entity": {
+                                  "name": "ARIA live regions",
+                                  "nameHtml": "ARIA live regions",
+                                  "nameClean": "ARIA live regions",
+                                  "description": "Issues around ARIA live regions and generally announcing DOM changes to assistive technology.",
+                                  "descriptionHtml": "Issues around ARIA live regions and generally announcing DOM changes to assistive technology.",
+                                  "descriptionClean": "Issues around ARIA live regions and generally announcing DOM changes to assistive technology.",
+                                  "id": "aria_live_regions",
+                                  "parentId": "aria_issues",
+                                  "entityType": "default"
+                                }
+                              }
+                            ]
+                          }
+                        ]
                       },
                       {
                         "count": 78,
                         "id": "dialog_element",
-                        "index": 3,
+                        "index": 4,
                         "percentageQuestion": 10.5,
                         "percentageSurvey": 1.25,
                         "entity": {
-                          "name": "`<dialog>`",
-                          "nameHtml": "<code>&lt;dialog&gt;</code>",
-                          "nameClean": "<dialog>",
-                          "description": "Creates a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.",
-                          "descriptionHtml": "Creates a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.",
-                          "descriptionClean": "Creates a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.",
+                          "name": "<​dialog> Element",
+                          "nameHtml": "&lt;​dialog&gt; Element",
+                          "nameClean": "<​dialog> Element",
+                          "description": "Pain points related to the native HTML `<dialog>` element.",
+                          "descriptionHtml": "Pain points related to the native HTML <code>&lt;dialog&gt;</code> element.",
+                          "descriptionClean": "Pain points related to the native HTML <dialog> element.",
                           "id": "dialog_element",
-                          "entityType": "feature",
+                          "parentId": "interactivity",
+                          "entityType": "default",
                           "example": {
                             "language": "html",
                             "code": "<dialog id=\"confirm\">\n\t<form method=\"dialog\">\n\t\tAre you sure?\n\t\t<button value=\"1\">Yes</button>\n\t\t<button value=\"0\">No</button>\n\t</form>\n</dialog>",
@@ -536,16 +798,16 @@
                       {
                         "count": 76,
                         "id": "reliance_on_javascript",
-                        "index": 4,
+                        "index": 5,
                         "percentageQuestion": 10.23,
                         "percentageSurvey": 1.22,
                         "entity": {
                           "name": "Reliance on JavaScript",
                           "nameHtml": "Reliance on JavaScript",
                           "nameClean": "Reliance on JavaScript",
-                          "description": "Excessive reliance on JavaScript",
-                          "descriptionHtml": "Excessive reliance on JavaScript",
-                          "descriptionClean": "Excessive reliance on JavaScript",
+                          "description": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "descriptionHtml": "Lack of declarative APIs, slow rendering due to dependence on correct loading &amp; execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "descriptionClean": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
                           "id": "reliance_on_javascript",
                           "entityType": "default"
                         }
@@ -553,18 +815,19 @@
                       {
                         "count": 74,
                         "id": "popover_api",
-                        "index": 5,
+                        "index": 6,
                         "percentageQuestion": 9.96,
                         "percentageSurvey": 1.19,
                         "entity": {
-                          "name": "`popover` attribute (Popover API)",
-                          "nameHtml": "<code>popover</code> attribute (Popover API)",
-                          "nameClean": "popover attribute (Popover API)",
-                          "description": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
-                          "descriptionHtml": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
-                          "descriptionClean": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
+                          "name": "Popover API",
+                          "nameHtml": "Popover API",
+                          "nameClean": "Popover API",
+                          "description": "Pain points specific to Popover API.",
+                          "descriptionHtml": "Pain points specific to Popover API.",
+                          "descriptionClean": "Pain points specific to Popover API.",
                           "id": "popover_api",
-                          "entityType": "feature",
+                          "parentId": "interactivity",
+                          "entityType": "default",
                           "example": {
                             "language": "html",
                             "code": "<button popovertarget=\"foo\">Toggle the popover</button>\n<div id=\"foo\" popover>Popover content</div>",
@@ -618,71 +881,19 @@
                         }
                       },
                       {
-                        "count": 53,
-                        "id": "ecosystem",
-                        "index": 6,
-                        "percentageQuestion": 7.13,
-                        "percentageSurvey": 0.85,
-                        "entity": {
-                          "name": "Ecosystem issues",
-                          "nameHtml": "Ecosystem issues",
-                          "nameClean": "Ecosystem issues",
-                          "id": "ecosystem",
-                          "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 47,
-                            "id": "framework_compatibility",
-                            "percentageQuestion": 6.33,
-                            "percentageSurvey": 0.76,
-                            "entity": {
-                              "name": "Framework compatibility",
-                              "nameHtml": "Framework compatibility",
-                              "nameClean": "Framework compatibility",
-                              "description": "Issues around compatibility with JS frameworks.",
-                              "descriptionHtml": "Issues around compatibility with JS frameworks.",
-                              "descriptionClean": "Issues around compatibility with JS frameworks.",
-                              "id": "framework_compatibility",
-                              "parentId": "ecosystem",
-                              "entityType": "default"
-                            },
-                            "nestedBuckets": [
-                              {
-                                "count": 19,
-                                "id": "react_compatibility",
-                                "percentageQuestion": 2.56,
-                                "percentageSurvey": 0.31,
-                                "entity": {
-                                  "name": "React compatibility",
-                                  "nameHtml": "React compatibility",
-                                  "nameClean": "React compatibility",
-                                  "description": "Issues around compatibility with React.",
-                                  "descriptionHtml": "Issues around compatibility with React.",
-                                  "descriptionClean": "Issues around compatibility with React.",
-                                  "id": "react_compatibility",
-                                  "parentId": "framework_compatibility",
-                                  "entityType": "default"
-                                }
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "count": 51,
-                        "id": "transitions_animations",
+                        "count": 52,
+                        "id": "animations_issues",
                         "index": 7,
-                        "percentageQuestion": 6.86,
-                        "percentageSurvey": 0.82,
+                        "percentageQuestion": 7,
+                        "percentageSurvey": 0.84,
                         "entity": {
-                          "name": "Transitions",
-                          "nameHtml": "Transitions",
-                          "nameClean": "Transitions",
-                          "description": "Pain points in using UI transitions & animations, the View Transitions API, etc.",
-                          "descriptionHtml": "Pain points in using UI transitions &amp; animations, the View Transitions API, etc.",
-                          "descriptionClean": "Pain points in using UI transitions & animations, the View Transitions API, etc.",
-                          "id": "transitions_animations",
+                          "name": "Animations",
+                          "nameHtml": "Animations",
+                          "nameClean": "Animations",
+                          "description": "Issues related to UI animations across all technologies, regardless of technology used to implement them (CSS animations, Lottie, etc)",
+                          "descriptionHtml": "Issues related to UI animations across all technologies, regardless of technology used to implement them (CSS animations, Lottie, etc)",
+                          "descriptionClean": "Issues related to UI animations across all technologies, regardless of technology used to implement them (CSS animations, Lottie, etc)",
+                          "id": "animations_issues",
                           "entityType": "default"
                         }
                       },
@@ -715,7 +926,45 @@
                               "id": "html_reuse",
                               "parentId": "content",
                               "entityType": "default"
-                            }
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 49,
+                                "id": "templating",
+                                "percentageQuestion": 6.59,
+                                "percentageSurvey": 0.79,
+                                "entity": {
+                                  "name": "Templating & rendering",
+                                  "nameHtml": "Templating &amp; rendering",
+                                  "nameClean": "Templating & rendering",
+                                  "description": "Authoring and running templates, data binding, reactive rendering, Declarative Shadow DOM, and server boundaries. Also includes issues related to the <template> element.",
+                                  "descriptionHtml": "Authoring and running templates, data binding, reactive rendering, Declarative Shadow DOM, and server boundaries. Also includes issues related to the  element.",
+                                  "descriptionClean": "Authoring and running templates, data binding, reactive rendering, Declarative Shadow DOM, and server boundaries. Also includes issues related to the  element.",
+                                  "id": "templating",
+                                  "parentId": "html_reuse",
+                                  "entityType": "default"
+                                },
+                                "nestedBuckets": [
+                                  {
+                                    "count": 25,
+                                    "id": "reactivity",
+                                    "percentageQuestion": 3.36,
+                                    "percentageSurvey": 0.4,
+                                    "entity": {
+                                      "name": "Reactive rendering & data bindings",
+                                      "nameHtml": "Reactive rendering &amp; data bindings",
+                                      "nameClean": "Reactive rendering & data bindings",
+                                      "description": "Issues with reactivity",
+                                      "descriptionHtml": "Issues with reactivity",
+                                      "descriptionClean": "Issues with reactivity",
+                                      "id": "reactivity",
+                                      "parentId": "templating",
+                                      "entityType": "default"
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
                           }
                         ]
                       },
@@ -726,6 +975,12 @@
                         "percentageQuestion": 6.73,
                         "percentageSurvey": 0.8,
                         "entity": {
+                          "name": "Event management",
+                          "nameHtml": "Event management",
+                          "nameClean": "Event management",
+                          "description": "Issues around events, complex interactions being hard to define via events, etc. For issues around handling events, including event composition, retargeting, and authoring patterns across light/shadow boundaries, combine with `cross_root`.",
+                          "descriptionHtml": "Issues around events, complex interactions being hard to define via events, etc. For issues around handling events, including event composition, retargeting, and authoring patterns across light/shadow boundaries, combine with <code>cross_root</code>.",
+                          "descriptionClean": "Issues around events, complex interactions being hard to define via events, etc. For issues around handling events, including event composition, retargeting, and authoring patterns across light/shadow boundaries, combine with cross_root.",
                           "id": "events",
                           "entityType": "default"
                         }
@@ -745,87 +1000,143 @@
                           "descriptionClean": "Complaints about lack of declarative APIs (combine with limitations), or current declarative APIs (as a whole) being hard to use (combine with ergonomics).",
                           "id": "declarative_apis",
                           "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 49,
-                        "id": "templating",
-                        "index": 11,
-                        "percentageQuestion": 6.59,
-                        "percentageSurvey": 0.79,
-                        "entity": {
-                          "name": "Templating",
-                          "nameHtml": "Templating",
-                          "nameClean": "Templating",
-                          "description": "Lack of templating",
-                          "descriptionHtml": "Lack of templating",
-                          "descriptionClean": "Lack of templating",
-                          "id": "templating",
-                          "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 14,
+                            "id": "native_htmx_like_features",
+                            "percentageQuestion": 1.88,
+                            "percentageSurvey": 0.22,
+                            "entity": {
+                              "name": "htmx Features",
+                              "nameHtml": "htmx Features",
+                              "nameClean": "htmx Features",
+                              "description": "The lack of native access to WebSockets, Server Sent Events, and other features supported by htmx directly in HTML.",
+                              "descriptionHtml": "The lack of native access to WebSockets, Server Sent Events, and other features supported by htmx directly in HTML.",
+                              "descriptionClean": "The lack of native access to WebSockets, Server Sent Events, and other features supported by htmx directly in HTML.",
+                              "id": "native_htmx_like_features",
+                              "parentId": "declarative_apis",
+                              "entityType": "default"
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 8,
+                                "id": "partial_page_updates",
+                                "percentageQuestion": 1.08,
+                                "percentageSurvey": 0.13,
+                                "entity": {
+                                  "name": "Partial Page Updates",
+                                  "nameHtml": "Partial Page Updates",
+                                  "nameClean": "Partial Page Updates",
+                                  "description": "The desire for a native mechanism to update parts of a page with HTML from a server response, without a full page reload, similar to what libraries like htmx or Turbo provide.",
+                                  "descriptionHtml": "The desire for a native mechanism to update parts of a page with HTML from a server response, without a full page reload, similar to what libraries like htmx or Turbo provide.",
+                                  "descriptionClean": "The desire for a native mechanism to update parts of a page with HTML from a server response, without a full page reload, similar to what libraries like htmx or Turbo provide.",
+                                  "id": "partial_page_updates",
+                                  "parentId": "native_htmx_like_features",
+                                  "entityType": "default"
+                                }
+                              }
+                            ]
+                          }
+                        ]
                       },
                       {
                         "count": 38,
                         "id": "focus_management",
-                        "index": 12,
+                        "index": 11,
                         "percentageQuestion": 5.11,
                         "percentageSurvey": 0.61,
                         "entity": {
-                          "name": "Focus management",
-                          "nameHtml": "Focus management",
-                          "nameClean": "Focus management",
-                          "description": "Managing user focus",
-                          "descriptionHtml": "Managing user focus",
-                          "descriptionClean": "Managing user focus",
+                          "name": "Focus Management",
+                          "nameHtml": "Focus Management",
+                          "nameClean": "Focus Management",
+                          "description": "Challenges with managing focus, especially in dynamic contexts. Includes focus trapping, roving tabindex, moving focus programmatically, and preserving focus when DOM elements are added, removed, or moved.",
+                          "descriptionHtml": "Challenges with managing focus, especially in dynamic contexts. Includes focus trapping, roving tabindex, moving focus programmatically, and preserving focus when DOM elements are added, removed, or moved.",
+                          "descriptionClean": "Challenges with managing focus, especially in dynamic contexts. Includes focus trapping, roving tabindex, moving focus programmatically, and preserving focus when DOM elements are added, removed, or moved.",
                           "id": "focus_management",
+                          "parentId": "a11y_technical_issues",
                           "entityType": "default"
                         }
                       },
                       {
                         "count": 37,
-                        "id": "css",
-                        "index": 13,
+                        "id": "css_issues",
+                        "index": 12,
                         "percentageQuestion": 4.98,
                         "percentageSurvey": 0.59,
                         "entity": {
                           "name": "CSS",
                           "nameHtml": "CSS",
                           "nameClean": "CSS",
-                          "id": "css",
-                          "entityType": "library"
+                          "description": "Issues related to CSS or specific CSS features (if no more specific leaf)",
+                          "descriptionHtml": "Issues related to CSS or specific CSS features (if no more specific leaf)",
+                          "descriptionClean": "Issues related to CSS or specific CSS features (if no more specific leaf)",
+                          "id": "css_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 36,
+                        "id": "cognitive_overload",
+                        "index": 13,
+                        "percentageQuestion": 4.85,
+                        "percentageSurvey": 0.58,
+                        "entity": {
+                          "name": "Cognitive overload",
+                          "nameHtml": "Cognitive overload",
+                          "nameClean": "Cognitive overload",
+                          "id": "cognitive_overload",
+                          "entityType": "default"
                         },
                         "nestedBuckets": [
                           {
-                            "count": 22,
-                            "id": "css_anchor_positioning",
-                            "percentageQuestion": 2.96,
-                            "percentageSurvey": 0.35,
+                            "count": 18,
+                            "id": "verbosity_boilerplate",
+                            "percentageQuestion": 2.42,
+                            "percentageSurvey": 0.29,
                             "entity": {
-                              "name": "CSS Anchor Positioning",
-                              "nameHtml": "CSS Anchor Positioning",
-                              "nameClean": "CSS Anchor Positioning",
-                              "description": "Pain points related to the CSS Anchor Positioning API, often in conjunction with the Popover API. Includes issues with browser support and the perceived necessity of this API for positioning popovers and tooltips effectively.",
-                              "descriptionHtml": "Pain points related to the CSS Anchor Positioning API, often in conjunction with the Popover API. Includes issues with browser support and the perceived necessity of this API for positioning popovers and tooltips effectively.",
-                              "descriptionClean": "Pain points related to the CSS Anchor Positioning API, often in conjunction with the Popover API. Includes issues with browser support and the perceived necessity of this API for positioning popovers and tooltips effectively.",
-                              "id": "css_anchor_positioning",
-                              "parentId": "css",
+                              "name": "Excessive verbosity / Boilerplate",
+                              "nameHtml": "Excessive verbosity / Boilerplate",
+                              "nameClean": "Excessive verbosity / Boilerplate",
+                              "description": "APIs being overly verbose and/or requiring too much boilerplate.",
+                              "descriptionHtml": "APIs being overly verbose and/or requiring too much boilerplate.",
+                              "descriptionClean": "APIs being overly verbose and/or requiring too much boilerplate.",
+                              "id": "verbosity_boilerplate",
+                              "parentId": "cognitive_overload",
                               "entityType": "default"
                             }
                           },
                           {
-                            "count": 14,
-                            "id": "top_layer",
-                            "percentageQuestion": 1.88,
-                            "percentageSurvey": 0.22,
+                            "count": 10,
+                            "id": "poor_learnability",
+                            "percentageQuestion": 1.35,
+                            "percentageSurvey": 0.16,
                             "entity": {
-                              "name": "Top Layer",
-                              "nameHtml": "Top Layer",
-                              "nameClean": "Top Layer",
-                              "description": "Issues related to the top layer, where elements like <dialog> and popovers are rendered. Includes z-index conflicts, stacking order control, and interactions between multiple top-layer elements.",
-                              "descriptionHtml": "Issues related to the top layer, where elements like  and popovers are rendered. Includes z-index conflicts, stacking order control, and interactions between multiple top-layer elements.",
-                              "descriptionClean": "Issues related to the top layer, where elements like  and popovers are rendered. Includes z-index conflicts, stacking order control, and interactions between multiple top-layer elements.",
-                              "id": "top_layer",
-                              "parentId": "css",
+                              "name": "Poor learnability",
+                              "nameHtml": "Poor learnability",
+                              "nameClean": "Poor learnability",
+                              "description": "High learning curve, requires too much knowledge to get started, or too much information to memorize.",
+                              "descriptionHtml": "High learning curve, requires too much knowledge to get started, or too much information to memorize.",
+                              "descriptionClean": "High learning curve, requires too much knowledge to get started, or too much information to memorize.",
+                              "id": "poor_learnability",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 7,
+                            "id": "excessive_complexity",
+                            "percentageQuestion": 0.94,
+                            "percentageSurvey": 0.11,
+                            "entity": {
+                              "name": "Excessive complexity",
+                              "nameHtml": "Excessive complexity",
+                              "nameClean": "Excessive complexity",
+                              "description": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
+                              "descriptionHtml": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
+                              "descriptionClean": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
+                              "id": "excessive_complexity",
+                              "parentId": "cognitive_overload",
                               "entityType": "default"
                             }
                           }
@@ -846,7 +1157,23 @@
                           "descriptionClean": "Pain points related to the  and  elements, including styling limitations (especially the marker), animation difficulties, and accessibility concerns.",
                           "id": "details_summary_element",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 5,
+                            "id": "details_name_attribute",
+                            "percentageQuestion": 0.67,
+                            "percentageSurvey": 0.08,
+                            "entity": {
+                              "name": "<​details name> (Exclusive accordion)",
+                              "nameHtml": "&lt;​details name&gt; (Exclusive accordion)",
+                              "nameClean": "<​details name> (Exclusive accordion)",
+                              "id": "details_name_attribute",
+                              "parentId": "details_summary_element",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 33,
@@ -858,9 +1185,9 @@
                           "name": "Performance",
                           "nameHtml": "Performance",
                           "nameClean": "Performance",
-                          "description": "Performance issues",
-                          "descriptionHtml": "Performance issues",
-                          "descriptionClean": "Performance issues",
+                          "description": "Throughput, latency, memory, jank, lag, frame drops, battery/thermal, and loading time.",
+                          "descriptionHtml": "Throughput, latency, memory, jank, lag, frame drops, battery/thermal, and loading time.",
+                          "descriptionClean": "Throughput, latency, memory, jank, lag, frame drops, battery/thermal, and loading time.",
                           "id": "performance",
                           "entityType": "default"
                         }
@@ -872,89 +1199,15 @@
                         "percentageQuestion": 4.44,
                         "percentageSurvey": 0.53,
                         "entity": {
-                          "name": "Specific platforms & vendors",
-                          "nameHtml": "Specific platforms &amp; vendors",
-                          "nameClean": "Specific platforms & vendors",
+                          "name": "🗑️ Specific platforms & vendors",
+                          "nameHtml": "🗑️ Specific platforms &amp; vendors",
+                          "nameClean": "🗑️ Specific platforms & vendors",
                           "description": "Issues mentioning specific platforms, operating systems, or browser vendors.",
                           "descriptionHtml": "Issues mentioning specific platforms, operating systems, or browser vendors.",
                           "descriptionClean": "Issues mentioning specific platforms, operating systems, or browser vendors.",
                           "id": "specific_platforms_vendors",
                           "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 22,
-                            "id": "apple",
-                            "percentageQuestion": 2.96,
-                            "percentageSurvey": 0.35,
-                            "entity": {
-                              "name": "Apple",
-                              "nameHtml": "Apple",
-                              "nameClean": "Apple",
-                              "description": "Issues specific to Apple as a platform or vendor, and the Apple ecosystem (e.g., Safari, WebKit, iOS).",
-                              "descriptionHtml": "Issues specific to Apple as a platform or vendor, and the Apple ecosystem (e.g., Safari, WebKit, iOS).",
-                              "descriptionClean": "Issues specific to Apple as a platform or vendor, and the Apple ecosystem (e.g., Safari, WebKit, iOS).",
-                              "id": "apple",
-                              "parentId": "specific_platforms_vendors",
-                              "entityType": "default"
-                            },
-                            "nestedBuckets": [
-                              {
-                                "count": 20,
-                                "id": "safari",
-                                "percentageQuestion": 2.69,
-                                "percentageSurvey": 0.32,
-                                "entity": {
-                                  "name": "Safari",
-                                  "nameHtml": "Safari",
-                                  "nameClean": "Safari",
-                                  "id": "safari",
-                                  "parentId": "apple",
-                                  "entityType": "default",
-                                  "homepage": {
-                                    "url": "https://www.apple.com/safari/"
-                                  }
-                                }
-                              }
-                            ]
-                          },
-                          {
-                            "count": 15,
-                            "id": "mozilla",
-                            "percentageQuestion": 2.02,
-                            "percentageSurvey": 0.24,
-                            "entity": {
-                              "name": "Mozilla",
-                              "nameHtml": "Mozilla",
-                              "nameClean": "Mozilla",
-                              "id": "mozilla",
-                              "parentId": "specific_platforms_vendors",
-                              "entityType": "default",
-                              "homepage": {
-                                "url": "https://www.mozilla.org/"
-                              }
-                            },
-                            "nestedBuckets": [
-                              {
-                                "count": 15,
-                                "id": "firefox",
-                                "percentageQuestion": 2.02,
-                                "percentageSurvey": 0.24,
-                                "entity": {
-                                  "name": "Firefox",
-                                  "nameHtml": "Firefox",
-                                  "nameClean": "Firefox",
-                                  "id": "firefox",
-                                  "parentId": "mozilla",
-                                  "entityType": "default",
-                                  "homepage": {
-                                    "url": "https://www.mozilla.org/en-US/firefox/new/"
-                                  }
-                                }
-                              }
-                            ]
-                          }
-                        ]
+                        }
                       },
                       {
                         "count": 30,
@@ -963,9 +1216,12 @@
                         "percentageQuestion": 4.04,
                         "percentageSurvey": 0.48,
                         "entity": {
-                          "name": "State management",
-                          "nameHtml": "State management",
-                          "nameClean": "State management",
+                          "name": "State Management",
+                          "nameHtml": "State Management",
+                          "nameClean": "State Management",
+                          "description": "Difficulties with managing and preserving UI state (e.g., focus, scroll position, form input values, component state) during DOM manipulations.",
+                          "descriptionHtml": "Difficulties with managing and preserving UI state (e.g., focus, scroll position, form input values, component state) during DOM manipulations.",
+                          "descriptionClean": "Difficulties with managing and preserving UI state (e.g., focus, scroll position, form input values, component state) during DOM manipulations.",
                           "id": "state_management",
                           "entityType": "default"
                         }
@@ -977,19 +1233,20 @@
                         "percentageQuestion": 3.9,
                         "percentageSurvey": 0.47,
                         "entity": {
-                          "name": "Styling & customization",
-                          "nameHtml": "Styling &amp; customization",
-                          "nameClean": "Styling & customization",
-                          "description": "CSS styling and customization issues.",
-                          "descriptionHtml": "CSS styling and customization issues.",
-                          "descriptionClean": "CSS styling and customization issues.",
+                          "name": "Styling and UI customization",
+                          "nameHtml": "Styling and UI customization",
+                          "nameClean": "Styling and UI customization",
+                          "description": "Issues around styling and customizing browser-generated UI.",
+                          "descriptionHtml": "Issues around styling and customizing browser-generated UI.",
+                          "descriptionClean": "Issues around styling and customizing browser-generated UI.",
                           "id": "styling_customization",
+                          "parentId": "a11y_technical_issues",
                           "entityType": "default"
                         },
                         "nestedBuckets": [
                           {
                             "count": 20,
-                            "id": "styling",
+                            "id": "styling_issues",
                             "percentageQuestion": 2.69,
                             "percentageSurvey": 0.32,
                             "entity": {
@@ -999,7 +1256,7 @@
                               "description": "Issues around styling UA-generated UI, CSS not working in certain contexts, etc.",
                               "descriptionHtml": "Issues around styling UA-generated UI, CSS not working in certain contexts, etc.",
                               "descriptionClean": "Issues around styling UA-generated UI, CSS not working in certain contexts, etc.",
-                              "id": "styling",
+                              "id": "styling_issues",
                               "parentId": "styling_customization",
                               "entityType": "default"
                             }
@@ -1007,14 +1264,62 @@
                         ]
                       },
                       {
-                        "count": 25,
-                        "id": "reactivity",
+                        "count": 22,
+                        "id": "anchor_positioning",
                         "index": 19,
-                        "percentageQuestion": 3.36,
-                        "percentageSurvey": 0.4,
+                        "percentageQuestion": 2.96,
+                        "percentageSurvey": 0.35,
                         "entity": {
-                          "id": "reactivity",
-                          "entityType": "default"
+                          "name": "CSS Anchor Positioning",
+                          "nameHtml": "CSS Anchor Positioning",
+                          "nameClean": "CSS Anchor Positioning",
+                          "description": "Pain points related to the CSS Anchor Positioning API, often in conjunction with the Popover API. Includes issues with browser support and the perceived necessity of this API for positioning popovers and tooltips effectively.",
+                          "descriptionHtml": "Pain points related to the CSS Anchor Positioning API, often in conjunction with the Popover API. Includes issues with browser support and the perceived necessity of this API for positioning popovers and tooltips effectively.",
+                          "descriptionClean": "Pain points related to the CSS Anchor Positioning API, often in conjunction with the Popover API. Includes issues with browser support and the perceived necessity of this API for positioning popovers and tooltips effectively.",
+                          "id": "anchor_positioning",
+                          "entityType": "default",
+                          "example": {
+                            "language": "css",
+                            "code": ".anchor {\n  anchor-name: --my-anchor;\n}\n.target {\n  position: absolute;\n  position-anchor: --my-anchor;\n  position-area: start end;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.anchor</span> {\n  <span class=\"hljs-attribute\">anchor-name</span>: --my-anchor;\n}\n<span class=\"hljs-selector-class\">.target</span> {\n  <span class=\"hljs-attribute\">position</span>: absolute;\n  <span class=\"hljs-attribute\">position-anchor</span>: --my-anchor;\n  <span class=\"hljs-attribute\">position</span>-area: start end;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Anchor_positioning"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-anchor-positioning"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://kizu.dev/anchor-positioning-experiments/",
+                              "title": "Future CSS: Anchor Positioning\n"
+                            },
+                            {
+                              "url": "https://developer.chrome.com/blog/tether-elements-to-each-other-with-css-anchor-positioning/",
+                              "title": "Tether elements to each other with CSS anchor positioning\n"
+                            },
+                            {
+                              "url": "https://css-tricks.com/css-anchor-positioning-guide/",
+                              "title": "CSS Anchor Positioning Guide"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "anchor-positioning",
+                            "description_html": "Anchor positioning places an element based on the position of another element. For example, you can place a tooltip next to the content it references.",
+                            "name": "Anchor positioning",
+                            "spec": [
+                              "https://drafts.csswg.org/css-anchor-position-1/#anchoring"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/anchor-positioning/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "125",
+                                "chrome_android": "125",
+                                "edge": "125"
+                              }
+                            }
+                          }
                         }
                       },
                       {
@@ -1025,11 +1330,11 @@
                         "percentageSurvey": 87.87
                       },
                       {
-                        "count": 361,
+                        "count": 258,
                         "id": "other_answers",
                         "index": 21,
-                        "percentageQuestion": 48.47,
-                        "percentageSurvey": 5.87
+                        "percentageQuestion": 34.64,
+                        "percentageSurvey": 4.21
                       }
                     ]
                   }

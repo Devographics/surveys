@@ -8,7 +8,7 @@
               "id": "content_pain_points",
               "comments": {
                 "currentEdition": {
-                  "count": 1
+                  "count": 2
                 }
               },
               "freeform": {
@@ -20,7 +20,7 @@
                         "order": "desc"
                       },
                       "limit": 20,
-                      "cutoff": 10
+                      "cutoff": 5
                     },
                     "editionId": "html2024",
                     "year": 2024,
@@ -37,8 +37,47 @@
                         "percentageQuestion": 18.34,
                         "percentageSurvey": 1.35,
                         "entity": {
+                          "name": "SVG",
+                          "nameHtml": "SVG",
+                          "nameClean": "SVG",
+                          "description": "Issues related to Vector graphics via Scalable Vector Graphics, including issues related to embedding and manipulating SVG content.",
+                          "descriptionHtml": "Issues related to Vector graphics via Scalable Vector Graphics, including issues related to embedding and manipulating SVG content.",
+                          "descriptionClean": "Issues related to Vector graphics via Scalable Vector Graphics, including issues related to embedding and manipulating SVG content.",
                           "id": "svg_issues",
-                          "entityType": "default"
+                          "entityType": "default",
+                          "example": {
+                            "language": "html",
+                            "code": "<svg>\n  <circle cx=\"50\" cy=\"50\" r=\"50\" />\n</svg>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">svg</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">circle</span> <span class=\"hljs-attr\">cx</span>=<span class=\"hljs-string\">&quot;50&quot;</span> <span class=\"hljs-attr\">cy</span>=<span class=\"hljs-string\">&quot;50&quot;</span> <span class=\"hljs-attr\">r</span>=<span class=\"hljs-string\">&quot;50&quot;</span> /&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">svg</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/svg"
+                          },
+                          "webFeature": {
+                            "id": "svg",
+                            "description_html": "The SVG image format, represented by the <code>&#x3C;svg></code> element, creates two-dimensional vector graphics with declarative or scripted interaction and animation.",
+                            "group": [
+                              "svg"
+                            ],
+                            "name": "SVG",
+                            "spec": [
+                              "https://svgwg.org/svg2-draft/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/svg/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-01-15",
+                              "support": {
+                                "chrome": "1",
+                                "chrome_android": "18",
+                                "edge": "79",
+                                "firefox": "3",
+                                "firefox_android": "4",
+                                "safari": "3",
+                                "safari_ios": "2"
+                              }
+                            }
+                          }
                         }
                       },
                       {
@@ -51,9 +90,9 @@
                           "name": "Internationalization",
                           "nameHtml": "Internationalization",
                           "nameClean": "Internationalization",
-                          "description": "Issues with internationalizing, localizing, and translating content",
-                          "descriptionHtml": "Issues with internationalizing, localizing, and translating content",
-                          "descriptionClean": "Issues with internationalizing, localizing, and translating content",
+                          "description": "Localization, RTL, logical coordinates, culturally‑appropriate rendering etc.",
+                          "descriptionHtml": "Localization, RTL, logical coordinates, culturally‑appropriate rendering etc.",
+                          "descriptionClean": "Localization, RTL, logical coordinates, culturally‑appropriate rendering etc.",
                           "id": "i18n_issues",
                           "entityType": "default"
                         }
@@ -65,9 +104,12 @@
                         "percentageQuestion": 10.55,
                         "percentageSurvey": 0.78,
                         "entity": {
-                          "name": "`<iframe>`",
-                          "nameHtml": "<code>&lt;iframe&gt;</code>",
-                          "nameClean": "<iframe>",
+                          "name": "<​iframe> Element",
+                          "nameHtml": "&lt;​iframe&gt; Element",
+                          "nameClean": "<​iframe> Element",
+                          "description": "Pain points related to the `<iframe>` element.",
+                          "descriptionHtml": "Pain points related to the <code>&lt;iframe&gt;</code> element.",
+                          "descriptionClean": "Pain points related to the <iframe> element.",
                           "id": "iframe_issues",
                           "entityType": "default",
                           "example": {
@@ -104,15 +146,32 @@
                         "percentageQuestion": 8.79,
                         "percentageSurvey": 0.65,
                         "entity": {
-                          "name": "Styling & customization",
-                          "nameHtml": "Styling &amp; customization",
-                          "nameClean": "Styling & customization",
-                          "description": "CSS styling and customization issues.",
-                          "descriptionHtml": "CSS styling and customization issues.",
-                          "descriptionClean": "CSS styling and customization issues.",
+                          "name": "Styling and UI customization",
+                          "nameHtml": "Styling and UI customization",
+                          "nameClean": "Styling and UI customization",
+                          "description": "Issues around styling and customizing browser-generated UI.",
+                          "descriptionHtml": "Issues around styling and customizing browser-generated UI.",
+                          "descriptionClean": "Issues around styling and customizing browser-generated UI.",
                           "id": "styling_customization",
+                          "parentId": "a11y_technical_issues",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 5,
+                            "id": "responsive_design",
+                            "percentageQuestion": 1.26,
+                            "percentageSurvey": 0.09,
+                            "entity": {
+                              "name": "Responsive design",
+                              "nameHtml": "Responsive design",
+                              "nameClean": "Responsive design",
+                              "id": "responsive_design",
+                              "parentId": "styling_customization",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 27,
@@ -177,9 +236,9 @@
                           "name": "Performance",
                           "nameHtml": "Performance",
                           "nameClean": "Performance",
-                          "description": "Performance issues",
-                          "descriptionHtml": "Performance issues",
-                          "descriptionClean": "Performance issues",
+                          "description": "Throughput, latency, memory, jank, lag, frame drops, battery/thermal, and loading time.",
+                          "descriptionHtml": "Throughput, latency, memory, jank, lag, frame drops, battery/thermal, and loading time.",
+                          "descriptionClean": "Throughput, latency, memory, jank, lag, frame drops, battery/thermal, and loading time.",
                           "id": "performance",
                           "entityType": "default"
                         }
@@ -194,12 +253,45 @@
                           "name": "Security & privacy",
                           "nameHtml": "Security &amp; privacy",
                           "nameClean": "Security & privacy",
-                          "description": "Lack of security and privacy",
-                          "descriptionHtml": "Lack of security and privacy",
-                          "descriptionClean": "Lack of security and privacy",
+                          "description": "Threats, mitigations, permissions, and fingerprinting/privacy budget concerns, cross-origin issues etc. Pain points related to general concerns about security and privacy on the web.",
+                          "descriptionHtml": "Threats, mitigations, permissions, and fingerprinting/privacy budget concerns, cross-origin issues etc. Pain points related to general concerns about security and privacy on the web.",
+                          "descriptionClean": "Threats, mitigations, permissions, and fingerprinting/privacy budget concerns, cross-origin issues etc. Pain points related to general concerns about security and privacy on the web.",
                           "id": "security_privacy",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 11,
+                            "id": "cors",
+                            "percentageQuestion": 2.76,
+                            "percentageSurvey": 0.2,
+                            "entity": {
+                              "name": "CORS",
+                              "nameHtml": "CORS",
+                              "nameClean": "CORS",
+                              "description": "Pain points with Cross-Origin Resource Sharing (CORS) and related cross-origin security policies.",
+                              "descriptionHtml": "Pain points with Cross-Origin Resource Sharing (CORS) and related cross-origin security policies.",
+                              "descriptionClean": "Pain points with Cross-Origin Resource Sharing (CORS) and related cross-origin security policies.",
+                              "id": "cors",
+                              "parentId": "security_privacy",
+                              "entityType": "default",
+                              "example": {
+                                "language": "http",
+                                "code": "Access-Control-Allow-Origin: *\nAccess-Control-Allow-Methods: POST, GET, OPTIONS",
+                                "codeHighlighted": "<span class=\"hljs-attribute\">Access-Control-Allow-Origin</span><span class=\"hljs-punctuation\">: </span>*\n<span class=\"hljs-attribute\">Access-Control-Allow-Methods</span><span class=\"hljs-punctuation\">: </span>POST, GET, OPTIONS"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://fetch.spec.whatwg.org/#http-access-control-allow-origin",
+                                  "title": "Fetch Standard"
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 23,
@@ -208,10 +300,14 @@
                         "percentageQuestion": 5.78,
                         "percentageSurvey": 0.43,
                         "entity": {
-                          "name": "Embedding issues",
-                          "nameHtml": "Embedding issues",
-                          "nameClean": "Embedding issues",
+                          "name": "Embedding Content",
+                          "nameHtml": "Embedding Content",
+                          "nameClean": "Embedding Content",
+                          "description": "Pain points related to embedding content from various sources.",
+                          "descriptionHtml": "Pain points related to embedding content from various sources.",
+                          "descriptionClean": "Pain points related to embedding content from various sources.",
                           "id": "embedding_issues",
+                          "parentId": "content",
                           "entityType": "default"
                         }
                       },
@@ -242,10 +338,11 @@
                           "name": "Excessive complexity",
                           "nameHtml": "Excessive complexity",
                           "nameClean": "Excessive complexity",
-                          "description": "Too much complexity",
-                          "descriptionHtml": "Too much complexity",
-                          "descriptionClean": "Too much complexity",
+                          "description": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
+                          "descriptionHtml": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
+                          "descriptionClean": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
                           "id": "excessive_complexity",
+                          "parentId": "cognitive_overload",
                           "entityType": "default"
                         }
                       },
@@ -259,9 +356,9 @@
                           "name": "Accessibility",
                           "nameHtml": "Accessibility",
                           "nameClean": "Accessibility",
-                          "description": "Accessibility improvements",
-                          "descriptionHtml": "Accessibility improvements",
-                          "descriptionClean": "Accessibility improvements",
+                          "description": "Accessibility issues",
+                          "descriptionHtml": "Accessibility issues",
+                          "descriptionClean": "Accessibility issues",
                           "id": "accessibility",
                           "entityType": "default"
                         }
@@ -273,51 +370,21 @@
                         "percentageQuestion": 3.02,
                         "percentageSurvey": 0.22,
                         "entity": {
-                          "name": "HTML imports",
-                          "nameHtml": "HTML imports",
-                          "nameClean": "HTML imports",
-                          "description": "Lack of native HTML imports or templating",
-                          "descriptionHtml": "Lack of native HTML imports or templating",
-                          "descriptionClean": "Lack of native HTML imports or templating",
+                          "name": "HTML Imports",
+                          "nameHtml": "HTML Imports",
+                          "nameClean": "HTML Imports",
+                          "description": "Lack of native HTML imports or templating.",
+                          "descriptionHtml": "Lack of native HTML imports or templating.",
+                          "descriptionClean": "Lack of native HTML imports or templating.",
                           "id": "html_imports",
+                          "parentId": "html_reuse",
                           "entityType": "default"
                         }
                       },
                       {
                         "count": 11,
-                        "id": "cors",
-                        "index": 13,
-                        "percentageQuestion": 2.76,
-                        "percentageSurvey": 0.2,
-                        "entity": {
-                          "name": "CORS",
-                          "nameHtml": "CORS",
-                          "nameClean": "CORS",
-                          "description": "Opt-in to allowing requests from different origins.",
-                          "descriptionHtml": "Opt-in to allowing requests from different origins.",
-                          "descriptionClean": "Opt-in to allowing requests from different origins.",
-                          "id": "cors",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "http",
-                            "code": "Access-Control-Allow-Origin: *\nAccess-Control-Allow-Methods: POST, GET, OPTIONS",
-                            "codeHighlighted": "<span class=\"hljs-attribute\">Access-Control-Allow-Origin</span><span class=\"hljs-punctuation\">: </span>*\n<span class=\"hljs-attribute\">Access-Control-Allow-Methods</span><span class=\"hljs-punctuation\">: </span>POST, GET, OPTIONS"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://fetch.spec.whatwg.org/#http-access-control-allow-origin",
-                              "title": "Fetch Standard"
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "count": 11,
                         "id": "sanitization_issues",
-                        "index": 14,
+                        "index": 13,
                         "percentageQuestion": 2.76,
                         "percentageSurvey": 0.2,
                         "entity": {
@@ -329,18 +396,90 @@
                         }
                       },
                       {
+                        "count": 7,
+                        "id": "reliance_on_javascript",
+                        "index": 14,
+                        "percentageQuestion": 1.76,
+                        "percentageSurvey": 0.13,
+                        "entity": {
+                          "name": "Reliance on JavaScript",
+                          "nameHtml": "Reliance on JavaScript",
+                          "nameClean": "Reliance on JavaScript",
+                          "description": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "descriptionHtml": "Lack of declarative APIs, slow rendering due to dependence on correct loading &amp; execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "descriptionClean": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "id": "reliance_on_javascript",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 7,
+                        "id": "safari",
+                        "index": 15,
+                        "percentageQuestion": 1.76,
+                        "percentageSurvey": 0.13,
+                        "entity": {
+                          "name": "Safari browser",
+                          "nameHtml": "Safari browser",
+                          "nameClean": "Safari browser",
+                          "description": "Issues specific to the Safari browser, across all platforms.",
+                          "descriptionHtml": "Issues specific to the Safari browser, across all platforms.",
+                          "descriptionClean": "Issues specific to the Safari browser, across all platforms.",
+                          "id": "safari",
+                          "parentId": "interop_issues",
+                          "entityType": "default",
+                          "homepage": {
+                            "url": "https://www.apple.com/safari/"
+                          }
+                        }
+                      },
+                      {
+                        "count": 6,
+                        "id": "state_management",
+                        "index": 16,
+                        "percentageQuestion": 1.51,
+                        "percentageSurvey": 0.11,
+                        "entity": {
+                          "name": "State Management",
+                          "nameHtml": "State Management",
+                          "nameClean": "State Management",
+                          "description": "Difficulties with managing and preserving UI state (e.g., focus, scroll position, form input values, component state) during DOM manipulations.",
+                          "descriptionHtml": "Difficulties with managing and preserving UI state (e.g., focus, scroll position, form input values, component state) during DOM manipulations.",
+                          "descriptionClean": "Difficulties with managing and preserving UI state (e.g., focus, scroll position, form input values, component state) during DOM manipulations.",
+                          "id": "state_management",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 5,
+                        "id": "configuration",
+                        "index": 17,
+                        "percentageQuestion": 1.26,
+                        "percentageSurvey": 0.09,
+                        "entity": {
+                          "name": "Configuration",
+                          "nameHtml": "Configuration",
+                          "nameClean": "Configuration",
+                          "description": "Difficulties with set-up and configuration",
+                          "descriptionHtml": "Difficulties with set-up and configuration",
+                          "descriptionClean": "Difficulties with set-up and configuration",
+                          "id": "configuration",
+                          "entityType": "default"
+                        }
+                      },
+                      {
                         "count": 5003,
                         "id": "no_answer",
-                        "index": 15,
+                        "index": 18,
                         "percentageQuestion": 0,
                         "percentageSurvey": 92.63
                       },
                       {
-                        "count": 224,
+                        "count": 194,
                         "id": "other_answers",
-                        "index": 16,
-                        "percentageQuestion": 56.27,
-                        "percentageSurvey": 4.18
+                        "index": 19,
+                        "percentageQuestion": 48.72,
+                        "percentageSurvey": 3.63
                       }
                     ]
                   },
@@ -351,7 +490,7 @@
                         "order": "desc"
                       },
                       "limit": 20,
-                      "cutoff": 10
+                      "cutoff": 5
                     },
                     "editionId": "html2025",
                     "year": 2025,
@@ -377,28 +516,211 @@
                           "id": "html_reuse",
                           "parentId": "content",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 73,
+                            "id": "templating",
+                            "percentageQuestion": 16.22,
+                            "percentageSurvey": 1.17,
+                            "entity": {
+                              "name": "Templating & rendering",
+                              "nameHtml": "Templating &amp; rendering",
+                              "nameClean": "Templating & rendering",
+                              "description": "Authoring and running templates, data binding, reactive rendering, Declarative Shadow DOM, and server boundaries. Also includes issues related to the <template> element.",
+                              "descriptionHtml": "Authoring and running templates, data binding, reactive rendering, Declarative Shadow DOM, and server boundaries. Also includes issues related to the  element.",
+                              "descriptionClean": "Authoring and running templates, data binding, reactive rendering, Declarative Shadow DOM, and server boundaries. Also includes issues related to the  element.",
+                              "id": "templating",
+                              "parentId": "html_reuse",
+                              "entityType": "default"
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 38,
+                                "id": "template_element",
+                                "percentageQuestion": 8.44,
+                                "percentageSurvey": 0.61,
+                                "entity": {
+                                  "name": "<​template> Element",
+                                  "nameHtml": "&lt;​template&gt; Element",
+                                  "nameClean": "<​template> Element",
+                                  "description": "Issues specific to the `<template>` element, often about its limitations or ergonomics.",
+                                  "descriptionHtml": "Issues specific to the <code>&lt;template&gt;</code> element, often about its limitations or ergonomics.",
+                                  "descriptionClean": "Issues specific to the <template> element, often about its limitations or ergonomics.",
+                                  "id": "template_element",
+                                  "parentId": "templating",
+                                  "entityType": "default",
+                                  "example": {
+                                    "language": "html",
+                                    "code": "<template id=\"counter\">\n\t<div class=\"counter\">Clicked {{ times }} times</div>\n</template>",
+                                    "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">template</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;counter&quot;</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">&quot;counter&quot;</span>&gt;</span>Clicked {{ times }} times<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">template</span>&gt;</span>"
+                                  },
+                                  "mdn": {
+                                    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template"
+                                  },
+                                  "resources": [
+                                    {
+                                      "url": "https://html.spec.whatwg.org/multipage/scripting.html#the-template-element",
+                                      "title": "HTML Standard"
+                                    }
+                                  ],
+                                  "webFeature": {
+                                    "id": "template",
+                                    "description_html": "The <code>&#x3C;template></code> HTML element holds HTML fragments which you can clone and insert into the document using JavaScript.",
+                                    "group": [
+                                      "html-elements",
+                                      "web-components"
+                                    ],
+                                    "name": "<template>",
+                                    "spec": [
+                                      "https://html.spec.whatwg.org/multipage/scripting.html#the-template-element"
+                                    ],
+                                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/template/",
+                                    "status": {
+                                      "baseline": "high",
+                                      "baseline_low_date": "2015-11-12",
+                                      "support": {
+                                        "chrome": "26",
+                                        "chrome_android": "26",
+                                        "edge": "13",
+                                        "firefox": "22",
+                                        "firefox_android": "22",
+                                        "safari": "8",
+                                        "safari_ios": "8"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "count": 19,
+                                "id": "reactivity",
+                                "percentageQuestion": 4.22,
+                                "percentageSurvey": 0.31,
+                                "entity": {
+                                  "name": "Reactive rendering & data bindings",
+                                  "nameHtml": "Reactive rendering &amp; data bindings",
+                                  "nameClean": "Reactive rendering & data bindings",
+                                  "description": "Issues with reactivity",
+                                  "descriptionHtml": "Issues with reactivity",
+                                  "descriptionClean": "Issues with reactivity",
+                                  "id": "reactivity",
+                                  "parentId": "templating",
+                                  "entityType": "default"
+                                },
+                                "nestedBuckets": [
+                                  {
+                                    "count": 19,
+                                    "id": "data_binding",
+                                    "percentageQuestion": 4.22,
+                                    "percentageSurvey": 0.31,
+                                    "entity": {
+                                      "name": "Data Binding",
+                                      "nameHtml": "Data Binding",
+                                      "nameClean": "Data Binding",
+                                      "description": "Pain points around the lack of a native way to bind JavaScript data to DOM elements, so that changes in one are automatically reflected in the other.",
+                                      "descriptionHtml": "Pain points around the lack of a native way to bind JavaScript data to DOM elements, so that changes in one are automatically reflected in the other.",
+                                      "descriptionClean": "Pain points around the lack of a native way to bind JavaScript data to DOM elements, so that changes in one are automatically reflected in the other.",
+                                      "id": "data_binding",
+                                      "parentId": "reactivity",
+                                      "entityType": "default"
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "count": 47,
+                            "id": "html_imports",
+                            "percentageQuestion": 10.44,
+                            "percentageSurvey": 0.76,
+                            "entity": {
+                              "name": "HTML Imports",
+                              "nameHtml": "HTML Imports",
+                              "nameClean": "HTML Imports",
+                              "description": "Lack of native HTML imports or templating.",
+                              "descriptionHtml": "Lack of native HTML imports or templating.",
+                              "descriptionClean": "Lack of native HTML imports or templating.",
+                              "id": "html_imports",
+                              "parentId": "html_reuse",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 21,
+                            "id": "html_modules",
+                            "percentageQuestion": 4.67,
+                            "percentageSurvey": 0.34,
+                            "entity": {
+                              "name": "HTML Modules",
+                              "nameHtml": "HTML Modules",
+                              "nameClean": "HTML Modules",
+                              "description": "Issues around the lack of or desire for HTML Modules, for packaging and importing components and content.",
+                              "descriptionHtml": "Issues around the lack of or desire for HTML Modules, for packaging and importing components and content.",
+                              "descriptionClean": "Issues around the lack of or desire for HTML Modules, for packaging and importing components and content.",
+                              "id": "html_modules",
+                              "parentId": "html_reuse",
+                              "entityType": "default",
+                              "example": {
+                                "language": "html",
+                                "code": "<script type=\"module\">\n\timport { TabList } from \"./tablist.html\" with { type: 'html' };\n\tcustomElements.define(\"tab-list\", TabList);\n</script>",
+                                "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">&quot;module&quot;</span>&gt;</span><span class=\"language-javascript\">\n\t<span class=\"hljs-keyword\">import</span> { <span class=\"hljs-title class_\">TabList</span> } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&quot;./tablist.html&quot;</span> <span class=\"hljs-keyword\">with</span> { <span class=\"hljs-attr\">type</span>: <span class=\"hljs-string\">&#x27;html&#x27;</span> };\n\tcustomElements.<span class=\"hljs-title function_\">define</span>(<span class=\"hljs-string\">&quot;tab-list&quot;</span>, <span class=\"hljs-title class_\">TabList</span>);\n</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://github.com/WICG/webcomponents/blob/gh-pages/proposals/html-modules-explainer.md",
+                                  "title": "HTML Modules Explainer"
+                                },
+                                {
+                                  "url": "https://chromestatus.com/feature/4854408103854080",
+                                  "title": "Chrome Platform Status"
+                                },
+                                {
+                                  "url": "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/HTMLModules/designDoc.md"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "count": 6,
+                            "id": "html_fragment_reuse",
+                            "percentageQuestion": 1.33,
+                            "percentageSurvey": 0.1,
+                            "entity": {
+                              "name": "Reusing HTML fragments",
+                              "nameHtml": "Reusing HTML fragments",
+                              "nameClean": "Reusing HTML fragments",
+                              "description": "Reuse HTML fragments from the same page",
+                              "descriptionHtml": "Reuse HTML fragments from the same page",
+                              "descriptionClean": "Reuse HTML fragments from the same page",
+                              "id": "html_fragment_reuse",
+                              "parentId": "html_reuse",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
-                        "count": 73,
-                        "id": "templating",
+                        "count": 109,
+                        "id": "high_cognitive_load",
                         "index": 1,
-                        "percentageQuestion": 16.22,
-                        "percentageSurvey": 1.17,
+                        "percentageQuestion": 24.22,
+                        "percentageSurvey": 1.75,
                         "entity": {
-                          "name": "Templating",
-                          "nameHtml": "Templating",
-                          "nameClean": "Templating",
-                          "description": "Lack of templating",
-                          "descriptionHtml": "Lack of templating",
-                          "descriptionClean": "Lack of templating",
-                          "id": "templating",
+                          "name": "🗑️ High cognitive load",
+                          "nameHtml": "🗑️ High cognitive load",
+                          "nameClean": "🗑️ High cognitive load",
+                          "description": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "descriptionHtml": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "descriptionClean": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "id": "high_cognitive_load",
                           "entityType": "default"
                         }
                       },
                       {
                         "count": 66,
-                        "id": "interop",
+                        "id": "interop_issues",
                         "index": 2,
                         "percentageQuestion": 14.67,
                         "percentageSurvey": 1.06,
@@ -409,25 +731,89 @@
                           "description": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
                           "descriptionHtml": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
                           "descriptionClean": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
-                          "id": "interop",
+                          "id": "interop_issues",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 9,
+                            "id": "safari",
+                            "percentageQuestion": 2,
+                            "percentageSurvey": 0.14,
+                            "entity": {
+                              "name": "Safari browser",
+                              "nameHtml": "Safari browser",
+                              "nameClean": "Safari browser",
+                              "description": "Issues specific to the Safari browser, across all platforms.",
+                              "descriptionHtml": "Issues specific to the Safari browser, across all platforms.",
+                              "descriptionClean": "Issues specific to the Safari browser, across all platforms.",
+                              "id": "safari",
+                              "parentId": "interop_issues",
+                              "entityType": "default",
+                              "homepage": {
+                                "url": "https://www.apple.com/safari/"
+                              }
+                            }
+                          },
+                          {
+                            "count": 6,
+                            "id": "google",
+                            "percentageQuestion": 1.33,
+                            "percentageSurvey": 0.1,
+                            "entity": {
+                              "name": "Google",
+                              "nameHtml": "Google",
+                              "nameClean": "Google",
+                              "description": "Issues specific to the Google ecosystem (e.g., Chrome, Blink, Android).",
+                              "descriptionHtml": "Issues specific to the Google ecosystem (e.g., Chrome, Blink, Android).",
+                              "descriptionClean": "Issues specific to the Google ecosystem (e.g., Chrome, Blink, Android).",
+                              "id": "google",
+                              "parentId": "interop_issues",
+                              "entityType": "default",
+                              "homepage": {
+                                "url": "https://google.com"
+                              }
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 5,
+                                "id": "chrome",
+                                "percentageQuestion": 1.11,
+                                "percentageSurvey": 0.08,
+                                "entity": {
+                                  "name": "Chrome browser",
+                                  "nameHtml": "Chrome browser",
+                                  "nameClean": "Chrome browser",
+                                  "description": "Issues specific to the Chrome browser or the Chromum rendering engine, across all platforms.",
+                                  "descriptionHtml": "Issues specific to the Chrome browser or the Chromum rendering engine, across all platforms.",
+                                  "descriptionClean": "Issues specific to the Chrome browser or the Chromum rendering engine, across all platforms.",
+                                  "id": "chrome",
+                                  "parentId": "google",
+                                  "entityType": "default",
+                                  "homepage": {
+                                    "url": "https://www.google.com/chrome/"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
                       },
                       {
                         "count": 56,
-                        "id": "i18n",
+                        "id": "i18n_issues",
                         "index": 3,
                         "percentageQuestion": 12.44,
                         "percentageSurvey": 0.9,
                         "entity": {
-                          "name": "i18n",
-                          "nameHtml": "i18n",
-                          "nameClean": "i18n",
-                          "id": "i18n",
-                          "entityType": "feature",
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl"
-                          }
+                          "name": "Internationalization",
+                          "nameHtml": "Internationalization",
+                          "nameClean": "Internationalization",
+                          "description": "Localization, RTL, logical coordinates, culturally‑appropriate rendering etc.",
+                          "descriptionHtml": "Localization, RTL, logical coordinates, culturally‑appropriate rendering etc.",
+                          "descriptionClean": "Localization, RTL, logical coordinates, culturally‑appropriate rendering etc.",
+                          "id": "i18n_issues",
+                          "entityType": "default"
                         },
                         "nestedBuckets": [
                           {
@@ -443,7 +829,24 @@
                               "descriptionHtml": "The desire for internationalization and localization features to be built into HTML declaratively, rather than relying on JavaScript.",
                               "descriptionClean": "The desire for internationalization and localization features to be built into HTML declaratively, rather than relying on JavaScript.",
                               "id": "declarative_i18n",
-                              "parentId": "i18n",
+                              "parentId": "i18n_issues",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 9,
+                            "id": "intl_apis",
+                            "percentageQuestion": 2,
+                            "percentageSurvey": 0.14,
+                            "entity": {
+                              "name": "Intl API",
+                              "nameHtml": "Intl API",
+                              "nameClean": "Intl API",
+                              "description": "Pain points related to the JavaScript `Intl` object and its APIs, such as being too low-level, missing features, or ergonomic issues.",
+                              "descriptionHtml": "Pain points related to the JavaScript <code>Intl</code> object and its APIs, such as being too low-level, missing features, or ergonomic issues.",
+                              "descriptionClean": "Pain points related to the JavaScript Intl object and its APIs, such as being too low-level, missing features, or ergonomic issues.",
+                              "id": "intl_apis",
+                              "parentId": "i18n_issues",
                               "entityType": "default"
                             }
                           }
@@ -456,11 +859,14 @@
                         "percentageQuestion": 12,
                         "percentageSurvey": 0.87,
                         "entity": {
-                          "name": "`<iframe>`",
-                          "nameHtml": "<code>&lt;iframe&gt;</code>",
-                          "nameClean": "<iframe>",
+                          "name": "<​iframe> Element",
+                          "nameHtml": "&lt;​iframe&gt; Element",
+                          "nameClean": "<​iframe> Element",
+                          "description": "Pain points related to the `<iframe>` element.",
+                          "descriptionHtml": "Pain points related to the <code>&lt;iframe&gt;</code> element.",
+                          "descriptionClean": "Pain points related to the <iframe> element.",
                           "id": "iframe_element",
-                          "entityType": "feature",
+                          "entityType": "default",
                           "example": {
                             "language": "html",
                             "code": "<iframe src=\"https://example.com/\"></iframe>",
@@ -500,43 +906,137 @@
                           "name": "Security & privacy",
                           "nameHtml": "Security &amp; privacy",
                           "nameClean": "Security & privacy",
-                          "description": "Lack of security and privacy",
-                          "descriptionHtml": "Lack of security and privacy",
-                          "descriptionClean": "Lack of security and privacy",
+                          "description": "Threats, mitigations, permissions, and fingerprinting/privacy budget concerns, cross-origin issues etc. Pain points related to general concerns about security and privacy on the web.",
+                          "descriptionHtml": "Threats, mitigations, permissions, and fingerprinting/privacy budget concerns, cross-origin issues etc. Pain points related to general concerns about security and privacy on the web.",
+                          "descriptionClean": "Threats, mitigations, permissions, and fingerprinting/privacy budget concerns, cross-origin issues etc. Pain points related to general concerns about security and privacy on the web.",
                           "id": "security_privacy",
                           "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 47,
-                        "id": "html_imports",
-                        "index": 6,
-                        "percentageQuestion": 10.44,
-                        "percentageSurvey": 0.76,
-                        "entity": {
-                          "name": "HTML imports",
-                          "nameHtml": "HTML imports",
-                          "nameClean": "HTML imports",
-                          "description": "Lack of native HTML imports or templating",
-                          "descriptionHtml": "Lack of native HTML imports or templating",
-                          "descriptionClean": "Lack of native HTML imports or templating",
-                          "id": "html_imports",
-                          "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 17,
+                            "id": "content_security_policy",
+                            "percentageQuestion": 3.78,
+                            "percentageSurvey": 0.27,
+                            "entity": {
+                              "name": "Content Security Policy (CSP)",
+                              "nameHtml": "Content Security Policy (CSP)",
+                              "nameClean": "Content Security Policy (CSP)",
+                              "description": "Pain points around Content Security Policy, often citing its complexity, difficulty in configuration, and debugging.",
+                              "descriptionHtml": "Pain points around Content Security Policy, often citing its complexity, difficulty in configuration, and debugging.",
+                              "descriptionClean": "Pain points around Content Security Policy, often citing its complexity, difficulty in configuration, and debugging.",
+                              "id": "content_security_policy",
+                              "parentId": "security_privacy",
+                              "entityType": "default",
+                              "example": {
+                                "language": "http",
+                                "code": "Content-Security-Policy: script-src 'self';\n",
+                                "codeHighlighted": "<span class=\"hljs-attribute\">Content-Security-Policy</span><span class=\"hljs-punctuation\">: </span>script-src &#x27;self&#x27;;"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/contentsecuritypolicy2"
+                              },
+                              "webFeature": {
+                                "id": "csp",
+                                "description_html": "Content Security Policy (CSP) helps to mitigate certain security threats, including cross-site scripting (XSS) and clickjacking attacks. It consists of a set of directives from a website to a browser, which instruct the browser to restrict the things that the site is allowed to do.",
+                                "group": [
+                                  "security"
+                                ],
+                                "name": "Content Security Policy (CSP)",
+                                "spec": [
+                                  "https://w3c.github.io/webappsec-csp/"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/csp/",
+                                "status": {
+                                  "baseline": "high",
+                                  "baseline_low_date": "2016-08-02",
+                                  "support": {
+                                    "chrome": "25",
+                                    "chrome_android": "25",
+                                    "edge": "14",
+                                    "firefox": "23",
+                                    "firefox_android": "23",
+                                    "safari": "7",
+                                    "safari_ios": "7"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "count": 15,
+                            "id": "sanitizer_api",
+                            "percentageQuestion": 3.33,
+                            "percentageSurvey": 0.24,
+                            "entity": {
+                              "name": "Sanitizer API",
+                              "nameHtml": "Sanitizer API",
+                              "nameClean": "Sanitizer API",
+                              "description": "Issues related to the HTML Sanitizer API, including its absence, limitations, or ergonomics.",
+                              "descriptionHtml": "Issues related to the HTML Sanitizer API, including its absence, limitations, or ergonomics.",
+                              "descriptionClean": "Issues related to the HTML Sanitizer API, including its absence, limitations, or ergonomics.",
+                              "id": "sanitizer_api",
+                              "parentId": "security_privacy",
+                              "entityType": "default",
+                              "example": {
+                                "language": "js",
+                                "code": "greeting.setHTML('Hello ' + nameInput.value);\n",
+                                "codeHighlighted": "greeting.<span class=\"hljs-title function_\">setHTML</span>(<span class=\"hljs-string\">&#x27;Hello &#x27;</span> + nameInput.<span class=\"hljs-property\">value</span>);"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTML_Sanitizer_API"
+                              }
+                            }
+                          },
+                          {
+                            "count": 7,
+                            "id": "cors",
+                            "percentageQuestion": 1.56,
+                            "percentageSurvey": 0.11,
+                            "entity": {
+                              "name": "CORS",
+                              "nameHtml": "CORS",
+                              "nameClean": "CORS",
+                              "description": "Pain points with Cross-Origin Resource Sharing (CORS) and related cross-origin security policies.",
+                              "descriptionHtml": "Pain points with Cross-Origin Resource Sharing (CORS) and related cross-origin security policies.",
+                              "descriptionClean": "Pain points with Cross-Origin Resource Sharing (CORS) and related cross-origin security policies.",
+                              "id": "cors",
+                              "parentId": "security_privacy",
+                              "entityType": "default",
+                              "example": {
+                                "language": "http",
+                                "code": "Access-Control-Allow-Origin: *\nAccess-Control-Allow-Methods: POST, GET, OPTIONS",
+                                "codeHighlighted": "<span class=\"hljs-attribute\">Access-Control-Allow-Origin</span><span class=\"hljs-punctuation\">: </span>*\n<span class=\"hljs-attribute\">Access-Control-Allow-Methods</span><span class=\"hljs-punctuation\">: </span>POST, GET, OPTIONS"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://fetch.spec.whatwg.org/#http-access-control-allow-origin",
+                                  "title": "Fetch Standard"
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 45,
                         "id": "reliance_on_javascript",
-                        "index": 7,
+                        "index": 6,
                         "percentageQuestion": 10,
                         "percentageSurvey": 0.72,
                         "entity": {
                           "name": "Reliance on JavaScript",
                           "nameHtml": "Reliance on JavaScript",
                           "nameClean": "Reliance on JavaScript",
-                          "description": "Excessive reliance on JavaScript",
-                          "descriptionHtml": "Excessive reliance on JavaScript",
-                          "descriptionClean": "Excessive reliance on JavaScript",
+                          "description": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "descriptionHtml": "Lack of declarative APIs, slow rendering due to dependence on correct loading &amp; execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "descriptionClean": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
                           "id": "reliance_on_javascript",
                           "entityType": "default"
                         }
@@ -544,81 +1044,172 @@
                       {
                         "count": 44,
                         "id": "web_components",
-                        "index": 8,
+                        "index": 7,
                         "percentageQuestion": 9.78,
                         "percentageSurvey": 0.71,
                         "entity": {
                           "name": "Web Components",
                           "nameHtml": "Web Components",
                           "nameClean": "Web Components",
+                          "description": "Pain points related to authoring and using Web Components (Custom Elements, Shadow DOM, etc.).",
+                          "descriptionHtml": "Pain points related to authoring and using Web Components (Custom Elements, Shadow DOM, etc.).",
+                          "descriptionClean": "Pain points related to authoring and using Web Components (Custom Elements, Shadow DOM, etc.).",
                           "id": "web_components",
-                          "entityType": "feature",
+                          "entityType": "default",
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components"
                           }
-                        }
-                      },
-                      {
-                        "count": 38,
-                        "id": "template_element",
-                        "index": 9,
-                        "percentageQuestion": 8.44,
-                        "percentageSurvey": 0.61,
-                        "entity": {
-                          "name": "`<template>`",
-                          "nameHtml": "<code>&lt;template&gt;</code>",
-                          "nameClean": "<template>",
-                          "description": "A mechanism for holding HTML that is not to be rendered immediately but may be utilized later via JS.",
-                          "descriptionHtml": "A mechanism for holding HTML that is not to be rendered immediately but may be utilized later via JS.",
-                          "descriptionClean": "A mechanism for holding HTML that is not to be rendered immediately but may be utilized later via JS.",
-                          "id": "template_element",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "html",
-                            "code": "<template id=\"counter\">\n\t<div class=\"counter\">Clicked {{ times }} times</div>\n</template>",
-                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">template</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;counter&quot;</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">&quot;counter&quot;</span>&gt;</span>Clicked {{ times }} times<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">template</span>&gt;</span>"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 19,
+                            "id": "shadow_dom",
+                            "percentageQuestion": 4.22,
+                            "percentageSurvey": 0.31,
+                            "entity": {
+                              "name": "Shadow DOM",
+                              "nameHtml": "Shadow DOM",
+                              "nameClean": "Shadow DOM",
+                              "description": "Shadow trees, encapsulation boundaries, slotting, parts, cross-root ARIA and integration with events, other APIs and page elements. Combine with `styling` for shadow DOM styling issues.",
+                              "descriptionHtml": "Shadow trees, encapsulation boundaries, slotting, parts, cross-root ARIA and integration with events, other APIs and page elements. Combine with <code>styling</code> for shadow DOM styling issues.",
+                              "descriptionClean": "Shadow trees, encapsulation boundaries, slotting, parts, cross-root ARIA and integration with events, other APIs and page elements. Combine with styling for shadow DOM styling issues.",
+                              "id": "shadow_dom",
+                              "parentId": "web_components",
+                              "entityType": "default",
+                              "example": {
+                                "language": "js",
+                                "code": "this.shadowRoot = this.attachShadow({mode: \"open\"});",
+                                "codeHighlighted": "<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">shadowRoot</span> = <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">attachShadow</span>({<span class=\"hljs-attr\">mode</span>: <span class=\"hljs-string\">&quot;open&quot;</span>});"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM"
+                              },
+                              "webFeature": {
+                                "id": "shadow-dom",
+                                "description_html": "Shadow DOM allows you to attach encapsulated \"shadow\" DOM trees to elements. A shadow DOM tree is a separate component, isolated from the scripts and styles in other parts of the document. This is a part of Web Components.",
+                                "group": [
+                                  "dom",
+                                  "web-components"
+                                ],
+                                "name": "Shadow DOM",
+                                "spec": [
+                                  "https://dom.spec.whatwg.org/#shadow-trees"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/shadow-dom/",
+                                "status": {
+                                  "baseline": "high",
+                                  "baseline_low_date": "2020-01-15",
+                                  "support": {
+                                    "chrome": "53",
+                                    "chrome_android": "53",
+                                    "edge": "79",
+                                    "firefox": "63",
+                                    "firefox_android": "63",
+                                    "safari": "10",
+                                    "safari_ios": "10"
+                                  }
+                                }
+                              }
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 7,
+                                "id": "declarative_shadow_dom",
+                                "percentageQuestion": 1.56,
+                                "percentageSurvey": 0.11,
+                                "entity": {
+                                  "name": "Declarative Shadow DOM",
+                                  "nameHtml": "Declarative Shadow DOM",
+                                  "nameClean": "Declarative Shadow DOM",
+                                  "description": "Authoring, referencing, and tooling around Declarative Shadow DOM (DSD).",
+                                  "descriptionHtml": "Authoring, referencing, and tooling around Declarative Shadow DOM (DSD).",
+                                  "descriptionClean": "Authoring, referencing, and tooling around Declarative Shadow DOM (DSD).",
+                                  "id": "declarative_shadow_dom",
+                                  "parentId": "shadow_dom",
+                                  "entityType": "default",
+                                  "example": {
+                                    "language": "html",
+                                    "code": "<host-element>\n    <template shadowrootmode=\"open\">\n        <!-- Shadow content -->\n    </template>\n</host-element>",
+                                    "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">host-element</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">template</span> <span class=\"hljs-attr\">shadowrootmode</span>=<span class=\"hljs-string\">&quot;open&quot;</span>&gt;</span>\n        <span class=\"hljs-comment\">&lt;!-- Shadow content --&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">template</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">host-element</span>&gt;</span>"
+                                  },
+                                  "caniuse": {
+                                    "url": "https://caniuse.com/declarative-shadow-dom"
+                                  },
+                                  "resources": [
+                                    {
+                                      "url": "https://github.com/mfreed7/declarative-shadow-dom",
+                                      "title": "GitHub - mfreed7/declarative-shadow-dom: Declarative Shadow DOM feature development"
+                                    },
+                                    {
+                                      "url": "https://developer.chrome.com/en/articles/declarative-shadow-dom/",
+                                      "title": "Declarative Shadow DOM - Chrome Developers"
+                                    },
+                                    {
+                                      "url": "https://webkit.org/blog/13851/declarative-shadow-dom/",
+                                      "title": "Declarative Shadow DOM | WebKit"
+                                    },
+                                    {
+                                      "url": "https://chromestatus.com/feature/5191745052606464",
+                                      "title": "Chrome Platform Status"
+                                    }
+                                  ],
+                                  "webFeature": {
+                                    "id": "declarative-shadow-dom",
+                                    "description_html": "The <code>shadowrootmode</code> attribute on <code>&#x3C;template></code> creates a shadow root without the use of JavaScript. It is a declarative alternative to the <code>attachShadow()</code> method.",
+                                    "group": [
+                                      "html",
+                                      "dom",
+                                      "web-components"
+                                    ],
+                                    "name": "Declarative shadow DOM",
+                                    "spec": [
+                                      "https://html.spec.whatwg.org/multipage/scripting.html#attr-template-shadowrootmode"
+                                    ],
+                                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/declarative-shadow-dom/",
+                                    "status": {
+                                      "baseline": "low",
+                                      "baseline_low_date": "2024-02-20",
+                                      "support": {
+                                        "chrome": "111",
+                                        "chrome_android": "111",
+                                        "edge": "111",
+                                        "firefox": "123",
+                                        "firefox_android": "123",
+                                        "safari": "16.4",
+                                        "safari_ios": "16.4"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ]
                           },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://html.spec.whatwg.org/multipage/scripting.html#the-template-element",
-                              "title": "HTML Standard"
-                            }
-                          ],
-                          "webFeature": {
-                            "id": "template",
-                            "description_html": "The <code>&#x3C;template></code> HTML element holds HTML fragments which you can clone and insert into the document using JavaScript.",
-                            "group": [
-                              "html-elements",
-                              "web-components"
-                            ],
-                            "name": "<template>",
-                            "spec": [
-                              "https://html.spec.whatwg.org/multipage/scripting.html#the-template-element"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/template/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2015-11-12",
-                              "support": {
-                                "chrome": "26",
-                                "chrome_android": "26",
-                                "edge": "13",
-                                "firefox": "22",
-                                "firefox_android": "22",
-                                "safari": "8",
-                                "safari_ios": "8"
+                          {
+                            "count": 5,
+                            "id": "custom_elements",
+                            "percentageQuestion": 1.11,
+                            "percentageSurvey": 0.08,
+                            "entity": {
+                              "name": "Custom Elements",
+                              "nameHtml": "Custom Elements",
+                              "nameClean": "Custom Elements",
+                              "description": "Issues related to defining and using custom elements, including syntax verbosity, lifecycle, and the reliance on JavaScript.",
+                              "descriptionHtml": "Issues related to defining and using custom elements, including syntax verbosity, lifecycle, and the reliance on JavaScript.",
+                              "descriptionClean": "Issues related to defining and using custom elements, including syntax verbosity, lifecycle, and the reliance on JavaScript.",
+                              "id": "custom_elements",
+                              "parentId": "web_components",
+                              "entityType": "default",
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components"
                               }
                             }
                           }
-                        }
+                        ]
                       },
                       {
                         "count": 35,
                         "id": "tables",
-                        "index": 10,
+                        "index": 8,
                         "percentageQuestion": 7.78,
                         "percentageSurvey": 0.56,
                         "entity": {
@@ -671,34 +1262,34 @@
                       },
                       {
                         "count": 34,
-                        "id": "accessibility",
-                        "index": 11,
+                        "id": "accessibility_issues",
+                        "index": 9,
                         "percentageQuestion": 7.56,
                         "percentageSurvey": 0.55,
                         "entity": {
                           "name": "Accessibility",
                           "nameHtml": "Accessibility",
                           "nameClean": "Accessibility",
-                          "description": "Accessibility improvements",
-                          "descriptionHtml": "Accessibility improvements",
-                          "descriptionClean": "Accessibility improvements",
-                          "id": "accessibility",
+                          "description": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "descriptionHtml": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "descriptionClean": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "id": "accessibility_issues",
                           "entityType": "default"
                         }
                       },
                       {
                         "count": 26,
                         "id": "educational_issues",
-                        "index": 12,
+                        "index": 10,
                         "percentageQuestion": 5.78,
                         "percentageSurvey": 0.42,
                         "entity": {
-                          "name": "Education",
-                          "nameHtml": "Education",
-                          "nameClean": "Education",
-                          "description": "Issues related to learning new technologies",
-                          "descriptionHtml": "Issues related to learning new technologies",
-                          "descriptionClean": "Issues related to learning new technologies",
+                          "name": "Educational issues",
+                          "nameHtml": "Educational issues",
+                          "nameClean": "Educational issues",
+                          "description": "Lack of awareness, poor docs, lack of best practices, lack of good examples. This is about the availability and quality of educational resources, not about learnability issues instrinsic to the technology (use `poor_learnability` for that).",
+                          "descriptionHtml": "Lack of awareness, poor docs, lack of best practices, lack of good examples. This is about the availability and quality of educational resources, not about learnability issues instrinsic to the technology (use <code>poor_learnability</code> for that).",
+                          "descriptionClean": "Lack of awareness, poor docs, lack of best practices, lack of good examples. This is about the availability and quality of educational resources, not about learnability issues instrinsic to the technology (use poor_learnability for that).",
                           "id": "educational_issues",
                           "entityType": "default"
                         }
@@ -706,7 +1297,7 @@
                       {
                         "count": 24,
                         "id": "headings",
-                        "index": 13,
+                        "index": 11,
                         "percentageQuestion": 5.33,
                         "percentageSurvey": 0.39,
                         "entity": {
@@ -724,7 +1315,7 @@
                       {
                         "count": 22,
                         "id": "declarative_apis",
-                        "index": 14,
+                        "index": 12,
                         "percentageQuestion": 4.89,
                         "percentageSurvey": 0.35,
                         "entity": {
@@ -740,41 +1331,8 @@
                       },
                       {
                         "count": 22,
-                        "id": "ecosystem",
-                        "index": 15,
-                        "percentageQuestion": 4.89,
-                        "percentageSurvey": 0.35,
-                        "entity": {
-                          "name": "Ecosystem issues",
-                          "nameHtml": "Ecosystem issues",
-                          "nameClean": "Ecosystem issues",
-                          "id": "ecosystem",
-                          "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 13,
-                            "id": "framework_compatibility",
-                            "percentageQuestion": 2.89,
-                            "percentageSurvey": 0.21,
-                            "entity": {
-                              "name": "Framework compatibility",
-                              "nameHtml": "Framework compatibility",
-                              "nameClean": "Framework compatibility",
-                              "description": "Issues around compatibility with JS frameworks.",
-                              "descriptionHtml": "Issues around compatibility with JS frameworks.",
-                              "descriptionClean": "Issues around compatibility with JS frameworks.",
-                              "id": "framework_compatibility",
-                              "parentId": "ecosystem",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
-                      },
-                      {
-                        "count": 22,
                         "id": "tooling",
-                        "index": 16,
+                        "index": 13,
                         "percentageQuestion": 4.89,
                         "percentageSurvey": 0.35,
                         "entity": {
@@ -789,44 +1347,9 @@
                         }
                       },
                       {
-                        "count": 21,
-                        "id": "html_modules",
-                        "index": 17,
-                        "percentageQuestion": 4.67,
-                        "percentageSurvey": 0.34,
-                        "entity": {
-                          "name": "HTML Modules",
-                          "nameHtml": "HTML Modules",
-                          "nameClean": "HTML Modules",
-                          "description": "Import HTML files via JS imports and access their elements and JS exports.",
-                          "descriptionHtml": "Import HTML files via JS imports and access their elements and JS exports.",
-                          "descriptionClean": "Import HTML files via JS imports and access their elements and JS exports.",
-                          "id": "html_modules",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "html",
-                            "code": "<script type=\"module\">\n\timport { TabList } from \"./tablist.html\" with { type: 'html' };\n\tcustomElements.define(\"tab-list\", TabList);\n</script>",
-                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">&quot;module&quot;</span>&gt;</span><span class=\"language-javascript\">\n\t<span class=\"hljs-keyword\">import</span> { <span class=\"hljs-title class_\">TabList</span> } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&quot;./tablist.html&quot;</span> <span class=\"hljs-keyword\">with</span> { <span class=\"hljs-attr\">type</span>: <span class=\"hljs-string\">&#x27;html&#x27;</span> };\n\tcustomElements.<span class=\"hljs-title function_\">define</span>(<span class=\"hljs-string\">&quot;tab-list&quot;</span>, <span class=\"hljs-title class_\">TabList</span>);\n</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://github.com/WICG/webcomponents/blob/gh-pages/proposals/html-modules-explainer.md",
-                              "title": "HTML Modules Explainer"
-                            },
-                            {
-                              "url": "https://chromestatus.com/feature/4854408103854080",
-                              "title": "Chrome Platform Status"
-                            },
-                            {
-                              "url": "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/HTMLModules/designDoc.md"
-                            }
-                          ]
-                        }
-                      },
-                      {
                         "count": 19,
                         "id": "date_and_time",
-                        "index": 18,
+                        "index": 14,
                         "percentageQuestion": 4.22,
                         "percentageSurvey": 0.31,
                         "entity": {
@@ -841,34 +1364,139 @@
                         }
                       },
                       {
-                        "count": 19,
-                        "id": "reactivity",
-                        "index": 19,
-                        "percentageQuestion": 4.22,
-                        "percentageSurvey": 0.31,
+                        "count": 15,
+                        "id": "specific_platforms_vendors",
+                        "index": 15,
+                        "percentageQuestion": 3.33,
+                        "percentageSurvey": 0.24,
                         "entity": {
-                          "id": "reactivity",
+                          "name": "🗑️ Specific platforms & vendors",
+                          "nameHtml": "🗑️ Specific platforms &amp; vendors",
+                          "nameClean": "🗑️ Specific platforms & vendors",
+                          "description": "Issues mentioning specific platforms, operating systems, or browser vendors.",
+                          "descriptionHtml": "Issues mentioning specific platforms, operating systems, or browser vendors.",
+                          "descriptionClean": "Issues mentioning specific platforms, operating systems, or browser vendors.",
+                          "id": "specific_platforms_vendors",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 15,
+                        "id": "styling_customization",
+                        "index": 16,
+                        "percentageQuestion": 3.33,
+                        "percentageSurvey": 0.24,
+                        "entity": {
+                          "name": "Styling and UI customization",
+                          "nameHtml": "Styling and UI customization",
+                          "nameClean": "Styling and UI customization",
+                          "description": "Issues around styling and customizing browser-generated UI.",
+                          "descriptionHtml": "Issues around styling and customizing browser-generated UI.",
+                          "descriptionClean": "Issues around styling and customizing browser-generated UI.",
+                          "id": "styling_customization",
+                          "parentId": "a11y_technical_issues",
                           "entityType": "default"
                         },
                         "nestedBuckets": [
                           {
-                            "count": 19,
-                            "id": "data_binding",
-                            "percentageQuestion": 4.22,
-                            "percentageSurvey": 0.31,
+                            "count": 14,
+                            "id": "styling_issues",
+                            "percentageQuestion": 3.11,
+                            "percentageSurvey": 0.22,
                             "entity": {
-                              "name": "Data Binding",
-                              "nameHtml": "Data Binding",
-                              "nameClean": "Data Binding",
-                              "description": "Pain points around the lack of a native way to bind JavaScript data to DOM elements, so that changes in one are automatically reflected in the other.",
-                              "descriptionHtml": "Pain points around the lack of a native way to bind JavaScript data to DOM elements, so that changes in one are automatically reflected in the other.",
-                              "descriptionClean": "Pain points around the lack of a native way to bind JavaScript data to DOM elements, so that changes in one are automatically reflected in the other.",
-                              "id": "data_binding",
-                              "parentId": "reactivity",
+                              "name": "Styling",
+                              "nameHtml": "Styling",
+                              "nameClean": "Styling",
+                              "description": "Issues around styling UA-generated UI, CSS not working in certain contexts, etc.",
+                              "descriptionHtml": "Issues around styling UA-generated UI, CSS not working in certain contexts, etc.",
+                              "descriptionClean": "Issues around styling UA-generated UI, CSS not working in certain contexts, etc.",
+                              "id": "styling_issues",
+                              "parentId": "styling_customization",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 13,
+                            "id": "responsive_design",
+                            "percentageQuestion": 2.89,
+                            "percentageSurvey": 0.21,
+                            "entity": {
+                              "name": "Responsive design",
+                              "nameHtml": "Responsive design",
+                              "nameClean": "Responsive design",
+                              "id": "responsive_design",
+                              "parentId": "styling_customization",
                               "entityType": "default"
                             }
                           }
                         ]
+                      },
+                      {
+                        "count": 14,
+                        "id": "interactivity",
+                        "index": 17,
+                        "percentageQuestion": 3.11,
+                        "percentageSurvey": 0.22,
+                        "entity": {
+                          "name": "Interactivity",
+                          "nameHtml": "Interactivity",
+                          "nameClean": "Interactivity",
+                          "id": "interactivity",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 14,
+                        "id": "missing_elements",
+                        "index": 18,
+                        "percentageQuestion": 3.11,
+                        "percentageSurvey": 0.22,
+                        "entity": {
+                          "name": "Missing elements",
+                          "nameHtml": "Missing elements",
+                          "nameClean": "Missing elements",
+                          "description": "The need to build common UI patterns from scratch due to the lack of built-in, accessible HTML elements.",
+                          "descriptionHtml": "The need to build common UI patterns from scratch due to the lack of built-in, accessible HTML elements.",
+                          "descriptionClean": "The need to build common UI patterns from scratch due to the lack of built-in, accessible HTML elements.",
+                          "id": "missing_elements",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 6,
+                            "id": "tabs_element",
+                            "percentageQuestion": 1.33,
+                            "percentageSurvey": 0.1,
+                            "entity": {
+                              "name": "Tabs element",
+                              "nameHtml": "Tabs element",
+                              "nameClean": "Tabs element",
+                              "description": "Pain points from the lack of a native HTML element for tabbed interfaces, a common UI pattern.",
+                              "descriptionHtml": "Pain points from the lack of a native HTML element for tabbed interfaces, a common UI pattern.",
+                              "descriptionClean": "Pain points from the lack of a native HTML element for tabbed interfaces, a common UI pattern.",
+                              "id": "tabs_element",
+                              "parentId": "missing_elements",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 14,
+                        "id": "performance",
+                        "index": 19,
+                        "percentageQuestion": 3.11,
+                        "percentageSurvey": 0.22,
+                        "entity": {
+                          "name": "Performance",
+                          "nameHtml": "Performance",
+                          "nameClean": "Performance",
+                          "description": "Throughput, latency, memory, jank, lag, frame drops, battery/thermal, and loading time.",
+                          "descriptionHtml": "Throughput, latency, memory, jank, lag, frame drops, battery/thermal, and loading time.",
+                          "descriptionClean": "Throughput, latency, memory, jank, lag, frame drops, battery/thermal, and loading time.",
+                          "id": "performance",
+                          "entityType": "default"
+                        }
                       },
                       {
                         "count": 5768,
@@ -878,11 +1506,11 @@
                         "percentageSurvey": 92.69
                       },
                       {
-                        "count": 423,
+                        "count": 218,
                         "id": "other_answers",
                         "index": 21,
-                        "percentageQuestion": 93.93,
-                        "percentageSurvey": 6.82
+                        "percentageQuestion": 48.38,
+                        "percentageSurvey": 3.55
                       }
                     ]
                   }

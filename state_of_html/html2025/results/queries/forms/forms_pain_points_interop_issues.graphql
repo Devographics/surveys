@@ -2,8 +2,8 @@ query {
   surveys {
     state_of_html {
       html2025 {
-        graphics_multimedia {
-          graphics_pain_points_interop_1: graphics_pain_points {
+        forms {
+          forms_pain_points_interop_issues_1: forms_pain_points {
             id
             comments {
               currentEdition {
@@ -12,23 +12,22 @@ query {
             }
             freeform(
               filters: {
-                graphics_multimedia__graphics_pain_points: {
+                forms__forms_pain_points: {
                   in: [
-                    interop
+                    interop_issues
                   ]
                 }
               }
               parameters: {
                 showNoAnswer: true
-                cutoff: 10
+                cutoff: 5
                 limit: 20
                 mergeOtherBuckets: true
               }
               bucketsFilter: {
                 nin: [
-                  interop
+                  interop_issues
                   limitations
-                  dx
                 ]
               }
             ) {

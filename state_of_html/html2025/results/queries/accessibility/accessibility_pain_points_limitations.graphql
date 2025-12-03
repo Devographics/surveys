@@ -2,8 +2,8 @@ query {
   surveys {
     state_of_html {
       html2025 {
-        system_capabilities {
-          system_capabilities_pain_points_interop_1: system_capabilities_pain_points {
+        accessibility {
+          accessibility_pain_points_limitations_1: accessibility_pain_points {
             id
             comments {
               currentEdition {
@@ -12,23 +12,22 @@ query {
             }
             freeform(
               filters: {
-                system_capabilities__system_capabilities_pain_points: {
+                accessibility__accessibility_pain_points: {
                   in: [
-                    interop
+                    limitations
                   ]
                 }
               }
               parameters: {
                 showNoAnswer: true
-                cutoff: 10
+                cutoff: 5
                 limit: 20
                 mergeOtherBuckets: true
               }
               bucketsFilter: {
                 nin: [
-                  interop
                   limitations
-                  dx
+                  interop_issues
                 ]
               }
             ) {

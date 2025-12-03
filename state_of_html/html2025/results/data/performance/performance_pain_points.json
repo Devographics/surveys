@@ -20,7 +20,7 @@
                         "order": "desc"
                       },
                       "limit": 20,
-                      "cutoff": 10
+                      "cutoff": 5
                     },
                     "editionId": "html2025",
                     "year": 2025,
@@ -31,11 +31,11 @@
                     },
                     "buckets": [
                       {
-                        "count": 89,
-                        "id": "loading",
+                        "count": 77,
+                        "id": "loading_issues",
                         "index": 0,
-                        "percentageQuestion": 25.07,
-                        "percentageSurvey": 1.43,
+                        "percentageQuestion": 21.69,
+                        "percentageSurvey": 1.24,
                         "entity": {
                           "name": "Loading",
                           "nameHtml": "Loading",
@@ -43,10 +43,164 @@
                           "description": "General issues related to loading page subresources like scripts, stylesheets, and modules, preloading, or loading UX.",
                           "descriptionHtml": "General issues related to loading page subresources like scripts, stylesheets, and modules, preloading, or loading UX.",
                           "descriptionClean": "General issues related to loading page subresources like scripts, stylesheets, and modules, preloading, or loading UX.",
-                          "id": "loading",
+                          "id": "loading_issues",
                           "entityType": "default"
                         },
                         "nestedBuckets": [
+                          {
+                            "count": 26,
+                            "id": "lazy_loading",
+                            "percentageQuestion": 7.32,
+                            "percentageSurvey": 0.42,
+                            "entity": {
+                              "name": "Lazy Loading",
+                              "nameHtml": "Lazy Loading",
+                              "nameClean": "Lazy Loading",
+                              "description": "Issues related to the native `loading=\"lazy\"` attribute for images and iframes, and the desire for similar functionality for other elements.",
+                              "descriptionHtml": "Issues related to the native <code>loading=\"lazy\"</code> attribute for images and iframes, and the desire for similar functionality for other elements.",
+                              "descriptionClean": "Issues related to the native loading=\"lazy\" attribute for images and iframes, and the desire for similar functionality for other elements.",
+                              "id": "lazy_loading",
+                              "parentId": "loading_issues",
+                              "entityType": "default",
+                              "example": {
+                                "language": "html",
+                                "code": "<img src=\"picture.jpg\" loading=\"lazy\" />\n<iframe src=\"supplementary.html\" loading=\"lazy\"></iframe>",
+                                "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">img</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;picture.jpg&quot;</span> <span class=\"hljs-attr\">loading</span>=<span class=\"hljs-string\">&quot;lazy&quot;</span> /&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">iframe</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;supplementary.html&quot;</span> <span class=\"hljs-attr\">loading</span>=<span class=\"hljs-string\">&quot;lazy&quot;</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">iframe</span>&gt;</span>"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Lazy_loading"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/loading-lazy-attr"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#lazy-loading-attributes",
+                                  "title": "HTML Standard"
+                                },
+                                {
+                                  "url": "https://web.dev/browser-level-image-lazy-loading/",
+                                  "title": "Browser-level image lazy loading for the web"
+                                }
+                              ],
+                              "webFeature": {
+                                "id": "loading-lazy",
+                                "description_html": "The <code>loading=\"lazy\"</code> attribute for <code>&#x3C;img></code> and <code>&#x3C;iframe></code> elements blocks loading the external resource until the user scrolls to that element's part of the page.",
+                                "name": "Lazy-loading images and iframes",
+                                "spec": [
+                                  "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#lazy-loading-attributes"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/loading-lazy/",
+                                "status": {
+                                  "baseline": "low",
+                                  "baseline_low_date": "2023-12-19",
+                                  "support": {
+                                    "chrome": "77",
+                                    "chrome_android": "77",
+                                    "edge": "79",
+                                    "firefox": "121",
+                                    "firefox_android": "121",
+                                    "safari": "16.4",
+                                    "safari_ios": "16.4"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "count": 16,
+                            "id": "resource_hints",
+                            "percentageQuestion": 4.51,
+                            "percentageSurvey": 0.26,
+                            "entity": {
+                              "name": "Resource Hints",
+                              "nameHtml": "Resource Hints",
+                              "nameClean": "Resource Hints",
+                              "description": "Issues with declarative APIs for prioritizing resource loading, such as `preload`, `prefetch`, `preconnect`, and Speculation Rules.",
+                              "descriptionHtml": "Issues with declarative APIs for prioritizing resource loading, such as <code>preload</code>, <code>prefetch</code>, <code>preconnect</code>, and Speculation Rules.",
+                              "descriptionClean": "Issues with declarative APIs for prioritizing resource loading, such as preload, prefetch, preconnect, and Speculation Rules.",
+                              "id": "resource_hints",
+                              "parentId": "loading_issues",
+                              "entityType": "default",
+                              "example": {
+                                "language": "html",
+                                "code": "<link rel=\"preload\" href=\"picture.jpg\" />\n<link rel=\"dns-prefetch\" href=\"https://fonts.googleapis.com/\" />",
+                                "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">link</span> <span class=\"hljs-attr\">rel</span>=<span class=\"hljs-string\">&quot;preload&quot;</span> <span class=\"hljs-attr\">href</span>=<span class=\"hljs-string\">&quot;picture.jpg&quot;</span> /&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">link</span> <span class=\"hljs-attr\">rel</span>=<span class=\"hljs-string\">&quot;dns-prefetch&quot;</span> <span class=\"hljs-attr\">href</span>=<span class=\"hljs-string\">&quot;https://fonts.googleapis.com/&quot;</span> /&gt;</span>"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Performance/Best_practices"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://blog.logrocket.com/understanding-css-preload-other-resource-hints/",
+                                  "title": "Understanding CSS preload and other resource hints - LogRocket Blog"
+                                },
+                                {
+                                  "url": "https://medium.com/@luisvieira_gmr/html5-prefetch-1e54f6dda15d",
+                                  "title": "Resource Hints"
+                                }
+                              ]
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 7,
+                                "id": "preload",
+                                "percentageQuestion": 1.97,
+                                "percentageSurvey": 0.11,
+                                "entity": {
+                                  "name": "Preload",
+                                  "nameHtml": "Preload",
+                                  "nameClean": "Preload",
+                                  "description": "Pain points related to using `<link rel=\"preload\">` to fetch resources declaratively.",
+                                  "descriptionHtml": "Pain points related to using <code>&lt;link rel=\"preload\"&gt;</code> to fetch resources declaratively.",
+                                  "descriptionClean": "Pain points related to using <link rel=\"preload\"> to fetch resources declaratively.",
+                                  "id": "preload",
+                                  "parentId": "resource_hints",
+                                  "entityType": "default"
+                                }
+                              },
+                              {
+                                "count": 7,
+                                "id": "speculation_rules",
+                                "percentageQuestion": 1.97,
+                                "percentageSurvey": 0.11,
+                                "entity": {
+                                  "name": "Speculation Rules",
+                                  "nameHtml": "Speculation Rules",
+                                  "nameClean": "Speculation Rules",
+                                  "description": "Issues with the Speculation Rules API for prerendering or prefetching navigations.",
+                                  "descriptionHtml": "Issues with the Speculation Rules API for prerendering or prefetching navigations.",
+                                  "descriptionClean": "Issues with the Speculation Rules API for prerendering or prefetching navigations.",
+                                  "id": "speculation_rules",
+                                  "parentId": "resource_hints",
+                                  "entityType": "default",
+                                  "example": {
+                                    "language": "html",
+                                    "code": "<script type=\"speculationrules\">\n  {\n    \"prefetch\": [{ \"urls\": [\"/about\", \"/pricing\"] }],\n    \"prerender\": [\n      {\n        \"where\": {\n          \"href_matches\": \"^/product/\\\\d+$\",\n          \"selector_matches\": \"a.nav-link\"\n        }\n      }\n    ]\n  }\n</script>\n",
+                                    "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">&quot;speculationrules&quot;</span>&gt;</span><span class=\"language-javascript\">\n  {\n    <span class=\"hljs-string\">&quot;prefetch&quot;</span>: [{ <span class=\"hljs-string\">&quot;urls&quot;</span>: [<span class=\"hljs-string\">&quot;/about&quot;</span>, <span class=\"hljs-string\">&quot;/pricing&quot;</span>] }],\n    <span class=\"hljs-string\">&quot;prerender&quot;</span>: [\n      {\n        <span class=\"hljs-string\">&quot;where&quot;</span>: {\n          <span class=\"hljs-string\">&quot;href_matches&quot;</span>: <span class=\"hljs-string\">&quot;^/product/\\\\d+$&quot;</span>,\n          <span class=\"hljs-string\">&quot;selector_matches&quot;</span>: <span class=\"hljs-string\">&quot;a.nav-link&quot;</span>\n        }\n      }\n    ]\n  }\n</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>"
+                                  },
+                                  "webFeature": {
+                                    "id": "speculation-rules",
+                                    "description_html": "Speculation rules are hints to the browser to proactively download pages in the background so they appear instantly when the user navigates to them.",
+                                    "name": "Speculation rules",
+                                    "spec": [
+                                      "https://wicg.github.io/nav-speculation/speculation-rules.html",
+                                      "https://wicg.github.io/nav-speculation/prerendering.html"
+                                    ],
+                                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/speculation-rules/",
+                                    "status": {
+                                      "baseline": "false",
+                                      "support": {
+                                        "chrome": "109",
+                                        "chrome_android": "109",
+                                        "edge": "109"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          },
                           {
                             "count": 14,
                             "id": "script_loading",
@@ -60,7 +214,7 @@
                               "descriptionHtml": "Pain points related to loading and executing JavaScript, including <code>async</code>, <code>defer</code>, ES modules, and dynamic imports.",
                               "descriptionClean": "Pain points related to loading and executing JavaScript, including async, defer, ES modules, and dynamic imports.",
                               "id": "script_loading",
-                              "parentId": "loading",
+                              "parentId": "loading_issues",
                               "entityType": "default"
                             }
                           },
@@ -77,31 +231,48 @@
                               "descriptionHtml": "Issues related to loading stylesheets, including render-blocking behavior, asynchronous loading, and unused CSS.",
                               "descriptionClean": "Issues related to loading stylesheets, including render-blocking behavior, asynchronous loading, and unused CSS.",
                               "id": "css_loading",
-                              "parentId": "loading",
+                              "parentId": "loading_issues",
                               "entityType": "default"
                             }
                           }
                         ]
                       },
                       {
-                        "count": 64,
-                        "id": "graphics",
+                        "count": 72,
+                        "id": "high_cognitive_load",
                         "index": 1,
+                        "percentageQuestion": 20.28,
+                        "percentageSurvey": 1.16,
+                        "entity": {
+                          "name": "🗑️ High cognitive load",
+                          "nameHtml": "🗑️ High cognitive load",
+                          "nameClean": "🗑️ High cognitive load",
+                          "description": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "descriptionHtml": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "descriptionClean": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "id": "high_cognitive_load",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 64,
+                        "id": "graphics_issues",
+                        "index": 2,
                         "percentageQuestion": 18.03,
                         "percentageSurvey": 1.03,
                         "entity": {
                           "name": "Graphics",
                           "nameHtml": "Graphics",
                           "nameClean": "Graphics",
-                          "id": "graphics",
+                          "id": "graphics_issues",
                           "entityType": "default"
                         },
                         "nestedBuckets": [
                           {
-                            "count": 67,
-                            "id": "images",
-                            "percentageQuestion": 18.87,
-                            "percentageSurvey": 1.08,
+                            "count": 60,
+                            "id": "images_issues",
+                            "percentageQuestion": 16.9,
+                            "percentageSurvey": 0.96,
                             "entity": {
                               "name": "Images",
                               "nameHtml": "Images",
@@ -109,8 +280,8 @@
                               "description": "Still images across the platform, including performance issues around rendering images on a web page.",
                               "descriptionHtml": "Still images across the platform, including performance issues around rendering images on a web page.",
                               "descriptionClean": "Still images across the platform, including performance issues around rendering images on a web page.",
-                              "id": "images",
-                              "parentId": "graphics",
+                              "id": "images_issues",
+                              "parentId": "graphics_issues",
                               "entityType": "default"
                             },
                             "nestedBuckets": [
@@ -127,7 +298,7 @@
                                   "descriptionHtml": "Selecting sources by viewport/container and device characteristics, including issues around related syntax (srcset, sizes, etc)",
                                   "descriptionClean": "Selecting sources by viewport/container and device characteristics, including issues around related syntax (srcset, sizes, etc)",
                                   "id": "responsive_images",
-                                  "parentId": "images",
+                                  "parentId": "images_issues",
                                   "entityType": "default"
                                 },
                                 "nestedBuckets": [
@@ -148,55 +319,55 @@
                                 ]
                               }
                             ]
-                          }
-                        ]
-                      },
-                      {
-                        "count": 50,
-                        "id": "ecosystem",
-                        "index": 2,
-                        "percentageQuestion": 14.08,
-                        "percentageSurvey": 0.8,
-                        "entity": {
-                          "name": "Ecosystem issues",
-                          "nameHtml": "Ecosystem issues",
-                          "nameClean": "Ecosystem issues",
-                          "id": "ecosystem",
-                          "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 28,
-                            "id": "framework_compatibility",
-                            "percentageQuestion": 7.89,
-                            "percentageSurvey": 0.45,
-                            "entity": {
-                              "name": "Framework compatibility",
-                              "nameHtml": "Framework compatibility",
-                              "nameClean": "Framework compatibility",
-                              "description": "Issues around compatibility with JS frameworks.",
-                              "descriptionHtml": "Issues around compatibility with JS frameworks.",
-                              "descriptionClean": "Issues around compatibility with JS frameworks.",
-                              "id": "framework_compatibility",
-                              "parentId": "ecosystem",
-                              "entityType": "default"
-                            }
                           },
                           {
-                            "count": 19,
-                            "id": "third_party_scripts",
-                            "percentageQuestion": 5.35,
-                            "percentageSurvey": 0.31,
+                            "count": 6,
+                            "id": "svg_element",
+                            "percentageQuestion": 1.69,
+                            "percentageSurvey": 0.1,
                             "entity": {
-                              "name": "Third-party Scripts",
-                              "nameHtml": "Third-party Scripts",
-                              "nameClean": "Third-party Scripts",
-                              "description": "Issues caused by scripts not authored by the site owner, such as analytics, ads, trackers, and customer support widgets.",
-                              "descriptionHtml": "Issues caused by scripts not authored by the site owner, such as analytics, ads, trackers, and customer support widgets.",
-                              "descriptionClean": "Issues caused by scripts not authored by the site owner, such as analytics, ads, trackers, and customer support widgets.",
-                              "id": "third_party_scripts",
-                              "parentId": "ecosystem",
-                              "entityType": "default"
+                              "name": "SVG",
+                              "nameHtml": "SVG",
+                              "nameClean": "SVG",
+                              "description": "Issues related to Vector graphics via Scalable Vector Graphics, including issues related to embedding and manipulating SVG content.",
+                              "descriptionHtml": "Issues related to Vector graphics via Scalable Vector Graphics, including issues related to embedding and manipulating SVG content.",
+                              "descriptionClean": "Issues related to Vector graphics via Scalable Vector Graphics, including issues related to embedding and manipulating SVG content.",
+                              "id": "svg_element",
+                              "parentId": "graphics_issues",
+                              "entityType": "default",
+                              "example": {
+                                "language": "html",
+                                "code": "<svg>\n  <circle cx=\"50\" cy=\"50\" r=\"50\" />\n</svg>",
+                                "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">svg</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">circle</span> <span class=\"hljs-attr\">cx</span>=<span class=\"hljs-string\">&quot;50&quot;</span> <span class=\"hljs-attr\">cy</span>=<span class=\"hljs-string\">&quot;50&quot;</span> <span class=\"hljs-attr\">r</span>=<span class=\"hljs-string\">&quot;50&quot;</span> /&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">svg</span>&gt;</span>"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/svg"
+                              },
+                              "webFeature": {
+                                "id": "svg",
+                                "description_html": "The SVG image format, represented by the <code>&#x3C;svg></code> element, creates two-dimensional vector graphics with declarative or scripted interaction and animation.",
+                                "group": [
+                                  "svg"
+                                ],
+                                "name": "SVG",
+                                "spec": [
+                                  "https://svgwg.org/svg2-draft/"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/svg/",
+                                "status": {
+                                  "baseline": "high",
+                                  "baseline_low_date": "2020-01-15",
+                                  "support": {
+                                    "chrome": "1",
+                                    "chrome_android": "18",
+                                    "edge": "79",
+                                    "firefox": "3",
+                                    "firefox_android": "4",
+                                    "safari": "3",
+                                    "safari_ios": "2"
+                                  }
+                                }
+                              }
                             }
                           }
                         ]
@@ -248,78 +419,135 @@
                               "id": "tooling_profiling",
                               "parentId": "tooling",
                               "entityType": "default"
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 6,
+                                "id": "lighthouse",
+                                "percentageQuestion": 1.69,
+                                "percentageSurvey": 0.1,
+                                "entity": {
+                                  "name": "Lighthouse",
+                                  "nameHtml": "Lighthouse",
+                                  "nameClean": "Lighthouse",
+                                  "description": "Issues specific to using the Lighthouse auditing tool, its recommendations, or score variability.",
+                                  "descriptionHtml": "Issues specific to using the Lighthouse auditing tool, its recommendations, or score variability.",
+                                  "descriptionClean": "Issues specific to using the Lighthouse auditing tool, its recommendations, or score variability.",
+                                  "id": "lighthouse",
+                                  "parentId": "tooling_profiling",
+                                  "entityType": "default",
+                                  "homepage": {
+                                    "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "count": 8,
+                            "id": "browser_devtools",
+                            "percentageQuestion": 2.25,
+                            "percentageSurvey": 0.13,
+                            "entity": {
+                              "name": "Browser dev tools",
+                              "nameHtml": "Browser dev tools",
+                              "nameClean": "Browser dev tools",
+                              "description": "Issues around the dev tools built-in to browsers.",
+                              "descriptionHtml": "Issues around the dev tools built-in to browsers.",
+                              "descriptionClean": "Issues around the dev tools built-in to browsers.",
+                              "id": "browser_devtools",
+                              "parentId": "tooling",
+                              "entityType": "default"
                             }
                           }
                         ]
                       },
                       {
-                        "count": 37,
-                        "id": "quality",
+                        "count": 36,
+                        "id": "rendering",
                         "index": 5,
-                        "percentageQuestion": 10.42,
-                        "percentageSurvey": 0.59,
+                        "percentageQuestion": 10.14,
+                        "percentageSurvey": 0.58,
                         "entity": {
-                          "name": "Low quality results",
-                          "nameHtml": "Low quality results",
-                          "nameClean": "Low quality results",
-                          "description": "Fidelity issues that are outside the developer’s control or API limitations making it hard to produce high-fidelity results. E.g. rendering is too low quality, low dpi, blurry, browser-generated UI is poor or ugly, etc.",
-                          "descriptionHtml": "Fidelity issues that are outside the developer’s control or API limitations making it hard to produce high-fidelity results. E.g. rendering is too low quality, low dpi, blurry, browser-generated UI is poor or ugly, etc.",
-                          "descriptionClean": "Fidelity issues that are outside the developer’s control or API limitations making it hard to produce high-fidelity results. E.g. rendering is too low quality, low dpi, blurry, browser-generated UI is poor or ugly, etc.",
-                          "id": "quality",
+                          "name": "Rendering",
+                          "nameHtml": "Rendering",
+                          "nameClean": "Rendering",
+                          "description": "General issues related to the browser's process of painting pixels on the screen, including layout, style recalculation, and compositing.",
+                          "descriptionHtml": "General issues related to the browser's process of painting pixels on the screen, including layout, style recalculation, and compositing.",
+                          "descriptionClean": "General issues related to the browser's process of painting pixels on the screen, including layout, style recalculation, and compositing.",
+                          "id": "rendering",
+                          "parentId": "poor_design_issues",
                           "entityType": "default"
                         },
                         "nestedBuckets": [
                           {
-                            "count": 46,
-                            "id": "rendering",
-                            "percentageQuestion": 12.96,
-                            "percentageSurvey": 0.74,
+                            "count": 12,
+                            "id": "virtualization",
+                            "percentageQuestion": 3.38,
+                            "percentageSurvey": 0.19,
                             "entity": {
-                              "name": "Rendering",
-                              "nameHtml": "Rendering",
-                              "nameClean": "Rendering",
-                              "description": "General issues related to the browser's process of painting pixels on the screen, including layout, style recalculation, and compositing.",
-                              "descriptionHtml": "General issues related to the browser's process of painting pixels on the screen, including layout, style recalculation, and compositing.",
-                              "descriptionClean": "General issues related to the browser's process of painting pixels on the screen, including layout, style recalculation, and compositing.",
-                              "id": "rendering",
-                              "parentId": "quality",
+                              "name": "Virtualization / Windowing",
+                              "nameHtml": "Virtualization / Windowing",
+                              "nameClean": "Virtualization / Windowing",
+                              "description": "The need for or issues with techniques for rendering long lists or large tables by only rendering the visible items (virtual scrolling).",
+                              "descriptionHtml": "The need for or issues with techniques for rendering long lists or large tables by only rendering the visible items (virtual scrolling).",
+                              "descriptionClean": "The need for or issues with techniques for rendering long lists or large tables by only rendering the visible items (virtual scrolling).",
+                              "id": "virtualization",
+                              "parentId": "rendering",
                               "entityType": "default"
-                            },
-                            "nestedBuckets": [
-                              {
-                                "count": 12,
-                                "id": "virtualization",
-                                "percentageQuestion": 3.38,
-                                "percentageSurvey": 0.19,
-                                "entity": {
-                                  "name": "Virtualization / Windowing",
-                                  "nameHtml": "Virtualization / Windowing",
-                                  "nameClean": "Virtualization / Windowing",
-                                  "description": "The need for or issues with techniques for rendering long lists or large tables by only rendering the visible items (virtual scrolling).",
-                                  "descriptionHtml": "The need for or issues with techniques for rendering long lists or large tables by only rendering the visible items (virtual scrolling).",
-                                  "descriptionClean": "The need for or issues with techniques for rendering long lists or large tables by only rendering the visible items (virtual scrolling).",
-                                  "id": "virtualization",
-                                  "parentId": "rendering",
-                                  "entityType": "default"
-                                }
-                              }
-                            ]
+                            }
+                          },
+                          {
+                            "count": 7,
+                            "id": "large_dom",
+                            "percentageQuestion": 1.97,
+                            "percentageSurvey": 0.11,
+                            "entity": {
+                              "name": "Large DOM Trees",
+                              "nameHtml": "Large DOM Trees",
+                              "nameClean": "Large DOM Trees",
+                              "description": "Performance problems caused by having a very large or complex DOM tree.",
+                              "descriptionHtml": "Performance problems caused by having a very large or complex DOM tree.",
+                              "descriptionClean": "Performance problems caused by having a very large or complex DOM tree.",
+                              "id": "large_dom",
+                              "parentId": "rendering",
+                              "entityType": "default"
+                            }
                           }
                         ]
                       },
                       {
-                        "count": 36,
-                        "id": "css",
+                        "count": 35,
+                        "id": "cognitive_overload",
                         "index": 6,
-                        "percentageQuestion": 10.14,
-                        "percentageSurvey": 0.58,
+                        "percentageQuestion": 9.86,
+                        "percentageSurvey": 0.56,
                         "entity": {
-                          "name": "CSS",
-                          "nameHtml": "CSS",
-                          "nameClean": "CSS",
-                          "id": "css",
-                          "entityType": "library"
-                        }
+                          "name": "Cognitive overload",
+                          "nameHtml": "Cognitive overload",
+                          "nameClean": "Cognitive overload",
+                          "id": "cognitive_overload",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 34,
+                            "id": "excessive_complexity",
+                            "percentageQuestion": 9.58,
+                            "percentageSurvey": 0.55,
+                            "entity": {
+                              "name": "Excessive complexity",
+                              "nameHtml": "Excessive complexity",
+                              "nameClean": "Excessive complexity",
+                              "description": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
+                              "descriptionHtml": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
+                              "descriptionClean": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
+                              "id": "excessive_complexity",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 35,
@@ -328,12 +556,12 @@
                         "percentageQuestion": 9.86,
                         "percentageSurvey": 0.56,
                         "entity": {
-                          "name": "Education",
-                          "nameHtml": "Education",
-                          "nameClean": "Education",
-                          "description": "Issues related to learning new technologies",
-                          "descriptionHtml": "Issues related to learning new technologies",
-                          "descriptionClean": "Issues related to learning new technologies",
+                          "name": "Educational issues",
+                          "nameHtml": "Educational issues",
+                          "nameClean": "Educational issues",
+                          "description": "Lack of awareness, poor docs, lack of best practices, lack of good examples. This is about the availability and quality of educational resources, not about learnability issues instrinsic to the technology (use `poor_learnability` for that).",
+                          "descriptionHtml": "Lack of awareness, poor docs, lack of best practices, lack of good examples. This is about the availability and quality of educational resources, not about learnability issues instrinsic to the technology (use <code>poor_learnability</code> for that).",
+                          "descriptionClean": "Lack of awareness, poor docs, lack of best practices, lack of good examples. This is about the availability and quality of educational resources, not about learnability issues instrinsic to the technology (use poor_learnability for that).",
                           "id": "educational_issues",
                           "entityType": "default"
                         }
@@ -377,7 +605,7 @@
                       },
                       {
                         "count": 30,
-                        "id": "interop",
+                        "id": "interop_issues",
                         "index": 9,
                         "percentageQuestion": 8.45,
                         "percentageSurvey": 0.48,
@@ -388,33 +616,75 @@
                           "description": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
                           "descriptionHtml": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
                           "descriptionClean": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
-                          "id": "interop",
+                          "id": "interop_issues",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 6,
+                            "id": "google",
+                            "percentageQuestion": 1.69,
+                            "percentageSurvey": 0.1,
+                            "entity": {
+                              "name": "Google",
+                              "nameHtml": "Google",
+                              "nameClean": "Google",
+                              "description": "Issues specific to the Google ecosystem (e.g., Chrome, Blink, Android).",
+                              "descriptionHtml": "Issues specific to the Google ecosystem (e.g., Chrome, Blink, Android).",
+                              "descriptionClean": "Issues specific to the Google ecosystem (e.g., Chrome, Blink, Android).",
+                              "id": "google",
+                              "parentId": "interop_issues",
+                              "entityType": "default",
+                              "homepage": {
+                                "url": "https://google.com"
+                              }
+                            }
+                          },
+                          {
+                            "count": 5,
+                            "id": "safari",
+                            "percentageQuestion": 1.41,
+                            "percentageSurvey": 0.08,
+                            "entity": {
+                              "name": "Safari browser",
+                              "nameHtml": "Safari browser",
+                              "nameClean": "Safari browser",
+                              "description": "Issues specific to the Safari browser, across all platforms.",
+                              "descriptionHtml": "Issues specific to the Safari browser, across all platforms.",
+                              "descriptionClean": "Issues specific to the Safari browser, across all platforms.",
+                              "id": "safari",
+                              "parentId": "interop_issues",
+                              "entityType": "default",
+                              "homepage": {
+                                "url": "https://www.apple.com/safari/"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 29,
+                        "id": "css_issues",
+                        "index": 10,
+                        "percentageQuestion": 8.17,
+                        "percentageSurvey": 0.47,
+                        "entity": {
+                          "name": "CSS",
+                          "nameHtml": "CSS",
+                          "nameClean": "CSS",
+                          "description": "Issues related to CSS or specific CSS features (if no more specific leaf)",
+                          "descriptionHtml": "Issues related to CSS or specific CSS features (if no more specific leaf)",
+                          "descriptionClean": "Issues related to CSS or specific CSS features (if no more specific leaf)",
+                          "id": "css_issues",
                           "entityType": "default"
                         }
                       },
                       {
                         "count": 28,
-                        "id": "debugging",
-                        "index": 10,
+                        "id": "animations_issues",
+                        "index": 11,
                         "percentageQuestion": 7.89,
                         "percentageSurvey": 0.45,
-                        "entity": {
-                          "name": "Debugging",
-                          "nameHtml": "Debugging",
-                          "nameClean": "Debugging",
-                          "description": "Debugging issues",
-                          "descriptionHtml": "Debugging issues",
-                          "descriptionClean": "Debugging issues",
-                          "id": "debugging",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 27,
-                        "id": "animations",
-                        "index": 11,
-                        "percentageQuestion": 7.61,
-                        "percentageSurvey": 0.43,
                         "entity": {
                           "name": "Animations",
                           "nameHtml": "Animations",
@@ -422,74 +692,30 @@
                           "description": "Issues related to UI animations across all technologies, regardless of technology used to implement them (CSS animations, Lottie, etc)",
                           "descriptionHtml": "Issues related to UI animations across all technologies, regardless of technology used to implement them (CSS animations, Lottie, etc)",
                           "descriptionClean": "Issues related to UI animations across all technologies, regardless of technology used to implement them (CSS animations, Lottie, etc)",
-                          "id": "animations",
+                          "id": "animations_issues",
                           "entityType": "default"
                         }
                       },
                       {
-                        "count": 26,
-                        "id": "lazy_loading",
+                        "count": 28,
+                        "id": "debugging_issues",
                         "index": 12,
-                        "percentageQuestion": 7.32,
-                        "percentageSurvey": 0.42,
+                        "percentageQuestion": 7.89,
+                        "percentageSurvey": 0.45,
                         "entity": {
-                          "name": "`loading=\"lazy\"`",
-                          "nameHtml": "<code>loading=\"lazy\"</code>",
-                          "nameClean": "loading=\"lazy\"",
-                          "description": "Load certain resources only when needed.",
-                          "descriptionHtml": "Load certain resources only when needed.",
-                          "descriptionClean": "Load certain resources only when needed.",
-                          "id": "lazy_loading",
-                          "parentId": "loading_issues",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "html",
-                            "code": "<img src=\"picture.jpg\" loading=\"lazy\" />\n<iframe src=\"supplementary.html\" loading=\"lazy\"></iframe>",
-                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">img</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;picture.jpg&quot;</span> <span class=\"hljs-attr\">loading</span>=<span class=\"hljs-string\">&quot;lazy&quot;</span> /&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">iframe</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;supplementary.html&quot;</span> <span class=\"hljs-attr\">loading</span>=<span class=\"hljs-string\">&quot;lazy&quot;</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">iframe</span>&gt;</span>"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Lazy_loading"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/loading-lazy-attr"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#lazy-loading-attributes",
-                              "title": "HTML Standard"
-                            },
-                            {
-                              "url": "https://web.dev/browser-level-image-lazy-loading/",
-                              "title": "Browser-level image lazy loading for the web"
-                            }
-                          ],
-                          "webFeature": {
-                            "id": "loading-lazy",
-                            "description_html": "The <code>loading=\"lazy\"</code> attribute for <code>&#x3C;img></code> and <code>&#x3C;iframe></code> elements blocks loading the external resource until the user scrolls to that element's part of the page.",
-                            "name": "Lazy-loading images and iframes",
-                            "spec": [
-                              "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#lazy-loading-attributes"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/loading-lazy/",
-                            "status": {
-                              "baseline": "low",
-                              "baseline_low_date": "2023-12-19",
-                              "support": {
-                                "chrome": "77",
-                                "chrome_android": "77",
-                                "edge": "79",
-                                "firefox": "121",
-                                "firefox_android": "121",
-                                "safari": "16.4",
-                                "safari_ios": "16.4"
-                              }
-                            }
-                          }
+                          "name": "Debugging",
+                          "nameHtml": "Debugging",
+                          "nameClean": "Debugging",
+                          "description": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
+                          "descriptionHtml": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
+                          "descriptionClean": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
+                          "id": "debugging_issues",
+                          "entityType": "default"
                         }
                       },
                       {
                         "count": 19,
-                        "id": "end-user_ux",
+                        "id": "end_user_ux_issues",
                         "index": 13,
                         "percentageQuestion": 5.35,
                         "percentageSurvey": 0.31,
@@ -500,7 +726,7 @@
                           "description": "Issues around difficulties providing a good user experience for end-users. Do not include DX issues here (use `ergonomics` for that).",
                           "descriptionHtml": "Issues around difficulties providing a good user experience for end-users. Do not include DX issues here (use <code>ergonomics</code> for that).",
                           "descriptionClean": "Issues around difficulties providing a good user experience for end-users. Do not include DX issues here (use ergonomics for that).",
-                          "id": "end-user_ux",
+                          "id": "end_user_ux_issues",
                           "entityType": "default"
                         },
                         "nestedBuckets": [
@@ -517,7 +743,7 @@
                               "descriptionHtml": "Issues around the end-user experience around content loading",
                               "descriptionClean": "Issues around the end-user experience around content loading",
                               "id": "loading_ux",
-                              "parentId": "end-user_ux",
+                              "parentId": "end_user_ux_issues",
                               "entityType": "default"
                             },
                             "nestedBuckets": [
@@ -527,9 +753,9 @@
                                 "percentageQuestion": 3.38,
                                 "percentageSurvey": 0.19,
                                 "entity": {
-                                  "name": "Flash of Unstyled Content",
-                                  "nameHtml": "Flash of Unstyled Content",
-                                  "nameClean": "Flash of Unstyled Content",
+                                  "name": "FOUC",
+                                  "nameHtml": "FOUC",
+                                  "nameClean": "FOUC",
                                   "description": "The specific problem where content briefly appears without its intended styling, often due to CSS loading behavior.",
                                   "descriptionHtml": "The specific problem where content briefly appears without its intended styling, often due to CSS loading behavior.",
                                   "descriptionClean": "The specific problem where content briefly appears without its intended styling, often due to CSS loading behavior.",
@@ -543,75 +769,9 @@
                         ]
                       },
                       {
-                        "count": 18,
-                        "id": "content",
-                        "index": 14,
-                        "percentageQuestion": 5.07,
-                        "percentageSurvey": 0.29,
-                        "entity": {
-                          "name": "Content",
-                          "nameHtml": "Content",
-                          "nameClean": "Content",
-                          "id": "content",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 16,
-                        "id": "resource_hints",
-                        "index": 15,
-                        "percentageQuestion": 4.51,
-                        "percentageSurvey": 0.26,
-                        "entity": {
-                          "name": "Resource Hints",
-                          "nameHtml": "Resource Hints",
-                          "nameClean": "Resource Hints",
-                          "description": "Begin work on certain resources early to improve performance.\nSyntax: `<link rel=\"pre* | dns-prefetch | modulepreload\">`.",
-                          "descriptionHtml": "Begin work on certain resources early to improve performance.\nSyntax: <code>&lt;link rel=\"pre* | dns-prefetch | modulepreload\"&gt;</code>.",
-                          "descriptionClean": "Begin work on certain resources early to improve performance.Syntax: <link rel=\"pre* | dns-prefetch | modulepreload\">.",
-                          "id": "resource_hints",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "html",
-                            "code": "<link rel=\"preload\" href=\"picture.jpg\" />\n<link rel=\"dns-prefetch\" href=\"https://fonts.googleapis.com/\" />",
-                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">link</span> <span class=\"hljs-attr\">rel</span>=<span class=\"hljs-string\">&quot;preload&quot;</span> <span class=\"hljs-attr\">href</span>=<span class=\"hljs-string\">&quot;picture.jpg&quot;</span> /&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">link</span> <span class=\"hljs-attr\">rel</span>=<span class=\"hljs-string\">&quot;dns-prefetch&quot;</span> <span class=\"hljs-attr\">href</span>=<span class=\"hljs-string\">&quot;https://fonts.googleapis.com/&quot;</span> /&gt;</span>"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Performance/Best_practices"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://blog.logrocket.com/understanding-css-preload-other-resource-hints/",
-                              "title": "Understanding CSS preload and other resource hints - LogRocket Blog"
-                            },
-                            {
-                              "url": "https://medium.com/@luisvieira_gmr/html5-prefetch-1e54f6dda15d",
-                              "title": "Resource Hints"
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "count": 13,
-                        "id": "google",
-                        "index": 16,
-                        "percentageQuestion": 3.66,
-                        "percentageSurvey": 0.21,
-                        "entity": {
-                          "name": "Google",
-                          "nameHtml": "Google",
-                          "nameClean": "Google",
-                          "id": "google",
-                          "entityType": "default",
-                          "homepage": {
-                            "url": "https://google.com"
-                          }
-                        }
-                      },
-                      {
                         "count": 12,
                         "id": "reliability",
-                        "index": 17,
+                        "index": 14,
                         "percentageQuestion": 3.38,
                         "percentageSurvey": 0.19,
                         "entity": {
@@ -628,13 +788,13 @@
                       {
                         "count": 12,
                         "id": "specific_platforms_vendors",
-                        "index": 18,
+                        "index": 15,
                         "percentageQuestion": 3.38,
                         "percentageSurvey": 0.19,
                         "entity": {
-                          "name": "Specific platforms & vendors",
-                          "nameHtml": "Specific platforms &amp; vendors",
-                          "nameClean": "Specific platforms & vendors",
+                          "name": "🗑️ Specific platforms & vendors",
+                          "nameHtml": "🗑️ Specific platforms &amp; vendors",
+                          "nameClean": "🗑️ Specific platforms & vendors",
                           "description": "Issues mentioning specific platforms, operating systems, or browser vendors.",
                           "descriptionHtml": "Issues mentioning specific platforms, operating systems, or browser vendors.",
                           "descriptionClean": "Issues mentioning specific platforms, operating systems, or browser vendors.",
@@ -644,15 +804,18 @@
                       },
                       {
                         "count": 10,
-                        "id": "typography",
-                        "index": 19,
+                        "id": "typography_issues",
+                        "index": 16,
                         "percentageQuestion": 2.82,
                         "percentageSurvey": 0.16,
                         "entity": {
-                          "name": "Typographic Controls",
-                          "nameHtml": "Typographic Controls",
-                          "nameClean": "Typographic Controls",
-                          "id": "typography",
+                          "name": "Typography",
+                          "nameHtml": "Typography",
+                          "nameClean": "Typography",
+                          "description": "Issues related to text and font styling on the web.",
+                          "descriptionHtml": "Issues related to text and font styling on the web.",
+                          "descriptionClean": "Issues related to text and font styling on the web.",
+                          "id": "typography_issues",
                           "entityType": "default"
                         },
                         "nestedBuckets": [
@@ -669,11 +832,98 @@
                               "descriptionHtml": "Issues related to web font loading, performance, and rendering, including Flash of Unstyled Text (FOUT) and Flash of Invisible Text (FOIT).",
                               "descriptionClean": "Issues related to web font loading, performance, and rendering, including Flash of Unstyled Text (FOUT) and Flash of Invisible Text (FOIT).",
                               "id": "fonts",
-                              "parentId": "typography",
+                              "parentId": "typography_issues",
                               "entityType": "default"
                             }
                           }
                         ]
+                      },
+                      {
+                        "count": 9,
+                        "id": "at_container",
+                        "index": 17,
+                        "percentageQuestion": 2.54,
+                        "percentageSurvey": 0.14,
+                        "entity": {
+                          "name": "Container Queries",
+                          "nameHtml": "Container Queries",
+                          "nameClean": "Container Queries",
+                          "description": "Pain points related to CSS Container Queries, often in relation to other features like responsive images.",
+                          "descriptionHtml": "Pain points related to CSS Container Queries, often in relation to other features like responsive images.",
+                          "descriptionClean": "Pain points related to CSS Container Queries, often in relation to other features like responsive images.",
+                          "id": "at_container",
+                          "entityType": "default",
+                          "example": {
+                            "language": "css",
+                            "code": "@container (min-width: 700px) {\n  .card {\n    display: grid;\n    grid-template-columns: 2fr 1fr;\n  }\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">@container</span> (<span class=\"hljs-attribute\">min-width</span>: <span class=\"hljs-number\">700px</span>) {\n  <span class=\"hljs-selector-class\">.card</span> {\n    <span class=\"hljs-attribute\">display</span>: grid;\n    <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">2</span>fr <span class=\"hljs-number\">1</span>fr;\n  }\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Containment/Container_queries"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-container-queries"
+                          },
+                          "webFeature": {
+                            "id": "container-queries",
+                            "description_html": "Container size queries with the <code>@container</code> at-rule apply styles to an element based on the dimensions of its container.",
+                            "group": [
+                              "container-queries"
+                            ],
+                            "name": "Container queries",
+                            "spec": [
+                              "https://drafts.csswg.org/css-conditional-5/#container-queries"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/container-queries/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2023-02-14",
+                              "support": {
+                                "chrome": "105",
+                                "chrome_android": "105",
+                                "edge": "105",
+                                "firefox": "110",
+                                "firefox_android": "110",
+                                "safari": "16",
+                                "safari_ios": "16"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 9,
+                        "id": "reliance_on_javascript",
+                        "index": 18,
+                        "percentageQuestion": 2.54,
+                        "percentageSurvey": 0.14,
+                        "entity": {
+                          "name": "Reliance on JavaScript",
+                          "nameHtml": "Reliance on JavaScript",
+                          "nameClean": "Reliance on JavaScript",
+                          "description": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "descriptionHtml": "Lack of declarative APIs, slow rendering due to dependence on correct loading &amp; execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "descriptionClean": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "id": "reliance_on_javascript",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 8,
+                        "id": "workplace",
+                        "index": 19,
+                        "percentageQuestion": 2.25,
+                        "percentageSurvey": 0.13,
+                        "entity": {
+                          "name": "Workplace issues",
+                          "nameHtml": "Workplace issues",
+                          "nameClean": "Workplace issues",
+                          "description": "Issues around getting one’s workplace to agree on certain policies and/or priorities.",
+                          "descriptionHtml": "Issues around getting one’s workplace to agree on certain policies and/or priorities.",
+                          "descriptionClean": "Issues around getting one’s workplace to agree on certain policies and/or priorities.",
+                          "id": "workplace",
+                          "entityType": "default"
+                        }
                       },
                       {
                         "count": 5866,
@@ -683,11 +933,11 @@
                         "percentageSurvey": 94.26
                       },
                       {
-                        "count": 259,
+                        "count": 145,
                         "id": "other_answers",
                         "index": 21,
-                        "percentageQuestion": 72.92,
-                        "percentageSurvey": 4.26
+                        "percentageQuestion": 40.82,
+                        "percentageSurvey": 2.42
                       }
                     ]
                   }

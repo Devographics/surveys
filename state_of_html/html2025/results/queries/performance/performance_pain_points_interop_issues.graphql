@@ -3,7 +3,7 @@ query {
     state_of_html {
       html2025 {
         performance {
-          performance_pain_points_interop_1: performance_pain_points {
+          performance_pain_points_interop_issues_1: performance_pain_points {
             id
             comments {
               currentEdition {
@@ -14,21 +14,20 @@ query {
               filters: {
                 performance__performance_pain_points: {
                   in: [
-                    interop
+                    interop_issues
                   ]
                 }
               }
               parameters: {
                 showNoAnswer: true
-                cutoff: 10
+                cutoff: 5
                 limit: 20
                 mergeOtherBuckets: true
               }
               bucketsFilter: {
                 nin: [
-                  interop
+                  interop_issues
                   limitations
-                  dx
                 ]
               }
             ) {

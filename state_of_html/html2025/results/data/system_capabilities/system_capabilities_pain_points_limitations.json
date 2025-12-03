@@ -1,0 +1,287 @@
+{
+  "dataAPI": {
+    "surveys": {
+      "state_of_html": {
+        "html2025": {
+          "system_capabilities": {
+            "system_capabilities_pain_points_limitations_1": {
+              "id": "system_capabilities_pain_points",
+              "comments": {
+                "currentEdition": {
+                  "count": 8
+                }
+              },
+              "freeform": {
+                "allEditions": [
+                  {
+                    "_metadata": {
+                      "axis1Sort": {
+                        "property": "count",
+                        "order": "desc"
+                      },
+                      "limit": 20,
+                      "cutoff": 5
+                    },
+                    "editionId": "html2025",
+                    "year": 2025,
+                    "completion": {
+                      "count": 86,
+                      "percentageSurvey": 1.38,
+                      "total": 6223
+                    },
+                    "buckets": [
+                      {
+                        "count": 29,
+                        "id": "apis_capabilities",
+                        "index": 0,
+                        "percentageQuestion": 33.72,
+                        "percentageSurvey": 0.47,
+                        "entity": {
+                          "name": "Specific platform APIs & capabilities",
+                          "nameHtml": "Specific platform APIs &amp; capabilities",
+                          "nameClean": "Specific platform APIs & capabilities",
+                          "description": "Pain points around APIs opening access to native capabilities, like the Clipboard API, the File System API, etc.",
+                          "descriptionHtml": "Pain points around APIs opening access to native capabilities, like the Clipboard API, the File System API, etc.",
+                          "descriptionClean": "Pain points around APIs opening access to native capabilities, like the Clipboard API, the File System API, etc.",
+                          "id": "apis_capabilities",
+                          "parentId": "system_capabilities",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 11,
+                            "id": "filesystem_apis",
+                            "percentageQuestion": 12.79,
+                            "percentageSurvey": 0.18,
+                            "entity": {
+                              "name": "Filesystem APIs",
+                              "nameHtml": "Filesystem APIs",
+                              "nameClean": "Filesystem APIs",
+                              "description": "Issues around all file system access APIs.",
+                              "descriptionHtml": "Issues around all file system access APIs.",
+                              "descriptionClean": "Issues around all file system access APIs.",
+                              "id": "filesystem_apis",
+                              "parentId": "apis_capabilities",
+                              "entityType": "default"
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 10,
+                                "id": "filesystem_access",
+                                "percentageQuestion": 11.63,
+                                "percentageSurvey": 0.16,
+                                "entity": {
+                                  "name": "File System Access API",
+                                  "nameHtml": "File System Access API",
+                                  "nameClean": "File System Access API",
+                                  "description": "Access files and directories on the user's local device and create writable files that can be updated.",
+                                  "descriptionHtml": "Access files and directories on the user's local device and create writable files that can be updated.",
+                                  "descriptionClean": "Access files and directories on the user's local device and create writable files that can be updated.",
+                                  "id": "filesystem_access",
+                                  "parentId": "filesystem_apis",
+                                  "entityType": "default",
+                                  "example": {
+                                    "language": "js",
+                                    "code": "const handle = await window.showSaveFilePicker();\nconst writable = await handle.createWritable();\nawait writable.write(\"Hello, world!\");\nawait writable.close();\n",
+                                    "codeHighlighted": "<span class=\"hljs-keyword\">const</span> handle = <span class=\"hljs-keyword\">await</span> <span class=\"hljs-variable language_\">window</span>.<span class=\"hljs-title function_\">showSaveFilePicker</span>();\n<span class=\"hljs-keyword\">const</span> writable = <span class=\"hljs-keyword\">await</span> handle.<span class=\"hljs-title function_\">createWritable</span>();\n<span class=\"hljs-keyword\">await</span> writable.<span class=\"hljs-title function_\">write</span>(<span class=\"hljs-string\">&quot;Hello, world!&quot;</span>);\n<span class=\"hljs-keyword\">await</span> writable.<span class=\"hljs-title function_\">close</span>();"
+                                  },
+                                  "mdn": {
+                                    "url": "https://developer.mozilla.org/en-US/docs/Web/API/File_System_API"
+                                  },
+                                  "resources": [
+                                    {
+                                      "url": "https://web.dev/file-system-access/",
+                                      "title": "File System Access API"
+                                    },
+                                    {
+                                      "url": "https://fs.spec.whatwg.org/",
+                                      "title": "File System API Specification"
+                                    }
+                                  ],
+                                  "webFeature": {
+                                    "id": "file-system-access",
+                                    "description_html": "The <code>showOpenFilePicker()</code>, <code>showDirectoryPicker()</code>, and <code>showSaveFilePicker()</code> methods request access to files and directories on the user's device and returns a handle for reading and writing to them.",
+                                    "group": [
+                                      "file-system"
+                                    ],
+                                    "name": "File system access",
+                                    "spec": [
+                                      "https://wicg.github.io/file-system-access/"
+                                    ],
+                                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/file-system-access/",
+                                    "status": {
+                                      "baseline": "false",
+                                      "support": {
+                                        "chrome": "86",
+                                        "chrome_android": "132",
+                                        "edge": "86"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "count": 23,
+                        "id": "specific_platforms_vendors",
+                        "index": 1,
+                        "percentageQuestion": 26.74,
+                        "percentageSurvey": 0.37,
+                        "entity": {
+                          "name": "🗑️ Specific platforms & vendors",
+                          "nameHtml": "🗑️ Specific platforms &amp; vendors",
+                          "nameClean": "🗑️ Specific platforms & vendors",
+                          "description": "Issues mentioning specific platforms, operating systems, or browser vendors.",
+                          "descriptionHtml": "Issues mentioning specific platforms, operating systems, or browser vendors.",
+                          "descriptionClean": "Issues mentioning specific platforms, operating systems, or browser vendors.",
+                          "id": "specific_platforms_vendors",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 13,
+                        "id": "high_cognitive_load",
+                        "index": 2,
+                        "percentageQuestion": 15.12,
+                        "percentageSurvey": 0.21,
+                        "entity": {
+                          "name": "🗑️ High cognitive load",
+                          "nameHtml": "🗑️ High cognitive load",
+                          "nameClean": "🗑️ High cognitive load",
+                          "description": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "descriptionHtml": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "descriptionClean": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "id": "high_cognitive_load",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 10,
+                        "id": "security_privacy",
+                        "index": 3,
+                        "percentageQuestion": 11.63,
+                        "percentageSurvey": 0.16,
+                        "entity": {
+                          "name": "Security & privacy",
+                          "nameHtml": "Security &amp; privacy",
+                          "nameClean": "Security & privacy",
+                          "description": "Threats, mitigations, permissions, and fingerprinting/privacy budget concerns, cross-origin issues etc. Pain points related to general concerns about security and privacy on the web.",
+                          "descriptionHtml": "Threats, mitigations, permissions, and fingerprinting/privacy budget concerns, cross-origin issues etc. Pain points related to general concerns about security and privacy on the web.",
+                          "descriptionClean": "Threats, mitigations, permissions, and fingerprinting/privacy budget concerns, cross-origin issues etc. Pain points related to general concerns about security and privacy on the web.",
+                          "id": "security_privacy",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 10,
+                        "id": "vendor_politics",
+                        "index": 4,
+                        "percentageQuestion": 11.63,
+                        "percentageSurvey": 0.16,
+                        "entity": {
+                          "name": "Vendor politics",
+                          "nameHtml": "Vendor politics",
+                          "nameClean": "Vendor politics",
+                          "description": "Pain points arising from the strategic decisions, priorities, or market position of browser vendors or platform owners (e.g. Apple, Google).",
+                          "descriptionHtml": "Pain points arising from the strategic decisions, priorities, or market position of browser vendors or platform owners (e.g. Apple, Google).",
+                          "descriptionClean": "Pain points arising from the strategic decisions, priorities, or market position of browser vendors or platform owners (e.g. Apple, Google).",
+                          "id": "vendor_politics",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 0,
+                        "id": "environments_consumers",
+                        "index": 5,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 0,
+                        "hasInsufficientData": true,
+                        "entity": {
+                          "name": "Environments & Consumers",
+                          "nameHtml": "Environments &amp; Consumers",
+                          "nameClean": "Environments & Consumers",
+                          "description": "Issues relevant to specific environments or consumers of web content, e.g. devices, bots, viewing modes, etc.",
+                          "descriptionHtml": "Issues relevant to specific environments or consumers of web content, e.g. devices, bots, viewing modes, etc.",
+                          "descriptionClean": "Issues relevant to specific environments or consumers of web content, e.g. devices, bots, viewing modes, etc.",
+                          "id": "environments_consumers",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 0,
+                        "id": "peripheral_access",
+                        "index": 6,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 0,
+                        "hasInsufficientData": true,
+                        "entity": {
+                          "name": "Peripheral access",
+                          "nameHtml": "Peripheral access",
+                          "nameClean": "Peripheral access",
+                          "description": "Issues related to accessing peripheral devices like printers and scanners.",
+                          "descriptionHtml": "Issues related to accessing peripheral devices like printers and scanners.",
+                          "descriptionClean": "Issues related to accessing peripheral devices like printers and scanners.",
+                          "id": "peripheral_access",
+                          "parentId": "system_capabilities",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 0,
+                        "id": "pwa_issues",
+                        "index": 7,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 0,
+                        "hasInsufficientData": true,
+                        "entity": {
+                          "name": "PWA",
+                          "nameHtml": "PWA",
+                          "nameClean": "PWA",
+                          "description": "Issues around Progressive Web Apps, their support in different browsers and OSs.",
+                          "descriptionHtml": "Issues around Progressive Web Apps, their support in different browsers and OSs.",
+                          "descriptionClean": "Issues around Progressive Web Apps, their support in different browsers and OSs.",
+                          "id": "pwa_issues",
+                          "parentId": "system_capabilities",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 0,
+                        "id": "storage",
+                        "index": 8,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 0,
+                        "hasInsufficientData": true,
+                        "entity": {
+                          "name": "Storage",
+                          "nameHtml": "Storage",
+                          "nameClean": "Storage",
+                          "description": "Issues related to storing data on the client-side.",
+                          "descriptionHtml": "Issues related to storing data on the client-side.",
+                          "descriptionClean": "Issues related to storing data on the client-side.",
+                          "id": "storage",
+                          "parentId": "system_capabilities",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 99,
+                        "id": "other_answers",
+                        "index": 9,
+                        "percentageQuestion": 115.12,
+                        "percentageSurvey": 1.68
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -8,7 +8,7 @@
               "id": "accessibility_pain_points",
               "comments": {
                 "currentEdition": {
-                  "count": 2
+                  "count": 5
                 }
               },
               "freeform": {
@@ -20,7 +20,7 @@
                         "order": "desc"
                       },
                       "limit": 20,
-                      "cutoff": 10
+                      "cutoff": 5
                     },
                     "editionId": "html2024",
                     "year": 2024,
@@ -46,9 +46,27 @@
                         }
                       },
                       {
+                        "count": 56,
+                        "id": "low_priority",
+                        "index": 1,
+                        "percentageQuestion": 8.5,
+                        "percentageSurvey": 1.04,
+                        "entity": {
+                          "name": "Low Priority",
+                          "nameHtml": "Low Priority",
+                          "nameClean": "Low Priority",
+                          "description": "Employer deprioritizes a11y.",
+                          "descriptionHtml": "Employer deprioritizes a11y.",
+                          "descriptionClean": "Employer deprioritizes a11y.",
+                          "id": "low_priority",
+                          "parentId": "workplace",
+                          "entityType": "default"
+                        }
+                      },
+                      {
                         "count": 55,
                         "id": "aria",
-                        "index": 1,
+                        "index": 2,
                         "percentageQuestion": 8.35,
                         "percentageSurvey": 1.02,
                         "entity": {
@@ -60,7 +78,7 @@
                           "descriptionClean": "role and aria-* attributes",
                           "id": "aria",
                           "parentId": "a11y_technical_issues",
-                          "entityType": "feature",
+                          "entityType": "default",
                           "example": {
                             "language": "html",
                             "code": "<div id=\"tab1\" aria-controls=\"panel1\" role=\"tab\">Prices</div>\n<div id=\"panel1\" class=\"panel\" aria-labelledby=\"tab1\" role=\"tabpanel\">\n\t<!-- tab content -->\n</div>",
@@ -74,7 +92,7 @@
                       {
                         "count": 42,
                         "id": "lack_of_knowledge",
-                        "index": 2,
+                        "index": 3,
                         "percentageQuestion": 6.37,
                         "percentageSurvey": 0.78,
                         "entity": {
@@ -89,13 +107,16 @@
                       {
                         "count": 41,
                         "id": "lack_of_best_practices",
-                        "index": 3,
+                        "index": 4,
                         "percentageQuestion": 6.22,
                         "percentageSurvey": 0.76,
                         "entity": {
                           "name": "Lack of best practices",
                           "nameHtml": "Lack of best practices",
                           "nameClean": "Lack of best practices",
+                          "description": "Issues arising from the absence of clear, established best practices.",
+                          "descriptionHtml": "Issues arising from the absence of clear, established best practices.",
+                          "descriptionClean": "Issues arising from the absence of clear, established best practices.",
                           "id": "lack_of_best_practices",
                           "parentId": "educational_issues",
                           "entityType": "default"
@@ -104,7 +125,7 @@
                       {
                         "count": 39,
                         "id": "browser_support",
-                        "index": 4,
+                        "index": 5,
                         "percentageQuestion": 5.92,
                         "percentageSurvey": 0.72,
                         "entity": {
@@ -121,16 +142,16 @@
                       {
                         "count": 28,
                         "id": "lack_of_documentation",
-                        "index": 5,
+                        "index": 6,
                         "percentageQuestion": 4.25,
                         "percentageSurvey": 0.52,
                         "entity": {
-                          "name": "Lack of documentation",
-                          "nameHtml": "Lack of documentation",
-                          "nameClean": "Lack of documentation",
-                          "description": "Lack of documentation or code examples",
-                          "descriptionHtml": "Lack of documentation or code examples",
-                          "descriptionClean": "Lack of documentation or code examples",
+                          "name": "Lack of documentation or code examples",
+                          "nameHtml": "Lack of documentation or code examples",
+                          "nameClean": "Lack of documentation or code examples",
+                          "description": "Issues due to missing, incomplete, unclear, or outdated documentation or code examples.",
+                          "descriptionHtml": "Issues due to missing, incomplete, unclear, or outdated documentation or code examples.",
+                          "descriptionClean": "Issues due to missing, incomplete, unclear, or outdated documentation or code examples.",
                           "id": "lack_of_documentation",
                           "parentId": "educational_issues",
                           "entityType": "default"
@@ -139,16 +160,16 @@
                       {
                         "count": 27,
                         "id": "excessive_complexity",
-                        "index": 6,
+                        "index": 7,
                         "percentageQuestion": 4.1,
                         "percentageSurvey": 0.5,
                         "entity": {
                           "name": "Excessive complexity",
                           "nameHtml": "Excessive complexity",
                           "nameClean": "Excessive complexity",
-                          "description": "Too much complexity",
-                          "descriptionHtml": "Too much complexity",
-                          "descriptionClean": "Too much complexity",
+                          "description": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
+                          "descriptionHtml": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
+                          "descriptionClean": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
                           "id": "excessive_complexity",
                           "parentId": "a11y_implementation_issues",
                           "entityType": "default"
@@ -157,7 +178,7 @@
                       {
                         "count": 27,
                         "id": "screen_readers_inconsistencies",
-                        "index": 7,
+                        "index": 8,
                         "percentageQuestion": 4.1,
                         "percentageSurvey": 0.5,
                         "entity": {
@@ -172,7 +193,7 @@
                       {
                         "count": 16,
                         "id": "a11y_company_issues",
-                        "index": 8,
+                        "index": 9,
                         "percentageQuestion": 2.43,
                         "percentageSurvey": 0.3,
                         "entity": {
@@ -184,21 +205,65 @@
                           "descriptionClean": "Issues with the place of accessibility in a corporate context",
                           "id": "a11y_company_issues",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 15,
+                            "id": "unaccessible_design_choices",
+                            "percentageQuestion": 2.28,
+                            "percentageSurvey": 0.28,
+                            "entity": {
+                              "name": "Unaccessible design choices",
+                              "nameHtml": "Unaccessible design choices",
+                              "nameClean": "Unaccessible design choices",
+                              "id": "unaccessible_design_choices",
+                              "parentId": "a11y_company_issues",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 12,
+                            "id": "lack_of_client_demand",
+                            "percentageQuestion": 1.82,
+                            "percentageSurvey": 0.22,
+                            "entity": {
+                              "name": "Lack of client demand",
+                              "nameHtml": "Lack of client demand",
+                              "nameClean": "Lack of client demand",
+                              "id": "lack_of_client_demand",
+                              "parentId": "a11y_company_issues",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 9,
+                            "id": "lack_of_budget",
+                            "percentageQuestion": 1.37,
+                            "percentageSurvey": 0.17,
+                            "entity": {
+                              "name": "Lack of budget",
+                              "nameHtml": "Lack of budget",
+                              "nameClean": "Lack of budget",
+                              "id": "lack_of_budget",
+                              "parentId": "a11y_company_issues",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 16,
                         "id": "focus_management",
-                        "index": 9,
+                        "index": 10,
                         "percentageQuestion": 2.43,
                         "percentageSurvey": 0.3,
                         "entity": {
-                          "name": "Focus management",
-                          "nameHtml": "Focus management",
-                          "nameClean": "Focus management",
-                          "description": "Managing user focus",
-                          "descriptionHtml": "Managing user focus",
-                          "descriptionClean": "Managing user focus",
+                          "name": "Focus Management",
+                          "nameHtml": "Focus Management",
+                          "nameClean": "Focus Management",
+                          "description": "Challenges with managing focus, especially in dynamic contexts. Includes focus trapping, roving tabindex, moving focus programmatically, and preserving focus when DOM elements are added, removed, or moved.",
+                          "descriptionHtml": "Challenges with managing focus, especially in dynamic contexts. Includes focus trapping, roving tabindex, moving focus programmatically, and preserving focus when DOM elements are added, removed, or moved.",
+                          "descriptionClean": "Challenges with managing focus, especially in dynamic contexts. Includes focus trapping, roving tabindex, moving focus programmatically, and preserving focus when DOM elements are added, removed, or moved.",
                           "id": "focus_management",
                           "parentId": "a11y_technical_issues",
                           "entityType": "default"
@@ -207,7 +272,7 @@
                       {
                         "count": 16,
                         "id": "too_hard_to_implement",
-                        "index": 10,
+                        "index": 11,
                         "percentageQuestion": 2.43,
                         "percentageSurvey": 0.3,
                         "entity": {
@@ -222,21 +287,41 @@
                       {
                         "count": 15,
                         "id": "lack_of_tools",
-                        "index": 11,
+                        "index": 12,
                         "percentageQuestion": 2.28,
                         "percentageSurvey": 0.28,
                         "entity": {
-                          "name": "Lack of tools",
-                          "nameHtml": "Lack of tools",
-                          "nameClean": "Lack of tools",
+                          "name": "Lack of Tools",
+                          "nameHtml": "Lack of Tools",
+                          "nameClean": "Lack of Tools",
+                          "description": "Pain points caused by the absence of necessary tools.",
+                          "descriptionHtml": "Pain points caused by the absence of necessary tools.",
+                          "descriptionClean": "Pain points caused by the absence of necessary tools.",
                           "id": "lack_of_tools",
+                          "parentId": "tooling",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 14,
+                            "id": "lack_of_browser_tools",
+                            "percentageQuestion": 2.12,
+                            "percentageSurvey": 0.26,
+                            "entity": {
+                              "name": "Lack of in-browser tools",
+                              "nameHtml": "Lack of in-browser tools",
+                              "nameClean": "Lack of in-browser tools",
+                              "id": "lack_of_browser_tools",
+                              "parentId": "lack_of_tools",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 15,
                         "id": "too_time_consuming",
-                        "index": 12,
+                        "index": 13,
                         "percentageQuestion": 2.28,
                         "percentageSurvey": 0.28,
                         "entity": {
@@ -247,7 +332,7 @@
                       {
                         "count": 15,
                         "id": "wcag_issues",
-                        "index": 13,
+                        "index": 14,
                         "percentageQuestion": 2.28,
                         "percentageSurvey": 0.28,
                         "entity": {
@@ -261,7 +346,7 @@
                       {
                         "count": 12,
                         "id": "discoverability",
-                        "index": 14,
+                        "index": 15,
                         "percentageQuestion": 1.82,
                         "percentageSurvey": 0.22,
                         "entity": {
@@ -278,7 +363,7 @@
                       {
                         "count": 11,
                         "id": "lack_of_time",
-                        "index": 15,
+                        "index": 16,
                         "percentageQuestion": 1.67,
                         "percentageSurvey": 0.2,
                         "entity": {
@@ -293,7 +378,7 @@
                       {
                         "count": 11,
                         "id": "screen_readers_limitations",
-                        "index": 16,
+                        "index": 17,
                         "percentageQuestion": 1.67,
                         "percentageSurvey": 0.2,
                         "entity": {
@@ -306,18 +391,51 @@
                         }
                       },
                       {
+                        "count": 9,
+                        "id": "screen_readers_learning_curve",
+                        "index": 18,
+                        "percentageQuestion": 1.37,
+                        "percentageSurvey": 0.17,
+                        "entity": {
+                          "name": "Screen readers learning curve",
+                          "nameHtml": "Screen readers learning curve",
+                          "nameClean": "Screen readers learning curve",
+                          "id": "screen_readers_learning_curve",
+                          "parentId": "screen_reader_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 8,
+                        "id": "lack_of_awareness",
+                        "index": 19,
+                        "percentageQuestion": 1.21,
+                        "percentageSurvey": 0.15,
+                        "entity": {
+                          "name": "Lack of awareness",
+                          "nameHtml": "Lack of awareness",
+                          "nameClean": "Lack of awareness",
+                          "description": "The user was not aware that a particular technology or API existed.",
+                          "descriptionHtml": "The user was not aware that a particular technology or API existed.",
+                          "descriptionClean": "The user was not aware that a particular technology or API existed.",
+                          "id": "lack_of_awareness",
+                          "parentId": "educational_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
                         "count": 4742,
                         "id": "no_answer",
-                        "index": 17,
+                        "index": 20,
                         "percentageQuestion": 0,
                         "percentageSurvey": 87.8
                       },
                       {
-                        "count": 402,
+                        "count": 376,
                         "id": "other_answers",
-                        "index": 18,
-                        "percentageQuestion": 60.99,
-                        "percentageSurvey": 7.51
+                        "index": 21,
+                        "percentageQuestion": 57.04,
+                        "percentageSurvey": 7.02
                       }
                     ]
                   },
@@ -328,7 +446,7 @@
                         "order": "desc"
                       },
                       "limit": 20,
-                      "cutoff": 10
+                      "cutoff": 5
                     },
                     "editionId": "html2025",
                     "year": 2025,
@@ -345,37 +463,73 @@
                         "percentageQuestion": 26.24,
                         "percentageSurvey": 2.56,
                         "entity": {
-                          "name": "Education",
-                          "nameHtml": "Education",
-                          "nameClean": "Education",
-                          "description": "Issues related to learning new technologies",
-                          "descriptionHtml": "Issues related to learning new technologies",
-                          "descriptionClean": "Issues related to learning new technologies",
+                          "name": "Educational issues",
+                          "nameHtml": "Educational issues",
+                          "nameClean": "Educational issues",
+                          "description": "Lack of awareness, poor docs, lack of best practices, lack of good examples. This is about the availability and quality of educational resources, not about learnability issues instrinsic to the technology (use `poor_learnability` for that).",
+                          "descriptionHtml": "Lack of awareness, poor docs, lack of best practices, lack of good examples. This is about the availability and quality of educational resources, not about learnability issues instrinsic to the technology (use <code>poor_learnability</code> for that).",
+                          "descriptionClean": "Lack of awareness, poor docs, lack of best practices, lack of good examples. This is about the availability and quality of educational resources, not about learnability issues instrinsic to the technology (use poor_learnability for that).",
                           "id": "educational_issues",
                           "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 155,
-                        "id": "dx",
-                        "index": 1,
-                        "percentageQuestion": 25.58,
-                        "percentageSurvey": 2.49,
-                        "entity": {
-                          "name": "DX",
-                          "nameHtml": "DX",
-                          "nameClean": "DX",
-                          "description": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
-                          "descriptionHtml": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
-                          "descriptionClean": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
-                          "id": "dx",
-                          "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 38,
+                            "id": "lack_of_documentation",
+                            "percentageQuestion": 6.27,
+                            "percentageSurvey": 0.61,
+                            "entity": {
+                              "name": "Lack of documentation or code examples",
+                              "nameHtml": "Lack of documentation or code examples",
+                              "nameClean": "Lack of documentation or code examples",
+                              "description": "Issues due to missing, incomplete, unclear, or outdated documentation or code examples.",
+                              "descriptionHtml": "Issues due to missing, incomplete, unclear, or outdated documentation or code examples.",
+                              "descriptionClean": "Issues due to missing, incomplete, unclear, or outdated documentation or code examples.",
+                              "id": "lack_of_documentation",
+                              "parentId": "educational_issues",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 28,
+                            "id": "lack_of_best_practices",
+                            "percentageQuestion": 4.62,
+                            "percentageSurvey": 0.45,
+                            "entity": {
+                              "name": "Lack of best practices",
+                              "nameHtml": "Lack of best practices",
+                              "nameClean": "Lack of best practices",
+                              "description": "Issues arising from the absence of clear, established best practices.",
+                              "descriptionHtml": "Issues arising from the absence of clear, established best practices.",
+                              "descriptionClean": "Issues arising from the absence of clear, established best practices.",
+                              "id": "lack_of_best_practices",
+                              "parentId": "educational_issues",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 14,
+                            "id": "conflicting_advice",
+                            "percentageQuestion": 2.31,
+                            "percentageSurvey": 0.22,
+                            "entity": {
+                              "name": "Conflicting advice",
+                              "nameHtml": "Conflicting advice",
+                              "nameClean": "Conflicting advice",
+                              "description": "Frustration from receiving conflicting or contradictory information and best practices from different sources (specs, experts, community).",
+                              "descriptionHtml": "Frustration from receiving conflicting or contradictory information and best practices from different sources (specs, experts, community).",
+                              "descriptionClean": "Frustration from receiving conflicting or contradictory information and best practices from different sources (specs, experts, community).",
+                              "id": "conflicting_advice",
+                              "parentId": "educational_issues",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 133,
                         "id": "workplace",
-                        "index": 2,
+                        "index": 1,
                         "percentageQuestion": 21.95,
                         "percentageSurvey": 2.14,
                         "entity": {
@@ -387,46 +541,153 @@
                           "descriptionClean": "Issues around getting one’s workplace to agree on certain policies and/or priorities.",
                           "id": "workplace",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 65,
+                            "id": "team_buy_in",
+                            "percentageQuestion": 10.73,
+                            "percentageSurvey": 1.04,
+                            "entity": {
+                              "name": "Team/Stakeholder buy-in",
+                              "nameHtml": "Team/Stakeholder buy-in",
+                              "nameClean": "Team/Stakeholder buy-in",
+                              "description": "Difficulties in convincing teammates, managers, clients, or other stakeholders of the importance and priority of accessibility work.",
+                              "descriptionHtml": "Difficulties in convincing teammates, managers, clients, or other stakeholders of the importance and priority of accessibility work.",
+                              "descriptionClean": "Difficulties in convincing teammates, managers, clients, or other stakeholders of the importance and priority of accessibility work.",
+                              "id": "team_buy_in",
+                              "parentId": "workplace",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 58,
+                            "id": "low_priority",
+                            "percentageQuestion": 9.57,
+                            "percentageSurvey": 0.93,
+                            "entity": {
+                              "name": "Low Priority",
+                              "nameHtml": "Low Priority",
+                              "nameClean": "Low Priority",
+                              "description": "Employer deprioritizes a11y.",
+                              "descriptionHtml": "Employer deprioritizes a11y.",
+                              "descriptionClean": "Employer deprioritizes a11y.",
+                              "id": "low_priority",
+                              "parentId": "workplace",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
-                        "count": 102,
-                        "id": "limitations",
-                        "index": 3,
-                        "percentageQuestion": 16.83,
-                        "percentageSurvey": 1.64,
+                        "count": 108,
+                        "id": "cognitive_overload",
+                        "index": 2,
+                        "percentageQuestion": 17.82,
+                        "percentageSurvey": 1.74,
                         "entity": {
-                          "name": "Limitations",
-                          "nameHtml": "Limitations",
-                          "nameClean": "Limitations",
-                          "description": "Things not being possible. Missing features or incomplete capabilities. Poor integration between web platform technologies.",
-                          "descriptionHtml": "Things not being possible. Missing features or incomplete capabilities. Poor integration between web platform technologies.",
-                          "descriptionClean": "Things not being possible. Missing features or incomplete capabilities. Poor integration between web platform technologies.",
-                          "id": "limitations",
+                          "name": "Cognitive overload",
+                          "nameHtml": "Cognitive overload",
+                          "nameClean": "Cognitive overload",
+                          "id": "cognitive_overload",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 54,
+                            "id": "poor_learnability",
+                            "percentageQuestion": 8.91,
+                            "percentageSurvey": 0.87,
+                            "entity": {
+                              "name": "Poor learnability",
+                              "nameHtml": "Poor learnability",
+                              "nameClean": "Poor learnability",
+                              "description": "High learning curve, requires too much knowledge to get started, or too much information to memorize.",
+                              "descriptionHtml": "High learning curve, requires too much knowledge to get started, or too much information to memorize.",
+                              "descriptionClean": "High learning curve, requires too much knowledge to get started, or too much information to memorize.",
+                              "id": "poor_learnability",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 13,
+                            "id": "too_much_work",
+                            "percentageQuestion": 2.15,
+                            "percentageSurvey": 0.21,
+                            "entity": {
+                              "name": "High effort",
+                              "nameHtml": "High effort",
+                              "nameClean": "High effort",
+                              "description": "Requires too much work. Includes APIs being too low-level, requiring a lot of manual developer effort to use.",
+                              "descriptionHtml": "Requires too much work. Includes APIs being too low-level, requiring a lot of manual developer effort to use.",
+                              "descriptionClean": "Requires too much work. Includes APIs being too low-level, requiring a lot of manual developer effort to use.",
+                              "id": "too_much_work",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 98,
-                        "id": "debugging",
-                        "index": 4,
+                        "id": "debugging_issues",
+                        "index": 3,
                         "percentageQuestion": 16.17,
                         "percentageSurvey": 1.57,
                         "entity": {
                           "name": "Debugging",
                           "nameHtml": "Debugging",
                           "nameClean": "Debugging",
-                          "description": "Debugging issues",
-                          "descriptionHtml": "Debugging issues",
-                          "descriptionClean": "Debugging issues",
-                          "id": "debugging",
+                          "description": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
+                          "descriptionHtml": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
+                          "descriptionClean": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
+                          "id": "debugging_issues",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 91,
+                            "id": "testing_issues",
+                            "percentageQuestion": 15.02,
+                            "percentageSurvey": 1.46,
+                            "entity": {
+                              "name": "Testing",
+                              "nameHtml": "Testing",
+                              "nameClean": "Testing",
+                              "description": "Things being hard to test, unclear how to test them, difficulty procuring the right tools or resources to test, etc.",
+                              "descriptionHtml": "Things being hard to test, unclear how to test them, difficulty procuring the right tools or resources to test, etc.",
+                              "descriptionClean": "Things being hard to test, unclear how to test them, difficulty procuring the right tools or resources to test, etc.",
+                              "id": "testing_issues",
+                              "parentId": "debugging_issues",
+                              "entityType": "default"
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 13,
+                                "id": "testing_automation",
+                                "percentageQuestion": 2.15,
+                                "percentageSurvey": 0.21,
+                                "entity": {
+                                  "name": "Automated testing",
+                                  "nameHtml": "Automated testing",
+                                  "nameClean": "Automated testing",
+                                  "description": "Issues around the lack, limitations, or difficulty of implementing automated accessibility testing.",
+                                  "descriptionHtml": "Issues around the lack, limitations, or difficulty of implementing automated accessibility testing.",
+                                  "descriptionClean": "Issues around the lack, limitations, or difficulty of implementing automated accessibility testing.",
+                                  "id": "testing_automation",
+                                  "parentId": "testing_issues",
+                                  "entityType": "default"
+                                }
+                              }
+                            ]
+                          }
+                        ]
                       },
                       {
                         "count": 95,
                         "id": "environments_consumers",
-                        "index": 5,
+                        "index": 4,
                         "percentageQuestion": 15.68,
                         "percentageSurvey": 1.53,
                         "entity": {
@@ -443,7 +704,7 @@
                       {
                         "count": 94,
                         "id": "screen_readers",
-                        "index": 6,
+                        "index": 5,
                         "percentageQuestion": 15.51,
                         "percentageSurvey": 1.51,
                         "entity": {
@@ -454,55 +715,144 @@
                           "descriptionHtml": "Issues with screen readers in general, or specific screen readers.",
                           "descriptionClean": "Issues with screen readers in general, or specific screen readers.",
                           "id": "screen_readers",
-                          "parentId": "accessibility",
+                          "parentId": "accessibility_issues",
                           "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 91,
-                        "id": "testing",
-                        "index": 7,
-                        "percentageQuestion": 15.02,
-                        "percentageSurvey": 1.46,
-                        "entity": {
-                          "name": "Testing",
-                          "nameHtml": "Testing",
-                          "nameClean": "Testing",
-                          "id": "testing",
-                          "parentId": "a11y_technical_issues",
-                          "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 11,
+                            "id": "screen_readers_access",
+                            "percentageQuestion": 1.82,
+                            "percentageSurvey": 0.18,
+                            "entity": {
+                              "name": "Screen reader access",
+                              "nameHtml": "Screen reader access",
+                              "nameClean": "Screen reader access",
+                              "description": "Difficulty procuring screen readers for testing.",
+                              "descriptionHtml": "Difficulty procuring screen readers for testing.",
+                              "descriptionClean": "Difficulty procuring screen readers for testing.",
+                              "id": "screen_readers_access",
+                              "parentId": "screen_readers",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 8,
+                            "id": "jaws",
+                            "percentageQuestion": 1.32,
+                            "percentageSurvey": 0.13,
+                            "entity": {
+                              "name": "JAWS",
+                              "nameHtml": "JAWS",
+                              "nameClean": "JAWS",
+                              "description": "Issues specific to the JAWS (Job Access With Speech) screen reader.",
+                              "descriptionHtml": "Issues specific to the JAWS (Job Access With Speech) screen reader.",
+                              "descriptionClean": "Issues specific to the JAWS (Job Access With Speech) screen reader.",
+                              "id": "jaws",
+                              "parentId": "screen_readers",
+                              "entityType": "default",
+                              "homepage": {
+                                "url": "https://www.freedomscientific.com/products/software/jaws/"
+                              }
+                            }
+                          },
+                          {
+                            "count": 6,
+                            "id": "voiceover",
+                            "percentageQuestion": 0.99,
+                            "percentageSurvey": 0.1,
+                            "entity": {
+                              "name": "VoiceOver",
+                              "nameHtml": "VoiceOver",
+                              "nameClean": "VoiceOver",
+                              "description": "Issues specific to Apple's VoiceOver screen reader.",
+                              "descriptionHtml": "Issues specific to Apple's VoiceOver screen reader.",
+                              "descriptionClean": "Issues specific to Apple's VoiceOver screen reader.",
+                              "id": "voiceover",
+                              "parentId": "screen_readers",
+                              "entityType": "default",
+                              "homepage": {
+                                "url": "https://www.apple.com/voiceover/info/guide/_1121.html"
+                              }
+                            }
+                          },
+                          {
+                            "count": 5,
+                            "id": "visually_hidden",
+                            "percentageQuestion": 0.83,
+                            "percentageSurvey": 0.08,
+                            "entity": {
+                              "name": "Visually hidden content",
+                              "nameHtml": "Visually hidden content",
+                              "nameClean": "Visually hidden content",
+                              "description": "Issues related to showing content to screen readers that is hidden from sighted users, often involving CSS hacks due to the lack of a native method.",
+                              "descriptionHtml": "Issues related to showing content to screen readers that is hidden from sighted users, often involving CSS hacks due to the lack of a native method.",
+                              "descriptionClean": "Issues related to showing content to screen readers that is hidden from sighted users, often involving CSS hacks due to the lack of a native method.",
+                              "id": "visually_hidden",
+                              "parentId": "screen_readers",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 78,
-                        "id": "aria",
-                        "index": 8,
+                        "id": "aria_issues",
+                        "index": 6,
                         "percentageQuestion": 12.87,
                         "percentageSurvey": 1.25,
                         "entity": {
                           "name": "ARIA",
                           "nameHtml": "ARIA",
                           "nameClean": "ARIA",
-                          "description": "`role` and `aria-*` attributes",
-                          "descriptionHtml": "<code>role</code> and <code>aria-*</code> attributes",
-                          "descriptionClean": "role and aria-* attributes",
-                          "id": "aria",
-                          "parentId": "a11y_technical_issues",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "html",
-                            "code": "<div id=\"tab1\" aria-controls=\"panel1\" role=\"tab\">Prices</div>\n<div id=\"panel1\" class=\"panel\" aria-labelledby=\"tab1\" role=\"tabpanel\">\n\t<!-- tab content -->\n</div>",
-                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;tab1&quot;</span> <span class=\"hljs-attr\">aria-controls</span>=<span class=\"hljs-string\">&quot;panel1&quot;</span> <span class=\"hljs-attr\">role</span>=<span class=\"hljs-string\">&quot;tab&quot;</span>&gt;</span>Prices<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;panel1&quot;</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">&quot;panel&quot;</span> <span class=\"hljs-attr\">aria-labelledby</span>=<span class=\"hljs-string\">&quot;tab1&quot;</span> <span class=\"hljs-attr\">role</span>=<span class=\"hljs-string\">&quot;tabpanel&quot;</span>&gt;</span>\n\t<span class=\"hljs-comment\">&lt;!-- tab content --&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes"
+                          "description": "Issues related to using Accessible Rich Internet Applications (ARIA) attributes and patterns.",
+                          "descriptionHtml": "Issues related to using Accessible Rich Internet Applications (ARIA) attributes and patterns.",
+                          "descriptionClean": "Issues related to using Accessible Rich Internet Applications (ARIA) attributes and patterns.",
+                          "id": "aria_issues",
+                          "parentId": "accessibility_issues",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 13,
+                            "id": "aria_live_regions",
+                            "percentageQuestion": 2.15,
+                            "percentageSurvey": 0.21,
+                            "entity": {
+                              "name": "ARIA live regions",
+                              "nameHtml": "ARIA live regions",
+                              "nameClean": "ARIA live regions",
+                              "description": "Issues around ARIA live regions and generally announcing DOM changes to assistive technology.",
+                              "descriptionHtml": "Issues around ARIA live regions and generally announcing DOM changes to assistive technology.",
+                              "descriptionClean": "Issues around ARIA live regions and generally announcing DOM changes to assistive technology.",
+                              "id": "aria_live_regions",
+                              "parentId": "aria_issues",
+                              "entityType": "default"
+                            }
                           }
+                        ]
+                      },
+                      {
+                        "count": 75,
+                        "id": "high_cognitive_load",
+                        "index": 7,
+                        "percentageQuestion": 12.38,
+                        "percentageSurvey": 1.21,
+                        "entity": {
+                          "name": "🗑️ High cognitive load",
+                          "nameHtml": "🗑️ High cognitive load",
+                          "nameClean": "🗑️ High cognitive load",
+                          "description": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "descriptionHtml": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "descriptionClean": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "id": "high_cognitive_load",
+                          "entityType": "default"
                         }
                       },
                       {
                         "count": 65,
-                        "id": "interop",
-                        "index": 9,
+                        "id": "interop_issues",
+                        "index": 8,
                         "percentageQuestion": 10.73,
                         "percentageSurvey": 1.04,
                         "entity": {
@@ -512,38 +862,45 @@
                           "description": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
                           "descriptionHtml": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
                           "descriptionClean": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
-                          "id": "interop",
+                          "id": "interop_issues",
                           "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 58,
-                        "id": "low_priority",
-                        "index": 10,
-                        "percentageQuestion": 9.57,
-                        "percentageSurvey": 0.93,
-                        "entity": {
-                          "name": "Low priority",
-                          "nameHtml": "Low priority",
-                          "nameClean": "Low priority",
-                          "id": "low_priority",
-                          "parentId": "a11y_company_issues",
-                          "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 5,
+                            "id": "google",
+                            "percentageQuestion": 0.83,
+                            "percentageSurvey": 0.08,
+                            "entity": {
+                              "name": "Google",
+                              "nameHtml": "Google",
+                              "nameClean": "Google",
+                              "description": "Issues specific to the Google ecosystem (e.g., Chrome, Blink, Android).",
+                              "descriptionHtml": "Issues specific to the Google ecosystem (e.g., Chrome, Blink, Android).",
+                              "descriptionClean": "Issues specific to the Google ecosystem (e.g., Chrome, Blink, Android).",
+                              "id": "google",
+                              "parentId": "interop_issues",
+                              "entityType": "default",
+                              "homepage": {
+                                "url": "https://google.com"
+                              }
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 54,
                         "id": "excessive_complexity",
-                        "index": 11,
+                        "index": 9,
                         "percentageQuestion": 8.91,
                         "percentageSurvey": 0.87,
                         "entity": {
                           "name": "Excessive complexity",
                           "nameHtml": "Excessive complexity",
                           "nameClean": "Excessive complexity",
-                          "description": "Too much complexity",
-                          "descriptionHtml": "Too much complexity",
-                          "descriptionClean": "Too much complexity",
+                          "description": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
+                          "descriptionHtml": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
+                          "descriptionClean": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
                           "id": "excessive_complexity",
                           "parentId": "a11y_implementation_issues",
                           "entityType": "default"
@@ -552,7 +909,7 @@
                       {
                         "count": 54,
                         "id": "tooling",
-                        "index": 12,
+                        "index": 10,
                         "percentageQuestion": 8.91,
                         "percentageSurvey": 0.87,
                         "entity": {
@@ -564,18 +921,57 @@
                           "descriptionClean": "Issues around third party tools, or lack thereof, including tooling in the browser (extensions, devtools, etc.).",
                           "id": "tooling",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 17,
+                            "id": "browser_devtools",
+                            "percentageQuestion": 2.81,
+                            "percentageSurvey": 0.27,
+                            "entity": {
+                              "name": "Browser dev tools",
+                              "nameHtml": "Browser dev tools",
+                              "nameClean": "Browser dev tools",
+                              "description": "Issues around the dev tools built-in to browsers.",
+                              "descriptionHtml": "Issues around the dev tools built-in to browsers.",
+                              "descriptionClean": "Issues around the dev tools built-in to browsers.",
+                              "id": "browser_devtools",
+                              "parentId": "tooling",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 11,
+                            "id": "lack_of_tools",
+                            "percentageQuestion": 1.82,
+                            "percentageSurvey": 0.18,
+                            "entity": {
+                              "name": "Lack of Tools",
+                              "nameHtml": "Lack of Tools",
+                              "nameClean": "Lack of Tools",
+                              "description": "Pain points caused by the absence of necessary tools.",
+                              "descriptionHtml": "Pain points caused by the absence of necessary tools.",
+                              "descriptionClean": "Pain points caused by the absence of necessary tools.",
+                              "id": "lack_of_tools",
+                              "parentId": "tooling",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 32,
                         "id": "keyboard_navigation",
-                        "index": 13,
+                        "index": 11,
                         "percentageQuestion": 5.28,
                         "percentageSurvey": 0.51,
                         "entity": {
                           "name": "Keyboard navigation",
                           "nameHtml": "Keyboard navigation",
                           "nameClean": "Keyboard navigation",
+                          "description": "Issues around managing good keyboard navigation and keyboard shortcuts.",
+                          "descriptionHtml": "Issues around managing good keyboard navigation and keyboard shortcuts.",
+                          "descriptionClean": "Issues around managing good keyboard navigation and keyboard shortcuts.",
                           "id": "keyboard_navigation",
                           "entityType": "default"
                         }
@@ -583,7 +979,7 @@
                       {
                         "count": 31,
                         "id": "standards",
-                        "index": 14,
+                        "index": 12,
                         "percentageQuestion": 5.12,
                         "percentageSurvey": 0.5,
                         "entity": {
@@ -595,21 +991,40 @@
                           "descriptionClean": "Pain points around specifications and standards (e.g., ISO, WCAG, RGAA).",
                           "id": "standards",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 23,
+                            "id": "wcag",
+                            "percentageQuestion": 3.8,
+                            "percentageSurvey": 0.37,
+                            "entity": {
+                              "name": "WCAG Issues",
+                              "nameHtml": "WCAG Issues",
+                              "nameClean": "WCAG Issues",
+                              "description": "Issues related to the Web Accessibility Guidelines (WCAG) and/or its relationship with other accessibility guidelines. For issues around the learnability of WCAG combine with `poor_learnability`.",
+                              "descriptionHtml": "Issues related to the Web Accessibility Guidelines (WCAG) and/or its relationship with other accessibility guidelines. For issues around the learnability of WCAG combine with <code>poor_learnability</code>.",
+                              "descriptionClean": "Issues related to the Web Accessibility Guidelines (WCAG) and/or its relationship with other accessibility guidelines. For issues around the learnability of WCAG combine with poor_learnability.",
+                              "id": "wcag",
+                              "parentId": "standards",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 28,
                         "id": "focus_management",
-                        "index": 15,
+                        "index": 13,
                         "percentageQuestion": 4.62,
                         "percentageSurvey": 0.45,
                         "entity": {
-                          "name": "Focus management",
-                          "nameHtml": "Focus management",
-                          "nameClean": "Focus management",
-                          "description": "Managing user focus",
-                          "descriptionHtml": "Managing user focus",
-                          "descriptionClean": "Managing user focus",
+                          "name": "Focus Management",
+                          "nameHtml": "Focus Management",
+                          "nameClean": "Focus Management",
+                          "description": "Challenges with managing focus, especially in dynamic contexts. Includes focus trapping, roving tabindex, moving focus programmatically, and preserving focus when DOM elements are added, removed, or moved.",
+                          "descriptionHtml": "Challenges with managing focus, especially in dynamic contexts. Includes focus trapping, roving tabindex, moving focus programmatically, and preserving focus when DOM elements are added, removed, or moved.",
+                          "descriptionClean": "Challenges with managing focus, especially in dynamic contexts. Includes focus trapping, roving tabindex, moving focus programmatically, and preserving focus when DOM elements are added, removed, or moved.",
                           "id": "focus_management",
                           "parentId": "a11y_technical_issues",
                           "entityType": "default"
@@ -618,15 +1033,18 @@
                       {
                         "count": 27,
                         "id": "color_contrast",
-                        "index": 16,
+                        "index": 14,
                         "percentageQuestion": 4.46,
                         "percentageSurvey": 0.43,
                         "entity": {
-                          "name": "`color-contrast()`",
-                          "nameHtml": "<code>color-contrast()</code>",
-                          "nameClean": "color-contrast()",
+                          "name": "Color contrast",
+                          "nameHtml": "Color contrast",
+                          "nameClean": "Color contrast",
+                          "description": "Issues around evaluating and/or maintaining adequate color contrast.",
+                          "descriptionHtml": "Issues around evaluating and/or maintaining adequate color contrast.",
+                          "descriptionClean": "Issues around evaluating and/or maintaining adequate color contrast.",
                           "id": "color_contrast",
-                          "entityType": "feature",
+                          "entityType": "default",
                           "example": {
                             "language": "css",
                             "code": ".high-contrast {\n  color: color-contrast(#008080 vs olive, var(--myColor), #d2691e);\n}\n",
@@ -642,22 +1060,8 @@
                       },
                       {
                         "count": 22,
-                        "id": "ecosystem",
-                        "index": 17,
-                        "percentageQuestion": 3.63,
-                        "percentageSurvey": 0.35,
-                        "entity": {
-                          "name": "Ecosystem issues",
-                          "nameHtml": "Ecosystem issues",
-                          "nameClean": "Ecosystem issues",
-                          "id": "ecosystem",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 22,
                         "id": "missing_elements",
-                        "index": 18,
+                        "index": 15,
                         "percentageQuestion": 3.63,
                         "percentageSurvey": 0.35,
                         "entity": {
@@ -674,7 +1078,7 @@
                       {
                         "count": 18,
                         "id": "accessible_visual_design",
-                        "index": 19,
+                        "index": 16,
                         "percentageQuestion": 2.97,
                         "percentageSurvey": 0.29,
                         "entity": {
@@ -685,7 +1089,74 @@
                           "descriptionHtml": "Issues around the challenges of creating aesthetically pleasing interfaces that are also accessible. Combine with <code>workplace</code> and/or <code>low_priority</code> for challenges around coworkers prioritizing visual design over accessibility, getting designers on board, etc.",
                           "descriptionClean": "Issues around the challenges of creating aesthetically pleasing interfaces that are also accessible. Combine with workplace and/or low_priority for challenges around coworkers prioritizing visual design over accessibility, getting designers on board, etc.",
                           "id": "accessible_visual_design",
-                          "parentId": "accessibility",
+                          "parentId": "accessibility_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 18,
+                        "id": "content",
+                        "index": 17,
+                        "percentageQuestion": 2.97,
+                        "percentageSurvey": 0.29,
+                        "entity": {
+                          "name": "Content",
+                          "nameHtml": "Content",
+                          "nameClean": "Content",
+                          "id": "content",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 16,
+                            "id": "headings",
+                            "percentageQuestion": 2.64,
+                            "percentageSurvey": 0.26,
+                            "entity": {
+                              "name": "Headings",
+                              "nameHtml": "Headings",
+                              "nameClean": "Headings",
+                              "description": "Issues related to managing heading elements and maintaining a correct and logical document outline.",
+                              "descriptionHtml": "Issues related to managing heading elements and maintaining a correct and logical document outline.",
+                              "descriptionClean": "Issues related to managing heading elements and maintaining a correct and logical document outline.",
+                              "id": "headings",
+                              "parentId": "content",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 18,
+                        "id": "ecosystem",
+                        "index": 18,
+                        "percentageQuestion": 2.97,
+                        "percentageSurvey": 0.29,
+                        "entity": {
+                          "name": "Ecosystem",
+                          "nameHtml": "Ecosystem",
+                          "nameClean": "Ecosystem",
+                          "description": "Ecosystem issues, poor discoverability, poor marketing.",
+                          "descriptionHtml": "Ecosystem issues, poor discoverability, poor marketing.",
+                          "descriptionClean": "Ecosystem issues, poor discoverability, poor marketing.",
+                          "id": "ecosystem",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 13,
+                        "id": "css_issues",
+                        "index": 19,
+                        "percentageQuestion": 2.15,
+                        "percentageSurvey": 0.21,
+                        "entity": {
+                          "name": "CSS",
+                          "nameHtml": "CSS",
+                          "nameClean": "CSS",
+                          "description": "Issues related to CSS or specific CSS features (if no more specific leaf)",
+                          "descriptionHtml": "Issues related to CSS or specific CSS features (if no more specific leaf)",
+                          "descriptionClean": "Issues related to CSS or specific CSS features (if no more specific leaf)",
+                          "id": "css_issues",
                           "entityType": "default"
                         }
                       },
@@ -697,11 +1168,11 @@
                         "percentageSurvey": 90.23
                       },
                       {
-                        "count": 308,
+                        "count": 198,
                         "id": "other_answers",
                         "index": 21,
-                        "percentageQuestion": 51.03,
-                        "percentageSurvey": 5.01
+                        "percentageQuestion": 32.83,
+                        "percentageSurvey": 3.23
                       }
                     ]
                   }

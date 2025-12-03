@@ -8,7 +8,7 @@
               "id": "content_pain_points",
               "comments": {
                 "currentEdition": {
-                  "count": 1
+                  "count": 2
                 }
               },
               "freeform": {
@@ -20,7 +20,7 @@
                         "order": "desc"
                       },
                       "limit": 20,
-                      "cutoff": 10
+                      "cutoff": 5
                     },
                     "editionId": "html2025",
                     "year": 2025,
@@ -46,22 +46,206 @@
                           "id": "html_reuse",
                           "parentId": "content",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 58,
+                            "id": "templating",
+                            "percentageQuestion": 21.89,
+                            "percentageSurvey": 0.93,
+                            "entity": {
+                              "name": "Templating & rendering",
+                              "nameHtml": "Templating &amp; rendering",
+                              "nameClean": "Templating & rendering",
+                              "description": "Authoring and running templates, data binding, reactive rendering, Declarative Shadow DOM, and server boundaries. Also includes issues related to the <template> element.",
+                              "descriptionHtml": "Authoring and running templates, data binding, reactive rendering, Declarative Shadow DOM, and server boundaries. Also includes issues related to the  element.",
+                              "descriptionClean": "Authoring and running templates, data binding, reactive rendering, Declarative Shadow DOM, and server boundaries. Also includes issues related to the  element.",
+                              "id": "templating",
+                              "parentId": "html_reuse",
+                              "entityType": "default"
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 28,
+                                "id": "template_element",
+                                "percentageQuestion": 10.57,
+                                "percentageSurvey": 0.45,
+                                "entity": {
+                                  "name": "<​template> Element",
+                                  "nameHtml": "&lt;​template&gt; Element",
+                                  "nameClean": "<​template> Element",
+                                  "description": "Issues specific to the `<template>` element, often about its limitations or ergonomics.",
+                                  "descriptionHtml": "Issues specific to the <code>&lt;template&gt;</code> element, often about its limitations or ergonomics.",
+                                  "descriptionClean": "Issues specific to the <template> element, often about its limitations or ergonomics.",
+                                  "id": "template_element",
+                                  "parentId": "templating",
+                                  "entityType": "default",
+                                  "example": {
+                                    "language": "html",
+                                    "code": "<template id=\"counter\">\n\t<div class=\"counter\">Clicked {{ times }} times</div>\n</template>",
+                                    "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">template</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;counter&quot;</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">&quot;counter&quot;</span>&gt;</span>Clicked {{ times }} times<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">template</span>&gt;</span>"
+                                  },
+                                  "mdn": {
+                                    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template"
+                                  },
+                                  "resources": [
+                                    {
+                                      "url": "https://html.spec.whatwg.org/multipage/scripting.html#the-template-element",
+                                      "title": "HTML Standard"
+                                    }
+                                  ],
+                                  "webFeature": {
+                                    "id": "template",
+                                    "description_html": "The <code>&#x3C;template></code> HTML element holds HTML fragments which you can clone and insert into the document using JavaScript.",
+                                    "group": [
+                                      "html-elements",
+                                      "web-components"
+                                    ],
+                                    "name": "<template>",
+                                    "spec": [
+                                      "https://html.spec.whatwg.org/multipage/scripting.html#the-template-element"
+                                    ],
+                                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/template/",
+                                    "status": {
+                                      "baseline": "high",
+                                      "baseline_low_date": "2015-11-12",
+                                      "support": {
+                                        "chrome": "26",
+                                        "chrome_android": "26",
+                                        "edge": "13",
+                                        "firefox": "22",
+                                        "firefox_android": "22",
+                                        "safari": "8",
+                                        "safari_ios": "8"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "count": 19,
+                                "id": "reactivity",
+                                "percentageQuestion": 7.17,
+                                "percentageSurvey": 0.31,
+                                "entity": {
+                                  "name": "Reactive rendering & data bindings",
+                                  "nameHtml": "Reactive rendering &amp; data bindings",
+                                  "nameClean": "Reactive rendering & data bindings",
+                                  "description": "Issues with reactivity",
+                                  "descriptionHtml": "Issues with reactivity",
+                                  "descriptionClean": "Issues with reactivity",
+                                  "id": "reactivity",
+                                  "parentId": "templating",
+                                  "entityType": "default"
+                                },
+                                "nestedBuckets": [
+                                  {
+                                    "count": 19,
+                                    "id": "data_binding",
+                                    "percentageQuestion": 7.17,
+                                    "percentageSurvey": 0.31,
+                                    "entity": {
+                                      "name": "Data Binding",
+                                      "nameHtml": "Data Binding",
+                                      "nameClean": "Data Binding",
+                                      "description": "Pain points around the lack of a native way to bind JavaScript data to DOM elements, so that changes in one are automatically reflected in the other.",
+                                      "descriptionHtml": "Pain points around the lack of a native way to bind JavaScript data to DOM elements, so that changes in one are automatically reflected in the other.",
+                                      "descriptionClean": "Pain points around the lack of a native way to bind JavaScript data to DOM elements, so that changes in one are automatically reflected in the other.",
+                                      "id": "data_binding",
+                                      "parentId": "reactivity",
+                                      "entityType": "default"
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "count": 46,
+                            "id": "html_imports",
+                            "percentageQuestion": 17.36,
+                            "percentageSurvey": 0.74,
+                            "entity": {
+                              "name": "HTML Imports",
+                              "nameHtml": "HTML Imports",
+                              "nameClean": "HTML Imports",
+                              "description": "Lack of native HTML imports or templating.",
+                              "descriptionHtml": "Lack of native HTML imports or templating.",
+                              "descriptionClean": "Lack of native HTML imports or templating.",
+                              "id": "html_imports",
+                              "parentId": "html_reuse",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 20,
+                            "id": "html_modules",
+                            "percentageQuestion": 7.55,
+                            "percentageSurvey": 0.32,
+                            "entity": {
+                              "name": "HTML Modules",
+                              "nameHtml": "HTML Modules",
+                              "nameClean": "HTML Modules",
+                              "description": "Issues around the lack of or desire for HTML Modules, for packaging and importing components and content.",
+                              "descriptionHtml": "Issues around the lack of or desire for HTML Modules, for packaging and importing components and content.",
+                              "descriptionClean": "Issues around the lack of or desire for HTML Modules, for packaging and importing components and content.",
+                              "id": "html_modules",
+                              "parentId": "html_reuse",
+                              "entityType": "default",
+                              "example": {
+                                "language": "html",
+                                "code": "<script type=\"module\">\n\timport { TabList } from \"./tablist.html\" with { type: 'html' };\n\tcustomElements.define(\"tab-list\", TabList);\n</script>",
+                                "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">&quot;module&quot;</span>&gt;</span><span class=\"language-javascript\">\n\t<span class=\"hljs-keyword\">import</span> { <span class=\"hljs-title class_\">TabList</span> } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&quot;./tablist.html&quot;</span> <span class=\"hljs-keyword\">with</span> { <span class=\"hljs-attr\">type</span>: <span class=\"hljs-string\">&#x27;html&#x27;</span> };\n\tcustomElements.<span class=\"hljs-title function_\">define</span>(<span class=\"hljs-string\">&quot;tab-list&quot;</span>, <span class=\"hljs-title class_\">TabList</span>);\n</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://github.com/WICG/webcomponents/blob/gh-pages/proposals/html-modules-explainer.md",
+                                  "title": "HTML Modules Explainer"
+                                },
+                                {
+                                  "url": "https://chromestatus.com/feature/4854408103854080",
+                                  "title": "Chrome Platform Status"
+                                },
+                                {
+                                  "url": "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/HTMLModules/designDoc.md"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "count": 0,
+                            "id": "html_fragment_reuse",
+                            "percentageQuestion": 0,
+                            "percentageSurvey": 0,
+                            "hasInsufficientData": true,
+                            "entity": {
+                              "name": "Reusing HTML fragments",
+                              "nameHtml": "Reusing HTML fragments",
+                              "nameClean": "Reusing HTML fragments",
+                              "description": "Reuse HTML fragments from the same page",
+                              "descriptionHtml": "Reuse HTML fragments from the same page",
+                              "descriptionClean": "Reuse HTML fragments from the same page",
+                              "id": "html_fragment_reuse",
+                              "parentId": "html_reuse",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
-                        "count": 58,
-                        "id": "templating",
+                        "count": 55,
+                        "id": "high_cognitive_load",
                         "index": 1,
-                        "percentageQuestion": 21.89,
-                        "percentageSurvey": 0.93,
+                        "percentageQuestion": 20.75,
+                        "percentageSurvey": 0.88,
                         "entity": {
-                          "name": "Templating",
-                          "nameHtml": "Templating",
-                          "nameClean": "Templating",
-                          "description": "Lack of templating",
-                          "descriptionHtml": "Lack of templating",
-                          "descriptionClean": "Lack of templating",
-                          "id": "templating",
+                          "name": "🗑️ High cognitive load",
+                          "nameHtml": "🗑️ High cognitive load",
+                          "nameClean": "🗑️ High cognitive load",
+                          "description": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "descriptionHtml": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "descriptionClean": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "id": "high_cognitive_load",
                           "entityType": "default"
                         }
                       },
@@ -72,11 +256,14 @@
                         "percentageQuestion": 20,
                         "percentageSurvey": 0.85,
                         "entity": {
-                          "name": "`<iframe>`",
-                          "nameHtml": "<code>&lt;iframe&gt;</code>",
-                          "nameClean": "<iframe>",
+                          "name": "<​iframe> Element",
+                          "nameHtml": "&lt;​iframe&gt; Element",
+                          "nameClean": "<​iframe> Element",
+                          "description": "Pain points related to the `<iframe>` element.",
+                          "descriptionHtml": "Pain points related to the <code>&lt;iframe&gt;</code> element.",
+                          "descriptionClean": "Pain points related to the <iframe> element.",
                           "id": "iframe_element",
-                          "entityType": "feature",
+                          "entityType": "default",
                           "example": {
                             "language": "html",
                             "code": "<iframe src=\"https://example.com/\"></iframe>",
@@ -107,54 +294,37 @@
                         ]
                       },
                       {
-                        "count": 46,
-                        "id": "html_imports",
-                        "index": 3,
-                        "percentageQuestion": 17.36,
-                        "percentageSurvey": 0.74,
-                        "entity": {
-                          "name": "HTML imports",
-                          "nameHtml": "HTML imports",
-                          "nameClean": "HTML imports",
-                          "description": "Lack of native HTML imports or templating",
-                          "descriptionHtml": "Lack of native HTML imports or templating",
-                          "descriptionClean": "Lack of native HTML imports or templating",
-                          "id": "html_imports",
-                          "entityType": "default"
-                        }
-                      },
-                      {
                         "count": 37,
                         "id": "reliance_on_javascript",
-                        "index": 4,
+                        "index": 3,
                         "percentageQuestion": 13.96,
                         "percentageSurvey": 0.59,
                         "entity": {
                           "name": "Reliance on JavaScript",
                           "nameHtml": "Reliance on JavaScript",
                           "nameClean": "Reliance on JavaScript",
-                          "description": "Excessive reliance on JavaScript",
-                          "descriptionHtml": "Excessive reliance on JavaScript",
-                          "descriptionClean": "Excessive reliance on JavaScript",
+                          "description": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "descriptionHtml": "Lack of declarative APIs, slow rendering due to dependence on correct loading &amp; execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "descriptionClean": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
                           "id": "reliance_on_javascript",
                           "entityType": "default"
                         }
                       },
                       {
                         "count": 31,
-                        "id": "i18n",
-                        "index": 5,
+                        "id": "i18n_issues",
+                        "index": 4,
                         "percentageQuestion": 11.7,
                         "percentageSurvey": 0.5,
                         "entity": {
-                          "name": "i18n",
-                          "nameHtml": "i18n",
-                          "nameClean": "i18n",
-                          "id": "i18n",
-                          "entityType": "feature",
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl"
-                          }
+                          "name": "Internationalization",
+                          "nameHtml": "Internationalization",
+                          "nameClean": "Internationalization",
+                          "description": "Localization, RTL, logical coordinates, culturally‑appropriate rendering etc.",
+                          "descriptionHtml": "Localization, RTL, logical coordinates, culturally‑appropriate rendering etc.",
+                          "descriptionClean": "Localization, RTL, logical coordinates, culturally‑appropriate rendering etc.",
+                          "id": "i18n_issues",
+                          "entityType": "default"
                         },
                         "nestedBuckets": [
                           {
@@ -170,7 +340,7 @@
                               "descriptionHtml": "The desire for internationalization and localization features to be built into HTML declaratively, rather than relying on JavaScript.",
                               "descriptionClean": "The desire for internationalization and localization features to be built into HTML declaratively, rather than relying on JavaScript.",
                               "id": "declarative_i18n",
-                              "parentId": "i18n",
+                              "parentId": "i18n_issues",
                               "entityType": "default"
                             }
                           }
@@ -179,81 +349,153 @@
                       {
                         "count": 29,
                         "id": "web_components",
-                        "index": 6,
+                        "index": 5,
                         "percentageQuestion": 10.94,
                         "percentageSurvey": 0.47,
                         "entity": {
                           "name": "Web Components",
                           "nameHtml": "Web Components",
                           "nameClean": "Web Components",
+                          "description": "Pain points related to authoring and using Web Components (Custom Elements, Shadow DOM, etc.).",
+                          "descriptionHtml": "Pain points related to authoring and using Web Components (Custom Elements, Shadow DOM, etc.).",
+                          "descriptionClean": "Pain points related to authoring and using Web Components (Custom Elements, Shadow DOM, etc.).",
                           "id": "web_components",
-                          "entityType": "feature",
+                          "entityType": "default",
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components"
                           }
-                        }
-                      },
-                      {
-                        "count": 28,
-                        "id": "template_element",
-                        "index": 7,
-                        "percentageQuestion": 10.57,
-                        "percentageSurvey": 0.45,
-                        "entity": {
-                          "name": "`<template>`",
-                          "nameHtml": "<code>&lt;template&gt;</code>",
-                          "nameClean": "<template>",
-                          "description": "A mechanism for holding HTML that is not to be rendered immediately but may be utilized later via JS.",
-                          "descriptionHtml": "A mechanism for holding HTML that is not to be rendered immediately but may be utilized later via JS.",
-                          "descriptionClean": "A mechanism for holding HTML that is not to be rendered immediately but may be utilized later via JS.",
-                          "id": "template_element",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "html",
-                            "code": "<template id=\"counter\">\n\t<div class=\"counter\">Clicked {{ times }} times</div>\n</template>",
-                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">template</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;counter&quot;</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">&quot;counter&quot;</span>&gt;</span>Clicked {{ times }} times<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">template</span>&gt;</span>"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://html.spec.whatwg.org/multipage/scripting.html#the-template-element",
-                              "title": "HTML Standard"
-                            }
-                          ],
-                          "webFeature": {
-                            "id": "template",
-                            "description_html": "The <code>&#x3C;template></code> HTML element holds HTML fragments which you can clone and insert into the document using JavaScript.",
-                            "group": [
-                              "html-elements",
-                              "web-components"
-                            ],
-                            "name": "<template>",
-                            "spec": [
-                              "https://html.spec.whatwg.org/multipage/scripting.html#the-template-element"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/template/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2015-11-12",
-                              "support": {
-                                "chrome": "26",
-                                "chrome_android": "26",
-                                "edge": "13",
-                                "firefox": "22",
-                                "firefox_android": "22",
-                                "safari": "8",
-                                "safari_ios": "8"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 13,
+                            "id": "shadow_dom",
+                            "percentageQuestion": 4.91,
+                            "percentageSurvey": 0.21,
+                            "entity": {
+                              "name": "Shadow DOM",
+                              "nameHtml": "Shadow DOM",
+                              "nameClean": "Shadow DOM",
+                              "description": "Shadow trees, encapsulation boundaries, slotting, parts, cross-root ARIA and integration with events, other APIs and page elements. Combine with `styling` for shadow DOM styling issues.",
+                              "descriptionHtml": "Shadow trees, encapsulation boundaries, slotting, parts, cross-root ARIA and integration with events, other APIs and page elements. Combine with <code>styling</code> for shadow DOM styling issues.",
+                              "descriptionClean": "Shadow trees, encapsulation boundaries, slotting, parts, cross-root ARIA and integration with events, other APIs and page elements. Combine with styling for shadow DOM styling issues.",
+                              "id": "shadow_dom",
+                              "parentId": "web_components",
+                              "entityType": "default",
+                              "example": {
+                                "language": "js",
+                                "code": "this.shadowRoot = this.attachShadow({mode: \"open\"});",
+                                "codeHighlighted": "<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">shadowRoot</span> = <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">attachShadow</span>({<span class=\"hljs-attr\">mode</span>: <span class=\"hljs-string\">&quot;open&quot;</span>});"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM"
+                              },
+                              "webFeature": {
+                                "id": "shadow-dom",
+                                "description_html": "Shadow DOM allows you to attach encapsulated \"shadow\" DOM trees to elements. A shadow DOM tree is a separate component, isolated from the scripts and styles in other parts of the document. This is a part of Web Components.",
+                                "group": [
+                                  "dom",
+                                  "web-components"
+                                ],
+                                "name": "Shadow DOM",
+                                "spec": [
+                                  "https://dom.spec.whatwg.org/#shadow-trees"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/shadow-dom/",
+                                "status": {
+                                  "baseline": "high",
+                                  "baseline_low_date": "2020-01-15",
+                                  "support": {
+                                    "chrome": "53",
+                                    "chrome_android": "53",
+                                    "edge": "79",
+                                    "firefox": "63",
+                                    "firefox_android": "63",
+                                    "safari": "10",
+                                    "safari_ios": "10"
+                                  }
+                                }
                               }
-                            }
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 0,
+                                "id": "declarative_shadow_dom",
+                                "percentageQuestion": 0,
+                                "percentageSurvey": 0,
+                                "hasInsufficientData": true,
+                                "entity": {
+                                  "name": "Declarative Shadow DOM",
+                                  "nameHtml": "Declarative Shadow DOM",
+                                  "nameClean": "Declarative Shadow DOM",
+                                  "description": "Authoring, referencing, and tooling around Declarative Shadow DOM (DSD).",
+                                  "descriptionHtml": "Authoring, referencing, and tooling around Declarative Shadow DOM (DSD).",
+                                  "descriptionClean": "Authoring, referencing, and tooling around Declarative Shadow DOM (DSD).",
+                                  "id": "declarative_shadow_dom",
+                                  "parentId": "shadow_dom",
+                                  "entityType": "default",
+                                  "example": {
+                                    "language": "html",
+                                    "code": "<host-element>\n    <template shadowrootmode=\"open\">\n        <!-- Shadow content -->\n    </template>\n</host-element>",
+                                    "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">host-element</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">template</span> <span class=\"hljs-attr\">shadowrootmode</span>=<span class=\"hljs-string\">&quot;open&quot;</span>&gt;</span>\n        <span class=\"hljs-comment\">&lt;!-- Shadow content --&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">template</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">host-element</span>&gt;</span>"
+                                  },
+                                  "caniuse": {
+                                    "url": "https://caniuse.com/declarative-shadow-dom"
+                                  },
+                                  "resources": [
+                                    {
+                                      "url": "https://github.com/mfreed7/declarative-shadow-dom",
+                                      "title": "GitHub - mfreed7/declarative-shadow-dom: Declarative Shadow DOM feature development"
+                                    },
+                                    {
+                                      "url": "https://developer.chrome.com/en/articles/declarative-shadow-dom/",
+                                      "title": "Declarative Shadow DOM - Chrome Developers"
+                                    },
+                                    {
+                                      "url": "https://webkit.org/blog/13851/declarative-shadow-dom/",
+                                      "title": "Declarative Shadow DOM | WebKit"
+                                    },
+                                    {
+                                      "url": "https://chromestatus.com/feature/5191745052606464",
+                                      "title": "Chrome Platform Status"
+                                    }
+                                  ],
+                                  "webFeature": {
+                                    "id": "declarative-shadow-dom",
+                                    "description_html": "The <code>shadowrootmode</code> attribute on <code>&#x3C;template></code> creates a shadow root without the use of JavaScript. It is a declarative alternative to the <code>attachShadow()</code> method.",
+                                    "group": [
+                                      "html",
+                                      "dom",
+                                      "web-components"
+                                    ],
+                                    "name": "Declarative shadow DOM",
+                                    "spec": [
+                                      "https://html.spec.whatwg.org/multipage/scripting.html#attr-template-shadowrootmode"
+                                    ],
+                                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/declarative-shadow-dom/",
+                                    "status": {
+                                      "baseline": "low",
+                                      "baseline_low_date": "2024-02-20",
+                                      "support": {
+                                        "chrome": "111",
+                                        "chrome_android": "111",
+                                        "edge": "111",
+                                        "firefox": "123",
+                                        "firefox_android": "123",
+                                        "safari": "16.4",
+                                        "safari_ios": "16.4"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ]
                           }
-                        }
+                        ]
                       },
                       {
                         "count": 27,
                         "id": "tables",
-                        "index": 8,
+                        "index": 6,
                         "percentageQuestion": 10.19,
                         "percentageSurvey": 0.43,
                         "entity": {
@@ -284,47 +526,92 @@
                               "parentId": "tables",
                               "entityType": "default"
                             }
+                          },
+                          {
+                            "count": 0,
+                            "id": "interactive_table_features",
+                            "percentageQuestion": 0,
+                            "percentageSurvey": 0,
+                            "hasInsufficientData": true,
+                            "entity": {
+                              "name": "Interactive table features",
+                              "nameHtml": "Interactive table features",
+                              "nameClean": "Interactive table features",
+                              "description": "Desire for native browser features for tables like sorting, filtering, and pagination, without relying on JavaScript libraries.",
+                              "descriptionHtml": "Desire for native browser features for tables like sorting, filtering, and pagination, without relying on JavaScript libraries.",
+                              "descriptionClean": "Desire for native browser features for tables like sorting, filtering, and pagination, without relying on JavaScript libraries.",
+                              "id": "interactive_table_features",
+                              "parentId": "tables",
+                              "entityType": "default"
+                            }
                           }
                         ]
                       },
                       {
                         "count": 23,
                         "id": "security_privacy",
-                        "index": 9,
+                        "index": 7,
                         "percentageQuestion": 8.68,
                         "percentageSurvey": 0.37,
                         "entity": {
                           "name": "Security & privacy",
                           "nameHtml": "Security &amp; privacy",
                           "nameClean": "Security & privacy",
-                          "description": "Lack of security and privacy",
-                          "descriptionHtml": "Lack of security and privacy",
-                          "descriptionClean": "Lack of security and privacy",
+                          "description": "Threats, mitigations, permissions, and fingerprinting/privacy budget concerns, cross-origin issues etc. Pain points related to general concerns about security and privacy on the web.",
+                          "descriptionHtml": "Threats, mitigations, permissions, and fingerprinting/privacy budget concerns, cross-origin issues etc. Pain points related to general concerns about security and privacy on the web.",
+                          "descriptionClean": "Threats, mitigations, permissions, and fingerprinting/privacy budget concerns, cross-origin issues etc. Pain points related to general concerns about security and privacy on the web.",
                           "id": "security_privacy",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 10,
+                            "id": "sanitizer_api",
+                            "percentageQuestion": 3.77,
+                            "percentageSurvey": 0.16,
+                            "entity": {
+                              "name": "Sanitizer API",
+                              "nameHtml": "Sanitizer API",
+                              "nameClean": "Sanitizer API",
+                              "description": "Issues related to the HTML Sanitizer API, including its absence, limitations, or ergonomics.",
+                              "descriptionHtml": "Issues related to the HTML Sanitizer API, including its absence, limitations, or ergonomics.",
+                              "descriptionClean": "Issues related to the HTML Sanitizer API, including its absence, limitations, or ergonomics.",
+                              "id": "sanitizer_api",
+                              "parentId": "security_privacy",
+                              "entityType": "default",
+                              "example": {
+                                "language": "js",
+                                "code": "greeting.setHTML('Hello ' + nameInput.value);\n",
+                                "codeHighlighted": "greeting.<span class=\"hljs-title function_\">setHTML</span>(<span class=\"hljs-string\">&#x27;Hello &#x27;</span> + nameInput.<span class=\"hljs-property\">value</span>);"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTML_Sanitizer_API"
+                              }
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 21,
-                        "id": "accessibility",
-                        "index": 10,
+                        "id": "accessibility_issues",
+                        "index": 8,
                         "percentageQuestion": 7.92,
                         "percentageSurvey": 0.34,
                         "entity": {
                           "name": "Accessibility",
                           "nameHtml": "Accessibility",
                           "nameClean": "Accessibility",
-                          "description": "Accessibility improvements",
-                          "descriptionHtml": "Accessibility improvements",
-                          "descriptionClean": "Accessibility improvements",
-                          "id": "accessibility",
+                          "description": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "descriptionHtml": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "descriptionClean": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "id": "accessibility_issues",
                           "entityType": "default"
                         }
                       },
                       {
                         "count": 20,
                         "id": "declarative_apis",
-                        "index": 11,
+                        "index": 9,
                         "percentageQuestion": 7.55,
                         "percentageSurvey": 0.32,
                         "entity": {
@@ -339,74 +626,9 @@
                         }
                       },
                       {
-                        "count": 20,
-                        "id": "html_modules",
-                        "index": 12,
-                        "percentageQuestion": 7.55,
-                        "percentageSurvey": 0.32,
-                        "entity": {
-                          "name": "HTML Modules",
-                          "nameHtml": "HTML Modules",
-                          "nameClean": "HTML Modules",
-                          "description": "Import HTML files via JS imports and access their elements and JS exports.",
-                          "descriptionHtml": "Import HTML files via JS imports and access their elements and JS exports.",
-                          "descriptionClean": "Import HTML files via JS imports and access their elements and JS exports.",
-                          "id": "html_modules",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "html",
-                            "code": "<script type=\"module\">\n\timport { TabList } from \"./tablist.html\" with { type: 'html' };\n\tcustomElements.define(\"tab-list\", TabList);\n</script>",
-                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">&quot;module&quot;</span>&gt;</span><span class=\"language-javascript\">\n\t<span class=\"hljs-keyword\">import</span> { <span class=\"hljs-title class_\">TabList</span> } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&quot;./tablist.html&quot;</span> <span class=\"hljs-keyword\">with</span> { <span class=\"hljs-attr\">type</span>: <span class=\"hljs-string\">&#x27;html&#x27;</span> };\n\tcustomElements.<span class=\"hljs-title function_\">define</span>(<span class=\"hljs-string\">&quot;tab-list&quot;</span>, <span class=\"hljs-title class_\">TabList</span>);\n</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://github.com/WICG/webcomponents/blob/gh-pages/proposals/html-modules-explainer.md",
-                              "title": "HTML Modules Explainer"
-                            },
-                            {
-                              "url": "https://chromestatus.com/feature/4854408103854080",
-                              "title": "Chrome Platform Status"
-                            },
-                            {
-                              "url": "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/HTMLModules/designDoc.md"
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "count": 19,
-                        "id": "reactivity",
-                        "index": 13,
-                        "percentageQuestion": 7.17,
-                        "percentageSurvey": 0.31,
-                        "entity": {
-                          "id": "reactivity",
-                          "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 19,
-                            "id": "data_binding",
-                            "percentageQuestion": 7.17,
-                            "percentageSurvey": 0.31,
-                            "entity": {
-                              "name": "Data Binding",
-                              "nameHtml": "Data Binding",
-                              "nameClean": "Data Binding",
-                              "description": "Pain points around the lack of a native way to bind JavaScript data to DOM elements, so that changes in one are automatically reflected in the other.",
-                              "descriptionHtml": "Pain points around the lack of a native way to bind JavaScript data to DOM elements, so that changes in one are automatically reflected in the other.",
-                              "descriptionClean": "Pain points around the lack of a native way to bind JavaScript data to DOM elements, so that changes in one are automatically reflected in the other.",
-                              "id": "data_binding",
-                              "parentId": "reactivity",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
-                      },
-                      {
                         "count": 16,
                         "id": "headings",
-                        "index": 14,
+                        "index": 10,
                         "percentageQuestion": 6.04,
                         "percentageSurvey": 0.26,
                         "entity": {
@@ -424,7 +646,7 @@
                       {
                         "count": 16,
                         "id": "tooling",
-                        "index": 15,
+                        "index": 11,
                         "percentageQuestion": 6.04,
                         "percentageSurvey": 0.26,
                         "entity": {
@@ -441,7 +663,7 @@
                       {
                         "count": 14,
                         "id": "missing_elements",
-                        "index": 16,
+                        "index": 12,
                         "percentageQuestion": 5.28,
                         "percentageSurvey": 0.22,
                         "entity": {
@@ -453,63 +675,32 @@
                           "descriptionClean": "The need to build common UI patterns from scratch due to the lack of built-in, accessible HTML elements.",
                           "id": "missing_elements",
                           "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 13,
-                        "id": "shadow_dom",
-                        "index": 17,
-                        "percentageQuestion": 4.91,
-                        "percentageSurvey": 0.21,
-                        "entity": {
-                          "name": "Shadow DOM",
-                          "nameHtml": "Shadow DOM",
-                          "nameClean": "Shadow DOM",
-                          "description": "Encapsulate elements not visible from the outside, and style them with CSS not affecting the rest of the page.",
-                          "descriptionHtml": "Encapsulate elements not visible from the outside, and style them with CSS not affecting the rest of the page.",
-                          "descriptionClean": "Encapsulate elements not visible from the outside, and style them with CSS not affecting the rest of the page.",
-                          "id": "shadow_dom",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "js",
-                            "code": "this.shadowRoot = this.attachShadow({mode: \"open\"});",
-                            "codeHighlighted": "<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">shadowRoot</span> = <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">attachShadow</span>({<span class=\"hljs-attr\">mode</span>: <span class=\"hljs-string\">&quot;open&quot;</span>});"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM"
-                          },
-                          "webFeature": {
-                            "id": "shadow-dom",
-                            "description_html": "Shadow DOM allows you to attach encapsulated \"shadow\" DOM trees to elements. A shadow DOM tree is a separate component, isolated from the scripts and styles in other parts of the document. This is a part of Web Components.",
-                            "group": [
-                              "dom",
-                              "web-components"
-                            ],
-                            "name": "Shadow DOM",
-                            "spec": [
-                              "https://dom.spec.whatwg.org/#shadow-trees"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/shadow-dom/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2020-01-15",
-                              "support": {
-                                "chrome": "53",
-                                "chrome_android": "53",
-                                "edge": "79",
-                                "firefox": "63",
-                                "firefox_android": "63",
-                                "safari": "10",
-                                "safari_ios": "10"
-                              }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 0,
+                            "id": "tabs_element",
+                            "percentageQuestion": 0,
+                            "percentageSurvey": 0,
+                            "hasInsufficientData": true,
+                            "entity": {
+                              "name": "Tabs element",
+                              "nameHtml": "Tabs element",
+                              "nameClean": "Tabs element",
+                              "description": "Pain points from the lack of a native HTML element for tabbed interfaces, a common UI pattern.",
+                              "descriptionHtml": "Pain points from the lack of a native HTML element for tabbed interfaces, a common UI pattern.",
+                              "descriptionClean": "Pain points from the lack of a native HTML element for tabbed interfaces, a common UI pattern.",
+                              "id": "tabs_element",
+                              "parentId": "missing_elements",
+                              "entityType": "default"
                             }
                           }
-                        }
+                        ]
                       },
                       {
                         "count": 12,
                         "id": "interactivity",
-                        "index": 18,
+                        "index": 13,
                         "percentageQuestion": 4.53,
                         "percentageSurvey": 0.19,
                         "entity": {
@@ -523,23 +714,24 @@
                       {
                         "count": 12,
                         "id": "styling_customization",
-                        "index": 19,
+                        "index": 14,
                         "percentageQuestion": 4.53,
                         "percentageSurvey": 0.19,
                         "entity": {
-                          "name": "Styling & customization",
-                          "nameHtml": "Styling &amp; customization",
-                          "nameClean": "Styling & customization",
-                          "description": "CSS styling and customization issues.",
-                          "descriptionHtml": "CSS styling and customization issues.",
-                          "descriptionClean": "CSS styling and customization issues.",
+                          "name": "Styling and UI customization",
+                          "nameHtml": "Styling and UI customization",
+                          "nameClean": "Styling and UI customization",
+                          "description": "Issues around styling and customizing browser-generated UI.",
+                          "descriptionHtml": "Issues around styling and customizing browser-generated UI.",
+                          "descriptionClean": "Issues around styling and customizing browser-generated UI.",
                           "id": "styling_customization",
+                          "parentId": "a11y_technical_issues",
                           "entityType": "default"
                         },
                         "nestedBuckets": [
                           {
                             "count": 12,
-                            "id": "styling",
+                            "id": "styling_issues",
                             "percentageQuestion": 4.53,
                             "percentageSurvey": 0.19,
                             "entity": {
@@ -549,7 +741,7 @@
                               "description": "Issues around styling UA-generated UI, CSS not working in certain contexts, etc.",
                               "descriptionHtml": "Issues around styling UA-generated UI, CSS not working in certain contexts, etc.",
                               "descriptionClean": "Issues around styling UA-generated UI, CSS not working in certain contexts, etc.",
-                              "id": "styling",
+                              "id": "styling_issues",
                               "parentId": "styling_customization",
                               "entityType": "default"
                             }
@@ -571,11 +763,100 @@
                         ]
                       },
                       {
-                        "count": 252,
+                        "count": 10,
+                        "id": "component_based_architecture",
+                        "index": 15,
+                        "percentageQuestion": 3.77,
+                        "percentageSurvey": 0.16,
+                        "entity": {
+                          "name": "Component-Based Architecture",
+                          "nameHtml": "Component-Based Architecture",
+                          "nameClean": "Component-Based Architecture",
+                          "description": "Pain points related to building websites with a component-based model, such as state management, content composition, and framework reliance. Combine with `accessibility`  for accessibility challenges that are specific to or exacerbated by component-based development (e.g., managing heading levels, generating unique IDs).",
+                          "descriptionHtml": "Pain points related to building websites with a component-based model, such as state management, content composition, and framework reliance. Combine with <code>accessibility</code>  for accessibility challenges that are specific to or exacerbated by component-based development (e.g., managing heading levels, generating unique IDs).",
+                          "descriptionClean": "Pain points related to building websites with a component-based model, such as state management, content composition, and framework reliance. Combine with accessibility  for accessibility challenges that are specific to or exacerbated by component-based development (e.g., managing heading levels, generating unique IDs).",
+                          "id": "component_based_architecture",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 0,
+                        "id": "css_integration",
+                        "index": 16,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 0,
+                        "hasInsufficientData": true,
+                        "entity": {
+                          "name": "CSS Integration",
+                          "nameHtml": "CSS Integration",
+                          "nameClean": "CSS Integration",
+                          "description": "Pain points related to the integration between a feature and CSS. For issues arising from the intersection of CSS features and accessibility, such as ensuring modern CSS layouts or 'clever' CSS solutions are accessible, combine with `accessibility`.",
+                          "descriptionHtml": "Pain points related to the integration between a feature and CSS. For issues arising from the intersection of CSS features and accessibility, such as ensuring modern CSS layouts or 'clever' CSS solutions are accessible, combine with <code>accessibility</code>.",
+                          "descriptionClean": "Pain points related to the integration between a feature and CSS. For issues arising from the intersection of CSS features and accessibility, such as ensuring modern CSS layouts or 'clever' CSS solutions are accessible, combine with accessibility.",
+                          "id": "css_integration",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 0,
+                        "id": "css_issues",
+                        "index": 17,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 0,
+                        "hasInsufficientData": true,
+                        "entity": {
+                          "name": "CSS",
+                          "nameHtml": "CSS",
+                          "nameClean": "CSS",
+                          "description": "Issues related to CSS or specific CSS features (if no more specific leaf)",
+                          "descriptionHtml": "Issues related to CSS or specific CSS features (if no more specific leaf)",
+                          "descriptionClean": "Issues related to CSS or specific CSS features (if no more specific leaf)",
+                          "id": "css_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 0,
+                        "id": "date_and_time",
+                        "index": 18,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 0,
+                        "hasInsufficientData": true,
+                        "entity": {
+                          "name": "Date & Time",
+                          "nameHtml": "Date &amp; Time",
+                          "nameClean": "Date & Time",
+                          "description": "Issues related to managing dates and times, including lack of support of modern APIs.",
+                          "descriptionHtml": "Issues related to managing dates and times, including lack of support of modern APIs.",
+                          "descriptionClean": "Issues related to managing dates and times, including lack of support of modern APIs.",
+                          "id": "date_and_time",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 0,
+                        "id": "educational_issues",
+                        "index": 19,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 0,
+                        "hasInsufficientData": true,
+                        "entity": {
+                          "name": "Educational issues",
+                          "nameHtml": "Educational issues",
+                          "nameClean": "Educational issues",
+                          "description": "Lack of awareness, poor docs, lack of best practices, lack of good examples. This is about the availability and quality of educational resources, not about learnability issues instrinsic to the technology (use `poor_learnability` for that).",
+                          "descriptionHtml": "Lack of awareness, poor docs, lack of best practices, lack of good examples. This is about the availability and quality of educational resources, not about learnability issues instrinsic to the technology (use <code>poor_learnability</code> for that).",
+                          "descriptionClean": "Lack of awareness, poor docs, lack of best practices, lack of good examples. This is about the availability and quality of educational resources, not about learnability issues instrinsic to the technology (use poor_learnability for that).",
+                          "id": "educational_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 105,
                         "id": "other_answers",
                         "index": 20,
-                        "percentageQuestion": 95.08,
-                        "percentageSurvey": 4.11
+                        "percentageQuestion": 39.61,
+                        "percentageSurvey": 1.76
                       }
                     ]
                   }

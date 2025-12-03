@@ -8,7 +8,7 @@
               "id": "forms_pain_points",
               "comments": {
                 "currentEdition": {
-                  "count": 2
+                  "count": 11
                 }
               },
               "freeform": {
@@ -20,7 +20,7 @@
                         "order": "desc"
                       },
                       "limit": 20,
-                      "cutoff": 10
+                      "cutoff": 5
                     },
                     "editionId": "html2024",
                     "year": 2024,
@@ -37,13 +37,14 @@
                         "percentageQuestion": 23.8,
                         "percentageSurvey": 7.81,
                         "entity": {
-                          "name": "Styling & customization",
-                          "nameHtml": "Styling &amp; customization",
-                          "nameClean": "Styling & customization",
-                          "description": "CSS styling and customization issues.",
-                          "descriptionHtml": "CSS styling and customization issues.",
-                          "descriptionClean": "CSS styling and customization issues.",
+                          "name": "Styling and UI customization",
+                          "nameHtml": "Styling and UI customization",
+                          "nameClean": "Styling and UI customization",
+                          "description": "Issues around styling and customizing browser-generated UI.",
+                          "descriptionHtml": "Issues around styling and customizing browser-generated UI.",
+                          "descriptionClean": "Issues around styling and customizing browser-generated UI.",
                           "id": "styling_customization",
+                          "parentId": "a11y_technical_issues",
                           "entityType": "default"
                         },
                         "nestedBuckets": [
@@ -53,9 +54,12 @@
                             "percentageQuestion": 18.5,
                             "percentageSurvey": 6.07,
                             "entity": {
-                              "name": "`<select>`",
-                              "nameHtml": "<code>&lt;select&gt;</code>",
-                              "nameClean": "<select>",
+                              "name": "<​select>",
+                              "nameHtml": "&lt;​select&gt;",
+                              "nameClean": "<​select>",
+                              "description": "Pain points related to the `<select>` element.",
+                              "descriptionHtml": "Pain points related to the <code>&lt;select&gt;</code> element.",
+                              "descriptionClean": "Pain points related to the <select> element.",
                               "id": "styling_select_inputs",
                               "parentId": "styling_customization",
                               "entityType": "default"
@@ -67,9 +71,12 @@
                             "percentageQuestion": 8.69,
                             "percentageSurvey": 2.85,
                             "entity": {
-                              "name": "`<input type=\"date\">`",
-                              "nameHtml": "<code>&lt;input type=\"date\"&gt;</code>",
-                              "nameClean": "<input type=\"date\">",
+                              "name": "Date Picker",
+                              "nameHtml": "Date Picker",
+                              "nameClean": "Date Picker",
+                              "description": "Pain points related to `<input type=\"date\">` and its associated picker UI.",
+                              "descriptionHtml": "Pain points related to <code>&lt;input type=\"date\"&gt;</code> and its associated picker UI.",
+                              "descriptionClean": "Pain points related to <input type=\"date\"> and its associated picker UI.",
                               "id": "styling_date_pickers",
                               "parentId": "styling_customization",
                               "entityType": "default"
@@ -81,9 +88,12 @@
                             "percentageQuestion": 2.71,
                             "percentageSurvey": 0.89,
                             "entity": {
-                              "name": "`<input type=\"radio\">`",
-                              "nameHtml": "<code>&lt;input type=\"radio\"&gt;</code>",
-                              "nameClean": "<input type=\"radio\">",
+                              "name": "radio input",
+                              "nameHtml": "radio input",
+                              "nameClean": "radio input",
+                              "description": "Pain points specific to `<input type=\"radio\">`.",
+                              "descriptionHtml": "Pain points specific to <code>&lt;input type=\"radio\"&gt;</code>.",
+                              "descriptionClean": "Pain points specific to <input type=\"radio\">.",
                               "id": "styling_radio_inputs",
                               "parentId": "styling_customization",
                               "entityType": "default"
@@ -133,6 +143,48 @@
                               "parentId": "styling_customization",
                               "entityType": "default"
                             }
+                          },
+                          {
+                            "count": 8,
+                            "id": "styling_range",
+                            "percentageQuestion": 0.45,
+                            "percentageSurvey": 0.15,
+                            "entity": {
+                              "name": "`<input type=\"range\">`",
+                              "nameHtml": "<code>&lt;input type=\"range\"&gt;</code>",
+                              "nameClean": "<input type=\"range\">",
+                              "id": "styling_range",
+                              "parentId": "styling_customization",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 7,
+                            "id": "responsive_design",
+                            "percentageQuestion": 0.39,
+                            "percentageSurvey": 0.13,
+                            "entity": {
+                              "name": "Responsive design",
+                              "nameHtml": "Responsive design",
+                              "nameClean": "Responsive design",
+                              "id": "responsive_design",
+                              "parentId": "styling_customization",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 5,
+                            "id": "styling_number_inputs",
+                            "percentageQuestion": 0.28,
+                            "percentageSurvey": 0.09,
+                            "entity": {
+                              "name": "`<input type=\"number\">`",
+                              "nameHtml": "<code>&lt;input type=\"number\"&gt;</code>",
+                              "nameClean": "<input type=\"number\">",
+                              "id": "styling_number_inputs",
+                              "parentId": "styling_customization",
+                              "entityType": "default"
+                            }
                           }
                         ]
                       },
@@ -159,12 +211,15 @@
                             "percentageQuestion": 1.35,
                             "percentageSurvey": 0.44,
                             "entity": {
-                              "name": "`pattern` attribute",
-                              "nameHtml": "<code>pattern</code> attribute",
-                              "nameClean": "pattern attribute",
+                              "name": "pattern Attribute",
+                              "nameHtml": "pattern Attribute",
+                              "nameClean": "pattern Attribute",
+                              "description": "Issues related to the `pattern` attribute for validation.",
+                              "descriptionHtml": "Issues related to the <code>pattern</code> attribute for validation.",
+                              "descriptionClean": "Issues related to the pattern attribute for validation.",
                               "id": "pattern_attribute",
                               "parentId": "validation_issues",
-                              "entityType": "feature"
+                              "entityType": "default"
                             }
                           },
                           {
@@ -204,67 +259,18 @@
                         }
                       },
                       {
-                        "count": 119,
-                        "id": "autocomplete",
-                        "index": 3,
-                        "percentageQuestion": 6.71,
-                        "percentageSurvey": 2.2,
-                        "entity": {
-                          "name": "Autocomplete",
-                          "nameHtml": "Autocomplete",
-                          "nameClean": "Autocomplete",
-                          "description": "Autocomplete, comboxbox, typeahead, etc. inputs",
-                          "descriptionHtml": "Autocomplete, comboxbox, typeahead, etc. inputs",
-                          "descriptionClean": "Autocomplete, comboxbox, typeahead, etc. inputs",
-                          "id": "autocomplete",
-                          "parentId": "form_input_issues",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 76,
-                        "id": "select_element",
-                        "index": 4,
-                        "percentageQuestion": 4.29,
-                        "percentageSurvey": 1.41,
-                        "entity": {
-                          "name": "`<select>`",
-                          "nameHtml": "<code>&lt;select&gt;</code>",
-                          "nameClean": "<select>",
-                          "id": "select_element",
-                          "parentId": "form_input_issues",
-                          "entityType": "feature"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 44,
-                            "id": "select_element_multiselect",
-                            "percentageQuestion": 2.48,
-                            "percentageSurvey": 0.81,
-                            "entity": {
-                              "name": "MultiSelect",
-                              "nameHtml": "MultiSelect",
-                              "nameClean": "MultiSelect",
-                              "id": "select_element_multiselect",
-                              "parentId": "select_element",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
-                      },
-                      {
                         "count": 71,
                         "id": "accessibility",
-                        "index": 5,
+                        "index": 3,
                         "percentageQuestion": 4,
                         "percentageSurvey": 1.31,
                         "entity": {
                           "name": "Accessibility",
                           "nameHtml": "Accessibility",
                           "nameClean": "Accessibility",
-                          "description": "Accessibility improvements",
-                          "descriptionHtml": "Accessibility improvements",
-                          "descriptionClean": "Accessibility improvements",
+                          "description": "Accessibility issues",
+                          "descriptionHtml": "Accessibility issues",
+                          "descriptionClean": "Accessibility issues",
                           "id": "accessibility",
                           "entityType": "default"
                         }
@@ -272,7 +278,7 @@
                       {
                         "count": 53,
                         "id": "error_handling",
-                        "index": 6,
+                        "index": 4,
                         "percentageQuestion": 2.99,
                         "percentageSurvey": 0.98,
                         "entity": {
@@ -284,39 +290,9 @@
                         }
                       },
                       {
-                        "count": 47,
-                        "id": "input_type_number",
-                        "index": 7,
-                        "percentageQuestion": 2.65,
-                        "percentageSurvey": 0.87,
-                        "entity": {
-                          "name": "`<input type=\"number\">`",
-                          "nameHtml": "<code>&lt;input type=\"number\"&gt;</code>",
-                          "nameClean": "<input type=\"number\">",
-                          "id": "input_type_number",
-                          "parentId": "form_input_issues",
-                          "entityType": "feature"
-                        }
-                      },
-                      {
-                        "count": 42,
-                        "id": "button_element",
-                        "index": 8,
-                        "percentageQuestion": 2.37,
-                        "percentageSurvey": 0.78,
-                        "entity": {
-                          "name": "`<button>`",
-                          "nameHtml": "<code>&lt;button&gt;</code>",
-                          "nameClean": "<button>",
-                          "id": "button_element",
-                          "parentId": "form_input_issues",
-                          "entityType": "feature"
-                        }
-                      },
-                      {
                         "count": 37,
                         "id": "lack_additional_http_actions",
-                        "index": 9,
+                        "index": 5,
                         "percentageQuestion": 2.09,
                         "percentageSurvey": 0.69,
                         "entity": {
@@ -333,7 +309,7 @@
                       {
                         "count": 32,
                         "id": "content_editable",
-                        "index": 10,
+                        "index": 6,
                         "percentageQuestion": 1.8,
                         "percentageSurvey": 0.59,
                         "entity": {
@@ -347,7 +323,7 @@
                       {
                         "count": 32,
                         "id": "label_issues",
-                        "index": 11,
+                        "index": 7,
                         "percentageQuestion": 1.8,
                         "percentageSurvey": 0.59,
                         "entity": {
@@ -359,112 +335,9 @@
                         }
                       },
                       {
-                        "count": 26,
-                        "id": "datalist_element",
-                        "index": 12,
-                        "percentageQuestion": 1.47,
-                        "percentageSurvey": 0.48,
-                        "entity": {
-                          "name": "`<datalist>`",
-                          "nameHtml": "<code>&lt;datalist&gt;</code>",
-                          "nameClean": "<datalist>",
-                          "description": "Method of providing a list of presets for a user to select in a form control, while still allowing custom options.",
-                          "descriptionHtml": "Method of providing a list of presets for a user to select in a form control, while still allowing custom options.",
-                          "descriptionClean": "Method of providing a list of presets for a user to select in a form control, while still allowing custom options.",
-                          "id": "datalist_element",
-                          "parentId": "form_input_issues",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "html",
-                            "code": "<input name=\"country\" list=\"countries\">\n<datalist id=\"countries\">\n  <option>Afghanistan</option>\n  ...\n</datalist>",
-                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">&quot;country&quot;</span> <span class=\"hljs-attr\">list</span>=<span class=\"hljs-string\">&quot;countries&quot;</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">datalist</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;countries&quot;</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">option</span>&gt;</span>Afghanistan<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">option</span>&gt;</span>\n  ...\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">datalist</span>&gt;</span>"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/datalist"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/datalist"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element",
-                              "title": "The datalist element"
-                            }
-                          ],
-                          "webFeature": {
-                            "id": "datalist",
-                            "description_html": "The <code>&#x3C;datalist></code> element sets recommended values for an <code>&#x3C;input></code> element. Browsers may show a dropdown menu of all values or match values as the user types.",
-                            "group": [
-                              "forms"
-                            ],
-                            "name": "<datalist>",
-                            "spec": [
-                              "https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/datalist/",
-                            "status": {
-                              "baseline": "false",
-                              "support": {
-                                "chrome": "69",
-                                "chrome_android": "69",
-                                "edge": "12",
-                                "firefox": "110",
-                                "safari": "12.1",
-                                "safari_ios": "12.2"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 26,
-                        "id": "input_type_range",
-                        "index": 13,
-                        "percentageQuestion": 1.47,
-                        "percentageSurvey": 0.48,
-                        "entity": {
-                          "name": "`<input type=\"range\">`",
-                          "nameHtml": "<code>&lt;input type=\"range\"&gt;</code>",
-                          "nameClean": "<input type=\"range\">",
-                          "id": "input_type_range",
-                          "parentId": "form_input_issues",
-                          "entityType": "feature"
-                        }
-                      },
-                      {
-                        "count": 26,
-                        "id": "select_element_lack_of_search",
-                        "index": 14,
-                        "percentageQuestion": 1.47,
-                        "percentageSurvey": 0.48,
-                        "entity": {
-                          "id": "select_element_lack_of_search",
-                          "parentId": "form_input_issues",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 26,
-                        "id": "textarea_auto_growing",
-                        "index": 15,
-                        "percentageQuestion": 1.47,
-                        "percentageSurvey": 0.48,
-                        "entity": {
-                          "name": "`<textarea>` auto-growing",
-                          "nameHtml": "<code>&lt;textarea&gt;</code> auto-growing",
-                          "nameClean": "<textarea> auto-growing",
-                          "description": "Inability of `<textarea>` to grow to match input length",
-                          "descriptionHtml": "Inability of <code>&lt;textarea&gt;</code> to grow to match input length",
-                          "descriptionClean": "Inability of <textarea> to grow to match input length",
-                          "id": "textarea_auto_growing",
-                          "parentId": "form_input_issues",
-                          "entityType": "default"
-                        }
-                      },
-                      {
                         "count": 25,
                         "id": "form_handling",
-                        "index": 16,
+                        "index": 8,
                         "percentageQuestion": 1.41,
                         "percentageSurvey": 0.46,
                         "entity": {
@@ -505,21 +378,41 @@
                               "parentId": "form_handling",
                               "entityType": "default"
                             }
+                          },
+                          {
+                            "count": 6,
+                            "id": "javascript_form_handling",
+                            "percentageQuestion": 0.34,
+                            "percentageSurvey": 0.11,
+                            "entity": {
+                              "name": "JavaScript form handling",
+                              "nameHtml": "JavaScript form handling",
+                              "nameClean": "JavaScript form handling",
+                              "description": "Handling forms in JavaScript",
+                              "descriptionHtml": "Handling forms in JavaScript",
+                              "descriptionClean": "Handling forms in JavaScript",
+                              "id": "javascript_form_handling",
+                              "parentId": "form_handling",
+                              "entityType": "default"
+                            }
                           }
                         ]
                       },
                       {
                         "count": 24,
                         "id": "safari",
-                        "index": 17,
+                        "index": 9,
                         "percentageQuestion": 1.35,
                         "percentageSurvey": 0.44,
                         "entity": {
-                          "name": "Safari",
-                          "nameHtml": "Safari",
-                          "nameClean": "Safari",
+                          "name": "Safari browser",
+                          "nameHtml": "Safari browser",
+                          "nameClean": "Safari browser",
+                          "description": "Issues specific to the Safari browser, across all platforms.",
+                          "descriptionHtml": "Issues specific to the Safari browser, across all platforms.",
+                          "descriptionClean": "Issues specific to the Safari browser, across all platforms.",
                           "id": "safari",
-                          "parentId": "apple",
+                          "parentId": "interop_issues",
                           "entityType": "default",
                           "homepage": {
                             "url": "https://www.apple.com/safari/"
@@ -529,16 +422,16 @@
                       {
                         "count": 21,
                         "id": "reliance_on_javascript",
-                        "index": 18,
+                        "index": 10,
                         "percentageQuestion": 1.18,
                         "percentageSurvey": 0.39,
                         "entity": {
                           "name": "Reliance on JavaScript",
                           "nameHtml": "Reliance on JavaScript",
                           "nameClean": "Reliance on JavaScript",
-                          "description": "Excessive reliance on JavaScript",
-                          "descriptionHtml": "Excessive reliance on JavaScript",
-                          "descriptionClean": "Excessive reliance on JavaScript",
+                          "description": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "descriptionHtml": "Lack of declarative APIs, slow rendering due to dependence on correct loading &amp; execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "descriptionClean": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
                           "id": "reliance_on_javascript",
                           "entityType": "default"
                         }
@@ -546,17 +439,356 @@
                       {
                         "count": 19,
                         "id": "excessive_complexity",
-                        "index": 19,
+                        "index": 11,
                         "percentageQuestion": 1.07,
                         "percentageSurvey": 0.35,
                         "entity": {
                           "name": "Excessive complexity",
                           "nameHtml": "Excessive complexity",
                           "nameClean": "Excessive complexity",
-                          "description": "Too much complexity",
-                          "descriptionHtml": "Too much complexity",
-                          "descriptionClean": "Too much complexity",
+                          "description": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
+                          "descriptionHtml": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
+                          "descriptionClean": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
                           "id": "excessive_complexity",
+                          "parentId": "cognitive_overload",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 16,
+                        "id": "state_management",
+                        "index": 12,
+                        "percentageQuestion": 0.9,
+                        "percentageSurvey": 0.3,
+                        "entity": {
+                          "name": "State Management",
+                          "nameHtml": "State Management",
+                          "nameClean": "State Management",
+                          "description": "Difficulties with managing and preserving UI state (e.g., focus, scroll position, form input values, component state) during DOM manipulations.",
+                          "descriptionHtml": "Difficulties with managing and preserving UI state (e.g., focus, scroll position, form input values, component state) during DOM manipulations.",
+                          "descriptionClean": "Difficulties with managing and preserving UI state (e.g., focus, scroll position, form input values, component state) during DOM manipulations.",
+                          "id": "state_management",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 15,
+                        "id": "rich_text_editing",
+                        "index": 13,
+                        "percentageQuestion": 0.85,
+                        "percentageSurvey": 0.28,
+                        "entity": {
+                          "name": "Rich Text Editing",
+                          "nameHtml": "Rich Text Editing",
+                          "nameClean": "Rich Text Editing",
+                          "description": "Pain points with `contentEditable` and the general difficulty of building rich text editors on the web.",
+                          "descriptionHtml": "Pain points with <code>contentEditable</code> and the general difficulty of building rich text editors on the web.",
+                          "descriptionClean": "Pain points with contentEditable and the general difficulty of building rich text editors on the web.",
+                          "id": "rich_text_editing",
+                          "parentId": "editing_apis",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 11,
+                        "id": "focus_management",
+                        "index": 14,
+                        "percentageQuestion": 0.62,
+                        "percentageSurvey": 0.2,
+                        "entity": {
+                          "name": "Focus Management",
+                          "nameHtml": "Focus Management",
+                          "nameClean": "Focus Management",
+                          "description": "Challenges with managing focus, especially in dynamic contexts. Includes focus trapping, roving tabindex, moving focus programmatically, and preserving focus when DOM elements are added, removed, or moved.",
+                          "descriptionHtml": "Challenges with managing focus, especially in dynamic contexts. Includes focus trapping, roving tabindex, moving focus programmatically, and preserving focus when DOM elements are added, removed, or moved.",
+                          "descriptionClean": "Challenges with managing focus, especially in dynamic contexts. Includes focus trapping, roving tabindex, moving focus programmatically, and preserving focus when DOM elements are added, removed, or moved.",
+                          "id": "focus_management",
+                          "parentId": "a11y_technical_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 11,
+                        "id": "nested_forms",
+                        "index": 15,
+                        "percentageQuestion": 0.62,
+                        "percentageSurvey": 0.2,
+                        "entity": {
+                          "name": "Nested forms",
+                          "nameHtml": "Nested forms",
+                          "nameClean": "Nested forms",
+                          "description": "Handling forms with multiple levels of nesting",
+                          "descriptionHtml": "Handling forms with multiple levels of nesting",
+                          "descriptionClean": "Handling forms with multiple levels of nesting",
+                          "id": "nested_forms",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 10,
+                        "id": "drop_down",
+                        "index": 16,
+                        "percentageQuestion": 0.56,
+                        "percentageSurvey": 0.19,
+                        "entity": {
+                          "name": "Dropdown menus",
+                          "nameHtml": "Dropdown menus",
+                          "nameClean": "Dropdown menus",
+                          "id": "drop_down",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 9,
+                        "id": "form_input_issues",
+                        "index": 17,
+                        "percentageQuestion": 0.51,
+                        "percentageSurvey": 0.17,
+                        "entity": {
+                          "name": "Input element issues",
+                          "nameHtml": "Input element issues",
+                          "nameClean": "Input element issues",
+                          "description": "Issues concerning various form input elements",
+                          "descriptionHtml": "Issues concerning various form input elements",
+                          "descriptionClean": "Issues concerning various form input elements",
+                          "id": "form_input_issues",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 119,
+                            "id": "autocomplete",
+                            "percentageQuestion": 6.71,
+                            "percentageSurvey": 2.2,
+                            "entity": {
+                              "name": "Autocomplete",
+                              "nameHtml": "Autocomplete",
+                              "nameClean": "Autocomplete",
+                              "description": "Pain points with the `autocomplete` attribute and browser autofill behavior.",
+                              "descriptionHtml": "Pain points with the <code>autocomplete</code> attribute and browser autofill behavior.",
+                              "descriptionClean": "Pain points with the autocomplete attribute and browser autofill behavior.",
+                              "id": "autocomplete",
+                              "parentId": "form_input_issues",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 76,
+                            "id": "select_element",
+                            "percentageQuestion": 4.29,
+                            "percentageSurvey": 1.41,
+                            "entity": {
+                              "name": "<​select>",
+                              "nameHtml": "&lt;​select&gt;",
+                              "nameClean": "<​select>",
+                              "description": "Pain points related to the `<select>` element.",
+                              "descriptionHtml": "Pain points related to the <code>&lt;select&gt;</code> element.",
+                              "descriptionClean": "Pain points related to the <select> element.",
+                              "id": "select_element",
+                              "parentId": "form_input_issues",
+                              "entityType": "default"
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 44,
+                                "id": "select_element_multiselect",
+                                "percentageQuestion": 2.48,
+                                "percentageSurvey": 0.81,
+                                "entity": {
+                                  "name": "Multiselect",
+                                  "nameHtml": "Multiselect",
+                                  "nameClean": "Multiselect",
+                                  "description": "Issues with the user experience and appearance of `<select multiple>`.",
+                                  "descriptionHtml": "Issues with the user experience and appearance of <code>&lt;select multiple&gt;</code>.",
+                                  "descriptionClean": "Issues with the user experience and appearance of <select multiple>.",
+                                  "id": "select_element_multiselect",
+                                  "parentId": "select_element",
+                                  "entityType": "default"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "count": 47,
+                            "id": "input_type_number",
+                            "percentageQuestion": 2.65,
+                            "percentageSurvey": 0.87,
+                            "entity": {
+                              "name": "`<input type=\"number\">`",
+                              "nameHtml": "<code>&lt;input type=\"number\"&gt;</code>",
+                              "nameClean": "<input type=\"number\">",
+                              "id": "input_type_number",
+                              "parentId": "form_input_issues",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 42,
+                            "id": "button_element",
+                            "percentageQuestion": 2.37,
+                            "percentageSurvey": 0.78,
+                            "entity": {
+                              "name": "<​button>",
+                              "nameHtml": "&lt;​button&gt;",
+                              "nameClean": "<​button>",
+                              "description": "Pain points related to the `<button>` element, including its default behaviors within a form.",
+                              "descriptionHtml": "Pain points related to the <code>&lt;button&gt;</code> element, including its default behaviors within a form.",
+                              "descriptionClean": "Pain points related to the <button> element, including its default behaviors within a form.",
+                              "id": "button_element",
+                              "parentId": "form_input_issues",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 26,
+                            "id": "datalist_element",
+                            "percentageQuestion": 1.47,
+                            "percentageSurvey": 0.48,
+                            "entity": {
+                              "name": "<​datalist>",
+                              "nameHtml": "&lt;​datalist&gt;",
+                              "nameClean": "<​datalist>",
+                              "description": "Pain points related to the `<datalist>` element, including styling and inconsistent UI.",
+                              "descriptionHtml": "Pain points related to the <code>&lt;datalist&gt;</code> element, including styling and inconsistent UI.",
+                              "descriptionClean": "Pain points related to the <datalist> element, including styling and inconsistent UI.",
+                              "id": "datalist_element",
+                              "parentId": "form_input_issues",
+                              "entityType": "default",
+                              "example": {
+                                "language": "html",
+                                "code": "<input name=\"country\" list=\"countries\">\n<datalist id=\"countries\">\n  <option>Afghanistan</option>\n  ...\n</datalist>",
+                                "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">&quot;country&quot;</span> <span class=\"hljs-attr\">list</span>=<span class=\"hljs-string\">&quot;countries&quot;</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">datalist</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;countries&quot;</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">option</span>&gt;</span>Afghanistan<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">option</span>&gt;</span>\n  ...\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">datalist</span>&gt;</span>"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/datalist"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/datalist"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element",
+                                  "title": "The datalist element"
+                                }
+                              ],
+                              "webFeature": {
+                                "id": "datalist",
+                                "description_html": "The <code>&#x3C;datalist></code> element sets recommended values for an <code>&#x3C;input></code> element. Browsers may show a dropdown menu of all values or match values as the user types.",
+                                "group": [
+                                  "forms"
+                                ],
+                                "name": "<datalist>",
+                                "spec": [
+                                  "https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/datalist/",
+                                "status": {
+                                  "baseline": "false",
+                                  "support": {
+                                    "chrome": "69",
+                                    "chrome_android": "69",
+                                    "edge": "12",
+                                    "firefox": "110",
+                                    "safari": "12.1",
+                                    "safari_ios": "12.2"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "count": 26,
+                            "id": "input_type_range",
+                            "percentageQuestion": 1.47,
+                            "percentageSurvey": 0.48,
+                            "entity": {
+                              "name": "`<input type=\"range\">`",
+                              "nameHtml": "<code>&lt;input type=\"range\"&gt;</code>",
+                              "nameClean": "<input type=\"range\">",
+                              "id": "input_type_range",
+                              "parentId": "form_input_issues",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 26,
+                            "id": "textarea_auto_growing",
+                            "percentageQuestion": 1.47,
+                            "percentageSurvey": 0.48,
+                            "entity": {
+                              "name": "`<textarea>` auto-growing",
+                              "nameHtml": "<code>&lt;textarea&gt;</code> auto-growing",
+                              "nameClean": "<textarea> auto-growing",
+                              "description": "Inability of `<textarea>` to grow to match input length",
+                              "descriptionHtml": "Inability of <code>&lt;textarea&gt;</code> to grow to match input length",
+                              "descriptionClean": "Inability of <textarea> to grow to match input length",
+                              "id": "textarea_auto_growing",
+                              "parentId": "form_input_issues",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 26,
+                            "id": "select_element_lack_of_search",
+                            "percentageQuestion": 1.47,
+                            "percentageSurvey": 0.48,
+                            "entity": {
+                              "id": "select_element_lack_of_search",
+                              "parentId": "form_input_issues",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 6,
+                            "id": "input_type_date",
+                            "percentageQuestion": 0.34,
+                            "percentageSurvey": 0.11,
+                            "entity": {
+                              "name": "Date Picker",
+                              "nameHtml": "Date Picker",
+                              "nameClean": "Date Picker",
+                              "description": "Pain points related to `<input type=\"date\">` and its associated picker UI.",
+                              "descriptionHtml": "Pain points related to <code>&lt;input type=\"date\"&gt;</code> and its associated picker UI.",
+                              "descriptionClean": "Pain points related to <input type=\"date\"> and its associated picker UI.",
+                              "id": "input_type_date",
+                              "parentId": "form_input_issues",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 6,
+                        "id": "configuration",
+                        "index": 18,
+                        "percentageQuestion": 0.34,
+                        "percentageSurvey": 0.11,
+                        "entity": {
+                          "name": "Configuration",
+                          "nameHtml": "Configuration",
+                          "nameClean": "Configuration",
+                          "description": "Difficulties with set-up and configuration",
+                          "descriptionHtml": "Difficulties with set-up and configuration",
+                          "descriptionClean": "Difficulties with set-up and configuration",
+                          "id": "configuration",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 5,
+                        "id": "checkbox_input",
+                        "index": 19,
+                        "percentageQuestion": 0.28,
+                        "percentageSurvey": 0.09,
+                        "entity": {
+                          "name": "Checkbox Input",
+                          "nameHtml": "Checkbox Input",
+                          "nameClean": "Checkbox Input",
+                          "description": "Pain points specific to `<input type=\"checkbox\">`.",
+                          "descriptionHtml": "Pain points specific to <code>&lt;input type=\"checkbox\"&gt;</code>.",
+                          "descriptionClean": "Pain points specific to <input type=\"checkbox\">.",
+                          "id": "checkbox_input",
+                          "parentId": "forms_issues",
                           "entityType": "default"
                         }
                       },
@@ -568,11 +800,11 @@
                         "percentageSurvey": 67.17
                       },
                       {
-                        "count": 801,
+                        "count": 686,
                         "id": "other_answers",
                         "index": 21,
-                        "percentageQuestion": 45.23,
-                        "percentageSurvey": 14.89
+                        "percentageQuestion": 38.75,
+                        "percentageSurvey": 12.76
                       }
                     ]
                   },
@@ -583,7 +815,7 @@
                         "order": "desc"
                       },
                       "limit": 20,
-                      "cutoff": 10
+                      "cutoff": 5
                     },
                     "editionId": "html2025",
                     "year": 2025,
@@ -594,27 +826,28 @@
                     },
                     "buckets": [
                       {
-                        "count": 986,
+                        "count": 987,
                         "id": "styling_customization",
                         "index": 0,
-                        "percentageQuestion": 48.31,
-                        "percentageSurvey": 15.84,
+                        "percentageQuestion": 48.36,
+                        "percentageSurvey": 15.86,
                         "entity": {
-                          "name": "Styling & customization",
-                          "nameHtml": "Styling &amp; customization",
-                          "nameClean": "Styling & customization",
-                          "description": "CSS styling and customization issues.",
-                          "descriptionHtml": "CSS styling and customization issues.",
-                          "descriptionClean": "CSS styling and customization issues.",
+                          "name": "Styling and UI customization",
+                          "nameHtml": "Styling and UI customization",
+                          "nameClean": "Styling and UI customization",
+                          "description": "Issues around styling and customizing browser-generated UI.",
+                          "descriptionHtml": "Issues around styling and customizing browser-generated UI.",
+                          "descriptionClean": "Issues around styling and customizing browser-generated UI.",
                           "id": "styling_customization",
+                          "parentId": "a11y_technical_issues",
                           "entityType": "default"
                         },
                         "nestedBuckets": [
                           {
-                            "count": 933,
-                            "id": "styling",
-                            "percentageQuestion": 45.71,
-                            "percentageSurvey": 14.99,
+                            "count": 934,
+                            "id": "styling_issues",
+                            "percentageQuestion": 45.76,
+                            "percentageSurvey": 15.01,
                             "entity": {
                               "name": "Styling",
                               "nameHtml": "Styling",
@@ -622,16 +855,16 @@
                               "description": "Issues around styling UA-generated UI, CSS not working in certain contexts, etc.",
                               "descriptionHtml": "Issues around styling UA-generated UI, CSS not working in certain contexts, etc.",
                               "descriptionClean": "Issues around styling UA-generated UI, CSS not working in certain contexts, etc.",
-                              "id": "styling",
+                              "id": "styling_issues",
                               "parentId": "styling_customization",
                               "entityType": "default"
                             }
                           },
                           {
-                            "count": 42,
+                            "count": 43,
                             "id": "ui_customization",
-                            "percentageQuestion": 2.06,
-                            "percentageSurvey": 0.67,
+                            "percentageQuestion": 2.11,
+                            "percentageSurvey": 0.69,
                             "entity": {
                               "name": "UI Customization",
                               "nameHtml": "UI Customization",
@@ -661,41 +894,28 @@
                         ]
                       },
                       {
-                        "count": 526,
-                        "id": "form_validation",
+                        "count": 527,
+                        "id": "form_validation_issues",
                         "index": 1,
-                        "percentageQuestion": 25.77,
-                        "percentageSurvey": 8.45,
+                        "percentageQuestion": 25.82,
+                        "percentageSurvey": 8.47,
                         "entity": {
-                          "name": "Form validation",
-                          "nameHtml": "Form validation",
-                          "nameClean": "Form validation",
-                          "description": "Set of HTML attributes and JS APIs to facilitate client-side form validation (`<input pattern>`, `<input required>`, `input. setCustomValidity(msg)` etc)",
-                          "descriptionHtml": "Set of HTML attributes and JS APIs to facilitate client-side form validation (<code>&lt;input pattern&gt;</code>, <code>&lt;input required&gt;</code>, <code>input. setCustomValidity(msg)</code> etc)",
-                          "descriptionClean": "Set of HTML attributes and JS APIs to facilitate client-side form validation (<input pattern>, <input required>, input. setCustomValidity(msg) etc)",
-                          "id": "form_validation",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "html",
-                            "code": "<input id=\"zip\" pattern=\"[0-9]{5}\" title=\"5 digits\" required />",
-                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;zip&quot;</span> <span class=\"hljs-attr\">pattern</span>=<span class=\"hljs-string\">&quot;[0-9]{5}&quot;</span> <span class=\"hljs-attr\">title</span>=<span class=\"hljs-string\">&quot;5 digits&quot;</span> <span class=\"hljs-attr\">required</span> /&gt;</span>"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api",
-                              "title": "HTML Standard"
-                            }
-                          ]
+                          "name": "Form Validation",
+                          "nameHtml": "Form Validation",
+                          "nameClean": "Form Validation",
+                          "description": "General pain points with form validation.",
+                          "descriptionHtml": "General pain points with form validation.",
+                          "descriptionClean": "General pain points with form validation.",
+                          "id": "form_validation_issues",
+                          "parentId": "forms_issues",
+                          "entityType": "default"
                         },
                         "nestedBuckets": [
                           {
-                            "count": 121,
+                            "count": 122,
                             "id": "validation_errors",
-                            "percentageQuestion": 5.93,
-                            "percentageSurvey": 1.94,
+                            "percentageQuestion": 5.98,
+                            "percentageSurvey": 1.96,
                             "entity": {
                               "name": "Validation Errors",
                               "nameHtml": "Validation Errors",
@@ -704,7 +924,7 @@
                               "descriptionHtml": "Pain points related to the UA-generated validation errors. For issues with styling and customizing the content of built-in error messages, combine with <code>styling_customization</code> or its descendants.",
                               "descriptionClean": "Pain points related to the UA-generated validation errors. For issues with styling and customizing the content of built-in error messages, combine with styling_customization or its descendants.",
                               "id": "validation_errors",
-                              "parentId": "form_validation",
+                              "parentId": "form_validation_issues",
                               "entityType": "default"
                             }
                           },
@@ -721,42 +941,62 @@
                               "descriptionHtml": "Difficulties in implementing validation logic where the validity of one field depends on the value of another field.",
                               "descriptionClean": "Difficulties in implementing validation logic where the validity of one field depends on the value of another field.",
                               "id": "cross_field_validation",
-                              "parentId": "form_validation",
+                              "parentId": "form_validation_issues",
                               "entityType": "default"
                             }
                           },
                           {
-                            "count": 26,
-                            "id": "form_validation_api",
-                            "percentageQuestion": 1.27,
-                            "percentageSurvey": 0.42,
+                            "count": 10,
+                            "id": "async_validation",
+                            "percentageQuestion": 0.49,
+                            "percentageSurvey": 0.16,
                             "entity": {
-                              "name": "Validation API",
-                              "nameHtml": "Validation API",
-                              "nameClean": "Validation API",
-                              "description": "Issues with the programmatic aspects of the Constraint Validation API (e.g., `setCustomValidity()`).",
-                              "descriptionHtml": "Issues with the programmatic aspects of the Constraint Validation API (e.g., <code>setCustomValidity()</code>).",
-                              "descriptionClean": "Issues with the programmatic aspects of the Constraint Validation API (e.g., setCustomValidity()).",
-                              "id": "form_validation_api",
-                              "parentId": "form_validation",
+                              "name": "Async Validation",
+                              "nameHtml": "Async Validation",
+                              "nameClean": "Async Validation",
+                              "description": "The lack of a built-in mechanism for performing asynchronous validation, such as checking a username's availability against a server.",
+                              "descriptionHtml": "The lack of a built-in mechanism for performing asynchronous validation, such as checking a username's availability against a server.",
+                              "descriptionClean": "The lack of a built-in mechanism for performing asynchronous validation, such as checking a username's availability against a server.",
+                              "id": "async_validation",
+                              "parentId": "form_validation_issues",
                               "entityType": "default"
                             }
                           }
                         ]
                       },
                       {
-                        "count": 441,
-                        "id": "select_element",
+                        "count": 509,
+                        "id": "high_cognitive_load",
                         "index": 2,
-                        "percentageQuestion": 21.61,
-                        "percentageSurvey": 7.09,
+                        "percentageQuestion": 24.94,
+                        "percentageSurvey": 8.18,
                         "entity": {
-                          "name": "`<select>`",
-                          "nameHtml": "<code>&lt;select&gt;</code>",
-                          "nameClean": "<select>",
+                          "name": "🗑️ High cognitive load",
+                          "nameHtml": "🗑️ High cognitive load",
+                          "nameClean": "🗑️ High cognitive load",
+                          "description": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "descriptionHtml": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "descriptionClean": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "id": "high_cognitive_load",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 442,
+                        "id": "select_element",
+                        "index": 3,
+                        "percentageQuestion": 21.66,
+                        "percentageSurvey": 7.1,
+                        "entity": {
+                          "name": "<​select>",
+                          "nameHtml": "&lt;​select&gt;",
+                          "nameClean": "<​select>",
+                          "description": "Pain points related to the `<select>` element.",
+                          "descriptionHtml": "Pain points related to the <code>&lt;select&gt;</code> element.",
+                          "descriptionClean": "Pain points related to the <select> element.",
                           "id": "select_element",
                           "parentId": "form_input_issues",
-                          "entityType": "feature"
+                          "entityType": "default"
                         },
                         "nestedBuckets": [
                           {
@@ -765,15 +1005,15 @@
                             "percentageQuestion": 13.47,
                             "percentageSurvey": 4.42,
                             "entity": {
-                              "name": "Customizable Select",
-                              "nameHtml": "Customizable Select",
-                              "nameClean": "Customizable Select",
-                              "description": "Stylable, customizable dropdown control. Previously `<selectlist>` and `<selectmenu>`.",
-                              "descriptionHtml": "Stylable, customizable dropdown control. Previously <code>&lt;selectlist&gt;</code> and <code>&lt;selectmenu&gt;</code>.",
-                              "descriptionClean": "Stylable, customizable dropdown control. Previously <selectlist> and <selectmenu>.",
+                              "name": "Customizable select",
+                              "nameHtml": "Customizable select",
+                              "nameClean": "Customizable select",
+                              "description": "A <select> element that is stylable and has more UI flexibility",
+                              "descriptionHtml": "A  element that is stylable and has more UI flexibility",
+                              "descriptionClean": "A  element that is stylable and has more UI flexibility",
                               "id": "customizable_select",
                               "parentId": "select_element",
-                              "entityType": "feature",
+                              "entityType": "default",
                               "example": {
                                 "language": "css",
                                 "code": "select,\n::picker(select) {\n  appearance: base-select;\n}",
@@ -834,9 +1074,12 @@
                             "percentageQuestion": 2.99,
                             "percentageSurvey": 0.98,
                             "entity": {
-                              "name": "MultiSelect",
-                              "nameHtml": "MultiSelect",
-                              "nameClean": "MultiSelect",
+                              "name": "Multiselect",
+                              "nameHtml": "Multiselect",
+                              "nameClean": "Multiselect",
+                              "description": "Issues with the user experience and appearance of `<select multiple>`.",
+                              "descriptionHtml": "Issues with the user experience and appearance of <code>&lt;select multiple&gt;</code>.",
+                              "descriptionClean": "Issues with the user experience and appearance of <select multiple>.",
                               "id": "select_element_multiselect",
                               "parentId": "select_element",
                               "entityType": "default"
@@ -863,8 +1106,8 @@
                       },
                       {
                         "count": 364,
-                        "id": "interop",
-                        "index": 3,
+                        "id": "interop_issues",
+                        "index": 4,
                         "percentageQuestion": 17.83,
                         "percentageSurvey": 5.85,
                         "entity": {
@@ -874,14 +1117,118 @@
                           "description": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
                           "descriptionHtml": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
                           "descriptionClean": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
-                          "id": "interop",
+                          "id": "interop_issues",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 37,
+                            "id": "safari",
+                            "percentageQuestion": 1.81,
+                            "percentageSurvey": 0.59,
+                            "entity": {
+                              "name": "Safari browser",
+                              "nameHtml": "Safari browser",
+                              "nameClean": "Safari browser",
+                              "description": "Issues specific to the Safari browser, across all platforms.",
+                              "descriptionHtml": "Issues specific to the Safari browser, across all platforms.",
+                              "descriptionClean": "Issues specific to the Safari browser, across all platforms.",
+                              "id": "safari",
+                              "parentId": "interop_issues",
+                              "entityType": "default",
+                              "homepage": {
+                                "url": "https://www.apple.com/safari/"
+                              }
+                            }
+                          },
+                          {
+                            "count": 22,
+                            "id": "firefox",
+                            "percentageQuestion": 1.08,
+                            "percentageSurvey": 0.35,
+                            "entity": {
+                              "name": "Firefox browser",
+                              "nameHtml": "Firefox browser",
+                              "nameClean": "Firefox browser",
+                              "description": "Issues specific to the Firefox browser, across all platforms.",
+                              "descriptionHtml": "Issues specific to the Firefox browser, across all platforms.",
+                              "descriptionClean": "Issues specific to the Firefox browser, across all platforms.",
+                              "id": "firefox",
+                              "parentId": "interop_issues",
+                              "entityType": "default",
+                              "homepage": {
+                                "url": "https://www.mozilla.org/en-US/firefox/new/"
+                              }
+                            }
+                          },
+                          {
+                            "count": 21,
+                            "id": "google",
+                            "percentageQuestion": 1.03,
+                            "percentageSurvey": 0.34,
+                            "entity": {
+                              "name": "Google",
+                              "nameHtml": "Google",
+                              "nameClean": "Google",
+                              "description": "Issues specific to the Google ecosystem (e.g., Chrome, Blink, Android).",
+                              "descriptionHtml": "Issues specific to the Google ecosystem (e.g., Chrome, Blink, Android).",
+                              "descriptionClean": "Issues specific to the Google ecosystem (e.g., Chrome, Blink, Android).",
+                              "id": "google",
+                              "parentId": "interop_issues",
+                              "entityType": "default",
+                              "homepage": {
+                                "url": "https://google.com"
+                              }
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 19,
+                                "id": "chrome",
+                                "percentageQuestion": 0.93,
+                                "percentageSurvey": 0.31,
+                                "entity": {
+                                  "name": "Chrome browser",
+                                  "nameHtml": "Chrome browser",
+                                  "nameClean": "Chrome browser",
+                                  "description": "Issues specific to the Chrome browser or the Chromum rendering engine, across all platforms.",
+                                  "descriptionHtml": "Issues specific to the Chrome browser or the Chromum rendering engine, across all platforms.",
+                                  "descriptionClean": "Issues specific to the Chrome browser or the Chromum rendering engine, across all platforms.",
+                                  "id": "chrome",
+                                  "parentId": "google",
+                                  "entityType": "default",
+                                  "homepage": {
+                                    "url": "https://www.google.com/chrome/"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "count": 10,
+                            "id": "ios",
+                            "percentageQuestion": 0.49,
+                            "percentageSurvey": 0.16,
+                            "entity": {
+                              "name": "iOS",
+                              "nameHtml": "iOS",
+                              "nameClean": "iOS",
+                              "description": "Issues specific to iOS as a platform.",
+                              "descriptionHtml": "Issues specific to iOS as a platform.",
+                              "descriptionClean": "Issues specific to iOS as a platform.",
+                              "id": "ios",
+                              "parentId": "interop_issues",
+                              "entityType": "default",
+                              "homepage": {
+                                "url": "https://www.apple.com/ios"
+                              }
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 256,
                         "id": "pickers",
-                        "index": 4,
+                        "index": 5,
                         "percentageQuestion": 12.54,
                         "percentageSurvey": 4.11,
                         "entity": {
@@ -892,23 +1239,40 @@
                           "descriptionHtml": "Pain points related to the UI that \"picks\" a value for an input, such as a calendar or color swatch.",
                           "descriptionClean": "Pain points related to the UI that \"picks\" a value for an input, such as a calendar or color swatch.",
                           "id": "pickers",
-                          "parentId": "forms",
+                          "parentId": "forms_issues",
                           "entityType": "default"
                         },
                         "nestedBuckets": [
                           {
-                            "count": 210,
-                            "id": "date_picker",
-                            "percentageQuestion": 10.29,
-                            "percentageSurvey": 3.37,
+                            "count": 52,
+                            "id": "time_picker",
+                            "percentageQuestion": 2.55,
+                            "percentageSurvey": 0.84,
                             "entity": {
-                              "name": "Date Picker",
-                              "nameHtml": "Date Picker",
-                              "nameClean": "Date Picker",
-                              "description": "Pain points related to `<input type=\"date\">` and its associated picker UI.",
-                              "descriptionHtml": "Pain points related to <code>&lt;input type=\"date\"&gt;</code> and its associated picker UI.",
-                              "descriptionClean": "Pain points related to <input type=\"date\"> and its associated picker UI.",
-                              "id": "date_picker",
+                              "name": "Time Picker",
+                              "nameHtml": "Time Picker",
+                              "nameClean": "Time Picker",
+                              "description": "Pain points related to `<input type=\"time\">` and its associated picker UI.",
+                              "descriptionHtml": "Pain points related to <code>&lt;input type=\"time\"&gt;</code> and its associated picker UI.",
+                              "descriptionClean": "Pain points related to <input type=\"time\"> and its associated picker UI.",
+                              "id": "time_picker",
+                              "parentId": "pickers",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 32,
+                            "id": "color_picker",
+                            "percentageQuestion": 1.57,
+                            "percentageSurvey": 0.51,
+                            "entity": {
+                              "name": "Color Picker",
+                              "nameHtml": "Color Picker",
+                              "nameClean": "Color Picker",
+                              "description": "Pain points related to `<input type=\"color\">` and its associated picker UI.",
+                              "descriptionHtml": "Pain points related to <code>&lt;input type=\"color\"&gt;</code> and its associated picker UI.",
+                              "descriptionClean": "Pain points related to <input type=\"color\"> and its associated picker UI.",
+                              "id": "color_picker",
                               "parentId": "pickers",
                               "entityType": "default"
                             }
@@ -916,34 +1280,94 @@
                         ]
                       },
                       {
+                        "count": 210,
+                        "id": "input_type_date",
+                        "index": 6,
+                        "percentageQuestion": 10.29,
+                        "percentageSurvey": 3.37,
+                        "entity": {
+                          "name": "Date Picker",
+                          "nameHtml": "Date Picker",
+                          "nameClean": "Date Picker",
+                          "description": "Pain points related to `<input type=\"date\">` and its associated picker UI.",
+                          "descriptionHtml": "Pain points related to <code>&lt;input type=\"date\"&gt;</code> and its associated picker UI.",
+                          "descriptionClean": "Pain points related to <input type=\"date\"> and its associated picker UI.",
+                          "id": "input_type_date",
+                          "parentId": "form_input_issues",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 26,
+                            "id": "date_range_picker",
+                            "percentageQuestion": 1.27,
+                            "percentageSurvey": 0.42,
+                            "entity": {
+                              "name": "Date Range Picker",
+                              "nameHtml": "Date Range Picker",
+                              "nameClean": "Date Range Picker",
+                              "description": "A native control for selecting a start and an end date.",
+                              "descriptionHtml": "A native control for selecting a start and an end date.",
+                              "descriptionClean": "A native control for selecting a start and an end date.",
+                              "id": "date_range_picker",
+                              "parentId": "input_type_date",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
                         "count": 191,
-                        "id": "accessibility",
-                        "index": 5,
+                        "id": "accessibility_issues",
+                        "index": 7,
                         "percentageQuestion": 9.36,
                         "percentageSurvey": 3.07,
                         "entity": {
                           "name": "Accessibility",
                           "nameHtml": "Accessibility",
                           "nameClean": "Accessibility",
-                          "description": "Accessibility improvements",
-                          "descriptionHtml": "Accessibility improvements",
-                          "descriptionClean": "Accessibility improvements",
-                          "id": "accessibility",
+                          "description": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "descriptionHtml": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "descriptionClean": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "id": "accessibility_issues",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 19,
+                            "id": "aria_issues",
+                            "percentageQuestion": 0.93,
+                            "percentageSurvey": 0.31,
+                            "entity": {
+                              "name": "ARIA",
+                              "nameHtml": "ARIA",
+                              "nameClean": "ARIA",
+                              "description": "Issues related to using Accessible Rich Internet Applications (ARIA) attributes and patterns.",
+                              "descriptionHtml": "Issues related to using Accessible Rich Internet Applications (ARIA) attributes and patterns.",
+                              "descriptionClean": "Issues related to using Accessible Rich Internet Applications (ARIA) attributes and patterns.",
+                              "id": "aria_issues",
+                              "parentId": "accessibility_issues",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
-                        "count": 184,
+                        "count": 185,
                         "id": "input_element",
-                        "index": 6,
-                        "percentageQuestion": 9.02,
-                        "percentageSurvey": 2.96,
+                        "index": 8,
+                        "percentageQuestion": 9.06,
+                        "percentageSurvey": 2.97,
                         "entity": {
-                          "name": "`<input>`",
-                          "nameHtml": "<code>&lt;input&gt;</code>",
-                          "nameClean": "<input>",
+                          "name": "<​input>",
+                          "nameHtml": "&lt;​input&gt;",
+                          "nameClean": "<​input>",
+                          "description": "General pain points with the `<input>` element or for input types not covered by more specific codes.",
+                          "descriptionHtml": "General pain points with the <code>&lt;input&gt;</code> element or for input types not covered by more specific codes.",
+                          "descriptionClean": "General pain points with the <input> element or for input types not covered by more specific codes.",
                           "id": "input_element",
-                          "entityType": "feature"
+                          "parentId": "forms_issues",
+                          "entityType": "default"
                         },
                         "nestedBuckets": [
                           {
@@ -967,8 +1391,8 @@
                       },
                       {
                         "count": 145,
-                        "id": "form_submission",
-                        "index": 7,
+                        "id": "form_submission_issues",
+                        "index": 9,
                         "percentageQuestion": 7.1,
                         "percentageSurvey": 2.33,
                         "entity": {
@@ -978,8 +1402,8 @@
                           "description": "Pain points related to the process of submitting form data.",
                           "descriptionHtml": "Pain points related to the process of submitting form data.",
                           "descriptionClean": "Pain points related to the process of submitting form data.",
-                          "id": "form_submission",
-                          "parentId": "forms",
+                          "id": "form_submission_issues",
+                          "parentId": "forms_issues",
                           "entityType": "default"
                         },
                         "nestedBuckets": [
@@ -996,7 +1420,7 @@
                               "descriptionHtml": "The limitation of <code>&lt;form&gt;</code> elements to only support GET and POST methods, lacking support for PUT, PATCH, DELETE, etc.",
                               "descriptionClean": "The limitation of <form> elements to only support GET and POST methods, lacking support for PUT, PATCH, DELETE, etc.",
                               "id": "http_methods",
-                              "parentId": "form_submission",
+                              "parentId": "form_submission_issues",
                               "entityType": "default"
                             }
                           }
@@ -1005,19 +1429,25 @@
                       {
                         "count": 128,
                         "id": "checkbox_input",
-                        "index": 8,
+                        "index": 10,
                         "percentageQuestion": 6.27,
                         "percentageSurvey": 2.06,
                         "entity": {
+                          "name": "Checkbox Input",
+                          "nameHtml": "Checkbox Input",
+                          "nameClean": "Checkbox Input",
+                          "description": "Pain points specific to `<input type=\"checkbox\">`.",
+                          "descriptionHtml": "Pain points specific to <code>&lt;input type=\"checkbox\"&gt;</code>.",
+                          "descriptionClean": "Pain points specific to <input type=\"checkbox\">.",
                           "id": "checkbox_input",
-                          "parentId": "form_input_issues",
+                          "parentId": "forms_issues",
                           "entityType": "default"
                         }
                       },
                       {
                         "count": 124,
                         "id": "missing_elements",
-                        "index": 9,
+                        "index": 11,
                         "percentageQuestion": 6.08,
                         "percentageSurvey": 1.99,
                         "entity": {
@@ -1033,7 +1463,7 @@
                         "nestedBuckets": [
                           {
                             "count": 20,
-                            "id": "switch_control",
+                            "id": "input_checkbox_switch",
                             "percentageQuestion": 0.98,
                             "percentageSurvey": 0.32,
                             "entity": {
@@ -1043,9 +1473,19 @@
                               "description": "The lack of a native switch or toggle control, forcing developers to build one from a checkbox.",
                               "descriptionHtml": "The lack of a native switch or toggle control, forcing developers to build one from a checkbox.",
                               "descriptionClean": "The lack of a native switch or toggle control, forcing developers to build one from a checkbox.",
-                              "id": "switch_control",
+                              "id": "input_checkbox_switch",
                               "parentId": "missing_elements",
-                              "entityType": "default"
+                              "entityType": "default",
+                              "resources": [
+                                {
+                                  "url": "https://webkit.org/blog/15054/an-html-switch-control/",
+                                  "title": "An HTML Switch Control | WebKit"
+                                },
+                                {
+                                  "url": "https://www.smashingmagazine.com/2024/05/switching-it-up-html-latest-control/",
+                                  "title": "Switching It Up With HTML’s Latest Control — Smashing Magazine"
+                                }
+                              ]
                             }
                           }
                         ]
@@ -1053,24 +1493,108 @@
                       {
                         "count": 111,
                         "id": "reliance_on_javascript",
-                        "index": 10,
+                        "index": 12,
                         "percentageQuestion": 5.44,
                         "percentageSurvey": 1.78,
                         "entity": {
                           "name": "Reliance on JavaScript",
                           "nameHtml": "Reliance on JavaScript",
                           "nameClean": "Reliance on JavaScript",
-                          "description": "Excessive reliance on JavaScript",
-                          "descriptionHtml": "Excessive reliance on JavaScript",
-                          "descriptionClean": "Excessive reliance on JavaScript",
+                          "description": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "descriptionHtml": "Lack of declarative APIs, slow rendering due to dependence on correct loading &amp; execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "descriptionClean": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
                           "id": "reliance_on_javascript",
                           "entityType": "default"
                         }
                       },
                       {
                         "count": 101,
-                        "id": "radio_input",
-                        "index": 11,
+                        "id": "cognitive_overload",
+                        "index": 13,
+                        "percentageQuestion": 4.95,
+                        "percentageSurvey": 1.62,
+                        "entity": {
+                          "name": "Cognitive overload",
+                          "nameHtml": "Cognitive overload",
+                          "nameClean": "Cognitive overload",
+                          "id": "cognitive_overload",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 29,
+                            "id": "too_much_work",
+                            "percentageQuestion": 1.42,
+                            "percentageSurvey": 0.47,
+                            "entity": {
+                              "name": "High effort",
+                              "nameHtml": "High effort",
+                              "nameClean": "High effort",
+                              "description": "Requires too much work. Includes APIs being too low-level, requiring a lot of manual developer effort to use.",
+                              "descriptionHtml": "Requires too much work. Includes APIs being too low-level, requiring a lot of manual developer effort to use.",
+                              "descriptionClean": "Requires too much work. Includes APIs being too low-level, requiring a lot of manual developer effort to use.",
+                              "id": "too_much_work",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 28,
+                            "id": "poor_learnability",
+                            "percentageQuestion": 1.37,
+                            "percentageSurvey": 0.45,
+                            "entity": {
+                              "name": "Poor learnability",
+                              "nameHtml": "Poor learnability",
+                              "nameClean": "Poor learnability",
+                              "description": "High learning curve, requires too much knowledge to get started, or too much information to memorize.",
+                              "descriptionHtml": "High learning curve, requires too much knowledge to get started, or too much information to memorize.",
+                              "descriptionClean": "High learning curve, requires too much knowledge to get started, or too much information to memorize.",
+                              "id": "poor_learnability",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 27,
+                            "id": "verbosity_boilerplate",
+                            "percentageQuestion": 1.32,
+                            "percentageSurvey": 0.43,
+                            "entity": {
+                              "name": "Excessive verbosity / Boilerplate",
+                              "nameHtml": "Excessive verbosity / Boilerplate",
+                              "nameClean": "Excessive verbosity / Boilerplate",
+                              "description": "APIs being overly verbose and/or requiring too much boilerplate.",
+                              "descriptionHtml": "APIs being overly verbose and/or requiring too much boilerplate.",
+                              "descriptionClean": "APIs being overly verbose and/or requiring too much boilerplate.",
+                              "id": "verbosity_boilerplate",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 25,
+                            "id": "excessive_complexity",
+                            "percentageQuestion": 1.22,
+                            "percentageSurvey": 0.4,
+                            "entity": {
+                              "name": "Excessive complexity",
+                              "nameHtml": "Excessive complexity",
+                              "nameClean": "Excessive complexity",
+                              "description": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
+                              "descriptionHtml": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
+                              "descriptionClean": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
+                              "id": "excessive_complexity",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 101,
+                        "id": "input_type_radio",
+                        "index": 14,
                         "percentageQuestion": 4.95,
                         "percentageSurvey": 1.62,
                         "entity": {
@@ -1080,24 +1604,27 @@
                           "description": "Pain points specific to `<input type=\"radio\">`.",
                           "descriptionHtml": "Pain points specific to <code>&lt;input type=\"radio\"&gt;</code>.",
                           "descriptionClean": "Pain points specific to <input type=\"radio\">.",
-                          "id": "radio_input",
-                          "parentId": "forms",
+                          "id": "input_type_radio",
+                          "parentId": "form_input_issues",
                           "entityType": "default"
                         }
                       },
                       {
                         "count": 100,
                         "id": "textarea_element",
-                        "index": 12,
+                        "index": 15,
                         "percentageQuestion": 4.9,
                         "percentageSurvey": 1.61,
                         "entity": {
-                          "name": "`<textarea>`",
-                          "nameHtml": "<code>&lt;textarea&gt;</code>",
-                          "nameClean": "<textarea>",
+                          "name": "<​textarea>",
+                          "nameHtml": "&lt;​textarea&gt;",
+                          "nameClean": "<​textarea>",
+                          "description": "Pain points specific to the `<textarea>` element.",
+                          "descriptionHtml": "Pain points specific to the <code>&lt;textarea&gt;</code> element.",
+                          "descriptionClean": "Pain points specific to the <textarea> element.",
                           "id": "textarea_element",
                           "parentId": "form_input_issues",
-                          "entityType": "feature"
+                          "entityType": "default"
                         },
                         "nestedBuckets": [
                           {
@@ -1115,23 +1642,39 @@
                               "id": "auto_growing_text_fields",
                               "parentId": "textarea_element",
                               "entityType": "default"
-                            }
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 6,
+                                "id": "field_sizing_content",
+                                "percentageQuestion": 0.29,
+                                "percentageSurvey": 0.1,
+                                "entity": {
+                                  "name": "field-sizing: content",
+                                  "nameHtml": "field-sizing: content",
+                                  "nameClean": "field-sizing: content",
+                                  "id": "field_sizing_content",
+                                  "parentId": "auto_growing_text_fields",
+                                  "entityType": "default"
+                                }
+                              }
+                            ]
                           }
                         ]
                       },
                       {
                         "count": 98,
                         "id": "autocomplete",
-                        "index": 13,
+                        "index": 16,
                         "percentageQuestion": 4.8,
                         "percentageSurvey": 1.57,
                         "entity": {
                           "name": "Autocomplete",
                           "nameHtml": "Autocomplete",
                           "nameClean": "Autocomplete",
-                          "description": "Autocomplete, comboxbox, typeahead, etc. inputs",
-                          "descriptionHtml": "Autocomplete, comboxbox, typeahead, etc. inputs",
-                          "descriptionClean": "Autocomplete, comboxbox, typeahead, etc. inputs",
+                          "description": "Pain points with the `autocomplete` attribute and browser autofill behavior.",
+                          "descriptionHtml": "Pain points with the <code>autocomplete</code> attribute and browser autofill behavior.",
+                          "descriptionClean": "Pain points with the autocomplete attribute and browser autofill behavior.",
                           "id": "autocomplete",
                           "parentId": "form_input_issues",
                           "entityType": "default"
@@ -1140,7 +1683,7 @@
                       {
                         "count": 97,
                         "id": "editing_apis",
-                        "index": 14,
+                        "index": 17,
                         "percentageQuestion": 4.75,
                         "percentageSurvey": 1.56,
                         "entity": {
@@ -1152,26 +1695,31 @@
                           "descriptionClean": "Pain points related to APIs for text editing.",
                           "id": "editing_apis",
                           "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 93,
-                        "id": "rich_text_editing",
-                        "index": 15,
-                        "percentageQuestion": 4.56,
-                        "percentageSurvey": 1.49,
-                        "entity": {
-                          "name": "Rich text editing",
-                          "nameHtml": "Rich text editing",
-                          "nameClean": "Rich text editing",
-                          "id": "rich_text_editing",
-                          "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 93,
+                            "id": "rich_text_editing",
+                            "percentageQuestion": 4.56,
+                            "percentageSurvey": 1.49,
+                            "entity": {
+                              "name": "Rich Text Editing",
+                              "nameHtml": "Rich Text Editing",
+                              "nameClean": "Rich Text Editing",
+                              "description": "Pain points with `contentEditable` and the general difficulty of building rich text editors on the web.",
+                              "descriptionHtml": "Pain points with <code>contentEditable</code> and the general difficulty of building rich text editors on the web.",
+                              "descriptionClean": "Pain points with contentEditable and the general difficulty of building rich text editors on the web.",
+                              "id": "rich_text_editing",
+                              "parentId": "editing_apis",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 85,
                         "id": "forms_js_handling",
-                        "index": 16,
+                        "index": 18,
                         "percentageQuestion": 4.16,
                         "percentageSurvey": 1.37,
                         "entity": {
@@ -1182,7 +1730,7 @@
                           "descriptionHtml": "Pain points related to handling forms with JS, form JS APIs, events, etc.",
                           "descriptionClean": "Pain points related to handling forms with JS, form JS APIs, events, etc.",
                           "id": "forms_js_handling",
-                          "parentId": "forms",
+                          "parentId": "forms_issues",
                           "entityType": "default"
                         },
                         "nestedBuckets": [
@@ -1205,16 +1753,36 @@
                             "nestedBuckets": [
                               {
                                 "count": 17,
-                                "id": "formdata_api",
+                                "id": "formdata",
                                 "percentageQuestion": 0.83,
                                 "percentageSurvey": 0.27,
                                 "entity": {
                                   "name": "FormData API",
                                   "nameHtml": "FormData API",
                                   "nameClean": "FormData API",
-                                  "id": "formdata_api",
+                                  "description": "API to more easily extract and manipulate form data values via JS",
+                                  "descriptionHtml": "API to more easily extract and manipulate form data values via JS",
+                                  "descriptionClean": "API to more easily extract and manipulate form data values via JS",
+                                  "id": "formdata",
                                   "parentId": "form_data_handling",
-                                  "entityType": "default"
+                                  "entityType": "default",
+                                  "example": {
+                                    "language": "js",
+                                    "code": "let fd = new FormData(form);\nlet data = JSON.stringify(Object.fromEntries(fd));\n",
+                                    "codeHighlighted": "<span class=\"hljs-keyword\">let</span> fd = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">FormData</span>(form);\n<span class=\"hljs-keyword\">let</span> data = <span class=\"hljs-title class_\">JSON</span>.<span class=\"hljs-title function_\">stringify</span>(<span class=\"hljs-title class_\">Object</span>.<span class=\"hljs-title function_\">fromEntries</span>(fd));"
+                                  },
+                                  "mdn": {
+                                    "url": "https://developer.mozilla.org/en-US/docs/Web/API/FormData/FormData"
+                                  },
+                                  "caniuse": {
+                                    "url": "https://caniuse.com/mdn-api_formdata](https://caniuse.com/mdn-api_formdata"
+                                  },
+                                  "resources": [
+                                    {
+                                      "url": "https://xhr.spec.whatwg.org/#dom-formdata",
+                                      "title": "Interface FormData"
+                                    }
+                                  ]
                                 }
                               }
                             ]
@@ -1223,8 +1791,8 @@
                       },
                       {
                         "count": 78,
-                        "id": "end-user_ux",
-                        "index": 17,
+                        "id": "end_user_ux_issues",
+                        "index": 19,
                         "percentageQuestion": 3.82,
                         "percentageSurvey": 1.25,
                         "entity": {
@@ -1234,118 +1802,9 @@
                           "description": "Issues around difficulties providing a good user experience for end-users. Do not include DX issues here (use `ergonomics` for that).",
                           "descriptionHtml": "Issues around difficulties providing a good user experience for end-users. Do not include DX issues here (use <code>ergonomics</code> for that).",
                           "descriptionClean": "Issues around difficulties providing a good user experience for end-users. Do not include DX issues here (use ergonomics for that).",
-                          "id": "end-user_ux",
+                          "id": "end_user_ux_issues",
                           "entityType": "default"
                         }
-                      },
-                      {
-                        "count": 67,
-                        "id": "combobox_element",
-                        "index": 18,
-                        "percentageQuestion": 3.28,
-                        "percentageSurvey": 1.08,
-                        "entity": {
-                          "name": "Combobox element",
-                          "nameHtml": "Combobox element",
-                          "nameClean": "Combobox element",
-                          "description": "The lack of a native, accessible combobox element that combines a text input with a dropdown list of suggestions, similar to `<datalist>` but with more control.",
-                          "descriptionHtml": "The lack of a native, accessible combobox element that combines a text input with a dropdown list of suggestions, similar to <code>&lt;datalist&gt;</code> but with more control.",
-                          "descriptionClean": "The lack of a native, accessible combobox element that combines a text input with a dropdown list of suggestions, similar to <datalist> but with more control.",
-                          "id": "combobox_element",
-                          "parentId": "forms",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 66,
-                        "id": "specific_platforms_vendors",
-                        "index": 19,
-                        "percentageQuestion": 3.23,
-                        "percentageSurvey": 1.06,
-                        "entity": {
-                          "name": "Specific platforms & vendors",
-                          "nameHtml": "Specific platforms &amp; vendors",
-                          "nameClean": "Specific platforms & vendors",
-                          "description": "Issues mentioning specific platforms, operating systems, or browser vendors.",
-                          "descriptionHtml": "Issues mentioning specific platforms, operating systems, or browser vendors.",
-                          "descriptionClean": "Issues mentioning specific platforms, operating systems, or browser vendors.",
-                          "id": "specific_platforms_vendors",
-                          "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 37,
-                            "id": "apple",
-                            "percentageQuestion": 1.81,
-                            "percentageSurvey": 0.59,
-                            "entity": {
-                              "name": "Apple",
-                              "nameHtml": "Apple",
-                              "nameClean": "Apple",
-                              "description": "Issues specific to Apple as a platform or vendor, and the Apple ecosystem (e.g., Safari, WebKit, iOS).",
-                              "descriptionHtml": "Issues specific to Apple as a platform or vendor, and the Apple ecosystem (e.g., Safari, WebKit, iOS).",
-                              "descriptionClean": "Issues specific to Apple as a platform or vendor, and the Apple ecosystem (e.g., Safari, WebKit, iOS).",
-                              "id": "apple",
-                              "parentId": "specific_platforms_vendors",
-                              "entityType": "default"
-                            },
-                            "nestedBuckets": [
-                              {
-                                "count": 26,
-                                "id": "safari",
-                                "percentageQuestion": 1.27,
-                                "percentageSurvey": 0.42,
-                                "entity": {
-                                  "name": "Safari",
-                                  "nameHtml": "Safari",
-                                  "nameClean": "Safari",
-                                  "id": "safari",
-                                  "parentId": "apple",
-                                  "entityType": "default",
-                                  "homepage": {
-                                    "url": "https://www.apple.com/safari/"
-                                  }
-                                }
-                              }
-                            ]
-                          },
-                          {
-                            "count": 21,
-                            "id": "mozilla",
-                            "percentageQuestion": 1.03,
-                            "percentageSurvey": 0.34,
-                            "entity": {
-                              "name": "Mozilla",
-                              "nameHtml": "Mozilla",
-                              "nameClean": "Mozilla",
-                              "id": "mozilla",
-                              "parentId": "specific_platforms_vendors",
-                              "entityType": "default",
-                              "homepage": {
-                                "url": "https://www.mozilla.org/"
-                              }
-                            },
-                            "nestedBuckets": [
-                              {
-                                "count": 21,
-                                "id": "firefox",
-                                "percentageQuestion": 1.03,
-                                "percentageSurvey": 0.34,
-                                "entity": {
-                                  "name": "Firefox",
-                                  "nameHtml": "Firefox",
-                                  "nameClean": "Firefox",
-                                  "id": "firefox",
-                                  "parentId": "mozilla",
-                                  "entityType": "default",
-                                  "homepage": {
-                                    "url": "https://www.mozilla.org/en-US/firefox/new/"
-                                  }
-                                }
-                              }
-                            ]
-                          }
-                        ]
                       },
                       {
                         "count": 4179,
@@ -1355,11 +1814,11 @@
                         "percentageSurvey": 67.15
                       },
                       {
-                        "count": 1437,
+                        "count": 1266,
                         "id": "other_answers",
                         "index": 21,
-                        "percentageQuestion": 70.52,
-                        "percentageSurvey": 23.22
+                        "percentageQuestion": 62.15,
+                        "percentageSurvey": 20.45
                       }
                     ]
                   }

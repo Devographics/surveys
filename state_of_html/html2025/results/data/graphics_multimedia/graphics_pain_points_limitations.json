@@ -8,7 +8,7 @@
               "id": "graphics_pain_points",
               "comments": {
                 "currentEdition": {
-                  "count": 2
+                  "count": 5
                 }
               },
               "freeform": {
@@ -20,7 +20,7 @@
                         "order": "desc"
                       },
                       "limit": 20,
-                      "cutoff": 10
+                      "cutoff": 5
                     },
                     "editionId": "html2025",
                     "year": 2025,
@@ -32,7 +32,7 @@
                     "buckets": [
                       {
                         "count": 66,
-                        "id": "svg",
+                        "id": "svg_element",
                         "index": 0,
                         "percentageQuestion": 30.7,
                         "percentageSurvey": 1.06,
@@ -40,8 +40,45 @@
                           "name": "SVG",
                           "nameHtml": "SVG",
                           "nameClean": "SVG",
-                          "id": "svg",
-                          "entityType": "default"
+                          "description": "Issues related to Vector graphics via Scalable Vector Graphics, including issues related to embedding and manipulating SVG content.",
+                          "descriptionHtml": "Issues related to Vector graphics via Scalable Vector Graphics, including issues related to embedding and manipulating SVG content.",
+                          "descriptionClean": "Issues related to Vector graphics via Scalable Vector Graphics, including issues related to embedding and manipulating SVG content.",
+                          "id": "svg_element",
+                          "parentId": "graphics_issues",
+                          "entityType": "default",
+                          "example": {
+                            "language": "html",
+                            "code": "<svg>\n  <circle cx=\"50\" cy=\"50\" r=\"50\" />\n</svg>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">svg</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">circle</span> <span class=\"hljs-attr\">cx</span>=<span class=\"hljs-string\">&quot;50&quot;</span> <span class=\"hljs-attr\">cy</span>=<span class=\"hljs-string\">&quot;50&quot;</span> <span class=\"hljs-attr\">r</span>=<span class=\"hljs-string\">&quot;50&quot;</span> /&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">svg</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/svg"
+                          },
+                          "webFeature": {
+                            "id": "svg",
+                            "description_html": "The SVG image format, represented by the <code>&#x3C;svg></code> element, creates two-dimensional vector graphics with declarative or scripted interaction and animation.",
+                            "group": [
+                              "svg"
+                            ],
+                            "name": "SVG",
+                            "spec": [
+                              "https://svgwg.org/svg2-draft/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/svg/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-01-15",
+                              "support": {
+                                "chrome": "1",
+                                "chrome_android": "18",
+                                "edge": "79",
+                                "firefox": "3",
+                                "firefox_android": "4",
+                                "safari": "3",
+                                "safari_ios": "2"
+                              }
+                            }
+                          }
                         },
                         "nestedBuckets": [
                           {
@@ -57,7 +94,7 @@
                               "descriptionHtml": "Applying CSS properties/images/animations to SVG, styling SVG, passing styling parameters to SVG etc.",
                               "descriptionClean": "Applying CSS properties/images/animations to SVG, styling SVG, passing styling parameters to SVG etc.",
                               "id": "svg_css_integration",
-                              "parentId": "svg",
+                              "parentId": "svg_element",
                               "entityType": "default"
                             },
                             "nestedBuckets": [
@@ -79,12 +116,48 @@
                                 }
                               }
                             ]
+                          },
+                          {
+                            "count": 0,
+                            "id": "svg_gradients",
+                            "percentageQuestion": 0,
+                            "percentageSurvey": 0,
+                            "hasInsufficientData": true,
+                            "entity": {
+                              "name": "SVG gradients",
+                              "nameHtml": "SVG gradients",
+                              "nameClean": "SVG gradients",
+                              "description": "Gradient definitions and usage in SVG.",
+                              "descriptionHtml": "Gradient definitions and usage in SVG.",
+                              "descriptionClean": "Gradient definitions and usage in SVG.",
+                              "id": "svg_gradients",
+                              "parentId": "svg_element",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 0,
+                            "id": "svg_text",
+                            "percentageQuestion": 0,
+                            "percentageSurvey": 0,
+                            "hasInsufficientData": true,
+                            "entity": {
+                              "name": "SVG text",
+                              "nameHtml": "SVG text",
+                              "nameClean": "SVG text",
+                              "description": "Text elements and layout in SVG.",
+                              "descriptionHtml": "Text elements and layout in SVG.",
+                              "descriptionClean": "Text elements and layout in SVG.",
+                              "id": "svg_text",
+                              "parentId": "svg_element",
+                              "entityType": "default"
+                            }
                           }
                         ]
                       },
                       {
                         "count": 64,
-                        "id": "images",
+                        "id": "images_issues",
                         "index": 1,
                         "percentageQuestion": 29.77,
                         "percentageSurvey": 1.03,
@@ -95,8 +168,8 @@
                           "description": "Still images across the platform, including performance issues around rendering images on a web page.",
                           "descriptionHtml": "Still images across the platform, including performance issues around rendering images on a web page.",
                           "descriptionClean": "Still images across the platform, including performance issues around rendering images on a web page.",
-                          "id": "images",
-                          "parentId": "graphics",
+                          "id": "images_issues",
+                          "parentId": "graphics_issues",
                           "entityType": "default"
                         },
                         "nestedBuckets": [
@@ -113,7 +186,7 @@
                               "descriptionHtml": "Encoders/codecs/containers supported by the web.",
                               "descriptionClean": "Encoders/codecs/containers supported by the web.",
                               "id": "image_formats",
-                              "parentId": "images",
+                              "parentId": "images_issues",
                               "entityType": "default"
                             },
                             "nestedBuckets": [
@@ -149,23 +222,148 @@
                               "descriptionHtml": "Selecting sources by viewport/container and device characteristics, including issues around related syntax (srcset, sizes, etc)",
                               "descriptionClean": "Selecting sources by viewport/container and device characteristics, including issues around related syntax (srcset, sizes, etc)",
                               "id": "responsive_images",
-                              "parentId": "images",
+                              "parentId": "images_issues",
+                              "entityType": "default"
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 0,
+                                "id": "img_srcset_sizes",
+                                "percentageQuestion": 0,
+                                "percentageSurvey": 0,
+                                "hasInsufficientData": true,
+                                "entity": {
+                                  "name": "srcset and sizes attributes",
+                                  "nameHtml": "srcset and sizes attributes",
+                                  "nameClean": "srcset and sizes attributes",
+                                  "id": "img_srcset_sizes",
+                                  "parentId": "responsive_images",
+                                  "entityType": "default"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "count": 0,
+                            "id": "animated_images",
+                            "percentageQuestion": 0,
+                            "percentageSurvey": 0,
+                            "hasInsufficientData": true,
+                            "entity": {
+                              "name": "Animated images",
+                              "nameHtml": "Animated images",
+                              "nameClean": "Animated images",
+                              "description": "Animated raster/vector images used as media.",
+                              "descriptionHtml": "Animated raster/vector images used as media.",
+                              "descriptionClean": "Animated raster/vector images used as media.",
+                              "id": "animated_images",
+                              "parentId": "images_issues",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 0,
+                            "id": "image_loading",
+                            "percentageQuestion": 0,
+                            "percentageSurvey": 0,
+                            "hasInsufficientData": true,
+                            "entity": {
+                              "name": "Image loading",
+                              "nameHtml": "Image loading",
+                              "nameClean": "Image loading",
+                              "description": "Fetching/decoding/display strategies for images, strategies to make image loading appear smoother, lazy loading etc",
+                              "descriptionHtml": "Fetching/decoding/display strategies for images, strategies to make image loading appear smoother, lazy loading etc",
+                              "descriptionClean": "Fetching/decoding/display strategies for images, strategies to make image loading appear smoother, lazy loading etc",
+                              "id": "image_loading",
+                              "parentId": "images_issues",
                               "entityType": "default"
                             }
                           }
                         ]
                       },
                       {
-                        "count": 42,
-                        "id": "canvas",
+                        "count": 63,
+                        "id": "high_cognitive_load",
                         "index": 2,
+                        "percentageQuestion": 29.3,
+                        "percentageSurvey": 1.01,
+                        "entity": {
+                          "name": "🗑️ High cognitive load",
+                          "nameHtml": "🗑️ High cognitive load",
+                          "nameClean": "🗑️ High cognitive load",
+                          "description": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "descriptionHtml": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "descriptionClean": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
+                          "id": "high_cognitive_load",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 42,
+                        "id": "canvas_element",
+                        "index": 3,
                         "percentageQuestion": 19.53,
                         "percentageSurvey": 0.67,
                         "entity": {
-                          "id": "canvas",
-                          "entityType": "default"
+                          "name": "Canvas",
+                          "nameHtml": "Canvas",
+                          "nameClean": "Canvas",
+                          "description": "2D drawing via <canvas>.",
+                          "descriptionHtml": "2D drawing via .",
+                          "descriptionClean": "2D drawing via .",
+                          "id": "canvas_element",
+                          "parentId": "graphics_issues",
+                          "entityType": "default",
+                          "example": {
+                            "language": "html",
+                            "code": "<canvas width=\"200\" height=\"200\"></canvas>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">canvas</span> <span class=\"hljs-attr\">width</span>=<span class=\"hljs-string\">&quot;200&quot;</span> <span class=\"hljs-attr\">height</span>=<span class=\"hljs-string\">&quot;200&quot;</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">canvas</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/canvas"
+                          },
+                          "webFeature": {
+                            "id": "canvas",
+                            "description_html": "The <code>&#x3C;canvas></code> HTML element is a space to draw graphics in, using the 2D canvas API, WebGL, or WebGPU.",
+                            "group": [
+                              "canvas",
+                              "html-elements"
+                            ],
+                            "name": "<canvas>",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/canvas.html#canvas"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/canvas/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2015-07-29",
+                              "support": {
+                                "chrome": "1",
+                                "chrome_android": "18",
+                                "edge": "12",
+                                "firefox": "1.5",
+                                "firefox_android": "4",
+                                "safari": "2",
+                                "safari_ios": "1"
+                              }
+                            }
+                          }
                         },
                         "nestedBuckets": [
+                          {
+                            "count": 10,
+                            "id": "canvas_interactivity",
+                            "percentageQuestion": 4.65,
+                            "percentageSurvey": 0.16,
+                            "entity": {
+                              "name": "Canvas interactivity",
+                              "nameHtml": "Canvas interactivity",
+                              "nameClean": "Canvas interactivity",
+                              "id": "canvas_interactivity",
+                              "parentId": "canvas_element",
+                              "entityType": "default"
+                            }
+                          },
                           {
                             "count": 10,
                             "id": "html_to_image",
@@ -179,30 +377,36 @@
                               "descriptionHtml": "Issues around generating a raster image (e.g., PNG, JPEG) from arbitrary HTML/DOM content and/or painting it to canvas, often for 'screenshot' or download functionality.",
                               "descriptionClean": "Issues around generating a raster image (e.g., PNG, JPEG) from arbitrary HTML/DOM content and/or painting it to canvas, often for 'screenshot' or download functionality.",
                               "id": "html_to_image",
-                              "parentId": "canvas",
+                              "parentId": "canvas_element",
                               "entityType": "default"
-                            }
-                          },
-                          {
-                            "count": 10,
-                            "id": "canvas_interactivity",
-                            "percentageQuestion": 4.65,
-                            "percentageSurvey": 0.16,
-                            "entity": {
-                              "name": "Canvas interactivity",
-                              "nameHtml": "Canvas interactivity",
-                              "nameClean": "Canvas interactivity",
-                              "id": "canvas_interactivity",
-                              "parentId": "canvas",
-                              "entityType": "default"
-                            }
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 0,
+                                "id": "html_in_canvas",
+                                "percentageQuestion": 0,
+                                "percentageSurvey": 0,
+                                "hasInsufficientData": true,
+                                "entity": {
+                                  "name": "HTML in canvas",
+                                  "nameHtml": "HTML in canvas",
+                                  "nameClean": "HTML in canvas",
+                                  "description": "Drawing HTML in canvas, improved repainting/interactivity when drawing HTML content in canvas etc",
+                                  "descriptionHtml": "Drawing HTML in canvas, improved repainting/interactivity when drawing HTML content in canvas etc",
+                                  "descriptionClean": "Drawing HTML in canvas, improved repainting/interactivity when drawing HTML content in canvas etc",
+                                  "id": "html_in_canvas",
+                                  "parentId": "html_to_image",
+                                  "entityType": "default"
+                                }
+                              }
+                            ]
                           }
                         ]
                       },
                       {
                         "count": 38,
-                        "id": "video",
-                        "index": 3,
+                        "id": "video_element",
+                        "index": 4,
                         "percentageQuestion": 17.67,
                         "percentageSurvey": 0.61,
                         "entity": {
@@ -212,8 +416,16 @@
                           "description": "Issues related to including videos, including performance issues around videos.",
                           "descriptionHtml": "Issues related to including videos, including performance issues around videos.",
                           "descriptionClean": "Issues related to including videos, including performance issues around videos.",
-                          "id": "video",
-                          "entityType": "default"
+                          "id": "video_element",
+                          "entityType": "default",
+                          "example": {
+                            "language": "html",
+                            "code": "<video src=\"video.mp4\" controls></video>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">video</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;video.mp4&quot;</span> <span class=\"hljs-attr\">controls</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">video</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video"
+                          }
                         },
                         "nestedBuckets": [
                           {
@@ -229,7 +441,43 @@
                               "descriptionHtml": "Customizing, styling, and extending built‑in controls/UX.",
                               "descriptionClean": "Customizing, styling, and extending built‑in controls/UX.",
                               "id": "video_controls",
-                              "parentId": "video",
+                              "parentId": "video_element",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 0,
+                            "id": "video_thumbnails_posters",
+                            "percentageQuestion": 0,
+                            "percentageSurvey": 0,
+                            "hasInsufficientData": true,
+                            "entity": {
+                              "name": "Video thumbnails and posters",
+                              "nameHtml": "Video thumbnails and posters",
+                              "nameClean": "Video thumbnails and posters",
+                              "description": "Issues related to generating/displaying video thumbnails and posters, either for scrubbing or static display",
+                              "descriptionHtml": "Issues related to generating/displaying video thumbnails and posters, either for scrubbing or static display",
+                              "descriptionClean": "Issues related to generating/displaying video thumbnails and posters, either for scrubbing or static display",
+                              "id": "video_thumbnails_posters",
+                              "parentId": "video_element",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 0,
+                            "id": "video_streaming",
+                            "percentageQuestion": 0,
+                            "percentageSurvey": 0,
+                            "hasInsufficientData": true,
+                            "entity": {
+                              "name": "Streaming (DASH/HLS)",
+                              "nameHtml": "Streaming (DASH/HLS)",
+                              "nameClean": "Streaming (DASH/HLS)",
+                              "description": "Authoring/playing adaptive streams (HLS/DASH/m3u8).",
+                              "descriptionHtml": "Authoring/playing adaptive streams (HLS/DASH/m3u8).",
+                              "descriptionClean": "Authoring/playing adaptive streams (HLS/DASH/m3u8).",
+                              "id": "video_streaming",
+                              "parentId": "video_element",
                               "entityType": "default"
                             }
                           }
@@ -238,23 +486,24 @@
                       {
                         "count": 37,
                         "id": "styling_customization",
-                        "index": 4,
+                        "index": 5,
                         "percentageQuestion": 17.21,
                         "percentageSurvey": 0.59,
                         "entity": {
-                          "name": "Styling & customization",
-                          "nameHtml": "Styling &amp; customization",
-                          "nameClean": "Styling & customization",
-                          "description": "CSS styling and customization issues.",
-                          "descriptionHtml": "CSS styling and customization issues.",
-                          "descriptionClean": "CSS styling and customization issues.",
+                          "name": "Styling and UI customization",
+                          "nameHtml": "Styling and UI customization",
+                          "nameClean": "Styling and UI customization",
+                          "description": "Issues around styling and customizing browser-generated UI.",
+                          "descriptionHtml": "Issues around styling and customizing browser-generated UI.",
+                          "descriptionClean": "Issues around styling and customizing browser-generated UI.",
                           "id": "styling_customization",
+                          "parentId": "a11y_technical_issues",
                           "entityType": "default"
                         },
                         "nestedBuckets": [
                           {
                             "count": 34,
-                            "id": "styling",
+                            "id": "styling_issues",
                             "percentageQuestion": 15.81,
                             "percentageSurvey": 0.55,
                             "entity": {
@@ -264,7 +513,7 @@
                               "description": "Issues around styling UA-generated UI, CSS not working in certain contexts, etc.",
                               "descriptionHtml": "Issues around styling UA-generated UI, CSS not working in certain contexts, etc.",
                               "descriptionClean": "Issues around styling UA-generated UI, CSS not working in certain contexts, etc.",
-                              "id": "styling",
+                              "id": "styling_issues",
                               "parentId": "styling_customization",
                               "entityType": "default"
                             }
@@ -282,22 +531,40 @@
                               "parentId": "styling_customization",
                               "entityType": "default"
                             }
+                          },
+                          {
+                            "count": 0,
+                            "id": "ui_customization",
+                            "percentageQuestion": 0,
+                            "percentageSurvey": 0,
+                            "hasInsufficientData": true,
+                            "entity": {
+                              "name": "UI Customization",
+                              "nameHtml": "UI Customization",
+                              "nameClean": "UI Customization",
+                              "description": "Issues around customizing the browser-provided UI, *beyond styling*, such as changing text, adding or removing controls, etc.",
+                              "descriptionHtml": "Issues around customizing the browser-provided UI, <em>beyond styling</em>, such as changing text, adding or removing controls, etc.",
+                              "descriptionClean": "Issues around customizing the browser-provided UI, beyond styling, such as changing text, adding or removing controls, etc.",
+                              "id": "ui_customization",
+                              "parentId": "styling_customization",
+                              "entityType": "default"
+                            }
                           }
                         ]
                       },
                       {
                         "count": 24,
                         "id": "performance",
-                        "index": 5,
+                        "index": 6,
                         "percentageQuestion": 11.16,
                         "percentageSurvey": 0.39,
                         "entity": {
                           "name": "Performance",
                           "nameHtml": "Performance",
                           "nameClean": "Performance",
-                          "description": "Performance issues",
-                          "descriptionHtml": "Performance issues",
-                          "descriptionClean": "Performance issues",
+                          "description": "Throughput, latency, memory, jank, lag, frame drops, battery/thermal, and loading time.",
+                          "descriptionHtml": "Throughput, latency, memory, jank, lag, frame drops, battery/thermal, and loading time.",
+                          "descriptionClean": "Throughput, latency, memory, jank, lag, frame drops, battery/thermal, and loading time.",
                           "id": "performance",
                           "entityType": "default"
                         }
@@ -305,7 +572,7 @@
                       {
                         "count": 20,
                         "id": "tooling",
-                        "index": 6,
+                        "index": 7,
                         "percentageQuestion": 9.3,
                         "percentageSurvey": 0.32,
                         "entity": {
@@ -321,8 +588,8 @@
                       },
                       {
                         "count": 17,
-                        "id": "animations",
-                        "index": 7,
+                        "id": "animations_issues",
+                        "index": 8,
                         "percentageQuestion": 7.91,
                         "percentageSurvey": 0.27,
                         "entity": {
@@ -332,14 +599,14 @@
                           "description": "Issues related to UI animations across all technologies, regardless of technology used to implement them (CSS animations, Lottie, etc)",
                           "descriptionHtml": "Issues related to UI animations across all technologies, regardless of technology used to implement them (CSS animations, Lottie, etc)",
                           "descriptionClean": "Issues related to UI animations across all technologies, regardless of technology used to implement them (CSS animations, Lottie, etc)",
-                          "id": "animations",
+                          "id": "animations_issues",
                           "entityType": "default"
                         }
                       },
                       {
                         "count": 16,
-                        "id": "audio",
-                        "index": 8,
+                        "id": "audio_issues",
+                        "index": 9,
                         "percentageQuestion": 7.44,
                         "percentageSurvey": 0.26,
                         "entity": {
@@ -349,23 +616,43 @@
                           "description": "HTML and programmatic audio on the web.",
                           "descriptionHtml": "HTML and programmatic audio on the web.",
                           "descriptionClean": "HTML and programmatic audio on the web.",
-                          "id": "audio",
+                          "id": "audio_issues",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 0,
+                            "id": "audio_controls",
+                            "percentageQuestion": 0,
+                            "percentageSurvey": 0,
+                            "hasInsufficientData": true,
+                            "entity": {
+                              "name": "Audio controls",
+                              "nameHtml": "Audio controls",
+                              "nameClean": "Audio controls",
+                              "description": "Customizing, styling, and extending built‑in controls/UX.",
+                              "descriptionHtml": "Customizing, styling, and extending built‑in controls/UX.",
+                              "descriptionClean": "Customizing, styling, and extending built‑in controls/UX.",
+                              "id": "audio_controls",
+                              "parentId": "audio_issues",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 14,
                         "id": "reliance_on_javascript",
-                        "index": 9,
+                        "index": 10,
                         "percentageQuestion": 6.51,
                         "percentageSurvey": 0.22,
                         "entity": {
                           "name": "Reliance on JavaScript",
                           "nameHtml": "Reliance on JavaScript",
                           "nameClean": "Reliance on JavaScript",
-                          "description": "Excessive reliance on JavaScript",
-                          "descriptionHtml": "Excessive reliance on JavaScript",
-                          "descriptionClean": "Excessive reliance on JavaScript",
+                          "description": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "descriptionHtml": "Lack of declarative APIs, slow rendering due to dependence on correct loading &amp; execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "descriptionClean": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
                           "id": "reliance_on_javascript",
                           "entityType": "default"
                         }
@@ -373,16 +660,16 @@
                       {
                         "count": 12,
                         "id": "security_privacy",
-                        "index": 10,
+                        "index": 11,
                         "percentageQuestion": 5.58,
                         "percentageSurvey": 0.19,
                         "entity": {
                           "name": "Security & privacy",
                           "nameHtml": "Security &amp; privacy",
                           "nameClean": "Security & privacy",
-                          "description": "Lack of security and privacy",
-                          "descriptionHtml": "Lack of security and privacy",
-                          "descriptionClean": "Lack of security and privacy",
+                          "description": "Threats, mitigations, permissions, and fingerprinting/privacy budget concerns, cross-origin issues etc. Pain points related to general concerns about security and privacy on the web.",
+                          "descriptionHtml": "Threats, mitigations, permissions, and fingerprinting/privacy budget concerns, cross-origin issues etc. Pain points related to general concerns about security and privacy on the web.",
+                          "descriptionClean": "Threats, mitigations, permissions, and fingerprinting/privacy budget concerns, cross-origin issues etc. Pain points related to general concerns about security and privacy on the web.",
                           "id": "security_privacy",
                           "entityType": "default"
                         }
@@ -390,13 +677,13 @@
                       {
                         "count": 12,
                         "id": "specific_platforms_vendors",
-                        "index": 11,
+                        "index": 12,
                         "percentageQuestion": 5.58,
                         "percentageSurvey": 0.19,
                         "entity": {
-                          "name": "Specific platforms & vendors",
-                          "nameHtml": "Specific platforms &amp; vendors",
-                          "nameClean": "Specific platforms & vendors",
+                          "name": "🗑️ Specific platforms & vendors",
+                          "nameHtml": "🗑️ Specific platforms &amp; vendors",
+                          "nameClean": "🗑️ Specific platforms & vendors",
                           "description": "Issues mentioning specific platforms, operating systems, or browser vendors.",
                           "descriptionHtml": "Issues mentioning specific platforms, operating systems, or browser vendors.",
                           "descriptionClean": "Issues mentioning specific platforms, operating systems, or browser vendors.",
@@ -407,7 +694,7 @@
                       {
                         "count": 11,
                         "id": "interactivity",
-                        "index": 12,
+                        "index": 13,
                         "percentageQuestion": 5.12,
                         "percentageSurvey": 0.18,
                         "entity": {
@@ -421,7 +708,7 @@
                       {
                         "count": 10,
                         "id": "reliability",
-                        "index": 13,
+                        "index": 14,
                         "percentageQuestion": 4.65,
                         "percentageSurvey": 0.16,
                         "entity": {
@@ -438,18 +725,19 @@
                       {
                         "count": 10,
                         "id": "webgl",
-                        "index": 14,
+                        "index": 15,
                         "percentageQuestion": 4.65,
                         "percentageSurvey": 0.16,
                         "entity": {
                           "name": "WebGL",
                           "nameHtml": "WebGL",
                           "nameClean": "WebGL",
-                          "description": "A low-level API for rendering 2D and 3D graphics with the GPU on `<canvas>` , based on OpenGL.",
-                          "descriptionHtml": "A low-level API for rendering 2D and 3D graphics with the GPU on <code>&lt;canvas&gt;</code> , based on OpenGL.",
-                          "descriptionClean": "A low-level API for rendering 2D and 3D graphics with the GPU on <canvas> , based on OpenGL.",
+                          "description": "Shader‑based 2D/3D via WebGL.",
+                          "descriptionHtml": "Shader‑based 2D/3D via WebGL.",
+                          "descriptionClean": "Shader‑based 2D/3D via WebGL.",
                           "id": "webgl",
-                          "entityType": "feature",
+                          "parentId": "graphics_issues",
+                          "entityType": "default",
                           "example": {
                             "language": "js",
                             "code": "const gl = canvas.getContext(\"webgl\");\n",
@@ -486,11 +774,84 @@
                         }
                       },
                       {
-                        "count": 318,
+                        "count": 0,
+                        "id": "3d_graphics",
+                        "index": 16,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 0,
+                        "hasInsufficientData": true,
+                        "entity": {
+                          "name": "3D graphics",
+                          "nameHtml": "3D graphics",
+                          "nameClean": "3D graphics",
+                          "description": "Embedding of existing 3D models via <model>, CSS 3D or other technologies",
+                          "descriptionHtml": "Embedding of existing 3D models via , CSS 3D or other technologies",
+                          "descriptionClean": "Embedding of existing 3D models via , CSS 3D or other technologies",
+                          "id": "3d_graphics",
+                          "parentId": "graphics_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 0,
+                        "id": "accessibility_issues",
+                        "index": 17,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 0,
+                        "hasInsufficientData": true,
+                        "entity": {
+                          "name": "Accessibility",
+                          "nameHtml": "Accessibility",
+                          "nameClean": "Accessibility",
+                          "description": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "descriptionHtml": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "descriptionClean": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "id": "accessibility_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 0,
+                        "id": "charts_issues",
+                        "index": 18,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 0,
+                        "hasInsufficientData": true,
+                        "entity": {
+                          "name": "Charts",
+                          "nameHtml": "Charts",
+                          "nameClean": "Charts",
+                          "description": "Issues around displaying charts of any type",
+                          "descriptionHtml": "Issues around displaying charts of any type",
+                          "descriptionClean": "Issues around displaying charts of any type",
+                          "id": "charts_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 0,
+                        "id": "css_issues",
+                        "index": 19,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 0,
+                        "hasInsufficientData": true,
+                        "entity": {
+                          "name": "CSS",
+                          "nameHtml": "CSS",
+                          "nameClean": "CSS",
+                          "description": "Issues related to CSS or specific CSS features (if no more specific leaf)",
+                          "descriptionHtml": "Issues related to CSS or specific CSS features (if no more specific leaf)",
+                          "descriptionClean": "Issues related to CSS or specific CSS features (if no more specific leaf)",
+                          "id": "css_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 148,
                         "id": "other_answers",
-                        "index": 15,
-                        "percentageQuestion": 148.19,
-                        "percentageSurvey": 5.18
+                        "index": 20,
+                        "percentageQuestion": 69.05,
+                        "percentageSurvey": 2.45
                       }
                     ]
                   }
