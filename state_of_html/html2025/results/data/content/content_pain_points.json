@@ -274,7 +274,7 @@
                               "descriptionClean": "Pain points with Cross-Origin Resource Sharing (CORS) and related cross-origin security policies.",
                               "id": "cors",
                               "parentId": "security_privacy",
-                              "entityType": "default",
+                              "entityType": "feature",
                               "example": {
                                 "language": "http",
                                 "code": "Access-Control-Allow-Origin: *\nAccess-Control-Allow-Methods: POST, GET, OPTIONS",
@@ -307,7 +307,6 @@
                           "descriptionHtml": "Pain points related to embedding content from various sources.",
                           "descriptionClean": "Pain points related to embedding content from various sources.",
                           "id": "embedding_issues",
-                          "parentId": "content",
                           "entityType": "default"
                         }
                       },
@@ -426,7 +425,7 @@
                           "descriptionHtml": "Issues specific to the Safari browser, across all platforms.",
                           "descriptionClean": "Issues specific to the Safari browser, across all platforms.",
                           "id": "safari",
-                          "parentId": "interop_issues",
+                          "parentId": "apple",
                           "entityType": "default",
                           "homepage": {
                             "url": "https://www.apple.com/safari/"
@@ -549,7 +548,7 @@
                                   "descriptionClean": "Issues specific to the <template> element, often about its limitations or ergonomics.",
                                   "id": "template_element",
                                   "parentId": "templating",
-                                  "entityType": "default",
+                                  "entityType": "feature",
                                   "example": {
                                     "language": "html",
                                     "code": "<template id=\"counter\">\n\t<div class=\"counter\">Clicked {{ times }} times</div>\n</template>",
@@ -661,7 +660,7 @@
                               "descriptionClean": "Issues around the lack of or desire for HTML Modules, for packaging and importing components and content.",
                               "id": "html_modules",
                               "parentId": "html_reuse",
-                              "entityType": "default",
+                              "entityType": "feature",
                               "example": {
                                 "language": "html",
                                 "code": "<script type=\"module\">\n\timport { TabList } from \"./tablist.html\" with { type: 'html' };\n\tcustomElements.define(\"tab-list\", TabList);\n</script>",
@@ -702,26 +701,9 @@
                         ]
                       },
                       {
-                        "count": 109,
-                        "id": "high_cognitive_load",
-                        "index": 1,
-                        "percentageQuestion": 24.22,
-                        "percentageSurvey": 1.75,
-                        "entity": {
-                          "name": "🗑️ High cognitive load",
-                          "nameHtml": "🗑️ High cognitive load",
-                          "nameClean": "🗑️ High cognitive load",
-                          "description": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
-                          "descriptionHtml": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
-                          "descriptionClean": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
-                          "id": "high_cognitive_load",
-                          "entityType": "default"
-                        }
-                      },
-                      {
                         "count": 66,
                         "id": "interop_issues",
-                        "index": 2,
+                        "index": 1,
                         "percentageQuestion": 14.67,
                         "percentageSurvey": 1.06,
                         "entity": {
@@ -737,23 +719,42 @@
                         "nestedBuckets": [
                           {
                             "count": 9,
-                            "id": "safari",
+                            "id": "apple",
                             "percentageQuestion": 2,
                             "percentageSurvey": 0.14,
                             "entity": {
-                              "name": "Safari browser",
-                              "nameHtml": "Safari browser",
-                              "nameClean": "Safari browser",
-                              "description": "Issues specific to the Safari browser, across all platforms.",
-                              "descriptionHtml": "Issues specific to the Safari browser, across all platforms.",
-                              "descriptionClean": "Issues specific to the Safari browser, across all platforms.",
-                              "id": "safari",
+                              "name": "Apple",
+                              "nameHtml": "Apple",
+                              "nameClean": "Apple",
+                              "description": "Issues specific to Apple as a platform or vendor, and the Apple ecosystem (e.g., Safari, WebKit, iOS).",
+                              "descriptionHtml": "Issues specific to Apple as a platform or vendor, and the Apple ecosystem (e.g., Safari, WebKit, iOS).",
+                              "descriptionClean": "Issues specific to Apple as a platform or vendor, and the Apple ecosystem (e.g., Safari, WebKit, iOS).",
+                              "id": "apple",
                               "parentId": "interop_issues",
-                              "entityType": "default",
-                              "homepage": {
-                                "url": "https://www.apple.com/safari/"
+                              "entityType": "default"
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 9,
+                                "id": "safari",
+                                "percentageQuestion": 2,
+                                "percentageSurvey": 0.14,
+                                "entity": {
+                                  "name": "Safari browser",
+                                  "nameHtml": "Safari browser",
+                                  "nameClean": "Safari browser",
+                                  "description": "Issues specific to the Safari browser, across all platforms.",
+                                  "descriptionHtml": "Issues specific to the Safari browser, across all platforms.",
+                                  "descriptionClean": "Issues specific to the Safari browser, across all platforms.",
+                                  "id": "safari",
+                                  "parentId": "apple",
+                                  "entityType": "default",
+                                  "homepage": {
+                                    "url": "https://www.apple.com/safari/"
+                                  }
+                                }
                               }
-                            }
+                            ]
                           },
                           {
                             "count": 6,
@@ -781,9 +782,9 @@
                                 "percentageQuestion": 1.11,
                                 "percentageSurvey": 0.08,
                                 "entity": {
-                                  "name": "Chrome browser",
-                                  "nameHtml": "Chrome browser",
-                                  "nameClean": "Chrome browser",
+                                  "name": "Chrome",
+                                  "nameHtml": "Chrome",
+                                  "nameClean": "Chrome",
                                   "description": "Issues specific to the Chrome browser or the Chromum rendering engine, across all platforms.",
                                   "descriptionHtml": "Issues specific to the Chrome browser or the Chromum rendering engine, across all platforms.",
                                   "descriptionClean": "Issues specific to the Chrome browser or the Chromum rendering engine, across all platforms.",
@@ -802,7 +803,7 @@
                       {
                         "count": 56,
                         "id": "i18n_issues",
-                        "index": 3,
+                        "index": 2,
                         "percentageQuestion": 12.44,
                         "percentageSurvey": 0.9,
                         "entity": {
@@ -855,7 +856,7 @@
                       {
                         "count": 54,
                         "id": "iframe_element",
-                        "index": 4,
+                        "index": 3,
                         "percentageQuestion": 12,
                         "percentageSurvey": 0.87,
                         "entity": {
@@ -866,7 +867,7 @@
                           "descriptionHtml": "Pain points related to the <code>&lt;iframe&gt;</code> element.",
                           "descriptionClean": "Pain points related to the <iframe> element.",
                           "id": "iframe_element",
-                          "entityType": "default",
+                          "entityType": "feature",
                           "example": {
                             "language": "html",
                             "code": "<iframe src=\"https://example.com/\"></iframe>",
@@ -899,7 +900,7 @@
                       {
                         "count": 49,
                         "id": "security_privacy",
-                        "index": 5,
+                        "index": 4,
                         "percentageQuestion": 10.89,
                         "percentageSurvey": 0.79,
                         "entity": {
@@ -927,7 +928,7 @@
                               "descriptionClean": "Pain points around Content Security Policy, often citing its complexity, difficulty in configuration, and debugging.",
                               "id": "content_security_policy",
                               "parentId": "security_privacy",
-                              "entityType": "default",
+                              "entityType": "feature",
                               "example": {
                                 "language": "http",
                                 "code": "Content-Security-Policy: script-src 'self';\n",
@@ -980,7 +981,7 @@
                               "descriptionClean": "Issues related to the HTML Sanitizer API, including its absence, limitations, or ergonomics.",
                               "id": "sanitizer_api",
                               "parentId": "security_privacy",
-                              "entityType": "default",
+                              "entityType": "feature",
                               "example": {
                                 "language": "js",
                                 "code": "greeting.setHTML('Hello ' + nameInput.value);\n",
@@ -1005,7 +1006,7 @@
                               "descriptionClean": "Pain points with Cross-Origin Resource Sharing (CORS) and related cross-origin security policies.",
                               "id": "cors",
                               "parentId": "security_privacy",
-                              "entityType": "default",
+                              "entityType": "feature",
                               "example": {
                                 "language": "http",
                                 "code": "Access-Control-Allow-Origin: *\nAccess-Control-Allow-Methods: POST, GET, OPTIONS",
@@ -1027,7 +1028,7 @@
                       {
                         "count": 45,
                         "id": "reliance_on_javascript",
-                        "index": 6,
+                        "index": 5,
                         "percentageQuestion": 10,
                         "percentageSurvey": 0.72,
                         "entity": {
@@ -1044,7 +1045,7 @@
                       {
                         "count": 44,
                         "id": "web_components",
-                        "index": 7,
+                        "index": 6,
                         "percentageQuestion": 9.78,
                         "percentageSurvey": 0.71,
                         "entity": {
@@ -1055,7 +1056,7 @@
                           "descriptionHtml": "Pain points related to authoring and using Web Components (Custom Elements, Shadow DOM, etc.).",
                           "descriptionClean": "Pain points related to authoring and using Web Components (Custom Elements, Shadow DOM, etc.).",
                           "id": "web_components",
-                          "entityType": "default",
+                          "entityType": "feature",
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components"
                           }
@@ -1075,7 +1076,7 @@
                               "descriptionClean": "Shadow trees, encapsulation boundaries, slotting, parts, cross-root ARIA and integration with events, other APIs and page elements. Combine with styling for shadow DOM styling issues.",
                               "id": "shadow_dom",
                               "parentId": "web_components",
-                              "entityType": "default",
+                              "entityType": "feature",
                               "example": {
                                 "language": "js",
                                 "code": "this.shadowRoot = this.attachShadow({mode: \"open\"});",
@@ -1126,7 +1127,7 @@
                                   "descriptionClean": "Authoring, referencing, and tooling around Declarative Shadow DOM (DSD).",
                                   "id": "declarative_shadow_dom",
                                   "parentId": "shadow_dom",
-                                  "entityType": "default",
+                                  "entityType": "feature",
                                   "example": {
                                     "language": "html",
                                     "code": "<host-element>\n    <template shadowrootmode=\"open\">\n        <!-- Shadow content -->\n    </template>\n</host-element>",
@@ -1198,7 +1199,7 @@
                               "descriptionClean": "Issues related to defining and using custom elements, including syntax verbosity, lifecycle, and the reliance on JavaScript.",
                               "id": "custom_elements",
                               "parentId": "web_components",
-                              "entityType": "default",
+                              "entityType": "feature",
                               "mdn": {
                                 "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components"
                               }
@@ -1209,7 +1210,7 @@
                       {
                         "count": 35,
                         "id": "tables",
-                        "index": 8,
+                        "index": 7,
                         "percentageQuestion": 7.78,
                         "percentageSurvey": 0.56,
                         "entity": {
@@ -1263,7 +1264,7 @@
                       {
                         "count": 34,
                         "id": "accessibility_issues",
-                        "index": 9,
+                        "index": 8,
                         "percentageQuestion": 7.56,
                         "percentageSurvey": 0.55,
                         "entity": {
@@ -1280,7 +1281,7 @@
                       {
                         "count": 26,
                         "id": "educational_issues",
-                        "index": 10,
+                        "index": 9,
                         "percentageQuestion": 5.78,
                         "percentageSurvey": 0.42,
                         "entity": {
@@ -1297,7 +1298,7 @@
                       {
                         "count": 24,
                         "id": "headings",
-                        "index": 11,
+                        "index": 10,
                         "percentageQuestion": 5.33,
                         "percentageSurvey": 0.39,
                         "entity": {
@@ -1315,7 +1316,7 @@
                       {
                         "count": 22,
                         "id": "declarative_apis",
-                        "index": 12,
+                        "index": 11,
                         "percentageQuestion": 4.89,
                         "percentageSurvey": 0.35,
                         "entity": {
@@ -1328,6 +1329,61 @@
                           "id": "declarative_apis",
                           "entityType": "default"
                         }
+                      },
+                      {
+                        "count": 22,
+                        "id": "ecosystem",
+                        "index": 12,
+                        "percentageQuestion": 4.89,
+                        "percentageSurvey": 0.35,
+                        "entity": {
+                          "name": "Ecosystem",
+                          "nameHtml": "Ecosystem",
+                          "nameClean": "Ecosystem",
+                          "description": "Ecosystem issues, poor discoverability, poor marketing.",
+                          "descriptionHtml": "Ecosystem issues, poor discoverability, poor marketing.",
+                          "descriptionClean": "Ecosystem issues, poor discoverability, poor marketing.",
+                          "id": "ecosystem",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 13,
+                            "id": "framework_issues",
+                            "percentageQuestion": 2.89,
+                            "percentageSurvey": 0.21,
+                            "entity": {
+                              "name": "Framework compatibility",
+                              "nameHtml": "Framework compatibility",
+                              "nameClean": "Framework compatibility",
+                              "description": "Issues around compatibility with JS frameworks.",
+                              "descriptionHtml": "Issues around compatibility with JS frameworks.",
+                              "descriptionClean": "Issues around compatibility with JS frameworks.",
+                              "id": "framework_issues",
+                              "parentId": "ecosystem",
+                              "entityType": "default"
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 6,
+                                "id": "react_issues",
+                                "percentageQuestion": 1.33,
+                                "percentageSurvey": 0.1,
+                                "entity": {
+                                  "name": "React issues",
+                                  "nameHtml": "React issues",
+                                  "nameClean": "React issues",
+                                  "description": "Issues around compatibility with React.",
+                                  "descriptionHtml": "Issues around compatibility with React.",
+                                  "descriptionClean": "Issues around compatibility with React.",
+                                  "id": "react_issues",
+                                  "parentId": "framework_issues",
+                                  "entityType": "default"
+                                }
+                              }
+                            ]
+                          }
+                        ]
                       },
                       {
                         "count": 22,
@@ -1365,25 +1421,8 @@
                       },
                       {
                         "count": 15,
-                        "id": "specific_platforms_vendors",
-                        "index": 15,
-                        "percentageQuestion": 3.33,
-                        "percentageSurvey": 0.24,
-                        "entity": {
-                          "name": "🗑️ Specific platforms & vendors",
-                          "nameHtml": "🗑️ Specific platforms &amp; vendors",
-                          "nameClean": "🗑️ Specific platforms & vendors",
-                          "description": "Issues mentioning specific platforms, operating systems, or browser vendors.",
-                          "descriptionHtml": "Issues mentioning specific platforms, operating systems, or browser vendors.",
-                          "descriptionClean": "Issues mentioning specific platforms, operating systems, or browser vendors.",
-                          "id": "specific_platforms_vendors",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 15,
                         "id": "styling_customization",
-                        "index": 16,
+                        "index": 15,
                         "percentageQuestion": 3.33,
                         "percentageSurvey": 0.24,
                         "entity": {
@@ -1433,22 +1472,8 @@
                       },
                       {
                         "count": 14,
-                        "id": "interactivity",
-                        "index": 17,
-                        "percentageQuestion": 3.11,
-                        "percentageSurvey": 0.22,
-                        "entity": {
-                          "name": "Interactivity",
-                          "nameHtml": "Interactivity",
-                          "nameClean": "Interactivity",
-                          "id": "interactivity",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 14,
                         "id": "missing_elements",
-                        "index": 18,
+                        "index": 16,
                         "percentageQuestion": 3.11,
                         "percentageSurvey": 0.22,
                         "entity": {
@@ -1484,7 +1509,7 @@
                       {
                         "count": 14,
                         "id": "performance",
-                        "index": 19,
+                        "index": 17,
                         "percentageQuestion": 3.11,
                         "percentageSurvey": 0.22,
                         "entity": {
@@ -1499,6 +1524,60 @@
                         }
                       },
                       {
+                        "count": 13,
+                        "id": "component_based_architecture",
+                        "index": 18,
+                        "percentageQuestion": 2.89,
+                        "percentageSurvey": 0.21,
+                        "entity": {
+                          "name": "Component-Based Architecture",
+                          "nameHtml": "Component-Based Architecture",
+                          "nameClean": "Component-Based Architecture",
+                          "description": "Pain points related to building websites with a component-based model, such as state management, content composition, and framework reliance. Combine with `accessibility`  for accessibility challenges that are specific to or exacerbated by component-based development (e.g., managing heading levels, generating unique IDs).",
+                          "descriptionHtml": "Pain points related to building websites with a component-based model, such as state management, content composition, and framework reliance. Combine with <code>accessibility</code>  for accessibility challenges that are specific to or exacerbated by component-based development (e.g., managing heading levels, generating unique IDs).",
+                          "descriptionClean": "Pain points related to building websites with a component-based model, such as state management, content composition, and framework reliance. Combine with accessibility  for accessibility challenges that are specific to or exacerbated by component-based development (e.g., managing heading levels, generating unique IDs).",
+                          "id": "component_based_architecture",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 10,
+                        "id": "math",
+                        "index": 19,
+                        "percentageQuestion": 2.22,
+                        "percentageSurvey": 0.16,
+                        "entity": {
+                          "name": "Math on the Web",
+                          "nameHtml": "Math on the Web",
+                          "nameClean": "Math on the Web",
+                          "description": "Pain points specific to math on the Web, such as its verbosity, styling limitations, and unfavorable comparisons to TeX/LaTeX.",
+                          "descriptionHtml": "Pain points specific to math on the Web, such as its verbosity, styling limitations, and unfavorable comparisons to TeX/LaTeX.",
+                          "descriptionClean": "Pain points specific to math on the Web, such as its verbosity, styling limitations, and unfavorable comparisons to TeX/LaTeX.",
+                          "id": "math",
+                          "parentId": "content",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 8,
+                            "id": "mathml",
+                            "percentageQuestion": 1.78,
+                            "percentageSurvey": 0.13,
+                            "entity": {
+                              "name": "MathML",
+                              "nameHtml": "MathML",
+                              "nameClean": "MathML",
+                              "description": "Pain points specific to MathML.",
+                              "descriptionHtml": "Pain points specific to MathML.",
+                              "descriptionClean": "Pain points specific to MathML.",
+                              "id": "mathml",
+                              "parentId": "math",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
                         "count": 5768,
                         "id": "no_answer",
                         "index": 20,
@@ -1506,11 +1585,11 @@
                         "percentageSurvey": 92.69
                       },
                       {
-                        "count": 218,
+                        "count": 183,
                         "id": "other_answers",
                         "index": 21,
-                        "percentageQuestion": 48.38,
-                        "percentageSurvey": 3.55
+                        "percentageQuestion": 40.61,
+                        "percentageSurvey": 2.98
                       }
                     ]
                   }

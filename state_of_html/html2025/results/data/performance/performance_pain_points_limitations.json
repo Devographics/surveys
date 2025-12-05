@@ -61,7 +61,7 @@
                               "descriptionClean": "Issues related to the native loading=\"lazy\" attribute for images and iframes, and the desire for similar functionality for other elements.",
                               "id": "lazy_loading",
                               "parentId": "loading_issues",
-                              "entityType": "default",
+                              "entityType": "feature",
                               "example": {
                                 "language": "html",
                                 "code": "<img src=\"picture.jpg\" loading=\"lazy\" />\n<iframe src=\"supplementary.html\" loading=\"lazy\"></iframe>",
@@ -139,7 +139,7 @@
                               "descriptionClean": "Issues with declarative APIs for prioritizing resource loading, such as preload, prefetch, preconnect, and Speculation Rules.",
                               "id": "resource_hints",
                               "parentId": "loading_issues",
-                              "entityType": "default",
+                              "entityType": "feature",
                               "example": {
                                 "language": "html",
                                 "code": "<link rel=\"preload\" href=\"picture.jpg\" />\n<link rel=\"dns-prefetch\" href=\"https://fonts.googleapis.com/\" />",
@@ -184,25 +184,8 @@
                       },
                       {
                         "count": 23,
-                        "id": "css_issues",
-                        "index": 1,
-                        "percentageQuestion": 25.56,
-                        "percentageSurvey": 0.37,
-                        "entity": {
-                          "name": "CSS",
-                          "nameHtml": "CSS",
-                          "nameClean": "CSS",
-                          "description": "Issues related to CSS or specific CSS features (if no more specific leaf)",
-                          "descriptionHtml": "Issues related to CSS or specific CSS features (if no more specific leaf)",
-                          "descriptionClean": "Issues related to CSS or specific CSS features (if no more specific leaf)",
-                          "id": "css_issues",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 23,
                         "id": "graphics_issues",
-                        "index": 2,
+                        "index": 1,
                         "percentageQuestion": 25.56,
                         "percentageSurvey": 0.37,
                         "entity": {
@@ -268,26 +251,9 @@
                         ]
                       },
                       {
-                        "count": 19,
-                        "id": "high_cognitive_load",
-                        "index": 3,
-                        "percentageQuestion": 21.11,
-                        "percentageSurvey": 0.31,
-                        "entity": {
-                          "name": "🗑️ High cognitive load",
-                          "nameHtml": "🗑️ High cognitive load",
-                          "nameClean": "🗑️ High cognitive load",
-                          "description": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
-                          "descriptionHtml": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
-                          "descriptionClean": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
-                          "id": "high_cognitive_load",
-                          "entityType": "default"
-                        }
-                      },
-                      {
                         "count": 17,
                         "id": "responsive_design",
-                        "index": 4,
+                        "index": 2,
                         "percentageQuestion": 18.89,
                         "percentageSurvey": 0.27,
                         "entity": {
@@ -301,26 +267,44 @@
                       },
                       {
                         "count": 13,
-                        "id": "rendering",
-                        "index": 5,
+                        "id": "poor_design_issues",
+                        "index": 3,
                         "percentageQuestion": 14.44,
                         "percentageSurvey": 0.21,
                         "entity": {
-                          "name": "Rendering",
-                          "nameHtml": "Rendering",
-                          "nameClean": "Rendering",
-                          "description": "General issues related to the browser's process of painting pixels on the screen, including layout, style recalculation, and compositing.",
-                          "descriptionHtml": "General issues related to the browser's process of painting pixels on the screen, including layout, style recalculation, and compositing.",
-                          "descriptionClean": "General issues related to the browser's process of painting pixels on the screen, including layout, style recalculation, and compositing.",
-                          "id": "rendering",
-                          "parentId": "poor_design_issues",
+                          "name": "Poor design",
+                          "nameHtml": "Poor design",
+                          "nameClean": "Poor design",
+                          "description": "Fidelity issues that are outside the developer’s control or API limitations making it hard to produce high-fidelity results. E.g. rendering is too low quality, low dpi, blurry, browser-generated UI is poor or ugly, etc.",
+                          "descriptionHtml": "Fidelity issues that are outside the developer’s control or API limitations making it hard to produce high-fidelity results. E.g. rendering is too low quality, low dpi, blurry, browser-generated UI is poor or ugly, etc.",
+                          "descriptionClean": "Fidelity issues that are outside the developer’s control or API limitations making it hard to produce high-fidelity results. E.g. rendering is too low quality, low dpi, blurry, browser-generated UI is poor or ugly, etc.",
+                          "id": "poor_design_issues",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 13,
+                            "id": "rendering",
+                            "percentageQuestion": 14.44,
+                            "percentageSurvey": 0.21,
+                            "entity": {
+                              "name": "Rendering",
+                              "nameHtml": "Rendering",
+                              "nameClean": "Rendering",
+                              "description": "General issues related to the browser's process of painting pixels on the screen, including layout, style recalculation, and compositing.",
+                              "descriptionHtml": "General issues related to the browser's process of painting pixels on the screen, including layout, style recalculation, and compositing.",
+                              "descriptionClean": "General issues related to the browser's process of painting pixels on the screen, including layout, style recalculation, and compositing.",
+                              "id": "rendering",
+                              "parentId": "poor_design_issues",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 0,
                         "id": "animations_issues",
-                        "index": 6,
+                        "index": 4,
                         "percentageQuestion": 0,
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
@@ -338,7 +322,7 @@
                       {
                         "count": 0,
                         "id": "at_container",
-                        "index": 7,
+                        "index": 5,
                         "percentageQuestion": 0,
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
@@ -350,7 +334,7 @@
                           "descriptionHtml": "Pain points related to CSS Container Queries, often in relation to other features like responsive images.",
                           "descriptionClean": "Pain points related to CSS Container Queries, often in relation to other features like responsive images.",
                           "id": "at_container",
-                          "entityType": "default",
+                          "entityType": "feature",
                           "example": {
                             "language": "css",
                             "code": "@container (min-width: 700px) {\n  .card {\n    display: grid;\n    grid-template-columns: 2fr 1fr;\n  }\n}\n",
@@ -392,7 +376,7 @@
                       {
                         "count": 0,
                         "id": "cognitive_overload",
-                        "index": 8,
+                        "index": 6,
                         "percentageQuestion": 0,
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
@@ -427,7 +411,7 @@
                       {
                         "count": 0,
                         "id": "core_web_vitals",
-                        "index": 9,
+                        "index": 7,
                         "percentageQuestion": 0,
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
@@ -446,7 +430,7 @@
                       {
                         "count": 0,
                         "id": "debugging_issues",
-                        "index": 10,
+                        "index": 8,
                         "percentageQuestion": 0,
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
@@ -463,8 +447,26 @@
                       },
                       {
                         "count": 0,
+                        "id": "ecosystem",
+                        "index": 9,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 0,
+                        "hasInsufficientData": true,
+                        "entity": {
+                          "name": "Ecosystem",
+                          "nameHtml": "Ecosystem",
+                          "nameClean": "Ecosystem",
+                          "description": "Ecosystem issues, poor discoverability, poor marketing.",
+                          "descriptionHtml": "Ecosystem issues, poor discoverability, poor marketing.",
+                          "descriptionClean": "Ecosystem issues, poor discoverability, poor marketing.",
+                          "id": "ecosystem",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 0,
                         "id": "end_user_ux_issues",
-                        "index": 11,
+                        "index": 10,
                         "percentageQuestion": 0,
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
@@ -502,7 +504,7 @@
                       {
                         "count": 0,
                         "id": "tooling",
-                        "index": 12,
+                        "index": 11,
                         "percentageQuestion": 0,
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
@@ -518,11 +520,11 @@
                         }
                       },
                       {
-                        "count": 117,
+                        "count": 114,
                         "id": "other_answers",
-                        "index": 13,
-                        "percentageQuestion": 129.87,
-                        "percentageSurvey": 1.97
+                        "index": 12,
+                        "percentageQuestion": 126.54,
+                        "percentageSurvey": 1.93
                       }
                     ]
                   }

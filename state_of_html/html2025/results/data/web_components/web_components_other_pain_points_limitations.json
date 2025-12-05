@@ -31,26 +31,9 @@
                     },
                     "buckets": [
                       {
-                        "count": 69,
-                        "id": "high_cognitive_load",
-                        "index": 0,
-                        "percentageQuestion": 53.91,
-                        "percentageSurvey": 1.11,
-                        "entity": {
-                          "name": "🗑️ High cognitive load",
-                          "nameHtml": "🗑️ High cognitive load",
-                          "nameClean": "🗑️ High cognitive load",
-                          "description": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
-                          "descriptionHtml": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
-                          "descriptionClean": "Learnability, API ergonomics (DX), cognitive overhead, things being too low-level, confusing, annoying, or a hassle.",
-                          "id": "high_cognitive_load",
-                          "entityType": "default"
-                        }
-                      },
-                      {
                         "count": 36,
                         "id": "content",
-                        "index": 1,
+                        "index": 0,
                         "percentageQuestion": 28.13,
                         "percentageSurvey": 0.58,
                         "entity": {
@@ -147,7 +130,7 @@
                                   "descriptionClean": "Issues around the lack of or desire for HTML Modules, for packaging and importing components and content.",
                                   "id": "html_modules",
                                   "parentId": "html_reuse",
-                                  "entityType": "default",
+                                  "entityType": "feature",
                                   "example": {
                                     "language": "html",
                                     "code": "<script type=\"module\">\n\timport { TabList } from \"./tablist.html\" with { type: 'html' };\n\tcustomElements.define(\"tab-list\", TabList);\n</script>",
@@ -175,7 +158,7 @@
                       {
                         "count": 28,
                         "id": "shadow_dom",
-                        "index": 2,
+                        "index": 1,
                         "percentageQuestion": 21.88,
                         "percentageSurvey": 0.45,
                         "entity": {
@@ -187,7 +170,7 @@
                           "descriptionClean": "Shadow trees, encapsulation boundaries, slotting, parts, cross-root ARIA and integration with events, other APIs and page elements. Combine with styling for shadow DOM styling issues.",
                           "id": "shadow_dom",
                           "parentId": "web_components",
-                          "entityType": "default",
+                          "entityType": "feature",
                           "example": {
                             "language": "js",
                             "code": "this.shadowRoot = this.attachShadow({mode: \"open\"});",
@@ -226,6 +209,44 @@
                         "nestedBuckets": [
                           {
                             "count": 0,
+                            "id": "cross_root",
+                            "percentageQuestion": 0,
+                            "percentageSurvey": 0,
+                            "hasInsufficientData": true,
+                            "entity": {
+                              "name": "Cross-root issues",
+                              "nameHtml": "Cross-root issues",
+                              "nameClean": "Cross-root issues",
+                              "description": "Issues around crossing shadow boundaries.",
+                              "descriptionHtml": "Issues around crossing shadow boundaries.",
+                              "descriptionClean": "Issues around crossing shadow boundaries.",
+                              "id": "cross_root",
+                              "parentId": "shadow_dom",
+                              "entityType": "default"
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 0,
+                                "id": "cross_root_refs",
+                                "percentageQuestion": 0,
+                                "percentageSurvey": 0,
+                                "hasInsufficientData": true,
+                                "entity": {
+                                  "name": "Cross-root element references",
+                                  "nameHtml": "Cross-root element references",
+                                  "nameClean": "Cross-root element references",
+                                  "description": "Issues with element references crossing shadow boundaries, including cross-root ARIA",
+                                  "descriptionHtml": "Issues with element references crossing shadow boundaries, including cross-root ARIA",
+                                  "descriptionClean": "Issues with element references crossing shadow boundaries, including cross-root ARIA",
+                                  "id": "cross_root_refs",
+                                  "parentId": "cross_root",
+                                  "entityType": "default"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "count": 0,
                             "id": "declarative_shadow_dom",
                             "percentageQuestion": 0,
                             "percentageSurvey": 0,
@@ -239,7 +260,7 @@
                               "descriptionClean": "Authoring, referencing, and tooling around Declarative Shadow DOM (DSD).",
                               "id": "declarative_shadow_dom",
                               "parentId": "shadow_dom",
-                              "entityType": "default",
+                              "entityType": "feature",
                               "example": {
                                 "language": "html",
                                 "code": "<host-element>\n    <template shadowrootmode=\"open\">\n        <!-- Shadow content -->\n    </template>\n</host-element>",
@@ -294,51 +315,13 @@
                                 }
                               }
                             }
-                          },
-                          {
-                            "count": 0,
-                            "id": "cross_root",
-                            "percentageQuestion": 0,
-                            "percentageSurvey": 0,
-                            "hasInsufficientData": true,
-                            "entity": {
-                              "name": "Cross-root issues",
-                              "nameHtml": "Cross-root issues",
-                              "nameClean": "Cross-root issues",
-                              "description": "Issues around crossing shadow boundaries.",
-                              "descriptionHtml": "Issues around crossing shadow boundaries.",
-                              "descriptionClean": "Issues around crossing shadow boundaries.",
-                              "id": "cross_root",
-                              "parentId": "shadow_dom",
-                              "entityType": "default"
-                            },
-                            "nestedBuckets": [
-                              {
-                                "count": 0,
-                                "id": "cross_root_refs",
-                                "percentageQuestion": 0,
-                                "percentageSurvey": 0,
-                                "hasInsufficientData": true,
-                                "entity": {
-                                  "name": "Cross-root element references",
-                                  "nameHtml": "Cross-root element references",
-                                  "nameClean": "Cross-root element references",
-                                  "description": "Issues with element references crossing shadow boundaries, including cross-root ARIA",
-                                  "descriptionHtml": "Issues with element references crossing shadow boundaries, including cross-root ARIA",
-                                  "descriptionClean": "Issues with element references crossing shadow boundaries, including cross-root ARIA",
-                                  "id": "cross_root_refs",
-                                  "parentId": "cross_root",
-                                  "entityType": "default"
-                                }
-                              }
-                            ]
                           }
                         ]
                       },
                       {
                         "count": 24,
                         "id": "cognitive_overload",
-                        "index": 3,
+                        "index": 2,
                         "percentageQuestion": 18.75,
                         "percentageSurvey": 0.39,
                         "entity": {
@@ -368,24 +351,6 @@
                           },
                           {
                             "count": 0,
-                            "id": "excessive_complexity",
-                            "percentageQuestion": 0,
-                            "percentageSurvey": 0,
-                            "hasInsufficientData": true,
-                            "entity": {
-                              "name": "Excessive complexity",
-                              "nameHtml": "Excessive complexity",
-                              "nameClean": "Excessive complexity",
-                              "description": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
-                              "descriptionHtml": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
-                              "descriptionClean": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
-                              "id": "excessive_complexity",
-                              "parentId": "cognitive_overload",
-                              "entityType": "default"
-                            }
-                          },
-                          {
-                            "count": 0,
                             "id": "too_much_work",
                             "percentageQuestion": 0,
                             "percentageSurvey": 0,
@@ -401,13 +366,31 @@
                               "parentId": "cognitive_overload",
                               "entityType": "default"
                             }
+                          },
+                          {
+                            "count": 0,
+                            "id": "excessive_complexity",
+                            "percentageQuestion": 0,
+                            "percentageSurvey": 0,
+                            "hasInsufficientData": true,
+                            "entity": {
+                              "name": "Excessive complexity",
+                              "nameHtml": "Excessive complexity",
+                              "nameClean": "Excessive complexity",
+                              "description": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
+                              "descriptionHtml": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
+                              "descriptionClean": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
+                              "id": "excessive_complexity",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
                           }
                         ]
                       },
                       {
                         "count": 21,
                         "id": "styling_customization",
-                        "index": 4,
+                        "index": 3,
                         "percentageQuestion": 16.41,
                         "percentageSurvey": 0.34,
                         "entity": {
@@ -443,25 +426,8 @@
                       },
                       {
                         "count": 16,
-                        "id": "css_issues",
-                        "index": 5,
-                        "percentageQuestion": 12.5,
-                        "percentageSurvey": 0.26,
-                        "entity": {
-                          "name": "CSS",
-                          "nameHtml": "CSS",
-                          "nameClean": "CSS",
-                          "description": "Issues related to CSS or specific CSS features (if no more specific leaf)",
-                          "descriptionHtml": "Issues related to CSS or specific CSS features (if no more specific leaf)",
-                          "descriptionClean": "Issues related to CSS or specific CSS features (if no more specific leaf)",
-                          "id": "css_issues",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 16,
                         "id": "declarative_apis",
-                        "index": 6,
+                        "index": 4,
                         "percentageQuestion": 12.5,
                         "percentageSurvey": 0.26,
                         "entity": {
@@ -478,7 +444,7 @@
                       {
                         "count": 16,
                         "id": "slots",
-                        "index": 7,
+                        "index": 5,
                         "percentageQuestion": 12.5,
                         "percentageSurvey": 0.26,
                         "entity": {
@@ -516,7 +482,7 @@
                       {
                         "count": 15,
                         "id": "accessibility_issues",
-                        "index": 8,
+                        "index": 6,
                         "percentageQuestion": 11.72,
                         "percentageSurvey": 0.24,
                         "entity": {
@@ -533,7 +499,7 @@
                       {
                         "count": 15,
                         "id": "extending_builtin_elements",
-                        "index": 9,
+                        "index": 7,
                         "percentageQuestion": 11.72,
                         "percentageSurvey": 0.24,
                         "entity": {
@@ -550,8 +516,44 @@
                       },
                       {
                         "count": 12,
+                        "id": "ecosystem",
+                        "index": 8,
+                        "percentageQuestion": 9.38,
+                        "percentageSurvey": 0.19,
+                        "entity": {
+                          "name": "Ecosystem",
+                          "nameHtml": "Ecosystem",
+                          "nameClean": "Ecosystem",
+                          "description": "Ecosystem issues, poor discoverability, poor marketing.",
+                          "descriptionHtml": "Ecosystem issues, poor discoverability, poor marketing.",
+                          "descriptionClean": "Ecosystem issues, poor discoverability, poor marketing.",
+                          "id": "ecosystem",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 10,
+                            "id": "framework_issues",
+                            "percentageQuestion": 7.81,
+                            "percentageSurvey": 0.16,
+                            "entity": {
+                              "name": "Framework compatibility",
+                              "nameHtml": "Framework compatibility",
+                              "nameClean": "Framework compatibility",
+                              "description": "Issues around compatibility with JS frameworks.",
+                              "descriptionHtml": "Issues around compatibility with JS frameworks.",
+                              "descriptionClean": "Issues around compatibility with JS frameworks.",
+                              "id": "framework_issues",
+                              "parentId": "ecosystem",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 12,
                         "id": "elementinternals",
-                        "index": 10,
+                        "index": 9,
                         "percentageQuestion": 9.38,
                         "percentageSurvey": 0.19,
                         "entity": {
@@ -569,7 +571,7 @@
                       {
                         "count": 12,
                         "id": "wc_css_integration",
-                        "index": 11,
+                        "index": 10,
                         "percentageQuestion": 9.38,
                         "percentageSurvey": 0.19,
                         "entity": {
@@ -607,7 +609,7 @@
                       {
                         "count": 11,
                         "id": "server_client",
-                        "index": 12,
+                        "index": 11,
                         "percentageQuestion": 8.59,
                         "percentageSurvey": 0.18,
                         "entity": {
@@ -643,7 +645,7 @@
                       {
                         "count": 10,
                         "id": "form_submission_issues",
-                        "index": 13,
+                        "index": 12,
                         "percentageQuestion": 7.81,
                         "percentageSurvey": 0.16,
                         "entity": {
@@ -659,27 +661,9 @@
                         }
                       },
                       {
-                        "count": 10,
-                        "id": "framework_issues",
-                        "index": 14,
-                        "percentageQuestion": 7.81,
-                        "percentageSurvey": 0.16,
-                        "entity": {
-                          "name": "Framework compatibility",
-                          "nameHtml": "Framework compatibility",
-                          "nameClean": "Framework compatibility",
-                          "description": "Issues around compatibility with JS frameworks.",
-                          "descriptionHtml": "Issues around compatibility with JS frameworks.",
-                          "descriptionClean": "Issues around compatibility with JS frameworks.",
-                          "id": "framework_issues",
-                          "parentId": "ecosystem",
-                          "entityType": "default"
-                        }
-                      },
-                      {
                         "count": 0,
                         "id": "ce_attributes_props",
-                        "index": 15,
+                        "index": 13,
                         "percentageQuestion": 0,
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
@@ -698,7 +682,7 @@
                       {
                         "count": 0,
                         "id": "custom_element_lifecycle_hooks",
-                        "index": 16,
+                        "index": 14,
                         "percentageQuestion": 0,
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
@@ -717,7 +701,7 @@
                       {
                         "count": 0,
                         "id": "custom_element_registration",
-                        "index": 17,
+                        "index": 15,
                         "percentageQuestion": 0,
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
@@ -736,7 +720,7 @@
                       {
                         "count": 0,
                         "id": "form_associated_ce",
-                        "index": 18,
+                        "index": 16,
                         "percentageQuestion": 0,
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
@@ -755,7 +739,7 @@
                       {
                         "count": 0,
                         "id": "loading_issues",
-                        "index": 19,
+                        "index": 17,
                         "percentageQuestion": 0,
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
@@ -771,11 +755,47 @@
                         }
                       },
                       {
-                        "count": 148,
+                        "count": 0,
+                        "id": "reliance_on_javascript",
+                        "index": 18,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 0,
+                        "hasInsufficientData": true,
+                        "entity": {
+                          "name": "Reliance on JavaScript",
+                          "nameHtml": "Reliance on JavaScript",
+                          "nameClean": "Reliance on JavaScript",
+                          "description": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "descriptionHtml": "Lack of declarative APIs, slow rendering due to dependence on correct loading &amp; execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "descriptionClean": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "id": "reliance_on_javascript",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 0,
+                        "id": "tooling",
+                        "index": 19,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 0,
+                        "hasInsufficientData": true,
+                        "entity": {
+                          "name": "Tooling",
+                          "nameHtml": "Tooling",
+                          "nameClean": "Tooling",
+                          "description": "Issues around third party tools, or lack thereof, including tooling in the browser (extensions, devtools, etc.).",
+                          "descriptionHtml": "Issues around third party tools, or lack thereof, including tooling in the browser (extensions, devtools, etc.).",
+                          "descriptionClean": "Issues around third party tools, or lack thereof, including tooling in the browser (extensions, devtools, etc.).",
+                          "id": "tooling",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 151,
                         "id": "other_answers",
                         "index": 20,
-                        "percentageQuestion": 115.61,
-                        "percentageSurvey": 2.4
+                        "percentageQuestion": 117.96,
+                        "percentageSurvey": 2.44
                       }
                     ]
                   }
