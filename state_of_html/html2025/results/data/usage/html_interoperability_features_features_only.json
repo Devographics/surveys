@@ -631,6 +631,9 @@
                           "name": "`<input type=\"file\">`",
                           "nameHtml": "<code>&lt;input type=\"file\"&gt;</code>",
                           "nameClean": "<input type=\"file\">",
+                          "description": "Pain points specific to `<input type=\"file\">`, especially around styling the button and displaying selected files.",
+                          "descriptionHtml": "Pain points specific to <code>&lt;input type=\"file\"&gt;</code>, especially around styling the button and displaying selected files.",
+                          "descriptionClean": "Pain points specific to <input type=\"file\">, especially around styling the button and displaying selected files.",
                           "id": "input_type_file",
                           "parentId": "form_input_issues",
                           "entityType": "feature"
@@ -1591,9 +1594,27 @@
                         }
                       },
                       {
+                        "count": 23,
+                        "id": "web_bluetooth",
+                        "index": 12,
+                        "percentageQuestion": 2.6,
+                        "percentageSurvey": 0.37,
+                        "entity": {
+                          "name": "Web Bluetooth",
+                          "nameHtml": "Web Bluetooth",
+                          "nameClean": "Web Bluetooth",
+                          "description": "Issues around the web bluetooth API and generally accessing bluetooth capabilities from web apps.",
+                          "descriptionHtml": "Issues around the web bluetooth API and generally accessing bluetooth capabilities from web apps.",
+                          "descriptionClean": "Issues around the web bluetooth API and generally accessing bluetooth capabilities from web apps.",
+                          "id": "web_bluetooth",
+                          "parentId": "apis_capabilities",
+                          "entityType": "feature"
+                        }
+                      },
+                      {
                         "count": 21,
                         "id": "web_share_api",
-                        "index": 12,
+                        "index": 13,
                         "percentageQuestion": 2.38,
                         "percentageSurvey": 0.34,
                         "entity": {
@@ -1648,7 +1669,7 @@
                       {
                         "count": 20,
                         "id": "speech_recognition_api",
-                        "index": 13,
+                        "index": 14,
                         "percentageQuestion": 2.26,
                         "percentageSurvey": 0.32,
                         "entity": {
@@ -1689,7 +1710,7 @@
                       {
                         "count": 18,
                         "id": "webgpu",
-                        "index": 14,
+                        "index": 15,
                         "percentageQuestion": 2.04,
                         "percentageSurvey": 0.29,
                         "entity": {
@@ -1729,7 +1750,7 @@
                       {
                         "count": 17,
                         "id": "svg_element",
-                        "index": 15,
+                        "index": 16,
                         "percentageQuestion": 1.92,
                         "percentageSurvey": 0.27,
                         "entity": {
@@ -1780,7 +1801,7 @@
                       {
                         "count": 17,
                         "id": "video_element",
-                        "index": 16,
+                        "index": 17,
                         "percentageQuestion": 1.92,
                         "percentageSurvey": 0.27,
                         "entity": {
@@ -1800,9 +1821,49 @@
                         }
                       },
                       {
+                        "count": 13,
+                        "id": "temporal_api",
+                        "index": 18,
+                        "percentageQuestion": 1.47,
+                        "percentageSurvey": 0.21,
+                        "entity": {
+                          "name": "Temporal",
+                          "nameHtml": "Temporal",
+                          "nameClean": "Temporal",
+                          "description": "Provides standard objects and functions for working with dates and times.",
+                          "descriptionHtml": "Provides standard objects and functions for working with dates and times.",
+                          "descriptionClean": "Provides standard objects and functions for working with dates and times.",
+                          "id": "temporal",
+                          "parentId": "date_and_time",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"
+                          },
+                          "webFeature": {
+                            "id": "temporal",
+                            "description_html": "The <code>Temporal</code> API allows you to work with dates, times, time zones, and durations. It is more powerful than the <code>Date</code> API.",
+                            "group": [
+                              "javascript"
+                            ],
+                            "name": "Temporal",
+                            "spec": [
+                              "https://tc39.es/proposal-temporal/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/temporal/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "firefox": "139",
+                                "firefox_android": "139"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
                         "count": 10,
                         "id": "color_picker",
-                        "index": 17,
+                        "index": 19,
                         "percentageQuestion": 1.13,
                         "percentageSurvey": 0.16,
                         "entity": {
@@ -1815,91 +1876,11 @@
                         }
                       },
                       {
-                        "count": 9,
-                        "id": "css_nesting",
-                        "index": 18,
-                        "percentageQuestion": 1.02,
-                        "percentageSurvey": 0.14,
-                        "entity": {
-                          "name": "CSS Nesting",
-                          "nameHtml": "CSS Nesting",
-                          "nameClean": "CSS Nesting",
-                          "id": "css_nesting",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".parent {\n  color: blue;\n\n  .child {\n    color: red;\n  }\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.parent</span> {\n  <span class=\"hljs-attribute\">color</span>: blue;\n\n  <span class=\"hljs-selector-class\">.child</span> {\n    <span class=\"hljs-attribute\">color</span>: red;\n  }\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Nesting"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://developer.chrome.com/articles/css-nesting/",
-                              "title": "CSS Nesting"
-                            }
-                          ],
-                          "webFeature": {
-                            "id": "nesting",
-                            "description_html": "CSS nesting allows for shorter selectors, easier reading, and more modularity by nesting rules inside others.",
-                            "group": [
-                              "css"
-                            ],
-                            "name": "Nesting",
-                            "spec": [
-                              "https://drafts.csswg.org/css-nesting-1/"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/nesting/",
-                            "status": {
-                              "baseline": "low",
-                              "baseline_low_date": "2023-12-11",
-                              "support": {
-                                "chrome": "120",
-                                "chrome_android": "120",
-                                "edge": "120",
-                                "firefox": "117",
-                                "firefox_android": "117",
-                                "safari": "17.2",
-                                "safari_ios": "17.2"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 9,
-                        "id": "input_checkbox_switch",
-                        "index": 19,
-                        "percentageQuestion": 1.02,
-                        "percentageSurvey": 0.14,
-                        "entity": {
-                          "name": "Switch Control",
-                          "nameHtml": "Switch Control",
-                          "nameClean": "Switch Control",
-                          "description": "A way to render a checkbox as a switch.",
-                          "descriptionHtml": "A way to render a checkbox as a switch.",
-                          "descriptionClean": "A way to render a checkbox as a switch.",
-                          "id": "input_checkbox_switch",
-                          "entityType": "feature",
-                          "resources": [
-                            {
-                              "url": "https://webkit.org/blog/15054/an-html-switch-control/",
-                              "title": "An HTML Switch Control | WebKit"
-                            },
-                            {
-                              "url": "https://www.smashingmagazine.com/2024/05/switching-it-up-html-latest-control/",
-                              "title": "Switching It Up With HTML’s Latest Control — Smashing Magazine"
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "count": 66,
+                        "count": 121,
                         "id": "other_answers",
                         "index": 20,
-                        "percentageQuestion": 7.46,
-                        "percentageSurvey": 1.06
+                        "percentageQuestion": 13.68,
+                        "percentageSurvey": 1.93
                       }
                     ]
                   }

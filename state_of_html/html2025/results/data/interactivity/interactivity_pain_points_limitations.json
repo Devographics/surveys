@@ -304,33 +304,54 @@
                         "percentageQuestion": 8.46,
                         "percentageSurvey": 0.35,
                         "entity": {
-                          "name": "<​details>/<​summary>",
-                          "nameHtml": "&lt;​details&gt;/&lt;​summary&gt;",
-                          "nameClean": "<​details>/<​summary>",
-                          "description": "Pain points related to the <details> and <summary> elements, including styling limitations (especially the marker), animation difficulties, and accessibility concerns.",
-                          "descriptionHtml": "Pain points related to the  and  elements, including styling limitations (especially the marker), animation difficulties, and accessibility concerns.",
-                          "descriptionClean": "Pain points related to the  and  elements, including styling limitations (especially the marker), animation difficulties, and accessibility concerns.",
-                          "id": "details_summary_element",
-                          "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 0,
-                            "id": "details_name_attribute",
-                            "index": 0,
-                            "percentageQuestion": 0,
-                            "percentageSurvey": 0,
-                            "hasInsufficientData": true,
-                            "entity": {
-                              "name": "<​details name> (Exclusive accordion)",
-                              "nameHtml": "&lt;​details name&gt; (Exclusive accordion)",
-                              "nameClean": "<​details name> (Exclusive accordion)",
-                              "id": "details_name_attribute",
-                              "parentId": "details_summary_element",
-                              "entityType": "default"
+                          "name": "`<details>` and `<summary>`",
+                          "nameHtml": "<code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code>",
+                          "nameClean": "<details> and <summary>",
+                          "description": "A disclosure widget that can be toggled to hide or show content interactively.",
+                          "descriptionHtml": "A disclosure widget that can be toggled to hide or show content interactively.",
+                          "descriptionClean": "A disclosure widget that can be toggled to hide or show content interactively.",
+                          "id": "details_element",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<details>\n    <summary>Details</summary>\n    Longer content\n</details>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">details</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">summary</span>&gt;</span>Details<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">summary</span>&gt;</span>\n    Longer content\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">details</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element",
+                              "title": "HTML Standard"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "details",
+                            "description_html": "The <code>&#x3C;details></code> element is a disclosure widget which can be expanded to reveal additional content. When closed, only the nested <code>&#x3C;summary></code> element is visible.",
+                            "group": [
+                              "html-elements"
+                            ],
+                            "name": "<details>",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/details/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-01-15",
+                              "support": {
+                                "chrome": "12",
+                                "chrome_android": "18",
+                                "edge": "79",
+                                "firefox": "49",
+                                "firefox_android": "49",
+                                "safari": "6",
+                                "safari_ios": "6"
+                              }
                             }
                           }
-                        ]
+                        }
                       },
                       {
                         "count": 22,
@@ -351,27 +372,8 @@
                         "nestedBuckets": [
                           {
                             "count": 0,
-                            "id": "signals",
-                            "index": 0,
-                            "percentageQuestion": 0,
-                            "percentageSurvey": 0,
-                            "hasInsufficientData": true,
-                            "entity": {
-                              "name": "Signals",
-                              "nameHtml": "Signals",
-                              "nameClean": "Signals",
-                              "description": "Desire for a native implementation of the Signals pattern for fine-grained reactivity.",
-                              "descriptionHtml": "Desire for a native implementation of the Signals pattern for fine-grained reactivity.",
-                              "descriptionClean": "Desire for a native implementation of the Signals pattern for fine-grained reactivity.",
-                              "id": "signals",
-                              "parentId": "reactivity",
-                              "entityType": "default"
-                            }
-                          },
-                          {
-                            "count": 0,
                             "id": "data_binding",
-                            "index": 1,
+                            "index": 0,
                             "percentageQuestion": 0,
                             "percentageSurvey": 0,
                             "hasInsufficientData": true,
@@ -383,6 +385,25 @@
                               "descriptionHtml": "Pain points around the lack of a native way to bind JavaScript data to DOM elements, so that changes in one are automatically reflected in the other.",
                               "descriptionClean": "Pain points around the lack of a native way to bind JavaScript data to DOM elements, so that changes in one are automatically reflected in the other.",
                               "id": "data_binding",
+                              "parentId": "reactivity",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 0,
+                            "id": "signals",
+                            "index": 1,
+                            "percentageQuestion": 0,
+                            "percentageSurvey": 0,
+                            "hasInsufficientData": true,
+                            "entity": {
+                              "name": "Signals",
+                              "nameHtml": "Signals",
+                              "nameClean": "Signals",
+                              "description": "Desire for a native implementation of the Signals pattern for fine-grained reactivity.",
+                              "descriptionHtml": "Desire for a native implementation of the Signals pattern for fine-grained reactivity.",
+                              "descriptionClean": "Desire for a native implementation of the Signals pattern for fine-grained reactivity.",
+                              "id": "signals",
                               "parentId": "reactivity",
                               "entityType": "default"
                             }
@@ -626,6 +647,73 @@
                             "count": 0,
                             "id": "accordion_element",
                             "index": 1,
+                            "percentageQuestion": 0,
+                            "percentageSurvey": 0,
+                            "hasInsufficientData": true,
+                            "entity": {
+                              "name": "`<details name>` (Exclusive Accordion)",
+                              "nameHtml": "<code>&lt;details name&gt;</code> (Exclusive Accordion)",
+                              "nameClean": "<details name> (Exclusive Accordion)",
+                              "description": "Group `<details>` elements so that only up to one in the group can be open at a time.",
+                              "descriptionHtml": "Group <code>&lt;details&gt;</code> elements so that only up to one in the group can be open at a time.",
+                              "descriptionClean": "Group <details> elements so that only up to one in the group can be open at a time.",
+                              "id": "accordion_element",
+                              "parentId": "missing_elements",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "html",
+                                "code": "<details open name=\"sidebar_panel\">\n\t<summary>Main info</summary>\n\t<!-- controls -->\n</details>\n<details name=\"sidebar_panel\">\n\t<summary>Style</summary>\n\t<!-- controls -->\n</details>",
+                                "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">details</span> <span class=\"hljs-attr\">open</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">&quot;sidebar_panel&quot;</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">summary</span>&gt;</span>Main info<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">summary</span>&gt;</span>\n\t<span class=\"hljs-comment\">&lt;!-- controls --&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">details</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">details</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">&quot;sidebar_panel&quot;</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">summary</span>&gt;</span>Style<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">summary</span>&gt;</span>\n\t<span class=\"hljs-comment\">&lt;!-- controls --&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">details</span>&gt;</span>"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://github.com/whatwg/html/pull/9400",
+                                  "title": "Add name attribute for grouping details elements into an exclusive accordion by dbaron · Pull Request #9400 · whatwg/html · GitHub"
+                                },
+                                {
+                                  "url": "https://github.com/w3ctag/design-reviews/issues/866#issuecomment-1661272254",
+                                  "title": "Exclusive accordion (&lt;details name=&quot;&quot;&gt;) · Issue #866 · w3ctag/design-reviews · GitHub"
+                                },
+                                {
+                                  "url": "https://open-ui.org/components/accordion.explainer/",
+                                  "title": "Exclusive Accordion (Explainer) | Open UI"
+                                },
+                                {
+                                  "url": "https://chromestatus.com/feature/6710427028815872",
+                                  "title": "Chrome Platform Status"
+                                }
+                              ],
+                              "webFeature": {
+                                "id": "details-name",
+                                "description_html": "Multiple <code>&#x3C;details></code> elements which use the same <code>name</code> attribute are mutually exclusive. When one member of the group is opened, all other members are closed.",
+                                "group": [
+                                  "html-elements"
+                                ],
+                                "name": "Mutually exclusive <details> elements",
+                                "spec": [
+                                  "https://html.spec.whatwg.org/multipage/interactive-elements.html#attr-details-name"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/details-name/",
+                                "status": {
+                                  "baseline": "low",
+                                  "baseline_low_date": "2024-09-03",
+                                  "support": {
+                                    "chrome": "120",
+                                    "chrome_android": "120",
+                                    "edge": "120",
+                                    "firefox": "130",
+                                    "firefox_android": "130",
+                                    "safari": "17.2",
+                                    "safari_ios": "17.2"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "count": 0,
+                            "id": "details_name_attribute",
+                            "index": 2,
                             "percentageQuestion": 0,
                             "percentageSurvey": 0,
                             "hasInsufficientData": true,
