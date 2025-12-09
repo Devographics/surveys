@@ -28,7 +28,41 @@
                       "count": 398,
                       "percentageSurvey": 7.37,
                       "total": 5401
-                    }
+                    },
+                    "buckets": [
+                      {
+                        "count": 11,
+                        "id": "cors",
+                        "index": 0,
+                        "percentageQuestion": 2.76,
+                        "percentageSurvey": 0.2,
+                        "entity": {
+                          "name": "CORS",
+                          "nameHtml": "CORS",
+                          "nameClean": "CORS",
+                          "description": "Opt-in to allowing requests from different origins.",
+                          "descriptionHtml": "Opt-in to allowing requests from different origins.",
+                          "descriptionClean": "Opt-in to allowing requests from different origins.",
+                          "id": "cors",
+                          "parentId": "security_privacy",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "http",
+                            "code": "Access-Control-Allow-Origin: *\nAccess-Control-Allow-Methods: POST, GET, OPTIONS",
+                            "codeHighlighted": "<span class=\"hljs-attribute\">Access-Control-Allow-Origin</span><span class=\"hljs-punctuation\">: </span>*\n<span class=\"hljs-attribute\">Access-Control-Allow-Methods</span><span class=\"hljs-punctuation\">: </span>POST, GET, OPTIONS"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://fetch.spec.whatwg.org/#http-access-control-allow-origin",
+                              "title": "Fetch Standard"
+                            }
+                          ]
+                        }
+                      }
+                    ]
                   },
                   {
                     "_metadata": {
@@ -54,12 +88,9 @@
                         "percentageQuestion": 12,
                         "percentageSurvey": 0.87,
                         "entity": {
-                          "name": "<​iframe> Element",
-                          "nameHtml": "&lt;​iframe&gt; Element",
-                          "nameClean": "<​iframe> Element",
-                          "description": "Pain points related to the `<iframe>` element.",
-                          "descriptionHtml": "Pain points related to the <code>&lt;iframe&gt;</code> element.",
-                          "descriptionClean": "Pain points related to the <iframe> element.",
+                          "name": "`<iframe>`",
+                          "nameHtml": "<code>&lt;iframe&gt;</code>",
+                          "nameClean": "<iframe>",
                           "id": "iframe_element",
                           "entityType": "feature",
                           "example": {
@@ -70,26 +101,7 @@
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe"
                           }
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 19,
-                            "id": "iframe_auto_sizing",
-                            "percentageQuestion": 4.22,
-                            "percentageSurvey": 0.31,
-                            "entity": {
-                              "name": "Iframe auto-sizing",
-                              "nameHtml": "Iframe auto-sizing",
-                              "nameClean": "Iframe auto-sizing",
-                              "description": "Difficulties in making `<iframe>` elements automatically size to their content's height or width, especially without JavaScript.",
-                              "descriptionHtml": "Difficulties in making <code>&lt;iframe&gt;</code> elements automatically size to their content's height or width, especially without JavaScript.",
-                              "descriptionClean": "Difficulties in making <iframe> elements automatically size to their content's height or width, especially without JavaScript.",
-                              "id": "iframe_auto_sizing",
-                              "parentId": "iframe_element",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
+                        }
                       },
                       {
                         "count": 44,
@@ -101,9 +113,6 @@
                           "name": "Web Components",
                           "nameHtml": "Web Components",
                           "nameClean": "Web Components",
-                          "description": "Pain points related to authoring and using Web Components (Custom Elements, Shadow DOM, etc.).",
-                          "descriptionHtml": "Pain points related to authoring and using Web Components (Custom Elements, Shadow DOM, etc.).",
-                          "descriptionClean": "Pain points related to authoring and using Web Components (Custom Elements, Shadow DOM, etc.).",
                           "id": "web_components",
                           "entityType": "feature",
                           "mdn": {
@@ -120,9 +129,9 @@
                               "name": "Shadow DOM",
                               "nameHtml": "Shadow DOM",
                               "nameClean": "Shadow DOM",
-                              "description": "Shadow trees, encapsulation boundaries, slotting, parts, cross-root ARIA and integration with events, other APIs and page elements. Combine with `styling` for shadow DOM styling issues.",
-                              "descriptionHtml": "Shadow trees, encapsulation boundaries, slotting, parts, cross-root ARIA and integration with events, other APIs and page elements. Combine with <code>styling</code> for shadow DOM styling issues.",
-                              "descriptionClean": "Shadow trees, encapsulation boundaries, slotting, parts, cross-root ARIA and integration with events, other APIs and page elements. Combine with styling for shadow DOM styling issues.",
+                              "description": "Encapsulate elements not visible from the outside, and style them with CSS not affecting the rest of the page.",
+                              "descriptionHtml": "Encapsulate elements not visible from the outside, and style them with CSS not affecting the rest of the page.",
+                              "descriptionClean": "Encapsulate elements not visible from the outside, and style them with CSS not affecting the rest of the page.",
                               "id": "shadow_dom",
                               "parentId": "web_components",
                               "entityType": "feature",
@@ -171,9 +180,9 @@
                                   "name": "Declarative Shadow DOM",
                                   "nameHtml": "Declarative Shadow DOM",
                                   "nameClean": "Declarative Shadow DOM",
-                                  "description": "Authoring, referencing, and tooling around Declarative Shadow DOM (DSD).",
-                                  "descriptionHtml": "Authoring, referencing, and tooling around Declarative Shadow DOM (DSD).",
-                                  "descriptionClean": "Authoring, referencing, and tooling around Declarative Shadow DOM (DSD).",
+                                  "description": "Define shadow trees with HTML, such as when server-side-rendering web components.",
+                                  "descriptionHtml": "Define shadow trees with HTML, such as when server-side-rendering web components.",
+                                  "descriptionClean": "Define shadow trees with HTML, such as when server-side-rendering web components.",
                                   "id": "declarative_shadow_dom",
                                   "parentId": "shadow_dom",
                                   "entityType": "feature",
@@ -243,9 +252,6 @@
                               "name": "Custom Elements",
                               "nameHtml": "Custom Elements",
                               "nameClean": "Custom Elements",
-                              "description": "Issues related to defining and using custom elements, including syntax verbosity, lifecycle, and the reliance on JavaScript.",
-                              "descriptionHtml": "Issues related to defining and using custom elements, including syntax verbosity, lifecycle, and the reliance on JavaScript.",
-                              "descriptionClean": "Issues related to defining and using custom elements, including syntax verbosity, lifecycle, and the reliance on JavaScript.",
                               "id": "custom_elements",
                               "parentId": "web_components",
                               "entityType": "feature",
@@ -257,18 +263,224 @@
                         ]
                       },
                       {
+                        "count": 38,
+                        "id": "template_element",
+                        "index": 2,
+                        "percentageQuestion": 8.44,
+                        "percentageSurvey": 0.61,
+                        "entity": {
+                          "name": "`<template>`",
+                          "nameHtml": "<code>&lt;template&gt;</code>",
+                          "nameClean": "<template>",
+                          "description": "A mechanism for holding HTML that is not to be rendered immediately but may be utilized later via JS.",
+                          "descriptionHtml": "A mechanism for holding HTML that is not to be rendered immediately but may be utilized later via JS.",
+                          "descriptionClean": "A mechanism for holding HTML that is not to be rendered immediately but may be utilized later via JS.",
+                          "id": "template_element",
+                          "parentId": "templating",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<template id=\"counter\">\n\t<div class=\"counter\">Clicked {{ times }} times</div>\n</template>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">template</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;counter&quot;</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">&quot;counter&quot;</span>&gt;</span>Clicked {{ times }} times<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">template</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://html.spec.whatwg.org/multipage/scripting.html#the-template-element",
+                              "title": "HTML Standard"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "template",
+                            "description_html": "The <code>&#x3C;template></code> HTML element holds HTML fragments which you can clone and insert into the document using JavaScript.",
+                            "group": [
+                              "html-elements",
+                              "web-components"
+                            ],
+                            "name": "<template>",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/scripting.html#the-template-element"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/template/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2015-11-12",
+                              "support": {
+                                "chrome": "26",
+                                "chrome_android": "26",
+                                "edge": "13",
+                                "firefox": "22",
+                                "firefox_android": "22",
+                                "safari": "8",
+                                "safari_ios": "8"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 21,
+                        "id": "html_modules",
+                        "index": 3,
+                        "percentageQuestion": 4.67,
+                        "percentageSurvey": 0.34,
+                        "entity": {
+                          "name": "HTML Modules",
+                          "nameHtml": "HTML Modules",
+                          "nameClean": "HTML Modules",
+                          "description": "Import HTML files via JS imports and access their elements and JS exports.",
+                          "descriptionHtml": "Import HTML files via JS imports and access their elements and JS exports.",
+                          "descriptionClean": "Import HTML files via JS imports and access their elements and JS exports.",
+                          "id": "html_modules",
+                          "parentId": "html_reuse",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<script type=\"module\">\n\timport { TabList } from \"./tablist.html\" with { type: 'html' };\n\tcustomElements.define(\"tab-list\", TabList);\n</script>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">&quot;module&quot;</span>&gt;</span><span class=\"language-javascript\">\n\t<span class=\"hljs-keyword\">import</span> { <span class=\"hljs-title class_\">TabList</span> } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&quot;./tablist.html&quot;</span> <span class=\"hljs-keyword\">with</span> { <span class=\"hljs-attr\">type</span>: <span class=\"hljs-string\">&#x27;html&#x27;</span> };\n\tcustomElements.<span class=\"hljs-title function_\">define</span>(<span class=\"hljs-string\">&quot;tab-list&quot;</span>, <span class=\"hljs-title class_\">TabList</span>);\n</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://github.com/WICG/webcomponents/blob/gh-pages/proposals/html-modules-explainer.md",
+                              "title": "HTML Modules Explainer"
+                            },
+                            {
+                              "url": "https://chromestatus.com/feature/4854408103854080",
+                              "title": "Chrome Platform Status"
+                            },
+                            {
+                              "url": "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/HTMLModules/designDoc.md"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "count": 17,
+                        "id": "content_security_policy",
+                        "index": 4,
+                        "percentageQuestion": 3.78,
+                        "percentageSurvey": 0.27,
+                        "entity": {
+                          "name": "Content-Security Policy (CSP)",
+                          "nameHtml": "Content-Security Policy (CSP)",
+                          "nameClean": "Content-Security Policy (CSP)",
+                          "description": "A set of directives from a website to a browser, that helps to detect and mitigate XSS attacks.",
+                          "descriptionHtml": "A set of directives from a website to a browser, that helps to detect and mitigate XSS attacks.",
+                          "descriptionClean": "A set of directives from a website to a browser, that helps to detect and mitigate XSS attacks.",
+                          "id": "content_security_policy",
+                          "parentId": "security_privacy",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "http",
+                            "code": "Content-Security-Policy: script-src 'self';\n",
+                            "codeHighlighted": "<span class=\"hljs-attribute\">Content-Security-Policy</span><span class=\"hljs-punctuation\">: </span>script-src &#x27;self&#x27;;"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/contentsecuritypolicy2"
+                          },
+                          "webFeature": {
+                            "id": "csp",
+                            "description_html": "Content Security Policy (CSP) helps to mitigate certain security threats, including cross-site scripting (XSS) and clickjacking attacks. It consists of a set of directives from a website to a browser, which instruct the browser to restrict the things that the site is allowed to do.",
+                            "group": [
+                              "security"
+                            ],
+                            "name": "Content Security Policy (CSP)",
+                            "spec": [
+                              "https://w3c.github.io/webappsec-csp/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/csp/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2016-08-02",
+                              "support": {
+                                "chrome": "25",
+                                "chrome_android": "25",
+                                "edge": "14",
+                                "firefox": "23",
+                                "firefox_android": "23",
+                                "safari": "7",
+                                "safari_ios": "7"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 15,
+                        "id": "sanitizer_api",
+                        "index": 5,
+                        "percentageQuestion": 3.33,
+                        "percentageSurvey": 0.24,
+                        "entity": {
+                          "name": "Sanitizer API",
+                          "nameHtml": "Sanitizer API",
+                          "nameClean": "Sanitizer API",
+                          "description": "`element.setHTML()` and `Document.parseHTML()`. API to prevent XSS attacks by sanitizing untrusted strings of HTML.",
+                          "descriptionHtml": "<code>element.setHTML()</code> and <code>Document.parseHTML()</code>. API to prevent XSS attacks by sanitizing untrusted strings of HTML.",
+                          "descriptionClean": "element.setHTML() and Document.parseHTML(). API to prevent XSS attacks by sanitizing untrusted strings of HTML.",
+                          "id": "sanitizer_api",
+                          "parentId": "security_privacy",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "greeting.setHTML('Hello ' + nameInput.value);\n",
+                            "codeHighlighted": "greeting.<span class=\"hljs-title function_\">setHTML</span>(<span class=\"hljs-string\">&#x27;Hello &#x27;</span> + nameInput.<span class=\"hljs-property\">value</span>);"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTML_Sanitizer_API"
+                          }
+                        }
+                      },
+                      {
+                        "count": 7,
+                        "id": "cors",
+                        "index": 6,
+                        "percentageQuestion": 1.56,
+                        "percentageSurvey": 0.11,
+                        "entity": {
+                          "name": "CORS",
+                          "nameHtml": "CORS",
+                          "nameClean": "CORS",
+                          "description": "Opt-in to allowing requests from different origins.",
+                          "descriptionHtml": "Opt-in to allowing requests from different origins.",
+                          "descriptionClean": "Opt-in to allowing requests from different origins.",
+                          "id": "cors",
+                          "parentId": "security_privacy",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "http",
+                            "code": "Access-Control-Allow-Origin: *\nAccess-Control-Allow-Methods: POST, GET, OPTIONS",
+                            "codeHighlighted": "<span class=\"hljs-attribute\">Access-Control-Allow-Origin</span><span class=\"hljs-punctuation\">: </span>*\n<span class=\"hljs-attribute\">Access-Control-Allow-Methods</span><span class=\"hljs-punctuation\">: </span>POST, GET, OPTIONS"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://fetch.spec.whatwg.org/#http-access-control-allow-origin",
+                              "title": "Fetch Standard"
+                            }
+                          ]
+                        }
+                      },
+                      {
                         "count": 6,
                         "id": "structured_data",
-                        "index": 2,
+                        "index": 7,
                         "percentageQuestion": 1.33,
                         "percentageSurvey": 0.1,
                         "entity": {
-                          "name": "Machine‑readable data beyond the time element: RDFa/JSON‑LD/Microformats",
-                          "nameHtml": "Machine‑readable data beyond the time element: RDFa/JSON‑LD/Microformats",
-                          "nameClean": "Machine‑readable data beyond the time element: RDFa/JSON‑LD/Microformats",
-                          "description": "Technologies for embedding machine-readable data in HTML.",
-                          "descriptionHtml": "Technologies for embedding machine-readable data in HTML.",
-                          "descriptionClean": "Technologies for embedding machine-readable data in HTML.",
+                          "name": "Structured data (RDFa, Microdata, Microformats)",
+                          "nameHtml": "Structured data (RDFa, Microdata, Microformats)",
+                          "nameClean": "Structured data (RDFa, Microdata, Microformats)",
+                          "description": "Technologies for embedding machine-readable data in HTML (RDFa/JSON‑LD/Microformats).",
+                          "descriptionHtml": "Technologies for embedding machine-readable data in HTML (RDFa/JSON‑LD/Microformats).",
+                          "descriptionClean": "Technologies for embedding machine-readable data in HTML (RDFa/JSON‑LD/Microformats).",
                           "id": "structured_data",
                           "parentId": "content",
                           "entityType": "feature",

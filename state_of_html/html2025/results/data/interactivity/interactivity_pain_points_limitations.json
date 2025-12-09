@@ -37,12 +37,12 @@
                         "percentageQuestion": 17.31,
                         "percentageSurvey": 0.72,
                         "entity": {
-                          "name": "Popover API",
-                          "nameHtml": "Popover API",
-                          "nameClean": "Popover API",
-                          "description": "Pain points specific to Popover API.",
-                          "descriptionHtml": "Pain points specific to Popover API.",
-                          "descriptionClean": "Pain points specific to Popover API.",
+                          "name": "`popover` attribute (Popover API)",
+                          "nameHtml": "<code>popover</code> attribute (Popover API)",
+                          "nameClean": "popover attribute (Popover API)",
+                          "description": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
+                          "descriptionHtml": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
+                          "descriptionClean": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
                           "id": "popover_api",
                           "entityType": "feature",
                           "example": {
@@ -104,12 +104,12 @@
                         "percentageQuestion": 16.15,
                         "percentageSurvey": 0.67,
                         "entity": {
-                          "name": "<​dialog> Element",
-                          "nameHtml": "&lt;​dialog&gt; Element",
-                          "nameClean": "<​dialog> Element",
-                          "description": "Pain points related to the native HTML `<dialog>` element.",
-                          "descriptionHtml": "Pain points related to the native HTML <code>&lt;dialog&gt;</code> element.",
-                          "descriptionClean": "Pain points related to the native HTML <dialog> element.",
+                          "name": "`<dialog>`",
+                          "nameHtml": "<code>&lt;dialog&gt;</code>",
+                          "nameClean": "<dialog>",
+                          "description": "Creates a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.",
+                          "descriptionHtml": "Creates a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.",
+                          "descriptionClean": "Creates a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.",
                           "id": "dialog_element",
                           "entityType": "feature",
                           "example": {
@@ -163,9 +163,9 @@
                           "name": "Reliance on JavaScript",
                           "nameHtml": "Reliance on JavaScript",
                           "nameClean": "Reliance on JavaScript",
-                          "description": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
-                          "descriptionHtml": "Lack of declarative APIs, slow rendering due to dependence on correct loading &amp; execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
-                          "descriptionClean": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "description": "Excessive reliance on JavaScript",
+                          "descriptionHtml": "Excessive reliance on JavaScript",
+                          "descriptionClean": "Excessive reliance on JavaScript",
                           "id": "reliance_on_javascript",
                           "entityType": "default"
                         }
@@ -184,6 +184,7 @@
                           "descriptionHtml": "Issues related to core DOM manipulation APIs, including issues around creating, updating, or removing DOM nodes via JavaScript APIs.",
                           "descriptionClean": "Issues related to core DOM manipulation APIs, including issues around creating, updating, or removing DOM nodes via JavaScript APIs.",
                           "id": "dom_apis",
+                          "parentId": "interactivity",
                           "entityType": "default"
                         }
                       },
@@ -224,35 +225,16 @@
                                 "percentageQuestion": 14.62,
                                 "percentageSurvey": 0.61,
                                 "entity": {
-                                  "name": "Templating & rendering",
-                                  "nameHtml": "Templating &amp; rendering",
-                                  "nameClean": "Templating & rendering",
-                                  "description": "Authoring and running templates, data binding, reactive rendering, Declarative Shadow DOM, and server boundaries. Also includes issues related to the <template> element.",
-                                  "descriptionHtml": "Authoring and running templates, data binding, reactive rendering, Declarative Shadow DOM, and server boundaries. Also includes issues related to the  element.",
-                                  "descriptionClean": "Authoring and running templates, data binding, reactive rendering, Declarative Shadow DOM, and server boundaries. Also includes issues related to the  element.",
+                                  "name": "Templating",
+                                  "nameHtml": "Templating",
+                                  "nameClean": "Templating",
+                                  "description": "Lack of templating",
+                                  "descriptionHtml": "Lack of templating",
+                                  "descriptionClean": "Lack of templating",
                                   "id": "templating",
                                   "parentId": "html_reuse",
                                   "entityType": "default"
-                                },
-                                "nestedBuckets": [
-                                  {
-                                    "count": 22,
-                                    "id": "reactivity",
-                                    "percentageQuestion": 8.46,
-                                    "percentageSurvey": 0.35,
-                                    "entity": {
-                                      "name": "Reactive rendering & data bindings",
-                                      "nameHtml": "Reactive rendering &amp; data bindings",
-                                      "nameClean": "Reactive rendering & data bindings",
-                                      "description": "Issues with reactivity",
-                                      "descriptionHtml": "Issues with reactivity",
-                                      "descriptionClean": "Issues with reactivity",
-                                      "id": "reactivity",
-                                      "parentId": "templating",
-                                      "entityType": "default"
-                                    }
-                                  }
-                                ]
+                                }
                               }
                             ]
                           }
@@ -273,7 +255,43 @@
                           "descriptionClean": "Complaints about lack of declarative APIs (combine with limitations), or current declarative APIs (as a whole) being hard to use (combine with ergonomics).",
                           "id": "declarative_apis",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 11,
+                            "id": "native_htmx_like_features",
+                            "percentageQuestion": 4.23,
+                            "percentageSurvey": 0.18,
+                            "entity": {
+                              "description": "The lack of native access to WebSockets, Server Sent Events, and other features supported by htmx directly in HTML.",
+                              "descriptionHtml": "The lack of native access to WebSockets, Server Sent Events, and other features supported by htmx directly in HTML.",
+                              "descriptionClean": "The lack of native access to WebSockets, Server Sent Events, and other features supported by htmx directly in HTML.",
+                              "id": "native_htmx_like_features",
+                              "parentId": "declarative_apis",
+                              "entityType": "default"
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 0,
+                                "id": "partial_page_updates",
+                                "percentageQuestion": 0,
+                                "percentageSurvey": 0,
+                                "hasInsufficientData": true,
+                                "entity": {
+                                  "name": "Partial Page Updates",
+                                  "nameHtml": "Partial Page Updates",
+                                  "nameClean": "Partial Page Updates",
+                                  "description": "The desire for a native mechanism to update parts of a page with HTML from a server response, without a full page reload, similar to what libraries like htmx or Turbo provide.",
+                                  "descriptionHtml": "The desire for a native mechanism to update parts of a page with HTML from a server response, without a full page reload, similar to what libraries like htmx or Turbo provide.",
+                                  "descriptionClean": "The desire for a native mechanism to update parts of a page with HTML from a server response, without a full page reload, similar to what libraries like htmx or Turbo provide.",
+                                  "id": "partial_page_updates",
+                                  "parentId": "native_htmx_like_features",
+                                  "entityType": "default"
+                                }
+                              }
+                            ]
+                          }
+                        ]
                       },
                       {
                         "count": 22,
@@ -310,9 +328,64 @@
                         ]
                       },
                       {
+                        "count": 22,
+                        "id": "reactivity",
+                        "index": 7,
+                        "percentageQuestion": 8.46,
+                        "percentageSurvey": 0.35,
+                        "entity": {
+                          "name": "Reactivity",
+                          "nameHtml": "Reactivity",
+                          "nameClean": "Reactivity",
+                          "description": "Issues with reactivity",
+                          "descriptionHtml": "Issues with reactivity",
+                          "descriptionClean": "Issues with reactivity",
+                          "id": "reactivity",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 0,
+                            "id": "data_binding",
+                            "percentageQuestion": 0,
+                            "percentageSurvey": 0,
+                            "hasInsufficientData": true,
+                            "entity": {
+                              "name": "Data Binding",
+                              "nameHtml": "Data Binding",
+                              "nameClean": "Data Binding",
+                              "description": "Pain points around the lack of a native way to bind JavaScript data to DOM elements, so that changes in one are automatically reflected in the other.",
+                              "descriptionHtml": "Pain points around the lack of a native way to bind JavaScript data to DOM elements, so that changes in one are automatically reflected in the other.",
+                              "descriptionClean": "Pain points around the lack of a native way to bind JavaScript data to DOM elements, so that changes in one are automatically reflected in the other.",
+                              "id": "data_binding",
+                              "parentId": "reactivity",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 0,
+                            "id": "signals",
+                            "percentageQuestion": 0,
+                            "percentageSurvey": 0,
+                            "hasInsufficientData": true,
+                            "entity": {
+                              "name": "Signals",
+                              "nameHtml": "Signals",
+                              "nameClean": "Signals",
+                              "description": "Desire for a native implementation of the Signals pattern for fine-grained reactivity.",
+                              "descriptionHtml": "Desire for a native implementation of the Signals pattern for fine-grained reactivity.",
+                              "descriptionClean": "Desire for a native implementation of the Signals pattern for fine-grained reactivity.",
+                              "id": "signals",
+                              "parentId": "reactivity",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
                         "count": 20,
                         "id": "accessibility_issues",
-                        "index": 7,
+                        "index": 8,
                         "percentageQuestion": 7.69,
                         "percentageSurvey": 0.32,
                         "entity": {
@@ -349,16 +422,10 @@
                       {
                         "count": 19,
                         "id": "events",
-                        "index": 8,
+                        "index": 9,
                         "percentageQuestion": 7.31,
                         "percentageSurvey": 0.31,
                         "entity": {
-                          "name": "Event management",
-                          "nameHtml": "Event management",
-                          "nameClean": "Event management",
-                          "description": "Issues around events, complex interactions being hard to define via events, etc. For issues around handling events, including event composition, retargeting, and authoring patterns across light/shadow boundaries, combine with `cross_root`.",
-                          "descriptionHtml": "Issues around events, complex interactions being hard to define via events, etc. For issues around handling events, including event composition, retargeting, and authoring patterns across light/shadow boundaries, combine with <code>cross_root</code>.",
-                          "descriptionClean": "Issues around events, complex interactions being hard to define via events, etc. For issues around handling events, including event composition, retargeting, and authoring patterns across light/shadow boundaries, combine with cross_root.",
                           "id": "events",
                           "entityType": "default"
                         }
@@ -366,16 +433,13 @@
                       {
                         "count": 16,
                         "id": "anchor_positioning",
-                        "index": 9,
+                        "index": 10,
                         "percentageQuestion": 6.15,
                         "percentageSurvey": 0.26,
                         "entity": {
-                          "name": "CSS Anchor Positioning",
-                          "nameHtml": "CSS Anchor Positioning",
-                          "nameClean": "CSS Anchor Positioning",
-                          "description": "Pain points related to the CSS Anchor Positioning API, often in conjunction with the Popover API. Includes issues with browser support and the perceived necessity of this API for positioning popovers and tooltips effectively.",
-                          "descriptionHtml": "Pain points related to the CSS Anchor Positioning API, often in conjunction with the Popover API. Includes issues with browser support and the perceived necessity of this API for positioning popovers and tooltips effectively.",
-                          "descriptionClean": "Pain points related to the CSS Anchor Positioning API, often in conjunction with the Popover API. Includes issues with browser support and the perceived necessity of this API for positioning popovers and tooltips effectively.",
+                          "name": "Anchor Positioning",
+                          "nameHtml": "Anchor Positioning",
+                          "nameClean": "Anchor Positioning",
                           "id": "anchor_positioning",
                           "entityType": "feature",
                           "example": {
@@ -425,16 +489,16 @@
                       {
                         "count": 13,
                         "id": "styling_customization",
-                        "index": 10,
+                        "index": 11,
                         "percentageQuestion": 5,
                         "percentageSurvey": 0.21,
                         "entity": {
-                          "name": "Styling and UI customization",
-                          "nameHtml": "Styling and UI customization",
-                          "nameClean": "Styling and UI customization",
-                          "description": "Issues around styling and customizing browser-generated UI.",
-                          "descriptionHtml": "Issues around styling and customizing browser-generated UI.",
-                          "descriptionClean": "Issues around styling and customizing browser-generated UI.",
+                          "name": "Styling & customization",
+                          "nameHtml": "Styling &amp; customization",
+                          "nameClean": "Styling & customization",
+                          "description": "CSS styling and customization issues.",
+                          "descriptionHtml": "CSS styling and customization issues.",
+                          "descriptionClean": "CSS styling and customization issues.",
                           "id": "styling_customization",
                           "parentId": "a11y_technical_issues",
                           "entityType": "default"
@@ -463,16 +527,16 @@
                       {
                         "count": 12,
                         "id": "focus_management",
-                        "index": 11,
+                        "index": 12,
                         "percentageQuestion": 4.62,
                         "percentageSurvey": 0.19,
                         "entity": {
-                          "name": "Focus Management",
-                          "nameHtml": "Focus Management",
-                          "nameClean": "Focus Management",
-                          "description": "Challenges with managing focus, especially in dynamic contexts. Includes focus trapping, roving tabindex, moving focus programmatically, and preserving focus when DOM elements are added, removed, or moved.",
-                          "descriptionHtml": "Challenges with managing focus, especially in dynamic contexts. Includes focus trapping, roving tabindex, moving focus programmatically, and preserving focus when DOM elements are added, removed, or moved.",
-                          "descriptionClean": "Challenges with managing focus, especially in dynamic contexts. Includes focus trapping, roving tabindex, moving focus programmatically, and preserving focus when DOM elements are added, removed, or moved.",
+                          "name": "Focus management",
+                          "nameHtml": "Focus management",
+                          "nameClean": "Focus management",
+                          "description": "Managing user focus",
+                          "descriptionHtml": "Managing user focus",
+                          "descriptionClean": "Managing user focus",
                           "id": "focus_management",
                           "parentId": "a11y_technical_issues",
                           "entityType": "default"
@@ -481,56 +545,19 @@
                       {
                         "count": 12,
                         "id": "performance",
-                        "index": 12,
+                        "index": 13,
                         "percentageQuestion": 4.62,
                         "percentageSurvey": 0.19,
                         "entity": {
                           "name": "Performance",
                           "nameHtml": "Performance",
                           "nameClean": "Performance",
-                          "description": "Throughput, latency, memory, jank, lag, frame drops, battery/thermal, and loading time.",
-                          "descriptionHtml": "Throughput, latency, memory, jank, lag, frame drops, battery/thermal, and loading time.",
-                          "descriptionClean": "Throughput, latency, memory, jank, lag, frame drops, battery/thermal, and loading time.",
+                          "description": "Performance issues",
+                          "descriptionHtml": "Performance issues",
+                          "descriptionClean": "Performance issues",
                           "id": "performance",
                           "entityType": "default"
                         }
-                      },
-                      {
-                        "count": 11,
-                        "id": "native_htmx_like_features",
-                        "index": 13,
-                        "percentageQuestion": 4.23,
-                        "percentageSurvey": 0.18,
-                        "entity": {
-                          "name": "htmx Features",
-                          "nameHtml": "htmx Features",
-                          "nameClean": "htmx Features",
-                          "description": "The lack of native access to WebSockets, Server Sent Events, and other features supported by htmx directly in HTML.",
-                          "descriptionHtml": "The lack of native access to WebSockets, Server Sent Events, and other features supported by htmx directly in HTML.",
-                          "descriptionClean": "The lack of native access to WebSockets, Server Sent Events, and other features supported by htmx directly in HTML.",
-                          "id": "native_htmx_like_features",
-                          "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 0,
-                            "id": "partial_page_updates",
-                            "percentageQuestion": 0,
-                            "percentageSurvey": 0,
-                            "hasInsufficientData": true,
-                            "entity": {
-                              "name": "Partial Page Updates",
-                              "nameHtml": "Partial Page Updates",
-                              "nameClean": "Partial Page Updates",
-                              "description": "The desire for a native mechanism to update parts of a page with HTML from a server response, without a full page reload, similar to what libraries like htmx or Turbo provide.",
-                              "descriptionHtml": "The desire for a native mechanism to update parts of a page with HTML from a server response, without a full page reload, similar to what libraries like htmx or Turbo provide.",
-                              "descriptionClean": "The desire for a native mechanism to update parts of a page with HTML from a server response, without a full page reload, similar to what libraries like htmx or Turbo provide.",
-                              "id": "partial_page_updates",
-                              "parentId": "native_htmx_like_features",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
                       },
                       {
                         "count": 11,
@@ -546,6 +573,7 @@
                           "descriptionHtml": "Issues related to the top layer, where elements like  and popovers are rendered. Includes z-index conflicts, stacking order control, and interactions between multiple top-layer elements.",
                           "descriptionClean": "Issues related to the top layer, where elements like  and popovers are rendered. Includes z-index conflicts, stacking order control, and interactions between multiple top-layer elements.",
                           "id": "top_layer",
+                          "parentId": "css_issues",
                           "entityType": "default"
                         }
                       },
@@ -568,14 +596,32 @@
                         "nestedBuckets": [
                           {
                             "count": 0,
+                            "id": "tabs_element",
+                            "percentageQuestion": 0,
+                            "percentageSurvey": 0,
+                            "hasInsufficientData": true,
+                            "entity": {
+                              "name": "Tabs element",
+                              "nameHtml": "Tabs element",
+                              "nameClean": "Tabs element",
+                              "description": "Pain points from the lack of a native HTML element for tabbed interfaces, a common UI pattern.",
+                              "descriptionHtml": "Pain points from the lack of a native HTML element for tabbed interfaces, a common UI pattern.",
+                              "descriptionClean": "Pain points from the lack of a native HTML element for tabbed interfaces, a common UI pattern.",
+                              "id": "tabs_element",
+                              "parentId": "missing_elements",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 0,
                             "id": "accordion_element",
                             "percentageQuestion": 0,
                             "percentageSurvey": 0,
                             "hasInsufficientData": true,
                             "entity": {
-                              "name": "Accordion functionality",
-                              "nameHtml": "Accordion functionality",
-                              "nameClean": "Accordion functionality",
+                              "name": "`<details name>` (Exclusive Accordion)",
+                              "nameHtml": "<code>&lt;details name&gt;</code> (Exclusive Accordion)",
+                              "nameClean": "<details name> (Exclusive Accordion)",
                               "description": "Group `<details>` elements so that only up to one in the group can be open at a time.",
                               "descriptionHtml": "Group <code>&lt;details&gt;</code> elements so that only up to one in the group can be open at a time.",
                               "descriptionClean": "Group <details> elements so that only up to one in the group can be open at a time.",
@@ -631,24 +677,6 @@
                                 }
                               }
                             }
-                          },
-                          {
-                            "count": 0,
-                            "id": "tabs_element",
-                            "percentageQuestion": 0,
-                            "percentageSurvey": 0,
-                            "hasInsufficientData": true,
-                            "entity": {
-                              "name": "Tabs element",
-                              "nameHtml": "Tabs element",
-                              "nameClean": "Tabs element",
-                              "description": "Pain points from the lack of a native HTML element for tabbed interfaces, a common UI pattern.",
-                              "descriptionHtml": "Pain points from the lack of a native HTML element for tabbed interfaces, a common UI pattern.",
-                              "descriptionClean": "Pain points from the lack of a native HTML element for tabbed interfaces, a common UI pattern.",
-                              "id": "tabs_element",
-                              "parentId": "missing_elements",
-                              "entityType": "default"
-                            }
                           }
                         ]
                       },
@@ -662,9 +690,6 @@
                           "name": "Web Components",
                           "nameHtml": "Web Components",
                           "nameClean": "Web Components",
-                          "description": "Pain points related to authoring and using Web Components (Custom Elements, Shadow DOM, etc.).",
-                          "descriptionHtml": "Pain points related to authoring and using Web Components (Custom Elements, Shadow DOM, etc.).",
-                          "descriptionClean": "Pain points related to authoring and using Web Components (Custom Elements, Shadow DOM, etc.).",
                           "id": "web_components",
                           "entityType": "feature",
                           "mdn": {
@@ -674,8 +699,27 @@
                       },
                       {
                         "count": 0,
-                        "id": "cognitive_overload",
+                        "id": "apple",
                         "index": 17,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 0,
+                        "hasInsufficientData": true,
+                        "entity": {
+                          "name": "Apple",
+                          "nameHtml": "Apple",
+                          "nameClean": "Apple",
+                          "id": "apple",
+                          "parentId": "interop_issues",
+                          "entityType": "default",
+                          "homepage": {
+                            "url": "https://www.apple.com/"
+                          }
+                        }
+                      },
+                      {
+                        "count": 0,
+                        "id": "cognitive_overload",
+                        "index": 18,
                         "percentageQuestion": 0,
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
@@ -690,17 +734,14 @@
                       {
                         "count": 0,
                         "id": "ecosystem",
-                        "index": 18,
+                        "index": 19,
                         "percentageQuestion": 0,
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
                         "entity": {
-                          "name": "Ecosystem",
-                          "nameHtml": "Ecosystem",
-                          "nameClean": "Ecosystem",
-                          "description": "Ecosystem issues, poor discoverability, poor marketing.",
-                          "descriptionHtml": "Ecosystem issues, poor discoverability, poor marketing.",
-                          "descriptionClean": "Ecosystem issues, poor discoverability, poor marketing.",
+                          "name": "Ecosystem issues",
+                          "nameHtml": "Ecosystem issues",
+                          "nameClean": "Ecosystem issues",
                           "id": "ecosystem",
                           "entityType": "default"
                         },
@@ -744,59 +785,6 @@
                             ]
                           }
                         ]
-                      },
-                      {
-                        "count": 0,
-                        "id": "invokers",
-                        "index": 19,
-                        "percentageQuestion": 0,
-                        "percentageSurvey": 0,
-                        "hasInsufficientData": true,
-                        "entity": {
-                          "name": "Invokers / Commands",
-                          "nameHtml": "Invokers / Commands",
-                          "nameClean": "Invokers / Commands",
-                          "description": "Pain points and feedback related to the proposed Invokers and Command attributes for declaratively triggering actions on other elements.",
-                          "descriptionHtml": "Pain points and feedback related to the proposed Invokers and Command attributes for declaratively triggering actions on other elements.",
-                          "descriptionClean": "Pain points and feedback related to the proposed Invokers and Command attributes for declaratively triggering actions on other elements.",
-                          "id": "invokers",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "html",
-                            "code": "<button commandfor=\"mydialog\" command=\"show-modal\">\n  Show modal dialog\n</button>\n<dialog id=\"mydialog\">\n  <button commandfor=\"mydialog\" command=\"close\">\n    Close\n  </button>\n  *dialog content*\n</dialog>\n",
-                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">commandfor</span>=<span class=\"hljs-string\">&quot;mydialog&quot;</span> <span class=\"hljs-attr\">command</span>=<span class=\"hljs-string\">&quot;show-modal&quot;</span>&gt;</span>\n  Show modal dialog\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">dialog</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;mydialog&quot;</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">commandfor</span>=<span class=\"hljs-string\">&quot;mydialog&quot;</span> <span class=\"hljs-attr\">command</span>=<span class=\"hljs-string\">&quot;close&quot;</span>&gt;</span>\n    Close\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n  *dialog content*\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">dialog</span>&gt;</span>"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://open-ui.org/components/invokers.explainer/",
-                              "title": "Invoker Commands (Explainer) | Open UI"
-                            },
-                            {
-                              "url": "https://css-tricks.com/invoker-commands-additional-ways-to-work-with-dialog-popover-and-more/",
-                              "title": "Invoker Commands: Additional Ways to Work With Dialog, Popover… and More?"
-                            }
-                          ],
-                          "webFeature": {
-                            "id": "invoker-commands",
-                            "description_html": "The <code>command</code> and <code>commandfor</code> attributes for the <code>&#x3C;button></code> HTML element dispatch an action to an element when the button is invoked (by click or keystroke), as a declarative alternative to <code>addEventListener()</code> calls or <code>onclick</code> attribute handlers.",
-                            "name": "Invoker commands",
-                            "spec": [
-                              "https://html.spec.whatwg.org/multipage/form-elements.html#attr-button-command"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/invoker-commands/",
-                            "status": {
-                              "baseline": "false",
-                              "support": {
-                                "chrome": "135",
-                                "chrome_android": "135",
-                                "edge": "135"
-                              }
-                            }
-                          }
-                        }
                       },
                       {
                         "count": 78,

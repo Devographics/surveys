@@ -53,12 +53,12 @@
                             "percentageQuestion": 7.32,
                             "percentageSurvey": 0.42,
                             "entity": {
-                              "name": "Lazy Loading",
-                              "nameHtml": "Lazy Loading",
-                              "nameClean": "Lazy Loading",
-                              "description": "Issues related to the native `loading=\"lazy\"` attribute for images and iframes, and the desire for similar functionality for other elements.",
-                              "descriptionHtml": "Issues related to the native <code>loading=\"lazy\"</code> attribute for images and iframes, and the desire for similar functionality for other elements.",
-                              "descriptionClean": "Issues related to the native loading=\"lazy\" attribute for images and iframes, and the desire for similar functionality for other elements.",
+                              "name": "`loading=\"lazy\"`",
+                              "nameHtml": "<code>loading=\"lazy\"</code>",
+                              "nameClean": "loading=\"lazy\"",
+                              "description": "Load certain resources only when needed.",
+                              "descriptionHtml": "Load certain resources only when needed.",
+                              "descriptionClean": "Load certain resources only when needed.",
                               "id": "lazy_loading",
                               "parentId": "loading_issues",
                               "entityType": "feature",
@@ -116,9 +116,9 @@
                               "name": "Resource Hints",
                               "nameHtml": "Resource Hints",
                               "nameClean": "Resource Hints",
-                              "description": "Issues with declarative APIs for prioritizing resource loading, such as `preload`, `prefetch`, `preconnect`, and Speculation Rules.",
-                              "descriptionHtml": "Issues with declarative APIs for prioritizing resource loading, such as <code>preload</code>, <code>prefetch</code>, <code>preconnect</code>, and Speculation Rules.",
-                              "descriptionClean": "Issues with declarative APIs for prioritizing resource loading, such as preload, prefetch, preconnect, and Speculation Rules.",
+                              "description": "Begin work on certain resources early to improve performance.\nSyntax: `<link rel=\"pre* | dns-prefetch | modulepreload\">`.",
+                              "descriptionHtml": "Begin work on certain resources early to improve performance.\nSyntax: <code>&lt;link rel=\"pre* | dns-prefetch | modulepreload\"&gt;</code>.",
+                              "descriptionClean": "Begin work on certain resources early to improve performance.Syntax: <link rel=\"pre* | dns-prefetch | modulepreload\">.",
                               "id": "resource_hints",
                               "parentId": "loading_issues",
                               "entityType": "feature",
@@ -151,9 +151,9 @@
                                   "name": "Speculation Rules",
                                   "nameHtml": "Speculation Rules",
                                   "nameClean": "Speculation Rules",
-                                  "description": "Issues with the Speculation Rules API for prerendering or prefetching navigations.",
-                                  "descriptionHtml": "Issues with the Speculation Rules API for prerendering or prefetching navigations.",
-                                  "descriptionClean": "Issues with the Speculation Rules API for prerendering or prefetching navigations.",
+                                  "description": "Hints for the browser to proactively download pages in the background to improve performance.",
+                                  "descriptionHtml": "Hints for the browser to proactively download pages in the background to improve performance.",
+                                  "descriptionClean": "Hints for the browser to proactively download pages in the background to improve performance.",
                                   "id": "speculation_rules",
                                   "parentId": "resource_hints",
                                   "entityType": "feature",
@@ -203,23 +203,6 @@
                           },
                           {
                             "count": 14,
-                            "id": "script_loading",
-                            "percentageQuestion": 3.94,
-                            "percentageSurvey": 0.22,
-                            "entity": {
-                              "name": "Script Loading",
-                              "nameHtml": "Script Loading",
-                              "nameClean": "Script Loading",
-                              "description": "Pain points related to loading and executing JavaScript, including `async`, `defer`, ES modules, and dynamic imports.",
-                              "descriptionHtml": "Pain points related to loading and executing JavaScript, including <code>async</code>, <code>defer</code>, ES modules, and dynamic imports.",
-                              "descriptionClean": "Pain points related to loading and executing JavaScript, including async, defer, ES modules, and dynamic imports.",
-                              "id": "script_loading",
-                              "parentId": "loading_issues",
-                              "entityType": "default"
-                            }
-                          },
-                          {
-                            "count": 14,
                             "id": "css_loading",
                             "percentageQuestion": 3.94,
                             "percentageSurvey": 0.22,
@@ -231,6 +214,23 @@
                               "descriptionHtml": "Issues related to loading stylesheets, including render-blocking behavior, asynchronous loading, and unused CSS.",
                               "descriptionClean": "Issues related to loading stylesheets, including render-blocking behavior, asynchronous loading, and unused CSS.",
                               "id": "css_loading",
+                              "parentId": "loading_issues",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 14,
+                            "id": "script_loading",
+                            "percentageQuestion": 3.94,
+                            "percentageSurvey": 0.22,
+                            "entity": {
+                              "name": "Script Loading",
+                              "nameHtml": "Script Loading",
+                              "nameClean": "Script Loading",
+                              "description": "Pain points related to loading and executing JavaScript, including `async`, `defer`, ES modules, and dynamic imports.",
+                              "descriptionHtml": "Pain points related to loading and executing JavaScript, including <code>async</code>, <code>defer</code>, ES modules, and dynamic imports.",
+                              "descriptionClean": "Pain points related to loading and executing JavaScript, including async, defer, ES modules, and dynamic imports.",
+                              "id": "script_loading",
                               "parentId": "loading_issues",
                               "entityType": "default"
                             }
@@ -309,12 +309,12 @@
                             "percentageQuestion": 1.69,
                             "percentageSurvey": 0.1,
                             "entity": {
-                              "name": "SVG",
-                              "nameHtml": "SVG",
-                              "nameClean": "SVG",
-                              "description": "Issues related to Vector graphics via Scalable Vector Graphics, including issues related to embedding and manipulating SVG content.",
-                              "descriptionHtml": "Issues related to Vector graphics via Scalable Vector Graphics, including issues related to embedding and manipulating SVG content.",
-                              "descriptionClean": "Issues related to Vector graphics via Scalable Vector Graphics, including issues related to embedding and manipulating SVG content.",
+                              "name": "`<svg>` (Inline SVG)",
+                              "nameHtml": "<code>&lt;svg&gt;</code> (Inline SVG)",
+                              "nameClean": "<svg> (Inline SVG)",
+                              "description": "Embed SVG vector graphics directly in markup",
+                              "descriptionHtml": "Embed SVG vector graphics directly in markup",
+                              "descriptionClean": "Embed SVG vector graphics directly in markup",
                               "id": "svg_element",
                               "parentId": "graphics_issues",
                               "entityType": "feature",
@@ -362,12 +362,9 @@
                         "percentageQuestion": 14.08,
                         "percentageSurvey": 0.8,
                         "entity": {
-                          "name": "Ecosystem",
-                          "nameHtml": "Ecosystem",
-                          "nameClean": "Ecosystem",
-                          "description": "Ecosystem issues, poor discoverability, poor marketing.",
-                          "descriptionHtml": "Ecosystem issues, poor discoverability, poor marketing.",
-                          "descriptionClean": "Ecosystem issues, poor discoverability, poor marketing.",
+                          "name": "Ecosystem issues",
+                          "nameHtml": "Ecosystem issues",
+                          "nameClean": "Ecosystem issues",
                           "id": "ecosystem",
                           "entityType": "default"
                         },
@@ -485,9 +482,6 @@
                                   "name": "Lighthouse",
                                   "nameHtml": "Lighthouse",
                                   "nameClean": "Lighthouse",
-                                  "description": "Issues specific to using the Lighthouse auditing tool, its recommendations, or score variability.",
-                                  "descriptionHtml": "Issues specific to using the Lighthouse auditing tool, its recommendations, or score variability.",
-                                  "descriptionClean": "Issues specific to using the Lighthouse auditing tool, its recommendations, or score variability.",
                                   "id": "lighthouse",
                                   "parentId": "tooling_profiling",
                                   "entityType": "default",
@@ -504,12 +498,9 @@
                             "percentageQuestion": 2.25,
                             "percentageSurvey": 0.13,
                             "entity": {
-                              "name": "Browser dev tools",
-                              "nameHtml": "Browser dev tools",
-                              "nameClean": "Browser dev tools",
-                              "description": "Issues around the dev tools built-in to browsers.",
-                              "descriptionHtml": "Issues around the dev tools built-in to browsers.",
-                              "descriptionClean": "Issues around the dev tools built-in to browsers.",
+                              "name": "Browser Devtools",
+                              "nameHtml": "Browser Devtools",
+                              "nameClean": "Browser Devtools",
                               "id": "browser_devtools",
                               "parentId": "tooling",
                               "entityType": "default"
@@ -601,26 +592,7 @@
                           "nameClean": "Cognitive overload",
                           "id": "cognitive_overload",
                           "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 34,
-                            "id": "excessive_complexity",
-                            "percentageQuestion": 9.58,
-                            "percentageSurvey": 0.55,
-                            "entity": {
-                              "name": "Excessive complexity",
-                              "nameHtml": "Excessive complexity",
-                              "nameClean": "Excessive complexity",
-                              "description": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
-                              "descriptionHtml": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
-                              "descriptionClean": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
-                              "id": "excessive_complexity",
-                              "parentId": "cognitive_overload",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
+                        }
                       },
                       {
                         "count": 35,
@@ -629,20 +601,38 @@
                         "percentageQuestion": 9.86,
                         "percentageSurvey": 0.56,
                         "entity": {
-                          "name": "Educational issues",
-                          "nameHtml": "Educational issues",
-                          "nameClean": "Educational issues",
-                          "description": "Lack of awareness, poor docs, lack of best practices, lack of good examples. This is about the availability and quality of educational resources, not about learnability issues instrinsic to the technology (use `poor_learnability` for that).",
-                          "descriptionHtml": "Lack of awareness, poor docs, lack of best practices, lack of good examples. This is about the availability and quality of educational resources, not about learnability issues instrinsic to the technology (use <code>poor_learnability</code> for that).",
-                          "descriptionClean": "Lack of awareness, poor docs, lack of best practices, lack of good examples. This is about the availability and quality of educational resources, not about learnability issues instrinsic to the technology (use poor_learnability for that).",
+                          "name": "Education",
+                          "nameHtml": "Education",
+                          "nameClean": "Education",
+                          "description": "Issues related to learning new technologies",
+                          "descriptionHtml": "Issues related to learning new technologies",
+                          "descriptionClean": "Issues related to learning new technologies",
                           "id": "educational_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 34,
+                        "id": "excessive_complexity",
+                        "index": 8,
+                        "percentageQuestion": 9.58,
+                        "percentageSurvey": 0.55,
+                        "entity": {
+                          "name": "Excessive complexity",
+                          "nameHtml": "Excessive complexity",
+                          "nameClean": "Excessive complexity",
+                          "description": "Too much complexity",
+                          "descriptionHtml": "Too much complexity",
+                          "descriptionClean": "Too much complexity",
+                          "id": "excessive_complexity",
+                          "parentId": "a11y_implementation_issues",
                           "entityType": "default"
                         }
                       },
                       {
                         "count": 32,
                         "id": "core_web_vitals",
-                        "index": 8,
+                        "index": 9,
                         "percentageQuestion": 9.01,
                         "percentageSurvey": 0.51,
                         "entity": {
@@ -679,7 +669,7 @@
                       {
                         "count": 31,
                         "id": "interop_issues",
-                        "index": 9,
+                        "index": 10,
                         "percentageQuestion": 8.73,
                         "percentageSurvey": 0.5,
                         "entity": {
@@ -702,14 +692,28 @@
                               "name": "Google",
                               "nameHtml": "Google",
                               "nameClean": "Google",
-                              "description": "Issues specific to the Google ecosystem (e.g., Chrome, Blink, Android).",
-                              "descriptionHtml": "Issues specific to the Google ecosystem (e.g., Chrome, Blink, Android).",
-                              "descriptionClean": "Issues specific to the Google ecosystem (e.g., Chrome, Blink, Android).",
                               "id": "google",
                               "parentId": "interop_issues",
                               "entityType": "default",
                               "homepage": {
                                 "url": "https://google.com"
+                              }
+                            }
+                          },
+                          {
+                            "count": 5,
+                            "id": "safari",
+                            "percentageQuestion": 1.41,
+                            "percentageSurvey": 0.08,
+                            "entity": {
+                              "name": "Safari",
+                              "nameHtml": "Safari",
+                              "nameClean": "Safari",
+                              "id": "safari",
+                              "parentId": "interop_issues",
+                              "entityType": "default",
+                              "homepage": {
+                                "url": "https://www.apple.com/safari/"
                               }
                             }
                           },
@@ -722,42 +726,20 @@
                               "name": "Apple",
                               "nameHtml": "Apple",
                               "nameClean": "Apple",
-                              "description": "Issues specific to Apple as a platform or vendor, and the Apple ecosystem (e.g., Safari, WebKit, iOS).",
-                              "descriptionHtml": "Issues specific to Apple as a platform or vendor, and the Apple ecosystem (e.g., Safari, WebKit, iOS).",
-                              "descriptionClean": "Issues specific to Apple as a platform or vendor, and the Apple ecosystem (e.g., Safari, WebKit, iOS).",
                               "id": "apple",
                               "parentId": "interop_issues",
-                              "entityType": "default"
-                            },
-                            "nestedBuckets": [
-                              {
-                                "count": 5,
-                                "id": "safari",
-                                "percentageQuestion": 1.41,
-                                "percentageSurvey": 0.08,
-                                "entity": {
-                                  "name": "Safari browser",
-                                  "nameHtml": "Safari browser",
-                                  "nameClean": "Safari browser",
-                                  "description": "Issues specific to the Safari browser, across all platforms.",
-                                  "descriptionHtml": "Issues specific to the Safari browser, across all platforms.",
-                                  "descriptionClean": "Issues specific to the Safari browser, across all platforms.",
-                                  "id": "safari",
-                                  "parentId": "apple",
-                                  "entityType": "default",
-                                  "homepage": {
-                                    "url": "https://www.apple.com/safari/"
-                                  }
-                                }
+                              "entityType": "default",
+                              "homepage": {
+                                "url": "https://www.apple.com/"
                               }
-                            ]
+                            }
                           }
                         ]
                       },
                       {
                         "count": 28,
                         "id": "animations_issues",
-                        "index": 10,
+                        "index": 11,
                         "percentageQuestion": 7.89,
                         "percentageSurvey": 0.45,
                         "entity": {
@@ -774,7 +756,7 @@
                       {
                         "count": 28,
                         "id": "debugging_issues",
-                        "index": 11,
+                        "index": 12,
                         "percentageQuestion": 7.89,
                         "percentageSurvey": 0.45,
                         "entity": {
@@ -791,7 +773,7 @@
                       {
                         "count": 19,
                         "id": "end_user_ux_issues",
-                        "index": 12,
+                        "index": 13,
                         "percentageQuestion": 5.35,
                         "percentageSurvey": 0.31,
                         "entity": {
@@ -831,9 +813,6 @@
                                   "name": "FOUC",
                                   "nameHtml": "FOUC",
                                   "nameClean": "FOUC",
-                                  "description": "The specific problem where content briefly appears without its intended styling, often due to CSS loading behavior.",
-                                  "descriptionHtml": "The specific problem where content briefly appears without its intended styling, often due to CSS loading behavior.",
-                                  "descriptionClean": "The specific problem where content briefly appears without its intended styling, often due to CSS loading behavior.",
                                   "id": "fouc",
                                   "parentId": "loading_ux",
                                   "entityType": "default"
@@ -846,7 +825,7 @@
                       {
                         "count": 12,
                         "id": "reliability",
-                        "index": 13,
+                        "index": 14,
                         "percentageQuestion": 3.38,
                         "percentageSurvey": 0.19,
                         "entity": {
@@ -863,7 +842,7 @@
                       {
                         "count": 10,
                         "id": "typography_issues",
-                        "index": 14,
+                        "index": 15,
                         "percentageQuestion": 2.82,
                         "percentageSurvey": 0.16,
                         "entity": {
@@ -899,16 +878,13 @@
                       {
                         "count": 9,
                         "id": "at_container",
-                        "index": 15,
+                        "index": 16,
                         "percentageQuestion": 2.54,
                         "percentageSurvey": 0.14,
                         "entity": {
-                          "name": "Container Queries",
-                          "nameHtml": "Container Queries",
-                          "nameClean": "Container Queries",
-                          "description": "Pain points related to CSS Container Queries, often in relation to other features like responsive images.",
-                          "descriptionHtml": "Pain points related to CSS Container Queries, often in relation to other features like responsive images.",
-                          "descriptionClean": "Pain points related to CSS Container Queries, often in relation to other features like responsive images.",
+                          "name": "`@container`",
+                          "nameHtml": "<code>@container</code>",
+                          "nameClean": "@container",
                           "id": "at_container",
                           "entityType": "feature",
                           "example": {
@@ -952,16 +928,16 @@
                       {
                         "count": 9,
                         "id": "reliance_on_javascript",
-                        "index": 16,
+                        "index": 17,
                         "percentageQuestion": 2.54,
                         "percentageSurvey": 0.14,
                         "entity": {
                           "name": "Reliance on JavaScript",
                           "nameHtml": "Reliance on JavaScript",
                           "nameClean": "Reliance on JavaScript",
-                          "description": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
-                          "descriptionHtml": "Lack of declarative APIs, slow rendering due to dependence on correct loading &amp; execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
-                          "descriptionClean": "Lack of declarative APIs, slow rendering due to dependence on correct loading & execution of JS, issues around the higher barrier-to-entry of JS APIs, etc.",
+                          "description": "Excessive reliance on JavaScript",
+                          "descriptionHtml": "Excessive reliance on JavaScript",
+                          "descriptionClean": "Excessive reliance on JavaScript",
                           "id": "reliance_on_javascript",
                           "entityType": "default"
                         }
@@ -969,7 +945,7 @@
                       {
                         "count": 8,
                         "id": "workplace",
-                        "index": 17,
+                        "index": 18,
                         "percentageQuestion": 2.25,
                         "percentageSurvey": 0.13,
                         "entity": {
@@ -986,16 +962,13 @@
                       {
                         "count": 7,
                         "id": "video_element",
-                        "index": 18,
+                        "index": 19,
                         "percentageQuestion": 1.97,
                         "percentageSurvey": 0.11,
                         "entity": {
-                          "name": "Video",
-                          "nameHtml": "Video",
-                          "nameClean": "Video",
-                          "description": "Issues related to including videos, including performance issues around videos.",
-                          "descriptionHtml": "Issues related to including videos, including performance issues around videos.",
-                          "descriptionClean": "Issues related to including videos, including performance issues around videos.",
+                          "name": "`<video>`",
+                          "nameHtml": "<code>&lt;video&gt;</code>",
+                          "nameClean": "<video>",
                           "id": "video_element",
                           "entityType": "feature",
                           "example": {
@@ -1009,23 +982,6 @@
                         }
                       },
                       {
-                        "count": 6,
-                        "id": "server_client",
-                        "index": 19,
-                        "percentageQuestion": 1.69,
-                        "percentageSurvey": 0.1,
-                        "entity": {
-                          "name": "Server-client communication",
-                          "nameHtml": "Server-client communication",
-                          "nameClean": "Server-client communication",
-                          "description": "Issues around server-client integration & communication, server-side rendering, etc.",
-                          "descriptionHtml": "Issues around server-client integration &amp; communication, server-side rendering, etc.",
-                          "descriptionClean": "Issues around server-client integration & communication, server-side rendering, etc.",
-                          "id": "server_client",
-                          "entityType": "default"
-                        }
-                      },
-                      {
                         "count": 5866,
                         "id": "no_answer",
                         "index": 20,
@@ -1033,11 +989,11 @@
                         "percentageSurvey": 94.26
                       },
                       {
-                        "count": 141,
+                        "count": 147,
                         "id": "other_answers",
                         "index": 21,
-                        "percentageQuestion": 39.69,
-                        "percentageSurvey": 2.34
+                        "percentageQuestion": 41.38,
+                        "percentageSurvey": 2.44
                       }
                     ]
                   }

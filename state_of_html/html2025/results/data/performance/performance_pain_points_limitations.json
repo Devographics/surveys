@@ -53,12 +53,12 @@
                             "percentageQuestion": 17.78,
                             "percentageSurvey": 0.26,
                             "entity": {
-                              "name": "Lazy Loading",
-                              "nameHtml": "Lazy Loading",
-                              "nameClean": "Lazy Loading",
-                              "description": "Issues related to the native `loading=\"lazy\"` attribute for images and iframes, and the desire for similar functionality for other elements.",
-                              "descriptionHtml": "Issues related to the native <code>loading=\"lazy\"</code> attribute for images and iframes, and the desire for similar functionality for other elements.",
-                              "descriptionClean": "Issues related to the native loading=\"lazy\" attribute for images and iframes, and the desire for similar functionality for other elements.",
+                              "name": "`loading=\"lazy\"`",
+                              "nameHtml": "<code>loading=\"lazy\"</code>",
+                              "nameClean": "loading=\"lazy\"",
+                              "description": "Load certain resources only when needed.",
+                              "descriptionHtml": "Load certain resources only when needed.",
+                              "descriptionClean": "Load certain resources only when needed.",
                               "id": "lazy_loading",
                               "parentId": "loading_issues",
                               "entityType": "feature",
@@ -134,9 +134,9 @@
                               "name": "Resource Hints",
                               "nameHtml": "Resource Hints",
                               "nameClean": "Resource Hints",
-                              "description": "Issues with declarative APIs for prioritizing resource loading, such as `preload`, `prefetch`, `preconnect`, and Speculation Rules.",
-                              "descriptionHtml": "Issues with declarative APIs for prioritizing resource loading, such as <code>preload</code>, <code>prefetch</code>, <code>preconnect</code>, and Speculation Rules.",
-                              "descriptionClean": "Issues with declarative APIs for prioritizing resource loading, such as preload, prefetch, preconnect, and Speculation Rules.",
+                              "description": "Begin work on certain resources early to improve performance.\nSyntax: `<link rel=\"pre* | dns-prefetch | modulepreload\">`.",
+                              "descriptionHtml": "Begin work on certain resources early to improve performance.\nSyntax: <code>&lt;link rel=\"pre* | dns-prefetch | modulepreload\"&gt;</code>.",
+                              "descriptionClean": "Begin work on certain resources early to improve performance.Syntax: <link rel=\"pre* | dns-prefetch | modulepreload\">.",
                               "id": "resource_hints",
                               "parentId": "loading_issues",
                               "entityType": "feature",
@@ -327,12 +327,9 @@
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
                         "entity": {
-                          "name": "Container Queries",
-                          "nameHtml": "Container Queries",
-                          "nameClean": "Container Queries",
-                          "description": "Pain points related to CSS Container Queries, often in relation to other features like responsive images.",
-                          "descriptionHtml": "Pain points related to CSS Container Queries, often in relation to other features like responsive images.",
-                          "descriptionClean": "Pain points related to CSS Container Queries, often in relation to other features like responsive images.",
+                          "name": "`@container`",
+                          "nameHtml": "<code>@container</code>",
+                          "nameClean": "@container",
                           "id": "at_container",
                           "entityType": "feature",
                           "example": {
@@ -386,27 +383,7 @@
                           "nameClean": "Cognitive overload",
                           "id": "cognitive_overload",
                           "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 0,
-                            "id": "excessive_complexity",
-                            "percentageQuestion": 0,
-                            "percentageSurvey": 0,
-                            "hasInsufficientData": true,
-                            "entity": {
-                              "name": "Excessive complexity",
-                              "nameHtml": "Excessive complexity",
-                              "nameClean": "Excessive complexity",
-                              "description": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
-                              "descriptionHtml": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
-                              "descriptionClean": "The landscape or technology feels overengineered, overcomplicated, making it hard to get started.",
-                              "id": "excessive_complexity",
-                              "parentId": "cognitive_overload",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
+                        }
                       },
                       {
                         "count": 0,
@@ -453,12 +430,9 @@
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
                         "entity": {
-                          "name": "Ecosystem",
-                          "nameHtml": "Ecosystem",
-                          "nameClean": "Ecosystem",
-                          "description": "Ecosystem issues, poor discoverability, poor marketing.",
-                          "descriptionHtml": "Ecosystem issues, poor discoverability, poor marketing.",
-                          "descriptionClean": "Ecosystem issues, poor discoverability, poor marketing.",
+                          "name": "Ecosystem issues",
+                          "nameHtml": "Ecosystem issues",
+                          "nameClean": "Ecosystem issues",
                           "id": "ecosystem",
                           "entityType": "default"
                         }
@@ -503,8 +477,27 @@
                       },
                       {
                         "count": 0,
-                        "id": "tooling",
+                        "id": "excessive_complexity",
                         "index": 11,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 0,
+                        "hasInsufficientData": true,
+                        "entity": {
+                          "name": "Excessive complexity",
+                          "nameHtml": "Excessive complexity",
+                          "nameClean": "Excessive complexity",
+                          "description": "Too much complexity",
+                          "descriptionHtml": "Too much complexity",
+                          "descriptionClean": "Too much complexity",
+                          "id": "excessive_complexity",
+                          "parentId": "a11y_implementation_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 0,
+                        "id": "tooling",
+                        "index": 12,
                         "percentageQuestion": 0,
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
@@ -522,7 +515,7 @@
                       {
                         "count": 114,
                         "id": "other_answers",
-                        "index": 12,
+                        "index": 13,
                         "percentageQuestion": 126.54,
                         "percentageSurvey": 1.93
                       }

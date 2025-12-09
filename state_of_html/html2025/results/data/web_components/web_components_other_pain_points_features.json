@@ -40,9 +40,9 @@
                           "name": "Shadow DOM",
                           "nameHtml": "Shadow DOM",
                           "nameClean": "Shadow DOM",
-                          "description": "Shadow trees, encapsulation boundaries, slotting, parts, cross-root ARIA and integration with events, other APIs and page elements. Combine with `styling` for shadow DOM styling issues.",
-                          "descriptionHtml": "Shadow trees, encapsulation boundaries, slotting, parts, cross-root ARIA and integration with events, other APIs and page elements. Combine with <code>styling</code> for shadow DOM styling issues.",
-                          "descriptionClean": "Shadow trees, encapsulation boundaries, slotting, parts, cross-root ARIA and integration with events, other APIs and page elements. Combine with styling for shadow DOM styling issues.",
+                          "description": "Encapsulate elements not visible from the outside, and style them with CSS not affecting the rest of the page.",
+                          "descriptionHtml": "Encapsulate elements not visible from the outside, and style them with CSS not affecting the rest of the page.",
+                          "descriptionClean": "Encapsulate elements not visible from the outside, and style them with CSS not affecting the rest of the page.",
                           "id": "shadow_dom",
                           "parentId": "web_components",
                           "entityType": "feature",
@@ -91,9 +91,9 @@
                               "name": "Declarative Shadow DOM",
                               "nameHtml": "Declarative Shadow DOM",
                               "nameClean": "Declarative Shadow DOM",
-                              "description": "Authoring, referencing, and tooling around Declarative Shadow DOM (DSD).",
-                              "descriptionHtml": "Authoring, referencing, and tooling around Declarative Shadow DOM (DSD).",
-                              "descriptionClean": "Authoring, referencing, and tooling around Declarative Shadow DOM (DSD).",
+                              "description": "Define shadow trees with HTML, such as when server-side-rendering web components.",
+                              "descriptionHtml": "Define shadow trees with HTML, such as when server-side-rendering web components.",
+                              "descriptionClean": "Define shadow trees with HTML, such as when server-side-rendering web components.",
                               "id": "declarative_shadow_dom",
                               "parentId": "shadow_dom",
                               "entityType": "feature",
@@ -150,94 +150,56 @@
                                   }
                                 }
                               }
-                            },
-                            "nestedBuckets": [
-                              {
-                                "count": 6,
-                                "id": "dsd_reusability",
-                                "percentageQuestion": 1.72,
-                                "percentageSurvey": 0.1,
-                                "entity": {
-                                  "name": "DSD reusability",
-                                  "nameHtml": "DSD reusability",
-                                  "nameClean": "DSD reusability",
-                                  "description": "The inability to define a Declarative Shadow DOM template once and reuse it across multiple component instances, leading to HTML bloat and poor ergonomics.",
-                                  "descriptionHtml": "The inability to define a Declarative Shadow DOM template once and reuse it across multiple component instances, leading to HTML bloat and poor ergonomics.",
-                                  "descriptionClean": "The inability to define a Declarative Shadow DOM template once and reuse it across multiple component instances, leading to HTML bloat and poor ergonomics.",
-                                  "id": "dsd_reusability",
-                                  "parentId": "declarative_shadow_dom",
-                                  "entityType": "default"
-                                }
-                              }
-                            ]
-                          },
-                          {
-                            "count": 8,
-                            "id": "cross_root",
-                            "percentageQuestion": 2.3,
-                            "percentageSurvey": 0.13,
-                            "entity": {
-                              "name": "Cross-root issues",
-                              "nameHtml": "Cross-root issues",
-                              "nameClean": "Cross-root issues",
-                              "description": "Issues around crossing shadow boundaries.",
-                              "descriptionHtml": "Issues around crossing shadow boundaries.",
-                              "descriptionClean": "Issues around crossing shadow boundaries.",
-                              "id": "cross_root",
-                              "parentId": "shadow_dom",
-                              "entityType": "default"
-                            },
-                            "nestedBuckets": [
-                              {
-                                "count": 6,
-                                "id": "cross_root_refs",
-                                "percentageQuestion": 1.72,
-                                "percentageSurvey": 0.1,
-                                "entity": {
-                                  "name": "Cross-root element references",
-                                  "nameHtml": "Cross-root element references",
-                                  "nameClean": "Cross-root element references",
-                                  "description": "Issues with element references crossing shadow boundaries, including cross-root ARIA",
-                                  "descriptionHtml": "Issues with element references crossing shadow boundaries, including cross-root ARIA",
-                                  "descriptionClean": "Issues with element references crossing shadow boundaries, including cross-root ARIA",
-                                  "id": "cross_root_refs",
-                                  "parentId": "cross_root",
-                                  "entityType": "default"
-                                },
-                                "nestedBuckets": [
-                                  {
-                                    "count": 5,
-                                    "id": "cross_root_aria",
-                                    "percentageQuestion": 1.44,
-                                    "percentageSurvey": 0.08,
-                                    "entity": {
-                                      "name": "Cross-root ARIA",
-                                      "nameHtml": "Cross-root ARIA",
-                                      "nameClean": "Cross-root ARIA",
-                                      "id": "cross_root_aria",
-                                      "parentId": "cross_root_refs",
-                                      "entityType": "default"
-                                    }
-                                  }
-                                ]
-                              }
-                            ]
+                            }
                           }
                         ]
                       },
                       {
+                        "count": 8,
+                        "id": "html_modules",
+                        "index": 1,
+                        "percentageQuestion": 2.3,
+                        "percentageSurvey": 0.13,
+                        "entity": {
+                          "name": "HTML Modules",
+                          "nameHtml": "HTML Modules",
+                          "nameClean": "HTML Modules",
+                          "description": "Import HTML files via JS imports and access their elements and JS exports.",
+                          "descriptionHtml": "Import HTML files via JS imports and access their elements and JS exports.",
+                          "descriptionClean": "Import HTML files via JS imports and access their elements and JS exports.",
+                          "id": "html_modules",
+                          "parentId": "html_reuse",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<script type=\"module\">\n\timport { TabList } from \"./tablist.html\" with { type: 'html' };\n\tcustomElements.define(\"tab-list\", TabList);\n</script>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">&quot;module&quot;</span>&gt;</span><span class=\"language-javascript\">\n\t<span class=\"hljs-keyword\">import</span> { <span class=\"hljs-title class_\">TabList</span> } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&quot;./tablist.html&quot;</span> <span class=\"hljs-keyword\">with</span> { <span class=\"hljs-attr\">type</span>: <span class=\"hljs-string\">&#x27;html&#x27;</span> };\n\tcustomElements.<span class=\"hljs-title function_\">define</span>(<span class=\"hljs-string\">&quot;tab-list&quot;</span>, <span class=\"hljs-title class_\">TabList</span>);\n</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://github.com/WICG/webcomponents/blob/gh-pages/proposals/html-modules-explainer.md",
+                              "title": "HTML Modules Explainer"
+                            },
+                            {
+                              "url": "https://chromestatus.com/feature/4854408103854080",
+                              "title": "Chrome Platform Status"
+                            },
+                            {
+                              "url": "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/HTMLModules/designDoc.md"
+                            }
+                          ]
+                        }
+                      },
+                      {
                         "count": 6,
                         "id": "custom_elements",
-                        "index": 1,
+                        "index": 2,
                         "percentageQuestion": 1.72,
                         "percentageSurvey": 0.1,
                         "entity": {
                           "name": "Custom Elements",
                           "nameHtml": "Custom Elements",
                           "nameClean": "Custom Elements",
-                          "description": "Issues related to defining and using custom elements, including syntax verbosity, lifecycle, and the reliance on JavaScript.",
-                          "descriptionHtml": "Issues related to defining and using custom elements, including syntax verbosity, lifecycle, and the reliance on JavaScript.",
-                          "descriptionClean": "Issues related to defining and using custom elements, including syntax verbosity, lifecycle, and the reliance on JavaScript.",
                           "id": "custom_elements",
                           "parentId": "web_components",
                           "entityType": "feature",
@@ -252,12 +214,12 @@
                             "percentageQuestion": 1.72,
                             "percentageSurvey": 0.1,
                             "entity": {
-                              "name": "Declarative custom elements",
-                              "nameHtml": "Declarative custom elements",
-                              "nameClean": "Declarative custom elements",
-                              "description": "HTML‑only definitions/usage of custom elements (no JS bootstrapping) and their authoring model. This also includes complaints about reliance on JavaScript.",
-                              "descriptionHtml": "HTML‑only definitions/usage of custom elements (no JS bootstrapping) and their authoring model. This also includes complaints about reliance on JavaScript.",
-                              "descriptionClean": "HTML‑only definitions/usage of custom elements (no JS bootstrapping) and their authoring model. This also includes complaints about reliance on JavaScript.",
+                              "name": "Declarative Custom Elements",
+                              "nameHtml": "Declarative Custom Elements",
+                              "nameClean": "Declarative Custom Elements",
+                              "description": "Create web components declaratively through HTML, with or without JS.",
+                              "descriptionHtml": "Create web components declaratively through HTML, with or without JS.",
+                              "descriptionClean": "Create web components declaratively through HTML, with or without JS.",
                               "id": "declarative_custom_elements",
                               "parentId": "custom_elements",
                               "entityType": "feature",
@@ -279,16 +241,13 @@
                       {
                         "count": 5,
                         "id": "progressive_enhancement",
-                        "index": 2,
+                        "index": 3,
                         "percentageQuestion": 1.44,
                         "percentageSurvey": 0.08,
                         "entity": {
-                          "name": "Progressive enhancement",
-                          "nameHtml": "Progressive enhancement",
-                          "nameClean": "Progressive enhancement",
-                          "description": "Difficulties in applying progressive enhancement patterns, where components fail to render or function gracefully when JavaScript is unavailable, fails, or has not yet executed.",
-                          "descriptionHtml": "Difficulties in applying progressive enhancement patterns, where components fail to render or function gracefully when JavaScript is unavailable, fails, or has not yet executed.",
-                          "descriptionClean": "Difficulties in applying progressive enhancement patterns, where components fail to render or function gracefully when JavaScript is unavailable, fails, or has not yet executed.",
+                          "name": "Progressive Enhancement",
+                          "nameHtml": "Progressive Enhancement",
+                          "nameClean": "Progressive Enhancement",
                           "id": "progressive_enhancement",
                           "entityType": "feature"
                         }

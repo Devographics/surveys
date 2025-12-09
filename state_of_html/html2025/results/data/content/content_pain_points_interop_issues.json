@@ -40,9 +40,9 @@
                           "name": "Internationalization",
                           "nameHtml": "Internationalization",
                           "nameClean": "Internationalization",
-                          "description": "Localization, RTL, logical coordinates, culturally‑appropriate rendering etc.",
-                          "descriptionHtml": "Localization, RTL, logical coordinates, culturally‑appropriate rendering etc.",
-                          "descriptionClean": "Localization, RTL, logical coordinates, culturally‑appropriate rendering etc.",
+                          "description": "Issues with internationalizing, localizing, and translating content",
+                          "descriptionHtml": "Issues with internationalizing, localizing, and translating content",
+                          "descriptionClean": "Issues with internationalizing, localizing, and translating content",
                           "id": "i18n_issues",
                           "entityType": "default"
                         }
@@ -67,8 +67,27 @@
                       },
                       {
                         "count": 0,
-                        "id": "date_and_time",
+                        "id": "apple",
                         "index": 2,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 0,
+                        "hasInsufficientData": true,
+                        "entity": {
+                          "name": "Apple",
+                          "nameHtml": "Apple",
+                          "nameClean": "Apple",
+                          "id": "apple",
+                          "parentId": "interop_issues",
+                          "entityType": "default",
+                          "homepage": {
+                            "url": "https://www.apple.com/"
+                          }
+                        }
+                      },
+                      {
+                        "count": 0,
+                        "id": "date_and_time",
+                        "index": 3,
                         "percentageQuestion": 0,
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
@@ -85,8 +104,47 @@
                       },
                       {
                         "count": 0,
+                        "id": "google",
+                        "index": 4,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 0,
+                        "hasInsufficientData": true,
+                        "entity": {
+                          "name": "Google",
+                          "nameHtml": "Google",
+                          "nameClean": "Google",
+                          "id": "google",
+                          "parentId": "interop_issues",
+                          "entityType": "default",
+                          "homepage": {
+                            "url": "https://google.com"
+                          }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 0,
+                            "id": "chrome",
+                            "percentageQuestion": 0,
+                            "percentageSurvey": 0,
+                            "hasInsufficientData": true,
+                            "entity": {
+                              "name": "Chrome",
+                              "nameHtml": "Chrome",
+                              "nameClean": "Chrome",
+                              "id": "chrome",
+                              "parentId": "google",
+                              "entityType": "default",
+                              "homepage": {
+                                "url": "https://www.google.com/chrome/"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 0,
                         "id": "headings",
-                        "index": 3,
+                        "index": 5,
                         "percentageQuestion": 0,
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
@@ -105,7 +163,7 @@
                       {
                         "count": 0,
                         "id": "html_reuse",
-                        "index": 4,
+                        "index": 6,
                         "percentageQuestion": 0,
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
@@ -128,12 +186,12 @@
                             "percentageSurvey": 0,
                             "hasInsufficientData": true,
                             "entity": {
-                              "name": "Templating & rendering",
-                              "nameHtml": "Templating &amp; rendering",
-                              "nameClean": "Templating & rendering",
-                              "description": "Authoring and running templates, data binding, reactive rendering, Declarative Shadow DOM, and server boundaries. Also includes issues related to the <template> element.",
-                              "descriptionHtml": "Authoring and running templates, data binding, reactive rendering, Declarative Shadow DOM, and server boundaries. Also includes issues related to the  element.",
-                              "descriptionClean": "Authoring and running templates, data binding, reactive rendering, Declarative Shadow DOM, and server boundaries. Also includes issues related to the  element.",
+                              "name": "Templating",
+                              "nameHtml": "Templating",
+                              "nameClean": "Templating",
+                              "description": "Lack of templating",
+                              "descriptionHtml": "Lack of templating",
+                              "descriptionClean": "Lack of templating",
                               "id": "templating",
                               "parentId": "html_reuse",
                               "entityType": "default"
@@ -149,9 +207,9 @@
                               "name": "HTML Modules",
                               "nameHtml": "HTML Modules",
                               "nameClean": "HTML Modules",
-                              "description": "Issues around the lack of or desire for HTML Modules, for packaging and importing components and content.",
-                              "descriptionHtml": "Issues around the lack of or desire for HTML Modules, for packaging and importing components and content.",
-                              "descriptionClean": "Issues around the lack of or desire for HTML Modules, for packaging and importing components and content.",
+                              "description": "Import HTML files via JS imports and access their elements and JS exports.",
+                              "descriptionHtml": "Import HTML files via JS imports and access their elements and JS exports.",
+                              "descriptionClean": "Import HTML files via JS imports and access their elements and JS exports.",
                               "id": "html_modules",
                               "parentId": "html_reuse",
                               "entityType": "feature",
@@ -180,17 +238,14 @@
                       {
                         "count": 0,
                         "id": "iframe_element",
-                        "index": 5,
+                        "index": 7,
                         "percentageQuestion": 0,
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
                         "entity": {
-                          "name": "<​iframe> Element",
-                          "nameHtml": "&lt;​iframe&gt; Element",
-                          "nameClean": "<​iframe> Element",
-                          "description": "Pain points related to the `<iframe>` element.",
-                          "descriptionHtml": "Pain points related to the <code>&lt;iframe&gt;</code> element.",
-                          "descriptionClean": "Pain points related to the <iframe> element.",
+                          "name": "`<iframe>`",
+                          "nameHtml": "<code>&lt;iframe&gt;</code>",
+                          "nameClean": "<iframe>",
                           "id": "iframe_element",
                           "entityType": "feature",
                           "example": {
@@ -206,7 +261,7 @@
                       {
                         "count": 0,
                         "id": "performance",
-                        "index": 6,
+                        "index": 8,
                         "percentageQuestion": 0,
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
@@ -214,17 +269,36 @@
                           "name": "Performance",
                           "nameHtml": "Performance",
                           "nameClean": "Performance",
-                          "description": "Throughput, latency, memory, jank, lag, frame drops, battery/thermal, and loading time.",
-                          "descriptionHtml": "Throughput, latency, memory, jank, lag, frame drops, battery/thermal, and loading time.",
-                          "descriptionClean": "Throughput, latency, memory, jank, lag, frame drops, battery/thermal, and loading time.",
+                          "description": "Performance issues",
+                          "descriptionHtml": "Performance issues",
+                          "descriptionClean": "Performance issues",
                           "id": "performance",
                           "entityType": "default"
                         }
                       },
                       {
                         "count": 0,
+                        "id": "safari",
+                        "index": 9,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 0,
+                        "hasInsufficientData": true,
+                        "entity": {
+                          "name": "Safari",
+                          "nameHtml": "Safari",
+                          "nameClean": "Safari",
+                          "id": "safari",
+                          "parentId": "interop_issues",
+                          "entityType": "default",
+                          "homepage": {
+                            "url": "https://www.apple.com/safari/"
+                          }
+                        }
+                      },
+                      {
+                        "count": 0,
                         "id": "security_privacy",
-                        "index": 7,
+                        "index": 10,
                         "percentageQuestion": 0,
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
@@ -232,9 +306,9 @@
                           "name": "Security & privacy",
                           "nameHtml": "Security &amp; privacy",
                           "nameClean": "Security & privacy",
-                          "description": "Threats, mitigations, permissions, and fingerprinting/privacy budget concerns, cross-origin issues etc. Pain points related to general concerns about security and privacy on the web.",
-                          "descriptionHtml": "Threats, mitigations, permissions, and fingerprinting/privacy budget concerns, cross-origin issues etc. Pain points related to general concerns about security and privacy on the web.",
-                          "descriptionClean": "Threats, mitigations, permissions, and fingerprinting/privacy budget concerns, cross-origin issues etc. Pain points related to general concerns about security and privacy on the web.",
+                          "description": "Lack of security and privacy",
+                          "descriptionHtml": "Lack of security and privacy",
+                          "descriptionClean": "Lack of security and privacy",
                           "id": "security_privacy",
                           "entityType": "default"
                         },
@@ -249,9 +323,9 @@
                               "name": "Sanitizer API",
                               "nameHtml": "Sanitizer API",
                               "nameClean": "Sanitizer API",
-                              "description": "Issues related to the HTML Sanitizer API, including its absence, limitations, or ergonomics.",
-                              "descriptionHtml": "Issues related to the HTML Sanitizer API, including its absence, limitations, or ergonomics.",
-                              "descriptionClean": "Issues related to the HTML Sanitizer API, including its absence, limitations, or ergonomics.",
+                              "description": "`element.setHTML()` and `Document.parseHTML()`. API to prevent XSS attacks by sanitizing untrusted strings of HTML.",
+                              "descriptionHtml": "<code>element.setHTML()</code> and <code>Document.parseHTML()</code>. API to prevent XSS attacks by sanitizing untrusted strings of HTML.",
+                              "descriptionClean": "element.setHTML() and Document.parseHTML(). API to prevent XSS attacks by sanitizing untrusted strings of HTML.",
                               "id": "sanitizer_api",
                               "parentId": "security_privacy",
                               "entityType": "feature",
@@ -270,7 +344,7 @@
                       {
                         "count": 0,
                         "id": "tables",
-                        "index": 8,
+                        "index": 11,
                         "percentageQuestion": 0,
                         "percentageSurvey": 0,
                         "hasInsufficientData": true,
@@ -289,7 +363,7 @@
                       {
                         "count": 87,
                         "id": "other_answers",
-                        "index": 9,
+                        "index": 12,
                         "percentageQuestion": 131.96,
                         "percentageSurvey": 1.46
                       }

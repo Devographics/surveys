@@ -31,18 +31,154 @@
                     },
                     "buckets": [
                       {
+                        "count": 26,
+                        "id": "lazy_loading",
+                        "index": 0,
+                        "percentageQuestion": 7.32,
+                        "percentageSurvey": 0.42,
+                        "entity": {
+                          "name": "`loading=\"lazy\"`",
+                          "nameHtml": "<code>loading=\"lazy\"</code>",
+                          "nameClean": "loading=\"lazy\"",
+                          "description": "Load certain resources only when needed.",
+                          "descriptionHtml": "Load certain resources only when needed.",
+                          "descriptionClean": "Load certain resources only when needed.",
+                          "id": "lazy_loading",
+                          "parentId": "loading_issues",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<img src=\"picture.jpg\" loading=\"lazy\" />\n<iframe src=\"supplementary.html\" loading=\"lazy\"></iframe>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">img</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;picture.jpg&quot;</span> <span class=\"hljs-attr\">loading</span>=<span class=\"hljs-string\">&quot;lazy&quot;</span> /&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">iframe</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;supplementary.html&quot;</span> <span class=\"hljs-attr\">loading</span>=<span class=\"hljs-string\">&quot;lazy&quot;</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">iframe</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Lazy_loading"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/loading-lazy-attr"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#lazy-loading-attributes",
+                              "title": "HTML Standard"
+                            },
+                            {
+                              "url": "https://web.dev/browser-level-image-lazy-loading/",
+                              "title": "Browser-level image lazy loading for the web"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "loading-lazy",
+                            "description_html": "The <code>loading=\"lazy\"</code> attribute for <code>&#x3C;img></code> and <code>&#x3C;iframe></code> elements blocks loading the external resource until the user scrolls to that element's part of the page.",
+                            "name": "Lazy-loading images and iframes",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#lazy-loading-attributes"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/loading-lazy/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2023-12-19",
+                              "support": {
+                                "chrome": "77",
+                                "chrome_android": "77",
+                                "edge": "79",
+                                "firefox": "121",
+                                "firefox_android": "121",
+                                "safari": "16.4",
+                                "safari_ios": "16.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 16,
+                        "id": "resource_hints",
+                        "index": 1,
+                        "percentageQuestion": 4.51,
+                        "percentageSurvey": 0.26,
+                        "entity": {
+                          "name": "Resource Hints",
+                          "nameHtml": "Resource Hints",
+                          "nameClean": "Resource Hints",
+                          "description": "Begin work on certain resources early to improve performance.\nSyntax: `<link rel=\"pre* | dns-prefetch | modulepreload\">`.",
+                          "descriptionHtml": "Begin work on certain resources early to improve performance.\nSyntax: <code>&lt;link rel=\"pre* | dns-prefetch | modulepreload\"&gt;</code>.",
+                          "descriptionClean": "Begin work on certain resources early to improve performance.Syntax: <link rel=\"pre* | dns-prefetch | modulepreload\">.",
+                          "id": "resource_hints",
+                          "parentId": "loading_issues",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<link rel=\"preload\" href=\"picture.jpg\" />\n<link rel=\"dns-prefetch\" href=\"https://fonts.googleapis.com/\" />",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">link</span> <span class=\"hljs-attr\">rel</span>=<span class=\"hljs-string\">&quot;preload&quot;</span> <span class=\"hljs-attr\">href</span>=<span class=\"hljs-string\">&quot;picture.jpg&quot;</span> /&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">link</span> <span class=\"hljs-attr\">rel</span>=<span class=\"hljs-string\">&quot;dns-prefetch&quot;</span> <span class=\"hljs-attr\">href</span>=<span class=\"hljs-string\">&quot;https://fonts.googleapis.com/&quot;</span> /&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Performance/Best_practices"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://blog.logrocket.com/understanding-css-preload-other-resource-hints/",
+                              "title": "Understanding CSS preload and other resource hints - LogRocket Blog"
+                            },
+                            {
+                              "url": "https://medium.com/@luisvieira_gmr/html5-prefetch-1e54f6dda15d",
+                              "title": "Resource Hints"
+                            }
+                          ]
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 7,
+                            "id": "speculation_rules",
+                            "percentageQuestion": 1.97,
+                            "percentageSurvey": 0.11,
+                            "entity": {
+                              "name": "Speculation Rules",
+                              "nameHtml": "Speculation Rules",
+                              "nameClean": "Speculation Rules",
+                              "description": "Hints for the browser to proactively download pages in the background to improve performance.",
+                              "descriptionHtml": "Hints for the browser to proactively download pages in the background to improve performance.",
+                              "descriptionClean": "Hints for the browser to proactively download pages in the background to improve performance.",
+                              "id": "speculation_rules",
+                              "parentId": "resource_hints",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "html",
+                                "code": "<script type=\"speculationrules\">\n  {\n    \"prefetch\": [{ \"urls\": [\"/about\", \"/pricing\"] }],\n    \"prerender\": [\n      {\n        \"where\": {\n          \"href_matches\": \"^/product/\\\\d+$\",\n          \"selector_matches\": \"a.nav-link\"\n        }\n      }\n    ]\n  }\n</script>\n",
+                                "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">&quot;speculationrules&quot;</span>&gt;</span><span class=\"language-javascript\">\n  {\n    <span class=\"hljs-string\">&quot;prefetch&quot;</span>: [{ <span class=\"hljs-string\">&quot;urls&quot;</span>: [<span class=\"hljs-string\">&quot;/about&quot;</span>, <span class=\"hljs-string\">&quot;/pricing&quot;</span>] }],\n    <span class=\"hljs-string\">&quot;prerender&quot;</span>: [\n      {\n        <span class=\"hljs-string\">&quot;where&quot;</span>: {\n          <span class=\"hljs-string\">&quot;href_matches&quot;</span>: <span class=\"hljs-string\">&quot;^/product/\\\\d+$&quot;</span>,\n          <span class=\"hljs-string\">&quot;selector_matches&quot;</span>: <span class=\"hljs-string\">&quot;a.nav-link&quot;</span>\n        }\n      }\n    ]\n  }\n</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>"
+                              },
+                              "webFeature": {
+                                "id": "speculation-rules",
+                                "description_html": "Speculation rules are hints to the browser to proactively download pages in the background so they appear instantly when the user navigates to them.",
+                                "name": "Speculation rules",
+                                "spec": [
+                                  "https://wicg.github.io/nav-speculation/speculation-rules.html",
+                                  "https://wicg.github.io/nav-speculation/prerendering.html"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/speculation-rules/",
+                                "status": {
+                                  "baseline": "false",
+                                  "support": {
+                                    "chrome": "109",
+                                    "chrome_android": "109",
+                                    "edge": "109"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
                         "count": 9,
                         "id": "at_container",
-                        "index": 0,
+                        "index": 2,
                         "percentageQuestion": 2.54,
                         "percentageSurvey": 0.14,
                         "entity": {
-                          "name": "Container Queries",
-                          "nameHtml": "Container Queries",
-                          "nameClean": "Container Queries",
-                          "description": "Pain points related to CSS Container Queries, often in relation to other features like responsive images.",
-                          "descriptionHtml": "Pain points related to CSS Container Queries, often in relation to other features like responsive images.",
-                          "descriptionClean": "Pain points related to CSS Container Queries, often in relation to other features like responsive images.",
+                          "name": "`@container`",
+                          "nameHtml": "<code>@container</code>",
+                          "nameClean": "@container",
                           "id": "at_container",
                           "entityType": "feature",
                           "example": {
@@ -86,16 +222,13 @@
                       {
                         "count": 7,
                         "id": "video_element",
-                        "index": 1,
+                        "index": 3,
                         "percentageQuestion": 1.97,
                         "percentageSurvey": 0.11,
                         "entity": {
-                          "name": "Video",
-                          "nameHtml": "Video",
-                          "nameClean": "Video",
-                          "description": "Issues related to including videos, including performance issues around videos.",
-                          "descriptionHtml": "Issues related to including videos, including performance issues around videos.",
-                          "descriptionClean": "Issues related to including videos, including performance issues around videos.",
+                          "name": "`<video>`",
+                          "nameHtml": "<code>&lt;video&gt;</code>",
+                          "nameClean": "<video>",
                           "id": "video_element",
                           "entityType": "feature",
                           "example": {
@@ -105,6 +238,57 @@
                           },
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video"
+                          }
+                        }
+                      },
+                      {
+                        "count": 6,
+                        "id": "svg_element",
+                        "index": 4,
+                        "percentageQuestion": 1.69,
+                        "percentageSurvey": 0.1,
+                        "entity": {
+                          "name": "`<svg>` (Inline SVG)",
+                          "nameHtml": "<code>&lt;svg&gt;</code> (Inline SVG)",
+                          "nameClean": "<svg> (Inline SVG)",
+                          "description": "Embed SVG vector graphics directly in markup",
+                          "descriptionHtml": "Embed SVG vector graphics directly in markup",
+                          "descriptionClean": "Embed SVG vector graphics directly in markup",
+                          "id": "svg_element",
+                          "parentId": "graphics_issues",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<svg>\n  <circle cx=\"50\" cy=\"50\" r=\"50\" />\n</svg>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">svg</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">circle</span> <span class=\"hljs-attr\">cx</span>=<span class=\"hljs-string\">&quot;50&quot;</span> <span class=\"hljs-attr\">cy</span>=<span class=\"hljs-string\">&quot;50&quot;</span> <span class=\"hljs-attr\">r</span>=<span class=\"hljs-string\">&quot;50&quot;</span> /&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">svg</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/svg"
+                          },
+                          "webFeature": {
+                            "id": "svg",
+                            "description_html": "The SVG image format, represented by the <code>&#x3C;svg></code> element, creates two-dimensional vector graphics with declarative or scripted interaction and animation.",
+                            "group": [
+                              "svg"
+                            ],
+                            "name": "SVG",
+                            "spec": [
+                              "https://svgwg.org/svg2-draft/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/svg/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-01-15",
+                              "support": {
+                                "chrome": "1",
+                                "chrome_android": "18",
+                                "edge": "79",
+                                "firefox": "3",
+                                "firefox_android": "4",
+                                "safari": "3",
+                                "safari_ios": "2"
+                              }
+                            }
                           }
                         }
                       }
