@@ -276,9 +276,58 @@
                             ]
                           },
                           {
+                            "count": 9,
+                            "id": "webusb",
+                            "index": 1,
+                            "percentageQuestion": 2.81,
+                            "percentageSurvey": 0.14,
+                            "entity": {
+                              "name": "WebUSB API",
+                              "nameHtml": "WebUSB API",
+                              "nameClean": "WebUSB API",
+                              "description": "Directly communicate with USB devices, enabling data exchange without drivers or native apps.",
+                              "descriptionHtml": "Directly communicate with USB devices, enabling data exchange without drivers or native apps.",
+                              "descriptionClean": "Directly communicate with USB devices, enabling data exchange without drivers or native apps.",
+                              "id": "web_usb_api",
+                              "parentId": "apis_capabilities",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "js",
+                                "code": "const device = await navigator.usb.requestDevice({ filters: [{ vendorId: 0x2341 }] });\nawait device.open();\n",
+                                "codeHighlighted": "<span class=\"hljs-keyword\">const</span> device = <span class=\"hljs-keyword\">await</span> navigator.<span class=\"hljs-property\">usb</span>.<span class=\"hljs-title function_\">requestDevice</span>({ <span class=\"hljs-attr\">filters</span>: [{ <span class=\"hljs-attr\">vendorId</span>: <span class=\"hljs-number\">0x2341</span> }] });\n<span class=\"hljs-keyword\">await</span> device.<span class=\"hljs-title function_\">open</span>();"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebUSB_API"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://developer.chrome.com/docs/capabilities/usb",
+                                  "title": "Access USB Devices on the Web"
+                                }
+                              ],
+                              "webFeature": {
+                                "id": "webusb",
+                                "description_html": "The WebUSB API exposes USB compatible devices to web pages.",
+                                "name": "WebUSB",
+                                "spec": [
+                                  "https://wicg.github.io/webusb/"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/webusb/",
+                                "status": {
+                                  "baseline": "false",
+                                  "support": {
+                                    "chrome": "61",
+                                    "chrome_android": "61",
+                                    "edge": "79"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
                             "count": 8,
                             "id": "web_share_api",
-                            "index": 1,
+                            "index": 2,
                             "percentageQuestion": 2.5,
                             "percentageSurvey": 0.13,
                             "entity": {
@@ -333,32 +382,14 @@
                           {
                             "count": 6,
                             "id": "web_bluetooth",
-                            "index": 2,
+                            "index": 3,
                             "percentageQuestion": 1.88,
                             "percentageSurvey": 0.1,
                             "entity": {
                               "name": "Web Bluetooth",
                               "nameHtml": "Web Bluetooth",
                               "nameClean": "Web Bluetooth",
-                              "description": "Issues around the web bluetooth API and generally accessing bluetooth capabilities from web apps.",
-                              "descriptionHtml": "Issues around the web bluetooth API and generally accessing bluetooth capabilities from web apps.",
-                              "descriptionClean": "Issues around the web bluetooth API and generally accessing bluetooth capabilities from web apps.",
                               "id": "web_bluetooth",
-                              "parentId": "apis_capabilities",
-                              "entityType": "feature"
-                            }
-                          },
-                          {
-                            "count": 5,
-                            "id": "web_midi_api",
-                            "index": 3,
-                            "percentageQuestion": 1.56,
-                            "percentageSurvey": 0.08,
-                            "entity": {
-                              "name": "Web MIDI API",
-                              "nameHtml": "Web MIDI API",
-                              "nameClean": "Web MIDI API",
-                              "id": "web_midi_api",
                               "parentId": "apis_capabilities",
                               "entityType": "feature"
                             }
@@ -421,6 +452,21 @@
                                   }
                                 }
                               }
+                            }
+                          },
+                          {
+                            "count": 5,
+                            "id": "web_midi_api",
+                            "index": 5,
+                            "percentageQuestion": 1.56,
+                            "percentageSurvey": 0.08,
+                            "entity": {
+                              "name": "Web MIDI API",
+                              "nameHtml": "Web MIDI API",
+                              "nameClean": "Web MIDI API",
+                              "id": "web_midi_api",
+                              "parentId": "apis_capabilities",
+                              "entityType": "feature"
                             }
                           }
                         ]
@@ -646,16 +692,9 @@
                         }
                       },
                       {
-                        "count": 9,
-                        "id": "webusb",
-                        "index": 10,
-                        "percentageQuestion": 2.81,
-                        "percentageSurvey": 0.14
-                      },
-                      {
                         "count": 8,
                         "id": "cognitive_overload",
-                        "index": 11,
+                        "index": 10,
                         "percentageQuestion": 2.5,
                         "percentageSurvey": 0.13,
                         "entity": {
@@ -669,7 +708,7 @@
                       {
                         "count": 8,
                         "id": "excessive_complexity",
-                        "index": 12,
+                        "index": 11,
                         "percentageQuestion": 2.5,
                         "percentageSurvey": 0.13,
                         "entity": {
@@ -687,7 +726,7 @@
                       {
                         "count": 7,
                         "id": "storage",
-                        "index": 13,
+                        "index": 12,
                         "percentageQuestion": 2.19,
                         "percentageSurvey": 0.11,
                         "entity": {
@@ -702,7 +741,7 @@
                       {
                         "count": 5,
                         "id": "debugging_issues",
-                        "index": 14,
+                        "index": 13,
                         "percentageQuestion": 1.56,
                         "percentageSurvey": 0.08,
                         "entity": {
@@ -719,7 +758,7 @@
                       {
                         "count": 5,
                         "id": "native_look_feel",
-                        "index": 15,
+                        "index": 14,
                         "percentageQuestion": 1.56,
                         "percentageSurvey": 0.08,
                         "entity": {
@@ -737,7 +776,7 @@
                       {
                         "count": 5,
                         "id": "peripheral_access",
-                        "index": 16,
+                        "index": 15,
                         "percentageQuestion": 1.56,
                         "percentageSurvey": 0.08,
                         "entity": {
@@ -755,14 +794,14 @@
                       {
                         "count": 5902,
                         "id": "no_answer",
-                        "index": 17,
+                        "index": 16,
                         "percentageQuestion": 0,
                         "percentageSurvey": 94.84
                       },
                       {
                         "count": 133,
                         "id": "other_answers",
-                        "index": 18,
+                        "index": 17,
                         "percentageQuestion": 41.61,
                         "percentageSurvey": 2.17
                       }
