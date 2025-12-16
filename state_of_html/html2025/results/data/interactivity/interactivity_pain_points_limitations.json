@@ -19,7 +19,7 @@
                         "property": "count",
                         "order": "desc"
                       },
-                      "limit": 20,
+                      "limit": 25,
                       "cutoff": 5
                     },
                     "editionId": "html2025",
@@ -621,68 +621,20 @@
                         "nestedBuckets": [
                           {
                             "count": 5,
-                            "id": "accordion_element",
+                            "id": "tabs_element",
                             "index": 0,
                             "percentageQuestion": 1.92,
                             "percentageSurvey": 0.08,
                             "entity": {
-                              "name": "`<details name>` (Exclusive Accordion)",
-                              "nameHtml": "<code>&lt;details name&gt;</code> (Exclusive Accordion)",
-                              "nameClean": "<details name> (Exclusive Accordion)",
-                              "description": "Group `<details>` elements so that only up to one in the group can be open at a time.",
-                              "descriptionHtml": "Group <code>&lt;details&gt;</code> elements so that only up to one in the group can be open at a time.",
-                              "descriptionClean": "Group <details> elements so that only up to one in the group can be open at a time.",
-                              "id": "accordion_element",
+                              "name": "Tabs element",
+                              "nameHtml": "Tabs element",
+                              "nameClean": "Tabs element",
+                              "description": "Pain points from the lack of a native HTML element for tabbed interfaces, a common UI pattern.",
+                              "descriptionHtml": "Pain points from the lack of a native HTML element for tabbed interfaces, a common UI pattern.",
+                              "descriptionClean": "Pain points from the lack of a native HTML element for tabbed interfaces, a common UI pattern.",
+                              "id": "tabs_element",
                               "parentId": "missing_elements",
-                              "entityType": "feature",
-                              "example": {
-                                "language": "html",
-                                "code": "<details open name=\"sidebar_panel\">\n\t<summary>Main info</summary>\n\t<!-- controls -->\n</details>\n<details name=\"sidebar_panel\">\n\t<summary>Style</summary>\n\t<!-- controls -->\n</details>",
-                                "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">details</span> <span class=\"hljs-attr\">open</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">&quot;sidebar_panel&quot;</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">summary</span>&gt;</span>Main info<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">summary</span>&gt;</span>\n\t<span class=\"hljs-comment\">&lt;!-- controls --&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">details</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">details</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">&quot;sidebar_panel&quot;</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">summary</span>&gt;</span>Style<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">summary</span>&gt;</span>\n\t<span class=\"hljs-comment\">&lt;!-- controls --&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">details</span>&gt;</span>"
-                              },
-                              "resources": [
-                                {
-                                  "url": "https://github.com/whatwg/html/pull/9400",
-                                  "title": "Add name attribute for grouping details elements into an exclusive accordion by dbaron · Pull Request #9400 · whatwg/html · GitHub"
-                                },
-                                {
-                                  "url": "https://github.com/w3ctag/design-reviews/issues/866#issuecomment-1661272254",
-                                  "title": "Exclusive accordion (&lt;details name=&quot;&quot;&gt;) · Issue #866 · w3ctag/design-reviews · GitHub"
-                                },
-                                {
-                                  "url": "https://open-ui.org/components/accordion.explainer/",
-                                  "title": "Exclusive Accordion (Explainer) | Open UI"
-                                },
-                                {
-                                  "url": "https://chromestatus.com/feature/6710427028815872",
-                                  "title": "Chrome Platform Status"
-                                }
-                              ],
-                              "webFeature": {
-                                "id": "details-name",
-                                "description_html": "Multiple <code>&#x3C;details></code> elements which use the same <code>name</code> attribute are mutually exclusive. When one member of the group is opened, all other members are closed.",
-                                "group": [
-                                  "html-elements"
-                                ],
-                                "name": "Mutually exclusive <details> elements",
-                                "spec": [
-                                  "https://html.spec.whatwg.org/multipage/interactive-elements.html#attr-details-name"
-                                ],
-                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/details-name/",
-                                "status": {
-                                  "baseline": "low",
-                                  "baseline_low_date": "2024-09-03",
-                                  "support": {
-                                    "chrome": "120",
-                                    "chrome_android": "120",
-                                    "edge": "120",
-                                    "firefox": "130",
-                                    "firefox_android": "130",
-                                    "safari": "17.2",
-                                    "safari_ios": "17.2"
-                                  }
-                                }
-                              }
+                              "entityType": "default"
                             }
                           },
                           {
@@ -753,20 +705,68 @@
                           },
                           {
                             "count": 5,
-                            "id": "tabs_element",
+                            "id": "accordion_element",
                             "index": 2,
                             "percentageQuestion": 1.92,
                             "percentageSurvey": 0.08,
                             "entity": {
-                              "name": "Tabs element",
-                              "nameHtml": "Tabs element",
-                              "nameClean": "Tabs element",
-                              "description": "Pain points from the lack of a native HTML element for tabbed interfaces, a common UI pattern.",
-                              "descriptionHtml": "Pain points from the lack of a native HTML element for tabbed interfaces, a common UI pattern.",
-                              "descriptionClean": "Pain points from the lack of a native HTML element for tabbed interfaces, a common UI pattern.",
-                              "id": "tabs_element",
+                              "name": "`<details name>` (Exclusive Accordion)",
+                              "nameHtml": "<code>&lt;details name&gt;</code> (Exclusive Accordion)",
+                              "nameClean": "<details name> (Exclusive Accordion)",
+                              "description": "Group `<details>` elements so that only up to one in the group can be open at a time.",
+                              "descriptionHtml": "Group <code>&lt;details&gt;</code> elements so that only up to one in the group can be open at a time.",
+                              "descriptionClean": "Group <details> elements so that only up to one in the group can be open at a time.",
+                              "id": "accordion_element",
                               "parentId": "missing_elements",
-                              "entityType": "default"
+                              "entityType": "feature",
+                              "example": {
+                                "language": "html",
+                                "code": "<details open name=\"sidebar_panel\">\n\t<summary>Main info</summary>\n\t<!-- controls -->\n</details>\n<details name=\"sidebar_panel\">\n\t<summary>Style</summary>\n\t<!-- controls -->\n</details>",
+                                "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">details</span> <span class=\"hljs-attr\">open</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">&quot;sidebar_panel&quot;</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">summary</span>&gt;</span>Main info<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">summary</span>&gt;</span>\n\t<span class=\"hljs-comment\">&lt;!-- controls --&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">details</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">details</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">&quot;sidebar_panel&quot;</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">summary</span>&gt;</span>Style<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">summary</span>&gt;</span>\n\t<span class=\"hljs-comment\">&lt;!-- controls --&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">details</span>&gt;</span>"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://github.com/whatwg/html/pull/9400",
+                                  "title": "Add name attribute for grouping details elements into an exclusive accordion by dbaron · Pull Request #9400 · whatwg/html · GitHub"
+                                },
+                                {
+                                  "url": "https://github.com/w3ctag/design-reviews/issues/866#issuecomment-1661272254",
+                                  "title": "Exclusive accordion (&lt;details name=&quot;&quot;&gt;) · Issue #866 · w3ctag/design-reviews · GitHub"
+                                },
+                                {
+                                  "url": "https://open-ui.org/components/accordion.explainer/",
+                                  "title": "Exclusive Accordion (Explainer) | Open UI"
+                                },
+                                {
+                                  "url": "https://chromestatus.com/feature/6710427028815872",
+                                  "title": "Chrome Platform Status"
+                                }
+                              ],
+                              "webFeature": {
+                                "id": "details-name",
+                                "description_html": "Multiple <code>&#x3C;details></code> elements which use the same <code>name</code> attribute are mutually exclusive. When one member of the group is opened, all other members are closed.",
+                                "group": [
+                                  "html-elements"
+                                ],
+                                "name": "Mutually exclusive <details> elements",
+                                "spec": [
+                                  "https://html.spec.whatwg.org/multipage/interactive-elements.html#attr-details-name"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/details-name/",
+                                "status": {
+                                  "baseline": "low",
+                                  "baseline_low_date": "2024-09-03",
+                                  "support": {
+                                    "chrome": "120",
+                                    "chrome_android": "120",
+                                    "edge": "120",
+                                    "firefox": "130",
+                                    "firefox_android": "130",
+                                    "safari": "17.2",
+                                    "safari_ios": "17.2"
+                                  }
+                                }
+                              }
                             }
                           }
                         ]
@@ -895,11 +895,144 @@
                         ]
                       },
                       {
-                        "count": 110,
-                        "id": "other_answers",
+                        "count": 6,
+                        "id": "cognitive_overload",
                         "index": 20,
-                        "percentageQuestion": 42.19,
-                        "percentageSurvey": 1.85
+                        "percentageQuestion": 2.31,
+                        "percentageSurvey": 0.1,
+                        "entity": {
+                          "name": "Cognitive overload",
+                          "nameHtml": "Cognitive overload",
+                          "nameClean": "Cognitive overload",
+                          "id": "cognitive_overload",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 6,
+                        "id": "mozilla",
+                        "index": 21,
+                        "percentageQuestion": 2.31,
+                        "percentageSurvey": 0.1,
+                        "entity": {
+                          "name": "Mozilla",
+                          "nameHtml": "Mozilla",
+                          "nameClean": "Mozilla",
+                          "id": "mozilla",
+                          "parentId": "interop_issues",
+                          "entityType": "default",
+                          "homepage": {
+                            "url": "https://www.mozilla.org/"
+                          }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 6,
+                            "id": "firefox",
+                            "index": 0,
+                            "percentageQuestion": 2.31,
+                            "percentageSurvey": 0.1,
+                            "entity": {
+                              "name": "Firefox",
+                              "nameHtml": "Firefox",
+                              "nameClean": "Firefox",
+                              "id": "firefox",
+                              "parentId": "mozilla",
+                              "entityType": "default",
+                              "homepage": {
+                                "url": "https://www.mozilla.org/en-US/firefox/new/"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 6,
+                        "id": "reliability",
+                        "index": 22,
+                        "percentageQuestion": 2.31,
+                        "percentageSurvey": 0.1,
+                        "entity": {
+                          "name": "Reliability",
+                          "nameHtml": "Reliability",
+                          "nameClean": "Reliability",
+                          "description": "Crashes, device/context loss, flaky behavior, and error handling.",
+                          "descriptionHtml": "Crashes, device/context loss, flaky behavior, and error handling.",
+                          "descriptionClean": "Crashes, device/context loss, flaky behavior, and error handling.",
+                          "id": "reliability",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 6,
+                        "id": "tooltips",
+                        "index": 23,
+                        "percentageQuestion": 2.31,
+                        "percentageSurvey": 0.1,
+                        "entity": {
+                          "id": "tooltips",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 5,
+                        "id": "invokers",
+                        "index": 24,
+                        "percentageQuestion": 1.92,
+                        "percentageSurvey": 0.08,
+                        "entity": {
+                          "name": "`command` and `commandfor` attributes (Command Invokers)",
+                          "nameHtml": "<code>command</code> and <code>commandfor</code> attributes (Command Invokers)",
+                          "nameClean": "command and commandfor attributes (Command Invokers)",
+                          "description": "A declarative way for `<button>` to invoke predefined custom commands.",
+                          "descriptionHtml": "A declarative way for <code>&lt;button&gt;</code> to invoke predefined custom commands.",
+                          "descriptionClean": "A declarative way for <button> to invoke predefined custom commands.",
+                          "id": "command_invokers",
+                          "parentId": "interactivity",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<button commandfor=\"mydialog\" command=\"show-modal\">\n  Show modal dialog\n</button>\n<dialog id=\"mydialog\">\n  <button commandfor=\"mydialog\" command=\"close\">\n    Close\n  </button>\n  *dialog content*\n</dialog>\n",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">commandfor</span>=<span class=\"hljs-string\">&quot;mydialog&quot;</span> <span class=\"hljs-attr\">command</span>=<span class=\"hljs-string\">&quot;show-modal&quot;</span>&gt;</span>\n  Show modal dialog\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">dialog</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;mydialog&quot;</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">commandfor</span>=<span class=\"hljs-string\">&quot;mydialog&quot;</span> <span class=\"hljs-attr\">command</span>=<span class=\"hljs-string\">&quot;close&quot;</span>&gt;</span>\n    Close\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n  *dialog content*\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">dialog</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://open-ui.org/components/invokers.explainer/",
+                              "title": "Invoker Commands (Explainer) | Open UI"
+                            },
+                            {
+                              "url": "https://css-tricks.com/invoker-commands-additional-ways-to-work-with-dialog-popover-and-more/",
+                              "title": "Invoker Commands: Additional Ways to Work With Dialog, Popover… and More?"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "invoker-commands",
+                            "description_html": "The <code>command</code> and <code>commandfor</code> attributes for the <code>&#x3C;button></code> HTML element dispatch an action to an element when the button is invoked (by click or keystroke), as a declarative alternative to <code>addEventListener()</code> calls or <code>onclick</code> attribute handlers.",
+                            "name": "Invoker commands",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/form-elements.html#attr-button-command"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/invoker-commands/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "135",
+                                "chrome_android": "135",
+                                "edge": "135"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 81,
+                        "id": "other_answers",
+                        "index": 25,
+                        "percentageQuestion": 31.03,
+                        "percentageSurvey": 1.37
                       }
                     ]
                   }

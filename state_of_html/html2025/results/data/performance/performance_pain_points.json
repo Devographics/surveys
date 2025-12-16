@@ -19,7 +19,7 @@
                         "property": "count",
                         "order": "desc"
                       },
-                      "limit": 20,
+                      "limit": 25,
                       "cutoff": 5
                     },
                     "editionId": "html2025",
@@ -189,26 +189,8 @@
                           },
                           {
                             "count": 14,
-                            "id": "css_loading",
-                            "index": 2,
-                            "percentageQuestion": 3.94,
-                            "percentageSurvey": 0.22,
-                            "entity": {
-                              "name": "CSS Loading",
-                              "nameHtml": "CSS Loading",
-                              "nameClean": "CSS Loading",
-                              "description": "Issues related to loading stylesheets, including render-blocking behavior, asynchronous loading, and unused CSS.",
-                              "descriptionHtml": "Issues related to loading stylesheets, including render-blocking behavior, asynchronous loading, and unused CSS.",
-                              "descriptionClean": "Issues related to loading stylesheets, including render-blocking behavior, asynchronous loading, and unused CSS.",
-                              "id": "css_loading",
-                              "parentId": "loading_issues",
-                              "entityType": "default"
-                            }
-                          },
-                          {
-                            "count": 14,
                             "id": "script_loading",
-                            "index": 3,
+                            "index": 2,
                             "percentageQuestion": 3.94,
                             "percentageSurvey": 0.22,
                             "entity": {
@@ -219,6 +201,24 @@
                               "descriptionHtml": "Pain points related to loading and executing JavaScript, including <code>async</code>, <code>defer</code>, ES modules, and dynamic imports.",
                               "descriptionClean": "Pain points related to loading and executing JavaScript, including async, defer, ES modules, and dynamic imports.",
                               "id": "script_loading",
+                              "parentId": "loading_issues",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 14,
+                            "id": "css_loading",
+                            "index": 3,
+                            "percentageQuestion": 3.94,
+                            "percentageSurvey": 0.22,
+                            "entity": {
+                              "name": "CSS Loading",
+                              "nameHtml": "CSS Loading",
+                              "nameClean": "CSS Loading",
+                              "description": "Issues related to loading stylesheets, including render-blocking behavior, asynchronous loading, and unused CSS.",
+                              "descriptionHtml": "Issues related to loading stylesheets, including render-blocking behavior, asynchronous loading, and unused CSS.",
+                              "descriptionClean": "Issues related to loading stylesheets, including render-blocking behavior, asynchronous loading, and unused CSS.",
+                              "id": "css_loading",
                               "parentId": "loading_issues",
                               "entityType": "default"
                             }
@@ -674,9 +674,9 @@
                         "percentageQuestion": 8.73,
                         "percentageSurvey": 0.5,
                         "entity": {
-                          "name": "Interop issues",
-                          "nameHtml": "Interop issues",
-                          "nameClean": "Interop issues",
+                          "name": "Browser support",
+                          "nameHtml": "Browser support",
+                          "nameClean": "Browser support",
                           "description": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
                           "descriptionHtml": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
                           "descriptionClean": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
@@ -966,18 +966,74 @@
                         "percentageSurvey": 0.11
                       },
                       {
+                        "count": 7,
+                        "id": "video_element",
+                        "index": 20,
+                        "percentageQuestion": 1.97,
+                        "percentageSurvey": 0.11,
+                        "entity": {
+                          "name": "`<video>`",
+                          "nameHtml": "<code>&lt;video&gt;</code>",
+                          "nameClean": "<video>",
+                          "id": "video_element",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<video src=\"video.mp4\" controls></video>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">video</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;video.mp4&quot;</span> <span class=\"hljs-attr\">controls</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">video</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video"
+                          }
+                        }
+                      },
+                      {
+                        "count": 6,
+                        "id": "server_client",
+                        "index": 21,
+                        "percentageQuestion": 1.69,
+                        "percentageSurvey": 0.1,
+                        "entity": {
+                          "name": "Server-client communication",
+                          "nameHtml": "Server-client communication",
+                          "nameClean": "Server-client communication",
+                          "description": "Issues around server-client integration & communication, server-side rendering, etc.",
+                          "descriptionHtml": "Issues around server-client integration &amp; communication, server-side rendering, etc.",
+                          "descriptionClean": "Issues around server-client integration & communication, server-side rendering, etc.",
+                          "id": "server_client",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 5,
+                        "id": "meta",
+                        "index": 22,
+                        "percentageQuestion": 1.41,
+                        "percentageSurvey": 0.08,
+                        "entity": {
+                          "name": "Meta-issues",
+                          "nameHtml": "Meta-issues",
+                          "nameClean": "Meta-issues",
+                          "description": "Meta-issues not intrinsic to the technology itself or its support in browsers (hardware, spec issues, political issues, etc.).",
+                          "descriptionHtml": "Meta-issues not intrinsic to the technology itself or its support in browsers (hardware, spec issues, political issues, etc.).",
+                          "descriptionClean": "Meta-issues not intrinsic to the technology itself or its support in browsers (hardware, spec issues, political issues, etc.).",
+                          "id": "meta",
+                          "entityType": "default"
+                        }
+                      },
+                      {
                         "count": 5866,
                         "id": "no_answer",
-                        "index": 20,
+                        "index": 23,
                         "percentageQuestion": 0,
                         "percentageSurvey": 94.26
                       },
                       {
-                        "count": 154,
+                        "count": 136,
                         "id": "other_answers",
-                        "index": 21,
-                        "percentageQuestion": 43.35,
-                        "percentageSurvey": 2.55
+                        "index": 24,
+                        "percentageQuestion": 38.28,
+                        "percentageSurvey": 2.26
                       }
                     ]
                   }

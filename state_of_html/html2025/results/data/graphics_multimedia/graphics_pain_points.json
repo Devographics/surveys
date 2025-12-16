@@ -19,7 +19,7 @@
                         "property": "count",
                         "order": "desc"
                       },
-                      "limit": 20,
+                      "limit": 25,
                       "cutoff": 5
                     },
                     "editionId": "html2025",
@@ -37,9 +37,9 @@
                         "percentageQuestion": 26.95,
                         "percentageSurvey": 2.67,
                         "entity": {
-                          "name": "Interop issues",
-                          "nameHtml": "Interop issues",
-                          "nameClean": "Interop issues",
+                          "name": "Browser support",
+                          "nameHtml": "Browser support",
+                          "nameClean": "Browser support",
                           "description": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
                           "descriptionHtml": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
                           "descriptionClean": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
@@ -1196,18 +1196,123 @@
                         ]
                       },
                       {
+                        "count": 20,
+                        "id": "webgpu",
+                        "index": 20,
+                        "percentageQuestion": 3.25,
+                        "percentageSurvey": 0.32,
+                        "entity": {
+                          "name": "WebGPU",
+                          "nameHtml": "WebGPU",
+                          "nameClean": "WebGPU",
+                          "description": "A JavaScript API that provides low-level access to the GPU for high-performance graphics and parallel computation in the browser.",
+                          "descriptionHtml": "A JavaScript API that provides low-level access to the GPU for high-performance graphics and parallel computation in the browser.",
+                          "descriptionClean": "A JavaScript API that provides low-level access to the GPU for high-performance graphics and parallel computation in the browser.",
+                          "id": "webgpu",
+                          "parentId": "graphics_issues",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const adapter = await navigator.gpu.requestAdapter();\nconst device = await adapter?.requestDevice();\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> adapter = <span class=\"hljs-keyword\">await</span> navigator.<span class=\"hljs-property\">gpu</span>.<span class=\"hljs-title function_\">requestAdapter</span>();\n<span class=\"hljs-keyword\">const</span> device = <span class=\"hljs-keyword\">await</span> adapter?.<span class=\"hljs-title function_\">requestDevice</span>();"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://developer.chrome.com/blog/webgpu-io2023/",
+                              "title": "WebGPU: Unlocking modern GPU access in the browser"
+                            },
+                            {
+                              "url": "https://developer.chrome.com/docs/web-platform/webgpu/",
+                              "title": "WebGPU"
+                            },
+                            {
+                              "url": "https://webkit.org/demos/webgpu/",
+                              "title": "WebGPU demos"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "count": 19,
+                        "id": "reliance_on_javascript",
+                        "index": 21,
+                        "percentageQuestion": 3.08,
+                        "percentageSurvey": 0.31,
+                        "entity": {
+                          "name": "Reliance on JavaScript",
+                          "nameHtml": "Reliance on JavaScript",
+                          "nameClean": "Reliance on JavaScript",
+                          "description": "Excessive reliance on JavaScript",
+                          "descriptionHtml": "Excessive reliance on JavaScript",
+                          "descriptionClean": "Excessive reliance on JavaScript",
+                          "id": "reliance_on_javascript",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 17,
+                        "id": "loading_issues",
+                        "index": 22,
+                        "percentageQuestion": 2.76,
+                        "percentageSurvey": 0.27,
+                        "entity": {
+                          "name": "Loading",
+                          "nameHtml": "Loading",
+                          "nameClean": "Loading",
+                          "description": "General issues related to loading page subresources like scripts, stylesheets, and modules, preloading, or loading UX.",
+                          "descriptionHtml": "General issues related to loading page subresources like scripts, stylesheets, and modules, preloading, or loading UX.",
+                          "descriptionClean": "General issues related to loading page subresources like scripts, stylesheets, and modules, preloading, or loading UX.",
+                          "id": "loading_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 16,
+                        "id": "ecosystem",
+                        "index": 23,
+                        "percentageQuestion": 2.6,
+                        "percentageSurvey": 0.26,
+                        "entity": {
+                          "name": "Ecosystem issues",
+                          "nameHtml": "Ecosystem issues",
+                          "nameClean": "Ecosystem issues",
+                          "id": "ecosystem",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 15,
+                        "id": "end_user_ux_issues",
+                        "index": 24,
+                        "percentageQuestion": 2.44,
+                        "percentageSurvey": 0.24,
+                        "entity": {
+                          "name": "End-user experience",
+                          "nameHtml": "End-user experience",
+                          "nameClean": "End-user experience",
+                          "description": "Issues around difficulties providing a good user experience for end-users. Do not include DX issues here (use `ergonomics` for that).",
+                          "descriptionHtml": "Issues around difficulties providing a good user experience for end-users. Do not include DX issues here (use <code>ergonomics</code> for that).",
+                          "descriptionClean": "Issues around difficulties providing a good user experience for end-users. Do not include DX issues here (use ergonomics for that).",
+                          "id": "end_user_ux_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
                         "count": 5605,
                         "id": "no_answer",
-                        "index": 20,
+                        "index": 25,
                         "percentageQuestion": 0,
                         "percentageSurvey": 90.07
                       },
                       {
-                        "count": 333,
+                        "count": 246,
                         "id": "other_answers",
-                        "index": 21,
-                        "percentageQuestion": 53.97,
-                        "percentageSurvey": 5.37
+                        "index": 26,
+                        "percentageQuestion": 39.84,
+                        "percentageSurvey": 3.97
                       }
                     ]
                   }

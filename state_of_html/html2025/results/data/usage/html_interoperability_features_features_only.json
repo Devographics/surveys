@@ -19,7 +19,7 @@
                         "property": "count",
                         "order": "desc"
                       },
-                      "limit": 20,
+                      "limit": 25,
                       "cutoff": 5
                     },
                     "editionId": "html2024",
@@ -878,11 +878,245 @@
                         }
                       },
                       {
-                        "count": 40,
-                        "id": "other_answers",
+                        "count": 5,
+                        "id": "details_element",
                         "index": 20,
-                        "percentageQuestion": 6.56,
-                        "percentageSurvey": 0.72
+                        "percentageQuestion": 0.82,
+                        "percentageSurvey": 0.09,
+                        "entity": {
+                          "name": "`<details>` and `<summary>`",
+                          "nameHtml": "<code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code>",
+                          "nameClean": "<details> and <summary>",
+                          "description": "A disclosure widget that can be toggled to hide or show content interactively.",
+                          "descriptionHtml": "A disclosure widget that can be toggled to hide or show content interactively.",
+                          "descriptionClean": "A disclosure widget that can be toggled to hide or show content interactively.",
+                          "id": "details_element",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<details>\n    <summary>Details</summary>\n    Longer content\n</details>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">details</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">summary</span>&gt;</span>Details<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">summary</span>&gt;</span>\n    Longer content\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">details</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element",
+                              "title": "HTML Standard"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "details",
+                            "description_html": "The <code>&#x3C;details></code> element is a disclosure widget which can be expanded to reveal additional content. When closed, only the nested <code>&#x3C;summary></code> element is visible.",
+                            "group": [
+                              "html-elements"
+                            ],
+                            "name": "<details>",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/details/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-01-15",
+                              "support": {
+                                "chrome": "12",
+                                "chrome_android": "18",
+                                "edge": "79",
+                                "firefox": "49",
+                                "firefox_android": "49",
+                                "safari": "6",
+                                "safari_ios": "6"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 5,
+                        "id": "grid",
+                        "index": 21,
+                        "percentageQuestion": 0.82,
+                        "percentageSurvey": 0.09,
+                        "entity": {
+                          "name": "Grid",
+                          "nameHtml": "Grid",
+                          "nameClean": "Grid",
+                          "id": "grid",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-grid"
+                          },
+                          "webFeature": {
+                            "id": "grid",
+                            "description_html": "CSS grid is a two-dimensional layout system, which lays content out in rows and columns.",
+                            "group": [
+                              "grid"
+                            ],
+                            "name": "Grid",
+                            "spec": [
+                              "https://drafts.csswg.org/css-grid-3/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/grid/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2017-10-17",
+                              "support": {
+                                "chrome": "57",
+                                "chrome_android": "57",
+                                "edge": "16",
+                                "firefox": "52",
+                                "firefox_android": "52",
+                                "safari": "10.1",
+                                "safari_ios": "10.3"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 5,
+                        "id": "has_selector",
+                        "index": 22,
+                        "percentageQuestion": 0.82,
+                        "percentageSurvey": 0.09,
+                        "entity": {
+                          "name": "`:has()`",
+                          "nameHtml": "<code>:has()</code>",
+                          "nameClean": ":has()",
+                          "id": "has_selector",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "a:has(> img) {\n  border: 2px solid grey;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-tag\">a</span><span class=\"hljs-selector-pseudo\">:has</span>(&gt; <span class=\"hljs-selector-tag\">img</span>) {\n  <span class=\"hljs-attribute\">border</span>: <span class=\"hljs-number\">2px</span> solid grey;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:has"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-has"
+                          },
+                          "webFeature": {
+                            "id": "has",
+                            "description_html": "The <code>:has()</code> CSS functional pseudo-class matches an element if any of the selectors passed as parameters would match at least one element.",
+                            "group": [
+                              "selectors"
+                            ],
+                            "name": ":has()",
+                            "spec": [
+                              "https://drafts.csswg.org/selectors-4/#relational"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/has/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2023-12-19",
+                              "support": {
+                                "chrome": "105",
+                                "chrome_android": "105",
+                                "edge": "105",
+                                "firefox": "121",
+                                "firefox_android": "121",
+                                "safari": "15.4",
+                                "safari_ios": "15.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 5,
+                        "id": "jpeg_xl",
+                        "index": 23,
+                        "percentageQuestion": 0.82,
+                        "percentageSurvey": 0.09,
+                        "entity": {
+                          "name": "JPEG XL",
+                          "nameHtml": "JPEG XL",
+                          "nameClean": "JPEG XL",
+                          "description": "An image format optimized for web environments.",
+                          "descriptionHtml": "An image format optimized for web environments.",
+                          "descriptionClean": "An image format optimized for web environments.",
+                          "id": "jpeg_xl",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<img src=\"image.jxl\" />\n",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">img</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;image.jxl&quot;</span> /&gt;</span>"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/jpegxl"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://jpeg.org/jpegxl/",
+                              "title": "JPEG - JPEG XL"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "jpegxl",
+                            "description_html": "The JPEG XL image format is a raster graphics file format that supports animation, alpha transparency, and lossy as well as lossless compression.",
+                            "name": "JPEG XL",
+                            "spec": [
+                              "https://www.iso.org/standard/85253.html"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/jpegxl/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "safari": "17",
+                                "safari_ios": "17"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 5,
+                        "id": "navigation_api",
+                        "index": 24,
+                        "percentageQuestion": 0.82,
+                        "percentageSurvey": 0.09,
+                        "entity": {
+                          "name": "Navigation API",
+                          "nameHtml": "Navigation API",
+                          "nameClean": "Navigation API",
+                          "description": "Initiate, intercept, and manage navigation actions, examine history entries. Successor to the older `history` and `location` APIs.",
+                          "descriptionHtml": "Initiate, intercept, and manage navigation actions, examine history entries. Successor to the older <code>history</code> and <code>location</code> APIs.",
+                          "descriptionClean": "Initiate, intercept, and manage navigation actions, examine history entries. Successor to the older history and location APIs.",
+                          "id": "navigation_api",
+                          "parentId": "dom_apis",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "navigation.navigate(url, {history: \"push\"});\nnavigation.addEventListener(\"navigate\", interceptNavigation);",
+                            "codeHighlighted": "navigation.<span class=\"hljs-title function_\">navigate</span>(url, {<span class=\"hljs-attr\">history</span>: <span class=\"hljs-string\">&quot;push&quot;</span>});\nnavigation.<span class=\"hljs-title function_\">addEventListener</span>(<span class=\"hljs-string\">&quot;navigate&quot;</span>, interceptNavigation);"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigation_API"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://wicg.github.io/navigation-api/",
+                              "title": "The navigation API has moved to the HTML Standard"
+                            },
+                            {
+                              "url": "https://github.com/WICG/navigation-api",
+                              "title": "GitHub - WICG/navigation-api: The new navigation API provides a new interface for navigations and session history, with a focus on single-page application navigations."
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "count": 15,
+                        "id": "other_answers",
+                        "index": 25,
+                        "percentageQuestion": 2.46,
+                        "percentageSurvey": 0.27
                       }
                     ]
                   },
@@ -892,7 +1126,7 @@
                         "property": "count",
                         "order": "desc"
                       },
-                      "limit": 20,
+                      "limit": 25,
                       "cutoff": 5
                     },
                     "editionId": "html2025",
@@ -1536,9 +1770,58 @@
                         }
                       },
                       {
+                        "count": 25,
+                        "id": "webusb",
+                        "index": 11,
+                        "percentageQuestion": 2.83,
+                        "percentageSurvey": 0.4,
+                        "entity": {
+                          "name": "WebUSB API",
+                          "nameHtml": "WebUSB API",
+                          "nameClean": "WebUSB API",
+                          "description": "Directly communicate with USB devices, enabling data exchange without drivers or native apps.",
+                          "descriptionHtml": "Directly communicate with USB devices, enabling data exchange without drivers or native apps.",
+                          "descriptionClean": "Directly communicate with USB devices, enabling data exchange without drivers or native apps.",
+                          "id": "web_usb_api",
+                          "parentId": "apis_capabilities",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "js",
+                            "code": "const device = await navigator.usb.requestDevice({ filters: [{ vendorId: 0x2341 }] });\nawait device.open();\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> device = <span class=\"hljs-keyword\">await</span> navigator.<span class=\"hljs-property\">usb</span>.<span class=\"hljs-title function_\">requestDevice</span>({ <span class=\"hljs-attr\">filters</span>: [{ <span class=\"hljs-attr\">vendorId</span>: <span class=\"hljs-number\">0x2341</span> }] });\n<span class=\"hljs-keyword\">await</span> device.<span class=\"hljs-title function_\">open</span>();"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebUSB_API"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://developer.chrome.com/docs/capabilities/usb",
+                              "title": "Access USB Devices on the Web"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "webusb",
+                            "description_html": "The WebUSB API exposes USB compatible devices to web pages.",
+                            "name": "WebUSB",
+                            "spec": [
+                              "https://wicg.github.io/webusb/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/webusb/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "61",
+                                "chrome_android": "61",
+                                "edge": "79"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
                         "count": 24,
                         "id": "datalist_element",
-                        "index": 11,
+                        "index": 12,
                         "percentageQuestion": 2.71,
                         "percentageSurvey": 0.39,
                         "entity": {
@@ -1596,16 +1879,13 @@
                       {
                         "count": 23,
                         "id": "web_bluetooth",
-                        "index": 12,
+                        "index": 13,
                         "percentageQuestion": 2.6,
                         "percentageSurvey": 0.37,
                         "entity": {
                           "name": "Web Bluetooth",
                           "nameHtml": "Web Bluetooth",
                           "nameClean": "Web Bluetooth",
-                          "description": "Issues around the web bluetooth API and generally accessing bluetooth capabilities from web apps.",
-                          "descriptionHtml": "Issues around the web bluetooth API and generally accessing bluetooth capabilities from web apps.",
-                          "descriptionClean": "Issues around the web bluetooth API and generally accessing bluetooth capabilities from web apps.",
                           "id": "web_bluetooth",
                           "parentId": "apis_capabilities",
                           "entityType": "feature"
@@ -1614,7 +1894,7 @@
                       {
                         "count": 21,
                         "id": "web_share_api",
-                        "index": 13,
+                        "index": 14,
                         "percentageQuestion": 2.38,
                         "percentageSurvey": 0.34,
                         "entity": {
@@ -1669,7 +1949,7 @@
                       {
                         "count": 20,
                         "id": "speech_recognition_api",
-                        "index": 14,
+                        "index": 15,
                         "percentageQuestion": 2.26,
                         "percentageSurvey": 0.32,
                         "entity": {
@@ -1710,7 +1990,7 @@
                       {
                         "count": 18,
                         "id": "webgpu",
-                        "index": 15,
+                        "index": 16,
                         "percentageQuestion": 2.04,
                         "percentageSurvey": 0.29,
                         "entity": {
@@ -1750,7 +2030,7 @@
                       {
                         "count": 17,
                         "id": "svg_element",
-                        "index": 16,
+                        "index": 17,
                         "percentageQuestion": 1.92,
                         "percentageSurvey": 0.27,
                         "entity": {
@@ -1801,7 +2081,7 @@
                       {
                         "count": 17,
                         "id": "video_element",
-                        "index": 17,
+                        "index": 18,
                         "percentageQuestion": 1.92,
                         "percentageSurvey": 0.27,
                         "entity": {
@@ -1823,7 +2103,7 @@
                       {
                         "count": 13,
                         "id": "temporal_api",
-                        "index": 18,
+                        "index": 19,
                         "percentageQuestion": 1.47,
                         "percentageSurvey": 0.21,
                         "entity": {
@@ -1863,7 +2143,7 @@
                       {
                         "count": 10,
                         "id": "color_picker",
-                        "index": 19,
+                        "index": 20,
                         "percentageQuestion": 1.13,
                         "percentageSurvey": 0.16,
                         "entity": {
@@ -1876,11 +2156,197 @@
                         }
                       },
                       {
-                        "count": 121,
+                        "count": 10,
+                        "id": "details_summary_element",
+                        "index": 21,
+                        "percentageQuestion": 1.13,
+                        "percentageSurvey": 0.16,
+                        "entity": {
+                          "name": "`<details>` and `<summary>`",
+                          "nameHtml": "<code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code>",
+                          "nameClean": "<details> and <summary>",
+                          "description": "A disclosure widget that can be toggled to hide or show content interactively.",
+                          "descriptionHtml": "A disclosure widget that can be toggled to hide or show content interactively.",
+                          "descriptionClean": "A disclosure widget that can be toggled to hide or show content interactively.",
+                          "id": "details_element",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<details>\n    <summary>Details</summary>\n    Longer content\n</details>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">details</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">summary</span>&gt;</span>Details<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">summary</span>&gt;</span>\n    Longer content\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">details</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element",
+                              "title": "HTML Standard"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "details",
+                            "description_html": "The <code>&#x3C;details></code> element is a disclosure widget which can be expanded to reveal additional content. When closed, only the nested <code>&#x3C;summary></code> element is visible.",
+                            "group": [
+                              "html-elements"
+                            ],
+                            "name": "<details>",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/details/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-01-15",
+                              "support": {
+                                "chrome": "12",
+                                "chrome_android": "18",
+                                "edge": "79",
+                                "firefox": "49",
+                                "firefox_android": "49",
+                                "safari": "6",
+                                "safari_ios": "6"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 9,
+                        "id": "css_nesting",
+                        "index": 22,
+                        "percentageQuestion": 1.02,
+                        "percentageSurvey": 0.14,
+                        "entity": {
+                          "name": "CSS Nesting",
+                          "nameHtml": "CSS Nesting",
+                          "nameClean": "CSS Nesting",
+                          "id": "css_nesting",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".parent {\n  color: blue;\n\n  .child {\n    color: red;\n  }\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.parent</span> {\n  <span class=\"hljs-attribute\">color</span>: blue;\n\n  <span class=\"hljs-selector-class\">.child</span> {\n    <span class=\"hljs-attribute\">color</span>: red;\n  }\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Nesting"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://developer.chrome.com/articles/css-nesting/",
+                              "title": "CSS Nesting"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "nesting",
+                            "description_html": "CSS nesting allows for shorter selectors, easier reading, and more modularity by nesting rules inside others.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "Nesting",
+                            "spec": [
+                              "https://drafts.csswg.org/css-nesting-1/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/nesting/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2023-12-11",
+                              "support": {
+                                "chrome": "120",
+                                "chrome_android": "120",
+                                "edge": "120",
+                                "firefox": "117",
+                                "firefox_android": "117",
+                                "safari": "17.2",
+                                "safari_ios": "17.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 9,
+                        "id": "input_checkbox_switch",
+                        "index": 23,
+                        "percentageQuestion": 1.02,
+                        "percentageSurvey": 0.14,
+                        "entity": {
+                          "name": "Switch Control",
+                          "nameHtml": "Switch Control",
+                          "nameClean": "Switch Control",
+                          "description": "A way to render a checkbox as a switch.",
+                          "descriptionHtml": "A way to render a checkbox as a switch.",
+                          "descriptionClean": "A way to render a checkbox as a switch.",
+                          "id": "input_checkbox_switch",
+                          "entityType": "feature",
+                          "resources": [
+                            {
+                              "url": "https://webkit.org/blog/15054/an-html-switch-control/",
+                              "title": "An HTML Switch Control | WebKit"
+                            },
+                            {
+                              "url": "https://www.smashingmagazine.com/2024/05/switching-it-up-html-latest-control/",
+                              "title": "Switching It Up With HTML’s Latest Control — Smashing Magazine"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "count": 8,
+                        "id": "at_container",
+                        "index": 24,
+                        "percentageQuestion": 0.9,
+                        "percentageSurvey": 0.13,
+                        "entity": {
+                          "name": "`@container`",
+                          "nameHtml": "<code>@container</code>",
+                          "nameClean": "@container",
+                          "id": "at_container",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "@container (min-width: 700px) {\n  .card {\n    display: grid;\n    grid-template-columns: 2fr 1fr;\n  }\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">@container</span> (<span class=\"hljs-attribute\">min-width</span>: <span class=\"hljs-number\">700px</span>) {\n  <span class=\"hljs-selector-class\">.card</span> {\n    <span class=\"hljs-attribute\">display</span>: grid;\n    <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">2</span>fr <span class=\"hljs-number\">1</span>fr;\n  }\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Containment/Container_queries"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-container-queries"
+                          },
+                          "webFeature": {
+                            "id": "container-queries",
+                            "description_html": "Container size queries with the <code>@container</code> at-rule apply styles to an element based on the dimensions of its container.",
+                            "group": [
+                              "container-queries"
+                            ],
+                            "name": "Container queries",
+                            "spec": [
+                              "https://drafts.csswg.org/css-conditional-5/#container-queries"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/container-queries/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2023-02-14",
+                              "support": {
+                                "chrome": "105",
+                                "chrome_android": "105",
+                                "edge": "105",
+                                "firefox": "110",
+                                "firefox_android": "110",
+                                "safari": "16",
+                                "safari_ios": "16"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 85,
                         "id": "other_answers",
-                        "index": 20,
-                        "percentageQuestion": 13.68,
-                        "percentageSurvey": 1.93
+                        "index": 25,
+                        "percentageQuestion": 9.61,
+                        "percentageSurvey": 1.36
                       }
                     ]
                   }

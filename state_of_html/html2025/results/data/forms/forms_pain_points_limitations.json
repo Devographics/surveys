@@ -19,7 +19,7 @@
                         "property": "count",
                         "order": "desc"
                       },
-                      "limit": 20,
+                      "limit": 25,
                       "cutoff": 5
                     },
                     "editionId": "html2025",
@@ -835,11 +835,230 @@
                         ]
                       },
                       {
-                        "count": 542,
-                        "id": "other_answers",
+                        "count": 30,
+                        "id": "number_input",
                         "index": 20,
-                        "percentageQuestion": 81.53,
-                        "percentageSurvey": 8.77
+                        "percentageQuestion": 4.52,
+                        "percentageSurvey": 0.48,
+                        "entity": {
+                          "name": "`<input type=\"number\">`",
+                          "nameHtml": "<code>&lt;input type=\"number\"&gt;</code>",
+                          "nameClean": "<input type=\"number\">",
+                          "id": "input_type_number",
+                          "parentId": "forms_issues",
+                          "entityType": "feature"
+                        }
+                      },
+                      {
+                        "count": 29,
+                        "id": "cognitive_overload",
+                        "index": 21,
+                        "percentageQuestion": 4.37,
+                        "percentageSurvey": 0.47,
+                        "entity": {
+                          "name": "Cognitive overload",
+                          "nameHtml": "Cognitive overload",
+                          "nameClean": "Cognitive overload",
+                          "id": "cognitive_overload",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 14,
+                            "id": "too_much_work",
+                            "index": 0,
+                            "percentageQuestion": 2.11,
+                            "percentageSurvey": 0.22,
+                            "entity": {
+                              "name": "High effort",
+                              "nameHtml": "High effort",
+                              "nameClean": "High effort",
+                              "description": "Requires too much work. Includes APIs being too low-level, requiring a lot of manual developer effort to use.",
+                              "descriptionHtml": "Requires too much work. Includes APIs being too low-level, requiring a lot of manual developer effort to use.",
+                              "descriptionClean": "Requires too much work. Includes APIs being too low-level, requiring a lot of manual developer effort to use.",
+                              "id": "too_much_work",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 6,
+                            "id": "verbosity_boilerplate",
+                            "index": 1,
+                            "percentageQuestion": 0.9,
+                            "percentageSurvey": 0.1,
+                            "entity": {
+                              "name": "Excessive verbosity / Boilerplate",
+                              "nameHtml": "Excessive verbosity / Boilerplate",
+                              "nameClean": "Excessive verbosity / Boilerplate",
+                              "description": "APIs being overly verbose and/or requiring too much boilerplate.",
+                              "descriptionHtml": "APIs being overly verbose and/or requiring too much boilerplate.",
+                              "descriptionClean": "APIs being overly verbose and/or requiring too much boilerplate.",
+                              "id": "verbosity_boilerplate",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 27,
+                        "id": "file_input",
+                        "index": 22,
+                        "percentageQuestion": 4.07,
+                        "percentageSurvey": 0.43,
+                        "entity": {
+                          "name": "`<input type=\"file\">`",
+                          "nameHtml": "<code>&lt;input type=\"file\"&gt;</code>",
+                          "nameClean": "<input type=\"file\">",
+                          "description": "Pain points specific to `<input type=\"file\">`, especially around styling the button and displaying selected files.",
+                          "descriptionHtml": "Pain points specific to <code>&lt;input type=\"file\"&gt;</code>, especially around styling the button and displaying selected files.",
+                          "descriptionClean": "Pain points specific to <input type=\"file\">, especially around styling the button and displaying selected files.",
+                          "id": "input_type_file",
+                          "parentId": "forms_issues",
+                          "entityType": "feature"
+                        }
+                      },
+                      {
+                        "count": 25,
+                        "id": "slider",
+                        "index": 23,
+                        "percentageQuestion": 3.77,
+                        "percentageSurvey": 0.4,
+                        "nestedBuckets": [
+                          {
+                            "count": 16,
+                            "id": "multi_handle_slider",
+                            "index": 0,
+                            "percentageQuestion": 2.41,
+                            "percentageSurvey": 0.26,
+                            "entity": {
+                              "name": "Multi-Handle Slider",
+                              "nameHtml": "Multi-Handle Slider",
+                              "nameClean": "Multi-Handle Slider",
+                              "description": "The lack of a native range input that supports multiple thumbs or handles, for selecting a min/max range.",
+                              "descriptionHtml": "The lack of a native range input that supports multiple thumbs or handles, for selecting a min/max range.",
+                              "descriptionClean": "The lack of a native range input that supports multiple thumbs or handles, for selecting a min/max range.",
+                              "id": "multi_handle_slider",
+                              "parentId": "slider",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 25,
+                        "id": "web_components",
+                        "index": 24,
+                        "percentageQuestion": 3.77,
+                        "percentageSurvey": 0.4,
+                        "entity": {
+                          "name": "Web Components",
+                          "nameHtml": "Web Components",
+                          "nameClean": "Web Components",
+                          "id": "web_components",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components"
+                          }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 19,
+                            "id": "form_associated_ce",
+                            "index": 0,
+                            "percentageQuestion": 2.86,
+                            "percentageSurvey": 0.31,
+                            "entity": {
+                              "name": "Form-Associated Custom Elements",
+                              "nameHtml": "Form-Associated Custom Elements",
+                              "nameClean": "Form-Associated Custom Elements",
+                              "description": "Issues related to creating and using Form-Associated Custom Elements (FACE) and issues around form participation and semantics for web components.",
+                              "descriptionHtml": "Issues related to creating and using Form-Associated Custom Elements (FACE) and issues around form participation and semantics for web components.",
+                              "descriptionClean": "Issues related to creating and using Form-Associated Custom Elements (FACE) and issues around form participation and semantics for web components.",
+                              "id": "form_associated_ce",
+                              "parentId": "web_components",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 19,
+                            "id": "elementinternals",
+                            "index": 1,
+                            "percentageQuestion": 2.86,
+                            "percentageSurvey": 0.31,
+                            "entity": {
+                              "name": "ElementInternals",
+                              "nameHtml": "ElementInternals",
+                              "nameClean": "ElementInternals",
+                              "description": "Issues related to the ElementInternals APIs.",
+                              "descriptionHtml": "Issues related to the ElementInternals APIs.",
+                              "descriptionClean": "Issues related to the ElementInternals APIs.",
+                              "id": "elementinternals",
+                              "parentId": "web_components",
+                              "entityType": "feature"
+                            }
+                          },
+                          {
+                            "count": 8,
+                            "id": "shadow_dom",
+                            "index": 2,
+                            "percentageQuestion": 1.2,
+                            "percentageSurvey": 0.13,
+                            "entity": {
+                              "name": "Shadow DOM",
+                              "nameHtml": "Shadow DOM",
+                              "nameClean": "Shadow DOM",
+                              "description": "Encapsulate elements not visible from the outside, and style them with CSS not affecting the rest of the page.",
+                              "descriptionHtml": "Encapsulate elements not visible from the outside, and style them with CSS not affecting the rest of the page.",
+                              "descriptionClean": "Encapsulate elements not visible from the outside, and style them with CSS not affecting the rest of the page.",
+                              "id": "shadow_dom",
+                              "parentId": "web_components",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "js",
+                                "code": "this.shadowRoot = this.attachShadow({mode: \"open\"});",
+                                "codeHighlighted": "<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">shadowRoot</span> = <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">attachShadow</span>({<span class=\"hljs-attr\">mode</span>: <span class=\"hljs-string\">&quot;open&quot;</span>});"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM"
+                              },
+                              "webFeature": {
+                                "id": "shadow-dom",
+                                "description_html": "Shadow DOM allows you to attach encapsulated \"shadow\" DOM trees to elements. A shadow DOM tree is a separate component, isolated from the scripts and styles in other parts of the document. This is a part of Web Components.",
+                                "group": [
+                                  "dom",
+                                  "web-components"
+                                ],
+                                "name": "Shadow DOM",
+                                "spec": [
+                                  "https://dom.spec.whatwg.org/#shadow-trees"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/shadow-dom/",
+                                "status": {
+                                  "baseline": "high",
+                                  "baseline_low_date": "2020-01-15",
+                                  "support": {
+                                    "chrome": "53",
+                                    "chrome_android": "53",
+                                    "edge": "79",
+                                    "firefox": "63",
+                                    "firefox_android": "63",
+                                    "safari": "10",
+                                    "safari_ios": "10"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 406,
+                        "id": "other_answers",
+                        "index": 25,
+                        "percentageQuestion": 61.03,
+                        "percentageSurvey": 6.59
                       }
                     ]
                   }

@@ -1,45 +1,47 @@
 {
   "dataAPI": {
-    "highlight_intl_segmenter": {
-      "id": "intl_segmenter",
-      "name": "`Intl.Segmenter` API",
-      "nameHtml": "<code>Intl.Segmenter</code> API",
-      "nameClean": "Intl.Segmenter API",
-      "description": "Language-sensitive segmentation of text into graphemes, words or sentences.",
-      "descriptionHtml": "Language-sensitive segmentation of text into graphemes, words or sentences.",
-      "descriptionClean": "Language-sensitive segmentation of text into graphemes, words or sentences.",
-      "parentId": "intl_apis",
+    "highlight_hidden_until_found": {
+      "id": "hidden_until_found",
+      "name": "`hidden=\"until-found\"`",
+      "nameHtml": "<code>hidden=\"until-found\"</code>",
+      "nameClean": "hidden=\"until-found\"",
+      "description": "Hide an element until it is found (e.g. via a find-in-page search or when targeted by the URL hash).",
+      "descriptionHtml": "Hide an element until it is found (e.g. via a find-in-page search or when targeted by the URL hash).",
+      "descriptionClean": "Hide an element until it is found (e.g. via a find-in-page search or when targeted by the URL hash).",
       "entityType": "feature",
       "example": {
-        "language": "js",
-        "code": "const segmenterFr = new Intl.Segmenter(\"fr\", { granularity: \"word\" });\nconst string1 = \"Que ma joie demeure\";\n\nconst iterator1 = segmenterFr.segment(string1)[Symbol.iterator]();\n\nconsole.log(iterator1.next().value.segment);\n// Expected output: 'Que'\n\nconsole.log(iterator1.next().value.segment);\n// Expected output: ' '\n",
-        "codeHighlighted": "<span class=\"hljs-keyword\">const</span> segmenterFr = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Intl</span>.<span class=\"hljs-title class_\">Segmenter</span>(<span class=\"hljs-string\">&quot;fr&quot;</span>, { <span class=\"hljs-attr\">granularity</span>: <span class=\"hljs-string\">&quot;word&quot;</span> });\n<span class=\"hljs-keyword\">const</span> string1 = <span class=\"hljs-string\">&quot;Que ma joie demeure&quot;</span>;\n\n<span class=\"hljs-keyword\">const</span> iterator1 = segmenterFr.<span class=\"hljs-title function_\">segment</span>(string1)[<span class=\"hljs-title class_\">Symbol</span>.<span class=\"hljs-property\">iterator</span>]();\n\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(iterator1.<span class=\"hljs-title function_\">next</span>().<span class=\"hljs-property\">value</span>.<span class=\"hljs-property\">segment</span>);\n<span class=\"hljs-comment\">// Expected output: &#x27;Que&#x27;</span>\n\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(iterator1.<span class=\"hljs-title function_\">next</span>().<span class=\"hljs-property\">value</span>.<span class=\"hljs-property\">segment</span>);\n<span class=\"hljs-comment\">// Expected output: &#x27; &#x27;</span>"
+        "language": "html",
+        "code": "<section class=\"drawer\" aria-expanded=\"false\" hidden=\"until-found\">\n  <!-- content -->\n</section>\n",
+        "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">section</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">&quot;drawer&quot;</span> <span class=\"hljs-attr\">aria-expanded</span>=<span class=\"hljs-string\">&quot;false&quot;</span> <span class=\"hljs-attr\">hidden</span>=<span class=\"hljs-string\">&quot;until-found&quot;</span>&gt;</span>\n  <span class=\"hljs-comment\">&lt;!-- content --&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">section</span>&gt;</span>"
       },
       "mdn": {
-        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter"
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/hidden"
       },
+      "resources": [
+        {
+          "url": "https://developer.chrome.com/docs/css-ui/hidden-until-found",
+          "title": "Making collapsed content accessible with hidden=until-found"
+        }
+      ],
       "webFeature": {
-        "id": "intl-segmenter",
-        "description_html": "The <code>Intl.Segmenter</code> API creates a locale-aware text splitter that can separate a string into meaningful graphemes, words, or sentences.",
+        "id": "hidden-until-found",
+        "description_html": "The <code>hidden=\"until-found\"</code> attribute hides an element until it is found using the browser's find-in-page search or it is directly navigated to by following a URL fragment.",
         "group": [
-          "intl"
+          "html"
         ],
-        "name": "Intl.Segmenter",
+        "name": "hidden=\"until-found\"",
         "spec": [
-          "https://tc39.es/ecma402/#segmenter-objects"
+          "https://html.spec.whatwg.org/multipage/interaction.html#attr-hidden-until-found"
         ],
-        "url": "https://web-platform-dx.github.io/web-features-explorer/features/intl-segmenter/",
+        "url": "https://web-platform-dx.github.io/web-features-explorer/features/hidden-until-found/",
         "status": {
-          "baseline": "low",
-          "baseline_low_date": "2024-04-16",
+          "baseline": "false",
           "support": {
-            "chrome": "87",
-            "chrome_android": "87",
-            "edge": "87",
-            "firefox": "125",
-            "firefox_android": "125",
-            "safari": "14.1",
-            "safari_ios": "14.5"
+            "chrome": "102",
+            "chrome_android": "102",
+            "edge": "102",
+            "firefox": "139",
+            "firefox_android": "139"
           }
         }
       }

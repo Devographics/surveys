@@ -1,55 +1,58 @@
 {
   "dataAPI": {
-    "highlight_lazy_loading": {
-      "id": "lazy_loading",
-      "name": "`loading=\"lazy\"`",
-      "nameHtml": "<code>loading=\"lazy\"</code>",
-      "nameClean": "loading=\"lazy\"",
-      "description": "Load certain resources only when needed.",
-      "descriptionHtml": "Load certain resources only when needed.",
-      "descriptionClean": "Load certain resources only when needed.",
-      "parentId": "loading_issues",
+    "highlight_blocking_render": {
+      "id": "blocking_render",
+      "name": "`blocking=\"render\"`",
+      "nameHtml": "<code>blocking=\"render\"</code>",
+      "nameClean": "blocking=\"render\"",
+      "description": "Block rendering (but not parsing) until certain resources have been loaded. Available on `<link>`, `<script>` and `<style>`.",
+      "descriptionHtml": "Block rendering (but not parsing) until certain resources have been loaded. Available on <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code> and <code>&lt;style&gt;</code>.",
+      "descriptionClean": "Block rendering (but not parsing) until certain resources have been loaded. Available on <link>, <script> and <style>.",
       "entityType": "feature",
       "example": {
         "language": "html",
-        "code": "<img src=\"picture.jpg\" loading=\"lazy\" />\n<iframe src=\"supplementary.html\" loading=\"lazy\"></iframe>",
-        "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">img</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;picture.jpg&quot;</span> <span class=\"hljs-attr\">loading</span>=<span class=\"hljs-string\">&quot;lazy&quot;</span> /&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">iframe</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;supplementary.html&quot;</span> <span class=\"hljs-attr\">loading</span>=<span class=\"hljs-string\">&quot;lazy&quot;</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">iframe</span>&gt;</span>"
+        "code": "<script blocking=\"render\" async src=\"async-script.js\"></script>",
+        "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span> <span class=\"hljs-attr\">blocking</span>=<span class=\"hljs-string\">&quot;render&quot;</span> <span class=\"hljs-attr\">async</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;async-script.js&quot;</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>"
       },
       "mdn": {
-        "url": "https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Lazy_loading"
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script"
       },
       "caniuse": {
-        "url": "https://caniuse.com/loading-lazy-attr"
+        "url": "https://caniuse.com/mdn-html_elements_link_blocking"
       },
       "resources": [
         {
-          "url": "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#lazy-loading-attributes",
+          "url": "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#blocking-attributes",
           "title": "HTML Standard"
         },
         {
-          "url": "https://web.dev/browser-level-image-lazy-loading/",
-          "title": "Browser-level image lazy loading for the web"
+          "url": "https://gist.github.com/xiaochengh/9404abbecdc3b45c0e9f3d5e99fbc65d",
+          "title": "proposal-v3.md · GitHub"
+        },
+        {
+          "url": "https://github.com/w3ctag/design-reviews/issues/727",
+          "title": "Review request on `blocking=render` attribute for scripts and stylesheets · Issue #727 · w3ctag/design-reviews · GitHub"
         }
       ],
       "webFeature": {
-        "id": "loading-lazy",
-        "description_html": "The <code>loading=\"lazy\"</code> attribute for <code>&#x3C;img></code> and <code>&#x3C;iframe></code> elements blocks loading the external resource until the user scrolls to that element's part of the page.",
-        "name": "Lazy-loading images and iframes",
-        "spec": [
-          "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#lazy-loading-attributes"
+        "id": "blocking-render",
+        "description_html": "The <code>blocking=\"render\"</code> attribute for <code>&#x3C;link></code>, <code>&#x3C;script></code>, and <code>&#x3C;style></code> elements blocks rendering until the external script or stylesheet has been loaded. For <code>&#x3C;link rel=\"expect\"></code>, rendering is blocked until a specific element is in the DOM.",
+        "group": [
+          "html"
         ],
-        "url": "https://web-platform-dx.github.io/web-features-explorer/features/loading-lazy/",
+        "name": "blocking=\"render\"",
+        "spec": [
+          "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#blocking-attributes"
+        ],
+        "url": "https://web-platform-dx.github.io/web-features-explorer/features/blocking-render/",
         "status": {
-          "baseline": "low",
-          "baseline_low_date": "2023-12-19",
+          "baseline": "false",
           "support": {
-            "chrome": "77",
-            "chrome_android": "77",
-            "edge": "79",
-            "firefox": "121",
-            "firefox_android": "121",
-            "safari": "16.4",
-            "safari_ios": "16.4"
+            "chrome": "105",
+            "chrome_android": "105",
+            "edge": "105",
+            "safari": "18.2",
+            "safari_ios": "18.2"
           }
         }
       }
