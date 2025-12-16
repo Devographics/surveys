@@ -1,46 +1,54 @@
 {
   "dataAPI": {
-    "highlight_shadow_dom": {
-      "id": "shadow_dom",
-      "name": "Shadow DOM",
-      "nameHtml": "Shadow DOM",
-      "nameClean": "Shadow DOM",
-      "description": "Encapsulate elements not visible from the outside, and style them with CSS not affecting the rest of the page.",
-      "descriptionHtml": "Encapsulate elements not visible from the outside, and style them with CSS not affecting the rest of the page.",
-      "descriptionClean": "Encapsulate elements not visible from the outside, and style them with CSS not affecting the rest of the page.",
-      "parentId": "web_components",
+    "highlight_element_internals": {
+      "id": "element_internals",
+      "name": "`ElementInternals`",
+      "nameHtml": "<code>ElementInternals</code>",
+      "nameClean": "ElementInternals",
+      "description": "Assign hidden semantics to custom elements, facilitating accessibility and allowing them to participate fully in forms.",
+      "descriptionHtml": "Assign hidden semantics to custom elements, facilitating accessibility and allowing them to participate fully in forms.",
+      "descriptionClean": "Assign hidden semantics to custom elements, facilitating accessibility and allowing them to participate fully in forms.",
       "entityType": "feature",
       "example": {
         "language": "js",
-        "code": "this.shadowRoot = this.attachShadow({mode: \"open\"});",
-        "codeHighlighted": "<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">shadowRoot</span> = <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">attachShadow</span>({<span class=\"hljs-attr\">mode</span>: <span class=\"hljs-string\">&quot;open&quot;</span>});"
+        "code": "this._internals = this.attachInternals();\nthis._internals.role = \"progressbar\";",
+        "codeHighlighted": "<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">_internals</span> = <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">attachInternals</span>();\n<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">_internals</span>.<span class=\"hljs-property\">role</span> = <span class=\"hljs-string\">&quot;progressbar&quot;</span>;"
       },
       "mdn": {
-        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM"
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals"
       },
+      "caniuse": {
+        "url": "https://caniuse.com/mdn-api_elementinternals"
+      },
+      "resources": [
+        {
+          "url": "https://html.spec.whatwg.org/multipage/custom-elements.html#the-elementinternals-interface",
+          "title": "HTML Standard"
+        }
+      ],
       "webFeature": {
-        "id": "shadow-dom",
-        "description_html": "Shadow DOM allows you to attach encapsulated \"shadow\" DOM trees to elements. A shadow DOM tree is a separate component, isolated from the scripts and styles in other parts of the document. This is a part of Web Components.",
+        "id": "form-associated-custom-elements",
+        "description_html": "Custom elements may act like built-in form elements, via the the <code>attachInternals()</code> method of <code>HTMLElement</code> and the <code>ElementInternals</code> API.",
         "group": [
-          "dom",
-          "web-components"
+          "custom-elements",
+          "forms"
         ],
-        "name": "Shadow DOM",
+        "name": "Form-associated custom elements",
         "spec": [
-          "https://dom.spec.whatwg.org/#shadow-trees"
+          "https://html.spec.whatwg.org/multipage/custom-elements.html#form-associated-custom-elements"
         ],
-        "url": "https://web-platform-dx.github.io/web-features-explorer/features/shadow-dom/",
+        "url": "https://web-platform-dx.github.io/web-features-explorer/features/form-associated-custom-elements/",
         "status": {
           "baseline": "high",
-          "baseline_low_date": "2020-01-15",
+          "baseline_low_date": "2023-03-27",
           "support": {
-            "chrome": "53",
-            "chrome_android": "53",
+            "chrome": "77",
+            "chrome_android": "77",
             "edge": "79",
-            "firefox": "63",
-            "firefox_android": "63",
-            "safari": "10",
-            "safari_ios": "10"
+            "firefox": "98",
+            "firefox_android": "98",
+            "safari": "16.4",
+            "safari_ios": "16.4"
           }
         }
       }
