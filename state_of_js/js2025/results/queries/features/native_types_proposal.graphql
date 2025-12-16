@@ -15,6 +15,10 @@ query {
                 showNoAnswer: true
                 mergeOtherBuckets: true
                 cutoff: 10
+                sort: {
+                  order: desc
+                  property: count
+                }
               }
             ) {
               allEditions(editionCount: 2) {
