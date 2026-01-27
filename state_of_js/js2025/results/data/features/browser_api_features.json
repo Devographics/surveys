@@ -97,6 +97,7 @@
                           "nameHtml": "Geolocation API",
                           "nameClean": "Geolocation API",
                           "id": "geolocation",
+                          "parentId": "apis_capabilities",
                           "entityType": "feature",
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API"
@@ -184,6 +185,7 @@
                           "descriptionHtml": "A low-level API for rendering 2D and 3D graphics with the GPU on <code>&lt;canvas&gt;</code> , based on OpenGL.",
                           "descriptionClean": "A low-level API for rendering 2D and 3D graphics with the GPU on <canvas> , based on OpenGL.",
                           "id": "webgl",
+                          "parentId": "graphics_issues",
                           "entityType": "feature",
                           "example": {
                             "language": "js",
@@ -315,6 +317,7 @@
                           "nameHtml": "WebRTC",
                           "nameClean": "WebRTC",
                           "id": "webrtc",
+                          "parentId": "apis_capabilities",
                           "entityType": "feature",
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API"
@@ -364,6 +367,9 @@
                           "webFeature": {
                             "id": "webauthn",
                             "description_html": "The web authentication API allows you to create public key-based credentials and use them for authentication, such as when signing in. Also known as WebAuthn.",
+                            "group": [
+                              "webauthn"
+                            ],
                             "name": "Web authentication",
                             "spec": [
                               "https://w3c.github.io/webauthn/"
@@ -399,6 +405,7 @@
                           "descriptionHtml": "Provides standard objects and functions for working with dates and times.",
                           "descriptionClean": "Provides standard objects and functions for working with dates and times.",
                           "id": "temporal",
+                          "parentId": "date_and_time",
                           "entityType": "feature",
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"
@@ -497,6 +504,7 @@
                           "nameHtml": "Gamepad API",
                           "nameClean": "Gamepad API",
                           "id": "gamepad_api",
+                          "parentId": "apis_capabilities",
                           "entityType": "feature",
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API"
@@ -581,17 +589,7 @@
                         "id": "na",
                         "index": 14,
                         "percentageQuestion": 13.48,
-                        "percentageSurvey": 12.37,
-                        "entity": {
-                          "name": "Not applicable",
-                          "nameHtml": "Not applicable",
-                          "nameClean": "Not applicable",
-                          "description": "No use cases, no pain, no issues.",
-                          "descriptionHtml": "No use cases, no pain, no issues.",
-                          "descriptionClean": "No use cases, no pain, no issues.",
-                          "id": "na",
-                          "entityType": "default"
-                        }
+                        "percentageSurvey": 12.37
                       },
                       {
                         "count": 1155,
@@ -693,6 +691,7 @@
                           "nameHtml": "Geolocation API",
                           "nameClean": "Geolocation API",
                           "id": "geolocation",
+                          "parentId": "apis_capabilities",
                           "entityType": "feature",
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API"
@@ -822,6 +821,7 @@
                           "descriptionHtml": "A low-level API for rendering 2D and 3D graphics with the GPU on <code>&lt;canvas&gt;</code> , based on OpenGL.",
                           "descriptionClean": "A low-level API for rendering 2D and 3D graphics with the GPU on <canvas> , based on OpenGL.",
                           "id": "webgl",
+                          "parentId": "graphics_issues",
                           "entityType": "feature",
                           "example": {
                             "language": "js",
@@ -911,6 +911,7 @@
                           "nameHtml": "WebRTC",
                           "nameClean": "WebRTC",
                           "id": "webrtc",
+                          "parentId": "apis_capabilities",
                           "entityType": "feature",
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API"
@@ -977,11 +978,16 @@
                             ],
                             "url": "https://web-platform-dx.github.io/web-features-explorer/features/urlpattern/",
                             "status": {
-                              "baseline": "false",
+                              "baseline": "low",
+                              "baseline_low_date": "2025-09-15",
                               "support": {
                                 "chrome": "95",
                                 "chrome_android": "95",
-                                "edge": "95"
+                                "edge": "95",
+                                "firefox": "142",
+                                "firefox_android": "142",
+                                "safari": "26",
+                                "safari_ios": "26"
                               }
                             }
                           }
@@ -1067,6 +1073,9 @@
                           "webFeature": {
                             "id": "webauthn",
                             "description_html": "The web authentication API allows you to create public key-based credentials and use them for authentication, such as when signing in. Also known as WebAuthn.",
+                            "group": [
+                              "webauthn"
+                            ],
                             "name": "Web authentication",
                             "spec": [
                               "https://w3c.github.io/webauthn/"
@@ -1102,6 +1111,7 @@
                           "descriptionHtml": "Provides standard objects and functions for working with dates and times.",
                           "descriptionClean": "Provides standard objects and functions for working with dates and times.",
                           "id": "temporal",
+                          "parentId": "date_and_time",
                           "entityType": "feature",
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"
@@ -1138,6 +1148,7 @@
                           "nameHtml": "Gamepad API",
                           "nameClean": "Gamepad API",
                           "id": "gamepad_api",
+                          "parentId": "apis_capabilities",
                           "entityType": "feature",
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API"
@@ -1205,7 +1216,9 @@
                               "support": {
                                 "chrome": "129",
                                 "chrome_android": "129",
-                                "edge": "129"
+                                "edge": "129",
+                                "firefox": "142",
+                                "firefox_android": "142"
                               }
                             }
                           }
@@ -1264,17 +1277,7 @@
                         "id": "na",
                         "index": 16,
                         "percentageQuestion": 11.47,
-                        "percentageSurvey": 10.51,
-                        "entity": {
-                          "name": "Not applicable",
-                          "nameHtml": "Not applicable",
-                          "nameClean": "Not applicable",
-                          "description": "No use cases, no pain, no issues.",
-                          "descriptionHtml": "No use cases, no pain, no issues.",
-                          "descriptionClean": "No use cases, no pain, no issues.",
-                          "id": "na",
-                          "entityType": "default"
-                        }
+                        "percentageSurvey": 10.51
                       },
                       {
                         "count": 1084,
