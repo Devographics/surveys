@@ -1,0 +1,58 @@
+query {
+  surveys {
+    state_of_react {
+      react2025 {
+        back_end_infrastructure {
+          back_end_infrastructure_cardinalities: _cardinalities {
+            id
+            responses(
+              parameters: {
+                cutoff: 1
+                sort: {
+                  order: asc
+                  property: id
+                }
+              }
+            ) {
+              allEditions(editionCount: 1) {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                  limit
+                  cutoff
+                }
+                editionId
+                year
+                completion {
+                  count
+                  percentageSurvey
+                  total
+                }
+                average
+                percentiles {
+                  p50
+                }
+                buckets {
+                  count
+                  id
+                  value
+                  index
+                  percentageQuestion
+                  percentageSurvey
+                  isFreeformData
+                  hasInsufficientData
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
