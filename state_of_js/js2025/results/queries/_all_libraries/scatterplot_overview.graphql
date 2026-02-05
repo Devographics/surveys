@@ -2,8 +2,8 @@ query {
   surveys {
     state_of_js {
       js2025 {
-        build_tools {
-          build_tools_ratios: _items {
+        _all_libraries {
+          scatterplot_overview: _items {
             id
             entity {
               name
@@ -34,10 +34,13 @@ query {
                 codeHighlighted
               }
             }
+            comments {
+              currentEdition {
+                count
+              }
+            }
             responses(facet: _sentiment) {
-              allEditions {
-                year
-                editionId
+              currentEdition {
                 ratios {
                   awareness
                   interest
@@ -47,14 +50,23 @@ query {
                   positivityRelative
                   appreciation
                 }
+                buckets {
+                  count
+                  id
+                  facetBuckets {
+                    count
+                    id
+                    percentageBucket
+                    percentageQuestion
+                    percentageSurvey
+                  }
+                  percentageQuestion
+                  percentageSurvey
+                }
                 completion {
                   count
                   percentageSurvey
                   total
-                }
-                buckets {
-                  id
-                  count
                 }
               }
             }
