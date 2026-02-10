@@ -14,8 +14,8 @@
                         "property": "count",
                         "order": "desc"
                       },
-                      "limit": 10,
-                      "cutoff": 10
+                      "limit": 20,
+                      "cutoff": 5
                     },
                     "editionId": "react2024",
                     "year": 2024,
@@ -114,6 +114,9 @@
                         "percentageQuestion": 9.81,
                         "percentageSurvey": 1.35,
                         "entity": {
+                          "name": "Context API",
+                          "nameHtml": "Context API",
+                          "nameClean": "Context API",
                           "id": "context_api",
                           "entityType": "default"
                         }
@@ -227,18 +230,225 @@
                         }
                       },
                       {
+                        "count": 32,
+                        "id": "state_management",
+                        "index": 10,
+                        "percentageQuestion": 2.96,
+                        "percentageSurvey": 0.41,
+                        "entity": {
+                          "name": "State management",
+                          "nameHtml": "State management",
+                          "nameClean": "State management",
+                          "id": "state_management",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 30,
+                        "id": "too_much_boilerplate",
+                        "index": 11,
+                        "percentageQuestion": 2.78,
+                        "percentageSurvey": 0.38,
+                        "entity": {
+                          "name": "Excessive boilerplate",
+                          "nameHtml": "Excessive boilerplate",
+                          "nameClean": "Excessive boilerplate",
+                          "description": "Too much boilerplate required",
+                          "descriptionHtml": "Too much boilerplate required",
+                          "descriptionClean": "Too much boilerplate required",
+                          "id": "too_much_boilerplate",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 24,
+                        "id": "lack_of_documentation",
+                        "index": 12,
+                        "percentageQuestion": 2.22,
+                        "percentageSurvey": 0.3,
+                        "entity": {
+                          "name": "Lack of documentation",
+                          "nameHtml": "Lack of documentation",
+                          "nameClean": "Lack of documentation",
+                          "description": "Issues due to missing, incomplete, unclear, or outdated documentation or code examples.",
+                          "descriptionHtml": "Issues due to missing, incomplete, unclear, or outdated documentation or code examples.",
+                          "descriptionClean": "Issues due to missing, incomplete, unclear, or outdated documentation or code examples.",
+                          "id": "lack_of_documentation",
+                          "parentId": "educational_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 22,
+                        "id": "createcontext",
+                        "index": 13,
+                        "percentageQuestion": 2.04,
+                        "percentageSurvey": 0.28,
+                        "entity": {
+                          "name": "`createContext`",
+                          "nameHtml": "<code>createContext</code>",
+                          "nameClean": "createContext",
+                          "id": "createcontext",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "jsx",
+                            "code": "const SomeContext = createContext(defaultValue)\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> <span class=\"hljs-title class_\">SomeContext</span> = <span class=\"hljs-title function_\">createContext</span>(defaultValue)"
+                          },
+                          "homepage": {
+                            "url": "https://react.dev/reference/react/createContext"
+                          }
+                        }
+                      },
+                      {
+                        "count": 22,
+                        "id": "profiler",
+                        "index": 14,
+                        "percentageQuestion": 2.04,
+                        "percentageSurvey": 0.28,
+                        "entity": {
+                          "name": "`<Profiler>`",
+                          "nameHtml": "<code>&lt;Profiler&gt;</code>",
+                          "nameClean": "<Profiler>",
+                          "description": "`<Profiler>` lets you measure rendering performance of a React tree programmatically.",
+                          "descriptionHtml": "<code>&lt;Profiler&gt;</code> lets you measure rendering performance of a React tree programmatically.",
+                          "descriptionClean": "<Profiler> lets you measure rendering performance of a React tree programmatically.",
+                          "id": "profiler",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "jsx",
+                            "code": "<Profiler id=\"App\" onRender={onRender}>\n  <App />\n</Profiler>\n",
+                            "codeHighlighted": "&lt;<span class=\"hljs-title class_\">Profiler</span> id=<span class=\"hljs-string\">&quot;App&quot;</span> onRender={onRender}&gt;\n  &lt;App /&gt;\n&lt;/<span class=\"hljs-title class_\">Profiler</span>&gt;"
+                          },
+                          "homepage": {
+                            "url": "https://react.dev/reference/react/Profiler"
+                          }
+                        }
+                      },
+                      {
+                        "count": 18,
+                        "id": "fragment",
+                        "index": 15,
+                        "percentageQuestion": 1.67,
+                        "percentageSurvey": 0.23,
+                        "entity": {
+                          "name": "`<Fragment>`",
+                          "nameHtml": "<code>&lt;Fragment&gt;</code>",
+                          "nameClean": "<Fragment>",
+                          "description": "`<Fragment>`, often used via `<>...</>` syntax, lets you group elements without a wrapper node.",
+                          "descriptionHtml": "<code>&lt;Fragment&gt;</code>, often used via <code>&lt;&gt;...&lt;/&gt;</code> syntax, lets you group elements without a wrapper node.",
+                          "descriptionClean": "<Fragment>, often used via <>...</> syntax, lets you group elements without a wrapper node.",
+                          "id": "fragment",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "jsx",
+                            "code": "<>\n  <OneChild />\n  <AnotherChild />\n</>\n",
+                            "codeHighlighted": "&lt;&gt;\n  &lt;OneChild /&gt;\n  &lt;AnotherChild /&gt;\n&lt;/&gt;"
+                          },
+                          "homepage": {
+                            "url": "https://react.dev/reference/react/Fragment"
+                          }
+                        }
+                      },
+                      {
+                        "count": 16,
+                        "id": "usememo",
+                        "index": 16,
+                        "percentageQuestion": 1.48,
+                        "percentageSurvey": 0.2,
+                        "entity": {
+                          "name": "`useMemo`",
+                          "nameHtml": "<code>useMemo</code>",
+                          "nameClean": "useMemo",
+                          "description": "`useMemo` is a React Hook that lets you cache the result of a calculation between re-renders.",
+                          "descriptionHtml": "<code>useMemo</code> is a React Hook that lets you cache the result of a calculation between re-renders.",
+                          "descriptionClean": "useMemo is a React Hook that lets you cache the result of a calculation between re-renders.",
+                          "id": "usememo",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "jsx",
+                            "code": "const cachedValue = useMemo(calculateValue, dependencies)\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> cachedValue = <span class=\"hljs-title function_\">useMemo</span>(calculateValue, dependencies)"
+                          },
+                          "homepage": {
+                            "url": "https://react.dev/reference/react/useMemo"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://www.joshwcomeau.com/react/usememo-and-usecallback/",
+                              "title": "Understanding useMemo and useCallback"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "count": 15,
+                        "id": "useeffect",
+                        "index": 17,
+                        "percentageQuestion": 1.39,
+                        "percentageSurvey": 0.19,
+                        "entity": {
+                          "name": "`useEffect`",
+                          "nameHtml": "<code>useEffect</code>",
+                          "nameClean": "useEffect",
+                          "description": "`useEffect` is a React Hook that lets you synchronize a component with an external system.",
+                          "descriptionHtml": "<code>useEffect</code> is a React Hook that lets you synchronize a component with an external system.",
+                          "descriptionClean": "useEffect is a React Hook that lets you synchronize a component with an external system.",
+                          "id": "useeffect",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "jsx",
+                            "code": "useEffect(setup, dependencies?)\n",
+                            "codeHighlighted": "<span class=\"hljs-title function_\">useEffect</span>(setup, dependencies?)"
+                          },
+                          "homepage": {
+                            "url": "https://react.dev/reference/react/useEffect"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://blog.logrocket.com/useeffect-react-hook-complete-guide/",
+                              "title": "A complete guide to the useEffect React Hook"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "count": 14,
+                        "id": "debugging",
+                        "index": 18,
+                        "percentageQuestion": 1.3,
+                        "percentageSurvey": 0.18,
+                        "entity": {
+                          "name": "Debugging",
+                          "nameHtml": "Debugging",
+                          "nameClean": "Debugging",
+                          "description": "Debugging issues",
+                          "descriptionHtml": "Debugging issues",
+                          "descriptionClean": "Debugging issues",
+                          "id": "debugging",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 14,
+                        "id": "double_rendering",
+                        "index": 19,
+                        "percentageQuestion": 1.3,
+                        "percentageSurvey": 0.18
+                      },
+                      {
                         "count": 6788,
                         "id": "no_answer",
-                        "index": 10,
+                        "index": 20,
                         "percentageQuestion": 0,
                         "percentageSurvey": 86.26
                       },
                       {
-                        "count": 647,
+                        "count": 440,
                         "id": "other_answers",
-                        "index": 11,
-                        "percentageQuestion": 59.93,
-                        "percentageSurvey": 8.26
+                        "index": 21,
+                        "percentageQuestion": 40.75,
+                        "percentageSurvey": 5.63
                       }
                     ]
                   },
@@ -248,23 +458,23 @@
                         "property": "count",
                         "order": "desc"
                       },
-                      "limit": 10,
-                      "cutoff": 10
+                      "limit": 20,
+                      "cutoff": 5
                     },
                     "editionId": "react2025",
                     "year": 2025,
                     "completion": {
-                      "count": 467,
-                      "percentageSurvey": 12.42,
+                      "count": 465,
+                      "percentageSurvey": 12.37,
                       "total": 3760
                     },
                     "buckets": [
                       {
-                        "count": 121,
+                        "count": 125,
                         "id": "forwardref",
                         "index": 0,
-                        "percentageQuestion": 25.91,
-                        "percentageSurvey": 3.22,
+                        "percentageQuestion": 26.88,
+                        "percentageSurvey": 3.32,
                         "entity": {
                           "name": "`forwardRef`",
                           "nameHtml": "<code>forwardRef</code>",
@@ -285,7 +495,7 @@
                         "count": 92,
                         "id": "react_act",
                         "index": 1,
-                        "percentageQuestion": 19.7,
+                        "percentageQuestion": 19.78,
                         "percentageSurvey": 2.45,
                         "entity": {
                           "name": "`act`",
@@ -307,45 +517,24 @@
                         }
                       },
                       {
-                        "count": 79,
-                        "id": "memo",
+                        "count": 77,
+                        "id": "memoization_issues",
                         "index": 2,
-                        "percentageQuestion": 16.92,
-                        "percentageSurvey": 2.1,
+                        "percentageQuestion": 16.56,
+                        "percentageSurvey": 2.05,
                         "entity": {
-                          "name": "`memo`",
-                          "nameHtml": "<code>memo</code>",
-                          "nameClean": "memo",
-                          "description": "`memo` lets you skip re-rendering a component when its props are unchanged.",
-                          "descriptionHtml": "<code>memo</code> lets you skip re-rendering a component when its props are unchanged.",
-                          "descriptionClean": "memo lets you skip re-rendering a component when its props are unchanged.",
-                          "id": "memo",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "jsx",
-                            "code": "const MemoizedComponent = memo(SomeComponent, arePropsEqual?)\n",
-                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> <span class=\"hljs-title class_\">MemoizedComponent</span> = <span class=\"hljs-title function_\">memo</span>(<span class=\"hljs-title class_\">SomeComponent</span>, arePropsEqual?)"
-                          },
-                          "homepage": {
-                            "url": "https://react.dev/reference/react/memo"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/",
-                              "title": "A (Mostly) Complete Guide to React Rendering Behavior"
-                            },
-                            {
-                              "url": "https://overreacted.io/before-you-memo/",
-                              "title": "Before You memo()"
-                            }
-                          ]
+                          "name": "Memoization issues",
+                          "nameHtml": "Memoization issues",
+                          "nameClean": "Memoization issues",
+                          "id": "memoization_issues",
+                          "entityType": "default"
                         }
                       },
                       {
                         "count": 64,
                         "id": "excessive_complexity",
                         "index": 3,
-                        "percentageQuestion": 13.7,
+                        "percentageQuestion": 13.76,
                         "percentageSurvey": 1.7,
                         "entity": {
                           "name": "Excessive complexity",
@@ -363,9 +552,12 @@
                         "count": 59,
                         "id": "context_api",
                         "index": 4,
-                        "percentageQuestion": 12.63,
+                        "percentageQuestion": 12.69,
                         "percentageSurvey": 1.57,
                         "entity": {
+                          "name": "Context API",
+                          "nameHtml": "Context API",
+                          "nameClean": "Context API",
                           "id": "context_api",
                           "entityType": "default"
                         }
@@ -374,7 +566,7 @@
                         "count": 57,
                         "id": "strictmode",
                         "index": 5,
-                        "percentageQuestion": 12.21,
+                        "percentageQuestion": 12.26,
                         "percentageSurvey": 1.52,
                         "entity": {
                           "name": "`<StrictMode>`",
@@ -393,10 +585,28 @@
                         }
                       },
                       {
+                        "count": 51,
+                        "id": "react_issues",
+                        "index": 6,
+                        "percentageQuestion": 10.97,
+                        "percentageSurvey": 1.36,
+                        "entity": {
+                          "name": "React issues",
+                          "nameHtml": "React issues",
+                          "nameClean": "React issues",
+                          "description": "Issues around compatibility with React.",
+                          "descriptionHtml": "Issues around compatibility with React.",
+                          "descriptionClean": "Issues around compatibility with React.",
+                          "id": "react_issues",
+                          "parentId": "framework_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
                         "count": 25,
                         "id": "lazy",
-                        "index": 6,
-                        "percentageQuestion": 5.35,
+                        "index": 7,
+                        "percentageQuestion": 5.38,
                         "percentageSurvey": 0.66,
                         "entity": {
                           "name": "`lazy`",
@@ -417,8 +627,8 @@
                       {
                         "count": 24,
                         "id": "testing",
-                        "index": 7,
-                        "percentageQuestion": 5.14,
+                        "index": 8,
+                        "percentageQuestion": 5.16,
                         "percentageSurvey": 0.64,
                         "entity": {
                           "name": "Testing",
@@ -432,8 +642,8 @@
                       {
                         "count": 21,
                         "id": "too_much_boilerplate",
-                        "index": 8,
-                        "percentageQuestion": 4.5,
+                        "index": 9,
+                        "percentageQuestion": 4.52,
                         "percentageSurvey": 0.56,
                         "entity": {
                           "name": "Excessive boilerplate",
@@ -447,10 +657,32 @@
                         }
                       },
                       {
+                        "count": 20,
+                        "id": "createPortal",
+                        "index": 10,
+                        "percentageQuestion": 4.3,
+                        "percentageSurvey": 0.53,
+                        "entity": {
+                          "name": "`createPortal`",
+                          "nameHtml": "<code>createPortal</code>",
+                          "nameClean": "createPortal",
+                          "id": "createPortal",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "jsx",
+                            "code": "<div>\n  <SomeComponent />\n  {createPortal(children, domNode, key?)}\n</div>\n",
+                            "codeHighlighted": "&lt;div&gt;\n  &lt;SomeComponent /&gt;\n  {<span class=\"hljs-title function_\">createPortal</span>(children, domNode, key?)}\n&lt;/div&gt;"
+                          },
+                          "homepage": {
+                            "url": "https://react.dev/reference/react-dom/createPortal"
+                          }
+                        }
+                      },
+                      {
                         "count": 18,
                         "id": "performance",
-                        "index": 9,
-                        "percentageQuestion": 3.85,
+                        "index": 11,
+                        "percentageQuestion": 3.87,
                         "percentageSurvey": 0.48,
                         "entity": {
                           "name": "Performance",
@@ -464,18 +696,183 @@
                         }
                       },
                       {
-                        "count": 3286,
-                        "id": "no_answer",
-                        "index": 10,
-                        "percentageQuestion": 0,
-                        "percentageSurvey": 87.39
+                        "count": 15,
+                        "id": "build_tools_issues",
+                        "index": 12,
+                        "percentageQuestion": 3.23,
+                        "percentageSurvey": 0.4,
+                        "entity": {
+                          "name": "Build tools issues",
+                          "nameHtml": "Build tools issues",
+                          "nameClean": "Build tools issues",
+                          "id": "build_tools_issues",
+                          "entityType": "default"
+                        }
                       },
                       {
-                        "count": 297,
+                        "count": 15,
+                        "id": "error_handling",
+                        "index": 13,
+                        "percentageQuestion": 3.23,
+                        "percentageSurvey": 0.4,
+                        "entity": {
+                          "name": "Error handling",
+                          "nameHtml": "Error handling",
+                          "nameClean": "Error handling",
+                          "id": "error_handling",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 15,
+                        "id": "fragment",
+                        "index": 14,
+                        "percentageQuestion": 3.23,
+                        "percentageSurvey": 0.4,
+                        "entity": {
+                          "name": "`<Fragment>`",
+                          "nameHtml": "<code>&lt;Fragment&gt;</code>",
+                          "nameClean": "<Fragment>",
+                          "description": "`<Fragment>`, often used via `<>...</>` syntax, lets you group elements without a wrapper node.",
+                          "descriptionHtml": "<code>&lt;Fragment&gt;</code>, often used via <code>&lt;&gt;...&lt;/&gt;</code> syntax, lets you group elements without a wrapper node.",
+                          "descriptionClean": "<Fragment>, often used via <>...</> syntax, lets you group elements without a wrapper node.",
+                          "id": "fragment",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "jsx",
+                            "code": "<>\n  <OneChild />\n  <AnotherChild />\n</>\n",
+                            "codeHighlighted": "&lt;&gt;\n  &lt;OneChild /&gt;\n  &lt;AnotherChild /&gt;\n&lt;/&gt;"
+                          },
+                          "homepage": {
+                            "url": "https://react.dev/reference/react/Fragment"
+                          }
+                        }
+                      },
+                      {
+                        "count": 14,
+                        "id": "state_management",
+                        "index": 15,
+                        "percentageQuestion": 3.01,
+                        "percentageSurvey": 0.37,
+                        "entity": {
+                          "name": "State management",
+                          "nameHtml": "State management",
+                          "nameClean": "State management",
+                          "id": "state_management",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 13,
+                        "id": "createcontext",
+                        "index": 16,
+                        "percentageQuestion": 2.8,
+                        "percentageSurvey": 0.35,
+                        "entity": {
+                          "name": "`createContext`",
+                          "nameHtml": "<code>createContext</code>",
+                          "nameClean": "createContext",
+                          "id": "createcontext",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "jsx",
+                            "code": "const SomeContext = createContext(defaultValue)\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> <span class=\"hljs-title class_\">SomeContext</span> = <span class=\"hljs-title function_\">createContext</span>(defaultValue)"
+                          },
+                          "homepage": {
+                            "url": "https://react.dev/reference/react/createContext"
+                          }
+                        }
+                      },
+                      {
+                        "count": 12,
+                        "id": "useeffect",
+                        "index": 17,
+                        "percentageQuestion": 2.58,
+                        "percentageSurvey": 0.32,
+                        "entity": {
+                          "name": "`useEffect`",
+                          "nameHtml": "<code>useEffect</code>",
+                          "nameClean": "useEffect",
+                          "description": "`useEffect` is a React Hook that lets you synchronize a component with an external system.",
+                          "descriptionHtml": "<code>useEffect</code> is a React Hook that lets you synchronize a component with an external system.",
+                          "descriptionClean": "useEffect is a React Hook that lets you synchronize a component with an external system.",
+                          "id": "useeffect",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "jsx",
+                            "code": "useEffect(setup, dependencies?)\n",
+                            "codeHighlighted": "<span class=\"hljs-title function_\">useEffect</span>(setup, dependencies?)"
+                          },
+                          "homepage": {
+                            "url": "https://react.dev/reference/react/useEffect"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://blog.logrocket.com/useeffect-react-hook-complete-guide/",
+                              "title": "A complete guide to the useEffect React Hook"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "count": 12,
+                        "id": "usememo",
+                        "index": 18,
+                        "percentageQuestion": 2.58,
+                        "percentageSurvey": 0.32,
+                        "entity": {
+                          "name": "`useMemo`",
+                          "nameHtml": "<code>useMemo</code>",
+                          "nameClean": "useMemo",
+                          "description": "`useMemo` is a React Hook that lets you cache the result of a calculation between re-renders.",
+                          "descriptionHtml": "<code>useMemo</code> is a React Hook that lets you cache the result of a calculation between re-renders.",
+                          "descriptionClean": "useMemo is a React Hook that lets you cache the result of a calculation between re-renders.",
+                          "id": "usememo",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "jsx",
+                            "code": "const cachedValue = useMemo(calculateValue, dependencies)\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> cachedValue = <span class=\"hljs-title function_\">useMemo</span>(calculateValue, dependencies)"
+                          },
+                          "homepage": {
+                            "url": "https://react.dev/reference/react/useMemo"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://www.joshwcomeau.com/react/usememo-and-usecallback/",
+                              "title": "Understanding useMemo and useCallback"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "count": 11,
+                        "id": "excessive_rerendering",
+                        "index": 19,
+                        "percentageQuestion": 2.37,
+                        "percentageSurvey": 0.29,
+                        "entity": {
+                          "name": "Excessive Re-rendering",
+                          "nameHtml": "Excessive Re-rendering",
+                          "nameClean": "Excessive Re-rendering",
+                          "id": "excessive_rerendering",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 3288,
+                        "id": "no_answer",
+                        "index": 20,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 87.45
+                      },
+                      {
+                        "count": 204,
                         "id": "other_answers",
-                        "index": 11,
-                        "percentageQuestion": 63.49,
-                        "percentageSurvey": 7.98
+                        "index": 21,
+                        "percentageQuestion": 44.05,
+                        "percentageSurvey": 5.5
                       }
                     ]
                   }
