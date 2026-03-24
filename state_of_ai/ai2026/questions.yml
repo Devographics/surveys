@@ -6,78 +6,100 @@
     - id: chatgpt
     - id: claude
     - id: gemini
-    - id: microsoft_copilot
+    # - id: microsoft_copilot # removed in 2026 because it uses chatgpt
     - id: llama
     - id: perplexity
-    - id: phind
+    # - id: phind # removed in 2026
     - id: mistral
     - id: deepseek
+    - id: grok
+      yearAdded: 2026
+    - id: qwen
+      yearAdded: 2026
 
     - id: models_others
       intlId: tools.other_tools
       template: textList
       matchTags: [ai_tools]
 
+    - id: models_paid_for
+      yearAdded: 2026
+      template: multipleWithOther
+      matchTags: [ai_tools]
+      options:
+        - id: chatgpt
+        - id: claude
+        - id: gemini
+        - id: llama
+        - id: perplexity
+        - id: mistral
+        - id: deepseek
+        - id: grok
+        - id: gwen
+        - id: na
+
     - id: models_pain_points
       template: textList
       matchTags: [ai_common_pain_points]
 
-- id: ides
+# - id: ides
+#   template: toolv3
+#   slug: tools
+#   questions:
+#     - id: cursor
+#     - id: windsurf
+#     - id: zed
+#     - id: void_editor
+
+#     - id: ides_others
+#       intlId: tools.other_tools
+#       template: textList
+#       matchTags: [ai_tools, text_editors]
+
+#     - id: ides_pain_points
+#       template: textList
+#       matchTags: [ai_common_pain_points]
+
+- id: coding_agents_assistants
   template: toolv3
   slug: tools
   questions:
-    - id: cursor
-    - id: windsurf
-    - id: zed
-    - id: void_editor
-
-    - id: ides_others
-      intlId: tools.other_tools
-      template: textList
-      matchTags: [ai_tools, text_editors]
-
-    - id: ides_pain_points
-      template: textList
-      matchTags: [ai_common_pain_points]
-
-- id: coding_assistants
-  template: toolv3
-  slug: tools
-  questions:
-    - id: qodo
-    # - id: devin
+    - id: claude_code
+      yearAdded: 2026
+    - id: open_ai_codex
+      yearAdded: 2026
+    # - id: qodo # removed in 2026
+    - id: devin
     - id: tabnine
     - id: copilot
     - id: jetbrains_ai
-    - id: amazon_q_developer
+    # - id: amazon_q_developer # removed in 2026
     - id: supermaven
-    - id: aider
+    # - id: aider # removed in 2026
+    - id: replit_ai
+    # - id: openui_ai # removed in 2026
 
-    - id: coding_assistants_others
+    - id: coding_agents_assistants_others
       intlId: tools.other_tools
       template: textList
       matchTags: [ai_tools]
+
+    - id: agents_assistants_paid_for
+      yearAdded: 2026
+      template: multipleWithOther
+      matchTags: [ai_tools]
+      options:
+        - id: devin
+        - id: tabnine
+        - id: copilot
+        - id: jetbrains_ai
+        - id: supermaven
+        - id: claude_code
+        - id: open_ai_codex
+        - id: replit_ai
+        - id: na
 
     - id: coding_assistants_pain_points
-      template: textList
-      matchTags: [ai_common_pain_points]
-
-- id: code_generation
-  template: toolv3
-  slug: tools
-  questions:
-    - id: v0
-    - id: bolt
-    - id: replit_ai
-    - id: openui_ai
-    - id: lovable
-
-    - id: code_generation_others
-      intlId: tools.other_tools
-      template: textList
-      matchTags: [ai_tools]
-
-    - id: code_generation_pain_points
       template: textList
       matchTags: [ai_common_pain_points]
 
@@ -136,17 +158,68 @@
         - id: grok
         - id: na
 
-    - id: ai_libraries_sdks
+    - id: video_generation
+      yearAdded: 2026
       template: multipleWithOtherSentiment
-      matchTags: [languages, ai_tools, ai_sdks]
+      matchTags: [ai_tools]
       options:
-        # - id: pytorch
-        # - id: tensorflow
-        # - id: scikit_learn
-        - id: vercel_ai_sdk
-        - id: onnx_runtime
-        - id: transformers_js
+        - id: sora
+        - id: runway
+        - id: pika
+        - id: luma_ai
+        - id: kling
+
+    - id: app_generation
+      yearAdded: 2026
+      template: multipleWithOtherSentiment
+      matchTags: [ai_tools]
+      options:
+        - id: v0
+        - id: bolt
+        - id: lovable
+        - id: webflow
         - id: na
+
+    - id: code_review
+      yearAdded: 2026
+      template: multipleWithOtherSentiment
+      matchTags: [ai_tools]
+      options:
+        - id: code_rabbit
+        - id: sourcery
+        - id: qodo
+        - id: greptile
+        - id: gitar
+        - id: na
+
+    - id: text_editors
+      yearAdded: 2026
+      template: multipleWithOtherSentiment
+      matchTags: [ai_tools]
+      options:
+        - id: vs_code
+        - id: sublime_text
+        - id: vim
+        - id: emacs
+        - id: webstorm
+        - id: cursor
+        - id: windsurf
+        - id: zed
+        - id: void_editor
+        - id: antigravity
+        - id: na
+
+    # - id: ai_libraries_sdks
+    #   template: multipleWithOtherSentiment
+    #   matchTags: [languages, ai_tools, ai_sdks]
+    #   options:
+    #     # - id: pytorch
+    #     # - id: tensorflow
+    #     # - id: scikit_learn
+    #     - id: vercel_ai_sdk
+    #     - id: onnx_runtime
+    #     - id: transformers_js
+    #     - id: na
 
     # - id: ai_local_models
     #   template: multipleWithOther
@@ -330,6 +403,29 @@
         - id: no_but_interested
         - id: yes_interested
 
+- id: risks_pain_points
+  slug: usage
+  questions:
+    - id: ai_risks
+      yearAdded: 2026
+      template: multipleWithOther
+      limit: 3
+      matchTags: [ai_common_pain_points]
+      options:
+        - id: militaristic_uses
+        - id: environmental_impact
+        - id: reaching_agi
+        - id: job_displacement
+        - id: lack_of_regulation
+        - id: security_issues
+        - id: rising_costs
+        - id: entranched_stack_bias
+        - id: open_source_disruption
+        - id: ai_overuse
+        - id: copyright_ethics_issues
+        - id: slop_takeover
+        - id: cognitive_impact
+
     - id: ai_pain_points
       template: multipleWithOther
       limit: 3
@@ -340,7 +436,6 @@
         - id: training_data_concerns
         - id: integration_difficulties
         - id: costs
-        - id: environmental_impact
         - id: lack_of_context
         - id: privacy_concerns
 
@@ -351,47 +446,47 @@
     - id: ai_happiness
       template: happiness
 
-- id: resources
-  questions:
-    # - id: courses
-    #   template: textList
+# - id: resources
+#   questions:
+#     # - id: courses
+#     #   template: textList
 
-    - id: newsletters
-      intlId: resources.ai_newsletters
-      template: textList
+#     - id: newsletters
+#       intlId: resources.ai_newsletters
+#       template: textList
 
-    - id: podcasts
-      intlId: resources.ai_podcasts
-      template: textList
+#     - id: podcasts
+#       intlId: resources.ai_podcasts
+#       template: textList
 
-    - id: video_creators
-      intlId: resources.ai_video_creators
-      template: textList
-      matchTags: [people]
+#     - id: video_creators
+#       intlId: resources.ai_video_creators
+#       template: textList
+#       matchTags: [people]
 
-    - id: people
-      intlId: resources.ai_people
-      template: textList
-      matchTags: [video_creators]
+#     - id: people
+#       intlId: resources.ai_people
+#       template: textList
+#       matchTags: [video_creators]
 
-    - id: other_surveys
-      template: multipleWithOther
-      matchTags: [surveys]
-      options:
-        - id: state_of_js_survey
-        - id: state_of_react_survey
-        - id: state_of_css_survey
-        # - id: state_of_graphql_survey
-        - id: state_of_html_survey
-        - id: jetbrains_survey
-        - id: stack_overflow_survey
-        - id: codingame_survey
-        - id: uxtools_survey
-        - id: postman_survey
-        - id: netlify_survey
-        - id: state_of_react_native
-        - id: state_of_frontend # TODO: add in 2025
-        - id: na
+#     - id: other_surveys
+#       template: multipleWithOther
+#       matchTags: [surveys]
+#       options:
+#         - id: state_of_js_survey
+#         - id: state_of_react_survey
+#         - id: state_of_css_survey
+#         # - id: state_of_graphql_survey
+#         - id: state_of_html_survey
+#         - id: jetbrains_survey
+#         - id: stack_overflow_survey
+#         - id: codingame_survey
+#         - id: uxtools_survey
+#         - id: postman_survey
+#         - id: netlify_survey
+#         - id: state_of_react_native
+#         - id: state_of_frontend # TODO: add in 2025
+#         - id: na
 
 - id: opinions
   messageId: opinions.opinions_intro
@@ -410,6 +505,14 @@
 
     - id: job_security_threat
       template: opinion
+
+    - id: ai_bubble_currently
+      template: opinion
+      yearAdded: 2026
+
+    - id: ai_quality_improving
+      template: opinion
+      yearAdded: 2026
 
     - id: existential_risk
       template: opinion
