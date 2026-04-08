@@ -27,7 +27,7 @@
       template: multipleWithOther
       matchTags: [ai_tools]
       options:
-        - id: chatgpt
+        - id: chat_gpt
         - id: claude
         - id: gemini
         - id: llama
@@ -38,9 +38,9 @@
         - id: gwen
         - id: na
 
-    - id: models_pain_points
-      template: textList
-      matchTags: [ai_common_pain_points]
+    # - id: models_pain_points
+    #   template: textList
+    #   matchTags: [ai_common_pain_points]
 
 # - id: ides
 #   template: toolv3
@@ -84,7 +84,7 @@
       template: textList
       matchTags: [ai_tools]
 
-    - id: agents_assistants_paid_for
+    - id: coding_agents_assistants_paid_for
       yearAdded: 2026
       template: multipleWithOther
       matchTags: [ai_tools]
@@ -99,9 +99,9 @@
         - id: replit_ai
         - id: na
 
-    - id: coding_assistants_pain_points
-      template: textList
-      matchTags: [ai_common_pain_points]
+    # - id: coding_assistants_pain_poinpain_points
+    #   template: textList
+    #   matchTags: [ai_common_ts]
 
 # - id: image_generation
 #   template: toolv3
@@ -168,6 +168,7 @@
         - id: pika
         - id: luma_ai
         - id: kling
+        - id: na
 
     - id: app_generation
       yearAdded: 2026
@@ -231,6 +232,7 @@
     - id: ai_browser_apis
       template: multipleWithOther
       limit: 3
+      randomize: true
       options:
         - id: translation
         - id: language_detection
@@ -251,6 +253,7 @@
   questions:
     - id: ai_uses
       template: multipleWithOther
+      randomize: true
       options:
         - id: code_generation
         - id: translation
@@ -261,6 +264,8 @@
         - id: speech_recognition
         - id: computer_vision
         - id: learning_research
+        - id: debugging
+        - id: code_assistance
 
     - id: ai_generated_code_balance
       template: slider
@@ -271,6 +276,7 @@
     - id: ai_code_refactoring_reasons
       template: multipleWithOther
       matchTags: [ai_common_pain_points]
+      randomize: true
       options:
         - id: excessive_repetition
         - id: performance_issues
@@ -278,6 +284,9 @@
         - id: security_issues
         - id: variable_renaming
         - id: improving_readability
+        - id: faulty_code
+        - id: hallucinations_inaccuracies
+        - id: poor_generated_code_style
 
     - id: ai_code_generation_frequency
       template: single
@@ -332,6 +341,7 @@
     - id: ai_generated_code_type
       template: multipleWithOther
       matchTags: [js_uses]
+      randomize: true
       options:
         - id: helper_functions
         - id: frontend_components
@@ -340,6 +350,9 @@
         - id: api_integrations
         - id: documentation_comments
         - id: tests
+        - id: database_queries
+        - id: scripting
+        - id: configuration_code
 
     - id: ai_personal_expenses
       template: single
@@ -411,6 +424,7 @@
       template: multipleWithOther
       limit: 3
       matchTags: [ai_common_pain_points]
+      randomize: true
       options:
         - id: militaristic_uses
         - id: environmental_impact
@@ -430,6 +444,7 @@
       template: multipleWithOther
       limit: 3
       matchTags: [ai_common_pain_points]
+      randomize: true
       options:
         - id: misunderstood_prompt
         - id: poor_generated_code
@@ -438,10 +453,28 @@
         - id: costs
         - id: lack_of_context
         - id: privacy_concerns
+        - id: hallucinations_inaccuracies
+        # - id: ethical_concerns
 
     - id: ai_missing_features
-      template: textList
-      # matchTags: []
+      template: multipleWithOther
+      limit: 3
+      randomize: true
+      options:
+        - id: long_term_memory
+        - id: high_level_planning
+        - id: runtime_behavior_awareness
+        - id: larger_context_window
+        - id: large_codebase_support
+        - id: up_to_date_knowledge
+        # - id: better_accuracy
+        # - id: self_evaluation
+        # - id: higher_intelligence
+        - id: system_integration
+        - id: truthfulness
+        - id: ai_accountability
+        - id: user_interaction
+        - id: customization
 
     - id: ai_happiness
       template: happiness
