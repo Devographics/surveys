@@ -1,7 +1,7 @@
 query {
   surveys {
     state_of_ai {
-      ai2025 {
+      ai2026 {
         user_info {
           years_of_experience_vs_gender: years_of_experience {
             id
@@ -10,13 +10,13 @@ query {
                 count
               }
             }
-            responses(
+            combined(
               facet: user_info__gender
               parameters: {
                 showNoAnswer: true
               }
             ) {
-              currentEdition {
+              allEditions(editionCount: 1) {
                 _metadata {
                   axis1Sort {
                     property
@@ -29,6 +29,8 @@ query {
                   limit
                   cutoff
                 }
+                editionId
+                year
                 completion {
                   count
                   percentageSurvey
@@ -42,6 +44,7 @@ query {
                   count
                   id
                   value
+                  index
                   percentageQuestion
                   percentageSurvey
                   isFreeformData
@@ -55,6 +58,7 @@ query {
                     descriptionHtml
                     descriptionClean
                     id
+                    parentId
                     entityType
                     example {
                       label
@@ -114,6 +118,7 @@ query {
                       group
                       name
                       spec
+                      url
                       status {
                         baseline
                         baseline_low_date
@@ -154,6 +159,7 @@ query {
                       descriptionHtml
                       descriptionClean
                       id
+                      parentId
                       entityType
                       example {
                         label
@@ -213,6 +219,7 @@ query {
                         group
                         name
                         spec
+                        url
                         status {
                           baseline
                           baseline_low_date

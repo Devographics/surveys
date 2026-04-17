@@ -1,7 +1,7 @@
 query {
   surveys {
     state_of_ai {
-      ai2025 {
+      ai2026 {
         user_info {
           country: country {
             id
@@ -10,15 +10,15 @@ query {
                 count
               }
             }
-            responses(
+            combined(
               parameters: {
                 showNoAnswer: true
-                mergeOtherBuckets: false
+                mergeOtherBuckets: true
                 cutoff: 10
                 limit: 40
               }
             ) {
-              currentEdition {
+              allEditions(editionCount: 2) {
                 _metadata {
                   axis1Sort {
                     property
@@ -31,6 +31,8 @@ query {
                   limit
                   cutoff
                 }
+                editionId
+                year
                 completion {
                   count
                   percentageSurvey
@@ -44,6 +46,7 @@ query {
                   count
                   id
                   value
+                  index
                   percentageQuestion
                   percentageSurvey
                   isFreeformData

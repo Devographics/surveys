@@ -1,7 +1,7 @@
 query {
   surveys {
     state_of_ai {
-      ai2025 {
+      ai2026 {
         models {
           models_others: models_others {
             id
@@ -18,7 +18,7 @@ query {
                 mergeOtherBuckets: true
               }
             ) {
-              currentEdition {
+              allEditions(editionCount: 2) {
                 _metadata {
                   axis1Sort {
                     property
@@ -31,6 +31,8 @@ query {
                   limit
                   cutoff
                 }
+                editionId
+                year
                 completion {
                   count
                   percentageSurvey
@@ -44,6 +46,7 @@ query {
                   count
                   id
                   value
+                  index
                   percentageQuestion
                   percentageSurvey
                   isFreeformData
@@ -57,6 +60,7 @@ query {
                     descriptionHtml
                     descriptionClean
                     id
+                    parentId
                     entityType
                     example {
                       label
@@ -116,6 +120,7 @@ query {
                       group
                       name
                       spec
+                      url
                       status {
                         baseline
                         baseline_low_date
@@ -127,98 +132,6 @@ query {
                           firefox_android
                           safari
                           safari_ios
-                        }
-                      }
-                    }
-                  }
-                  groupedBuckets {
-                    count
-                    id
-                    value
-                    percentageQuestion
-                    percentageSurvey
-                    isFreeformData
-                    hasInsufficientData
-                    entity {
-                      name
-                      nameHtml
-                      nameClean
-                      alias
-                      description
-                      descriptionHtml
-                      descriptionClean
-                      id
-                      entityType
-                      example {
-                        label
-                        language
-                        code
-                        codeHighlighted
-                      }
-                      avatar {
-                        url
-                      }
-                      homepage {
-                        url
-                      }
-                      youtube {
-                        url
-                      }
-                      twitter {
-                        url
-                      }
-                      bluesky {
-                        url
-                      }
-                      threads {
-                        url
-                      }
-                      twitch {
-                        url
-                      }
-                      rss {
-                        url
-                      }
-                      blog {
-                        url
-                      }
-                      mastodon {
-                        url
-                      }
-                      github {
-                        url
-                      }
-                      npm {
-                        url
-                      }
-                      mdn {
-                        url
-                      }
-                      caniuse {
-                        url
-                      }
-                      resources {
-                        url
-                        title
-                      }
-                      webFeature {
-                        id
-                        description_html
-                        group
-                        name
-                        spec
-                        status {
-                          baseline
-                          baseline_low_date
-                          support {
-                            chrome
-                            chrome_android
-                            edge
-                            firefox
-                            firefox_android
-                            safari
-                            safari_ios
-                          }
                         }
                       }
                     }

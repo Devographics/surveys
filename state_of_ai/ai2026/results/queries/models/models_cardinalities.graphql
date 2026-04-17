@@ -1,7 +1,7 @@
 query {
   surveys {
     state_of_ai {
-      ai2025 {
+      ai2026 {
         models {
           models_cardinalities: _cardinalities {
             id
@@ -14,7 +14,7 @@ query {
                 }
               }
             ) {
-              currentEdition {
+              allEditions(editionCount: 1) {
                 _metadata {
                   axis1Sort {
                     property
@@ -27,6 +27,8 @@ query {
                   limit
                   cutoff
                 }
+                editionId
+                year
                 completion {
                   count
                   percentageSurvey
@@ -40,6 +42,7 @@ query {
                   count
                   id
                   value
+                  index
                   percentageQuestion
                   percentageSurvey
                   isFreeformData

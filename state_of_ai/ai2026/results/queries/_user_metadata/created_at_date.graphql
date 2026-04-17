@@ -1,14 +1,14 @@
 query {
   surveys {
     state_of_ai {
-      ai2025 {
+      ai2026 {
         _user_metadata {
           created_at_date: created_at_date {
             id
-            responses(
+            combined(
               parameters: {
                 showNoAnswer: false
-                mergeOtherBuckets: false
+                mergeOtherBuckets: true
                 cutoff: 10
                 sort: {
                   order: asc
@@ -16,7 +16,7 @@ query {
                 }
               }
             ) {
-              currentEdition {
+              allEditions(editionCount: 2) {
                 _metadata {
                   axis1Sort {
                     property
@@ -29,6 +29,8 @@ query {
                   limit
                   cutoff
                 }
+                editionId
+                year
                 completion {
                   count
                   percentageSurvey
@@ -42,6 +44,7 @@ query {
                   count
                   id
                   value
+                  index
                   percentageQuestion
                   percentageSurvey
                   isFreeformData
@@ -55,6 +58,7 @@ query {
                     descriptionHtml
                     descriptionClean
                     id
+                    parentId
                     entityType
                     example {
                       label
@@ -114,6 +118,7 @@ query {
                       group
                       name
                       spec
+                      url
                       status {
                         baseline
                         baseline_low_date

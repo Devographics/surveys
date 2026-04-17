@@ -1,7 +1,7 @@
 query {
   surveys {
     state_of_ai {
-      ai2025 {
+      ai2026 {
         user_info {
           company_size_vs_salary: company_size {
             id
@@ -10,14 +10,14 @@ query {
                 count
               }
             }
-            responses(
+            combined(
               facet: user_info__yearly_salary
               parameters: {
                 showNoAnswer: true
-                cutoff: 10
+                cutoff: 20
               }
             ) {
-              currentEdition {
+              allEditions(editionCount: 1) {
                 _metadata {
                   axis1Sort {
                     property
@@ -30,6 +30,8 @@ query {
                   limit
                   cutoff
                 }
+                editionId
+                year
                 completion {
                   count
                   percentageSurvey
@@ -43,6 +45,7 @@ query {
                   count
                   id
                   value
+                  index
                   percentageQuestion
                   percentageSurvey
                   isFreeformData
@@ -56,6 +59,7 @@ query {
                     descriptionHtml
                     descriptionClean
                     id
+                    parentId
                     entityType
                     example {
                       label
@@ -115,6 +119,7 @@ query {
                       group
                       name
                       spec
+                      url
                       status {
                         baseline
                         baseline_low_date
@@ -155,6 +160,7 @@ query {
                       descriptionHtml
                       descriptionClean
                       id
+                      parentId
                       entityType
                       example {
                         label
@@ -214,6 +220,7 @@ query {
                         group
                         name
                         spec
+                        url
                         status {
                           baseline
                           baseline_low_date
