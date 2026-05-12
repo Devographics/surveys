@@ -1,7 +1,7 @@
 - id: layout
   template: featurev3
   slug: features
-  messageId: features.features_intro_css2025
+  messageId: features.features_intro_css
   questions:
     # - id: features_intro_css
     #   template: help
@@ -9,8 +9,8 @@
     - id: subgrid
       showCommentInput: true
       yearAdded: 2020
-    - id: writing_modes
-      yearAdded: 2020
+    # - id: writing_modes # removed in 2026, low usage
+    #   yearAdded: 2020
     - id: logical_properties
       yearAdded: 2020
     - id: aspect_ratio
@@ -38,63 +38,78 @@
     - id: calc_size
       yearAdded: 2025
 
+    - id: css_grid_lanes
+      yearAdded: 2026
+
     - id: layout_pain_points
       matchTags: [common_pain_points, css_features]
       disallowedTokenIds: [styling_customization]
       template: textList
 
-# removed in 2026 to shorten survey
-# - id: shapes_graphics
-#   template: featurev3
-#   slug: features
-#   questions:
-#     - id: blend_modes
-#       yearAdded: 2020
-#     # - id: filter_effects # removed in 2025
-#     #   yearAdded: 2020
-#     - id: backdrop_filter
-#       yearAdded: 2020
+- id: shapes_graphics
+  template: featurev3
+  slug: features
+  questions:
+    # - id: blend_modes
+    #   yearAdded: 2020
+    # # - id: filter_effects # removed in 2025
+    # #   yearAdded: 2020
+    # - id: backdrop_filter
+    #   yearAdded: 2020
 
-#     - id: linear_easing_function # 2023
-#       yearAdded: 2023
+    # - id: linear_easing_function # 2023
+    #   yearAdded: 2023
 
-#     # - id: quiz_dave_shea
-#     #   intlId: quiz.quiz_dave_shea
-#     #   template: quiz
-#     #   options:
-#     #     - id: css_playground
-#     #     - id: style_jungle
-#     #     - id: css_zen_garden
+    # # - id: quiz_dave_shea
+    # #   intlId: quiz.quiz_dave_shea
+    # #   template: quiz
+    # #   options:
+    # #     - id: css_playground
+    # #     - id: style_jungle
+    # #     - id: css_zen_garden
 
-#     - id: intrinsic_sizing #min-, max, and fit-content
-#       yearAdded: 2021
-#     - id: conic_gradient
-#       yearAdded: 2021
+    # - id: intrinsic_sizing #min-, max, and fit-content
+    #   yearAdded: 2021
+    # - id: conic_gradient
+    #   yearAdded: 2021
 
-#     - id: offset_path
-#       yearAdded: 2024
+    - id: line_clamp
+      yearAdded: 2020
 
-#     - id: css_shape_function
-#       yearAdded: 2025
-#     # - id: quiz_css_spec
-#     #   intlId: quiz.quiz_css_spec
-#     #   template: quiz
-#     #   options:
-#     #     - id: w3c
-#     #     - id: w3schools
-#     #     - id: mdn
+    - id: offset_path
+      yearAdded: 2024
 
-#     - id: shapes_graphics_pain_points
-#       matchTags: [common_pain_points, css_features]
-#       disallowedTokenIds: [styling_customization]
-#       template: textList
+    - id: css_shape_function
+      yearAdded: 2025
+
+    - id: text_box_trim # too early?
+      yearAdded: 2025
+
+    - id: css_gap_decorations
+      yearAdded: 2026
+
+    - id: css_corner_shape
+      yearAdded: 2026
+
+    # - id: quiz_css_spec
+    #   intlId: quiz.quiz_css_spec
+    #   template: quiz
+    #   options:
+    #     - id: w3c
+    #     - id: w3schools
+    #     - id: mdn
+
+    - id: shapes_graphics_pain_points
+      matchTags: [common_pain_points, css_features]
+      disallowedTokenIds: [styling_customization]
+      template: textList
 
 - id: colors
   template: featurev3
   slug: features
   questions:
-    - id: color_function
-      yearAdded: 2021
+    # - id: color_function # removed in 2026, old and low usage
+    #   yearAdded: 2021
     - id: accent_color
       yearAdded: 2021
 
@@ -114,6 +129,9 @@
 
     - id: light_dark
       yearAdded: 2024
+
+    - id: contrast_color
+      yearAdded: 2026
 
     - id: colors_pain_points
       matchTags: [common_pain_points, css_features]
@@ -280,6 +298,7 @@
 
     - id: has_selector
       yearAdded: 2022
+
     - id: where_selector
       yearAdded: 2022
 
@@ -296,8 +315,8 @@
     # - id: env_function # too new?
     #   yearAdded: 2023
 
-    - id: image_set
-      yearAdded: 2022
+    # - id: image_set # removed in 2026, too niche
+    #   yearAdded: 2022
 
     # - id: image_function # removed in 2025 because probably not going to be implemented soon
     #   yearAdded: 2022
@@ -308,14 +327,14 @@
     - id: at_scope
       yearAdded: 2024
 
-    - id: nth_child_of_s
-      yearAdded: 2024
+    # - id: nth_child_of_s # removed in 2026, too niche
+    #   yearAdded: 2024
 
-    - id: field_sizing
-      yearAdded: 2025
+    # - id: field_sizing # removed in 2026, too niche
+    #   yearAdded: 2025
 
-    - id: target_text_selector
-      yearAdded: 2025
+    # - id: target_text_selector # removed in 2026, too niche
+    #   yearAdded: 2025
 
     - id: at_function
       yearAdded: 2025
@@ -437,6 +456,10 @@
           yearAdded: 2025
         - id: custom_framework
           yearAdded: 2025
+        - id: material_ui
+          yearAdded: 2026
+        - id: mantine
+          yearAdded: 2026
         - id: na
 
     - id: css_in_js
@@ -464,6 +487,8 @@
           yearAdded: 2024
         - id: style_x
           yearAdded: 2024
+        - id: linaria
+          yearAdded: 2026
         - id: na
 
     - id: pre_post_processors
@@ -494,6 +519,8 @@
         - id: post_css_preset_env
         - id: biome
           yearAdded: 2025
+        - id: eslint
+          yearAdded: 2026
         - id: na
 
     - id: browsers
@@ -515,6 +542,8 @@
         - id: safari_ios
         - id: samsung_internet
         - id: vivaldi
+        - id: zen
+          yearAdded: 2026
         # - id: internet_explorer_8_9_10 # removed in 2023
         # - id: opera_mini # removed in 2023
         # - id: ucbrowser # removed in 2023
@@ -541,6 +570,9 @@
         - id: tv
         - id: vision_simulator
 
+    - id: css_ai_generated_code_balance
+      template: slider
+
     # - id: accessibility_features
     #   intlId: environments.accessibility_features
     #   template: multiple
@@ -555,53 +587,51 @@
     #     - id: alt_text
     #     - id: semantic_markup
     #     - id: aria_attributes
-
     # - id: accessibility_features
     #   intlId: environments.accessibility_features.others
     #   template: others
     #   matchTags: [accessibility_features]
     #   yearAdded: 2021
-
-    - id: what_do_you_use_css_for
-      template: multipleWithOther
-      matchTags: [css_uses]
-      options:
-        - id: blogs
-        - id: css_art
-        - id: design_systems
-        - id: desktop_apps
-        - id: emails
-        - id: marketing_sites
-        - id: mobile_apps
-        - id: printed_documents
-        - id: pdf_documents
-        - id: web_apps
-
-    - id: industry_sector
-      template: multipleWithOther
-      matchTags: [industry_sectors]
-      options:
-        - id: automotive
-        - id: consulting
-        - id: cyber_security
-        - id: ecommerce
-        - id: education
-        - id: energy
-        - id: entertainment
-        - id: finance
-        - id: government
-        - id: healthcare
-        - id: insurance
-        - id: logistics
-        - id: manufacturing
-        - id: marketing_tools
-        - id: news_media
-        - id: programming_tools
-        - id: real_estate
-        - id: socialmedia
-        - id: tourism
-        - id: transport
-
+    # removed in 2026
+    # - id: what_do_you_use_css_for
+    #   template: multipleWithOther
+    #   matchTags: [css_uses]
+    #   options:
+    #     - id: blogs
+    #     - id: css_art
+    #     - id: design_systems
+    #     - id: desktop_apps
+    #     - id: emails
+    #     - id: marketing_sites
+    #     - id: mobile_apps
+    #     - id: printed_documents
+    #     - id: pdf_documents
+    #     - id: web_apps
+    # removed in 2026
+    # - id: industry_sector
+    #   template: multipleWithOther
+    #   matchTags: [industry_sectors]
+    #   options:
+    #     - id: automotive
+    #     - id: consulting
+    #     - id: cyber_security
+    #     - id: ecommerce
+    #     - id: education
+    #     - id: energy
+    #     - id: entertainment
+    #     - id: finance
+    #     - id: government
+    #     - id: healthcare
+    #     - id: insurance
+    #     - id: logistics
+    #     - id: manufacturing
+    #     - id: marketing_tools
+    #     - id: news_media
+    #     - id: programming_tools
+    #     - id: real_estate
+    #     - id: socialmedia
+    #     - id: tourism
+    #     - id: transport
     # - id: usage_type
     #   yearAdded: 2023
     #   template: singleWithOther
@@ -662,16 +692,16 @@
       #   - id: anchor_positioning
       #   - id: discrete_properties_animations
 
-    - id: baseline_awareness
-      yearAdded: 2025
-      template: single
-      options:
-        - id: text_formatting
-        - id: performance_testing_tool
-        - id: supported_apis
-        - id: code_examples
-        - id: no_idea
-
+    # removed in 2026
+    # - id: baseline_awareness
+    #   yearAdded: 2025
+    #   template: single
+    #   options:
+    #     - id: text_formatting
+    #     - id: performance_testing_tool
+    #     - id: supported_apis
+    #     - id: code_examples
+    #     - id: no_idea
     - id: css_missing_features
       # template: multipleWithOther
       template: textList
@@ -737,11 +767,12 @@
       template: textList
       limit: 3
 
-    - id: gamechanger_feature
-      matchTags: [css_features, browser_interoperability, css_missing_features]
-      yearAdded: 2025
-      disallowedTokenIds: [styling_customization]
-      template: text
+    # removed in 2026
+    # - id: gamechanger_feature
+    #   matchTags: [css_features, browser_interoperability, css_missing_features]
+    #   yearAdded: 2025
+    #   disallowedTokenIds: [styling_customization]
+    #   template: text
 
     - id: css_pace_of_change
       template: single
@@ -810,7 +841,8 @@
         - id: http_archive
         - id: web_features_explorer
         - id: web_platform_status
-        # - id: rum_archive # for 2025
+        - id: css_tricks
+        - id: rum_archive
 
     - id: other_surveys
       template: multipleWithOther
