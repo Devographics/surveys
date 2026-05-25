@@ -1,0 +1,1055 @@
+- id: career
+  questions:
+    - id: years_of_experience
+      intlId: user_info.years_of_experience
+      sectionSlug: user_info
+      template: years
+
+    # removed in 2026 to keep things shorter
+    # - id: higher_education_degree
+    #   intlId: user_info.higher_education_degree
+    #   sectionSlug: user_info
+    #   template: higher_education_degree
+
+    - id: how_many_jobs
+      template: number
+      groups:
+        - id: range_1
+          upperBound: 2
+          average: 1
+        - id: range_2
+          lowerBound: 2
+          upperBound: 3
+          average: 2
+        - id: range_3
+          lowerBound: 3
+          upperBound: 4
+          average: 3
+        - id: range_4
+          lowerBound: 4
+          upperBound: 5
+          average: 4
+        - id: range_5
+          lowerBound: 5
+          upperBound: 6
+          average: 5
+        - id: range_6_10
+          lowerBound: 6
+          upperBound: 11
+          average: 8
+        - id: range_11_20
+          lowerBound: 11
+          upperBound: 21
+          average: 15
+        - id: range_over_20
+          lowerBound: 21
+          average: 21
+
+    - id: employment_status
+      template: multipleWithOther
+      options:
+        - id: company_employee
+        - id: freelance
+        - id: student
+        - id: unemployed
+        - id: ceo_founder
+        - id: retired
+
+    # - id: past_year_conferences
+    #   template: single
+    #   options:
+    #     - id: range_0
+    #     - id: range_1
+    #     - id: range_2_5
+    #     - id: range_6_10
+    #     - id: range_11_15
+    #     - id: range_more_than_15
+
+    # - id: past_year_meetups_events
+    #   template: single
+    #   options:
+    #     - id: range_0
+    #     - id: range_1
+    #     - id: range_2_5
+    #     - id: range_6_10
+    #     - id: range_11_15
+    #     - id: range_more_than_15
+
+    - id: career_issues
+      template: multipleWithOther
+      showCommentInput: true
+      options:
+        - id: harassment
+        # - id: sexual_harassment
+        # - id: non_sexual_harassment
+        - id: discrimination
+        - id: mental_health_issues
+        - id: excessive_overtime
+        - id: underpaid_work
+        - id: burnout
+        - id: job_insecurity
+        - id: bad_management
+        - id: boredom
+        - id: na
+
+    - id: discrimination_issues
+      template: multipleWithOther
+      showCommentInput: true
+      options:
+        - id: gender
+        - id: sexual_orientation
+        - id: race
+        - id: religion
+        - id: age
+        - id: political_views
+        - id: caregiving_status
+        - id: disability
+        - id: country_citizenship
+        - id: appearance_body
+        - id: na
+
+    - id: negative_impacts
+      template: multipleWithOther
+      showCommentInput: true
+      options:
+        - id: changing_appearance
+        - id: changing_behavior
+        - id: reported_someone
+        - id: isolating_yourself
+        - id: internal_transfer
+        - id: time_off
+        - id: quitting_job
+        - id: shifting_careers
+        - id: seeking_counseling
+        - id: engaging_legal_counsel
+        - id: scaling_back
+        - id: taking_medicine
+        - id: na
+
+    # TODO: delete?
+    # - id: career_impact_factors
+    #   template: likert
+    #   options:
+    #     - id: gender
+    #     - id: race
+    #     - id: disabilities
+    #     - id: country
+    #     - id: sexual_orientation
+    #     - id:
+
+    - id: laid_off
+      template: single
+      options:
+        - id: yes_past_year
+        - id: yes_before
+        - id: no
+
+    - id: job_security
+      yearAdded: 2026
+      template: single
+      optionsAreNumeric: true
+      options:
+        - id: 0
+        - id: 1
+        - id: 2
+        - id: 3
+        - id: 4
+
+    - id: career_security
+      yearAdded: 2026
+      template: single
+      optionsAreNumeric: true
+      options:
+        - id: 0
+        - id: 1
+        - id: 2
+        - id: 3
+        - id: 4
+
+- id: workplace
+  questions:
+    - id: company_size
+      intlId: user_info.company_size
+      sectionSlug: user_info
+      template: company_size
+
+    - id: job_title
+      intlId: user_info.job_title
+      sectionSlug: user_info
+      template: text
+
+    - id: yearly_salary
+      intlId: user_info.yearly_salary
+      sectionSlug: user_info
+      template: yearly_salary_v2
+
+    - id: income_evolution
+      intlId: user_info.income_evolution
+      sectionSlug: user_info
+      template: single
+      options:
+        - id: increased
+        - id: stayed_same
+        - id: decreased
+
+    - id: job_finding_application_count
+      template: single
+      optionsAreRange: true
+      optionsAreSequential: true
+      options:
+        - id: range_0
+          average: 0
+          lowerBound: 0
+          upperBound: 1
+        - id: range_1
+          average: 1
+          lowerBound: 1
+          upperBound: 2
+        - id: range_2_5
+          average: 4
+          lowerBound: 2
+          upperBound: 6
+        - id: range_5_10
+          average: 7.5
+          lowerBound: 5
+          upperBound: 11
+        - id: range_10_50
+          average: 30
+          lowerBound: 10
+          upperBound: 51
+        - id: range_50_100
+          average: 75
+          lowerBound: 50
+          upperBound: 101
+        - id: range_over_100
+          average: 100
+          lowerBound: 101
+
+    - id: job_finding_methods
+      template: multipleWithOther
+      matchTags: [sites]
+      options:
+        - id: company_founder
+        - id: job_board
+        - id: direct_application
+        - id: recruiter
+        - id: personal_network
+        - id: linkedin
+        - id: social_media
+        - id: internal_transfer
+        - id: referral
+        - id: open_source_community
+        - id: internship
+        - id: contacted_by_company
+
+    # TODO: delete?
+    # - id: how_similar_to_you_are_your_colleagues
+    #   template: slider
+
+    - id: remote_work_policy
+      template: singleWithOther
+      options:
+        - id: no_remote_work
+        - id: hybrid
+        - id: fully_remote
+        - id: up_to_employee
+
+    # TODO: delete?
+    # - id: vacation_time
+
+    - id: work_hours_per_week
+      template: number
+      units: hours
+      groups:
+        - id: range_under_30
+          upperBound: 31
+          average: 15
+        - id: range_31_35
+          average: 33.5
+          lowerBound: 31
+          upperBound: 36
+        - id: range_36_40
+          average: 38.5
+          lowerBound: 36
+          upperBound: 41
+        - id: range_41_45
+          average: 43.5
+          lowerBound: 41
+          upperBound: 46
+        - id: range_46_50
+          average: 48.5
+          lowerBound: 46
+          upperBound: 51
+        - id: range_over_50
+          average: 55
+          lowerBound: 51
+
+    - id: job_happiness
+      template: happiness
+
+    # - id: job_ai_threat
+
+    - id: workplace_perks
+      template: multipleWithOther
+      options:
+        - id: coworker_relations
+        - id: company_culture
+        - id: working_conditions
+        - id: job_security
+        - id: work_content
+        - id: work_life_balance
+        - id: compensation
+        - id: training
+
+    - id: workplace_difficulties
+      template: multipleWithOther
+      options:
+        - id: coworker_relations
+        - id: company_culture
+        - id: working_conditions
+        - id: job_security
+        - id: work_content
+        - id: work_life_balance
+        - id: compensation
+        - id: training
+        - id: bad_management
+
+    - id: workplace_burnout
+      yearAdded: 2026
+      template: multipleWithOther
+      options:
+        - id: emotionally_drained
+        - id: trouble_focusing
+        - id: reduced_motivation
+        - id: increased_cynicism
+        - id: increased_procrastination
+        - id: sleep_difficulties
+        - id: trouble_disconnecting
+        - id: feel_less_effective
+        - id: reduced_sense_of_accomplishment
+
+    # TODO: delete?
+    # - id: how_much_can_you_be_yourself_at_work
+    #   template: slider
+
+- id: ai_usage
+  questions:
+    - id: ai_generated_code_balance
+      yearAdded: 2026
+      template: slider
+
+    - id: ai_management_pressure
+      yearAdded: 2026
+      template: single
+      optionsAreNumeric: true
+      options:
+        - id: 0
+        - id: 1
+        - id: 2
+        - id: 3
+
+    - id: ai_risks
+      yearAdded: 2026
+      template: multipleWithOther
+      limit: 3
+      # TODO 2027: allow 5 items
+      matchTags: [ai_common_pain_points]
+      randomize: true
+      options:
+        - id: militaristic_uses
+        - id: environmental_impact
+        - id: reaching_agi
+        - id: job_displacement
+        # - id: lack_of_regulation
+        - id: security_issues
+        - id: rising_costs
+        - id: entranched_stack_bias
+        - id: open_source_disruption
+        - id: ai_overuse
+        - id: copyright_ethics_issues
+        - id: slop_takeover
+        - id: cognitive_impact
+
+    - id: ai_sentiment
+      yearAdded: 2026
+      template: slider
+
+# - id: technology
+#   questions:
+#     - id: mobile_os
+#       template: singleWithOther
+#       options:
+#         - id: ios
+#         - id: android
+#         - id: no_smartphone
+#     - id: desktop_os
+#       template: singleWithOther
+#       options:
+#         - id: mac_os
+#         - id: windows
+#         - id: linux
+#     # TODO: delete?
+#     # - id: front_end_frameworks
+#     #   template: multipleWithOtherSentiment
+#     #   options:
+#     #     - id: react
+#     #     - id: vuejs
+#     #     - id: angular
+#     #     - id: jquery
+#     #     - id: svelte
+#     # TODO: delete?
+#     # - id: back_end_frameworks
+#     #   template: multipleWithOtherSentiment
+#     #   options:
+#     #     - id: nextjs
+#     #     - id: astro
+#     #     - id: rails
+#     #     - id: laravel
+#     - id: programming_languages
+#       template: multipleWithOtherSentiment
+#       matchTags: [languages, libraries]
+#       options:
+#         - id: javascript
+#         - id: typescript
+#         - id: php
+#         - id: ruby
+#         - id: python
+#         - id: golang
+#         - id: rust
+#         - id: java
+#         - id: c_cplusplus
+#         - id: objective_c
+#         - id: scala
+#         - id: swift
+#         - id: csharp
+#         - id: haskell
+#         - id: ocaml
+#         - id: dart
+#         - id: kotlin
+#         - id: elixir
+#         - id: bash
+#         - id: clojure
+#         - id: elm
+#         - id: julia
+#         - id: html
+#         - id: css
+#     # - id: ai_tools
+#     #   template: multipleWithOtherSentiment
+#     #   order: random
+#     #   options:
+#     #     - id: chat_gpt
+#     #     - id: gemini
+#     #     - id: microsoft_copilot
+#     #     - id: claude
+#     #     - id: deepseek
+#     #     - id: cursor
+#     #     - id: copilot
+#     #     - id: v0
+#     #     - id: na
+#     - id: productivity_apps
+#       template: multipleWithOtherSentiment
+#       matchTags: [apps, ai_tools, sites, services]
+#       options:
+#         - id: notion
+#         - id: trello
+#         - id: asana
+#         - id: evernote
+#         - id: jira
+#         - id: linear
+#         - id: github_projects
+#         - id: coda
+#         - id: airtable
+#         - id: na
+#     - id: chat_apps
+#       template: multipleWithOther
+#       matchTags: [apps]
+#       options:
+#         - id: whatsapp
+#         - id: slack
+#         - id: discord
+#         - id: telegram
+#         - id: signal
+#         - id: wechat
+#         - id: messenger
+#         - id: microsoft_teams
+#         - id: imessage
+#         - id: na
+#     - id: social_media
+#       template: multipleWithOtherSentiment
+#       matchTags: [socialmedia, sites]
+#       options:
+#         - id: facebook
+#         - id: twitter
+#         - id: instagram
+#         - id: tik_tok
+#         - id: linkedin
+#         - id: reddit
+#         - id: bluesky
+#         - id: mastodon
+#         - id: threads
+#         - id: na
+#     - id: community_involvement
+#       template: multipleWithOther
+#       matchTags: [sites, newsletters]
+#       options:
+#         - id: social_media
+#         - id: conferences
+#         - id: meetups
+#         - id: forums
+#         - id: chatrooms
+#         - id: newsletters
+#         - id: podcasts
+#         - id: videos
+#         - id: streaming
+#         - id: na
+#     - id: community_contributions
+#       template: multipleWithOther
+#       options:
+#         - id: conference
+#         - id: talk
+#         - id: blog_post
+#         - id: answer_question
+#         - id: financial_support
+#         - id: event_organization
+#         - id: open_source_contribution
+#         - id: na
+#     - id: open_source_involvement
+#       template: multipleWithOther
+#       options:
+#         - id: regular_use
+#         - id: code_contribution
+#         - id: documentation
+#         - id: submit_issues
+#         - id: created_projects
+#         - id: na
+# - id: resources
+#   slug: resources
+#   questions:
+#     - id: video_creators
+#     - id: people
+- id: health
+  questions:
+    - id: age
+      template: age_number
+      sectionSlug: user_info
+      intlId: user_info.age
+
+    - id: disability_status
+      template: disability_status2
+      sectionSlug: user_info
+      intlId: user_info.disability_status
+      matchTags: [disabilities]
+
+    - id: health_issues
+      template: multipleWithOther
+      matchTags: [disabilities]
+      options:
+        - id: poor_sleep
+        - id: weight_issues
+        - id: respiratory_issues
+        - id: diabetes
+        - id: chronic_fatigue
+        - id: heart_disease
+        - id: cancer
+        - id: mental_health_issues
+        - id: substance_abuse_issues
+        - id: back_pain
+        - id: wrist_hand_pain
+        - id: other_joint_pain
+        - id: skin_issues
+        - id: headaches
+        - id: na
+
+    - id: sleep_quantity
+      template: single
+      optionsAreRange: true
+      optionsAreSequential: true
+      options:
+        - id: range_5_or_less
+          average: 5
+          upperBound: 6
+        - id: range_6
+          average: 6
+          lowerBound: 6
+          upperBound: 7
+        - id: range_7
+          average: 7
+          lowerBound: 7
+          upperBound: 8
+        - id: range_8
+          average: 8
+          lowerBound: 8
+          upperBound: 9
+        - id: range_9
+          average: 9
+          lowerBound: 9
+          upperBound: 10
+        - id: range_10
+          average: 10
+          lowerBound: 10
+          upperBound: 11
+        - id: more_than_10
+          average: 11
+          lowerBound: 11
+
+    # TODO: create new "time" template
+    # - id: sleep_bedtime
+    #   template: number
+
+    # TODO: create new "time" template
+    # - id: sleep_wakeuptime
+    #   template: number
+
+    # removed in 2026 to shorten survey
+    # - id: sleep_measures
+    #   template: multipleWithOther
+    #   options:
+    #     - id: consistent_bedtime
+    #     - id: darkened_curtains
+    #     - id: sleep_mask
+    #     - id: screen_dimming
+    #     - id: avoid_screens
+    #     - id: earplugs
+    #     - id: sleeping_pills
+    #     - id: supplements
+    #     - id: na
+
+  # - id: physical_activity_frequency
+  #   template: single
+  #   optionsAreNumeric: true
+  #   options:
+  #     - id: 0
+  #     - id: 1
+  #     - id: 2
+  #     - id: 3
+  #     - id: 4
+  #     - id: 5
+  #     - id: 6
+  #     - id: 7
+
+- id: worldview
+  questions:
+    # - id: left_right
+    #   template: slider
+
+    # - id: how_religious_are_you
+    #   template: slider
+
+    - id: global_issues
+      template: multipleWithOther
+      limit: 4
+      options:
+        - id: climate_change
+        - id: global_pandemics
+        - id: refugees_immigration
+        - id: healthcare_access
+        - id: geopolitical_tensions
+        - id: ai_threats
+        - id: rising_intolerance
+        - id: erosion_traditional_values
+        - id: lack_of_free_speech
+        - id: globalization
+        - id: rising_authoritarianism
+        - id: economic_inequality
+
+    - id: political_expression_at_work
+      yearAdded: 2026
+      template: single
+      optionsAreNumeric: true
+      options:
+        - id: 0
+        - id: 1
+        - id: 2
+        - id: 3
+        - id: 4
+
+    - id: workers_union
+      yearAdded: 2026
+      template: single
+      options:
+        - id: no_no_interest
+        - id: no_but_interested
+        - id: "yes"
+        - id: na
+
+    - id: political_spectrum
+      yearAdded: 2026
+      template: slider
+
+    - id: tech_industry_emotion
+      yearAdded: 2026
+      template: multipleWithOther
+      limit: 4
+      randomize: true
+      options:
+        - id: overwhelmed
+        - id: disillusioned
+        - id: angry
+        - id: exhausted
+        - id: anxious
+        - id: excited
+        - id: curious
+        - id: hopeful
+        - id: engaged
+        - id: motivated
+
+    # - id: policies_statements
+    #   template: likert
+    #   options:
+    #     - id: ubi
+    #     - id: free_trade
+    #     - id: universal_health_care
+    #     - id: open_borders
+    #     - id: drug_legalization
+    #     - id: hate_speech_regulations
+    #     - id: affirmative_action
+    #     - id: separation_church_state
+    #     - id: progressive_taxation
+    #     - id: lgbtq_equality
+    #     - id: reduced_government_size
+    #     - id: business_regulation
+    #     - id: dei_initiatives
+    #     - id: interventionism
+    #     - id: climate_action
+    #     - id: politics_free_workplace
+    #     - id: gender_spectrum
+    #     - id: cultural_diversity
+    #     - id: individual_rights
+
+    # - id: ideology
+    #   template: multipleWithOther
+    #   options:
+    #     - id: communist
+    #     - id: socialist
+    #     - id: libertarian
+    #     - id: conservative
+    #     - id: fascist
+    #     - id: anarchist
+    #     - id: liberal
+
+    # - id: companies_opinion
+    #   template: multipleWithOther
+    #   options:
+    #     - id: apple
+    #     - id: open_ai
+    #     - id: microsoft
+    #     - id: google
+    #     - id: meta
+    #     - id: amazon
+    #     - id: x
+
+    # - id: optimism_level # how optimistic are you about the future of the world?
+    #   template: single
+    #   options:
+    #     - id: foo
+
+    - id: happiness_factors
+      template: multipleWithOther
+      limit: 4
+      randomize: true
+      options:
+        - id: health
+        - id: career_progress
+        - id: romantic_relationships
+        - id: other_relationships
+        - id: hobbies
+        - id: family
+        - id: community
+        - id: material_possessions
+        - id: living_environment
+        - id: religion_spirituality
+
+    - id: relocation
+      template: textList
+      matchTags: [countries]
+      limit: 3
+
+    - id: overall_happiness
+      template: happiness
+
+    # - id: opinions_intro
+    #   template: help
+
+    # - id: personal_hope
+    #   template: opinion
+
+    # - id: country_hope
+    #   template: opinion
+
+    # - id: world_hope
+    #   template: opinion
+
+- id: hobbies
+  questions:
+    - id: hobbies
+      template: multipleWithOther
+      randomize: true
+      options:
+        - id: woodworking
+        - id: table_top_gaming
+        - id: video_games
+        - id: music
+        - id: movies_tv
+        - id: cooking
+        - id: reading
+        - id: arts_and_crafts
+        - id: electronics
+        - id: gardening
+        - id: camping
+        - id: sports_exercise
+
+    # - id: hobbies_frequency
+    #   template: single
+    #   options:
+    #     - id: once_a_year_or_less
+    #     - id: few_times_per_year
+    #     - id: few_times_per_month
+    #     - id: few_times_per_week
+    #     - id: every_day
+
+    - id: physical_activity
+      matchTags: [hobbies]
+      template: multipleWithOther
+      randomize: true
+      options:
+        - id: climbing
+        - id: martial_arts
+        - id: running
+        - id: strength_training
+        - id: swimming
+        - id: yoga
+        - id: gymnastics
+        - id: golf
+        - id: tennis
+        - id: soccer
+        - id: biking
+        - id: hiking_walking
+        - id: dancing
+          yearAdded: 2026
+        - id: basketball
+          yearAdded: 2026
+        - id: badminton
+          yearAdded: 2026
+        - id: pilates
+          yearAdded: 2026
+        - id: na
+
+    # - id: musical_genres
+    #   template: multipleWithOther
+    #   options:
+    #     - id: rock
+    #     - id: hip_hop
+    #     - id: pop
+    #     - id: edm
+    #     - id: country
+    #     - id: classical
+    #     - id: jazz
+    #     - id: latin
+    #     - id: soul
+    #     - id: funk
+    #     - id: reggae
+    #     - id: metal
+    #     - id: kpop
+    #     - id: soundtracks
+    #     - id: na
+
+    # removed in 2026 to make survey shorter
+    # - id: favorite_musical_artists
+    #   limit: 3
+    #   template: textList
+    #   matchTags: [music]
+
+    # removed in 2026 to make survey shorter
+    # - id: favorite_movies
+    #   limit: 3
+    #   template: textList
+    #   matchTags: [movies]
+
+    # removed in 2026 to make survey shorter
+    # - id: favorite_tv
+    #   limit: 3
+    #   template: textList
+    #   matchTags: [tv]
+
+    - id: favorite_beverages
+      yearAdded: 2026
+      matchTags: [drinks]
+      template: multipleWithOther
+      randomize: true
+      options:
+        - id: tea
+        - id: coffee
+        - id: sports_energy_drinks
+        - id: soda
+        - id: sparkling_water
+        - id: fruit_juice
+        - id: other_alcoholic_beverages
+        - id: na
+
+    - id: favorite_books
+      yearAdded: 2026
+      limit: 3
+      template: textList
+      matchTags: [books]
+
+    - id: favorite_video_games
+      limit: 3
+      template: textList
+      matchTags: [games]
+
+    - id: video_game_platforms
+      template: multipleWithOther
+      options:
+        - id: nintendo_switch
+        - id: playstation
+        - id: xbox
+        - id: pc
+        - id: mac
+        - id: ios
+        - id: android
+        - id: steamdeck
+        - id: retro_emulation_console
+        - id: na
+
+- id: user_info
+  slug: user_info
+  questions:
+    - id: country
+      template: country
+
+    - id: country_of_origin
+      yearAdded: 2026
+      template: country
+
+    - id: migration_experience
+      yearAdded: 2026
+      template: singleWithOther
+      options:
+        - id: same_country
+        - id: same_country_immigrant_parents
+        - id: different_country
+        - id: different_country_immigrant_parents
+
+    - id: native_languages
+      yearAdded: 2026
+      template: textList
+
+    - id: other_languages
+      yearAdded: 2026
+      template: textList
+
+    - id: sexual_orientation
+      yearAdded: 2026
+      template: singleWithOther
+      options:
+        - id: heterosexual
+        - id: gay_or_lesbian
+        - id: bisexual
+        - id: questioning
+
+    - id: gender
+      template: gender
+
+    - id: race_ethnicity
+      template: race_ethnicity
+
+    - id: number_of_kids
+      template: number
+      optionsAreSequential: true
+      groups:
+        - id: range_0
+          upperBound: 1
+          average: 0
+        - id: range_1
+          lowerBound: 1
+          upperBound: 2
+          average: 1
+        - id: range_2
+          lowerBound: 2
+          upperBound: 3
+          average: 2
+        - id: range_3
+          lowerBound: 3
+          upperBound: 4
+          average: 3
+        - id: range_4
+          lowerBound: 4
+          upperBound: 5
+          average: 4
+        - id: range_over_5
+          lowerBound: 5
+          average: 5
+
+    - id: relationship_status
+      template: singleWithOther
+      options:
+        - id: single
+        - id: in_a_relationship
+        - id: its_complicated
+
+    - id: how_did_user_find_out_about_the_survey
+      template: text
+      matchType: single
+      matchTags:
+        [
+          people,
+          sites,
+          newsletters,
+          video_creators,
+          podcasts,
+          surveys,
+          events,
+          socialmedia,
+          common_sources,
+          state_of_devs_sources,
+        ]
+
+    - id: did_you_run_into_technical_issues
+      template: textList
+
+    - id: missing_questions
+      template: textList
+
+    - id: how_can_we_improve
+      template: textList
+
+    - id: receive_notifications
+      template: receive_notifications
+
+    - id: referrer
+      matchType: single
+      matchTags:
+        [
+          people,
+          sites,
+          newsletters,
+          video_creators,
+          podcasts,
+          surveys,
+          events,
+          socialmedia,
+          common_sources,
+          state_of_devs_sources,
+        ]
+      hidden: true
+      hasApiEndpoint: false
+      template: referrer
+
+    - id: sourcetag
+      matchType: single
+      matchTags:
+        [
+          people,
+          sites,
+          newsletters,
+          video_creators,
+          podcasts,
+          surveys,
+          events,
+          socialmedia,
+          common_sources,
+          state_of_devs_sources,
+        ]
+      hidden: true
+      hasApiEndpoint: false
+      template: sourcetag
