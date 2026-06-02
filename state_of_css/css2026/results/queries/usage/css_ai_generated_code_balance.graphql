@@ -2,15 +2,19 @@ query {
   surveys {
     state_of_css {
       css2026 {
-        _user_metadata {
-          source: source {
+        usage {
+          css_ai_generated_code_balance: css_ai_generated_code_balance {
             id
-            freeform(
+            comments {
+              currentEdition {
+                count
+              }
+            }
+            combined(
               parameters: {
                 showNoAnswer: true
-                cutoff: 10
-                limit: 20
                 mergeOtherBuckets: true
+                cutoff: 10
               }
             ) {
               allEditions(editionCount: 2) {

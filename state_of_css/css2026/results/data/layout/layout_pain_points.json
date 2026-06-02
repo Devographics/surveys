@@ -2,13 +2,13 @@
   "dataAPI": {
     "surveys": {
       "state_of_css": {
-        "css2025": {
+        "css2026": {
           "layout": {
             "layout_pain_points": {
               "id": "layout_pain_points",
               "comments": {
                 "currentEdition": {
-                  "count": 5
+                  "count": 1
                 }
               },
               "freeform": {
@@ -143,7 +143,7 @@
                           "entityType": "default",
                           "webFeature": {
                             "id": "masonry",
-                            "description_html": "Masonry is a type of CSS grid layout where the items on one of the axes are tightly packed together, like brickwork, instead of leaving gaps to align across the other axis.",
+                            "description_html": "The <code>display: grid-lanes</code> or <code>display: inline-grid-lanes</code> CSS declaration creates a layout where items are tightly packed, like brickwork, in parallel lanes. Items are placed one by one in the lane that has the most available space.",
                             "group": [
                               "layout"
                             ],
@@ -463,9 +463,6 @@
                           "name": "Excessive complexity",
                           "nameHtml": "Excessive complexity",
                           "nameClean": "Excessive complexity",
-                          "description": "Too much complexity",
-                          "descriptionHtml": "Too much complexity",
-                          "descriptionClean": "Too much complexity",
                           "id": "excessive_complexity",
                           "parentId": "cognitive_overload",
                           "entityType": "default"
@@ -495,6 +492,396 @@
                         "index": 21,
                         "percentageQuestion": 79.45,
                         "percentageSurvey": 18.22
+                      }
+                    ]
+                  },
+                  {
+                    "_metadata": {
+                      "axis1Sort": {
+                        "property": "count",
+                        "order": "desc"
+                      },
+                      "limit": 20,
+                      "cutoff": 10
+                    },
+                    "editionId": "css2026",
+                    "year": 2026,
+                    "completion": {
+                      "count": 313,
+                      "percentageSurvey": 12.54,
+                      "total": 2496
+                    },
+                    "buckets": [
+                      {
+                        "count": 67,
+                        "id": "grid",
+                        "index": 0,
+                        "percentageQuestion": 21.41,
+                        "percentageSurvey": 2.68,
+                        "entity": {
+                          "name": "Grid",
+                          "nameHtml": "Grid",
+                          "nameClean": "Grid",
+                          "id": "grid",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-grid"
+                          },
+                          "webFeature": {
+                            "id": "grid",
+                            "description_html": "CSS grid is a two-dimensional layout system, which lays content out in rows and columns.",
+                            "group": [
+                              "grid"
+                            ],
+                            "name": "Grid",
+                            "spec": [
+                              "https://drafts.csswg.org/css-grid-3/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/grid/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2017-10-17",
+                              "support": {
+                                "chrome": "57",
+                                "chrome_android": "57",
+                                "edge": "16",
+                                "firefox": "52",
+                                "firefox_android": "52",
+                                "safari": "10.1",
+                                "safari_ios": "10.3"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 33,
+                        "id": "flexbox_issues",
+                        "index": 1,
+                        "percentageQuestion": 10.54,
+                        "percentageSurvey": 1.32,
+                        "entity": {
+                          "id": "flexbox_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 25,
+                        "id": "anchor_positioning",
+                        "index": 2,
+                        "percentageQuestion": 7.99,
+                        "percentageSurvey": 1,
+                        "entity": {
+                          "name": "Anchor Positioning",
+                          "nameHtml": "Anchor Positioning",
+                          "nameClean": "Anchor Positioning",
+                          "id": "anchor_positioning",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".anchor {\n  anchor-name: --my-anchor;\n}\n.target {\n  position: absolute;\n  position-anchor: --my-anchor;\n  position-area: start end;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.anchor</span> {\n  <span class=\"hljs-attribute\">anchor-name</span>: --my-anchor;\n}\n<span class=\"hljs-selector-class\">.target</span> {\n  <span class=\"hljs-attribute\">position</span>: absolute;\n  <span class=\"hljs-attribute\">position-anchor</span>: --my-anchor;\n  <span class=\"hljs-attribute\">position</span>-area: start end;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Anchor_positioning"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-anchor-positioning"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://kizu.dev/anchor-positioning-experiments/",
+                              "title": "Future CSS: Anchor Positioning\n"
+                            },
+                            {
+                              "url": "https://developer.chrome.com/blog/tether-elements-to-each-other-with-css-anchor-positioning/",
+                              "title": "Tether elements to each other with CSS anchor positioning\n"
+                            },
+                            {
+                              "url": "https://css-tricks.com/css-anchor-positioning-guide/",
+                              "title": "CSS Anchor Positioning Guide"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "anchor-positioning",
+                            "description_html": "Anchor positioning places an element based on the position of another element. For example, you can place a tooltip next to the content it references.",
+                            "name": "Anchor positioning",
+                            "spec": [
+                              "https://drafts.csswg.org/css-anchor-position-1/#anchoring"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/anchor-positioning/",
+                            "status": {
+                              "baseline": "false"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 25,
+                        "id": "browser_support",
+                        "index": 3,
+                        "percentageQuestion": 7.99,
+                        "percentageSurvey": 1,
+                        "entity": {
+                          "name": "Browser support",
+                          "nameHtml": "Browser support",
+                          "nameClean": "Browser support",
+                          "description": "Browser support, compatibility, and consistency issues.",
+                          "descriptionHtml": "Browser support, compatibility, and consistency issues.",
+                          "descriptionClean": "Browser support, compatibility, and consistency issues.",
+                          "id": "browser_support",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 20,
+                        "id": "multi_column",
+                        "index": 4,
+                        "percentageQuestion": 6.39,
+                        "percentageSurvey": 0.8,
+                        "entity": {
+                          "name": "Multi-Column Layout",
+                          "nameHtml": "Multi-Column Layout",
+                          "nameClean": "Multi-Column Layout",
+                          "id": "multi_column",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Multicol_layout"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/multicolumn"
+                          },
+                          "webFeature": {
+                            "id": "column-fill",
+                            "description_html": "The <code>column-fill</code> CSS property sets the distribution of content across columns in a multi-column layout.",
+                            "group": [
+                              "multi-column"
+                            ],
+                            "name": "column-fill",
+                            "spec": [
+                              "https://drafts.csswg.org/css-multicol-1/#filling-columns"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/column-fill/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2017-03-07",
+                              "support": {
+                                "chrome": "50",
+                                "chrome_android": "50",
+                                "edge": "12",
+                                "firefox": "52",
+                                "firefox_android": "52",
+                                "safari": "9",
+                                "safari_ios": "9"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 18,
+                        "id": "alignment_issues",
+                        "index": 5,
+                        "percentageQuestion": 5.75,
+                        "percentageSurvey": 0.72,
+                        "entity": {
+                          "id": "alignment_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 17,
+                        "id": "masonry_layout",
+                        "index": 6,
+                        "percentageQuestion": 5.43,
+                        "percentageSurvey": 0.68,
+                        "entity": {
+                          "name": "Masonry Layout",
+                          "nameHtml": "Masonry Layout",
+                          "nameClean": "Masonry Layout",
+                          "description": "Native support for Pinterest-style free-flowing grid layouts.",
+                          "descriptionHtml": "Native support for Pinterest-style free-flowing grid layouts.",
+                          "descriptionClean": "Native support for Pinterest-style free-flowing grid layouts.",
+                          "id": "masonry_layout",
+                          "parentId": "css_layout",
+                          "entityType": "default",
+                          "webFeature": {
+                            "id": "masonry",
+                            "description_html": "The <code>display: grid-lanes</code> or <code>display: inline-grid-lanes</code> CSS declaration creates a layout where items are tightly packed, like brickwork, in parallel lanes. Items are placed one by one in the lane that has the most available space.",
+                            "group": [
+                              "layout"
+                            ],
+                            "name": "Masonry",
+                            "spec": [
+                              "https://drafts.csswg.org/css-grid-3/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/masonry/",
+                            "status": {
+                              "baseline": "false"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 17,
+                        "id": "positioning_issues",
+                        "index": 7,
+                        "percentageQuestion": 5.43,
+                        "percentageSurvey": 0.68,
+                        "entity": {
+                          "id": "positioning_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 17,
+                        "id": "responsive_design",
+                        "index": 8,
+                        "percentageQuestion": 5.43,
+                        "percentageSurvey": 0.68,
+                        "entity": {
+                          "name": "Responsive design",
+                          "nameHtml": "Responsive design",
+                          "nameClean": "Responsive design",
+                          "id": "responsive_design",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 15,
+                        "id": "flexbox",
+                        "index": 9,
+                        "percentageQuestion": 4.79,
+                        "percentageSurvey": 0.6,
+                        "entity": {
+                          "name": "Flexbox",
+                          "nameHtml": "Flexbox",
+                          "nameClean": "Flexbox",
+                          "id": "flexbox",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/flexbox - html_interoperability_features"
+                          }
+                        }
+                      },
+                      {
+                        "count": 15,
+                        "id": "height_issues",
+                        "index": 10,
+                        "percentageQuestion": 4.79,
+                        "percentageSurvey": 0.6,
+                        "entity": {
+                          "id": "height_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 15,
+                        "id": "overflow_issues",
+                        "index": 11,
+                        "percentageQuestion": 4.79,
+                        "percentageSurvey": 0.6,
+                        "entity": {
+                          "id": "overflow_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 12,
+                        "id": "excessive_complexity",
+                        "index": 12,
+                        "percentageQuestion": 3.83,
+                        "percentageSurvey": 0.48,
+                        "entity": {
+                          "name": "Excessive complexity",
+                          "nameHtml": "Excessive complexity",
+                          "nameClean": "Excessive complexity",
+                          "id": "excessive_complexity",
+                          "parentId": "cognitive_overload",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 11,
+                        "id": "subgrid",
+                        "index": 13,
+                        "percentageQuestion": 3.51,
+                        "percentageSurvey": 0.44,
+                        "entity": {
+                          "name": "Subgrid",
+                          "nameHtml": "Subgrid",
+                          "nameClean": "Subgrid",
+                          "id": "subgrid",
+                          "parentId": "css_layout",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".wrapper {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.item {\n  grid-row: 1 / 4;\n  display: grid;\n  grid-template-rows: subgrid;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.wrapper</span> {\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">1</span>fr <span class=\"hljs-number\">1</span>fr;\n}\n\n<span class=\"hljs-selector-class\">.item</span> {\n  <span class=\"hljs-attribute\">grid-row</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">4</span>;\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-rows</span>: subgrid;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-subgrid"
+                          },
+                          "webFeature": {
+                            "id": "subgrid",
+                            "description_html": "The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.",
+                            "group": [
+                              "grid"
+                            ],
+                            "name": "Subgrid",
+                            "spec": [
+                              "https://drafts.csswg.org/css-grid-2/#subgrids"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/subgrid/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2023-09-15",
+                              "support": {
+                                "chrome": "117",
+                                "chrome_android": "117",
+                                "edge": "117",
+                                "firefox": "71",
+                                "firefox_android": "79",
+                                "safari": "16",
+                                "safari_ios": "16"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 10,
+                        "id": "centering_issues",
+                        "index": 14,
+                        "percentageQuestion": 3.19,
+                        "percentageSurvey": 0.4,
+                        "entity": {
+                          "id": "centering_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 2182,
+                        "id": "no_answer",
+                        "index": 15,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 87.42
+                      },
+                      {
+                        "count": 258,
+                        "id": "other_answers",
+                        "index": 16,
+                        "percentageQuestion": 82.5,
+                        "percentageSurvey": 10.33
                       }
                     ]
                   }
