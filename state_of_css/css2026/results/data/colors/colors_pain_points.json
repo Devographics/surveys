@@ -575,28 +575,28 @@
                     "editionId": "css2026",
                     "year": 2026,
                     "completion": {
-                      "count": 282,
-                      "percentageSurvey": 11.3,
-                      "total": 2496
+                      "count": 537,
+                      "percentageSurvey": 11.5,
+                      "total": 4669
                     },
                     "buckets": [
                       {
-                        "count": 34,
+                        "count": 65,
                         "id": "contrast_issues",
                         "index": 0,
-                        "percentageQuestion": 12.06,
-                        "percentageSurvey": 1.36,
+                        "percentageQuestion": 12.1,
+                        "percentageSurvey": 1.39,
                         "entity": {
                           "id": "contrast_issues",
                           "entityType": "default"
                         }
                       },
                       {
-                        "count": 25,
+                        "count": 48,
                         "id": "browser_support",
                         "index": 1,
-                        "percentageQuestion": 8.87,
-                        "percentageSurvey": 1,
+                        "percentageQuestion": 8.94,
+                        "percentageSurvey": 1.03,
                         "entity": {
                           "name": "Browser support",
                           "nameHtml": "Browser support",
@@ -609,33 +609,79 @@
                         }
                       },
                       {
-                        "count": 25,
-                        "id": "color_syntax_issues",
-                        "index": 2,
-                        "percentageQuestion": 8.87,
-                        "percentageSurvey": 1,
-                        "entity": {
-                          "id": "color_syntax_issues",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 24,
+                        "count": 42,
                         "id": "theming_issues",
-                        "index": 3,
-                        "percentageQuestion": 8.51,
-                        "percentageSurvey": 0.96,
+                        "index": 2,
+                        "percentageQuestion": 7.82,
+                        "percentageSurvey": 0.9,
                         "entity": {
                           "id": "theming_issues",
                           "entityType": "default"
                         }
                       },
                       {
-                        "count": 23,
-                        "id": "wide_gamut_colors",
+                        "count": 41,
+                        "id": "contrast_color",
+                        "index": 3,
+                        "percentageQuestion": 7.64,
+                        "percentageSurvey": 0.88,
+                        "entity": {
+                          "name": "`contrast-color()`",
+                          "nameHtml": "<code>contrast-color()</code>",
+                          "nameClean": "contrast-color()",
+                          "id": "contrast_color",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "button {\n  --background-color: darkblue;\n  background-color: var(--background-color);\n  color: contrast-color(var(--background-color));\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-tag\">button</span> {\n  <span class=\"hljs-attr\">--background-color</span>: darkblue;\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--background-color);\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">contrast-color</span>(<span class=\"hljs-built_in\">var</span>(--background-color));\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/contrast-color"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_types_color_contrast-color"
+                          },
+                          "webFeature": {
+                            "id": "contrast-color",
+                            "description_html": "The <code>contrast-color()</code> CSS function picks a color that has guaranteed contrast against a specified foreground or background color.",
+                            "group": [
+                              "color-types"
+                            ],
+                            "name": "contrast-color()",
+                            "spec": [
+                              "https://drafts.csswg.org/css-color-6/#funcdef-contrast-color"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/contrast-color/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "firefox": "146",
+                                "firefox_android": "146",
+                                "safari": "26",
+                                "safari_ios": "26"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 36,
+                        "id": "color_syntax_issues",
                         "index": 4,
-                        "percentageQuestion": 8.16,
-                        "percentageSurvey": 0.92,
+                        "percentageQuestion": 6.7,
+                        "percentageSurvey": 0.77,
+                        "entity": {
+                          "id": "color_syntax_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 36,
+                        "id": "wide_gamut_colors",
+                        "index": 5,
+                        "percentageQuestion": 6.7,
+                        "percentageSurvey": 0.77,
                         "entity": {
                           "name": "Wide Gamut Colors",
                           "nameHtml": "Wide Gamut Colors",
@@ -684,57 +730,53 @@
                         }
                       },
                       {
-                        "count": 21,
-                        "id": "contrast_color",
-                        "index": 5,
-                        "percentageQuestion": 7.45,
-                        "percentageSurvey": 0.84,
+                        "count": 30,
+                        "id": "accessibility",
+                        "index": 6,
+                        "percentageQuestion": 5.59,
+                        "percentageSurvey": 0.64,
                         "entity": {
-                          "name": "`contrast-color()`",
-                          "nameHtml": "<code>contrast-color()</code>",
-                          "nameClean": "contrast-color()",
-                          "id": "contrast_color",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": "button {\n  --background-color: darkblue;\n  background-color: var(--background-color);\n  color: contrast-color(var(--background-color));\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-tag\">button</span> {\n  <span class=\"hljs-attr\">--background-color</span>: darkblue;\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--background-color);\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">contrast-color</span>(<span class=\"hljs-built_in\">var</span>(--background-color));\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/contrast-color"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/mdn-css_types_color_contrast-color"
-                          },
-                          "webFeature": {
-                            "id": "contrast-color",
-                            "description_html": "The <code>contrast-color()</code> CSS function picks a color that has guaranteed contrast against a specified foreground or background color.",
-                            "group": [
-                              "color-types"
-                            ],
-                            "name": "contrast-color()",
-                            "spec": [
-                              "https://drafts.csswg.org/css-color-6/#funcdef-contrast-color"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/contrast-color/",
-                            "status": {
-                              "baseline": "false",
-                              "support": {
-                                "firefox": "146",
-                                "firefox_android": "146",
-                                "safari": "26",
-                                "safari_ios": "26"
-                              }
-                            }
-                          }
+                          "name": "Accessibility",
+                          "nameHtml": "Accessibility",
+                          "nameClean": "Accessibility",
+                          "description": "Accessibility issues",
+                          "descriptionHtml": "Accessibility issues",
+                          "descriptionClean": "Accessibility issues",
+                          "id": "accessibility",
+                          "entityType": "default"
                         }
                       },
                       {
-                        "count": 17,
+                        "count": 26,
+                        "id": "color_variables_issues",
+                        "index": 7,
+                        "percentageQuestion": 4.84,
+                        "percentageSurvey": 0.56,
+                        "entity": {
+                          "id": "color_variables_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 26,
+                        "id": "dark_mode_issues",
+                        "index": 8,
+                        "percentageQuestion": 4.84,
+                        "percentageSurvey": 0.56,
+                        "entity": {
+                          "name": "Dark mode issues",
+                          "nameHtml": "Dark mode issues",
+                          "nameClean": "Dark mode issues",
+                          "id": "dark_mode_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 26,
                         "id": "light_dark",
-                        "index": 6,
-                        "percentageQuestion": 6.03,
-                        "percentageSurvey": 0.68,
+                        "index": 9,
+                        "percentageQuestion": 4.84,
+                        "percentageSurvey": 0.56,
                         "entity": {
                           "name": "`light-dark()`",
                           "nameHtml": "<code>light-dark()</code>",
@@ -780,64 +822,11 @@
                         }
                       },
                       {
-                        "count": 15,
-                        "id": "accessibility",
-                        "index": 7,
-                        "percentageQuestion": 5.32,
-                        "percentageSurvey": 0.6,
-                        "entity": {
-                          "name": "Accessibility",
-                          "nameHtml": "Accessibility",
-                          "nameClean": "Accessibility",
-                          "description": "Accessibility issues",
-                          "descriptionHtml": "Accessibility issues",
-                          "descriptionClean": "Accessibility issues",
-                          "id": "accessibility",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 15,
-                        "id": "color_variables_issues",
-                        "index": 8,
-                        "percentageQuestion": 5.32,
-                        "percentageSurvey": 0.6,
-                        "entity": {
-                          "id": "color_variables_issues",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 12,
-                        "id": "color_contrast",
-                        "index": 9,
-                        "percentageQuestion": 4.26,
-                        "percentageSurvey": 0.48,
-                        "entity": {
-                          "name": "`color-contrast()`",
-                          "nameHtml": "<code>color-contrast()</code>",
-                          "nameClean": "color-contrast()",
-                          "id": "color_contrast",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".high-contrast {\n  color: color-contrast(#008080 vs olive, var(--myColor), #d2691e);\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.high-contrast</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">color-contrast</span>(<span class=\"hljs-number\">#008080</span> vs olive, <span class=\"hljs-built_in\">var</span>(--myColor), <span class=\"hljs-number\">#d2691e</span>);\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/contrast-color"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/mdn-css_types_color_color-contrast"
-                          }
-                        }
-                      },
-                      {
-                        "count": 12,
+                        "count": 21,
                         "id": "relative_colors",
                         "index": 10,
-                        "percentageQuestion": 4.26,
-                        "percentageSurvey": 0.48,
+                        "percentageQuestion": 3.91,
+                        "percentageSurvey": 0.45,
                         "entity": {
                           "name": "Relative Colors",
                           "nameHtml": "Relative Colors",
@@ -883,25 +872,36 @@
                         }
                       },
                       {
-                        "count": 11,
-                        "id": "dark_mode_issues",
+                        "count": 19,
+                        "id": "color_contrast",
                         "index": 11,
-                        "percentageQuestion": 3.9,
-                        "percentageSurvey": 0.44,
+                        "percentageQuestion": 3.54,
+                        "percentageSurvey": 0.41,
                         "entity": {
-                          "name": "Dark mode issues",
-                          "nameHtml": "Dark mode issues",
-                          "nameClean": "Dark mode issues",
-                          "id": "dark_mode_issues",
-                          "entityType": "default"
+                          "name": "`color-contrast()`",
+                          "nameHtml": "<code>color-contrast()</code>",
+                          "nameClean": "color-contrast()",
+                          "id": "color_contrast",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".high-contrast {\n  color: color-contrast(#008080 vs olive, var(--myColor), #d2691e);\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.high-contrast</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">color-contrast</span>(<span class=\"hljs-number\">#008080</span> vs olive, <span class=\"hljs-built_in\">var</span>(--myColor), <span class=\"hljs-number\">#d2691e</span>);\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/contrast-color"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_types_color_color-contrast"
+                          }
                         }
                       },
                       {
-                        "count": 10,
+                        "count": 19,
                         "id": "color_mix",
                         "index": 12,
-                        "percentageQuestion": 3.55,
-                        "percentageSurvey": 0.4,
+                        "percentageQuestion": 3.54,
+                        "percentageSurvey": 0.41,
                         "entity": {
                           "name": "`color-mix()`",
                           "nameHtml": "<code>color-mix()</code>",
@@ -947,18 +947,149 @@
                         }
                       },
                       {
-                        "count": 2213,
-                        "id": "no_answer",
+                        "count": 15,
+                        "id": "excessive_complexity",
                         "index": 13,
-                        "percentageQuestion": 0,
-                        "percentageSurvey": 88.66
+                        "percentageQuestion": 2.79,
+                        "percentageSurvey": 0.32,
+                        "entity": {
+                          "name": "Excessive complexity",
+                          "nameHtml": "Excessive complexity",
+                          "nameClean": "Excessive complexity",
+                          "id": "excessive_complexity",
+                          "parentId": "cognitive_overload",
+                          "entityType": "default"
+                        }
                       },
                       {
-                        "count": 220,
-                        "id": "other_answers",
+                        "count": 14,
+                        "id": "color_spaces_issues",
                         "index": 14,
-                        "percentageQuestion": 77.9,
-                        "percentageSurvey": 8.81
+                        "percentageQuestion": 2.61,
+                        "percentageSurvey": 0.3,
+                        "entity": {
+                          "id": "color_spaces_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 14,
+                        "id": "gradient_issues",
+                        "index": 15,
+                        "percentageQuestion": 2.61,
+                        "percentageSurvey": 0.3,
+                        "entity": {
+                          "id": "gradient_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 13,
+                        "id": "selecting_best_color_mode",
+                        "index": 16,
+                        "percentageQuestion": 2.42,
+                        "percentageSurvey": 0.28,
+                        "entity": {
+                          "id": "selecting_best_color_mode",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 13,
+                        "id": "too_many_choices",
+                        "index": 17,
+                        "percentageQuestion": 2.42,
+                        "percentageSurvey": 0.28,
+                        "entity": {
+                          "name": "Choice overload",
+                          "nameHtml": "Choice overload",
+                          "nameClean": "Choice overload",
+                          "description": "Overwhelming amount of options and choices",
+                          "descriptionHtml": "Overwhelming amount of options and choices",
+                          "descriptionClean": "Overwhelming amount of options and choices",
+                          "id": "too_many_choices",
+                          "parentId": "cognitive_overload",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 12,
+                        "id": "hard_to_memorize",
+                        "index": 18,
+                        "percentageQuestion": 2.23,
+                        "percentageSurvey": 0.26,
+                        "entity": {
+                          "name": "Hard to memorize",
+                          "nameHtml": "Hard to memorize",
+                          "nameClean": "Hard to memorize",
+                          "id": "hard_to_memorize",
+                          "parentId": "cognitive_overload",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 11,
+                        "id": "color_scheme",
+                        "index": 19,
+                        "percentageQuestion": 2.05,
+                        "percentageSurvey": 0.24,
+                        "entity": {
+                          "name": "`color-scheme`",
+                          "nameHtml": "<code>color-scheme</code>",
+                          "nameClean": "color-scheme",
+                          "id": "color_scheme",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".foo {\n  color-scheme: light dark;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">color-scheme</span>: light dark;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color-scheme"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_properties_color-scheme"
+                          },
+                          "webFeature": {
+                            "id": "color-scheme",
+                            "description_html": "The <code>color-scheme</code> CSS property sets which color schemes (light or dark) an element uses and may prevent automatic dark mode adjustments by the browser.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "color-scheme",
+                            "spec": [
+                              "https://drafts.csswg.org/css-color-adjust-1/#color-scheme-prop"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/color-scheme/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2022-02-03",
+                              "support": {
+                                "chrome": "98",
+                                "chrome_android": "98",
+                                "edge": "98",
+                                "firefox": "96",
+                                "firefox_android": "96",
+                                "safari": "13",
+                                "safari_ios": "13"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 4130,
+                        "id": "no_answer",
+                        "index": 20,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 88.46
+                      },
+                      {
+                        "count": 326,
+                        "id": "other_answers",
+                        "index": 21,
+                        "percentageQuestion": 60.74,
+                        "percentageSurvey": 6.91
                       }
                     ]
                   }

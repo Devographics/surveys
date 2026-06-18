@@ -8,7 +8,7 @@
               "id": "css_missing_features",
               "comments": {
                 "currentEdition": {
-                  "count": 1
+                  "count": 3
                 }
               },
               "freeform": {
@@ -346,17 +346,17 @@
                     "editionId": "css2026",
                     "year": 2026,
                     "completion": {
-                      "count": 225,
-                      "percentageSurvey": 9.01,
-                      "total": 2496
+                      "count": 406,
+                      "percentageSurvey": 8.7,
+                      "total": 4669
                     },
                     "buckets": [
                       {
-                        "count": 28,
+                        "count": 39,
                         "id": "mixins",
                         "index": 0,
-                        "percentageQuestion": 12.44,
-                        "percentageSurvey": 1.12,
+                        "percentageQuestion": 9.61,
+                        "percentageSurvey": 0.84,
                         "entity": {
                           "name": "Mixins",
                           "nameHtml": "Mixins",
@@ -369,18 +369,130 @@
                         }
                       },
                       {
-                        "count": 2271,
-                        "id": "no_answer",
+                        "count": 11,
+                        "id": "anchor_positioning",
                         "index": 1,
-                        "percentageQuestion": 0,
-                        "percentageSurvey": 90.99
+                        "percentageQuestion": 2.71,
+                        "percentageSurvey": 0.24,
+                        "entity": {
+                          "name": "Anchor Positioning",
+                          "nameHtml": "Anchor Positioning",
+                          "nameClean": "Anchor Positioning",
+                          "id": "anchor_positioning",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".anchor {\n  anchor-name: --my-anchor;\n}\n.target {\n  position: absolute;\n  position-anchor: --my-anchor;\n  position-area: start end;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.anchor</span> {\n  <span class=\"hljs-attribute\">anchor-name</span>: --my-anchor;\n}\n<span class=\"hljs-selector-class\">.target</span> {\n  <span class=\"hljs-attribute\">position</span>: absolute;\n  <span class=\"hljs-attribute\">position-anchor</span>: --my-anchor;\n  <span class=\"hljs-attribute\">position</span>-area: start end;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Anchor_positioning"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-anchor-positioning"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://kizu.dev/anchor-positioning-experiments/",
+                              "title": "Future CSS: Anchor Positioning\n"
+                            },
+                            {
+                              "url": "https://developer.chrome.com/blog/tether-elements-to-each-other-with-css-anchor-positioning/",
+                              "title": "Tether elements to each other with CSS anchor positioning\n"
+                            },
+                            {
+                              "url": "https://css-tricks.com/css-anchor-positioning-guide/",
+                              "title": "CSS Anchor Positioning Guide"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "anchor-positioning",
+                            "description_html": "Anchor positioning places an element based on the position of another element. For example, you can place a tooltip next to the content it references.",
+                            "name": "Anchor positioning",
+                            "spec": [
+                              "https://drafts.csswg.org/css-anchor-position-1/#anchoring"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/anchor-positioning/",
+                            "status": {
+                              "baseline": "false"
+                            }
+                          }
+                        }
                       },
                       {
-                        "count": 302,
-                        "id": "other_answers",
+                        "count": 11,
+                        "id": "conditional_logic",
                         "index": 2,
-                        "percentageQuestion": 134.01,
-                        "percentageSurvey": 12.09
+                        "percentageQuestion": 2.71,
+                        "percentageSurvey": 0.24,
+                        "entity": {
+                          "name": "Conditional Logic",
+                          "nameHtml": "Conditional Logic",
+                          "nameClean": "Conditional Logic",
+                          "id": "conditional_logic",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 11,
+                        "id": "media_query_variables",
+                        "index": 3,
+                        "percentageQuestion": 2.71,
+                        "percentageSurvey": 0.24,
+                        "entity": {
+                          "name": "Media Query Variables",
+                          "nameHtml": "Media Query Variables",
+                          "nameClean": "Media Query Variables",
+                          "id": "media_query_variables",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 10,
+                        "id": "masonry_layout",
+                        "index": 4,
+                        "percentageQuestion": 2.46,
+                        "percentageSurvey": 0.21,
+                        "entity": {
+                          "name": "Masonry Layout",
+                          "nameHtml": "Masonry Layout",
+                          "nameClean": "Masonry Layout",
+                          "description": "Native support for Pinterest-style free-flowing grid layouts.",
+                          "descriptionHtml": "Native support for Pinterest-style free-flowing grid layouts.",
+                          "descriptionClean": "Native support for Pinterest-style free-flowing grid layouts.",
+                          "id": "masonry_layout",
+                          "parentId": "css_layout",
+                          "entityType": "default",
+                          "webFeature": {
+                            "id": "masonry",
+                            "description_html": "The <code>display: grid-lanes</code> or <code>display: inline-grid-lanes</code> CSS declaration creates a layout where items are tightly packed, like brickwork, in parallel lanes. Items are placed one by one in the lane that has the most available space.",
+                            "group": [
+                              "layout"
+                            ],
+                            "name": "Masonry",
+                            "spec": [
+                              "https://drafts.csswg.org/css-grid-3/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/masonry/",
+                            "status": {
+                              "baseline": "false"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 4263,
+                        "id": "no_answer",
+                        "index": 5,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 91.3
+                      },
+                      {
+                        "count": 507,
+                        "id": "other_answers",
+                        "index": 6,
+                        "percentageQuestion": 125.03,
+                        "percentageSurvey": 10.74
                       }
                     ]
                   }
