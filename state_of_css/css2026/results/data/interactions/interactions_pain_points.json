@@ -327,17 +327,17 @@
                     "editionId": "css2026",
                     "year": 2026,
                     "completion": {
-                      "count": 406,
-                      "percentageSurvey": 8.63,
-                      "total": 4706
+                      "count": 421,
+                      "percentageSurvey": 8.73,
+                      "total": 4823
                     },
                     "buckets": [
                       {
-                        "count": 68,
+                        "count": 69,
                         "id": "browser_support",
                         "index": 0,
-                        "percentageQuestion": 16.75,
-                        "percentageSurvey": 1.44,
+                        "percentageQuestion": 16.39,
+                        "percentageSurvey": 1.43,
                         "entity": {
                           "name": "Browser support",
                           "nameHtml": "Browser support",
@@ -350,11 +350,11 @@
                         }
                       },
                       {
-                        "count": 50,
+                        "count": 53,
                         "id": "animations_issues",
                         "index": 1,
-                        "percentageQuestion": 12.32,
-                        "percentageSurvey": 1.06,
+                        "percentageQuestion": 12.59,
+                        "percentageSurvey": 1.1,
                         "entity": {
                           "name": "Animations",
                           "nameHtml": "Animations",
@@ -367,11 +367,11 @@
                         }
                       },
                       {
-                        "count": 34,
+                        "count": 37,
                         "id": "accessibility",
                         "index": 2,
-                        "percentageQuestion": 8.37,
-                        "percentageSurvey": 0.72,
+                        "percentageQuestion": 8.79,
+                        "percentageSurvey": 0.77,
                         "entity": {
                           "name": "Accessibility",
                           "nameHtml": "Accessibility",
@@ -384,37 +384,81 @@
                         }
                       },
                       {
-                        "count": 27,
-                        "id": "scrolling_issues",
+                        "count": 30,
+                        "id": "css_carousels",
                         "index": 3,
-                        "percentageQuestion": 6.65,
-                        "percentageSurvey": 0.57,
+                        "percentageQuestion": 7.13,
+                        "percentageSurvey": 0.62,
+                        "entity": {
+                          "name": "CSS Carousels",
+                          "nameHtml": "CSS Carousels",
+                          "nameClean": "CSS Carousels",
+                          "id": "css_carousels",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".carousel {\n  &::scroll-button(left) {\n    content: \"⬅\" / \"Scroll Left\";\n  }\n  \n  &::scroll-button(right) {\n    content: \"⮕\" / \"Scroll Right\";\n  }\n\n  &::scroll-button(*):focus-visible {\n    outline-offset: 5px;\n  }\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.carousel</span> {\n  &amp;::<span class=\"hljs-built_in\">scroll-button</span>(left) {\n    <span class=\"hljs-attribute\">content</span>: <span class=\"hljs-string\">&quot;⬅&quot;</span> / <span class=\"hljs-string\">&quot;Scroll Left&quot;</span>;\n  }\n  \n  &amp;::<span class=\"hljs-built_in\">scroll-button</span>(right) {\n    <span class=\"hljs-attribute\">content</span>: <span class=\"hljs-string\">&quot;⮕&quot;</span> / <span class=\"hljs-string\">&quot;Scroll Right&quot;</span>;\n  }\n\n  &amp;::<span class=\"hljs-built_in\">scroll-button</span>(*):focus-visible {\n    <span class=\"hljs-attribute\">outline-offset</span>: <span class=\"hljs-number\">5px</span>;\n  }\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Overflow/Carousels"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_selectors_scroll-marker"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://developer.chrome.com/blog/carousels-with-css",
+                              "title": "Carousels with CSS"
+                            },
+                            {
+                              "url": "https://chrome.dev/carousel/",
+                              "title": "CSS Carousel Gallery"
+                            },
+                            {
+                              "url": "https://css-tricks.com/css-carousels/",
+                              "title": "CSS Carousels"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "scroll-markers",
+                            "description_html": "A scroll marker scrolls a container to a scroll target. The <code>::scroll-marker</code> CSS pseudo-element selects a scroll marker in a <code>::scroll-marker-group</code> pseudo-element, generated before or after the scroll container. You can use them to navigate and style tables of contents, tab panels, and carousels.",
+                            "group": [
+                              "scroll-markers"
+                            ],
+                            "name": "Scroll markers",
+                            "spec": [
+                              "https://drafts.csswg.org/css-overflow-5/#scroll-markers"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/scroll-markers/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "135",
+                                "chrome_android": "135",
+                                "edge": "135"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 29,
+                        "id": "scrolling_issues",
+                        "index": 4,
+                        "percentageQuestion": 6.89,
+                        "percentageSurvey": 0.6,
                         "entity": {
                           "id": "scrolling_issues",
                           "entityType": "default"
                         }
                       },
                       {
-                        "count": 21,
-                        "id": "excessive_complexity",
-                        "index": 4,
-                        "percentageQuestion": 5.17,
-                        "percentageSurvey": 0.45,
-                        "entity": {
-                          "name": "Excessive complexity",
-                          "nameHtml": "Excessive complexity",
-                          "nameClean": "Excessive complexity",
-                          "id": "excessive_complexity",
-                          "parentId": "cognitive_overload",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 21,
+                        "count": 24,
                         "id": "scroll_driven_animations",
                         "index": 5,
-                        "percentageQuestion": 5.17,
-                        "percentageSurvey": 0.45,
+                        "percentageQuestion": 5.7,
+                        "percentageSurvey": 0.5,
                         "entity": {
                           "name": "Scroll-driven animations",
                           "nameHtml": "Scroll-driven animations",
@@ -472,11 +516,26 @@
                         }
                       },
                       {
+                        "count": 21,
+                        "id": "excessive_complexity",
+                        "index": 6,
+                        "percentageQuestion": 4.99,
+                        "percentageSurvey": 0.44,
+                        "entity": {
+                          "name": "Excessive complexity",
+                          "nameHtml": "Excessive complexity",
+                          "nameClean": "Excessive complexity",
+                          "id": "excessive_complexity",
+                          "parentId": "cognitive_overload",
+                          "entityType": "default"
+                        }
+                      },
+                      {
                         "count": 19,
                         "id": "state_management",
-                        "index": 6,
-                        "percentageQuestion": 4.68,
-                        "percentageSurvey": 0.4,
+                        "index": 7,
+                        "percentageQuestion": 4.51,
+                        "percentageSurvey": 0.39,
                         "entity": {
                           "name": "State management",
                           "nameHtml": "State management",
@@ -486,11 +545,11 @@
                         }
                       },
                       {
-                        "count": 13,
+                        "count": 14,
                         "id": "scrollbar_issues",
-                        "index": 7,
-                        "percentageQuestion": 3.2,
-                        "percentageSurvey": 0.28,
+                        "index": 8,
+                        "percentageQuestion": 3.33,
+                        "percentageSurvey": 0.29,
                         "entity": {
                           "id": "scrollbar_issues",
                           "entityType": "default"
@@ -499,8 +558,8 @@
                       {
                         "count": 11,
                         "id": "performance",
-                        "index": 8,
-                        "percentageQuestion": 2.71,
+                        "index": 9,
+                        "percentageQuestion": 2.61,
                         "percentageSurvey": 0.23,
                         "entity": {
                           "name": "Performance",
@@ -514,77 +573,18 @@
                         }
                       },
                       {
-                        "count": 10,
-                        "id": "css_carousels",
-                        "index": 9,
-                        "percentageQuestion": 2.46,
-                        "percentageSurvey": 0.21,
-                        "entity": {
-                          "name": "CSS Carousels",
-                          "nameHtml": "CSS Carousels",
-                          "nameClean": "CSS Carousels",
-                          "id": "css_carousels",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".carousel {\n  &::scroll-button(left) {\n    content: \"⬅\" / \"Scroll Left\";\n  }\n  \n  &::scroll-button(right) {\n    content: \"⮕\" / \"Scroll Right\";\n  }\n\n  &::scroll-button(*):focus-visible {\n    outline-offset: 5px;\n  }\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.carousel</span> {\n  &amp;::<span class=\"hljs-built_in\">scroll-button</span>(left) {\n    <span class=\"hljs-attribute\">content</span>: <span class=\"hljs-string\">&quot;⬅&quot;</span> / <span class=\"hljs-string\">&quot;Scroll Left&quot;</span>;\n  }\n  \n  &amp;::<span class=\"hljs-built_in\">scroll-button</span>(right) {\n    <span class=\"hljs-attribute\">content</span>: <span class=\"hljs-string\">&quot;⮕&quot;</span> / <span class=\"hljs-string\">&quot;Scroll Right&quot;</span>;\n  }\n\n  &amp;::<span class=\"hljs-built_in\">scroll-button</span>(*):focus-visible {\n    <span class=\"hljs-attribute\">outline-offset</span>: <span class=\"hljs-number\">5px</span>;\n  }\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Overflow/Carousels"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/mdn-css_selectors_scroll-marker"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://developer.chrome.com/blog/carousels-with-css",
-                              "title": "Carousels with CSS"
-                            },
-                            {
-                              "url": "https://chrome.dev/carousel/",
-                              "title": "CSS Carousel Gallery"
-                            },
-                            {
-                              "url": "https://css-tricks.com/css-carousels/",
-                              "title": "CSS Carousels"
-                            }
-                          ],
-                          "webFeature": {
-                            "id": "scroll-markers",
-                            "description_html": "A scroll marker scrolls a container to a scroll target. The <code>::scroll-marker</code> CSS pseudo-element selects a scroll marker in a <code>::scroll-marker-group</code> pseudo-element, generated before or after the scroll container. You can use them to navigate and style tables of contents, tab panels, and carousels.",
-                            "group": [
-                              "scroll-markers"
-                            ],
-                            "name": "Scroll markers",
-                            "spec": [
-                              "https://drafts.csswg.org/css-overflow-5/#scroll-markers"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/scroll-markers/",
-                            "status": {
-                              "baseline": "false",
-                              "support": {
-                                "chrome": "135",
-                                "chrome_android": "135",
-                                "edge": "135"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 4297,
+                        "count": 4399,
                         "id": "no_answer",
                         "index": 10,
                         "percentageQuestion": 0,
-                        "percentageSurvey": 91.31
+                        "percentageSurvey": 91.21
                       },
                       {
-                        "count": 313,
+                        "count": 319,
                         "id": "other_answers",
                         "index": 11,
-                        "percentageQuestion": 77.19,
-                        "percentageSurvey": 6.55
+                        "percentageQuestion": 75.94,
+                        "percentageSurvey": 6.54
                       }
                     ]
                   }

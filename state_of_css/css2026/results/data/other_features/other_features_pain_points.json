@@ -238,16 +238,16 @@
                     "editionId": "css2026",
                     "year": 2026,
                     "completion": {
-                      "count": 214,
-                      "percentageSurvey": 4.55,
-                      "total": 4706
+                      "count": 225,
+                      "percentageSurvey": 4.67,
+                      "total": 4823
                     },
                     "buckets": [
                       {
-                        "count": 44,
+                        "count": 45,
                         "id": "browser_support",
                         "index": 0,
-                        "percentageQuestion": 20.56,
+                        "percentageQuestion": 20,
                         "percentageSurvey": 0.93,
                         "entity": {
                           "name": "Browser support",
@@ -264,8 +264,8 @@
                         "count": 19,
                         "id": "css_nesting",
                         "index": 1,
-                        "percentageQuestion": 8.88,
-                        "percentageSurvey": 0.4,
+                        "percentageQuestion": 8.44,
+                        "percentageSurvey": 0.39,
                         "entity": {
                           "name": "CSS Nesting",
                           "nameHtml": "CSS Nesting",
@@ -314,11 +314,11 @@
                         }
                       },
                       {
-                        "count": 17,
+                        "count": 18,
                         "id": "excessive_complexity",
                         "index": 2,
-                        "percentageQuestion": 7.94,
-                        "percentageSurvey": 0.36,
+                        "percentageQuestion": 8,
+                        "percentageSurvey": 0.37,
                         "entity": {
                           "name": "Excessive complexity",
                           "nameHtml": "Excessive complexity",
@@ -329,18 +329,116 @@
                         }
                       },
                       {
-                        "count": 4490,
-                        "id": "no_answer",
+                        "count": 10,
+                        "id": "cascade_layers",
                         "index": 3,
-                        "percentageQuestion": 0,
-                        "percentageSurvey": 95.41
+                        "percentageQuestion": 4.44,
+                        "percentageSurvey": 0.21,
+                        "entity": {
+                          "name": "Cascade Layers",
+                          "nameHtml": "Cascade Layers",
+                          "nameClean": "Cascade Layers",
+                          "id": "cascade_layers",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "@layer layer-name {rules}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">@layer</span> layer-name {rules}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@layer"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-cascade-layers"
+                          },
+                          "webFeature": {
+                            "id": "cascade-layers",
+                            "description_html": "The <code>@layer</code> CSS at-rule avoids specificity conflicts by providing priority levels for different groups of CSS rules, such as low-priority styles like resets, and high-priority styles like UI components.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "Cascade layers",
+                            "spec": [
+                              "https://drafts.csswg.org/css-cascade-5/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/cascade-layers/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2022-03-14",
+                              "support": {
+                                "chrome": "99",
+                                "chrome_android": "99",
+                                "edge": "99",
+                                "firefox": "97",
+                                "firefox_android": "97",
+                                "safari": "15.4",
+                                "safari_ios": "15.4"
+                              }
+                            }
+                          }
+                        }
                       },
                       {
-                        "count": 206,
-                        "id": "other_answers",
+                        "count": 10,
+                        "id": "sibling_count",
                         "index": 4,
-                        "percentageQuestion": 96.28,
-                        "percentageSurvey": 4.34
+                        "percentageQuestion": 4.44,
+                        "percentageSurvey": 0.21,
+                        "entity": {
+                          "name": "`sibling-count()`",
+                          "nameHtml": "<code>sibling-count()</code>",
+                          "nameClean": "sibling-count()",
+                          "id": "sibling_count",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/sibling-count"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_types_sibling-count"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://www.w3.org/TR/css-values-5/#tree-counting",
+                              "title": "Tree Counting Functions: the sibling-count() and sibling-index() notations"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "sibling-count",
+                            "description_html": "The <code>sibling-count()</code> and <code>sibling-index()</code> CSS functions return integers that are useful to style elements based on their positions among siblings or on the number of siblings, for example as part of a <code>calc()</code> expression.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "sibling-count() and sibling-index()",
+                            "spec": [
+                              "https://drafts.csswg.org/css-values-5/#tree-counting"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/sibling-count/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "138",
+                                "chrome_android": "138",
+                                "edge": "138",
+                                "safari": "26.2",
+                                "safari_ios": "26.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 4596,
+                        "id": "no_answer",
+                        "index": 5,
+                        "percentageQuestion": 0,
+                        "percentageSurvey": 95.29
+                      },
+                      {
+                        "count": 210,
+                        "id": "other_answers",
+                        "index": 6,
+                        "percentageQuestion": 93.25,
+                        "percentageSurvey": 4.31
                       }
                     ]
                   }
