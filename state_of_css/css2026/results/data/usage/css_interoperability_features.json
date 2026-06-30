@@ -8,7 +8,7 @@
               "id": "css_interoperability_features",
               "comments": {
                 "currentEdition": {
-                  "count": 8
+                  "count": 6
                 }
               },
               "freeform": {
@@ -447,14 +447,7 @@
                         "id": "conditional_logic",
                         "index": 10,
                         "percentageQuestion": 3.54,
-                        "percentageSurvey": 0.35,
-                        "entity": {
-                          "name": "Conditional Logic",
-                          "nameHtml": "Conditional Logic",
-                          "nameClean": "Conditional Logic",
-                          "id": "conditional_logic",
-                          "entityType": "default"
-                        }
+                        "percentageSurvey": 0.35
                       },
                       {
                         "count": 14,
@@ -768,17 +761,17 @@
                     "editionId": "css2026",
                     "year": 2026,
                     "completion": {
-                      "count": 614,
-                      "percentageSurvey": 12.73,
-                      "total": 4823
+                      "count": 632,
+                      "percentageSurvey": 12.89,
+                      "total": 4902
                     },
                     "buckets": [
                       {
-                        "count": 122,
+                        "count": 123,
                         "id": "anchor_positioning",
                         "index": 0,
-                        "percentageQuestion": 19.87,
-                        "percentageSurvey": 2.53,
+                        "percentageQuestion": 19.46,
+                        "percentageSurvey": 2.51,
                         "entity": {
                           "name": "Anchor Positioning",
                           "nameHtml": "Anchor Positioning",
@@ -825,10 +818,10 @@
                         }
                       },
                       {
-                        "count": 56,
+                        "count": 57,
                         "id": "view_transitions",
                         "index": 1,
-                        "percentageQuestion": 9.12,
+                        "percentageQuestion": 9.02,
                         "percentageSurvey": 1.16,
                         "entity": {
                           "name": "View Transition API",
@@ -879,25 +872,63 @@
                         }
                       },
                       {
-                        "count": 44,
-                        "id": "conditional_logic",
+                        "count": 45,
+                        "id": "if_function",
                         "index": 2,
-                        "percentageQuestion": 7.17,
-                        "percentageSurvey": 0.91,
+                        "percentageQuestion": 7.12,
+                        "percentageSurvey": 0.92,
                         "entity": {
-                          "name": "Conditional Logic",
-                          "nameHtml": "Conditional Logic",
-                          "nameClean": "Conditional Logic",
-                          "id": "conditional_logic",
-                          "entityType": "default"
+                          "name": "`if()`",
+                          "nameHtml": "<code>if()</code>",
+                          "nameClean": "if()",
+                          "description": "The `if()` CSS function is an inline conditional value that returns a value based on a set of conditions.",
+                          "descriptionHtml": "The <code>if()</code> CSS function is an inline conditional value that returns a value based on a set of conditions.",
+                          "descriptionClean": "The if() CSS function is an inline conditional value that returns a value based on a set of conditions.",
+                          "id": "if_function",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "div {\n  color: var(--color);\n  background-color: if(style(--color: white): black; else: white);\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-tag\">div</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">var</span>(--color);\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">if</span>(<span class=\"hljs-built_in\">style</span>(--color: white): black; else: white);\n}"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://chromestatus.com/feature/6313805904347136",
+                              "title": "Feature: CSS if() function"
+                            },
+                            {
+                              "url": "https://css-tricks.com/if-css-gets-inline-conditionals/",
+                              "title": "“If” CSS Gets Inline Conditionals"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "if",
+                            "description_html": "The <code>if()</code> CSS function is an inline conditional value that returns a value based on a set of conditions.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "if()",
+                            "spec": [
+                              "https://drafts.csswg.org/css-values-5/#if-notation"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/if/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "137",
+                                "chrome_android": "137",
+                                "edge": "137"
+                              }
+                            }
+                          }
                         }
                       },
                       {
-                        "count": 36,
+                        "count": 40,
                         "id": "safari_unsupported_features",
                         "index": 3,
-                        "percentageQuestion": 5.86,
-                        "percentageSurvey": 0.75,
+                        "percentageQuestion": 6.33,
+                        "percentageSurvey": 0.82,
                         "entity": {
                           "id": "safari_unsupported_features",
                           "entityType": "default"
@@ -905,72 +936,10 @@
                       },
                       {
                         "count": 35,
-                        "id": "browser_support",
-                        "index": 4,
-                        "percentageQuestion": 5.7,
-                        "percentageSurvey": 0.73,
-                        "entity": {
-                          "name": "Browser support",
-                          "nameHtml": "Browser support",
-                          "nameClean": "Browser support",
-                          "description": "Browser support, compatibility, and consistency issues.",
-                          "descriptionHtml": "Browser support, compatibility, and consistency issues.",
-                          "descriptionClean": "Browser support, compatibility, and consistency issues.",
-                          "id": "browser_support",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 35,
-                        "id": "grid",
-                        "index": 5,
-                        "percentageQuestion": 5.7,
-                        "percentageSurvey": 0.73,
-                        "entity": {
-                          "name": "Grid",
-                          "nameHtml": "Grid",
-                          "nameClean": "Grid",
-                          "id": "grid",
-                          "entityType": "feature",
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-grid"
-                          },
-                          "webFeature": {
-                            "id": "grid",
-                            "description_html": "CSS grid is a two-dimensional layout system, which lays content out in rows and columns.",
-                            "group": [
-                              "grid"
-                            ],
-                            "name": "Grid",
-                            "spec": [
-                              "https://drafts.csswg.org/css-grid-3/"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/grid/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2017-10-17",
-                              "support": {
-                                "chrome": "57",
-                                "chrome_android": "57",
-                                "edge": "16",
-                                "firefox": "52",
-                                "firefox_android": "52",
-                                "safari": "10.1",
-                                "safari_ios": "10.3"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 34,
                         "id": "scroll_driven_animations",
-                        "index": 6,
+                        "index": 4,
                         "percentageQuestion": 5.54,
-                        "percentageSurvey": 0.7,
+                        "percentageSurvey": 0.71,
                         "entity": {
                           "name": "Scroll-driven animations",
                           "nameHtml": "Scroll-driven animations",
@@ -1028,11 +997,11 @@
                         }
                       },
                       {
-                        "count": 23,
+                        "count": 24,
                         "id": "css_nesting",
-                        "index": 7,
-                        "percentageQuestion": 3.75,
-                        "percentageSurvey": 0.48,
+                        "index": 5,
+                        "percentageQuestion": 3.8,
+                        "percentageSurvey": 0.49,
                         "entity": {
                           "name": "CSS Nesting",
                           "nameHtml": "CSS Nesting",
@@ -1081,11 +1050,11 @@
                         }
                       },
                       {
-                        "count": 20,
+                        "count": 21,
                         "id": "at_container_size",
-                        "index": 8,
-                        "percentageQuestion": 3.26,
-                        "percentageSurvey": 0.41,
+                        "index": 6,
+                        "percentageQuestion": 3.32,
+                        "percentageSurvey": 0.43,
                         "entity": {
                           "name": "`@container` size queries",
                           "nameHtml": "<code>@container</code> size queries",
@@ -1131,11 +1100,103 @@
                         }
                       },
                       {
-                        "count": 18,
+                        "count": 20,
+                        "id": "advanced_attr_function",
+                        "index": 7,
+                        "percentageQuestion": 3.16,
+                        "percentageSurvey": 0.41,
+                        "entity": {
+                          "name": "Advanced `attr()`",
+                          "nameHtml": "Advanced <code>attr()</code>",
+                          "nameClean": "Advanced attr()",
+                          "description": "Support for properties other than content",
+                          "descriptionHtml": "Support for properties other than content",
+                          "descriptionClean": "Support for properties other than content",
+                          "id": "advanced_attr_function",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".title {\n  background-color: attr(data-color type(<color>));\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.title</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">attr</span>(data-color <span class=\"hljs-built_in\">type</span>(&lt;color&gt;));\n}"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://una.im/advanced-attr/",
+                              "title": "New capabilities for attr()"
+                            },
+                            {
+                              "url": "https://ishadeed.com/article/modern-attr/",
+                              "title": "First Look at The Modern attr()"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "attr",
+                            "description_html": "The <code>attr()</code> CSS function, in the context of any property, returns the value of an attribute of an HTML element, with the option to return it as a specific type or unit. You can set a default value for missing or invalid attributes.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "attr()",
+                            "spec": [
+                              "https://drafts.csswg.org/css-values-5/#attr-notation"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/attr/",
+                            "status": {
+                              "baseline": "false"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 20,
+                        "id": "grid",
+                        "index": 8,
+                        "percentageQuestion": 3.16,
+                        "percentageSurvey": 0.41,
+                        "entity": {
+                          "name": "Grid",
+                          "nameHtml": "Grid",
+                          "nameClean": "Grid",
+                          "id": "grid",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-grid"
+                          },
+                          "webFeature": {
+                            "id": "grid",
+                            "description_html": "CSS grid is a two-dimensional layout system, which lays content out in rows and columns.",
+                            "group": [
+                              "grid"
+                            ],
+                            "name": "Grid",
+                            "spec": [
+                              "https://drafts.csswg.org/css-grid-3/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/grid/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2017-10-17",
+                              "support": {
+                                "chrome": "57",
+                                "chrome_android": "57",
+                                "edge": "16",
+                                "firefox": "52",
+                                "firefox_android": "52",
+                                "safari": "10.1",
+                                "safari_ios": "10.3"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 19,
                         "id": "css_carousels",
                         "index": 9,
-                        "percentageQuestion": 2.93,
-                        "percentageSurvey": 0.37,
+                        "percentageQuestion": 3.01,
+                        "percentageSurvey": 0.39,
                         "entity": {
                           "name": "CSS Carousels",
                           "nameHtml": "CSS Carousels",
@@ -1190,11 +1251,61 @@
                         }
                       },
                       {
-                        "count": 17,
-                        "id": "css_functions",
+                        "count": 19,
+                        "id": "css_grid_lanes",
                         "index": 10,
-                        "percentageQuestion": 2.77,
-                        "percentageSurvey": 0.35,
+                        "percentageQuestion": 3.01,
+                        "percentageSurvey": 0.39,
+                        "entity": {
+                          "name": "Grid Lanes",
+                          "nameHtml": "Grid Lanes",
+                          "nameClean": "Grid Lanes",
+                          "id": "css_grid_lanes",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".container {\n  display: grid-lanes;\n  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));\n  gap: 16px;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.container</span> {\n  <span class=\"hljs-attribute\">display</span>: grid-lanes;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-built_in\">repeat</span>(auto-fill, <span class=\"hljs-built_in\">minmax</span>(<span class=\"hljs-number\">250px</span>, <span class=\"hljs-number\">1</span>fr));\n  <span class=\"hljs-attribute\">gap</span>: <span class=\"hljs-number\">16px</span>;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-grid-lanes"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://webkit.org/blog/17660/introducing-css-grid-lanes/",
+                              "title": "Introducing CSS Grid Lanes"
+                            },
+                            {
+                              "url": "https://css-tricks.com/masonry-layout-is-now-grid-lanes/",
+                              "title": "Masonry Layout is Now grid-lanes"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "masonry",
+                            "description_html": "The <code>display: grid-lanes</code> or <code>display: inline-grid-lanes</code> CSS declaration creates a layout where items are tightly packed, like brickwork, in parallel lanes. Items are placed one by one in the lane that has the most available space.",
+                            "group": [
+                              "layout"
+                            ],
+                            "name": "Masonry",
+                            "spec": [
+                              "https://drafts.csswg.org/css-grid-3/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/masonry/",
+                            "status": {
+                              "baseline": "false"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 18,
+                        "id": "css_functions",
+                        "index": 11,
+                        "percentageQuestion": 2.85,
+                        "percentageSurvey": 0.37,
                         "entity": {
                           "name": "CSS Functions",
                           "nameHtml": "CSS Functions",
@@ -1204,10 +1315,150 @@
                         }
                       },
                       {
+                        "count": 17,
+                        "id": "has_selector",
+                        "index": 12,
+                        "percentageQuestion": 2.69,
+                        "percentageSurvey": 0.35,
+                        "entity": {
+                          "name": "`:has()`",
+                          "nameHtml": "<code>:has()</code>",
+                          "nameClean": ":has()",
+                          "id": "has_selector",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "a:has(> img) {\n  border: 2px solid grey;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-tag\">a</span><span class=\"hljs-selector-pseudo\">:has</span>(&gt; <span class=\"hljs-selector-tag\">img</span>) {\n  <span class=\"hljs-attribute\">border</span>: <span class=\"hljs-number\">2px</span> solid grey;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:has"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-has"
+                          },
+                          "webFeature": {
+                            "id": "has",
+                            "description_html": "The <code>:has()</code> CSS functional pseudo-class matches an element if any of the selectors passed as parameters would match at least one element.",
+                            "group": [
+                              "selectors"
+                            ],
+                            "name": ":has()",
+                            "spec": [
+                              "https://drafts.csswg.org/selectors-4/#relational"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/has/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2023-12-19",
+                              "support": {
+                                "chrome": "105",
+                                "chrome_android": "105",
+                                "edge": "105",
+                                "firefox": "121",
+                                "firefox_android": "121",
+                                "safari": "15.4",
+                                "safari_ios": "15.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 16,
+                        "id": "at_container_style",
+                        "index": 13,
+                        "percentageQuestion": 2.53,
+                        "percentageSurvey": 0.33,
+                        "entity": {
+                          "name": "`@container` style queries",
+                          "nameHtml": "<code>@container</code> style queries",
+                          "nameClean": "@container style queries",
+                          "description": "Style‑container queries and related primitives used for component theming/responsiveness.",
+                          "descriptionHtml": "Style‑container queries and related primitives used for component theming/responsiveness.",
+                          "descriptionClean": "Style‑container queries and related primitives used for component theming/responsiveness.",
+                          "id": "at_container_style",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "@container style(--fontColor: green) {\n  /* <stylesheet> */\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">@container</span> style(<span class=\"hljs-attribute\">--fontColor</span>: green) {\n  <span class=\"hljs-comment\">/* &lt;stylesheet&gt; */</span>\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-container-queries-style"
+                          },
+                          "webFeature": {
+                            "id": "container-style-queries",
+                            "description_html": "Container style queries with the <code>@container</code> at-rule apply styles to an element based on the values of custom properties of its container.",
+                            "group": [
+                              "container-queries"
+                            ],
+                            "name": "Container style queries",
+                            "spec": [
+                              "https://drafts.csswg.org/css-conditional-5/#style-container"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/container-style-queries/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "111",
+                                "chrome_android": "111",
+                                "edge": "111",
+                                "safari": "18",
+                                "safari_ios": "18"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 16,
+                        "id": "line_clamp",
+                        "index": 14,
+                        "percentageQuestion": 2.53,
+                        "percentageSurvey": 0.33,
+                        "entity": {
+                          "name": "`line-clamp`",
+                          "nameHtml": "<code>line-clamp</code>",
+                          "nameClean": "line-clamp",
+                          "id": "line_clamp",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "p {\n  display: -webkit-box;\n  -webkit-line-clamp: 2;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-tag\">p</span> {\n  <span class=\"hljs-attribute\">display</span>: -webkit-box;\n  -webkit-<span class=\"hljs-selector-tag\">line</span>-clamp: <span class=\"hljs-number\">2</span>;\n  -webkit-<span class=\"hljs-attribute\">box-orient</span>: vertical;\n  <span class=\"hljs-attribute\">overflow</span>: hidden;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/line-clamp"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-line-clamp"
+                          },
+                          "webFeature": {
+                            "id": "line-clamp",
+                            "description_html": "The <code>line-clamp</code> CSS property limits the text in a block container to a certain number of lines. The prefixed <code>-webkit-line-clamp</code> is widely supported but only works with <code>-webkit-box-orient: vertical</code> in combination with <code>display: -webkit-box</code> or <code>display: -webkit-inline-box</code>.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "line-clamp",
+                            "spec": [
+                              "https://drafts.csswg.org/css-overflow-4/#line-clamp"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/line-clamp/",
+                            "status": {
+                              "baseline": "false"
+                            }
+                          }
+                        }
+                      },
+                      {
                         "count": 16,
                         "id": "sibling_index",
-                        "index": 11,
-                        "percentageQuestion": 2.61,
+                        "index": 15,
+                        "percentageQuestion": 2.53,
                         "percentageSurvey": 0.33,
                         "entity": {
                           "name": "`sibling-index()`",
@@ -1258,8 +1509,8 @@
                       {
                         "count": 16,
                         "id": "subgrid",
-                        "index": 12,
-                        "percentageQuestion": 2.61,
+                        "index": 16,
+                        "percentageQuestion": 2.53,
                         "percentageSurvey": 0.33,
                         "entity": {
                           "name": "Subgrid",
@@ -1307,100 +1558,10 @@
                         }
                       },
                       {
-                        "count": 15,
-                        "id": "at_container_style",
-                        "index": 13,
-                        "percentageQuestion": 2.44,
-                        "percentageSurvey": 0.31,
-                        "entity": {
-                          "name": "`@container` style queries",
-                          "nameHtml": "<code>@container</code> style queries",
-                          "nameClean": "@container style queries",
-                          "description": "Style‑container queries and related primitives used for component theming/responsiveness.",
-                          "descriptionHtml": "Style‑container queries and related primitives used for component theming/responsiveness.",
-                          "descriptionClean": "Style‑container queries and related primitives used for component theming/responsiveness.",
-                          "id": "at_container_style",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": "@container style(--fontColor: green) {\n  /* <stylesheet> */\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-keyword\">@container</span> style(<span class=\"hljs-attribute\">--fontColor</span>: green) {\n  <span class=\"hljs-comment\">/* &lt;stylesheet&gt; */</span>\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-container-queries-style"
-                          },
-                          "webFeature": {
-                            "id": "container-style-queries",
-                            "description_html": "Container style queries with the <code>@container</code> at-rule apply styles to an element based on the values of custom properties of its container.",
-                            "group": [
-                              "container-queries"
-                            ],
-                            "name": "Container style queries",
-                            "spec": [
-                              "https://drafts.csswg.org/css-conditional-5/#style-container"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/container-style-queries/",
-                            "status": {
-                              "baseline": "false",
-                              "support": {
-                                "chrome": "111",
-                                "chrome_android": "111",
-                                "edge": "111",
-                                "safari": "18",
-                                "safari_ios": "18"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 14,
-                        "id": "line_clamp",
-                        "index": 14,
-                        "percentageQuestion": 2.28,
-                        "percentageSurvey": 0.29,
-                        "entity": {
-                          "name": "`line-clamp`",
-                          "nameHtml": "<code>line-clamp</code>",
-                          "nameClean": "line-clamp",
-                          "id": "line_clamp",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": "p {\n  display: -webkit-box;\n  -webkit-line-clamp: 2;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-tag\">p</span> {\n  <span class=\"hljs-attribute\">display</span>: -webkit-box;\n  -webkit-<span class=\"hljs-selector-tag\">line</span>-clamp: <span class=\"hljs-number\">2</span>;\n  -webkit-<span class=\"hljs-attribute\">box-orient</span>: vertical;\n  <span class=\"hljs-attribute\">overflow</span>: hidden;\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/line-clamp"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-line-clamp"
-                          },
-                          "webFeature": {
-                            "id": "line-clamp",
-                            "description_html": "The <code>line-clamp</code> CSS property limits the text in a block container to a certain number of lines. The prefixed <code>-webkit-line-clamp</code> is widely supported but only works with <code>-webkit-box-orient: vertical</code> in combination with <code>display: -webkit-box</code> or <code>display: -webkit-inline-box</code>.",
-                            "group": [
-                              "css"
-                            ],
-                            "name": "line-clamp",
-                            "spec": [
-                              "https://drafts.csswg.org/css-overflow-4/#line-clamp"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/line-clamp/",
-                            "status": {
-                              "baseline": "false"
-                            }
-                          }
-                        }
-                      },
-                      {
                         "count": 14,
                         "id": "sibling_count",
-                        "index": 15,
-                        "percentageQuestion": 2.28,
+                        "index": 17,
+                        "percentageQuestion": 2.22,
                         "percentageSurvey": 0.29,
                         "entity": {
                           "name": "`sibling-count()`",
@@ -1447,8 +1608,8 @@
                       {
                         "count": 13,
                         "id": "better_scoping",
-                        "index": 16,
-                        "percentageQuestion": 2.12,
+                        "index": 18,
+                        "percentageQuestion": 2.06,
                         "percentageSurvey": 0.27,
                         "entity": {
                           "name": "Scoping",
@@ -1461,8 +1622,8 @@
                       {
                         "count": 13,
                         "id": "calc_size",
-                        "index": 17,
-                        "percentageQuestion": 2.12,
+                        "index": 19,
+                        "percentageQuestion": 2.06,
                         "percentageSurvey": 0.27,
                         "entity": {
                           "name": "`calc-size()`",
@@ -1507,96 +1668,18 @@
                         }
                       },
                       {
-                        "count": 13,
-                        "id": "popover_api",
-                        "index": 18,
-                        "percentageQuestion": 2.12,
-                        "percentageSurvey": 0.27,
-                        "entity": {
-                          "name": "`popover` attribute (Popover API)",
-                          "nameHtml": "<code>popover</code> attribute (Popover API)",
-                          "nameClean": "popover attribute (Popover API)",
-                          "description": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
-                          "descriptionHtml": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
-                          "descriptionClean": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
-                          "id": "popover_api",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "html",
-                            "code": "<button popovertarget=\"foo\">Toggle the popover</button>\n<div id=\"foo\" popover>Popover content</div>",
-                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">popovertarget</span>=<span class=\"hljs-string\">&quot;foo&quot;</span>&gt;</span>Toggle the popover<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;foo&quot;</span> <span class=\"hljs-attr\">popover</span>&gt;</span>Popover content<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Popover_API"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/mdn-html_global_attributes_popover"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://html.spec.whatwg.org/multipage/popover.html#dom-popover",
-                              "title": "HTML Standard"
-                            },
-                            {
-                              "url": "https://github.com/w3ctag/design-reviews/issues/743",
-                              "title": "The Popover API (previously Popup) · Issue #743 · w3ctag/design-reviews · GitHub"
-                            },
-                            {
-                              "url": "https://open-ui.org/components/popover.research.explainer/",
-                              "title": "Popover API (Explainer) | Open UI"
-                            }
-                          ],
-                          "webFeature": {
-                            "id": "popover",
-                            "description_html": "The <code>popover</code> HTML attribute creates an overlay to display content on top of other page content. Popovers can be shown declaratively using HTML, or using the <code>showPopover()</code> method.",
-                            "group": [
-                              "html"
-                            ],
-                            "name": "Popover",
-                            "spec": [
-                              "https://html.spec.whatwg.org/multipage/popover.html"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/popover/",
-                            "status": {
-                              "baseline": "low",
-                              "baseline_low_date": "2025-01-27",
-                              "support": {
-                                "chrome": "116",
-                                "chrome_android": "116",
-                                "edge": "116",
-                                "firefox": "125",
-                                "firefox_android": "125",
-                                "safari": "17",
-                                "safari_ios": "18.3"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 13,
-                        "id": "scrollbar_styling",
-                        "index": 19,
-                        "percentageQuestion": 2.12,
-                        "percentageSurvey": 0.27,
-                        "entity": {
-                          "id": "scrollbar_styling",
-                          "entityType": "feature"
-                        }
-                      },
-                      {
-                        "count": 4209,
+                        "count": 4270,
                         "id": "no_answer",
                         "index": 20,
                         "percentageQuestion": 0,
-                        "percentageSurvey": 87.27
+                        "percentageSurvey": 87.11
                       },
                       {
-                        "count": 532,
+                        "count": 558,
                         "id": "other_answers",
                         "index": 21,
-                        "percentageQuestion": 86.59,
-                        "percentageSurvey": 10.95
+                        "percentageQuestion": 88.37,
+                        "percentageSurvey": 11.27
                       }
                     ]
                   }
