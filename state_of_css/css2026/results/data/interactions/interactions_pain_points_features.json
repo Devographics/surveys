@@ -1,0 +1,1178 @@
+{
+  "dataAPI": {
+    "surveys": {
+      "state_of_css": {
+        "css2026": {
+          "interactions": {
+            "interactions_pain_points_features": {
+              "id": "interactions_pain_points",
+              "freeform": {
+                "allEditions": [
+                  {
+                    "_metadata": {
+                      "axis1Sort": {
+                        "property": "count",
+                        "order": "desc"
+                      },
+                      "limit": 25,
+                      "cutoff": 5
+                    },
+                    "editionId": "css2025",
+                    "year": 2025,
+                    "completion": {
+                      "count": 321,
+                      "percentageSurvey": 5.83,
+                      "total": 5506
+                    },
+                    "buckets": [
+                      {
+                        "count": 25,
+                        "id": "scroll_driven_animations",
+                        "index": 0,
+                        "percentageQuestion": 7.79,
+                        "percentageSurvey": 0.45,
+                        "entity": {
+                          "name": "Scroll-driven animations",
+                          "nameHtml": "Scroll-driven animations",
+                          "nameClean": "Scroll-driven animations",
+                          "id": "scroll_driven_animations",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "html {\n  scroll-timeline: --page-scroll block;\n}\n\n@keyframes grow-progress {\n  from { transform: scaleX(0); }\n  to { transform: scaleX(1); }\n}\n\n#progress {\n  animation: grow-progress auto linear;\n  animation-timeline: --page-scroll;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-tag\">html</span> {\n  <span class=\"hljs-attribute\">scroll-timeline</span>: --page-scroll block;\n}\n\n<span class=\"hljs-keyword\">@keyframes</span> grow-progress {\n  <span class=\"hljs-selector-tag\">from</span> { <span class=\"hljs-attribute\">transform</span>: <span class=\"hljs-built_in\">scaleX</span>(<span class=\"hljs-number\">0</span>); }\n  <span class=\"hljs-selector-tag\">to</span> { <span class=\"hljs-attribute\">transform</span>: <span class=\"hljs-built_in\">scaleX</span>(<span class=\"hljs-number\">1</span>); }\n}\n\n<span class=\"hljs-selector-id\">#progress</span> {\n  <span class=\"hljs-attribute\">animation</span>: grow-progress auto linear;\n  <span class=\"hljs-attribute\">animation-timeline</span>: --page-scroll;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll-driven_animations"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_properties_animation-timeline"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://scroll-driven-animations.style/",
+                              "title": "Scroll-driven Animations"
+                            },
+                            {
+                              "url": "https://css-tricks.com/unleash-the-power-of-scroll-driven-animations/",
+                              "title": "Unleash the Power of Scroll-Driven Animations"
+                            },
+                            {
+                              "url": "https://developer.chrome.com/docs/css-ui/scroll-driven-animations",
+                              "title": "Animate elements on scroll with Scroll-driven animations"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "scroll-driven-animations",
+                            "description_html": "The <code>animation-timeline</code>, <code>scroll-timeline</code>, and <code>view-timeline</code> CSS properties advance animations based on the user's scroll position.",
+                            "group": [
+                              "scrolling",
+                              "animation"
+                            ],
+                            "name": "Scroll-driven animations",
+                            "spec": [
+                              "https://drafts.csswg.org/scroll-animations-1/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/scroll-driven-animations/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "115",
+                                "chrome_android": "115",
+                                "edge": "115",
+                                "safari": "26",
+                                "safari_ios": "26"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 22,
+                        "id": "view_transitions",
+                        "index": 1,
+                        "percentageQuestion": 6.85,
+                        "percentageSurvey": 0.4,
+                        "entity": {
+                          "name": "View Transition API",
+                          "nameHtml": "View Transition API",
+                          "nameClean": "View Transition API",
+                          "id": "view_transitions",
+                          "parentId": "animations_issues",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "::view-transition-old(main-image),\n::view-transition-new(main-image) {\n  transform-origin: right top;\n}\n\n::view-transition-new(main-image) {\n  animation: 400ms ease-out both grow;\n}\n\nfigure {\n  view-transition-name: main-image;\n}\n",
+                            "codeHighlighted": "::<span class=\"hljs-built_in\">view-transition-old</span>(main-image),\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">transform-origin</span>: right top;\n}\n\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">animation</span>: <span class=\"hljs-number\">400ms</span> ease-out both grow;\n}\n\n<span class=\"hljs-selector-tag\">figure</span> {\n  <span class=\"hljs-attribute\">view-transition-name</span>: main-image;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-api_viewtransition"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://developer.chrome.com/docs/web-platform/view-transitions/",
+                              "title": "Smooth and simple transitions with the View Transitions API"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "cross-document-view-transitions",
+                            "description_html": "The <code>@view-transition</code> CSS rule sets whether a document opts-in to transitions between documents in a multi-page application. Both the old and new document must opt-in for a transition to be triggered.",
+                            "group": [
+                              "view-transitions"
+                            ],
+                            "name": "Cross-document view transitions",
+                            "spec": [
+                              "https://drafts.csswg.org/css-view-transitions-2/#cross-doc-opt-in"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/cross-document-view-transitions/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "126",
+                                "chrome_android": "126",
+                                "edge": "126",
+                                "safari": "18.2",
+                                "safari_ios": "18.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 11,
+                        "id": "discrete_properties_animations",
+                        "index": 2,
+                        "percentageQuestion": 3.43,
+                        "percentageSurvey": 0.2,
+                        "entity": {
+                          "name": "Discrete Properties Animations",
+                          "nameHtml": "Discrete Properties Animations",
+                          "nameClean": "Discrete Properties Animations",
+                          "description": "Animate to and from properties such as `display: none`",
+                          "descriptionHtml": "Animate to and from properties such as <code>display: none</code>",
+                          "descriptionClean": "Animate to and from properties such as display: none",
+                          "id": "discrete_properties_animations",
+                          "parentId": "animations_issues",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "/*   IS-OPEN STATE   */\ndialog[open] {\n  translate: 0 0;\n}\n\n/*   EXIT STATE   */\ndialog {\n  transition: opacity 1s, display 1s allow-discrete, overlay 1s allow-discrete;\n  translate: 0 100vh;\n}\n\n/*   0. BEFORE-OPEN STATE   */\n@starting-style {\n  dialog[open] {\n    translate: 0 100vh;\n  }\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-comment\">/*   IS-OPEN STATE   */</span>\ndialog<span class=\"hljs-selector-attr\">[open]</span> {\n  <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">0</span>;\n}\n\n<span class=\"hljs-comment\">/*   EXIT STATE   */</span>\ndialog {\n  <span class=\"hljs-attribute\">transition</span>: opacity <span class=\"hljs-number\">1s</span>, display <span class=\"hljs-number\">1s</span> allow-discrete, overlay <span class=\"hljs-number\">1s</span> allow-discrete;\n  <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n}\n\n<span class=\"hljs-comment\">/*   0. BEFORE-OPEN STATE   */</span>\n<span class=\"hljs-keyword\">@starting-style</span> {\n  dialog<span class=\"hljs-selector-attr\">[open]</span> {\n    <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n  }\n}"
+                          },
+                          "webFeature": {
+                            "id": "transition-behavior",
+                            "description_html": "The <code>transition-behavior: allow-discrete</code> CSS declaration allows transitions for properties whose animation behavior is discrete. Such properties can't be interpolated and swap from their start value to the end value at 50%.",
+                            "group": [
+                              "transitions"
+                            ],
+                            "name": "transition-behavior",
+                            "spec": [
+                              "https://drafts.csswg.org/css-transitions-2/#transition-behavior-property"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/transition-behavior/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-08-06",
+                              "support": {
+                                "chrome": "117",
+                                "chrome_android": "117",
+                                "edge": "117",
+                                "firefox": "129",
+                                "firefox_android": "129",
+                                "safari": "17.4",
+                                "safari_ios": "17.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 9,
+                        "id": "css_carousels",
+                        "index": 3,
+                        "percentageQuestion": 2.8,
+                        "percentageSurvey": 0.16,
+                        "entity": {
+                          "name": "CSS Carousels",
+                          "nameHtml": "CSS Carousels",
+                          "nameClean": "CSS Carousels",
+                          "id": "css_carousels",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".carousel {\n  &::scroll-button(left) {\n    content: \"⬅\" / \"Scroll Left\";\n  }\n  \n  &::scroll-button(right) {\n    content: \"⮕\" / \"Scroll Right\";\n  }\n\n  &::scroll-button(*):focus-visible {\n    outline-offset: 5px;\n  }\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.carousel</span> {\n  &amp;::<span class=\"hljs-built_in\">scroll-button</span>(left) {\n    <span class=\"hljs-attribute\">content</span>: <span class=\"hljs-string\">&quot;⬅&quot;</span> / <span class=\"hljs-string\">&quot;Scroll Left&quot;</span>;\n  }\n  \n  &amp;::<span class=\"hljs-built_in\">scroll-button</span>(right) {\n    <span class=\"hljs-attribute\">content</span>: <span class=\"hljs-string\">&quot;⮕&quot;</span> / <span class=\"hljs-string\">&quot;Scroll Right&quot;</span>;\n  }\n\n  &amp;::<span class=\"hljs-built_in\">scroll-button</span>(*):focus-visible {\n    <span class=\"hljs-attribute\">outline-offset</span>: <span class=\"hljs-number\">5px</span>;\n  }\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Overflow/Carousels"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_selectors_scroll-marker"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://developer.chrome.com/blog/carousels-with-css",
+                              "title": "Carousels with CSS"
+                            },
+                            {
+                              "url": "https://chrome.dev/carousel/",
+                              "title": "CSS Carousel Gallery"
+                            },
+                            {
+                              "url": "https://css-tricks.com/css-carousels/",
+                              "title": "CSS Carousels"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "scroll-markers",
+                            "description_html": "A scroll marker scrolls a container to a scroll target. The <code>::scroll-marker</code> CSS pseudo-element selects a scroll marker in a <code>::scroll-marker-group</code> pseudo-element, generated before or after the scroll container. You can use them to navigate and style tables of contents, tab panels, and carousels.",
+                            "group": [
+                              "scroll-markers"
+                            ],
+                            "name": "Scroll markers",
+                            "spec": [
+                              "https://drafts.csswg.org/css-overflow-5/#scroll-markers"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/scroll-markers/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "135",
+                                "chrome_android": "135",
+                                "edge": "135"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 9,
+                        "id": "scroll_snap",
+                        "index": 4,
+                        "percentageQuestion": 2.8,
+                        "percentageSurvey": 0.16,
+                        "entity": {
+                          "name": "Scroll Snap",
+                          "nameHtml": "Scroll Snap",
+                          "nameClean": "Scroll Snap",
+                          "description": "`scroll-snap-type`, `scroll-snap-align`, `scroll-padding`…",
+                          "descriptionHtml": "<code>scroll-snap-type</code>, <code>scroll-snap-align</code>, <code>scroll-padding</code>…",
+                          "descriptionClean": "scroll-snap-type, scroll-snap-align, scroll-padding…",
+                          "id": "scroll_snap",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".scroller {\n  height: 300px;\n  overflow-y: scroll;\n  scroll-snap-type: y mandatory;\n}\n\n.scroller section {\n  scroll-snap-align: start;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.scroller</span> {\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-number\">300px</span>;\n  <span class=\"hljs-attribute\">overflow-y</span>: scroll;\n  <span class=\"hljs-attribute\">scroll-snap-type</span>: y mandatory;\n}\n\n<span class=\"hljs-selector-class\">.scroller</span> <span class=\"hljs-selector-tag\">section</span> {\n  <span class=\"hljs-attribute\">scroll-snap-align</span>: start;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll_snap"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-snappoints"
+                          },
+                          "webFeature": {
+                            "id": "scroll-snap",
+                            "description_html": "CSS scroll snap controls the panning and scrolling behavior within a scroll container.",
+                            "group": [
+                              "scrolling"
+                            ],
+                            "name": "Scroll snap",
+                            "spec": [
+                              "https://drafts.csswg.org/css-scroll-snap-2/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/scroll-snap/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-01-15",
+                              "support": {
+                                "chrome": "69",
+                                "chrome_android": "69",
+                                "edge": "79",
+                                "firefox": "68",
+                                "firefox_android": "68",
+                                "safari": "11",
+                                "safari_ios": "11"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 6,
+                        "id": "scroll_behavior",
+                        "index": 5,
+                        "percentageQuestion": 1.87,
+                        "percentageSurvey": 0.11,
+                        "entity": {
+                          "name": "`scroll-behavior`",
+                          "nameHtml": "<code>scroll-behavior</code>",
+                          "nameClean": "scroll-behavior",
+                          "id": "scroll_behavior",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".foo {\n  scroll-behavior: auto;\n  scroll-behavior: smooth;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">scroll-behavior</span>: auto;\n  <span class=\"hljs-attribute\">scroll-behavior</span>: smooth;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scroll-behavior"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-scroll-behavior"
+                          },
+                          "webFeature": {
+                            "id": "scroll-behavior",
+                            "description_html": "The <code>scroll-behavior</code> CSS property controls whether scrolling is smooth or snaps, for scroll actions not performed by the user such as those triggered by navigation.",
+                            "group": [
+                              "scrolling"
+                            ],
+                            "name": "scroll-behavior",
+                            "spec": [
+                              "https://drafts.csswg.org/css-overflow-3/#smooth-scrolling"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/scroll-behavior/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2022-03-14",
+                              "support": {
+                                "chrome": "61",
+                                "chrome_android": "61",
+                                "edge": "79",
+                                "firefox": "36",
+                                "firefox_android": "36",
+                                "safari": "15.4",
+                                "safari_ios": "15.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 5,
+                        "id": "css_nesting",
+                        "index": 6,
+                        "percentageQuestion": 1.56,
+                        "percentageSurvey": 0.09,
+                        "entity": {
+                          "name": "CSS Nesting",
+                          "nameHtml": "CSS Nesting",
+                          "nameClean": "CSS Nesting",
+                          "id": "css_nesting",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".parent {\n  color: blue;\n\n  .child {\n    color: red;\n  }\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.parent</span> {\n  <span class=\"hljs-attribute\">color</span>: blue;\n\n  <span class=\"hljs-selector-class\">.child</span> {\n    <span class=\"hljs-attribute\">color</span>: red;\n  }\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Nesting"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://developer.chrome.com/articles/css-nesting/",
+                              "title": "CSS Nesting"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "nesting",
+                            "description_html": "CSS nesting allows for shorter selectors, easier reading, and more modularity by nesting rules inside others.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "Nesting",
+                            "spec": [
+                              "https://drafts.csswg.org/css-nesting-1/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/nesting/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2023-12-11",
+                              "support": {
+                                "chrome": "120",
+                                "chrome_android": "120",
+                                "edge": "120",
+                                "firefox": "117",
+                                "firefox_android": "117",
+                                "safari": "17.2",
+                                "safari_ios": "17.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 5,
+                        "id": "scroll_state",
+                        "index": 7,
+                        "percentageQuestion": 1.56,
+                        "percentageSurvey": 0.09,
+                        "entity": {
+                          "name": "Container scroll-state queries",
+                          "nameHtml": "Container scroll-state queries",
+                          "nameClean": "Container scroll-state queries",
+                          "id": "scroll_state",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "@container scroller scroll-state(scrollable: top) {\n  .back-to-top {\n    translate: 0 0;\n  }\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">@container</span> scroller scroll-state(<span class=\"hljs-attribute\">scrollable</span>: top) {\n  <span class=\"hljs-selector-class\">.back-to-top</span> {\n    <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">0</span>;\n  }\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_at-rules_container_scroll-state_queries"
+                          },
+                          "webFeature": {
+                            "id": "container-scroll-state-queries",
+                            "description_html": "Container scroll-state queries with the <code>@container scroll-state(...)</code> at-rule apply styles to an element based on the sticky positioning, snapped, and scrollable state of the container.",
+                            "group": [
+                              "container-queries"
+                            ],
+                            "name": "Container scroll-state queries",
+                            "spec": [
+                              "https://drafts.csswg.org/css-conditional-5/#scroll-state-container"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/container-scroll-state-queries/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "133",
+                                "chrome_android": "133",
+                                "edge": "133"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "_metadata": {
+                      "axis1Sort": {
+                        "property": "count",
+                        "order": "desc"
+                      },
+                      "limit": 25,
+                      "cutoff": 5
+                    },
+                    "editionId": "css2026",
+                    "year": 2026,
+                    "completion": {
+                      "count": 429,
+                      "percentageSurvey": 8.75,
+                      "total": 4902
+                    },
+                    "buckets": [
+                      {
+                        "count": 44,
+                        "id": "view_transitions",
+                        "index": 0,
+                        "percentageQuestion": 10.26,
+                        "percentageSurvey": 0.9,
+                        "entity": {
+                          "name": "View Transition API",
+                          "nameHtml": "View Transition API",
+                          "nameClean": "View Transition API",
+                          "id": "view_transitions",
+                          "parentId": "animations_issues",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "::view-transition-old(main-image),\n::view-transition-new(main-image) {\n  transform-origin: right top;\n}\n\n::view-transition-new(main-image) {\n  animation: 400ms ease-out both grow;\n}\n\nfigure {\n  view-transition-name: main-image;\n}\n",
+                            "codeHighlighted": "::<span class=\"hljs-built_in\">view-transition-old</span>(main-image),\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">transform-origin</span>: right top;\n}\n\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">animation</span>: <span class=\"hljs-number\">400ms</span> ease-out both grow;\n}\n\n<span class=\"hljs-selector-tag\">figure</span> {\n  <span class=\"hljs-attribute\">view-transition-name</span>: main-image;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-api_viewtransition"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://developer.chrome.com/docs/web-platform/view-transitions/",
+                              "title": "Smooth and simple transitions with the View Transitions API"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "cross-document-view-transitions",
+                            "description_html": "The <code>@view-transition</code> CSS rule sets whether a document opts-in to transitions between documents in a multi-page application. Both the old and new document must opt-in for a transition to be triggered.",
+                            "group": [
+                              "view-transitions"
+                            ],
+                            "name": "Cross-document view transitions",
+                            "spec": [
+                              "https://drafts.csswg.org/css-view-transitions-2/#cross-doc-opt-in"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/cross-document-view-transitions/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "126",
+                                "chrome_android": "126",
+                                "edge": "126",
+                                "safari": "18.2",
+                                "safari_ios": "18.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 38,
+                        "id": "css_carousels",
+                        "index": 1,
+                        "percentageQuestion": 8.86,
+                        "percentageSurvey": 0.78,
+                        "entity": {
+                          "name": "CSS Carousels",
+                          "nameHtml": "CSS Carousels",
+                          "nameClean": "CSS Carousels",
+                          "id": "css_carousels",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".carousel {\n  &::scroll-button(left) {\n    content: \"⬅\" / \"Scroll Left\";\n  }\n  \n  &::scroll-button(right) {\n    content: \"⮕\" / \"Scroll Right\";\n  }\n\n  &::scroll-button(*):focus-visible {\n    outline-offset: 5px;\n  }\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.carousel</span> {\n  &amp;::<span class=\"hljs-built_in\">scroll-button</span>(left) {\n    <span class=\"hljs-attribute\">content</span>: <span class=\"hljs-string\">&quot;⬅&quot;</span> / <span class=\"hljs-string\">&quot;Scroll Left&quot;</span>;\n  }\n  \n  &amp;::<span class=\"hljs-built_in\">scroll-button</span>(right) {\n    <span class=\"hljs-attribute\">content</span>: <span class=\"hljs-string\">&quot;⮕&quot;</span> / <span class=\"hljs-string\">&quot;Scroll Right&quot;</span>;\n  }\n\n  &amp;::<span class=\"hljs-built_in\">scroll-button</span>(*):focus-visible {\n    <span class=\"hljs-attribute\">outline-offset</span>: <span class=\"hljs-number\">5px</span>;\n  }\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Overflow/Carousels"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_selectors_scroll-marker"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://developer.chrome.com/blog/carousels-with-css",
+                              "title": "Carousels with CSS"
+                            },
+                            {
+                              "url": "https://chrome.dev/carousel/",
+                              "title": "CSS Carousel Gallery"
+                            },
+                            {
+                              "url": "https://css-tricks.com/css-carousels/",
+                              "title": "CSS Carousels"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "scroll-markers",
+                            "description_html": "A scroll marker scrolls a container to a scroll target. The <code>::scroll-marker</code> CSS pseudo-element selects a scroll marker in a <code>::scroll-marker-group</code> pseudo-element, generated before or after the scroll container. You can use them to navigate and style tables of contents, tab panels, and carousels.",
+                            "group": [
+                              "scroll-markers"
+                            ],
+                            "name": "Scroll markers",
+                            "spec": [
+                              "https://drafts.csswg.org/css-overflow-5/#scroll-markers"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/scroll-markers/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "135",
+                                "chrome_android": "135",
+                                "edge": "135"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 31,
+                        "id": "discrete_properties_animations",
+                        "index": 2,
+                        "percentageQuestion": 7.23,
+                        "percentageSurvey": 0.63,
+                        "entity": {
+                          "name": "Discrete Properties Animations",
+                          "nameHtml": "Discrete Properties Animations",
+                          "nameClean": "Discrete Properties Animations",
+                          "description": "Animate to and from properties such as `display: none`",
+                          "descriptionHtml": "Animate to and from properties such as <code>display: none</code>",
+                          "descriptionClean": "Animate to and from properties such as display: none",
+                          "id": "discrete_properties_animations",
+                          "parentId": "animations_issues",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "/*   IS-OPEN STATE   */\ndialog[open] {\n  translate: 0 0;\n}\n\n/*   EXIT STATE   */\ndialog {\n  transition: opacity 1s, display 1s allow-discrete, overlay 1s allow-discrete;\n  translate: 0 100vh;\n}\n\n/*   0. BEFORE-OPEN STATE   */\n@starting-style {\n  dialog[open] {\n    translate: 0 100vh;\n  }\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-comment\">/*   IS-OPEN STATE   */</span>\ndialog<span class=\"hljs-selector-attr\">[open]</span> {\n  <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">0</span>;\n}\n\n<span class=\"hljs-comment\">/*   EXIT STATE   */</span>\ndialog {\n  <span class=\"hljs-attribute\">transition</span>: opacity <span class=\"hljs-number\">1s</span>, display <span class=\"hljs-number\">1s</span> allow-discrete, overlay <span class=\"hljs-number\">1s</span> allow-discrete;\n  <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n}\n\n<span class=\"hljs-comment\">/*   0. BEFORE-OPEN STATE   */</span>\n<span class=\"hljs-keyword\">@starting-style</span> {\n  dialog<span class=\"hljs-selector-attr\">[open]</span> {\n    <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n  }\n}"
+                          },
+                          "webFeature": {
+                            "id": "transition-behavior",
+                            "description_html": "The <code>transition-behavior: allow-discrete</code> CSS declaration allows transitions for properties whose animation behavior is discrete. Such properties can't be interpolated and swap from their start value to the end value at 50%.",
+                            "group": [
+                              "transitions"
+                            ],
+                            "name": "transition-behavior",
+                            "spec": [
+                              "https://drafts.csswg.org/css-transitions-2/#transition-behavior-property"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/transition-behavior/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-08-06",
+                              "support": {
+                                "chrome": "117",
+                                "chrome_android": "117",
+                                "edge": "117",
+                                "firefox": "129",
+                                "firefox_android": "129",
+                                "safari": "17.4",
+                                "safari_ios": "17.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 27,
+                        "id": "scroll_driven_animations",
+                        "index": 3,
+                        "percentageQuestion": 6.29,
+                        "percentageSurvey": 0.55,
+                        "entity": {
+                          "name": "Scroll-driven animations",
+                          "nameHtml": "Scroll-driven animations",
+                          "nameClean": "Scroll-driven animations",
+                          "id": "scroll_driven_animations",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "html {\n  scroll-timeline: --page-scroll block;\n}\n\n@keyframes grow-progress {\n  from { transform: scaleX(0); }\n  to { transform: scaleX(1); }\n}\n\n#progress {\n  animation: grow-progress auto linear;\n  animation-timeline: --page-scroll;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-tag\">html</span> {\n  <span class=\"hljs-attribute\">scroll-timeline</span>: --page-scroll block;\n}\n\n<span class=\"hljs-keyword\">@keyframes</span> grow-progress {\n  <span class=\"hljs-selector-tag\">from</span> { <span class=\"hljs-attribute\">transform</span>: <span class=\"hljs-built_in\">scaleX</span>(<span class=\"hljs-number\">0</span>); }\n  <span class=\"hljs-selector-tag\">to</span> { <span class=\"hljs-attribute\">transform</span>: <span class=\"hljs-built_in\">scaleX</span>(<span class=\"hljs-number\">1</span>); }\n}\n\n<span class=\"hljs-selector-id\">#progress</span> {\n  <span class=\"hljs-attribute\">animation</span>: grow-progress auto linear;\n  <span class=\"hljs-attribute\">animation-timeline</span>: --page-scroll;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll-driven_animations"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_properties_animation-timeline"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://scroll-driven-animations.style/",
+                              "title": "Scroll-driven Animations"
+                            },
+                            {
+                              "url": "https://css-tricks.com/unleash-the-power-of-scroll-driven-animations/",
+                              "title": "Unleash the Power of Scroll-Driven Animations"
+                            },
+                            {
+                              "url": "https://developer.chrome.com/docs/css-ui/scroll-driven-animations",
+                              "title": "Animate elements on scroll with Scroll-driven animations"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "scroll-driven-animations",
+                            "description_html": "The <code>animation-timeline</code>, <code>scroll-timeline</code>, and <code>view-timeline</code> CSS properties advance animations based on the user's scroll position.",
+                            "group": [
+                              "scrolling",
+                              "animation"
+                            ],
+                            "name": "Scroll-driven animations",
+                            "spec": [
+                              "https://drafts.csswg.org/scroll-animations-1/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/scroll-driven-animations/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "115",
+                                "chrome_android": "115",
+                                "edge": "115",
+                                "safari": "26",
+                                "safari_ios": "26"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 12,
+                        "id": "scrollbar_gutter",
+                        "index": 4,
+                        "percentageQuestion": 2.8,
+                        "percentageSurvey": 0.24,
+                        "entity": {
+                          "name": "`scrollbar-gutter`",
+                          "nameHtml": "<code>scrollbar-gutter</code>",
+                          "nameClean": "scrollbar-gutter",
+                          "id": "scrollbar_gutter",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".container {\n  scrollbar-gutter: stable;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.container</span> {\n  <span class=\"hljs-attribute\">scrollbar-gutter</span>: stable;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scrollbar-gutter"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_properties_scrollbar-gutter"
+                          },
+                          "webFeature": {
+                            "id": "scrollbar-gutter",
+                            "description_html": "The <code>scrollbar-gutter</code> CSS property reserves space for the scrollbar, preventing unwanted layout changes as the scrollbar appears and disappears.",
+                            "group": [
+                              "scrolling"
+                            ],
+                            "name": "scrollbar-gutter",
+                            "spec": [
+                              "https://drafts.csswg.org/css-overflow-3/#scrollbar-gutter-property"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/scrollbar-gutter/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-12-11",
+                              "support": {
+                                "chrome": "94",
+                                "chrome_android": "94",
+                                "edge": "94",
+                                "firefox": "97",
+                                "firefox_android": "97",
+                                "safari": "18.2",
+                                "safari_ios": "18.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 11,
+                        "id": "scroll_snap",
+                        "index": 5,
+                        "percentageQuestion": 2.56,
+                        "percentageSurvey": 0.22,
+                        "entity": {
+                          "name": "Scroll Snap",
+                          "nameHtml": "Scroll Snap",
+                          "nameClean": "Scroll Snap",
+                          "description": "`scroll-snap-type`, `scroll-snap-align`, `scroll-padding`…",
+                          "descriptionHtml": "<code>scroll-snap-type</code>, <code>scroll-snap-align</code>, <code>scroll-padding</code>…",
+                          "descriptionClean": "scroll-snap-type, scroll-snap-align, scroll-padding…",
+                          "id": "scroll_snap",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".scroller {\n  height: 300px;\n  overflow-y: scroll;\n  scroll-snap-type: y mandatory;\n}\n\n.scroller section {\n  scroll-snap-align: start;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.scroller</span> {\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-number\">300px</span>;\n  <span class=\"hljs-attribute\">overflow-y</span>: scroll;\n  <span class=\"hljs-attribute\">scroll-snap-type</span>: y mandatory;\n}\n\n<span class=\"hljs-selector-class\">.scroller</span> <span class=\"hljs-selector-tag\">section</span> {\n  <span class=\"hljs-attribute\">scroll-snap-align</span>: start;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll_snap"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-snappoints"
+                          },
+                          "webFeature": {
+                            "id": "scroll-snap",
+                            "description_html": "CSS scroll snap controls the panning and scrolling behavior within a scroll container.",
+                            "group": [
+                              "scrolling"
+                            ],
+                            "name": "Scroll snap",
+                            "spec": [
+                              "https://drafts.csswg.org/css-scroll-snap-2/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/scroll-snap/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-01-15",
+                              "support": {
+                                "chrome": "69",
+                                "chrome_android": "69",
+                                "edge": "79",
+                                "firefox": "68",
+                                "firefox_android": "68",
+                                "safari": "11",
+                                "safari_ios": "11"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 9,
+                        "id": "scrollbar_styling",
+                        "index": 6,
+                        "percentageQuestion": 2.1,
+                        "percentageSurvey": 0.18,
+                        "entity": {
+                          "name": "Scrollbar styling",
+                          "nameHtml": "Scrollbar styling",
+                          "nameClean": "Scrollbar styling",
+                          "id": "scrollbar_styling",
+                          "parentId": "scrollbars",
+                          "entityType": "feature"
+                        }
+                      },
+                      {
+                        "count": 8,
+                        "id": "css_transitions",
+                        "index": 7,
+                        "percentageQuestion": 1.86,
+                        "percentageSurvey": 0.16,
+                        "entity": {
+                          "name": "CSS Transitions",
+                          "nameHtml": "CSS Transitions",
+                          "nameClean": "CSS Transitions",
+                          "id": "css_transitions",
+                          "parentId": "animations_issues",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-transitions"
+                          }
+                        }
+                      },
+                      {
+                        "count": 8,
+                        "id": "focus_visible",
+                        "index": 8,
+                        "percentageQuestion": 1.86,
+                        "percentageSurvey": 0.16,
+                        "entity": {
+                          "name": "`:focus-visible`",
+                          "nameHtml": "<code>:focus-visible</code>",
+                          "nameClean": ":focus-visible",
+                          "id": "focus_visible",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".focus-visible-only:focus-visible {\n  outline: 2px dashed darkorange;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.focus-visible-only</span><span class=\"hljs-selector-pseudo\">:focus-visible</span> {\n  <span class=\"hljs-attribute\">outline</span>: <span class=\"hljs-number\">2px</span> dashed darkorange;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:focus-visible"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-focus-visible"
+                          },
+                          "webFeature": {
+                            "id": "focus-visible",
+                            "description_html": "The <code>:focus-visible</code> CSS pseudo-class selects elements that match the <code>:focus</code> pseudo-class and meets the browser's criteria for visually emphasizing focused elements.",
+                            "group": [
+                              "selectors"
+                            ],
+                            "name": ":focus-visible",
+                            "spec": [
+                              "https://drafts.csswg.org/selectors-4/#the-focus-visible-pseudo"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/focus-visible/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2022-03-14",
+                              "support": {
+                                "chrome": "86",
+                                "chrome_android": "86",
+                                "edge": "86",
+                                "firefox": "85",
+                                "firefox_android": "85",
+                                "safari": "15.4",
+                                "safari_ios": "15.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 7,
+                        "id": "dialog_element",
+                        "index": 9,
+                        "percentageQuestion": 1.63,
+                        "percentageSurvey": 0.14,
+                        "entity": {
+                          "name": "`<dialog>`",
+                          "nameHtml": "<code>&lt;dialog&gt;</code>",
+                          "nameClean": "<dialog>",
+                          "description": "Creates a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.",
+                          "descriptionHtml": "Creates a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.",
+                          "descriptionClean": "Creates a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.",
+                          "id": "dialog_element",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<dialog id=\"confirm\">\n\t<form method=\"dialog\">\n\t\tAre you sure?\n\t\t<button value=\"1\">Yes</button>\n\t\t<button value=\"0\">No</button>\n\t</form>\n</dialog>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">dialog</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;confirm&quot;</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">form</span> <span class=\"hljs-attr\">method</span>=<span class=\"hljs-string\">&quot;dialog&quot;</span>&gt;</span>\n\t\tAre you sure?\n\t\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">value</span>=<span class=\"hljs-string\">&quot;1&quot;</span>&gt;</span>Yes<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n\t\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">value</span>=<span class=\"hljs-string\">&quot;0&quot;</span>&gt;</span>No<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">form</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">dialog</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element",
+                              "title": "HTML Standard"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "dialog",
+                            "description_html": "The <code>&#x3C;dialog></code> HTML element represents a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.",
+                            "group": [
+                              "html-elements"
+                            ],
+                            "name": "<dialog>",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/dialog/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2022-03-14",
+                              "support": {
+                                "chrome": "37",
+                                "chrome_android": "37",
+                                "edge": "79",
+                                "firefox": "98",
+                                "firefox_android": "98",
+                                "safari": "15.4",
+                                "safari_ios": "15.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 6,
+                        "id": "popover_api",
+                        "index": 10,
+                        "percentageQuestion": 1.4,
+                        "percentageSurvey": 0.12,
+                        "entity": {
+                          "name": "`popover` attribute (Popover API)",
+                          "nameHtml": "<code>popover</code> attribute (Popover API)",
+                          "nameClean": "popover attribute (Popover API)",
+                          "description": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
+                          "descriptionHtml": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
+                          "descriptionClean": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
+                          "id": "popover_api",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<button popovertarget=\"foo\">Toggle the popover</button>\n<div id=\"foo\" popover>Popover content</div>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">popovertarget</span>=<span class=\"hljs-string\">&quot;foo&quot;</span>&gt;</span>Toggle the popover<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;foo&quot;</span> <span class=\"hljs-attr\">popover</span>&gt;</span>Popover content<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Popover_API"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-html_global_attributes_popover"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://html.spec.whatwg.org/multipage/popover.html#dom-popover",
+                              "title": "HTML Standard"
+                            },
+                            {
+                              "url": "https://github.com/w3ctag/design-reviews/issues/743",
+                              "title": "The Popover API (previously Popup) · Issue #743 · w3ctag/design-reviews · GitHub"
+                            },
+                            {
+                              "url": "https://open-ui.org/components/popover.research.explainer/",
+                              "title": "Popover API (Explainer) | Open UI"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "popover",
+                            "description_html": "The <code>popover</code> HTML attribute creates an overlay to display content on top of other page content. Popovers can be shown declaratively using HTML, or using the <code>showPopover()</code> method.",
+                            "group": [
+                              "html"
+                            ],
+                            "name": "Popover",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/popover.html"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/popover/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2025-01-27",
+                              "support": {
+                                "chrome": "116",
+                                "chrome_android": "116",
+                                "edge": "116",
+                                "firefox": "125",
+                                "firefox_android": "125",
+                                "safari": "17",
+                                "safari_ios": "18.3"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 5,
+                        "id": "customizable_select",
+                        "index": 11,
+                        "percentageQuestion": 1.17,
+                        "percentageSurvey": 0.1,
+                        "entity": {
+                          "name": "Customizable Select",
+                          "nameHtml": "Customizable Select",
+                          "nameClean": "Customizable Select",
+                          "description": "Stylable, customizable dropdown control. Previously `<selectlist>` and `<selectmenu>`.",
+                          "descriptionHtml": "Stylable, customizable dropdown control. Previously <code>&lt;selectlist&gt;</code> and <code>&lt;selectmenu&gt;</code>.",
+                          "descriptionClean": "Stylable, customizable dropdown control. Previously <selectlist> and <selectmenu>.",
+                          "id": "customizable_select",
+                          "parentId": "select_element",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "select,\n::picker(select) {\n  appearance: base-select;\n}",
+                            "codeHighlighted": "<span class=\"hljs-selector-tag\">select</span>,\n::<span class=\"hljs-built_in\">picker</span>(select) {\n  <span class=\"hljs-attribute\">appearance</span>: base-select;\n}"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://open-ui.org/components/customizableselect/",
+                              "title": "Customizable Select Element (Explainer)"
+                            },
+                            {
+                              "url": "https://web.dev/state-of-css-2022/#customizing-select-elements",
+                              "title": "State of CSS 2022"
+                            },
+                            {
+                              "url": "https://css-tricks.com/the-selectmenu-element/",
+                              "title": "The selectmenu HTML Tag | CSS-Tricks - CSS-Tricks"
+                            },
+                            {
+                              "url": "https://www.smashingmagazine.com/2023/06/advanced-form-control-styling-selectmenu-anchoring-api/",
+                              "title": "Advanced Form Control Styling With Selectmenu And Anchoring API — Smashing Magazine"
+                            },
+                            {
+                              "url": "https://hidde.blog/custom-select-with-selectmenu/",
+                              "title": "Two levels of customising <selectlist>\n"
+                            },
+                            {
+                              "url": "https://microsoftedge.github.io/Demos/selectmenu/",
+                              "title": "Open UI's selectmenu demos"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "customizable-select",
+                            "description_html": "The <code>&#x3C;select></code> element's appearance, including the button, selected option, picker dropdown, and options, can be customized using CSS.",
+                            "group": [
+                              "forms",
+                              "html-elements"
+                            ],
+                            "name": "Customizable <select>",
+                            "spec": [
+                              "https://open-ui.org/components/customizableselect/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/customizable-select/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "135",
+                                "chrome_android": "135",
+                                "edge": "135"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 5,
+                        "id": "overscroll_behavior",
+                        "index": 12,
+                        "percentageQuestion": 1.17,
+                        "percentageSurvey": 0.1,
+                        "entity": {
+                          "name": "`overscroll-behavior`",
+                          "nameHtml": "<code>overscroll-behavior</code>",
+                          "nameClean": "overscroll-behavior",
+                          "id": "overscroll_behavior",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".foo {\n  height: 200px;\n  overflow: auto;\n  overscroll-behavior-y: contain;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-number\">200px</span>;\n  <span class=\"hljs-attribute\">overflow</span>: auto;\n  <span class=\"hljs-attribute\">overscroll-behavior-y</span>: contain;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/overscroll-behavior"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-overscroll-behavior"
+                          },
+                          "webFeature": {
+                            "id": "overscroll-behavior",
+                            "description_html": "The <code>overscroll-behavior</code> CSS property disables default scrolling behaviors when the edges of a scrolling area are reached.",
+                            "group": [
+                              "scrolling"
+                            ],
+                            "name": "overscroll-behavior",
+                            "spec": [
+                              "https://drafts.csswg.org/css-overscroll-1/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/overscroll-behavior/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "144",
+                                "chrome_android": "144",
+                                "edge": "144",
+                                "firefox": "150",
+                                "firefox_android": "150"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 5,
+                        "id": "scroll_state",
+                        "index": 13,
+                        "percentageQuestion": 1.17,
+                        "percentageSurvey": 0.1,
+                        "entity": {
+                          "name": "Container scroll-state queries",
+                          "nameHtml": "Container scroll-state queries",
+                          "nameClean": "Container scroll-state queries",
+                          "id": "scroll_state",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "@container scroller scroll-state(scrollable: top) {\n  .back-to-top {\n    translate: 0 0;\n  }\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">@container</span> scroller scroll-state(<span class=\"hljs-attribute\">scrollable</span>: top) {\n  <span class=\"hljs-selector-class\">.back-to-top</span> {\n    <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">0</span>;\n  }\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_at-rules_container_scroll-state_queries"
+                          },
+                          "webFeature": {
+                            "id": "container-scroll-state-queries",
+                            "description_html": "Container scroll-state queries with the <code>@container scroll-state(...)</code> at-rule apply styles to an element based on the sticky positioning, snapped, and scrollable state of the container.",
+                            "group": [
+                              "container-queries"
+                            ],
+                            "name": "Container scroll-state queries",
+                            "spec": [
+                              "https://drafts.csswg.org/css-conditional-5/#scroll-state-container"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/container-scroll-state-queries/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "133",
+                                "chrome_android": "133",
+                                "edge": "133"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -2,8 +2,8 @@ query {
   surveys {
     state_of_css {
       css2026 {
-        other_features {
-          other_features_pain_points: other_features_pain_points {
+        colors {
+          colors_pain_points_interop_issues_1: colors_pain_points {
             id
             comments {
               currentEdition {
@@ -11,6 +11,13 @@ query {
               }
             }
             freeform(
+              filters: {
+                colors__colors_pain_points: {
+                  in: [
+                    interop_issues
+                  ]
+                }
+              }
               parameters: {
                 showNoAnswer: true
                 cutoff: 5
@@ -19,6 +26,7 @@ query {
               }
               bucketsFilter: {
                 nin: [
+                  interop_issues
                   limitations
                 ]
               }

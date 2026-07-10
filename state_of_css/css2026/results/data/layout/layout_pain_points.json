@@ -19,8 +19,8 @@
                         "property": "count",
                         "order": "desc"
                       },
-                      "limit": 20,
-                      "cutoff": 10
+                      "limit": 25,
+                      "cutoff": 5
                     },
                     "editionId": "css2025",
                     "year": 2025,
@@ -175,6 +175,31 @@
                           },
                           "caniuse": {
                             "url": "https://caniuse.com/flexbox - html_interoperability_features"
+                          },
+                          "webFeature": {
+                            "id": "flexbox",
+                            "description_html": "Flexbox is a one-dimensional layout system, which places content either horizontally or vertically, with optional wrapping.",
+                            "group": [
+                              "flexbox"
+                            ],
+                            "name": "Flexbox",
+                            "spec": [
+                              "https://drafts.csswg.org/css-flexbox-1/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/flexbox/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2015-09-30",
+                              "support": {
+                                "chrome": "29",
+                                "chrome_android": "29",
+                                "edge": "12",
+                                "firefox": "20",
+                                "firefox_android": "20",
+                                "safari": "9",
+                                "safari_ios": "9"
+                              }
+                            }
                           }
                         }
                       },
@@ -199,6 +224,9 @@
                         "percentageQuestion": 5,
                         "percentageSurvey": 1.14,
                         "entity": {
+                          "name": "Positioning",
+                          "nameHtml": "Positioning",
+                          "nameClean": "Positioning",
                           "id": "positioning_issues",
                           "entityType": "default"
                         }
@@ -484,18 +512,158 @@
                         }
                       },
                       {
+                        "count": 30,
+                        "id": "safari",
+                        "index": 20,
+                        "percentageQuestion": 2.38,
+                        "percentageSurvey": 0.54,
+                        "entity": {
+                          "name": "Safari",
+                          "nameHtml": "Safari",
+                          "nameClean": "Safari",
+                          "id": "safari",
+                          "parentId": "apple",
+                          "entityType": "default",
+                          "homepage": {
+                            "url": "https://www.apple.com/safari/"
+                          }
+                        }
+                      },
+                      {
+                        "count": 29,
+                        "id": "animation_issues",
+                        "index": 21,
+                        "percentageQuestion": 2.3,
+                        "percentageSurvey": 0.53
+                      },
+                      {
+                        "count": 29,
+                        "id": "subgrid",
+                        "index": 22,
+                        "percentageQuestion": 2.3,
+                        "percentageSurvey": 0.53,
+                        "entity": {
+                          "name": "Subgrid",
+                          "nameHtml": "Subgrid",
+                          "nameClean": "Subgrid",
+                          "id": "subgrid",
+                          "parentId": "css_layout",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".wrapper {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.item {\n  grid-row: 1 / 4;\n  display: grid;\n  grid-template-rows: subgrid;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.wrapper</span> {\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">1</span>fr <span class=\"hljs-number\">1</span>fr;\n}\n\n<span class=\"hljs-selector-class\">.item</span> {\n  <span class=\"hljs-attribute\">grid-row</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">4</span>;\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-rows</span>: subgrid;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-subgrid"
+                          },
+                          "webFeature": {
+                            "id": "subgrid",
+                            "description_html": "The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.",
+                            "group": [
+                              "grid"
+                            ],
+                            "name": "Subgrid",
+                            "spec": [
+                              "https://drafts.csswg.org/css-grid-2/#subgrids"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/subgrid/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2023-09-15",
+                              "support": {
+                                "chrome": "117",
+                                "chrome_android": "117",
+                                "edge": "117",
+                                "firefox": "71",
+                                "firefox_android": "79",
+                                "safari": "16",
+                                "safari_ios": "16"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 28,
+                        "id": "css_nesting",
+                        "index": 23,
+                        "percentageQuestion": 2.22,
+                        "percentageSurvey": 0.51,
+                        "entity": {
+                          "name": "CSS Nesting",
+                          "nameHtml": "CSS Nesting",
+                          "nameClean": "CSS Nesting",
+                          "id": "css_nesting",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".parent {\n  color: blue;\n\n  .child {\n    color: red;\n  }\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.parent</span> {\n  <span class=\"hljs-attribute\">color</span>: blue;\n\n  <span class=\"hljs-selector-class\">.child</span> {\n    <span class=\"hljs-attribute\">color</span>: red;\n  }\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Nesting"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://developer.chrome.com/articles/css-nesting/",
+                              "title": "CSS Nesting"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "nesting",
+                            "description_html": "CSS nesting allows for shorter selectors, easier reading, and more modularity by nesting rules inside others.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "Nesting",
+                            "spec": [
+                              "https://drafts.csswg.org/css-nesting-1/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/nesting/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2023-12-11",
+                              "support": {
+                                "chrome": "120",
+                                "chrome_android": "120",
+                                "edge": "120",
+                                "firefox": "117",
+                                "firefox_android": "117",
+                                "safari": "17.2",
+                                "safari_ios": "17.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 27,
+                        "id": "margin_issues",
+                        "index": 24,
+                        "percentageQuestion": 2.14,
+                        "percentageSurvey": 0.49,
+                        "entity": {
+                          "id": "margin_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
                         "count": 4237,
                         "id": "no_answer",
-                        "index": 20,
+                        "index": 25,
                         "percentageQuestion": 0,
                         "percentageSurvey": 76.95
                       },
                       {
-                        "count": 1000,
+                        "count": 844,
                         "id": "other_answers",
-                        "index": 21,
-                        "percentageQuestion": 79.45,
-                        "percentageSurvey": 18.22
+                        "index": 26,
+                        "percentageQuestion": 67.08,
+                        "percentageSurvey": 15.38
                       }
                     ]
                   },
@@ -505,8 +673,8 @@
                         "property": "count",
                         "order": "desc"
                       },
-                      "limit": 20,
-                      "cutoff": 10
+                      "limit": 25,
+                      "cutoff": 5
                     },
                     "editionId": "css2026",
                     "year": 2026,
@@ -627,6 +795,31 @@
                           },
                           "caniuse": {
                             "url": "https://caniuse.com/flexbox - html_interoperability_features"
+                          },
+                          "webFeature": {
+                            "id": "flexbox",
+                            "description_html": "Flexbox is a one-dimensional layout system, which places content either horizontally or vertically, with optional wrapping.",
+                            "group": [
+                              "flexbox"
+                            ],
+                            "name": "Flexbox",
+                            "spec": [
+                              "https://drafts.csswg.org/css-flexbox-1/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/flexbox/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2015-09-30",
+                              "support": {
+                                "chrome": "29",
+                                "chrome_android": "29",
+                                "edge": "12",
+                                "firefox": "20",
+                                "firefox_android": "20",
+                                "safari": "9",
+                                "safari_ios": "9"
+                              }
+                            }
                           }
                         }
                       },
@@ -762,6 +955,9 @@
                         "percentageQuestion": 5.06,
                         "percentageSurvey": 0.65,
                         "entity": {
+                          "name": "Positioning",
+                          "nameHtml": "Positioning",
+                          "nameClean": "Positioning",
                           "id": "positioning_issues",
                           "entityType": "default"
                         }
@@ -952,18 +1148,64 @@
                         "percentageSurvey": 0.45
                       },
                       {
+                        "count": 21,
+                        "id": "container_queries",
+                        "index": 20,
+                        "percentageQuestion": 3.32,
+                        "percentageSurvey": 0.43
+                      },
+                      {
+                        "count": 18,
+                        "id": "centering_issues",
+                        "index": 21,
+                        "percentageQuestion": 2.85,
+                        "percentageSurvey": 0.37,
+                        "entity": {
+                          "id": "centering_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 17,
+                        "id": "layout_syntax_learning",
+                        "index": 22,
+                        "percentageQuestion": 2.69,
+                        "percentageSurvey": 0.35
+                      },
+                      {
+                        "count": 16,
+                        "id": "syntax_issues",
+                        "index": 23,
+                        "percentageQuestion": 2.53,
+                        "percentageSurvey": 0.33,
+                        "entity": {
+                          "name": "Syntax issues",
+                          "nameHtml": "Syntax issues",
+                          "nameClean": "Syntax issues",
+                          "id": "syntax_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 15,
+                        "id": "layout_choice_complexity",
+                        "index": 24,
+                        "percentageQuestion": 2.37,
+                        "percentageSurvey": 0.31
+                      },
+                      {
                         "count": 4268,
                         "id": "no_answer",
-                        "index": 20,
+                        "index": 25,
                         "percentageQuestion": 0,
                         "percentageSurvey": 87.07
                       },
                       {
-                        "count": 620,
+                        "count": 533,
                         "id": "other_answers",
-                        "index": 21,
-                        "percentageQuestion": 98.15,
-                        "percentageSurvey": 12.61
+                        "index": 26,
+                        "percentageQuestion": 84.39,
+                        "percentageSurvey": 10.82
                       }
                     ]
                   }

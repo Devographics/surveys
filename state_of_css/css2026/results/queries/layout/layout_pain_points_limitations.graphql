@@ -2,8 +2,8 @@ query {
   surveys {
     state_of_css {
       css2026 {
-        other_features {
-          other_features_pain_points: other_features_pain_points {
+        layout {
+          layout_pain_points_limitations_1: layout_pain_points {
             id
             comments {
               currentEdition {
@@ -11,6 +11,13 @@ query {
               }
             }
             freeform(
+              filters: {
+                layout__layout_pain_points: {
+                  in: [
+                    limitations
+                  ]
+                }
+              }
               parameters: {
                 showNoAnswer: true
                 cutoff: 5
@@ -20,6 +27,7 @@ query {
               bucketsFilter: {
                 nin: [
                   limitations
+                  interop_issues
                 ]
               }
             ) {

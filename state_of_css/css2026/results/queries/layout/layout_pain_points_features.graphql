@@ -2,8 +2,8 @@ query {
   surveys {
     state_of_css {
       css2026 {
-        other_features {
-          other_features_pain_points: other_features_pain_points {
+        layout {
+          layout_pain_points_features: layout_pain_points {
             id
             comments {
               currentEdition {
@@ -18,8 +18,8 @@ query {
                 mergeOtherBuckets: true
               }
               bucketsFilter: {
-                nin: [
-                  limitations
+                hasTags: [
+                  features
                 ]
               }
             ) {

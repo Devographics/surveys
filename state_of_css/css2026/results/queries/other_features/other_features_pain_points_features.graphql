@@ -3,7 +3,7 @@ query {
     state_of_css {
       css2026 {
         other_features {
-          other_features_pain_points: other_features_pain_points {
+          other_features_pain_points_features: other_features_pain_points {
             id
             comments {
               currentEdition {
@@ -18,8 +18,8 @@ query {
                 mergeOtherBuckets: true
               }
               bucketsFilter: {
-                nin: [
-                  limitations
+                hasTags: [
+                  features
                 ]
               }
             ) {
