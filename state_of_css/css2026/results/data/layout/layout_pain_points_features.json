@@ -8,7 +8,7 @@
               "id": "layout_pain_points",
               "comments": {
                 "currentEdition": {
-                  "count": 3
+                  "count": 1
                 }
               },
               "freeform": {
@@ -221,6 +221,7 @@
                           "nameHtml": "Anchor Positioning",
                           "nameClean": "Anchor Positioning",
                           "id": "anchor_positioning",
+                          "parentId": "positioning_issues",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
@@ -326,7 +327,7 @@
                           "nameHtml": "Subgrid",
                           "nameClean": "Subgrid",
                           "id": "subgrid",
-                          "parentId": "css_layout",
+                          "parentId": "css_layout_issues",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
@@ -695,7 +696,7 @@
                           "nameHtml": "<code>aspect-ratio</code>",
                           "nameClean": "aspect-ratio",
                           "id": "aspect_ratio",
-                          "parentId": "sizing",
+                          "parentId": "sizing_issues",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
@@ -831,7 +832,7 @@
                           "descriptionHtml": "<code>min-content</code>, <code>max-content</code>, <code>fit-content</code>",
                           "descriptionClean": "min-content, max-content, fit-content",
                           "id": "intrinsic_sizing",
-                          "parentId": "sizing",
+                          "parentId": "sizing_issues",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
@@ -1062,11 +1063,11 @@
                     },
                     "buckets": [
                       {
-                        "count": 236,
+                        "count": 103,
                         "id": "grid",
                         "index": 0,
-                        "percentageQuestion": 37.34,
-                        "percentageSurvey": 4.81,
+                        "percentageQuestion": 16.3,
+                        "percentageSurvey": 2.1,
                         "entity": {
                           "name": "Grid",
                           "nameHtml": "Grid",
@@ -1107,11 +1108,62 @@
                         }
                       },
                       {
-                        "count": 60,
-                        "id": "flexbox",
+                        "count": 59,
+                        "id": "subgrid",
                         "index": 1,
-                        "percentageQuestion": 9.49,
-                        "percentageSurvey": 1.22,
+                        "percentageQuestion": 9.34,
+                        "percentageSurvey": 1.2,
+                        "entity": {
+                          "name": "Subgrid",
+                          "nameHtml": "Subgrid",
+                          "nameClean": "Subgrid",
+                          "id": "subgrid",
+                          "parentId": "css_layout_issues",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".wrapper {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.item {\n  grid-row: 1 / 4;\n  display: grid;\n  grid-template-rows: subgrid;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.wrapper</span> {\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">1</span>fr <span class=\"hljs-number\">1</span>fr;\n}\n\n<span class=\"hljs-selector-class\">.item</span> {\n  <span class=\"hljs-attribute\">grid-row</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">4</span>;\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-rows</span>: subgrid;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-subgrid"
+                          },
+                          "webFeature": {
+                            "id": "subgrid",
+                            "description_html": "The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.",
+                            "group": [
+                              "grid"
+                            ],
+                            "name": "Subgrid",
+                            "spec": [
+                              "https://drafts.csswg.org/css-grid-2/#subgrids"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/subgrid/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2023-09-15",
+                              "support": {
+                                "chrome": "117",
+                                "chrome_android": "117",
+                                "edge": "117",
+                                "firefox": "71",
+                                "firefox_android": "79",
+                                "safari": "16",
+                                "safari_ios": "16"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 51,
+                        "id": "flexbox",
+                        "index": 2,
+                        "percentageQuestion": 8.07,
+                        "percentageSurvey": 1.04,
                         "entity": {
                           "name": "Flexbox",
                           "nameHtml": "Flexbox",
@@ -1152,16 +1204,17 @@
                         }
                       },
                       {
-                        "count": 39,
+                        "count": 38,
                         "id": "anchor_positioning",
-                        "index": 2,
-                        "percentageQuestion": 6.17,
-                        "percentageSurvey": 0.8,
+                        "index": 3,
+                        "percentageQuestion": 6.01,
+                        "percentageSurvey": 0.78,
                         "entity": {
                           "name": "Anchor Positioning",
                           "nameHtml": "Anchor Positioning",
                           "nameClean": "Anchor Positioning",
                           "id": "anchor_positioning",
+                          "parentId": "positioning_issues",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
@@ -1207,112 +1260,16 @@
                         }
                       },
                       {
-                        "count": 34,
-                        "id": "multi_column",
-                        "index": 3,
-                        "percentageQuestion": 5.38,
-                        "percentageSurvey": 0.69,
-                        "entity": {
-                          "name": "Multi-Column Layout",
-                          "nameHtml": "Multi-Column Layout",
-                          "nameClean": "Multi-Column Layout",
-                          "id": "multi_column",
-                          "entityType": "feature",
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Multicol_layout"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/multicolumn"
-                          },
-                          "webFeature": {
-                            "id": "column-fill",
-                            "description_html": "The <code>column-fill</code> CSS property sets the distribution of content across columns in a multi-column layout.",
-                            "group": [
-                              "multi-column"
-                            ],
-                            "name": "column-fill",
-                            "spec": [
-                              "https://drafts.csswg.org/css-multicol-1/#filling-columns"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/column-fill/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2017-03-07",
-                              "support": {
-                                "chrome": "50",
-                                "chrome_android": "50",
-                                "edge": "12",
-                                "firefox": "52",
-                                "firefox_android": "52",
-                                "safari": "9",
-                                "safari_ios": "9"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 26,
-                        "id": "subgrid",
+                        "count": 24,
+                        "id": "at_container",
                         "index": 4,
-                        "percentageQuestion": 4.11,
-                        "percentageSurvey": 0.53,
+                        "percentageQuestion": 3.8,
+                        "percentageSurvey": 0.49,
                         "entity": {
-                          "name": "Subgrid",
-                          "nameHtml": "Subgrid",
-                          "nameClean": "Subgrid",
-                          "id": "subgrid",
-                          "parentId": "css_layout",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".wrapper {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.item {\n  grid-row: 1 / 4;\n  display: grid;\n  grid-template-rows: subgrid;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.wrapper</span> {\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">1</span>fr <span class=\"hljs-number\">1</span>fr;\n}\n\n<span class=\"hljs-selector-class\">.item</span> {\n  <span class=\"hljs-attribute\">grid-row</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">4</span>;\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-rows</span>: subgrid;\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-subgrid"
-                          },
-                          "webFeature": {
-                            "id": "subgrid",
-                            "description_html": "The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.",
-                            "group": [
-                              "grid"
-                            ],
-                            "name": "Subgrid",
-                            "spec": [
-                              "https://drafts.csswg.org/css-grid-2/#subgrids"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/subgrid/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2023-09-15",
-                              "support": {
-                                "chrome": "117",
-                                "chrome_android": "117",
-                                "edge": "117",
-                                "firefox": "71",
-                                "firefox_android": "79",
-                                "safari": "16",
-                                "safari_ios": "16"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 22,
-                        "id": "at_container_size",
-                        "index": 5,
-                        "percentageQuestion": 3.48,
-                        "percentageSurvey": 0.45,
-                        "entity": {
-                          "name": "`@container` size queries",
-                          "nameHtml": "<code>@container</code> size queries",
-                          "nameClean": "@container size queries",
-                          "id": "at_container_size",
+                          "name": "`@container`",
+                          "nameHtml": "<code>@container</code>",
+                          "nameClean": "@container",
+                          "id": "at_container",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
@@ -1355,7 +1312,7 @@
                       {
                         "count": 15,
                         "id": "media_queries",
-                        "index": 6,
+                        "index": 5,
                         "percentageQuestion": 2.37,
                         "percentageSurvey": 0.31,
                         "entity": {
@@ -1399,113 +1356,60 @@
                       },
                       {
                         "count": 14,
-                        "id": "css_nesting",
-                        "index": 7,
+                        "id": "css_grid_lanes",
+                        "index": 6,
                         "percentageQuestion": 2.22,
                         "percentageSurvey": 0.29,
                         "entity": {
-                          "name": "CSS Nesting",
-                          "nameHtml": "CSS Nesting",
-                          "nameClean": "CSS Nesting",
-                          "id": "css_nesting",
+                          "name": "Grid Lanes",
+                          "nameHtml": "Grid Lanes",
+                          "nameClean": "Grid Lanes",
+                          "id": "css_grid_lanes",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
-                            "code": ".parent {\n  color: blue;\n\n  .child {\n    color: red;\n  }\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.parent</span> {\n  <span class=\"hljs-attribute\">color</span>: blue;\n\n  <span class=\"hljs-selector-class\">.child</span> {\n    <span class=\"hljs-attribute\">color</span>: red;\n  }\n}"
+                            "code": ".container {\n  display: grid-lanes;\n  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));\n  gap: 16px;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.container</span> {\n  <span class=\"hljs-attribute\">display</span>: grid-lanes;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-built_in\">repeat</span>(auto-fill, <span class=\"hljs-built_in\">minmax</span>(<span class=\"hljs-number\">250px</span>, <span class=\"hljs-number\">1</span>fr));\n  <span class=\"hljs-attribute\">gap</span>: <span class=\"hljs-number\">16px</span>;\n}"
                           },
                           "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Nesting"
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-grid-lanes"
                           },
                           "resources": [
                             {
-                              "url": "https://developer.chrome.com/articles/css-nesting/",
-                              "title": "CSS Nesting"
+                              "url": "https://webkit.org/blog/17660/introducing-css-grid-lanes/",
+                              "title": "Introducing CSS Grid Lanes"
+                            },
+                            {
+                              "url": "https://css-tricks.com/masonry-layout-is-now-grid-lanes/",
+                              "title": "Masonry Layout is Now grid-lanes"
                             }
                           ],
                           "webFeature": {
-                            "id": "nesting",
-                            "description_html": "CSS nesting allows for shorter selectors, easier reading, and more modularity by nesting rules inside others.",
+                            "id": "masonry",
+                            "description_html": "The <code>display: grid-lanes</code> or <code>display: inline-grid-lanes</code> CSS declaration creates a layout where items are tightly packed, like brickwork, in parallel lanes. Items are placed one by one in the lane that has the most available space.",
                             "group": [
-                              "css"
+                              "layout"
                             ],
-                            "name": "Nesting",
+                            "name": "Masonry",
                             "spec": [
-                              "https://drafts.csswg.org/css-nesting-1/"
+                              "https://drafts.csswg.org/css-grid-3/"
                             ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/nesting/",
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/masonry/",
                             "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2023-12-11",
-                              "support": {
-                                "chrome": "120",
-                                "chrome_android": "120",
-                                "edge": "120",
-                                "firefox": "117",
-                                "firefox_android": "117",
-                                "safari": "17.2",
-                                "safari_ios": "17.2"
-                              }
+                              "baseline": "false"
                             }
                           }
                         }
                       },
                       {
-                        "count": 10,
-                        "id": "has_selector",
-                        "index": 8,
-                        "percentageQuestion": 1.58,
-                        "percentageSurvey": 0.2,
-                        "entity": {
-                          "name": "`:has()`",
-                          "nameHtml": "<code>:has()</code>",
-                          "nameClean": ":has()",
-                          "id": "has_selector",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": "a:has(> img) {\n  border: 2px solid grey;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-tag\">a</span><span class=\"hljs-selector-pseudo\">:has</span>(&gt; <span class=\"hljs-selector-tag\">img</span>) {\n  <span class=\"hljs-attribute\">border</span>: <span class=\"hljs-number\">2px</span> solid grey;\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:has"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-has"
-                          },
-                          "webFeature": {
-                            "id": "has",
-                            "description_html": "The <code>:has()</code> CSS functional pseudo-class matches an element if any of the selectors passed as parameters would match at least one element.",
-                            "group": [
-                              "selectors"
-                            ],
-                            "name": ":has()",
-                            "spec": [
-                              "https://drafts.csswg.org/selectors-4/#relational"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/has/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2023-12-19",
-                              "support": {
-                                "chrome": "105",
-                                "chrome_android": "105",
-                                "edge": "105",
-                                "firefox": "121",
-                                "firefox_android": "121",
-                                "safari": "15.4",
-                                "safari_ios": "15.4"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 10,
+                        "count": 12,
                         "id": "position_sticky",
-                        "index": 9,
-                        "percentageQuestion": 1.58,
-                        "percentageSurvey": 0.2,
+                        "index": 7,
+                        "percentageQuestion": 1.9,
+                        "percentageSurvey": 0.24,
                         "entity": {
                           "name": "`position:sticky`",
                           "nameHtml": "<code>position:sticky</code>",
@@ -1546,137 +1450,113 @@
                         }
                       },
                       {
-                        "count": 10,
-                        "id": "where_selector",
-                        "index": 10,
-                        "percentageQuestion": 1.58,
-                        "percentageSurvey": 0.2,
+                        "count": 11,
+                        "id": "viewport_percentage_length_units",
+                        "index": 8,
+                        "percentageQuestion": 1.74,
+                        "percentageSurvey": 0.22,
                         "entity": {
-                          "name": "`:where()`",
-                          "nameHtml": "<code>:where()</code>",
-                          "nameClean": ":where()",
-                          "id": "where_selector",
+                          "name": "Viewport-Relative Units",
+                          "nameHtml": "Viewport-Relative Units",
+                          "nameClean": "Viewport-Relative Units",
+                          "description": "`lvh` / `lvw` / `lvmin` / `lvmax`, `sv*`, `dv*`, etc.",
+                          "descriptionHtml": "<code>lvh</code> / <code>lvw</code> / <code>lvmin</code> / <code>lvmax</code>, <code>sv*</code>, <code>dv*</code>, etc.",
+                          "descriptionClean": "lvh / lvw / lvmin / lvmax, sv*, dv*, etc.",
+                          "id": "viewport_percentage_length_units",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
-                            "code": ":where(header, main, footer) p:hover {\n  color: red;\n  cursor: pointer;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-pseudo\">:where</span>(<span class=\"hljs-selector-tag\">header</span>, <span class=\"hljs-selector-tag\">main</span>, <span class=\"hljs-selector-tag\">footer</span>) <span class=\"hljs-selector-tag\">p</span><span class=\"hljs-selector-pseudo\">:hover</span> {\n  <span class=\"hljs-attribute\">color</span>: red;\n  <span class=\"hljs-attribute\">cursor</span>: pointer;\n}"
+                            "code": "body {\n  height: 100dvh;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-tag\">body</span> {\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-number\">100</span>dvh;\n}"
                           },
                           "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:where"
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/length"
                           },
                           "caniuse": {
-                            "url": "https://caniuse.com/css-where"
+                            "url": "https://caniuse.com/mdn-css_types_length_viewport_percentage_units_small"
                           },
+                          "resources": [
+                            {
+                              "url": "https://web.dev/viewport-units/",
+                              "title": "The large, small, and dynamic viewport units"
+                            }
+                          ],
                           "webFeature": {
-                            "id": "where",
-                            "description_html": "The <code>:where()</code> CSS functional pseudo-class takes a selector list as its argument, and matches any element that can be selected by one of the selectors in that list. It is functionally equivalent to the selectors in the list, but doesn't affect the CSS rule specificity.",
-                            "group": [
-                              "selectors"
-                            ],
-                            "name": ":where()",
+                            "id": "viewport-unit-variants",
+                            "description_html": "The <code>sv*</code>, <code>lv*</code>, and <code>dv*</code> CSS viewport units are relative to the smallest, largest, and current (dynamic) viewport size. They are used to size elements in relation to the viewport's dimensions.",
+                            "name": "Small, large, and dynamic viewport units",
                             "spec": [
-                              "https://drafts.csswg.org/selectors-4/#zero-matches"
+                              "https://drafts.csswg.org/css-values-4/#viewport-variants",
+                              "https://drafts.csswg.org/css-values-4/#viewport-relative-lengths"
                             ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/where/",
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/viewport-unit-variants/",
                             "status": {
                               "baseline": "high",
-                              "baseline_low_date": "2021-01-21",
+                              "baseline_low_date": "2022-12-05",
                               "support": {
-                                "chrome": "88",
-                                "chrome_android": "88",
-                                "edge": "88",
-                                "firefox": "82",
-                                "firefox_android": "82",
-                                "safari": "14",
-                                "safari_ios": "14"
+                                "chrome": "108",
+                                "chrome_android": "108",
+                                "edge": "108",
+                                "firefox": "101",
+                                "firefox_android": "101",
+                                "safari": "15.4",
+                                "safari_ios": "15.4"
                               }
                             }
                           }
                         }
                       },
                       {
-                        "count": 7,
-                        "id": "aspect_ratio",
-                        "index": 11,
-                        "percentageQuestion": 1.11,
-                        "percentageSurvey": 0.14,
+                        "count": 9,
+                        "id": "multi_column",
+                        "index": 9,
+                        "percentageQuestion": 1.42,
+                        "percentageSurvey": 0.18,
                         "entity": {
-                          "name": "`aspect-ratio`",
-                          "nameHtml": "<code>aspect-ratio</code>",
-                          "nameClean": "aspect-ratio",
-                          "id": "aspect_ratio",
-                          "parentId": "sizing",
+                          "name": "Multi-Column Layout",
+                          "nameHtml": "Multi-Column Layout",
+                          "nameClean": "Multi-Column Layout",
+                          "id": "multi_column",
                           "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".square {\n  aspect-ratio: 1 / 1;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.square</span> {\n  <span class=\"hljs-attribute\">aspect-ratio</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">1</span>;\n}"
-                          },
                           "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/aspect-ratio"
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Multicol_layout"
                           },
                           "caniuse": {
-                            "url": "https://caniuse.com/mdn-css_properties_aspect-ratio"
+                            "url": "https://caniuse.com/multicolumn"
                           },
                           "webFeature": {
-                            "id": "aspect-ratio",
-                            "description_html": "The <code>aspect-ratio</code> CSS property controls the width-to-height ratio of elements. For <code>&#x3C;img></code> and <code>&#x3C;video></code> elements, the <code>width</code> and <code>height</code> attributes used together with <code>height: auto</code> control the aspect ratio while the image/video is loading.",
+                            "id": "column-fill",
+                            "description_html": "The <code>column-fill</code> CSS property sets the distribution of content across columns in a multi-column layout.",
                             "group": [
-                              "css"
+                              "multi-column"
                             ],
-                            "name": "aspect-ratio",
+                            "name": "column-fill",
                             "spec": [
-                              "https://drafts.csswg.org/css-sizing-4/#aspect-ratio"
+                              "https://drafts.csswg.org/css-multicol-1/#filling-columns"
                             ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/aspect-ratio/",
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/column-fill/",
                             "status": {
                               "baseline": "high",
-                              "baseline_low_date": "2021-09-20",
+                              "baseline_low_date": "2017-03-07",
                               "support": {
-                                "chrome": "88",
-                                "chrome_android": "88",
-                                "edge": "88",
-                                "firefox": "89",
-                                "firefox_android": "89",
-                                "safari": "15",
-                                "safari_ios": "15"
+                                "chrome": "50",
+                                "chrome_android": "50",
+                                "edge": "12",
+                                "firefox": "52",
+                                "firefox_android": "52",
+                                "safari": "9",
+                                "safari_ios": "9"
                               }
                             }
                           }
                         }
                       },
                       {
-                        "count": 7,
-                        "id": "css_custom_properties",
-                        "index": 12,
-                        "percentageQuestion": 1.11,
-                        "percentageSurvey": 0.14,
-                        "entity": {
-                          "name": "Custom Properties (Variables)",
-                          "nameHtml": "Custom Properties (Variables)",
-                          "nameClean": "Custom Properties (Variables)",
-                          "id": "css_custom_properties",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ":root {\n  --main-bg-color: brown;\n}\n.foo {\n  background-color: var(--main-bg-color);\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-pseudo\">:root</span> {\n  <span class=\"hljs-attr\">--main-bg-color</span>: brown;\n}\n<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--main-bg-color);\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-variables"
-                          }
-                        }
-                      },
-                      {
-                        "count": 5,
+                        "count": 6,
                         "id": "at_container_style",
-                        "index": 13,
-                        "percentageQuestion": 0.79,
-                        "percentageSurvey": 0.1,
+                        "index": 10,
+                        "percentageQuestion": 0.95,
+                        "percentageSurvey": 0.12,
                         "entity": {
                           "name": "`@container` style queries",
                           "nameHtml": "<code>@container</code> style queries",
@@ -1726,48 +1606,91 @@
                       },
                       {
                         "count": 5,
-                        "id": "calc_size",
-                        "index": 14,
+                        "id": "css_custom_properties",
+                        "index": 11,
                         "percentageQuestion": 0.79,
                         "percentageSurvey": 0.1,
                         "entity": {
-                          "name": "`calc-size()`",
-                          "nameHtml": "<code>calc-size()</code>",
-                          "nameClean": "calc-size()",
-                          "id": "calc_size",
-                          "parentId": "intrinsic_sizing",
+                          "name": "Custom Properties (Variables)",
+                          "nameHtml": "Custom Properties (Variables)",
+                          "nameClean": "Custom Properties (Variables)",
+                          "id": "css_custom_properties",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
-                            "code": ".element {\n  height: 0;\n  overflow: hidden;\n  transition: height 0.3s;\n}\n\n.element.open {\n  height: calc-size(auto);\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.element</span> {\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-number\">0</span>;\n  <span class=\"hljs-attribute\">overflow</span>: hidden;\n  <span class=\"hljs-attribute\">transition</span>: height <span class=\"hljs-number\">0.3s</span>;\n}\n\n<span class=\"hljs-selector-class\">.element</span><span class=\"hljs-selector-class\">.open</span> {\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-built_in\">calc-size</span>(auto);\n}"
+                            "code": ":root {\n  --main-bg-color: brown;\n}\n.foo {\n  background-color: var(--main-bg-color);\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-pseudo\">:root</span> {\n  <span class=\"hljs-attr\">--main-bg-color</span>: brown;\n}\n<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--main-bg-color);\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables"
                           },
                           "caniuse": {
-                            "url": "https://caniuse.com/mdn-css_types_calc-size"
+                            "url": "https://caniuse.com/css-variables"
+                          }
+                        }
+                      },
+                      {
+                        "count": 5,
+                        "id": "popover_api",
+                        "index": 12,
+                        "percentageQuestion": 0.79,
+                        "percentageSurvey": 0.1,
+                        "entity": {
+                          "name": "`popover` attribute (Popover API)",
+                          "nameHtml": "<code>popover</code> attribute (Popover API)",
+                          "nameClean": "popover attribute (Popover API)",
+                          "description": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
+                          "descriptionHtml": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
+                          "descriptionClean": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
+                          "id": "popover_api",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<button popovertarget=\"foo\">Toggle the popover</button>\n<div id=\"foo\" popover>Popover content</div>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">popovertarget</span>=<span class=\"hljs-string\">&quot;foo&quot;</span>&gt;</span>Toggle the popover<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;foo&quot;</span> <span class=\"hljs-attr\">popover</span>&gt;</span>Popover content<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Popover_API"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-html_global_attributes_popover"
                           },
                           "resources": [
                             {
-                              "url": "https://chromestatus.com/feature/5196713071738880",
-                              "title": "CSS interpolate-size property and calc-size() function"
+                              "url": "https://html.spec.whatwg.org/multipage/popover.html#dom-popover",
+                              "title": "HTML Standard"
+                            },
+                            {
+                              "url": "https://github.com/w3ctag/design-reviews/issues/743",
+                              "title": "The Popover API (previously Popup) · Issue #743 · w3ctag/design-reviews · GitHub"
+                            },
+                            {
+                              "url": "https://open-ui.org/components/popover.research.explainer/",
+                              "title": "Popover API (Explainer) | Open UI"
                             }
                           ],
                           "webFeature": {
-                            "id": "calc-size",
-                            "description_html": "The <code>calc-size()</code> CSS function computes mathematical expressions that include <code>height</code> and <code>width</code> keyword values, for example <code>calc-size(fit-content, size / 2)</code>. Not to be confused with the <code>calc()</code> CSS function, which cannot use keyword values.",
+                            "id": "popover",
+                            "description_html": "The <code>popover</code> HTML attribute creates an overlay to display content on top of other page content. Popovers can be shown declaratively using HTML, or using the <code>showPopover()</code> method.",
                             "group": [
-                              "css"
+                              "html"
                             ],
-                            "name": "calc-size()",
+                            "name": "Popover",
                             "spec": [
-                              "https://drafts.csswg.org/css-values-5/#calc-size"
+                              "https://html.spec.whatwg.org/multipage/popover.html"
                             ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/calc-size/",
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/popover/",
                             "status": {
-                              "baseline": "false",
+                              "baseline": "low",
+                              "baseline_low_date": "2025-01-27",
                               "support": {
-                                "chrome": "129",
-                                "chrome_android": "129",
-                                "edge": "129"
+                                "chrome": "116",
+                                "chrome_android": "116",
+                                "edge": "116",
+                                "firefox": "125",
+                                "firefox_android": "125",
+                                "safari": "17",
+                                "safari_ios": "18.3"
                               }
                             }
                           }

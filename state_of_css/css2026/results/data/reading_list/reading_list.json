@@ -79,57 +79,9 @@
                         }
                       },
                       {
-                        "count": 868,
-                        "id": "calc_size",
-                        "index": 1,
-                        "percentageQuestion": 49.86,
-                        "percentageSurvey": 15.76,
-                        "entity": {
-                          "name": "`calc-size()`",
-                          "nameHtml": "<code>calc-size()</code>",
-                          "nameClean": "calc-size()",
-                          "id": "calc_size",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".element {\n  height: 0;\n  overflow: hidden;\n  transition: height 0.3s;\n}\n\n.element.open {\n  height: calc-size(auto);\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.element</span> {\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-number\">0</span>;\n  <span class=\"hljs-attribute\">overflow</span>: hidden;\n  <span class=\"hljs-attribute\">transition</span>: height <span class=\"hljs-number\">0.3s</span>;\n}\n\n<span class=\"hljs-selector-class\">.element</span><span class=\"hljs-selector-class\">.open</span> {\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-built_in\">calc-size</span>(auto);\n}"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/mdn-css_types_calc-size"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://chromestatus.com/feature/5196713071738880",
-                              "title": "CSS interpolate-size property and calc-size() function"
-                            }
-                          ],
-                          "webFeature": {
-                            "id": "calc-size",
-                            "description_html": "The <code>calc-size()</code> CSS function computes mathematical expressions that include <code>height</code> and <code>width</code> keyword values, for example <code>calc-size(fit-content, size / 2)</code>. Not to be confused with the <code>calc()</code> CSS function, which cannot use keyword values.",
-                            "group": [
-                              "css"
-                            ],
-                            "name": "calc-size()",
-                            "spec": [
-                              "https://drafts.csswg.org/css-values-5/#calc-size"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/calc-size/",
-                            "status": {
-                              "baseline": "false",
-                              "support": {
-                                "chrome": "129",
-                                "chrome_android": "129",
-                                "edge": "129"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
                         "count": 810,
                         "id": "field_sizing",
-                        "index": 2,
+                        "index": 1,
                         "percentageQuestion": 46.52,
                         "percentageSurvey": 14.71,
                         "entity": {
@@ -140,6 +92,7 @@
                           "descriptionHtml": "Allows form controls such as <code>&lt;textarea&gt;</code> to be sized based on their content.",
                           "descriptionClean": "Allows form controls such as <textarea> to be sized based on their content.",
                           "id": "field_sizing",
+                          "parentId": "sizing_issues",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
@@ -182,7 +135,7 @@
                       {
                         "count": 809,
                         "id": "offset_path",
-                        "index": 3,
+                        "index": 2,
                         "percentageQuestion": 46.47,
                         "percentageSurvey": 14.69,
                         "entity": {
@@ -232,7 +185,7 @@
                       {
                         "count": 795,
                         "id": "text_box_trim",
-                        "index": 4,
+                        "index": 3,
                         "percentageQuestion": 45.66,
                         "percentageSurvey": 14.44,
                         "entity": {
@@ -260,7 +213,7 @@
                       {
                         "count": 789,
                         "id": "hanging_punctuation",
-                        "index": 5,
+                        "index": 4,
                         "percentageQuestion": 45.32,
                         "percentageSurvey": 14.33,
                         "entity": {
@@ -301,7 +254,7 @@
                       {
                         "count": 783,
                         "id": "at_scope",
-                        "index": 6,
+                        "index": 5,
                         "percentageQuestion": 44.97,
                         "percentageSurvey": 14.22,
                         "entity": {
@@ -354,7 +307,7 @@
                       {
                         "count": 760,
                         "id": "css_carousels",
-                        "index": 7,
+                        "index": 6,
                         "percentageQuestion": 43.65,
                         "percentageSurvey": 13.8,
                         "entity": {
@@ -413,7 +366,7 @@
                       {
                         "count": 757,
                         "id": "scroll_state",
-                        "index": 8,
+                        "index": 7,
                         "percentageQuestion": 43.48,
                         "percentageSurvey": 13.75,
                         "entity": {
@@ -458,7 +411,7 @@
                       {
                         "count": 753,
                         "id": "at_function",
-                        "index": 9,
+                        "index": 8,
                         "percentageQuestion": 43.25,
                         "percentageSurvey": 13.68,
                         "entity": {
@@ -469,11 +422,15 @@
                           "descriptionHtml": "The <code>@function</code> CSS at-rule defines a custom function that takes CSS values or custom properties as arguments, and returns a CSS value.",
                           "descriptionClean": "The @function CSS at-rule defines a custom function that takes CSS values or custom properties as arguments, and returns a CSS value.",
                           "id": "at_function",
+                          "parentId": "custom_functions",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
                             "code": "@function --negate(--value) {\n  result: calc(-1 * var(--value));\n}\n",
                             "codeHighlighted": "<span class=\"hljs-keyword\">@function</span> --negate(--value) {\n  result: <span class=\"hljs-built_in\">calc</span>(-<span class=\"hljs-number\">1</span> * <span class=\"hljs-built_in\">var</span>(--value));\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@function"
                           },
                           "resources": [
                             {
@@ -510,7 +467,7 @@
                       {
                         "count": 745,
                         "id": "sibling_index",
-                        "index": 10,
+                        "index": 9,
                         "percentageQuestion": 42.79,
                         "percentageSurvey": 13.53,
                         "entity": {
@@ -562,7 +519,7 @@
                       {
                         "count": 713,
                         "id": "if_function",
-                        "index": 11,
+                        "index": 10,
                         "percentageQuestion": 40.95,
                         "percentageSurvey": 12.95,
                         "entity": {
@@ -573,11 +530,15 @@
                           "descriptionHtml": "The <code>if()</code> CSS function is an inline conditional value that returns a value based on a set of conditions.",
                           "descriptionClean": "The if() CSS function is an inline conditional value that returns a value based on a set of conditions.",
                           "id": "if_function",
+                          "parentId": "css_conditional_logic",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
                             "code": "div {\n  color: var(--color);\n  background-color: if(style(--color: white): black; else: white);\n}\n",
                             "codeHighlighted": "<span class=\"hljs-selector-tag\">div</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">var</span>(--color);\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">if</span>(<span class=\"hljs-built_in\">style</span>(--color: white): black; else: white);\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/if"
                           },
                           "resources": [
                             {
@@ -614,7 +575,7 @@
                       {
                         "count": 689,
                         "id": "sibling_count",
-                        "index": 12,
+                        "index": 11,
                         "percentageQuestion": 39.57,
                         "percentageSurvey": 12.51,
                         "entity": {
@@ -662,7 +623,7 @@
                       {
                         "count": 669,
                         "id": "anchor_positioning",
-                        "index": 13,
+                        "index": 12,
                         "percentageQuestion": 38.43,
                         "percentageSurvey": 12.15,
                         "entity": {
@@ -670,6 +631,7 @@
                           "nameHtml": "Anchor Positioning",
                           "nameClean": "Anchor Positioning",
                           "id": "anchor_positioning",
+                          "parentId": "positioning_issues",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
@@ -717,7 +679,7 @@
                       {
                         "count": 652,
                         "id": "display_contents",
-                        "index": 14,
+                        "index": 13,
                         "percentageQuestion": 37.45,
                         "percentageSurvey": 11.84,
                         "entity": {
@@ -749,7 +711,7 @@
                       {
                         "count": 649,
                         "id": "discrete_properties_animations",
-                        "index": 15,
+                        "index": 14,
                         "percentageQuestion": 37.28,
                         "percentageSurvey": 11.79,
                         "entity": {
@@ -797,7 +759,7 @@
                       {
                         "count": 631,
                         "id": "at_container_style",
-                        "index": 16,
+                        "index": 15,
                         "percentageQuestion": 36.24,
                         "percentageSurvey": 11.46,
                         "entity": {
@@ -850,7 +812,7 @@
                       {
                         "count": 619,
                         "id": "advanced_attr_function",
-                        "index": 17,
+                        "index": 16,
                         "percentageQuestion": 35.55,
                         "percentageSurvey": 11.24,
                         "entity": {
@@ -897,7 +859,7 @@
                       {
                         "count": 615,
                         "id": "nth_child_of_s",
-                        "index": 18,
+                        "index": 17,
                         "percentageQuestion": 35.32,
                         "percentageSurvey": 11.17,
                         "entity": {
@@ -951,7 +913,7 @@
                       {
                         "count": 604,
                         "id": "scroll_driven_animations",
-                        "index": 19,
+                        "index": 18,
                         "percentageQuestion": 34.69,
                         "percentageSurvey": 10.97,
                         "entity": {
@@ -1011,6 +973,60 @@
                         }
                       },
                       {
+                        "count": 583,
+                        "id": "view_transitions",
+                        "index": 19,
+                        "percentageQuestion": 33.49,
+                        "percentageSurvey": 10.59,
+                        "entity": {
+                          "name": "View Transition API",
+                          "nameHtml": "View Transition API",
+                          "nameClean": "View Transition API",
+                          "id": "view_transitions",
+                          "parentId": "animations_issues",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "::view-transition-old(main-image),\n::view-transition-new(main-image) {\n  transform-origin: right top;\n}\n\n::view-transition-new(main-image) {\n  animation: 400ms ease-out both grow;\n}\n\nfigure {\n  view-transition-name: main-image;\n}\n",
+                            "codeHighlighted": "::<span class=\"hljs-built_in\">view-transition-old</span>(main-image),\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">transform-origin</span>: right top;\n}\n\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">animation</span>: <span class=\"hljs-number\">400ms</span> ease-out both grow;\n}\n\n<span class=\"hljs-selector-tag\">figure</span> {\n  <span class=\"hljs-attribute\">view-transition-name</span>: main-image;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-api_viewtransition"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://developer.chrome.com/docs/web-platform/view-transitions/",
+                              "title": "Smooth and simple transitions with the View Transitions API"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "cross-document-view-transitions",
+                            "description_html": "The <code>@view-transition</code> CSS rule sets whether a document opts-in to transitions between documents in a multi-page application. Both the old and new document must opt-in for a transition to be triggered.",
+                            "group": [
+                              "view-transitions"
+                            ],
+                            "name": "Cross-document view transitions",
+                            "spec": [
+                              "https://drafts.csswg.org/css-view-transitions-2/#cross-doc-opt-in"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/cross-document-view-transitions/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "126",
+                                "chrome_android": "126",
+                                "edge": "126",
+                                "safari": "18.2",
+                                "safari_ios": "18.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
                         "count": 3765,
                         "id": "no_answer",
                         "index": 20,
@@ -1018,11 +1034,11 @@
                         "percentageSurvey": 68.38
                       },
                       {
-                        "count": 17915,
+                        "count": 17165,
                         "id": "other_answers",
                         "index": 21,
-                        "percentageQuestion": 1029.02,
-                        "percentageSurvey": 325.38
+                        "percentageQuestion": 985.94,
+                        "percentageSurvey": 311.73
                       }
                     ]
                   },
@@ -1159,6 +1175,7 @@
                           "nameHtml": "<code>calc-size()</code>",
                           "nameClean": "calc-size()",
                           "id": "calc_size",
+                          "parentId": "intrinsic_sizing",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
@@ -1361,6 +1378,7 @@
                           "nameHtml": "<code>corner-shape</code>",
                           "nameClean": "corner-shape",
                           "id": "css_corner_shape",
+                          "parentId": "element_shape",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
@@ -1441,11 +1459,15 @@
                           "descriptionHtml": "The <code>@function</code> CSS at-rule defines a custom function that takes CSS values or custom properties as arguments, and returns a CSS value.",
                           "descriptionClean": "The @function CSS at-rule defines a custom function that takes CSS values or custom properties as arguments, and returns a CSS value.",
                           "id": "at_function",
+                          "parentId": "custom_functions",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
                             "code": "@function --negate(--value) {\n  result: calc(-1 * var(--value));\n}\n",
                             "codeHighlighted": "<span class=\"hljs-keyword\">@function</span> --negate(--value) {\n  result: <span class=\"hljs-built_in\">calc</span>(-<span class=\"hljs-number\">1</span> * <span class=\"hljs-built_in\">var</span>(--value));\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@function"
                           },
                           "resources": [
                             {
@@ -1546,11 +1568,15 @@
                           "descriptionHtml": "The <code>if()</code> CSS function is an inline conditional value that returns a value based on a set of conditions.",
                           "descriptionClean": "The if() CSS function is an inline conditional value that returns a value based on a set of conditions.",
                           "id": "if_function",
+                          "parentId": "css_conditional_logic",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
                             "code": "div {\n  color: var(--color);\n  background-color: if(style(--color: white): black; else: white);\n}\n",
                             "codeHighlighted": "<span class=\"hljs-selector-tag\">div</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">var</span>(--color);\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">if</span>(<span class=\"hljs-built_in\">style</span>(--color: white): black; else: white);\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/if"
                           },
                           "resources": [
                             {
@@ -1645,6 +1671,7 @@
                           "nameHtml": "Anchor Positioning",
                           "nameClean": "Anchor Positioning",
                           "id": "anchor_positioning",
+                          "parentId": "positioning_issues",
                           "entityType": "feature",
                           "example": {
                             "language": "css",

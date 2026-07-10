@@ -8,7 +8,7 @@
               "id": "layout_pain_points",
               "comments": {
                 "currentEdition": {
-                  "count": 3
+                  "count": 1
                 }
               },
               "freeform": {
@@ -100,6 +100,7 @@
                           "descriptionHtml": "Browser support, compatibility, and consistency issues.",
                           "descriptionClean": "Browser support, compatibility, and consistency issues.",
                           "id": "browser_support",
+                          "parentId": "interop_issues",
                           "entityType": "default"
                         }
                       },
@@ -139,7 +140,7 @@
                           "descriptionHtml": "Native support for Pinterest-style free-flowing grid layouts.",
                           "descriptionClean": "Native support for Pinterest-style free-flowing grid layouts.",
                           "id": "masonry_layout",
-                          "parentId": "css_layout",
+                          "parentId": "css_layout_issues",
                           "entityType": "default",
                           "webFeature": {
                             "id": "masonry",
@@ -229,7 +230,65 @@
                           "nameClean": "Positioning",
                           "id": "positioning_issues",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 38,
+                            "id": "anchor_positioning",
+                            "index": 0,
+                            "percentageQuestion": 3.02,
+                            "percentageSurvey": 0.69,
+                            "entity": {
+                              "name": "Anchor Positioning",
+                              "nameHtml": "Anchor Positioning",
+                              "nameClean": "Anchor Positioning",
+                              "id": "anchor_positioning",
+                              "parentId": "positioning_issues",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": ".anchor {\n  anchor-name: --my-anchor;\n}\n.target {\n  position: absolute;\n  position-anchor: --my-anchor;\n  position-area: start end;\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-selector-class\">.anchor</span> {\n  <span class=\"hljs-attribute\">anchor-name</span>: --my-anchor;\n}\n<span class=\"hljs-selector-class\">.target</span> {\n  <span class=\"hljs-attribute\">position</span>: absolute;\n  <span class=\"hljs-attribute\">position-anchor</span>: --my-anchor;\n  <span class=\"hljs-attribute\">position</span>-area: start end;\n}"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Anchor_positioning"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/css-anchor-positioning"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://kizu.dev/anchor-positioning-experiments/",
+                                  "title": "Future CSS: Anchor Positioning\n"
+                                },
+                                {
+                                  "url": "https://developer.chrome.com/blog/tether-elements-to-each-other-with-css-anchor-positioning/",
+                                  "title": "Tether elements to each other with CSS anchor positioning\n"
+                                },
+                                {
+                                  "url": "https://css-tricks.com/css-anchor-positioning-guide/",
+                                  "title": "CSS Anchor Positioning Guide"
+                                }
+                              ],
+                              "webFeature": {
+                                "id": "anchor-positioning",
+                                "description_html": "Anchor positioning places an element based on the position of another element. For example, you can place a tooltip next to the content it references.",
+                                "name": "Anchor positioning",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-anchor-position-1/#anchoring"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/anchor-positioning/",
+                                "status": {
+                                  "baseline": "false",
+                                  "support": {
+                                    "firefox": "151",
+                                    "firefox_android": "151"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 55,
@@ -360,63 +419,8 @@
                       },
                       {
                         "count": 38,
-                        "id": "anchor_positioning",
-                        "index": 14,
-                        "percentageQuestion": 3.02,
-                        "percentageSurvey": 0.69,
-                        "entity": {
-                          "name": "Anchor Positioning",
-                          "nameHtml": "Anchor Positioning",
-                          "nameClean": "Anchor Positioning",
-                          "id": "anchor_positioning",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".anchor {\n  anchor-name: --my-anchor;\n}\n.target {\n  position: absolute;\n  position-anchor: --my-anchor;\n  position-area: start end;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.anchor</span> {\n  <span class=\"hljs-attribute\">anchor-name</span>: --my-anchor;\n}\n<span class=\"hljs-selector-class\">.target</span> {\n  <span class=\"hljs-attribute\">position</span>: absolute;\n  <span class=\"hljs-attribute\">position-anchor</span>: --my-anchor;\n  <span class=\"hljs-attribute\">position</span>-area: start end;\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Anchor_positioning"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-anchor-positioning"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://kizu.dev/anchor-positioning-experiments/",
-                              "title": "Future CSS: Anchor Positioning\n"
-                            },
-                            {
-                              "url": "https://developer.chrome.com/blog/tether-elements-to-each-other-with-css-anchor-positioning/",
-                              "title": "Tether elements to each other with CSS anchor positioning\n"
-                            },
-                            {
-                              "url": "https://css-tricks.com/css-anchor-positioning-guide/",
-                              "title": "CSS Anchor Positioning Guide"
-                            }
-                          ],
-                          "webFeature": {
-                            "id": "anchor-positioning",
-                            "description_html": "Anchor positioning places an element based on the position of another element. For example, you can place a tooltip next to the content it references.",
-                            "name": "Anchor positioning",
-                            "spec": [
-                              "https://drafts.csswg.org/css-anchor-position-1/#anchoring"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/anchor-positioning/",
-                            "status": {
-                              "baseline": "false",
-                              "support": {
-                                "firefox": "151",
-                                "firefox_android": "151"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 38,
                         "id": "z_index_issues",
-                        "index": 15,
+                        "index": 14,
                         "percentageQuestion": 3.02,
                         "percentageSurvey": 0.69,
                         "entity": {
@@ -427,7 +431,7 @@
                       {
                         "count": 33,
                         "id": "at_container_size",
-                        "index": 16,
+                        "index": 15,
                         "percentageQuestion": 2.62,
                         "percentageSurvey": 0.6,
                         "entity": {
@@ -477,7 +481,7 @@
                       {
                         "count": 33,
                         "id": "scrolling_issues",
-                        "index": 17,
+                        "index": 16,
                         "percentageQuestion": 2.62,
                         "percentageSurvey": 0.6,
                         "entity": {
@@ -488,7 +492,7 @@
                       {
                         "count": 32,
                         "id": "excessive_complexity",
-                        "index": 18,
+                        "index": 17,
                         "percentageQuestion": 2.54,
                         "percentageSurvey": 0.58,
                         "entity": {
@@ -503,7 +507,7 @@
                       {
                         "count": 32,
                         "id": "table_layouts_issues",
-                        "index": 19,
+                        "index": 18,
                         "percentageQuestion": 2.54,
                         "percentageSurvey": 0.58,
                         "entity": {
@@ -514,7 +518,7 @@
                       {
                         "count": 30,
                         "id": "safari",
-                        "index": 20,
+                        "index": 19,
                         "percentageQuestion": 2.38,
                         "percentageSurvey": 0.54,
                         "entity": {
@@ -532,14 +536,14 @@
                       {
                         "count": 29,
                         "id": "animation_issues",
-                        "index": 21,
+                        "index": 20,
                         "percentageQuestion": 2.3,
                         "percentageSurvey": 0.53
                       },
                       {
                         "count": 29,
                         "id": "subgrid",
-                        "index": 22,
+                        "index": 21,
                         "percentageQuestion": 2.3,
                         "percentageSurvey": 0.53,
                         "entity": {
@@ -547,7 +551,7 @@
                           "nameHtml": "Subgrid",
                           "nameClean": "Subgrid",
                           "id": "subgrid",
-                          "parentId": "css_layout",
+                          "parentId": "css_layout_issues",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
@@ -590,7 +594,7 @@
                       {
                         "count": 28,
                         "id": "css_nesting",
-                        "index": 23,
+                        "index": 22,
                         "percentageQuestion": 2.22,
                         "percentageSurvey": 0.51,
                         "entity": {
@@ -643,13 +647,186 @@
                       {
                         "count": 27,
                         "id": "margin_issues",
-                        "index": 24,
+                        "index": 23,
                         "percentageQuestion": 2.14,
                         "percentageSurvey": 0.49,
                         "entity": {
                           "id": "margin_issues",
                           "entityType": "default"
                         }
+                      },
+                      {
+                        "count": 27,
+                        "id": "sizing_issues",
+                        "index": 24,
+                        "percentageQuestion": 2.14,
+                        "percentageSurvey": 0.49,
+                        "entity": {
+                          "name": "Sizing",
+                          "nameHtml": "Sizing",
+                          "nameClean": "Sizing",
+                          "id": "sizing_issues",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 9,
+                            "id": "aspect_ratio",
+                            "index": 0,
+                            "percentageQuestion": 0.71,
+                            "percentageSurvey": 0.16,
+                            "entity": {
+                              "name": "`aspect-ratio`",
+                              "nameHtml": "<code>aspect-ratio</code>",
+                              "nameClean": "aspect-ratio",
+                              "id": "aspect_ratio",
+                              "parentId": "sizing_issues",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": ".square {\n  aspect-ratio: 1 / 1;\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-selector-class\">.square</span> {\n  <span class=\"hljs-attribute\">aspect-ratio</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">1</span>;\n}"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/aspect-ratio"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/mdn-css_properties_aspect-ratio"
+                              },
+                              "webFeature": {
+                                "id": "aspect-ratio",
+                                "description_html": "The <code>aspect-ratio</code> CSS property controls the width-to-height ratio of elements. For <code>&#x3C;img></code> and <code>&#x3C;video></code> elements, the <code>width</code> and <code>height</code> attributes used together with <code>height: auto</code> control the aspect ratio while the image/video is loading.",
+                                "group": [
+                                  "css"
+                                ],
+                                "name": "aspect-ratio",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-sizing-4/#aspect-ratio"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/aspect-ratio/",
+                                "status": {
+                                  "baseline": "high",
+                                  "baseline_low_date": "2021-09-20",
+                                  "support": {
+                                    "chrome": "88",
+                                    "chrome_android": "88",
+                                    "edge": "88",
+                                    "firefox": "89",
+                                    "firefox_android": "89",
+                                    "safari": "15",
+                                    "safari_ios": "15"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "count": 6,
+                            "id": "intrinsic_sizing",
+                            "index": 1,
+                            "percentageQuestion": 0.48,
+                            "percentageSurvey": 0.11,
+                            "entity": {
+                              "name": "Intrinsic Sizing",
+                              "nameHtml": "Intrinsic Sizing",
+                              "nameClean": "Intrinsic Sizing",
+                              "description": "`min-content`, `max-content`, `fit-content`",
+                              "descriptionHtml": "<code>min-content</code>, <code>max-content</code>, <code>fit-content</code>",
+                              "descriptionClean": "min-content, max-content, fit-content",
+                              "id": "intrinsic_sizing",
+                              "parentId": "sizing_issues",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": "h2 {\n  width: max-content;\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-selector-tag\">h2</span> {\n  <span class=\"hljs-attribute\">width</span>: max-content;\n}"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/min-content"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/intrinsic-width"
+                              },
+                              "webFeature": {
+                                "id": "min-max-content",
+                                "description_html": "The <code>min-content</code> and <code>max-content</code> CSS keywords represent the smallest and largest intrinsic sizes of an element.",
+                                "group": [
+                                  "layout"
+                                ],
+                                "name": "min-content and max-content",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-sizing-3/#valdef-width-max-content",
+                                  "https://drafts.csswg.org/css-sizing-3/#valdef-width-min-content"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/min-max-content/",
+                                "status": {
+                                  "baseline": "high",
+                                  "baseline_low_date": "2020-01-15",
+                                  "support": {
+                                    "chrome": "46",
+                                    "chrome_android": "46",
+                                    "edge": "79",
+                                    "firefox": "66",
+                                    "firefox_android": "66",
+                                    "safari": "11",
+                                    "safari_ios": "11"
+                                  }
+                                }
+                              }
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 13,
+                                "id": "calc_size",
+                                "index": 0,
+                                "percentageQuestion": 1.03,
+                                "percentageSurvey": 0.24,
+                                "entity": {
+                                  "name": "`calc-size()`",
+                                  "nameHtml": "<code>calc-size()</code>",
+                                  "nameClean": "calc-size()",
+                                  "id": "calc_size",
+                                  "parentId": "intrinsic_sizing",
+                                  "entityType": "feature",
+                                  "example": {
+                                    "language": "css",
+                                    "code": ".element {\n  height: 0;\n  overflow: hidden;\n  transition: height 0.3s;\n}\n\n.element.open {\n  height: calc-size(auto);\n}\n",
+                                    "codeHighlighted": "<span class=\"hljs-selector-class\">.element</span> {\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-number\">0</span>;\n  <span class=\"hljs-attribute\">overflow</span>: hidden;\n  <span class=\"hljs-attribute\">transition</span>: height <span class=\"hljs-number\">0.3s</span>;\n}\n\n<span class=\"hljs-selector-class\">.element</span><span class=\"hljs-selector-class\">.open</span> {\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-built_in\">calc-size</span>(auto);\n}"
+                                  },
+                                  "caniuse": {
+                                    "url": "https://caniuse.com/mdn-css_types_calc-size"
+                                  },
+                                  "resources": [
+                                    {
+                                      "url": "https://chromestatus.com/feature/5196713071738880",
+                                      "title": "CSS interpolate-size property and calc-size() function"
+                                    }
+                                  ],
+                                  "webFeature": {
+                                    "id": "calc-size",
+                                    "description_html": "The <code>calc-size()</code> CSS function computes mathematical expressions that include <code>height</code> and <code>width</code> keyword values, for example <code>calc-size(fit-content, size / 2)</code>. Not to be confused with the <code>calc()</code> CSS function, which cannot use keyword values.",
+                                    "group": [
+                                      "css"
+                                    ],
+                                    "name": "calc-size()",
+                                    "spec": [
+                                      "https://drafts.csswg.org/css-values-5/#calc-size"
+                                    ],
+                                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/calc-size/",
+                                    "status": {
+                                      "baseline": "false",
+                                      "support": {
+                                        "chrome": "129",
+                                        "chrome_android": "129",
+                                        "edge": "129"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
                       },
                       {
                         "count": 4237,
@@ -659,11 +836,11 @@
                         "percentageSurvey": 76.95
                       },
                       {
-                        "count": 844,
+                        "count": 802,
                         "id": "other_answers",
                         "index": 26,
-                        "percentageQuestion": 67.08,
-                        "percentageSurvey": 15.38
+                        "percentageQuestion": 63.75,
+                        "percentageSurvey": 14.62
                       }
                     ]
                   },
@@ -685,11 +862,11 @@
                     },
                     "buckets": [
                       {
-                        "count": 236,
+                        "count": 103,
                         "id": "grid",
                         "index": 0,
-                        "percentageQuestion": 37.34,
-                        "percentageSurvey": 4.81,
+                        "percentageQuestion": 16.3,
+                        "percentageSurvey": 2.1,
                         "entity": {
                           "name": "Grid",
                           "nameHtml": "Grid",
@@ -727,279 +904,180 @@
                               }
                             }
                           }
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 8,
+                            "id": "grid_track_sizing",
+                            "index": 0,
+                            "percentageQuestion": 1.27,
+                            "percentageSurvey": 0.16,
+                            "entity": {
+                              "name": "Grid track sizing",
+                              "nameHtml": "Grid track sizing",
+                              "nameClean": "Grid track sizing",
+                              "id": "grid_track_sizing",
+                              "parentId": "grid",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
-                        "count": 181,
-                        "id": "browser_support",
+                        "count": 77,
+                        "id": "cognitive_overload",
                         "index": 1,
-                        "percentageQuestion": 28.64,
-                        "percentageSurvey": 3.69,
+                        "percentageQuestion": 12.18,
+                        "percentageSurvey": 1.57,
                         "entity": {
-                          "name": "Browser support",
-                          "nameHtml": "Browser support",
-                          "nameClean": "Browser support",
-                          "description": "Browser support, compatibility, and consistency issues.",
-                          "descriptionHtml": "Browser support, compatibility, and consistency issues.",
-                          "descriptionClean": "Browser support, compatibility, and consistency issues.",
-                          "id": "browser_support",
+                          "name": "Cognitive overload",
+                          "nameHtml": "Cognitive overload",
+                          "nameClean": "Cognitive overload",
+                          "id": "cognitive_overload",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 21,
+                            "id": "choosing_layout_method",
+                            "index": 0,
+                            "percentageQuestion": 3.32,
+                            "percentageSurvey": 0.43,
+                            "entity": {
+                              "name": "Choosing a layout method",
+                              "nameHtml": "Choosing a layout method",
+                              "nameClean": "Choosing a layout method",
+                              "id": "choosing_layout_method",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 16,
+                            "id": "too_many_choices",
+                            "index": 1,
+                            "percentageQuestion": 2.53,
+                            "percentageSurvey": 0.33,
+                            "entity": {
+                              "name": "Choice overload",
+                              "nameHtml": "Choice overload",
+                              "nameClean": "Choice overload",
+                              "description": "Overwhelming amount of options and choices",
+                              "descriptionHtml": "Overwhelming amount of options and choices",
+                              "descriptionClean": "Overwhelming amount of options and choices",
+                              "id": "too_many_choices",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 16,
+                            "id": "hard_to_memorize",
+                            "index": 2,
+                            "percentageQuestion": 2.53,
+                            "percentageSurvey": 0.33,
+                            "entity": {
+                              "name": "Hard to memorize",
+                              "nameHtml": "Hard to memorize",
+                              "nameClean": "Hard to memorize",
+                              "id": "hard_to_memorize",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 12,
+                            "id": "poor_learnability",
+                            "index": 3,
+                            "percentageQuestion": 1.9,
+                            "percentageSurvey": 0.24,
+                            "entity": {
+                              "name": "Poor learnability",
+                              "nameHtml": "Poor learnability",
+                              "nameClean": "Poor learnability",
+                              "description": "High learning curve, requires too much knowledge to get started, or too much information to memorize.",
+                              "descriptionHtml": "High learning curve, requires too much knowledge to get started, or too much information to memorize.",
+                              "descriptionClean": "High learning curve, requires too much knowledge to get started, or too much information to memorize.",
+                              "id": "poor_learnability",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 10,
+                            "id": "excessive_complexity",
+                            "index": 4,
+                            "percentageQuestion": 1.58,
+                            "percentageSurvey": 0.2,
+                            "entity": {
+                              "name": "Excessive complexity",
+                              "nameHtml": "Excessive complexity",
+                              "nameClean": "Excessive complexity",
+                              "id": "excessive_complexity",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
-                        "count": 74,
-                        "id": "dynamic_sizing",
+                        "count": 72,
+                        "id": "sizing_issues",
                         "index": 2,
-                        "percentageQuestion": 11.71,
-                        "percentageSurvey": 1.51
-                      },
-                      {
-                        "count": 66,
-                        "id": "flexbox_issues",
-                        "index": 3,
-                        "percentageQuestion": 10.44,
-                        "percentageSurvey": 1.35,
+                        "percentageQuestion": 11.39,
+                        "percentageSurvey": 1.47,
                         "entity": {
-                          "id": "flexbox_issues",
+                          "name": "Sizing",
+                          "nameHtml": "Sizing",
+                          "nameClean": "Sizing",
+                          "id": "sizing_issues",
                           "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 64,
-                        "id": "responsive_design",
-                        "index": 4,
-                        "percentageQuestion": 10.13,
-                        "percentageSurvey": 1.31,
-                        "entity": {
-                          "name": "Responsive design",
-                          "nameHtml": "Responsive design",
-                          "nameClean": "Responsive design",
-                          "id": "responsive_design",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 60,
-                        "id": "flexbox",
-                        "index": 5,
-                        "percentageQuestion": 9.49,
-                        "percentageSurvey": 1.22,
-                        "entity": {
-                          "name": "Flexbox",
-                          "nameHtml": "Flexbox",
-                          "nameClean": "Flexbox",
-                          "id": "flexbox",
-                          "entityType": "feature",
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 72,
+                            "id": "extrinsic_sizing",
+                            "index": 0,
+                            "percentageQuestion": 11.39,
+                            "percentageSurvey": 1.47,
+                            "entity": {
+                              "name": "Extrinsic sizing",
+                              "nameHtml": "Extrinsic sizing",
+                              "nameClean": "Extrinsic sizing",
+                              "id": "extrinsic_sizing",
+                              "parentId": "sizing_issues",
+                              "entityType": "default"
+                            }
                           },
-                          "caniuse": {
-                            "url": "https://caniuse.com/flexbox - html_interoperability_features"
-                          },
-                          "webFeature": {
-                            "id": "flexbox",
-                            "description_html": "Flexbox is a one-dimensional layout system, which places content either horizontally or vertically, with optional wrapping.",
-                            "group": [
-                              "flexbox"
-                            ],
-                            "name": "Flexbox",
-                            "spec": [
-                              "https://drafts.csswg.org/css-flexbox-1/"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/flexbox/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2015-09-30",
-                              "support": {
-                                "chrome": "29",
-                                "chrome_android": "29",
-                                "edge": "12",
-                                "firefox": "20",
-                                "firefox_android": "20",
-                                "safari": "9",
-                                "safari_ios": "9"
-                              }
+                          {
+                            "count": 72,
+                            "id": "automatic_min_size",
+                            "index": 1,
+                            "percentageQuestion": 11.39,
+                            "percentageSurvey": 1.47,
+                            "entity": {
+                              "name": "Automatic minimum size",
+                              "nameHtml": "Automatic minimum size",
+                              "nameClean": "Automatic minimum size",
+                              "id": "automatic_min_size",
+                              "parentId": "sizing_issues",
+                              "entityType": "default"
                             }
                           }
-                        }
+                        ]
                       },
                       {
-                        "count": 54,
-                        "id": "positioning_elements",
-                        "index": 6,
-                        "percentageQuestion": 8.54,
-                        "percentageSurvey": 1.1
-                      },
-                      {
-                        "count": 39,
-                        "id": "anchor_positioning",
-                        "index": 7,
-                        "percentageQuestion": 6.17,
-                        "percentageSurvey": 0.8,
-                        "entity": {
-                          "name": "Anchor Positioning",
-                          "nameHtml": "Anchor Positioning",
-                          "nameClean": "Anchor Positioning",
-                          "id": "anchor_positioning",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".anchor {\n  anchor-name: --my-anchor;\n}\n.target {\n  position: absolute;\n  position-anchor: --my-anchor;\n  position-area: start end;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.anchor</span> {\n  <span class=\"hljs-attribute\">anchor-name</span>: --my-anchor;\n}\n<span class=\"hljs-selector-class\">.target</span> {\n  <span class=\"hljs-attribute\">position</span>: absolute;\n  <span class=\"hljs-attribute\">position-anchor</span>: --my-anchor;\n  <span class=\"hljs-attribute\">position</span>-area: start end;\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Anchor_positioning"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-anchor-positioning"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://kizu.dev/anchor-positioning-experiments/",
-                              "title": "Future CSS: Anchor Positioning\n"
-                            },
-                            {
-                              "url": "https://developer.chrome.com/blog/tether-elements-to-each-other-with-css-anchor-positioning/",
-                              "title": "Tether elements to each other with CSS anchor positioning\n"
-                            },
-                            {
-                              "url": "https://css-tricks.com/css-anchor-positioning-guide/",
-                              "title": "CSS Anchor Positioning Guide"
-                            }
-                          ],
-                          "webFeature": {
-                            "id": "anchor-positioning",
-                            "description_html": "Anchor positioning places an element based on the position of another element. For example, you can place a tooltip next to the content it references.",
-                            "name": "Anchor positioning",
-                            "spec": [
-                              "https://drafts.csswg.org/css-anchor-position-1/#anchoring"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/anchor-positioning/",
-                            "status": {
-                              "baseline": "false",
-                              "support": {
-                                "firefox": "151",
-                                "firefox_android": "151"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 35,
-                        "id": "overflow_and_scrolling",
-                        "index": 8,
-                        "percentageQuestion": 5.54,
-                        "percentageSurvey": 0.71
-                      },
-                      {
-                        "count": 34,
-                        "id": "multi_column",
-                        "index": 9,
-                        "percentageQuestion": 5.38,
-                        "percentageSurvey": 0.69,
-                        "entity": {
-                          "name": "Multi-Column Layout",
-                          "nameHtml": "Multi-Column Layout",
-                          "nameClean": "Multi-Column Layout",
-                          "id": "multi_column",
-                          "entityType": "feature",
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Multicol_layout"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/multicolumn"
-                          },
-                          "webFeature": {
-                            "id": "column-fill",
-                            "description_html": "The <code>column-fill</code> CSS property sets the distribution of content across columns in a multi-column layout.",
-                            "group": [
-                              "multi-column"
-                            ],
-                            "name": "column-fill",
-                            "spec": [
-                              "https://drafts.csswg.org/css-multicol-1/#filling-columns"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/column-fill/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2017-03-07",
-                              "support": {
-                                "chrome": "50",
-                                "chrome_android": "50",
-                                "edge": "12",
-                                "firefox": "52",
-                                "firefox_android": "52",
-                                "safari": "9",
-                                "safari_ios": "9"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 32,
-                        "id": "height_issues",
-                        "index": 10,
-                        "percentageQuestion": 5.06,
-                        "percentageSurvey": 0.65,
-                        "entity": {
-                          "id": "height_issues",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 32,
-                        "id": "positioning_issues",
-                        "index": 11,
-                        "percentageQuestion": 5.06,
-                        "percentageSurvey": 0.65,
-                        "entity": {
-                          "name": "Positioning",
-                          "nameHtml": "Positioning",
-                          "nameClean": "Positioning",
-                          "id": "positioning_issues",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 28,
-                        "id": "overflow_issues",
-                        "index": 12,
-                        "percentageQuestion": 4.43,
-                        "percentageSurvey": 0.57,
-                        "entity": {
-                          "id": "overflow_issues",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 26,
-                        "id": "excessive_complexity",
-                        "index": 13,
-                        "percentageQuestion": 4.11,
-                        "percentageSurvey": 0.53,
-                        "entity": {
-                          "name": "Excessive complexity",
-                          "nameHtml": "Excessive complexity",
-                          "nameClean": "Excessive complexity",
-                          "id": "excessive_complexity",
-                          "parentId": "cognitive_overload",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 26,
+                        "count": 59,
                         "id": "subgrid",
-                        "index": 14,
-                        "percentageQuestion": 4.11,
-                        "percentageSurvey": 0.53,
+                        "index": 3,
+                        "percentageQuestion": 9.34,
+                        "percentageSurvey": 1.2,
                         "entity": {
                           "name": "Subgrid",
                           "nameHtml": "Subgrid",
                           "nameClean": "Subgrid",
                           "id": "subgrid",
-                          "parentId": "css_layout",
+                          "parentId": "css_layout_issues",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
@@ -1040,67 +1118,361 @@
                         }
                       },
                       {
-                        "count": 25,
-                        "id": "alignment_and_centering",
-                        "index": 15,
-                        "percentageQuestion": 3.96,
-                        "percentageSurvey": 0.51
-                      },
-                      {
-                        "count": 25,
-                        "id": "alignment_issues",
-                        "index": 16,
-                        "percentageQuestion": 3.96,
-                        "percentageSurvey": 0.51,
+                        "count": 52,
+                        "id": "responsive_design",
+                        "index": 4,
+                        "percentageQuestion": 8.23,
+                        "percentageSurvey": 1.06,
                         "entity": {
-                          "id": "alignment_issues",
+                          "name": "Responsive design",
+                          "nameHtml": "Responsive design",
+                          "nameClean": "Responsive design",
+                          "id": "responsive_design",
                           "entityType": "default"
                         }
                       },
                       {
-                        "count": 25,
-                        "id": "masonry_layout",
-                        "index": 17,
-                        "percentageQuestion": 3.96,
-                        "percentageSurvey": 0.51,
+                        "count": 51,
+                        "id": "flexbox",
+                        "index": 5,
+                        "percentageQuestion": 8.07,
+                        "percentageSurvey": 1.04,
                         "entity": {
-                          "name": "Masonry Layout",
-                          "nameHtml": "Masonry Layout",
-                          "nameClean": "Masonry Layout",
-                          "description": "Native support for Pinterest-style free-flowing grid layouts.",
-                          "descriptionHtml": "Native support for Pinterest-style free-flowing grid layouts.",
-                          "descriptionClean": "Native support for Pinterest-style free-flowing grid layouts.",
-                          "id": "masonry_layout",
-                          "parentId": "css_layout",
-                          "entityType": "default",
+                          "name": "Flexbox",
+                          "nameHtml": "Flexbox",
+                          "nameClean": "Flexbox",
+                          "id": "flexbox",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/flexbox - html_interoperability_features"
+                          },
                           "webFeature": {
-                            "id": "masonry",
-                            "description_html": "The <code>display: grid-lanes</code> or <code>display: inline-grid-lanes</code> CSS declaration creates a layout where items are tightly packed, like brickwork, in parallel lanes. Items are placed one by one in the lane that has the most available space.",
+                            "id": "flexbox",
+                            "description_html": "Flexbox is a one-dimensional layout system, which places content either horizontally or vertically, with optional wrapping.",
                             "group": [
-                              "layout"
+                              "flexbox"
                             ],
-                            "name": "Masonry",
+                            "name": "Flexbox",
                             "spec": [
-                              "https://drafts.csswg.org/css-grid-3/"
+                              "https://drafts.csswg.org/css-flexbox-1/"
                             ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/masonry/",
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/flexbox/",
                             "status": {
-                              "baseline": "false"
+                              "baseline": "high",
+                              "baseline_low_date": "2015-09-30",
+                              "support": {
+                                "chrome": "29",
+                                "chrome_android": "29",
+                                "edge": "12",
+                                "firefox": "20",
+                                "firefox_android": "20",
+                                "safari": "9",
+                                "safari_ios": "9"
+                              }
                             }
                           }
                         }
                       },
                       {
-                        "count": 22,
-                        "id": "at_container_size",
-                        "index": 18,
-                        "percentageQuestion": 3.48,
-                        "percentageSurvey": 0.45,
+                        "count": 38,
+                        "id": "debugging_issues",
+                        "index": 6,
+                        "percentageQuestion": 6.01,
+                        "percentageSurvey": 0.78,
                         "entity": {
-                          "name": "`@container` size queries",
-                          "nameHtml": "<code>@container</code> size queries",
-                          "nameClean": "@container size queries",
-                          "id": "at_container_size",
+                          "name": "Debugging",
+                          "nameHtml": "Debugging",
+                          "nameClean": "Debugging",
+                          "description": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
+                          "descriptionHtml": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
+                          "descriptionClean": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
+                          "id": "debugging_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 33,
+                        "id": "interop_issues",
+                        "index": 7,
+                        "percentageQuestion": 5.22,
+                        "percentageSurvey": 0.67,
+                        "entity": {
+                          "name": "Browser issues",
+                          "nameHtml": "Browser issues",
+                          "nameClean": "Browser issues",
+                          "description": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
+                          "descriptionHtml": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
+                          "descriptionClean": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
+                          "id": "interop_issues",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 64,
+                            "id": "browser_support",
+                            "index": 0,
+                            "percentageQuestion": 10.13,
+                            "percentageSurvey": 1.31,
+                            "entity": {
+                              "name": "Browser support",
+                              "nameHtml": "Browser support",
+                              "nameClean": "Browser support",
+                              "description": "Browser support, compatibility, and consistency issues.",
+                              "descriptionHtml": "Browser support, compatibility, and consistency issues.",
+                              "descriptionClean": "Browser support, compatibility, and consistency issues.",
+                              "id": "browser_support",
+                              "parentId": "interop_issues",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 19,
+                            "id": "apple",
+                            "index": 1,
+                            "percentageQuestion": 3.01,
+                            "percentageSurvey": 0.39,
+                            "entity": {
+                              "name": "Apple",
+                              "nameHtml": "Apple",
+                              "nameClean": "Apple",
+                              "id": "apple",
+                              "parentId": "interop_issues",
+                              "entityType": "default",
+                              "homepage": {
+                                "url": "https://www.apple.com/"
+                              }
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 14,
+                                "id": "safari",
+                                "index": 0,
+                                "percentageQuestion": 2.22,
+                                "percentageSurvey": 0.29,
+                                "entity": {
+                                  "name": "Safari",
+                                  "nameHtml": "Safari",
+                                  "nameClean": "Safari",
+                                  "id": "safari",
+                                  "parentId": "apple",
+                                  "entityType": "default",
+                                  "homepage": {
+                                    "url": "https://www.apple.com/safari/"
+                                  }
+                                }
+                              },
+                              {
+                                "count": 5,
+                                "id": "safari_ios",
+                                "index": 1,
+                                "percentageQuestion": 0.79,
+                                "percentageSurvey": 0.1,
+                                "entity": {
+                                  "name": "Safari iOS",
+                                  "nameHtml": "Safari iOS",
+                                  "nameClean": "Safari iOS",
+                                  "id": "safari_ios",
+                                  "parentId": "apple",
+                                  "entityType": "default",
+                                  "homepage": {
+                                    "url": "https://www.apple.com/safari/"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "count": 11,
+                            "id": "mozilla",
+                            "index": 2,
+                            "percentageQuestion": 1.74,
+                            "percentageSurvey": 0.22,
+                            "entity": {
+                              "name": "Mozilla",
+                              "nameHtml": "Mozilla",
+                              "nameClean": "Mozilla",
+                              "id": "mozilla",
+                              "parentId": "interop_issues",
+                              "entityType": "default",
+                              "homepage": {
+                                "url": "https://www.mozilla.org/"
+                              }
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 11,
+                                "id": "firefox",
+                                "index": 0,
+                                "percentageQuestion": 1.74,
+                                "percentageSurvey": 0.22,
+                                "entity": {
+                                  "name": "Firefox",
+                                  "nameHtml": "Firefox",
+                                  "nameClean": "Firefox",
+                                  "id": "firefox",
+                                  "parentId": "mozilla",
+                                  "entityType": "default",
+                                  "homepage": {
+                                    "url": "https://www.mozilla.org/en-US/firefox/new/"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "count": 5,
+                            "id": "google",
+                            "index": 3,
+                            "percentageQuestion": 0.79,
+                            "percentageSurvey": 0.1,
+                            "entity": {
+                              "name": "Google",
+                              "nameHtml": "Google",
+                              "nameClean": "Google",
+                              "id": "google",
+                              "parentId": "interop_issues",
+                              "entityType": "default",
+                              "homepage": {
+                                "url": "https://google.com"
+                              }
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 5,
+                                "id": "chrome",
+                                "index": 0,
+                                "percentageQuestion": 0.79,
+                                "percentageSurvey": 0.1,
+                                "entity": {
+                                  "name": "Chrome",
+                                  "nameHtml": "Chrome",
+                                  "nameClean": "Chrome",
+                                  "id": "chrome",
+                                  "parentId": "google",
+                                  "entityType": "default",
+                                  "homepage": {
+                                    "url": "https://www.google.com/chrome/"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "count": 31,
+                        "id": "overflow_issues",
+                        "index": 8,
+                        "percentageQuestion": 4.91,
+                        "percentageSurvey": 0.63,
+                        "entity": {
+                          "id": "overflow_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 30,
+                        "id": "developer_experience",
+                        "index": 9,
+                        "percentageQuestion": 4.75,
+                        "percentageSurvey": 0.61,
+                        "entity": {
+                          "name": "Developer Experience",
+                          "nameHtml": "Developer Experience",
+                          "nameClean": "Developer Experience",
+                          "description": "Issues related not to being unable to achieve something, but to *how* it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
+                          "descriptionHtml": "Issues related not to being unable to achieve something, but to <em>how</em> it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
+                          "descriptionClean": "Issues related not to being unable to achieve something, but to how it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
+                          "id": "developer_experience",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 26,
+                        "id": "positioning_issues",
+                        "index": 10,
+                        "percentageQuestion": 4.11,
+                        "percentageSurvey": 0.53,
+                        "entity": {
+                          "name": "Positioning",
+                          "nameHtml": "Positioning",
+                          "nameClean": "Positioning",
+                          "id": "positioning_issues",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 38,
+                            "id": "anchor_positioning",
+                            "index": 0,
+                            "percentageQuestion": 6.01,
+                            "percentageSurvey": 0.78,
+                            "entity": {
+                              "name": "Anchor Positioning",
+                              "nameHtml": "Anchor Positioning",
+                              "nameClean": "Anchor Positioning",
+                              "id": "anchor_positioning",
+                              "parentId": "positioning_issues",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": ".anchor {\n  anchor-name: --my-anchor;\n}\n.target {\n  position: absolute;\n  position-anchor: --my-anchor;\n  position-area: start end;\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-selector-class\">.anchor</span> {\n  <span class=\"hljs-attribute\">anchor-name</span>: --my-anchor;\n}\n<span class=\"hljs-selector-class\">.target</span> {\n  <span class=\"hljs-attribute\">position</span>: absolute;\n  <span class=\"hljs-attribute\">position-anchor</span>: --my-anchor;\n  <span class=\"hljs-attribute\">position</span>-area: start end;\n}"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Anchor_positioning"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/css-anchor-positioning"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://kizu.dev/anchor-positioning-experiments/",
+                                  "title": "Future CSS: Anchor Positioning\n"
+                                },
+                                {
+                                  "url": "https://developer.chrome.com/blog/tether-elements-to-each-other-with-css-anchor-positioning/",
+                                  "title": "Tether elements to each other with CSS anchor positioning\n"
+                                },
+                                {
+                                  "url": "https://css-tricks.com/css-anchor-positioning-guide/",
+                                  "title": "CSS Anchor Positioning Guide"
+                                }
+                              ],
+                              "webFeature": {
+                                "id": "anchor-positioning",
+                                "description_html": "Anchor positioning places an element based on the position of another element. For example, you can place a tooltip next to the content it references.",
+                                "name": "Anchor positioning",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-anchor-position-1/#anchoring"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/anchor-positioning/",
+                                "status": {
+                                  "baseline": "false",
+                                  "support": {
+                                    "firefox": "151",
+                                    "firefox_android": "151"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 24,
+                        "id": "at_container",
+                        "index": 11,
+                        "percentageQuestion": 3.8,
+                        "percentageSurvey": 0.49,
+                        "entity": {
+                          "name": "`@container`",
+                          "nameHtml": "<code>@container</code>",
+                          "nameClean": "@container",
+                          "id": "at_container",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
@@ -1141,43 +1513,233 @@
                         }
                       },
                       {
-                        "count": 22,
-                        "id": "wrapping_and_text_flow",
-                        "index": 19,
-                        "percentageQuestion": 3.48,
-                        "percentageSurvey": 0.45
-                      },
-                      {
                         "count": 21,
-                        "id": "container_queries",
-                        "index": 20,
+                        "id": "box_alignment",
+                        "index": 12,
                         "percentageQuestion": 3.32,
-                        "percentageSurvey": 0.43
-                      },
-                      {
-                        "count": 18,
-                        "id": "centering_issues",
-                        "index": 21,
-                        "percentageQuestion": 2.85,
-                        "percentageSurvey": 0.37,
+                        "percentageSurvey": 0.43,
                         "entity": {
-                          "id": "centering_issues",
+                          "name": "Alignment properties",
+                          "nameHtml": "Alignment properties",
+                          "nameClean": "Alignment properties",
+                          "id": "box_alignment",
                           "entityType": "default"
                         }
                       },
                       {
                         "count": 17,
-                        "id": "layout_syntax_learning",
-                        "index": 22,
+                        "id": "center",
+                        "index": 13,
                         "percentageQuestion": 2.69,
-                        "percentageSurvey": 0.35
+                        "percentageSurvey": 0.35,
+                        "entity": {
+                          "name": "Centering",
+                          "nameHtml": "Centering",
+                          "nameClean": "Centering",
+                          "id": "center",
+                          "entityType": "default"
+                        }
                       },
                       {
-                        "count": 16,
+                        "count": 17,
+                        "id": "stacking_context",
+                        "index": 14,
+                        "percentageQuestion": 2.69,
+                        "percentageSurvey": 0.35,
+                        "entity": {
+                          "name": "z-index & stacking contexts",
+                          "nameHtml": "z-index &amp; stacking contexts",
+                          "nameClean": "z-index & stacking contexts",
+                          "id": "stacking_context",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 15,
+                        "id": "educational_issues",
+                        "index": 15,
+                        "percentageQuestion": 2.37,
+                        "percentageSurvey": 0.31,
+                        "entity": {
+                          "name": "Education",
+                          "nameHtml": "Education",
+                          "nameClean": "Education",
+                          "description": "Issues related to learning new technologies",
+                          "descriptionHtml": "Issues related to learning new technologies",
+                          "descriptionClean": "Issues related to learning new technologies",
+                          "id": "educational_issues",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 5,
+                            "id": "baseline_awareness",
+                            "index": 0,
+                            "percentageQuestion": 0.79,
+                            "percentageSurvey": 0.1,
+                            "entity": {
+                              "name": "Baseline availability awareness",
+                              "nameHtml": "Baseline availability awareness",
+                              "nameClean": "Baseline availability awareness",
+                              "id": "baseline_awareness",
+                              "parentId": "educational_issues",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 15,
+                        "id": "media_queries",
+                        "index": 16,
+                        "percentageQuestion": 2.37,
+                        "percentageSurvey": 0.31,
+                        "entity": {
+                          "name": "Media Queries",
+                          "nameHtml": "Media Queries",
+                          "nameClean": "Media Queries",
+                          "id": "media_queries",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-mediaqueries"
+                          },
+                          "webFeature": {
+                            "id": "media-queries",
+                            "description_html": "The <code>@media</code> CSS rule conditionally applies styles based on the output device type, its capabilities, and the user's preferences. Media queries are composed of an optional media type such as <code>screen</code> or <code>print</code>, and one or more mandatory media features, such as <code>prefers-reduced-animations</code>.",
+                            "group": [
+                              "media-queries"
+                            ],
+                            "name": "Media queries",
+                            "spec": [
+                              "https://drafts.csswg.org/mediaqueries-5/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/media-queries/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2015-07-29",
+                              "support": {
+                                "chrome": "1",
+                                "chrome_android": "18",
+                                "edge": "12",
+                                "firefox": "1",
+                                "firefox_android": "4",
+                                "safari": "3",
+                                "safari_ios": "1"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 14,
+                        "id": "css_grid_lanes",
+                        "index": 17,
+                        "percentageQuestion": 2.22,
+                        "percentageSurvey": 0.29,
+                        "entity": {
+                          "name": "Grid Lanes",
+                          "nameHtml": "Grid Lanes",
+                          "nameClean": "Grid Lanes",
+                          "id": "css_grid_lanes",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".container {\n  display: grid-lanes;\n  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));\n  gap: 16px;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.container</span> {\n  <span class=\"hljs-attribute\">display</span>: grid-lanes;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-built_in\">repeat</span>(auto-fill, <span class=\"hljs-built_in\">minmax</span>(<span class=\"hljs-number\">250px</span>, <span class=\"hljs-number\">1</span>fr));\n  <span class=\"hljs-attribute\">gap</span>: <span class=\"hljs-number\">16px</span>;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-grid-lanes"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://webkit.org/blog/17660/introducing-css-grid-lanes/",
+                              "title": "Introducing CSS Grid Lanes"
+                            },
+                            {
+                              "url": "https://css-tricks.com/masonry-layout-is-now-grid-lanes/",
+                              "title": "Masonry Layout is Now grid-lanes"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "masonry",
+                            "description_html": "The <code>display: grid-lanes</code> or <code>display: inline-grid-lanes</code> CSS declaration creates a layout where items are tightly packed, like brickwork, in parallel lanes. Items are placed one by one in the lane that has the most available space.",
+                            "group": [
+                              "layout"
+                            ],
+                            "name": "Masonry",
+                            "spec": [
+                              "https://drafts.csswg.org/css-grid-3/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/masonry/",
+                            "status": {
+                              "baseline": "false"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 14,
+                        "id": "typography_issues",
+                        "index": 18,
+                        "percentageQuestion": 2.22,
+                        "percentageSurvey": 0.29,
+                        "entity": {
+                          "name": "Typography",
+                          "nameHtml": "Typography",
+                          "nameClean": "Typography",
+                          "description": "Issues related to text and font styling on the web.",
+                          "descriptionHtml": "Issues related to text and font styling on the web.",
+                          "descriptionClean": "Issues related to text and font styling on the web.",
+                          "id": "typography_issues",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 5,
+                            "id": "vertical_rhythm",
+                            "index": 0,
+                            "percentageQuestion": 0.79,
+                            "percentageSurvey": 0.1,
+                            "entity": {
+                              "name": "Vertical rhythm & baseline",
+                              "nameHtml": "Vertical rhythm &amp; baseline",
+                              "nameClean": "Vertical rhythm & baseline",
+                              "id": "vertical_rhythm",
+                              "parentId": "typography_issues",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 13,
+                        "id": "animations_issues",
+                        "index": 19,
+                        "percentageQuestion": 2.06,
+                        "percentageSurvey": 0.27,
+                        "entity": {
+                          "name": "Animations",
+                          "nameHtml": "Animations",
+                          "nameClean": "Animations",
+                          "description": "Issues related to UI animations across all technologies, regardless of technology used to implement them (CSS animations, Lottie, etc)",
+                          "descriptionHtml": "Issues related to UI animations across all technologies, regardless of technology used to implement them (CSS animations, Lottie, etc)",
+                          "descriptionClean": "Issues related to UI animations across all technologies, regardless of technology used to implement them (CSS animations, Lottie, etc)",
+                          "id": "animations_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 13,
                         "id": "syntax_issues",
-                        "index": 23,
-                        "percentageQuestion": 2.53,
-                        "percentageSurvey": 0.33,
+                        "index": 20,
+                        "percentageQuestion": 2.06,
+                        "percentageSurvey": 0.27,
                         "entity": {
                           "name": "Syntax issues",
                           "nameHtml": "Syntax issues",
@@ -1187,11 +1749,117 @@
                         }
                       },
                       {
-                        "count": 15,
-                        "id": "layout_choice_complexity",
+                        "count": 12,
+                        "id": "environments_consumers",
+                        "index": 21,
+                        "percentageQuestion": 1.9,
+                        "percentageSurvey": 0.24,
+                        "entity": {
+                          "name": "Environments & Consumers",
+                          "nameHtml": "Environments &amp; Consumers",
+                          "nameClean": "Environments & Consumers",
+                          "description": "Issues relevant to specific environments or consumers of web content, e.g. devices, bots, viewing modes, etc.",
+                          "descriptionHtml": "Issues relevant to specific environments or consumers of web content, e.g. devices, bots, viewing modes, etc.",
+                          "descriptionClean": "Issues relevant to specific environments or consumers of web content, e.g. devices, bots, viewing modes, etc.",
+                          "id": "environments_consumers",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 8,
+                            "id": "mobile_vs_desktop",
+                            "index": 0,
+                            "percentageQuestion": 1.27,
+                            "percentageSurvey": 0.16,
+                            "entity": {
+                              "name": "Mobile vs Desktop",
+                              "nameHtml": "Mobile vs Desktop",
+                              "nameClean": "Mobile vs Desktop",
+                              "description": "Challenges around supporting both mobile and desktop, but not specifically about either of the two.",
+                              "descriptionHtml": "Challenges around supporting both mobile and desktop, but not specifically about either of the two.",
+                              "descriptionClean": "Challenges around supporting both mobile and desktop, but not specifically about either of the two.",
+                              "id": "mobile_vs_desktop",
+                              "parentId": "environments_consumers",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 12,
+                        "id": "position_sticky",
+                        "index": 22,
+                        "percentageQuestion": 1.9,
+                        "percentageSurvey": 0.24,
+                        "entity": {
+                          "name": "`position:sticky`",
+                          "nameHtml": "<code>position:sticky</code>",
+                          "nameClean": "position:sticky",
+                          "id": "position_sticky",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-sticky"
+                          },
+                          "webFeature": {
+                            "id": "sticky-positioning",
+                            "description_html": "The <code>position: sticky</code> CSS declaration positions an element in the normal flow until it crosses a specified threshold, at which points it becomes fixed (stuck) at that position.",
+                            "group": [
+                              "positioning"
+                            ],
+                            "name": "Sticky positioning",
+                            "spec": [
+                              "https://drafts.csswg.org/css-position-3/#stickypos-insets"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/sticky-positioning/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2019-09-19",
+                              "support": {
+                                "chrome": "56",
+                                "chrome_android": "56",
+                                "edge": "16",
+                                "firefox": "59",
+                                "firefox_android": "59",
+                                "safari": "13",
+                                "safari_ios": "13"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 11,
+                        "id": "flex_wrap_balance",
+                        "index": 23,
+                        "percentageQuestion": 1.74,
+                        "percentageSurvey": 0.22,
+                        "entity": {
+                          "name": "`flex-wrap: balance;`",
+                          "nameHtml": "<code>flex-wrap: balance;</code>",
+                          "nameClean": "flex-wrap: balance;",
+                          "id": "flex_wrap_balance",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 11,
+                        "id": "flex_wrapping_detection",
                         "index": 24,
-                        "percentageQuestion": 2.37,
-                        "percentageSurvey": 0.31
+                        "percentageQuestion": 1.74,
+                        "percentageSurvey": 0.22,
+                        "entity": {
+                          "name": "Wrapping Detection",
+                          "nameHtml": "Wrapping Detection",
+                          "nameClean": "Wrapping Detection",
+                          "description": "Detecting when a flex or grid item has wrapped to another line.",
+                          "descriptionHtml": "Detecting when a flex or grid item has wrapped to another line.",
+                          "descriptionClean": "Detecting when a flex or grid item has wrapped to another line.",
+                          "id": "flex_wrapping_detection",
+                          "entityType": "default"
+                        }
                       },
                       {
                         "count": 4268,
@@ -1201,11 +1869,11 @@
                         "percentageSurvey": 87.07
                       },
                       {
-                        "count": 533,
+                        "count": 426,
                         "id": "other_answers",
                         "index": 26,
-                        "percentageQuestion": 84.39,
-                        "percentageSurvey": 10.82
+                        "percentageQuestion": 67.57,
+                        "percentageSurvey": 8.53
                       }
                     ]
                   }

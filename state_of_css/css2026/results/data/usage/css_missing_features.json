@@ -35,17 +35,7 @@
                         "id": "mixins",
                         "index": 0,
                         "percentageQuestion": 8.53,
-                        "percentageSurvey": 0.87,
-                        "entity": {
-                          "name": "Mixins",
-                          "nameHtml": "Mixins",
-                          "nameClean": "Mixins",
-                          "description": "Group and reuse definitions dynamically.",
-                          "descriptionHtml": "Group and reuse definitions dynamically.",
-                          "descriptionClean": "Group and reuse definitions dynamically.",
-                          "id": "mixins",
-                          "entityType": "default"
-                        }
+                        "percentageSurvey": 0.87
                       },
                       {
                         "count": 39,
@@ -145,14 +135,7 @@
                         "id": "loops",
                         "index": 4,
                         "percentageQuestion": 3.02,
-                        "percentageSurvey": 0.31,
-                        "entity": {
-                          "name": "For Loops",
-                          "nameHtml": "For Loops",
-                          "nameClean": "For Loops",
-                          "id": "loops",
-                          "entityType": "default"
-                        }
+                        "percentageSurvey": 0.31
                       },
                       {
                         "count": 13,
@@ -249,7 +232,33 @@
                           "nameHtml": "Overflow",
                           "nameClean": "Overflow",
                           "id": "overflow",
-                          "entityType": "default"
+                          "entityType": "default",
+                          "webFeature": {
+                            "id": "overflow",
+                            "description_html": "The <code>overflow-block</code> and <code>overflow-inline</code> CSS media queries set styles based on the way a device displays content that's larger than the viewport or page area. For example, a laptop lets users scroll to reveal content, while a printer displays overflowing content on additional pages.",
+                            "group": [
+                              "media-queries"
+                            ],
+                            "name": "Overflow media queries",
+                            "spec": [
+                              "https://drafts.csswg.org/mediaqueries-5/#mf-overflow-block",
+                              "https://drafts.csswg.org/mediaqueries-5/#mf-overflow-inline"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/overflow/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2023-09-18",
+                              "support": {
+                                "chrome": "113",
+                                "chrome_android": "113",
+                                "edge": "113",
+                                "firefox": "66",
+                                "firefox_android": "66",
+                                "safari": "17",
+                                "safari_ios": "17"
+                              }
+                            }
+                          }
                         }
                       },
                       {
@@ -263,6 +272,7 @@
                           "nameHtml": "<code>@custom-media</code>",
                           "nameClean": "@custom-media",
                           "id": "at_custom_media",
+                          "parentId": "css_abstractions",
                           "entityType": "default",
                           "resources": [
                             {
@@ -294,6 +304,7 @@
                           "descriptionHtml": "Browser support, compatibility, and consistency issues.",
                           "descriptionClean": "Browser support, compatibility, and consistency issues.",
                           "id": "browser_support",
+                          "parentId": "interop_issues",
                           "entityType": "default"
                         }
                       },
@@ -349,17 +360,7 @@
                         "id": "mixins",
                         "index": 0,
                         "percentageQuestion": 9.17,
-                        "percentageSurvey": 0.82,
-                        "entity": {
-                          "name": "Mixins",
-                          "nameHtml": "Mixins",
-                          "nameClean": "Mixins",
-                          "description": "Group and reuse definitions dynamically.",
-                          "descriptionHtml": "Group and reuse definitions dynamically.",
-                          "descriptionClean": "Group and reuse definitions dynamically.",
-                          "id": "mixins",
-                          "entityType": "default"
-                        }
+                        "percentageSurvey": 0.82
                       },
                       {
                         "count": 18,
@@ -425,11 +426,15 @@
                           "descriptionHtml": "The <code>if()</code> CSS function is an inline conditional value that returns a value based on a set of conditions.",
                           "descriptionClean": "The if() CSS function is an inline conditional value that returns a value based on a set of conditions.",
                           "id": "if_function",
+                          "parentId": "css_conditional_logic",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
                             "code": "div {\n  color: var(--color);\n  background-color: if(style(--color: white): black; else: white);\n}\n",
                             "codeHighlighted": "<span class=\"hljs-selector-tag\">div</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">var</span>(--color);\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">if</span>(<span class=\"hljs-built_in\">style</span>(--color: white): black; else: white);\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/if"
                           },
                           "resources": [
                             {
@@ -474,6 +479,7 @@
                           "nameHtml": "Anchor Positioning",
                           "nameClean": "Anchor Positioning",
                           "id": "anchor_positioning",
+                          "parentId": "positioning_issues",
                           "entityType": "feature",
                           "example": {
                             "language": "css",

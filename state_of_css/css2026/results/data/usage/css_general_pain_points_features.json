@@ -8,7 +8,7 @@
               "id": "css_general_pain_points",
               "comments": {
                 "currentEdition": {
-                  "count": 2
+                  "count": 1
                 }
               },
               "freeform": {
@@ -223,11 +223,36 @@
                     },
                     "buckets": [
                       {
-                        "count": 14,
-                        "id": "css_nesting",
+                        "count": 13,
+                        "id": "css_custom_properties",
                         "index": 0,
-                        "percentageQuestion": 3.52,
-                        "percentageSurvey": 0.29,
+                        "percentageQuestion": 3.27,
+                        "percentageSurvey": 0.27,
+                        "entity": {
+                          "name": "Custom Properties (Variables)",
+                          "nameHtml": "Custom Properties (Variables)",
+                          "nameClean": "Custom Properties (Variables)",
+                          "id": "css_custom_properties",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ":root {\n  --main-bg-color: brown;\n}\n.foo {\n  background-color: var(--main-bg-color);\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-pseudo\">:root</span> {\n  <span class=\"hljs-attr\">--main-bg-color</span>: brown;\n}\n<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--main-bg-color);\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-variables"
+                          }
+                        }
+                      },
+                      {
+                        "count": 12,
+                        "id": "css_nesting",
+                        "index": 1,
+                        "percentageQuestion": 3.02,
+                        "percentageSurvey": 0.24,
                         "entity": {
                           "name": "CSS Nesting",
                           "nameHtml": "CSS Nesting",
@@ -276,48 +301,48 @@
                         }
                       },
                       {
-                        "count": 12,
-                        "id": "has_selector",
-                        "index": 1,
-                        "percentageQuestion": 3.02,
-                        "percentageSurvey": 0.24,
+                        "count": 8,
+                        "id": "cascade_layers",
+                        "index": 2,
+                        "percentageQuestion": 2.01,
+                        "percentageSurvey": 0.16,
                         "entity": {
-                          "name": "`:has()`",
-                          "nameHtml": "<code>:has()</code>",
-                          "nameClean": ":has()",
-                          "id": "has_selector",
+                          "name": "Cascade Layers",
+                          "nameHtml": "Cascade Layers",
+                          "nameClean": "Cascade Layers",
+                          "id": "cascade_layers",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
-                            "code": "a:has(> img) {\n  border: 2px solid grey;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-tag\">a</span><span class=\"hljs-selector-pseudo\">:has</span>(&gt; <span class=\"hljs-selector-tag\">img</span>) {\n  <span class=\"hljs-attribute\">border</span>: <span class=\"hljs-number\">2px</span> solid grey;\n}"
+                            "code": "@layer layer-name {rules}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">@layer</span> layer-name {rules}"
                           },
                           "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:has"
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@layer"
                           },
                           "caniuse": {
-                            "url": "https://caniuse.com/css-has"
+                            "url": "https://caniuse.com/css-cascade-layers"
                           },
                           "webFeature": {
-                            "id": "has",
-                            "description_html": "The <code>:has()</code> CSS functional pseudo-class matches an element if any of the selectors passed as parameters would match at least one element.",
+                            "id": "cascade-layers",
+                            "description_html": "The <code>@layer</code> CSS at-rule avoids specificity conflicts by providing priority levels for different groups of CSS rules, such as low-priority styles like resets, and high-priority styles like UI components.",
                             "group": [
-                              "selectors"
+                              "css"
                             ],
-                            "name": ":has()",
+                            "name": "Cascade layers",
                             "spec": [
-                              "https://drafts.csswg.org/selectors-4/#relational"
+                              "https://drafts.csswg.org/css-cascade-5/"
                             ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/has/",
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/cascade-layers/",
                             "status": {
                               "baseline": "high",
-                              "baseline_low_date": "2023-12-19",
+                              "baseline_low_date": "2022-03-14",
                               "support": {
-                                "chrome": "105",
-                                "chrome_android": "105",
-                                "edge": "105",
-                                "firefox": "121",
-                                "firefox_android": "121",
+                                "chrome": "99",
+                                "chrome_android": "99",
+                                "edge": "99",
+                                "firefox": "97",
+                                "firefox_android": "97",
                                 "safari": "15.4",
                                 "safari_ios": "15.4"
                               }
@@ -328,7 +353,7 @@
                       {
                         "count": 7,
                         "id": "grid",
-                        "index": 2,
+                        "index": 3,
                         "percentageQuestion": 1.76,
                         "percentageSurvey": 0.14,
                         "entity": {
@@ -371,34 +396,188 @@
                         }
                       },
                       {
+                        "count": 7,
+                        "id": "web_components",
+                        "index": 4,
+                        "percentageQuestion": 1.76,
+                        "percentageSurvey": 0.14,
+                        "entity": {
+                          "name": "Web Components",
+                          "nameHtml": "Web Components",
+                          "nameClean": "Web Components",
+                          "id": "web_components",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components"
+                          }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 7,
+                            "id": "shadow_dom",
+                            "index": 0,
+                            "percentageQuestion": 1.76,
+                            "percentageSurvey": 0.14,
+                            "entity": {
+                              "name": "Shadow DOM",
+                              "nameHtml": "Shadow DOM",
+                              "nameClean": "Shadow DOM",
+                              "description": "Encapsulate elements not visible from the outside, and style them with CSS not affecting the rest of the page.",
+                              "descriptionHtml": "Encapsulate elements not visible from the outside, and style them with CSS not affecting the rest of the page.",
+                              "descriptionClean": "Encapsulate elements not visible from the outside, and style them with CSS not affecting the rest of the page.",
+                              "id": "shadow_dom",
+                              "parentId": "web_components",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "js",
+                                "code": "this.shadowRoot = this.attachShadow({mode: \"open\"});",
+                                "codeHighlighted": "<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">shadowRoot</span> = <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">attachShadow</span>({<span class=\"hljs-attr\">mode</span>: <span class=\"hljs-string\">&quot;open&quot;</span>});"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM"
+                              },
+                              "webFeature": {
+                                "id": "shadow-dom",
+                                "description_html": "Shadow DOM allows you to attach encapsulated \"shadow\" DOM trees to elements. A shadow DOM tree is a separate component, isolated from the scripts and styles in other parts of the document. This is a part of Web Components.",
+                                "group": [
+                                  "dom",
+                                  "web-components"
+                                ],
+                                "name": "Shadow DOM",
+                                "spec": [
+                                  "https://dom.spec.whatwg.org/#shadow-trees"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/shadow-dom/",
+                                "status": {
+                                  "baseline": "high",
+                                  "baseline_low_date": "2020-01-15",
+                                  "support": {
+                                    "chrome": "53",
+                                    "chrome_android": "53",
+                                    "edge": "79",
+                                    "firefox": "63",
+                                    "firefox_android": "63",
+                                    "safari": "10",
+                                    "safari_ios": "10"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
                         "count": 6,
-                        "id": "input_type_file",
-                        "index": 3,
+                        "id": "flexbox",
+                        "index": 5,
                         "percentageQuestion": 1.51,
                         "percentageSurvey": 0.12,
                         "entity": {
-                          "name": "`<input type=\"file\">`",
-                          "nameHtml": "<code>&lt;input type=\"file\"&gt;</code>",
-                          "nameClean": "<input type=\"file\">",
-                          "description": "Pain points specific to `<input type=\"file\">`, especially around styling the button and displaying selected files.",
-                          "descriptionHtml": "Pain points specific to <code>&lt;input type=\"file\"&gt;</code>, especially around styling the button and displaying selected files.",
-                          "descriptionClean": "Pain points specific to <input type=\"file\">, especially around styling the button and displaying selected files.",
-                          "id": "input_type_file",
-                          "parentId": "form_input_issues",
-                          "entityType": "feature"
+                          "name": "Flexbox",
+                          "nameHtml": "Flexbox",
+                          "nameClean": "Flexbox",
+                          "id": "flexbox",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/flexbox - html_interoperability_features"
+                          },
+                          "webFeature": {
+                            "id": "flexbox",
+                            "description_html": "Flexbox is a one-dimensional layout system, which places content either horizontally or vertically, with optional wrapping.",
+                            "group": [
+                              "flexbox"
+                            ],
+                            "name": "Flexbox",
+                            "spec": [
+                              "https://drafts.csswg.org/css-flexbox-1/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/flexbox/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2015-09-30",
+                              "support": {
+                                "chrome": "29",
+                                "chrome_android": "29",
+                                "edge": "12",
+                                "firefox": "20",
+                                "firefox_android": "20",
+                                "safari": "9",
+                                "safari_ios": "9"
+                              }
+                            }
+                          }
                         }
                       },
                       {
                         "count": 5,
-                        "id": "at_container_size",
-                        "index": 4,
+                        "id": "anchor_positioning",
+                        "index": 6,
                         "percentageQuestion": 1.26,
                         "percentageSurvey": 0.1,
                         "entity": {
-                          "name": "`@container` size queries",
-                          "nameHtml": "<code>@container</code> size queries",
-                          "nameClean": "@container size queries",
-                          "id": "at_container_size",
+                          "name": "Anchor Positioning",
+                          "nameHtml": "Anchor Positioning",
+                          "nameClean": "Anchor Positioning",
+                          "id": "anchor_positioning",
+                          "parentId": "positioning_issues",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".anchor {\n  anchor-name: --my-anchor;\n}\n.target {\n  position: absolute;\n  position-anchor: --my-anchor;\n  position-area: start end;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.anchor</span> {\n  <span class=\"hljs-attribute\">anchor-name</span>: --my-anchor;\n}\n<span class=\"hljs-selector-class\">.target</span> {\n  <span class=\"hljs-attribute\">position</span>: absolute;\n  <span class=\"hljs-attribute\">position-anchor</span>: --my-anchor;\n  <span class=\"hljs-attribute\">position</span>-area: start end;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Anchor_positioning"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-anchor-positioning"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://kizu.dev/anchor-positioning-experiments/",
+                              "title": "Future CSS: Anchor Positioning\n"
+                            },
+                            {
+                              "url": "https://developer.chrome.com/blog/tether-elements-to-each-other-with-css-anchor-positioning/",
+                              "title": "Tether elements to each other with CSS anchor positioning\n"
+                            },
+                            {
+                              "url": "https://css-tricks.com/css-anchor-positioning-guide/",
+                              "title": "CSS Anchor Positioning Guide"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "anchor-positioning",
+                            "description_html": "Anchor positioning places an element based on the position of another element. For example, you can place a tooltip next to the content it references.",
+                            "name": "Anchor positioning",
+                            "spec": [
+                              "https://drafts.csswg.org/css-anchor-position-1/#anchoring"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/anchor-positioning/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "firefox": "151",
+                                "firefox_android": "151"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 5,
+                        "id": "at_container",
+                        "index": 7,
+                        "percentageQuestion": 1.26,
+                        "percentageSurvey": 0.1,
+                        "entity": {
+                          "name": "`@container`",
+                          "nameHtml": "<code>@container</code>",
+                          "nameClean": "@container",
+                          "id": "at_container",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
@@ -433,56 +612,6 @@
                                 "firefox_android": "110",
                                 "safari": "16",
                                 "safari_ios": "16"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 5,
-                        "id": "where_selector",
-                        "index": 5,
-                        "percentageQuestion": 1.26,
-                        "percentageSurvey": 0.1,
-                        "entity": {
-                          "name": "`:where()`",
-                          "nameHtml": "<code>:where()</code>",
-                          "nameClean": ":where()",
-                          "id": "where_selector",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ":where(header, main, footer) p:hover {\n  color: red;\n  cursor: pointer;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-pseudo\">:where</span>(<span class=\"hljs-selector-tag\">header</span>, <span class=\"hljs-selector-tag\">main</span>, <span class=\"hljs-selector-tag\">footer</span>) <span class=\"hljs-selector-tag\">p</span><span class=\"hljs-selector-pseudo\">:hover</span> {\n  <span class=\"hljs-attribute\">color</span>: red;\n  <span class=\"hljs-attribute\">cursor</span>: pointer;\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:where"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-where"
-                          },
-                          "webFeature": {
-                            "id": "where",
-                            "description_html": "The <code>:where()</code> CSS functional pseudo-class takes a selector list as its argument, and matches any element that can be selected by one of the selectors in that list. It is functionally equivalent to the selectors in the list, but doesn't affect the CSS rule specificity.",
-                            "group": [
-                              "selectors"
-                            ],
-                            "name": ":where()",
-                            "spec": [
-                              "https://drafts.csswg.org/selectors-4/#zero-matches"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/where/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2021-01-21",
-                              "support": {
-                                "chrome": "88",
-                                "chrome_android": "88",
-                                "edge": "88",
-                                "firefox": "82",
-                                "firefox_android": "82",
-                                "safari": "14",
-                                "safari_ios": "14"
                               }
                             }
                           }
