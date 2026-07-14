@@ -5,7 +5,297 @@
         "css2026": {
           "other_features": {
             "other_features_pain_points_limitations_1": {
-              "id": "other_features_pain_points"
+              "id": "other_features_pain_points",
+              "freeform": {
+                "allEditions": [
+                  {
+                    "_metadata": {
+                      "axis1Sort": {
+                        "property": "count",
+                        "order": "desc"
+                      },
+                      "limit": 25,
+                      "cutoff": 5
+                    },
+                    "editionId": "css2026",
+                    "year": 2026,
+                    "completion": {
+                      "count": 36,
+                      "percentageSurvey": 0.73,
+                      "total": 4902
+                    },
+                    "buckets": [
+                      {
+                        "count": 9,
+                        "id": "css_abstractions",
+                        "index": 0,
+                        "percentageQuestion": 25,
+                        "percentageSurvey": 0.18
+                      },
+                      {
+                        "count": 7,
+                        "id": "css_functions",
+                        "index": 1,
+                        "percentageQuestion": 19.44,
+                        "percentageSurvey": 0.14
+                      },
+                      {
+                        "count": 6,
+                        "id": "at_scope",
+                        "index": 2,
+                        "percentageQuestion": 16.67,
+                        "percentageSurvey": 0.12,
+                        "entity": {
+                          "name": "`@scope`",
+                          "nameHtml": "<code>@scope</code>",
+                          "nameClean": "@scope",
+                          "description": "Scope styles to a specific part of the DOM tree.",
+                          "descriptionHtml": "Scope styles to a specific part of the DOM tree.",
+                          "descriptionClean": "Scope styles to a specific part of the DOM tree.",
+                          "id": "at_scope",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "@scope (.card) {\n  :scope {\n    padding: 1rem;\n  }\n\n  .title {\n    font-size: 1.2rem;\n  }\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">@scope</span> (.card) {\n  <span class=\"hljs-selector-pseudo\">:scope</span> {\n    <span class=\"hljs-attribute\">padding</span>: <span class=\"hljs-number\">1rem</span>;\n  }\n\n  <span class=\"hljs-selector-class\">.title</span> {\n    <span class=\"hljs-attribute\">font-size</span>: <span class=\"hljs-number\">1.2rem</span>;\n  }\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@scope"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-cascade-scope"
+                          },
+                          "webFeature": {
+                            "id": "scope",
+                            "description_html": "The <code>@scope</code> CSS at-rule sets the scope for a group of rules.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "@scope",
+                            "spec": [
+                              "https://drafts.csswg.org/css-cascade-6/#scope-atrule"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/scope/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2025-12-12",
+                              "support": {
+                                "chrome": "143",
+                                "chrome_android": "143",
+                                "edge": "143",
+                                "firefox": "146",
+                                "firefox_android": "146",
+                                "safari": "26.2",
+                                "safari_ios": "26.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 6,
+                        "id": "cascade_layers",
+                        "index": 3,
+                        "percentageQuestion": 16.67,
+                        "percentageSurvey": 0.12,
+                        "entity": {
+                          "name": "Cascade Layers",
+                          "nameHtml": "Cascade Layers",
+                          "nameClean": "Cascade Layers",
+                          "id": "cascade_layers",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "@layer layer-name {rules}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">@layer</span> layer-name {rules}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@layer"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-cascade-layers"
+                          },
+                          "webFeature": {
+                            "id": "cascade-layers",
+                            "description_html": "The <code>@layer</code> CSS at-rule avoids specificity conflicts by providing priority levels for different groups of CSS rules, such as low-priority styles like resets, and high-priority styles like UI components.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "Cascade layers",
+                            "spec": [
+                              "https://drafts.csswg.org/css-cascade-5/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/cascade-layers/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2022-03-14",
+                              "support": {
+                                "chrome": "99",
+                                "chrome_android": "99",
+                                "edge": "99",
+                                "firefox": "97",
+                                "firefox_android": "97",
+                                "safari": "15.4",
+                                "safari_ios": "15.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 5,
+                        "id": "at_property",
+                        "index": 4,
+                        "percentageQuestion": 13.89,
+                        "percentageSurvey": 0.1,
+                        "entity": {
+                          "name": "`@property`",
+                          "nameHtml": "<code>@property</code>",
+                          "nameClean": "@property",
+                          "id": "at_property",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "@property --property-name {\n  syntax: \"<color>\";\n  inherits: false;\n  initial-value: #c0ffee;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">@property</span> --property-name {\n  syntax: <span class=\"hljs-string\">&quot;&lt;color&gt;&quot;</span>;\n  inherits: false;\n  initial-value: <span class=\"hljs-number\">#c0ffee</span>;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@property"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_at-rules_property"
+                          },
+                          "webFeature": {
+                            "id": "registered-custom-properties",
+                            "description_html": "The <code>CSS.registerProperty()</code> static method and the <code>@property</code> CSS at-rule register custom properties for which types and behaviors can be defined.",
+                            "name": "Registered custom properties",
+                            "spec": [
+                              "https://drafts.css-houdini.org/css-properties-values-api-1/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/registered-custom-properties/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-07-09",
+                              "support": {
+                                "chrome": "85",
+                                "chrome_android": "85",
+                                "edge": "85",
+                                "firefox": "128",
+                                "firefox_android": "128",
+                                "safari": "16.4",
+                                "safari_ios": "16.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 5,
+                        "id": "child_count",
+                        "index": 5,
+                        "percentageQuestion": 13.89,
+                        "percentageSurvey": 0.1,
+                        "entity": {
+                          "name": "`children-count()`",
+                          "nameHtml": "<code>children-count()</code>",
+                          "nameClean": "children-count()",
+                          "id": "child_count",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 5,
+                        "id": "css_control_flow",
+                        "index": 6,
+                        "percentageQuestion": 13.89,
+                        "percentageSurvey": 0.1,
+                        "entity": {
+                          "name": "Control Flow",
+                          "nameHtml": "Control Flow",
+                          "nameClean": "Control Flow",
+                          "description": "Imperative control-flow constructs in CSS — loops and conditionals— for repeating or branching styles.",
+                          "descriptionHtml": "Imperative control-flow constructs in CSS — loops and conditionals— for repeating or branching styles.",
+                          "descriptionClean": "Imperative control-flow constructs in CSS — loops and conditionals— for repeating or branching styles.",
+                          "id": "css_control_flow",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 5,
+                            "id": "css_conditional_logic",
+                            "index": 0,
+                            "percentageQuestion": 13.89,
+                            "percentageSurvey": 0.1,
+                            "entity": {
+                              "name": "Conditional logic",
+                              "nameHtml": "Conditional logic",
+                              "nameClean": "Conditional logic",
+                              "id": "css_conditional_logic",
+                              "parentId": "css_control_flow",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 5,
+                        "id": "sibling_count",
+                        "index": 7,
+                        "percentageQuestion": 13.89,
+                        "percentageSurvey": 0.1,
+                        "entity": {
+                          "name": "`sibling-count()`",
+                          "nameHtml": "<code>sibling-count()</code>",
+                          "nameClean": "sibling-count()",
+                          "id": "sibling_count",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/sibling-count"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_types_sibling-count"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://www.w3.org/TR/css-values-5/#tree-counting",
+                              "title": "Tree Counting Functions: the sibling-count() and sibling-index() notations"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "sibling-count",
+                            "description_html": "The <code>sibling-count()</code> and <code>sibling-index()</code> CSS functions return integers that are useful to style elements based on their positions among siblings or on the number of siblings, for example as part of a <code>calc()</code> expression.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "sibling-count() and sibling-index()",
+                            "spec": [
+                              "https://drafts.csswg.org/css-values-5/#tree-counting"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/sibling-count/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "138",
+                                "chrome_android": "138",
+                                "edge": "138",
+                                "safari": "26.2",
+                                "safari_ios": "26.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 81,
+                        "id": "other_answers",
+                        "index": 8,
+                        "percentageQuestion": 225.1,
+                        "percentageSurvey": 1.62
+                      }
+                    ]
+                  }
+                ]
+              }
             }
           }
         }

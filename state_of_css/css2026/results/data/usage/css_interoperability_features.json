@@ -8,7 +8,7 @@
               "id": "css_interoperability_features",
               "comments": {
                 "currentEdition": {
-                  "count": 6
+                  "count": 9
                 }
               },
               "freeform": {
@@ -472,6 +472,7 @@
                           "nameHtml": "Grid",
                           "nameClean": "Grid",
                           "id": "grid",
+                          "parentId": "css_layout_issues",
                           "entityType": "feature",
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout"
@@ -514,60 +515,9 @@
                         "percentageSurvey": 0.24
                       },
                       {
-                        "count": 13,
-                        "id": "subgrid",
-                        "index": 13,
-                        "percentageQuestion": 2.42,
-                        "percentageSurvey": 0.24,
-                        "entity": {
-                          "name": "Subgrid",
-                          "nameHtml": "Subgrid",
-                          "nameClean": "Subgrid",
-                          "id": "subgrid",
-                          "parentId": "css_layout",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".wrapper {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.item {\n  grid-row: 1 / 4;\n  display: grid;\n  grid-template-rows: subgrid;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.wrapper</span> {\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">1</span>fr <span class=\"hljs-number\">1</span>fr;\n}\n\n<span class=\"hljs-selector-class\">.item</span> {\n  <span class=\"hljs-attribute\">grid-row</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">4</span>;\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-rows</span>: subgrid;\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-subgrid"
-                          },
-                          "webFeature": {
-                            "id": "subgrid",
-                            "description_html": "The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.",
-                            "group": [
-                              "grid"
-                            ],
-                            "name": "Subgrid",
-                            "spec": [
-                              "https://drafts.csswg.org/css-grid-2/#subgrids"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/subgrid/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2023-09-15",
-                              "support": {
-                                "chrome": "117",
-                                "chrome_android": "117",
-                                "edge": "117",
-                                "firefox": "71",
-                                "firefox_android": "79",
-                                "safari": "16",
-                                "safari_ios": "16"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
                         "count": 12,
                         "id": "cascade_layers",
-                        "index": 14,
+                        "index": 13,
                         "percentageQuestion": 2.23,
                         "percentageSurvey": 0.22,
                         "entity": {
@@ -617,7 +567,7 @@
                       {
                         "count": 11,
                         "id": "discrete_properties_animations",
-                        "index": 15,
+                        "index": 14,
                         "percentageQuestion": 2.05,
                         "percentageSurvey": 0.2,
                         "entity": {
@@ -665,7 +615,7 @@
                       {
                         "count": 10,
                         "id": "calc_size",
-                        "index": 16,
+                        "index": 15,
                         "percentageQuestion": 1.86,
                         "percentageSurvey": 0.18,
                         "entity": {
@@ -714,7 +664,7 @@
                       {
                         "count": 10,
                         "id": "text_box_trim",
-                        "index": 17,
+                        "index": 16,
                         "percentageQuestion": 1.86,
                         "percentageSurvey": 0.18,
                         "entity": {
@@ -742,14 +692,14 @@
                       {
                         "count": 4969,
                         "id": "no_answer",
-                        "index": 18,
+                        "index": 17,
                         "percentageQuestion": 0,
                         "percentageSurvey": 90.25
                       },
                       {
                         "count": 395,
                         "id": "other_answers",
-                        "index": 19,
+                        "index": 18,
                         "percentageQuestion": 73.61,
                         "percentageSurvey": 7.22
                       }
@@ -1015,9 +965,65 @@
                         }
                       },
                       {
+                        "count": 26,
+                        "id": "at_function",
+                        "index": 5,
+                        "percentageQuestion": 4.11,
+                        "percentageSurvey": 0.53,
+                        "entity": {
+                          "name": "`@function`",
+                          "nameHtml": "<code>@function</code>",
+                          "nameClean": "@function",
+                          "description": "The `@function` CSS at-rule defines a custom function that takes CSS values or custom properties as arguments, and returns a CSS value.",
+                          "descriptionHtml": "The <code>@function</code> CSS at-rule defines a custom function that takes CSS values or custom properties as arguments, and returns a CSS value.",
+                          "descriptionClean": "The @function CSS at-rule defines a custom function that takes CSS values or custom properties as arguments, and returns a CSS value.",
+                          "id": "at_function",
+                          "parentId": "custom_functions",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "@function --negate(--value) {\n  result: calc(-1 * var(--value));\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">@function</span> --negate(--value) {\n  result: <span class=\"hljs-built_in\">calc</span>(-<span class=\"hljs-number\">1</span> * <span class=\"hljs-built_in\">var</span>(--value));\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@function"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://css-tricks.com/functions-in-css/",
+                              "title": "Functions in CSS?!"
+                            },
+                            {
+                              "url": "https://www.bram.us/2025/02/09/css-custom-functions-teaser/",
+                              "title": "CSS Custom Functions are coming … and they are going to be a game changer!"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "function",
+                            "description_html": "The <code>@function</code> CSS at-rule defines a custom function that takes CSS values or custom properties as arguments, and returns a CSS value. It can be based on conditional logic such as by using the <code>@media</code> at-rule.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "@function",
+                            "spec": [
+                              "https://drafts.csswg.org/css-mixins-1/#function-rule"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/function/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "139",
+                                "chrome_android": "139",
+                                "edge": "139"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
                         "count": 24,
                         "id": "css_nesting",
-                        "index": 5,
+                        "index": 6,
                         "percentageQuestion": 3.8,
                         "percentageSurvey": 0.49,
                         "entity": {
@@ -1070,7 +1076,7 @@
                       {
                         "count": 21,
                         "id": "at_container_size",
-                        "index": 6,
+                        "index": 7,
                         "percentageQuestion": 3.32,
                         "percentageSurvey": 0.43,
                         "entity": {
@@ -1120,7 +1126,7 @@
                       {
                         "count": 20,
                         "id": "advanced_attr_function",
-                        "index": 7,
+                        "index": 8,
                         "percentageQuestion": 3.16,
                         "percentageSurvey": 0.41,
                         "entity": {
@@ -1167,7 +1173,7 @@
                       {
                         "count": 20,
                         "id": "grid",
-                        "index": 8,
+                        "index": 9,
                         "percentageQuestion": 3.16,
                         "percentageSurvey": 0.41,
                         "entity": {
@@ -1175,6 +1181,7 @@
                           "nameHtml": "Grid",
                           "nameClean": "Grid",
                           "id": "grid",
+                          "parentId": "css_layout_issues",
                           "entityType": "feature",
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout"
@@ -1212,7 +1219,7 @@
                       {
                         "count": 19,
                         "id": "css_carousels",
-                        "index": 9,
+                        "index": 10,
                         "percentageQuestion": 3.01,
                         "percentageSurvey": 0.39,
                         "entity": {
@@ -1269,66 +1276,9 @@
                         }
                       },
                       {
-                        "count": 19,
-                        "id": "css_grid_lanes",
-                        "index": 10,
-                        "percentageQuestion": 3.01,
-                        "percentageSurvey": 0.39,
-                        "entity": {
-                          "name": "Grid Lanes",
-                          "nameHtml": "Grid Lanes",
-                          "nameClean": "Grid Lanes",
-                          "id": "css_grid_lanes",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".container {\n  display: grid-lanes;\n  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));\n  gap: 16px;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.container</span> {\n  <span class=\"hljs-attribute\">display</span>: grid-lanes;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-built_in\">repeat</span>(auto-fill, <span class=\"hljs-built_in\">minmax</span>(<span class=\"hljs-number\">250px</span>, <span class=\"hljs-number\">1</span>fr));\n  <span class=\"hljs-attribute\">gap</span>: <span class=\"hljs-number\">16px</span>;\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-grid-lanes"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://webkit.org/blog/17660/introducing-css-grid-lanes/",
-                              "title": "Introducing CSS Grid Lanes"
-                            },
-                            {
-                              "url": "https://css-tricks.com/masonry-layout-is-now-grid-lanes/",
-                              "title": "Masonry Layout is Now grid-lanes"
-                            }
-                          ],
-                          "webFeature": {
-                            "id": "masonry",
-                            "description_html": "The <code>display: grid-lanes</code> or <code>display: inline-grid-lanes</code> CSS declaration creates a layout where items are tightly packed, like brickwork, in parallel lanes. Items are placed one by one in the lane that has the most available space.",
-                            "group": [
-                              "layout"
-                            ],
-                            "name": "Masonry",
-                            "spec": [
-                              "https://drafts.csswg.org/css-grid-3/"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/masonry/",
-                            "status": {
-                              "baseline": "false"
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 18,
-                        "id": "css_functions",
-                        "index": 11,
-                        "percentageQuestion": 2.85,
-                        "percentageSurvey": 0.37
-                      },
-                      {
                         "count": 17,
                         "id": "has_selector",
-                        "index": 12,
+                        "index": 11,
                         "percentageQuestion": 2.69,
                         "percentageSurvey": 0.35,
                         "entity": {
@@ -1378,7 +1328,7 @@
                       {
                         "count": 16,
                         "id": "at_container_style",
-                        "index": 13,
+                        "index": 12,
                         "percentageQuestion": 2.53,
                         "percentageSurvey": 0.33,
                         "entity": {
@@ -1431,7 +1381,7 @@
                       {
                         "count": 16,
                         "id": "line_clamp",
-                        "index": 14,
+                        "index": 13,
                         "percentageQuestion": 2.53,
                         "percentageSurvey": 0.33,
                         "entity": {
@@ -1471,7 +1421,7 @@
                       {
                         "count": 16,
                         "id": "sibling_index",
-                        "index": 15,
+                        "index": 14,
                         "percentageQuestion": 2.53,
                         "percentageSurvey": 0.33,
                         "entity": {
@@ -1521,60 +1471,24 @@
                         }
                       },
                       {
-                        "count": 16,
-                        "id": "subgrid",
-                        "index": 16,
-                        "percentageQuestion": 2.53,
-                        "percentageSurvey": 0.33,
+                        "count": 14,
+                        "id": "scrollbar_styling",
+                        "index": 15,
+                        "percentageQuestion": 2.22,
+                        "percentageSurvey": 0.29,
                         "entity": {
-                          "name": "Subgrid",
-                          "nameHtml": "Subgrid",
-                          "nameClean": "Subgrid",
-                          "id": "subgrid",
-                          "parentId": "css_layout",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".wrapper {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.item {\n  grid-row: 1 / 4;\n  display: grid;\n  grid-template-rows: subgrid;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.wrapper</span> {\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">1</span>fr <span class=\"hljs-number\">1</span>fr;\n}\n\n<span class=\"hljs-selector-class\">.item</span> {\n  <span class=\"hljs-attribute\">grid-row</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">4</span>;\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-rows</span>: subgrid;\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-subgrid"
-                          },
-                          "webFeature": {
-                            "id": "subgrid",
-                            "description_html": "The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.",
-                            "group": [
-                              "grid"
-                            ],
-                            "name": "Subgrid",
-                            "spec": [
-                              "https://drafts.csswg.org/css-grid-2/#subgrids"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/subgrid/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2023-09-15",
-                              "support": {
-                                "chrome": "117",
-                                "chrome_android": "117",
-                                "edge": "117",
-                                "firefox": "71",
-                                "firefox_android": "79",
-                                "safari": "16",
-                                "safari_ios": "16"
-                              }
-                            }
-                          }
+                          "name": "Scrollbar styling",
+                          "nameHtml": "Scrollbar styling",
+                          "nameClean": "Scrollbar styling",
+                          "id": "scrollbar_styling",
+                          "parentId": "scrollbars",
+                          "entityType": "feature"
                         }
                       },
                       {
                         "count": 14,
                         "id": "sibling_count",
-                        "index": 17,
+                        "index": 16,
                         "percentageQuestion": 2.22,
                         "percentageSurvey": 0.29,
                         "entity": {
@@ -1622,7 +1536,7 @@
                       {
                         "count": 13,
                         "id": "better_scoping",
-                        "index": 18,
+                        "index": 17,
                         "percentageQuestion": 2.06,
                         "percentageSurvey": 0.27,
                         "entity": {
@@ -1636,7 +1550,7 @@
                       {
                         "count": 13,
                         "id": "calc_size",
-                        "index": 19,
+                        "index": 18,
                         "percentageQuestion": 2.06,
                         "percentageSurvey": 0.27,
                         "entity": {
@@ -1683,6 +1597,73 @@
                         }
                       },
                       {
+                        "count": 13,
+                        "id": "popover_api",
+                        "index": 19,
+                        "percentageQuestion": 2.06,
+                        "percentageSurvey": 0.27,
+                        "entity": {
+                          "name": "`popover` attribute (Popover API)",
+                          "nameHtml": "<code>popover</code> attribute (Popover API)",
+                          "nameClean": "popover attribute (Popover API)",
+                          "description": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
+                          "descriptionHtml": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
+                          "descriptionClean": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
+                          "id": "popover_api",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<button popovertarget=\"foo\">Toggle the popover</button>\n<div id=\"foo\" popover>Popover content</div>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">popovertarget</span>=<span class=\"hljs-string\">&quot;foo&quot;</span>&gt;</span>Toggle the popover<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;foo&quot;</span> <span class=\"hljs-attr\">popover</span>&gt;</span>Popover content<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Popover_API"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-html_global_attributes_popover"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://html.spec.whatwg.org/multipage/popover.html#dom-popover",
+                              "title": "HTML Standard"
+                            },
+                            {
+                              "url": "https://github.com/w3ctag/design-reviews/issues/743",
+                              "title": "The Popover API (previously Popup) · Issue #743 · w3ctag/design-reviews · GitHub"
+                            },
+                            {
+                              "url": "https://open-ui.org/components/popover.research.explainer/",
+                              "title": "Popover API (Explainer) | Open UI"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "popover",
+                            "description_html": "The <code>popover</code> HTML attribute creates an overlay to display content on top of other page content. Popovers can be shown declaratively using HTML, or using the <code>showPopover()</code> method.",
+                            "group": [
+                              "html"
+                            ],
+                            "name": "Popover",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/popover.html"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/popover/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2025-01-27",
+                              "support": {
+                                "chrome": "116",
+                                "chrome_android": "116",
+                                "edge": "116",
+                                "firefox": "125",
+                                "firefox_android": "125",
+                                "safari": "17",
+                                "safari_ios": "18.3"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
                         "count": 4270,
                         "id": "no_answer",
                         "index": 20,
@@ -1690,11 +1671,11 @@
                         "percentageSurvey": 87.11
                       },
                       {
-                        "count": 558,
+                        "count": 522,
                         "id": "other_answers",
                         "index": 21,
-                        "percentageQuestion": 88.37,
-                        "percentageSurvey": 11.27
+                        "percentageQuestion": 82.67,
+                        "percentageSurvey": 10.54
                       }
                     ]
                   }

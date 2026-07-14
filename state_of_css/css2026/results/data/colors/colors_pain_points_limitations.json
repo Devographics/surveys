@@ -113,8 +113,149 @@
                       },
                       {
                         "count": 19,
-                        "id": "dark_mode",
+                        "id": "color_management",
                         "index": 2,
+                        "percentageQuestion": 19.59,
+                        "percentageSurvey": 0.39,
+                        "entity": {
+                          "name": "Color management",
+                          "nameHtml": "Color management",
+                          "nameClean": "Color management",
+                          "description": "Color‑management and color‑space handling across web platform features",
+                          "descriptionHtml": "Color‑management and color‑space handling across web platform features",
+                          "descriptionClean": "Color‑management and color‑space handling across web platform features",
+                          "id": "color_management",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 9,
+                            "id": "wide_gamut_colors",
+                            "index": 0,
+                            "percentageQuestion": 9.28,
+                            "percentageSurvey": 0.18,
+                            "entity": {
+                              "name": "Wide Gamut Colors",
+                              "nameHtml": "Wide Gamut Colors",
+                              "nameClean": "Wide Gamut Colors",
+                              "description": "`lch()`, `lab()`, `oklch()`, `oklab()`",
+                              "descriptionHtml": "<code>lch()</code>, <code>lab()</code>, <code>oklch()</code>, <code>oklab()</code>",
+                              "descriptionClean": "lch(), lab(), oklch(), oklab()",
+                              "id": "wide_gamut_colors",
+                              "parentId": "color_management",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": ".foo {\n  background-color: lab(29.2345% 39.3825 20.0664);\n  background-color: lch(29.2345% 44.2 27);\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">lab</span>(<span class=\"hljs-number\">29.2345%</span> <span class=\"hljs-number\">39.3825</span> <span class=\"hljs-number\">20.0664</span>);\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">lch</span>(<span class=\"hljs-number\">29.2345%</span> <span class=\"hljs-number\">44.2</span> <span class=\"hljs-number\">27</span>);\n}"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/lch"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/css-lch-lab"
+                              },
+                              "webFeature": {
+                                "id": "oklab",
+                                "description_html": "The Oklab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is, aiming to match how humans perceive colors. OkLCh is a variant of Oklab with polar coordinates. These color spaces can be used with the CSS <code>oklab()</code> and <code>oklch()</code> functions.",
+                                "group": [
+                                  "color-types"
+                                ],
+                                "name": "Oklab and OkLCh",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-color-4/#ok-lab"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/oklab/",
+                                "status": {
+                                  "baseline": "high",
+                                  "baseline_low_date": "2023-05-09",
+                                  "support": {
+                                    "chrome": "111",
+                                    "chrome_android": "111",
+                                    "edge": "111",
+                                    "firefox": "113",
+                                    "firefox_android": "113",
+                                    "safari": "15.4",
+                                    "safari_ios": "15.4"
+                                  }
+                                }
+                              }
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 5,
+                                "id": "oklch_colors",
+                                "index": 0,
+                                "percentageQuestion": 5.15,
+                                "percentageSurvey": 0.1,
+                                "entity": {
+                                  "name": "OKLCH Colors",
+                                  "nameHtml": "OKLCH Colors",
+                                  "nameClean": "OKLCH Colors",
+                                  "id": "oklch_colors",
+                                  "parentId": "wide_gamut_colors",
+                                  "entityType": "feature",
+                                  "example": {
+                                    "language": "css",
+                                    "code": ".foo {\n  background-color: oklch(40.1% 0.123 21.57)\n}\n",
+                                    "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">oklch</span>(<span class=\"hljs-number\">40.1%</span> <span class=\"hljs-number\">0.123</span> <span class=\"hljs-number\">21.57</span>)\n}"
+                                  },
+                                  "mdn": {
+                                    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch"
+                                  },
+                                  "caniuse": {
+                                    "url": "https://caniuse.com/wf-oklab"
+                                  },
+                                  "webFeature": {
+                                    "id": "oklab",
+                                    "description_html": "The Oklab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is, aiming to match how humans perceive colors. OkLCh is a variant of Oklab with polar coordinates. These color spaces can be used with the CSS <code>oklab()</code> and <code>oklch()</code> functions.",
+                                    "group": [
+                                      "color-types"
+                                    ],
+                                    "name": "Oklab and OkLCh",
+                                    "spec": [
+                                      "https://drafts.csswg.org/css-color-4/#ok-lab"
+                                    ],
+                                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/oklab/",
+                                    "status": {
+                                      "baseline": "high",
+                                      "baseline_low_date": "2023-05-09",
+                                      "support": {
+                                        "chrome": "111",
+                                        "chrome_android": "111",
+                                        "edge": "111",
+                                        "firefox": "113",
+                                        "firefox_android": "113",
+                                        "safari": "15.4",
+                                        "safari_ios": "15.4"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "count": 7,
+                            "id": "gamut_mapping",
+                            "index": 1,
+                            "percentageQuestion": 7.22,
+                            "percentageSurvey": 0.14,
+                            "entity": {
+                              "name": "Gamut mapping and display variability",
+                              "nameHtml": "Gamut mapping and display variability",
+                              "nameClean": "Gamut mapping and display variability",
+                              "id": "gamut_mapping",
+                              "parentId": "color_management",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 19,
+                        "id": "dark_mode",
+                        "index": 3,
                         "percentageQuestion": 19.59,
                         "percentageSurvey": 0.39,
                         "entity": {
@@ -179,133 +320,11 @@
                         ]
                       },
                       {
-                        "count": 9,
-                        "id": "wide_gamut_colors",
-                        "index": 3,
-                        "percentageQuestion": 9.28,
-                        "percentageSurvey": 0.18,
-                        "entity": {
-                          "name": "Wide Gamut Colors",
-                          "nameHtml": "Wide Gamut Colors",
-                          "nameClean": "Wide Gamut Colors",
-                          "description": "`lch()`, `lab()`, `oklch()`, `oklab()`",
-                          "descriptionHtml": "<code>lch()</code>, <code>lab()</code>, <code>oklch()</code>, <code>oklab()</code>",
-                          "descriptionClean": "lch(), lab(), oklch(), oklab()",
-                          "id": "wide_gamut_colors",
-                          "parentId": "color_management",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".foo {\n  background-color: lab(29.2345% 39.3825 20.0664);\n  background-color: lch(29.2345% 44.2 27);\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">lab</span>(<span class=\"hljs-number\">29.2345%</span> <span class=\"hljs-number\">39.3825</span> <span class=\"hljs-number\">20.0664</span>);\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">lch</span>(<span class=\"hljs-number\">29.2345%</span> <span class=\"hljs-number\">44.2</span> <span class=\"hljs-number\">27</span>);\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/lch"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-lch-lab"
-                          },
-                          "webFeature": {
-                            "id": "oklab",
-                            "description_html": "The Oklab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is, aiming to match how humans perceive colors. OkLCh is a variant of Oklab with polar coordinates. These color spaces can be used with the CSS <code>oklab()</code> and <code>oklch()</code> functions.",
-                            "group": [
-                              "color-types"
-                            ],
-                            "name": "Oklab and OkLCh",
-                            "spec": [
-                              "https://drafts.csswg.org/css-color-4/#ok-lab"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/oklab/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2023-05-09",
-                              "support": {
-                                "chrome": "111",
-                                "chrome_android": "111",
-                                "edge": "111",
-                                "firefox": "113",
-                                "firefox_android": "113",
-                                "safari": "15.4",
-                                "safari_ios": "15.4"
-                              }
-                            }
-                          }
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 5,
-                            "id": "oklch_colors",
-                            "index": 0,
-                            "percentageQuestion": 5.15,
-                            "percentageSurvey": 0.1,
-                            "entity": {
-                              "name": "OKLCH Colors",
-                              "nameHtml": "OKLCH Colors",
-                              "nameClean": "OKLCH Colors",
-                              "id": "oklch_colors",
-                              "parentId": "wide_gamut_colors",
-                              "entityType": "feature",
-                              "example": {
-                                "language": "css",
-                                "code": ".foo {\n  background-color: oklch(40.1% 0.123 21.57)\n}\n",
-                                "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">oklch</span>(<span class=\"hljs-number\">40.1%</span> <span class=\"hljs-number\">0.123</span> <span class=\"hljs-number\">21.57</span>)\n}"
-                              },
-                              "mdn": {
-                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch"
-                              },
-                              "caniuse": {
-                                "url": "https://caniuse.com/wf-oklab"
-                              },
-                              "webFeature": {
-                                "id": "oklab",
-                                "description_html": "The Oklab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is, aiming to match how humans perceive colors. OkLCh is a variant of Oklab with polar coordinates. These color spaces can be used with the CSS <code>oklab()</code> and <code>oklch()</code> functions.",
-                                "group": [
-                                  "color-types"
-                                ],
-                                "name": "Oklab and OkLCh",
-                                "spec": [
-                                  "https://drafts.csswg.org/css-color-4/#ok-lab"
-                                ],
-                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/oklab/",
-                                "status": {
-                                  "baseline": "high",
-                                  "baseline_low_date": "2023-05-09",
-                                  "support": {
-                                    "chrome": "111",
-                                    "chrome_android": "111",
-                                    "edge": "111",
-                                    "firefox": "113",
-                                    "firefox_android": "113",
-                                    "safari": "15.4",
-                                    "safari_ios": "15.4"
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        ]
-                      },
-                      {
                         "count": 7,
-                        "id": "gamut_mapping",
+                        "id": "cognitive_overload",
                         "index": 4,
                         "percentageQuestion": 7.22,
                         "percentageSurvey": 0.14,
-                        "entity": {
-                          "name": "Gamut mapping and display variability",
-                          "nameHtml": "Gamut mapping and display variability",
-                          "nameClean": "Gamut mapping and display variability",
-                          "id": "gamut_mapping",
-                          "parentId": "color_management",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 6,
-                        "id": "cognitive_overload",
-                        "index": 5,
-                        "percentageQuestion": 6.19,
-                        "percentageSurvey": 0.12,
                         "entity": {
                           "name": "Cognitive overload",
                           "nameHtml": "Cognitive overload",
@@ -317,7 +336,7 @@
                       {
                         "count": 6,
                         "id": "relative_colors",
-                        "index": 6,
+                        "index": 5,
                         "percentageQuestion": 6.19,
                         "percentageSurvey": 0.12,
                         "entity": {
@@ -362,6 +381,23 @@
                               }
                             }
                           }
+                        }
+                      },
+                      {
+                        "count": 5,
+                        "id": "accessibility_issues",
+                        "index": 6,
+                        "percentageQuestion": 5.15,
+                        "percentageSurvey": 0.1,
+                        "entity": {
+                          "name": "Accessibility",
+                          "nameHtml": "Accessibility",
+                          "nameClean": "Accessibility",
+                          "description": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "descriptionHtml": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "descriptionClean": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "id": "accessibility_issues",
+                          "entityType": "default"
                         }
                       },
                       {

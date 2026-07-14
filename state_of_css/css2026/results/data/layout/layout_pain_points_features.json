@@ -8,7 +8,7 @@
               "id": "layout_pain_points",
               "comments": {
                 "currentEdition": {
-                  "count": 1
+                  "count": 3
                 }
               },
               "freeform": {
@@ -41,6 +41,7 @@
                           "nameHtml": "Grid",
                           "nameClean": "Grid",
                           "id": "grid",
+                          "parentId": "css_layout_issues",
                           "entityType": "feature",
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout"
@@ -73,7 +74,60 @@
                               }
                             }
                           }
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 29,
+                            "id": "subgrid",
+                            "index": 0,
+                            "percentageQuestion": 2.3,
+                            "percentageSurvey": 0.53,
+                            "entity": {
+                              "name": "Subgrid",
+                              "nameHtml": "Subgrid",
+                              "nameClean": "Subgrid",
+                              "id": "subgrid",
+                              "parentId": "grid",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": ".wrapper {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.item {\n  grid-row: 1 / 4;\n  display: grid;\n  grid-template-rows: subgrid;\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-selector-class\">.wrapper</span> {\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">1</span>fr <span class=\"hljs-number\">1</span>fr;\n}\n\n<span class=\"hljs-selector-class\">.item</span> {\n  <span class=\"hljs-attribute\">grid-row</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">4</span>;\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-rows</span>: subgrid;\n}"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/css-subgrid"
+                              },
+                              "webFeature": {
+                                "id": "subgrid",
+                                "description_html": "The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.",
+                                "group": [
+                                  "grid"
+                                ],
+                                "name": "Subgrid",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-grid-2/#subgrids"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/subgrid/",
+                                "status": {
+                                  "baseline": "high",
+                                  "baseline_low_date": "2023-09-15",
+                                  "support": {
+                                    "chrome": "117",
+                                    "chrome_android": "117",
+                                    "edge": "117",
+                                    "firefox": "71",
+                                    "firefox_android": "79",
+                                    "safari": "16",
+                                    "safari_ios": "16"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 66,
@@ -317,60 +371,9 @@
                         }
                       },
                       {
-                        "count": 29,
-                        "id": "subgrid",
-                        "index": 6,
-                        "percentageQuestion": 2.3,
-                        "percentageSurvey": 0.53,
-                        "entity": {
-                          "name": "Subgrid",
-                          "nameHtml": "Subgrid",
-                          "nameClean": "Subgrid",
-                          "id": "subgrid",
-                          "parentId": "css_layout_issues",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".wrapper {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.item {\n  grid-row: 1 / 4;\n  display: grid;\n  grid-template-rows: subgrid;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.wrapper</span> {\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">1</span>fr <span class=\"hljs-number\">1</span>fr;\n}\n\n<span class=\"hljs-selector-class\">.item</span> {\n  <span class=\"hljs-attribute\">grid-row</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">4</span>;\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-rows</span>: subgrid;\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-subgrid"
-                          },
-                          "webFeature": {
-                            "id": "subgrid",
-                            "description_html": "The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.",
-                            "group": [
-                              "grid"
-                            ],
-                            "name": "Subgrid",
-                            "spec": [
-                              "https://drafts.csswg.org/css-grid-2/#subgrids"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/subgrid/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2023-09-15",
-                              "support": {
-                                "chrome": "117",
-                                "chrome_android": "117",
-                                "edge": "117",
-                                "firefox": "71",
-                                "firefox_android": "79",
-                                "safari": "16",
-                                "safari_ios": "16"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
                         "count": 28,
                         "id": "css_nesting",
-                        "index": 7,
+                        "index": 6,
                         "percentageQuestion": 2.22,
                         "percentageSurvey": 0.51,
                         "entity": {
@@ -423,7 +426,7 @@
                       {
                         "count": 22,
                         "id": "media_queries",
-                        "index": 8,
+                        "index": 7,
                         "percentageQuestion": 1.75,
                         "percentageSurvey": 0.4,
                         "entity": {
@@ -468,7 +471,7 @@
                       {
                         "count": 17,
                         "id": "has_selector",
-                        "index": 9,
+                        "index": 8,
                         "percentageQuestion": 1.35,
                         "percentageSurvey": 0.31,
                         "entity": {
@@ -518,7 +521,7 @@
                       {
                         "count": 15,
                         "id": "where_selector",
-                        "index": 10,
+                        "index": 9,
                         "percentageQuestion": 1.19,
                         "percentageSurvey": 0.27,
                         "entity": {
@@ -568,7 +571,7 @@
                       {
                         "count": 14,
                         "id": "css_custom_properties",
-                        "index": 11,
+                        "index": 10,
                         "percentageQuestion": 1.11,
                         "percentageSurvey": 0.25,
                         "entity": {
@@ -593,7 +596,7 @@
                       {
                         "count": 12,
                         "id": "at_container_style",
-                        "index": 12,
+                        "index": 11,
                         "percentageQuestion": 0.95,
                         "percentageSurvey": 0.22,
                         "entity": {
@@ -646,7 +649,7 @@
                       {
                         "count": 10,
                         "id": "viewport_units",
-                        "index": 13,
+                        "index": 12,
                         "percentageQuestion": 0.79,
                         "percentageSurvey": 0.18,
                         "entity": {
@@ -688,7 +691,7 @@
                       {
                         "count": 9,
                         "id": "aspect_ratio",
-                        "index": 14,
+                        "index": 13,
                         "percentageQuestion": 0.71,
                         "percentageSurvey": 0.16,
                         "entity": {
@@ -739,7 +742,7 @@
                       {
                         "count": 7,
                         "id": "float",
-                        "index": 15,
+                        "index": 14,
                         "percentageQuestion": 0.56,
                         "percentageSurvey": 0.13,
                         "entity": {
@@ -759,7 +762,7 @@
                       {
                         "count": 7,
                         "id": "scroll_driven_animations",
-                        "index": 16,
+                        "index": 15,
                         "percentageQuestion": 0.56,
                         "percentageSurvey": 0.13,
                         "entity": {
@@ -821,7 +824,7 @@
                       {
                         "count": 6,
                         "id": "intrinsic_sizing",
-                        "index": 17,
+                        "index": 16,
                         "percentageQuestion": 0.48,
                         "percentageSurvey": 0.11,
                         "entity": {
@@ -927,7 +930,7 @@
                       {
                         "count": 5,
                         "id": "calc",
-                        "index": 18,
+                        "index": 17,
                         "percentageQuestion": 0.4,
                         "percentageSurvey": 0.09,
                         "entity": {
@@ -973,7 +976,7 @@
                       {
                         "count": 5,
                         "id": "direction",
-                        "index": 19,
+                        "index": 18,
                         "percentageQuestion": 0.4,
                         "percentageSurvey": 0.09,
                         "entity": {
@@ -993,7 +996,7 @@
                       {
                         "count": 5,
                         "id": "logical_properties",
-                        "index": 20,
+                        "index": 19,
                         "percentageQuestion": 0.4,
                         "percentageSurvey": 0.09,
                         "entity": {
@@ -1063,16 +1066,17 @@
                     },
                     "buckets": [
                       {
-                        "count": 103,
+                        "count": 167,
                         "id": "grid",
                         "index": 0,
-                        "percentageQuestion": 16.3,
-                        "percentageSurvey": 2.1,
+                        "percentageQuestion": 26.42,
+                        "percentageSurvey": 3.41,
                         "entity": {
                           "name": "Grid",
                           "nameHtml": "Grid",
                           "nameClean": "Grid",
                           "id": "grid",
+                          "parentId": "css_layout_issues",
                           "entityType": "feature",
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout"
@@ -1105,65 +1109,118 @@
                               }
                             }
                           }
-                        }
-                      },
-                      {
-                        "count": 59,
-                        "id": "subgrid",
-                        "index": 1,
-                        "percentageQuestion": 9.34,
-                        "percentageSurvey": 1.2,
-                        "entity": {
-                          "name": "Subgrid",
-                          "nameHtml": "Subgrid",
-                          "nameClean": "Subgrid",
-                          "id": "subgrid",
-                          "parentId": "css_layout_issues",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".wrapper {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.item {\n  grid-row: 1 / 4;\n  display: grid;\n  grid-template-rows: subgrid;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.wrapper</span> {\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">1</span>fr <span class=\"hljs-number\">1</span>fr;\n}\n\n<span class=\"hljs-selector-class\">.item</span> {\n  <span class=\"hljs-attribute\">grid-row</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">4</span>;\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-rows</span>: subgrid;\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-subgrid"
-                          },
-                          "webFeature": {
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 59,
                             "id": "subgrid",
-                            "description_html": "The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.",
-                            "group": [
-                              "grid"
-                            ],
-                            "name": "Subgrid",
-                            "spec": [
-                              "https://drafts.csswg.org/css-grid-2/#subgrids"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/subgrid/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2023-09-15",
-                              "support": {
-                                "chrome": "117",
-                                "chrome_android": "117",
-                                "edge": "117",
-                                "firefox": "71",
-                                "firefox_android": "79",
-                                "safari": "16",
-                                "safari_ios": "16"
+                            "index": 0,
+                            "percentageQuestion": 9.34,
+                            "percentageSurvey": 1.2,
+                            "entity": {
+                              "name": "Subgrid",
+                              "nameHtml": "Subgrid",
+                              "nameClean": "Subgrid",
+                              "id": "subgrid",
+                              "parentId": "grid",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": ".wrapper {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.item {\n  grid-row: 1 / 4;\n  display: grid;\n  grid-template-rows: subgrid;\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-selector-class\">.wrapper</span> {\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">1</span>fr <span class=\"hljs-number\">1</span>fr;\n}\n\n<span class=\"hljs-selector-class\">.item</span> {\n  <span class=\"hljs-attribute\">grid-row</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">4</span>;\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-rows</span>: subgrid;\n}"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/css-subgrid"
+                              },
+                              "webFeature": {
+                                "id": "subgrid",
+                                "description_html": "The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.",
+                                "group": [
+                                  "grid"
+                                ],
+                                "name": "Subgrid",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-grid-2/#subgrids"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/subgrid/",
+                                "status": {
+                                  "baseline": "high",
+                                  "baseline_low_date": "2023-09-15",
+                                  "support": {
+                                    "chrome": "117",
+                                    "chrome_android": "117",
+                                    "edge": "117",
+                                    "firefox": "71",
+                                    "firefox_android": "79",
+                                    "safari": "16",
+                                    "safari_ios": "16"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "count": 14,
+                            "id": "css_grid_lanes",
+                            "index": 1,
+                            "percentageQuestion": 2.22,
+                            "percentageSurvey": 0.29,
+                            "entity": {
+                              "name": "Grid Lanes",
+                              "nameHtml": "Grid Lanes",
+                              "nameClean": "Grid Lanes",
+                              "id": "css_grid_lanes",
+                              "parentId": "grid",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": ".container {\n  display: grid-lanes;\n  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));\n  gap: 16px;\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-selector-class\">.container</span> {\n  <span class=\"hljs-attribute\">display</span>: grid-lanes;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-built_in\">repeat</span>(auto-fill, <span class=\"hljs-built_in\">minmax</span>(<span class=\"hljs-number\">250px</span>, <span class=\"hljs-number\">1</span>fr));\n  <span class=\"hljs-attribute\">gap</span>: <span class=\"hljs-number\">16px</span>;\n}"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/css-grid-lanes"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://webkit.org/blog/17660/introducing-css-grid-lanes/",
+                                  "title": "Introducing CSS Grid Lanes"
+                                },
+                                {
+                                  "url": "https://css-tricks.com/masonry-layout-is-now-grid-lanes/",
+                                  "title": "Masonry Layout is Now grid-lanes"
+                                }
+                              ],
+                              "webFeature": {
+                                "id": "masonry",
+                                "description_html": "The <code>display: grid-lanes</code> or <code>display: inline-grid-lanes</code> CSS declaration creates a layout where items are tightly packed, like brickwork, in parallel lanes. Items are placed one by one in the lane that has the most available space.",
+                                "group": [
+                                  "layout"
+                                ],
+                                "name": "Masonry",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-grid-3/"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/masonry/",
+                                "status": {
+                                  "baseline": "false"
+                                }
                               }
                             }
                           }
-                        }
+                        ]
                       },
                       {
-                        "count": 51,
+                        "count": 60,
                         "id": "flexbox",
-                        "index": 2,
-                        "percentageQuestion": 8.07,
-                        "percentageSurvey": 1.04,
+                        "index": 1,
+                        "percentageQuestion": 9.49,
+                        "percentageSurvey": 1.22,
                         "entity": {
                           "name": "Flexbox",
                           "nameHtml": "Flexbox",
@@ -1206,7 +1263,7 @@
                       {
                         "count": 38,
                         "id": "anchor_positioning",
-                        "index": 3,
+                        "index": 2,
                         "percentageQuestion": 6.01,
                         "percentageSurvey": 0.78,
                         "entity": {
@@ -1262,7 +1319,7 @@
                       {
                         "count": 24,
                         "id": "at_container",
-                        "index": 4,
+                        "index": 3,
                         "percentageQuestion": 3.8,
                         "percentageSurvey": 0.49,
                         "entity": {
@@ -1312,7 +1369,7 @@
                       {
                         "count": 15,
                         "id": "media_queries",
-                        "index": 5,
+                        "index": 4,
                         "percentageQuestion": 2.37,
                         "percentageSurvey": 0.31,
                         "entity": {
@@ -1355,59 +1412,9 @@
                         }
                       },
                       {
-                        "count": 14,
-                        "id": "css_grid_lanes",
-                        "index": 6,
-                        "percentageQuestion": 2.22,
-                        "percentageSurvey": 0.29,
-                        "entity": {
-                          "name": "Grid Lanes",
-                          "nameHtml": "Grid Lanes",
-                          "nameClean": "Grid Lanes",
-                          "id": "css_grid_lanes",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".container {\n  display: grid-lanes;\n  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));\n  gap: 16px;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.container</span> {\n  <span class=\"hljs-attribute\">display</span>: grid-lanes;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-built_in\">repeat</span>(auto-fill, <span class=\"hljs-built_in\">minmax</span>(<span class=\"hljs-number\">250px</span>, <span class=\"hljs-number\">1</span>fr));\n  <span class=\"hljs-attribute\">gap</span>: <span class=\"hljs-number\">16px</span>;\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-grid-lanes"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://webkit.org/blog/17660/introducing-css-grid-lanes/",
-                              "title": "Introducing CSS Grid Lanes"
-                            },
-                            {
-                              "url": "https://css-tricks.com/masonry-layout-is-now-grid-lanes/",
-                              "title": "Masonry Layout is Now grid-lanes"
-                            }
-                          ],
-                          "webFeature": {
-                            "id": "masonry",
-                            "description_html": "The <code>display: grid-lanes</code> or <code>display: inline-grid-lanes</code> CSS declaration creates a layout where items are tightly packed, like brickwork, in parallel lanes. Items are placed one by one in the lane that has the most available space.",
-                            "group": [
-                              "layout"
-                            ],
-                            "name": "Masonry",
-                            "spec": [
-                              "https://drafts.csswg.org/css-grid-3/"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/masonry/",
-                            "status": {
-                              "baseline": "false"
-                            }
-                          }
-                        }
-                      },
-                      {
                         "count": 12,
                         "id": "position_sticky",
-                        "index": 7,
+                        "index": 5,
                         "percentageQuestion": 1.9,
                         "percentageSurvey": 0.24,
                         "entity": {
@@ -1452,7 +1459,7 @@
                       {
                         "count": 11,
                         "id": "viewport_percentage_length_units",
-                        "index": 8,
+                        "index": 6,
                         "percentageQuestion": 1.74,
                         "percentageSurvey": 0.22,
                         "entity": {
@@ -1509,7 +1516,7 @@
                       {
                         "count": 9,
                         "id": "multi_column",
-                        "index": 9,
+                        "index": 7,
                         "percentageQuestion": 1.42,
                         "percentageSurvey": 0.18,
                         "entity": {
@@ -1554,7 +1561,7 @@
                       {
                         "count": 6,
                         "id": "at_container_style",
-                        "index": 10,
+                        "index": 8,
                         "percentageQuestion": 0.95,
                         "percentageSurvey": 0.12,
                         "entity": {
@@ -1607,7 +1614,7 @@
                       {
                         "count": 5,
                         "id": "css_custom_properties",
-                        "index": 11,
+                        "index": 9,
                         "percentageQuestion": 0.79,
                         "percentageSurvey": 0.1,
                         "entity": {
@@ -1632,7 +1639,7 @@
                       {
                         "count": 5,
                         "id": "popover_api",
-                        "index": 12,
+                        "index": 10,
                         "percentageQuestion": 0.79,
                         "percentageSurvey": 0.1,
                         "entity": {

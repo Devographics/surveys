@@ -8,7 +8,7 @@
               "id": "layout_pain_points",
               "comments": {
                 "currentEdition": {
-                  "count": 1
+                  "count": 3
                 }
               },
               "freeform": {
@@ -41,6 +41,7 @@
                           "nameHtml": "Grid",
                           "nameClean": "Grid",
                           "id": "grid",
+                          "parentId": "css_layout_issues",
                           "entityType": "feature",
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout"
@@ -73,7 +74,60 @@
                               }
                             }
                           }
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 29,
+                            "id": "subgrid",
+                            "index": 0,
+                            "percentageQuestion": 2.3,
+                            "percentageSurvey": 0.53,
+                            "entity": {
+                              "name": "Subgrid",
+                              "nameHtml": "Subgrid",
+                              "nameClean": "Subgrid",
+                              "id": "subgrid",
+                              "parentId": "grid",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": ".wrapper {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.item {\n  grid-row: 1 / 4;\n  display: grid;\n  grid-template-rows: subgrid;\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-selector-class\">.wrapper</span> {\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">1</span>fr <span class=\"hljs-number\">1</span>fr;\n}\n\n<span class=\"hljs-selector-class\">.item</span> {\n  <span class=\"hljs-attribute\">grid-row</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">4</span>;\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-rows</span>: subgrid;\n}"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/css-subgrid"
+                              },
+                              "webFeature": {
+                                "id": "subgrid",
+                                "description_html": "The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.",
+                                "group": [
+                                  "grid"
+                                ],
+                                "name": "Subgrid",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-grid-2/#subgrids"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/subgrid/",
+                                "status": {
+                                  "baseline": "high",
+                                  "baseline_low_date": "2023-09-15",
+                                  "support": {
+                                    "chrome": "117",
+                                    "chrome_android": "117",
+                                    "edge": "117",
+                                    "firefox": "71",
+                                    "firefox_android": "79",
+                                    "safari": "16",
+                                    "safari_ios": "16"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 125,
@@ -233,9 +287,24 @@
                         },
                         "nestedBuckets": [
                           {
+                            "count": 50,
+                            "id": "centering_issues",
+                            "index": 0,
+                            "percentageQuestion": 3.97,
+                            "percentageSurvey": 0.91,
+                            "entity": {
+                              "name": "Centering issues",
+                              "nameHtml": "Centering issues",
+                              "nameClean": "Centering issues",
+                              "id": "centering_issues",
+                              "parentId": "positioning_issues",
+                              "entityType": "default"
+                            }
+                          },
+                          {
                             "count": 38,
                             "id": "anchor_positioning",
-                            "index": 0,
+                            "index": 1,
                             "percentageQuestion": 3.02,
                             "percentageSurvey": 0.69,
                             "entity": {
@@ -392,20 +461,9 @@
                         }
                       },
                       {
-                        "count": 50,
-                        "id": "centering_issues",
-                        "index": 12,
-                        "percentageQuestion": 3.97,
-                        "percentageSurvey": 0.91,
-                        "entity": {
-                          "id": "centering_issues",
-                          "entityType": "default"
-                        }
-                      },
-                      {
                         "count": 39,
                         "id": "hard_to_memorize",
-                        "index": 13,
+                        "index": 12,
                         "percentageQuestion": 3.1,
                         "percentageSurvey": 0.71,
                         "entity": {
@@ -420,7 +478,7 @@
                       {
                         "count": 38,
                         "id": "z_index_issues",
-                        "index": 14,
+                        "index": 13,
                         "percentageQuestion": 3.02,
                         "percentageSurvey": 0.69,
                         "entity": {
@@ -431,7 +489,7 @@
                       {
                         "count": 33,
                         "id": "at_container_size",
-                        "index": 15,
+                        "index": 14,
                         "percentageQuestion": 2.62,
                         "percentageSurvey": 0.6,
                         "entity": {
@@ -481,7 +539,7 @@
                       {
                         "count": 33,
                         "id": "scrolling_issues",
-                        "index": 16,
+                        "index": 15,
                         "percentageQuestion": 2.62,
                         "percentageSurvey": 0.6,
                         "entity": {
@@ -492,7 +550,7 @@
                       {
                         "count": 32,
                         "id": "excessive_complexity",
-                        "index": 17,
+                        "index": 16,
                         "percentageQuestion": 2.54,
                         "percentageSurvey": 0.58,
                         "entity": {
@@ -507,7 +565,7 @@
                       {
                         "count": 32,
                         "id": "table_layouts_issues",
-                        "index": 18,
+                        "index": 17,
                         "percentageQuestion": 2.54,
                         "percentageSurvey": 0.58,
                         "entity": {
@@ -518,7 +576,7 @@
                       {
                         "count": 30,
                         "id": "safari",
-                        "index": 19,
+                        "index": 18,
                         "percentageQuestion": 2.38,
                         "percentageSurvey": 0.54,
                         "entity": {
@@ -536,65 +594,14 @@
                       {
                         "count": 29,
                         "id": "animation_issues",
-                        "index": 20,
+                        "index": 19,
                         "percentageQuestion": 2.3,
                         "percentageSurvey": 0.53
                       },
                       {
-                        "count": 29,
-                        "id": "subgrid",
-                        "index": 21,
-                        "percentageQuestion": 2.3,
-                        "percentageSurvey": 0.53,
-                        "entity": {
-                          "name": "Subgrid",
-                          "nameHtml": "Subgrid",
-                          "nameClean": "Subgrid",
-                          "id": "subgrid",
-                          "parentId": "css_layout_issues",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".wrapper {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.item {\n  grid-row: 1 / 4;\n  display: grid;\n  grid-template-rows: subgrid;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.wrapper</span> {\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">1</span>fr <span class=\"hljs-number\">1</span>fr;\n}\n\n<span class=\"hljs-selector-class\">.item</span> {\n  <span class=\"hljs-attribute\">grid-row</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">4</span>;\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-rows</span>: subgrid;\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-subgrid"
-                          },
-                          "webFeature": {
-                            "id": "subgrid",
-                            "description_html": "The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.",
-                            "group": [
-                              "grid"
-                            ],
-                            "name": "Subgrid",
-                            "spec": [
-                              "https://drafts.csswg.org/css-grid-2/#subgrids"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/subgrid/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2023-09-15",
-                              "support": {
-                                "chrome": "117",
-                                "chrome_android": "117",
-                                "edge": "117",
-                                "firefox": "71",
-                                "firefox_android": "79",
-                                "safari": "16",
-                                "safari_ios": "16"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
                         "count": 28,
                         "id": "css_nesting",
-                        "index": 22,
+                        "index": 20,
                         "percentageQuestion": 2.22,
                         "percentageSurvey": 0.51,
                         "entity": {
@@ -647,7 +654,7 @@
                       {
                         "count": 27,
                         "id": "margin_issues",
-                        "index": 23,
+                        "index": 21,
                         "percentageQuestion": 2.14,
                         "percentageSurvey": 0.49,
                         "entity": {
@@ -658,13 +665,13 @@
                       {
                         "count": 27,
                         "id": "sizing_issues",
-                        "index": 24,
+                        "index": 22,
                         "percentageQuestion": 2.14,
                         "percentageSurvey": 0.49,
                         "entity": {
-                          "name": "Sizing",
-                          "nameHtml": "Sizing",
-                          "nameClean": "Sizing",
+                          "name": "Element sizing",
+                          "nameHtml": "Element sizing",
+                          "nameClean": "Element sizing",
                           "id": "sizing_issues",
                           "entityType": "default"
                         },
@@ -829,6 +836,62 @@
                         ]
                       },
                       {
+                        "count": 22,
+                        "id": "media_queries",
+                        "index": 23,
+                        "percentageQuestion": 1.75,
+                        "percentageSurvey": 0.4,
+                        "entity": {
+                          "name": "Media Queries",
+                          "nameHtml": "Media Queries",
+                          "nameClean": "Media Queries",
+                          "id": "media_queries",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-mediaqueries"
+                          },
+                          "webFeature": {
+                            "id": "media-queries",
+                            "description_html": "The <code>@media</code> CSS rule conditionally applies styles based on the output device type, its capabilities, and the user's preferences. Media queries are composed of an optional media type such as <code>screen</code> or <code>print</code>, and one or more mandatory media features, such as <code>prefers-reduced-animations</code>.",
+                            "group": [
+                              "media-queries"
+                            ],
+                            "name": "Media queries",
+                            "spec": [
+                              "https://drafts.csswg.org/mediaqueries-5/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/media-queries/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2015-07-29",
+                              "support": {
+                                "chrome": "1",
+                                "chrome_android": "18",
+                                "edge": "12",
+                                "firefox": "1",
+                                "firefox_android": "4",
+                                "safari": "3",
+                                "safari_ios": "1"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 21,
+                        "id": "absolute_positioning_issues",
+                        "index": 24,
+                        "percentageQuestion": 1.67,
+                        "percentageSurvey": 0.38,
+                        "entity": {
+                          "id": "absolute_positioning_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
                         "count": 4237,
                         "id": "no_answer",
                         "index": 25,
@@ -836,11 +899,11 @@
                         "percentageSurvey": 76.95
                       },
                       {
-                        "count": 802,
+                        "count": 759,
                         "id": "other_answers",
                         "index": 26,
-                        "percentageQuestion": 63.75,
-                        "percentageSurvey": 14.62
+                        "percentageQuestion": 60.33,
+                        "percentageSurvey": 13.84
                       }
                     ]
                   },
@@ -862,343 +925,195 @@
                     },
                     "buckets": [
                       {
-                        "count": 103,
-                        "id": "grid",
+                        "count": 167,
+                        "id": "css_layout_issues",
                         "index": 0,
-                        "percentageQuestion": 16.3,
-                        "percentageSurvey": 2.1,
+                        "percentageQuestion": 26.42,
+                        "percentageSurvey": 3.41,
                         "entity": {
-                          "name": "Grid",
-                          "nameHtml": "Grid",
-                          "nameClean": "Grid",
-                          "id": "grid",
-                          "entityType": "feature",
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-grid"
-                          },
-                          "webFeature": {
+                          "name": "CSS layout issues",
+                          "nameHtml": "CSS layout issues",
+                          "nameClean": "CSS layout issues",
+                          "description": "General issues related to CSS layout models.",
+                          "descriptionHtml": "General issues related to CSS layout models.",
+                          "descriptionClean": "General issues related to CSS layout models.",
+                          "id": "css_layout_issues",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 167,
                             "id": "grid",
-                            "description_html": "CSS grid is a two-dimensional layout system, which lays content out in rows and columns.",
-                            "group": [
-                              "grid"
-                            ],
-                            "name": "Grid",
-                            "spec": [
-                              "https://drafts.csswg.org/css-grid-3/"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/grid/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2017-10-17",
-                              "support": {
-                                "chrome": "57",
-                                "chrome_android": "57",
-                                "edge": "16",
-                                "firefox": "52",
-                                "firefox_android": "52",
-                                "safari": "10.1",
-                                "safari_ios": "10.3"
-                              }
-                            }
-                          }
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 8,
-                            "id": "grid_track_sizing",
                             "index": 0,
-                            "percentageQuestion": 1.27,
-                            "percentageSurvey": 0.16,
+                            "percentageQuestion": 26.42,
+                            "percentageSurvey": 3.41,
                             "entity": {
-                              "name": "Grid track sizing",
-                              "nameHtml": "Grid track sizing",
-                              "nameClean": "Grid track sizing",
-                              "id": "grid_track_sizing",
-                              "parentId": "grid",
-                              "entityType": "default"
-                            }
+                              "name": "Grid",
+                              "nameHtml": "Grid",
+                              "nameClean": "Grid",
+                              "id": "grid",
+                              "parentId": "css_layout_issues",
+                              "entityType": "feature",
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/css-grid"
+                              },
+                              "webFeature": {
+                                "id": "grid",
+                                "description_html": "CSS grid is a two-dimensional layout system, which lays content out in rows and columns.",
+                                "group": [
+                                  "grid"
+                                ],
+                                "name": "Grid",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-grid-3/"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/grid/",
+                                "status": {
+                                  "baseline": "high",
+                                  "baseline_low_date": "2017-10-17",
+                                  "support": {
+                                    "chrome": "57",
+                                    "chrome_android": "57",
+                                    "edge": "16",
+                                    "firefox": "52",
+                                    "firefox_android": "52",
+                                    "safari": "10.1",
+                                    "safari_ios": "10.3"
+                                  }
+                                }
+                              }
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 59,
+                                "id": "subgrid",
+                                "index": 0,
+                                "percentageQuestion": 9.34,
+                                "percentageSurvey": 1.2,
+                                "entity": {
+                                  "name": "Subgrid",
+                                  "nameHtml": "Subgrid",
+                                  "nameClean": "Subgrid",
+                                  "id": "subgrid",
+                                  "parentId": "grid",
+                                  "entityType": "feature",
+                                  "example": {
+                                    "language": "css",
+                                    "code": ".wrapper {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.item {\n  grid-row: 1 / 4;\n  display: grid;\n  grid-template-rows: subgrid;\n}\n",
+                                    "codeHighlighted": "<span class=\"hljs-selector-class\">.wrapper</span> {\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">1</span>fr <span class=\"hljs-number\">1</span>fr;\n}\n\n<span class=\"hljs-selector-class\">.item</span> {\n  <span class=\"hljs-attribute\">grid-row</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">4</span>;\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-rows</span>: subgrid;\n}"
+                                  },
+                                  "mdn": {
+                                    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid"
+                                  },
+                                  "caniuse": {
+                                    "url": "https://caniuse.com/css-subgrid"
+                                  },
+                                  "webFeature": {
+                                    "id": "subgrid",
+                                    "description_html": "The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.",
+                                    "group": [
+                                      "grid"
+                                    ],
+                                    "name": "Subgrid",
+                                    "spec": [
+                                      "https://drafts.csswg.org/css-grid-2/#subgrids"
+                                    ],
+                                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/subgrid/",
+                                    "status": {
+                                      "baseline": "high",
+                                      "baseline_low_date": "2023-09-15",
+                                      "support": {
+                                        "chrome": "117",
+                                        "chrome_android": "117",
+                                        "edge": "117",
+                                        "firefox": "71",
+                                        "firefox_android": "79",
+                                        "safari": "16",
+                                        "safari_ios": "16"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "count": 14,
+                                "id": "css_grid_lanes",
+                                "index": 1,
+                                "percentageQuestion": 2.22,
+                                "percentageSurvey": 0.29,
+                                "entity": {
+                                  "name": "Grid Lanes",
+                                  "nameHtml": "Grid Lanes",
+                                  "nameClean": "Grid Lanes",
+                                  "id": "css_grid_lanes",
+                                  "parentId": "grid",
+                                  "entityType": "feature",
+                                  "example": {
+                                    "language": "css",
+                                    "code": ".container {\n  display: grid-lanes;\n  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));\n  gap: 16px;\n}\n",
+                                    "codeHighlighted": "<span class=\"hljs-selector-class\">.container</span> {\n  <span class=\"hljs-attribute\">display</span>: grid-lanes;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-built_in\">repeat</span>(auto-fill, <span class=\"hljs-built_in\">minmax</span>(<span class=\"hljs-number\">250px</span>, <span class=\"hljs-number\">1</span>fr));\n  <span class=\"hljs-attribute\">gap</span>: <span class=\"hljs-number\">16px</span>;\n}"
+                                  },
+                                  "mdn": {
+                                    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout"
+                                  },
+                                  "caniuse": {
+                                    "url": "https://caniuse.com/css-grid-lanes"
+                                  },
+                                  "resources": [
+                                    {
+                                      "url": "https://webkit.org/blog/17660/introducing-css-grid-lanes/",
+                                      "title": "Introducing CSS Grid Lanes"
+                                    },
+                                    {
+                                      "url": "https://css-tricks.com/masonry-layout-is-now-grid-lanes/",
+                                      "title": "Masonry Layout is Now grid-lanes"
+                                    }
+                                  ],
+                                  "webFeature": {
+                                    "id": "masonry",
+                                    "description_html": "The <code>display: grid-lanes</code> or <code>display: inline-grid-lanes</code> CSS declaration creates a layout where items are tightly packed, like brickwork, in parallel lanes. Items are placed one by one in the lane that has the most available space.",
+                                    "group": [
+                                      "layout"
+                                    ],
+                                    "name": "Masonry",
+                                    "spec": [
+                                      "https://drafts.csswg.org/css-grid-3/"
+                                    ],
+                                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/masonry/",
+                                    "status": {
+                                      "baseline": "false"
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "count": 8,
+                                "id": "grid_track_sizing",
+                                "index": 2,
+                                "percentageQuestion": 1.27,
+                                "percentageSurvey": 0.16,
+                                "entity": {
+                                  "name": "Grid track sizing",
+                                  "nameHtml": "Grid track sizing",
+                                  "nameClean": "Grid track sizing",
+                                  "id": "grid_track_sizing",
+                                  "parentId": "grid",
+                                  "entityType": "default"
+                                }
+                              }
+                            ]
                           }
                         ]
                       },
                       {
-                        "count": 77,
-                        "id": "cognitive_overload",
-                        "index": 1,
-                        "percentageQuestion": 12.18,
-                        "percentageSurvey": 1.57,
-                        "entity": {
-                          "name": "Cognitive overload",
-                          "nameHtml": "Cognitive overload",
-                          "nameClean": "Cognitive overload",
-                          "id": "cognitive_overload",
-                          "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 21,
-                            "id": "choosing_layout_method",
-                            "index": 0,
-                            "percentageQuestion": 3.32,
-                            "percentageSurvey": 0.43,
-                            "entity": {
-                              "name": "Choosing a layout method",
-                              "nameHtml": "Choosing a layout method",
-                              "nameClean": "Choosing a layout method",
-                              "id": "choosing_layout_method",
-                              "parentId": "cognitive_overload",
-                              "entityType": "default"
-                            }
-                          },
-                          {
-                            "count": 16,
-                            "id": "too_many_choices",
-                            "index": 1,
-                            "percentageQuestion": 2.53,
-                            "percentageSurvey": 0.33,
-                            "entity": {
-                              "name": "Choice overload",
-                              "nameHtml": "Choice overload",
-                              "nameClean": "Choice overload",
-                              "description": "Overwhelming amount of options and choices",
-                              "descriptionHtml": "Overwhelming amount of options and choices",
-                              "descriptionClean": "Overwhelming amount of options and choices",
-                              "id": "too_many_choices",
-                              "parentId": "cognitive_overload",
-                              "entityType": "default"
-                            }
-                          },
-                          {
-                            "count": 16,
-                            "id": "hard_to_memorize",
-                            "index": 2,
-                            "percentageQuestion": 2.53,
-                            "percentageSurvey": 0.33,
-                            "entity": {
-                              "name": "Hard to memorize",
-                              "nameHtml": "Hard to memorize",
-                              "nameClean": "Hard to memorize",
-                              "id": "hard_to_memorize",
-                              "parentId": "cognitive_overload",
-                              "entityType": "default"
-                            }
-                          },
-                          {
-                            "count": 12,
-                            "id": "poor_learnability",
-                            "index": 3,
-                            "percentageQuestion": 1.9,
-                            "percentageSurvey": 0.24,
-                            "entity": {
-                              "name": "Poor learnability",
-                              "nameHtml": "Poor learnability",
-                              "nameClean": "Poor learnability",
-                              "description": "High learning curve, requires too much knowledge to get started, or too much information to memorize.",
-                              "descriptionHtml": "High learning curve, requires too much knowledge to get started, or too much information to memorize.",
-                              "descriptionClean": "High learning curve, requires too much knowledge to get started, or too much information to memorize.",
-                              "id": "poor_learnability",
-                              "parentId": "cognitive_overload",
-                              "entityType": "default"
-                            }
-                          },
-                          {
-                            "count": 10,
-                            "id": "excessive_complexity",
-                            "index": 4,
-                            "percentageQuestion": 1.58,
-                            "percentageSurvey": 0.2,
-                            "entity": {
-                              "name": "Excessive complexity",
-                              "nameHtml": "Excessive complexity",
-                              "nameClean": "Excessive complexity",
-                              "id": "excessive_complexity",
-                              "parentId": "cognitive_overload",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
-                      },
-                      {
-                        "count": 72,
-                        "id": "sizing_issues",
-                        "index": 2,
-                        "percentageQuestion": 11.39,
-                        "percentageSurvey": 1.47,
-                        "entity": {
-                          "name": "Sizing",
-                          "nameHtml": "Sizing",
-                          "nameClean": "Sizing",
-                          "id": "sizing_issues",
-                          "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 72,
-                            "id": "extrinsic_sizing",
-                            "index": 0,
-                            "percentageQuestion": 11.39,
-                            "percentageSurvey": 1.47,
-                            "entity": {
-                              "name": "Extrinsic sizing",
-                              "nameHtml": "Extrinsic sizing",
-                              "nameClean": "Extrinsic sizing",
-                              "id": "extrinsic_sizing",
-                              "parentId": "sizing_issues",
-                              "entityType": "default"
-                            }
-                          },
-                          {
-                            "count": 72,
-                            "id": "automatic_min_size",
-                            "index": 1,
-                            "percentageQuestion": 11.39,
-                            "percentageSurvey": 1.47,
-                            "entity": {
-                              "name": "Automatic minimum size",
-                              "nameHtml": "Automatic minimum size",
-                              "nameClean": "Automatic minimum size",
-                              "id": "automatic_min_size",
-                              "parentId": "sizing_issues",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
-                      },
-                      {
-                        "count": 59,
-                        "id": "subgrid",
-                        "index": 3,
-                        "percentageQuestion": 9.34,
-                        "percentageSurvey": 1.2,
-                        "entity": {
-                          "name": "Subgrid",
-                          "nameHtml": "Subgrid",
-                          "nameClean": "Subgrid",
-                          "id": "subgrid",
-                          "parentId": "css_layout_issues",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".wrapper {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.item {\n  grid-row: 1 / 4;\n  display: grid;\n  grid-template-rows: subgrid;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.wrapper</span> {\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">1</span>fr <span class=\"hljs-number\">1</span>fr;\n}\n\n<span class=\"hljs-selector-class\">.item</span> {\n  <span class=\"hljs-attribute\">grid-row</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">4</span>;\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-rows</span>: subgrid;\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-subgrid"
-                          },
-                          "webFeature": {
-                            "id": "subgrid",
-                            "description_html": "The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.",
-                            "group": [
-                              "grid"
-                            ],
-                            "name": "Subgrid",
-                            "spec": [
-                              "https://drafts.csswg.org/css-grid-2/#subgrids"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/subgrid/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2023-09-15",
-                              "support": {
-                                "chrome": "117",
-                                "chrome_android": "117",
-                                "edge": "117",
-                                "firefox": "71",
-                                "firefox_android": "79",
-                                "safari": "16",
-                                "safari_ios": "16"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 52,
-                        "id": "responsive_design",
-                        "index": 4,
-                        "percentageQuestion": 8.23,
-                        "percentageSurvey": 1.06,
-                        "entity": {
-                          "name": "Responsive design",
-                          "nameHtml": "Responsive design",
-                          "nameClean": "Responsive design",
-                          "id": "responsive_design",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 51,
-                        "id": "flexbox",
-                        "index": 5,
-                        "percentageQuestion": 8.07,
-                        "percentageSurvey": 1.04,
-                        "entity": {
-                          "name": "Flexbox",
-                          "nameHtml": "Flexbox",
-                          "nameClean": "Flexbox",
-                          "id": "flexbox",
-                          "entityType": "feature",
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/flexbox - html_interoperability_features"
-                          },
-                          "webFeature": {
-                            "id": "flexbox",
-                            "description_html": "Flexbox is a one-dimensional layout system, which places content either horizontally or vertically, with optional wrapping.",
-                            "group": [
-                              "flexbox"
-                            ],
-                            "name": "Flexbox",
-                            "spec": [
-                              "https://drafts.csswg.org/css-flexbox-1/"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/flexbox/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2015-09-30",
-                              "support": {
-                                "chrome": "29",
-                                "chrome_android": "29",
-                                "edge": "12",
-                                "firefox": "20",
-                                "firefox_android": "20",
-                                "safari": "9",
-                                "safari_ios": "9"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 38,
-                        "id": "debugging_issues",
-                        "index": 6,
-                        "percentageQuestion": 6.01,
-                        "percentageSurvey": 0.78,
-                        "entity": {
-                          "name": "Debugging",
-                          "nameHtml": "Debugging",
-                          "nameClean": "Debugging",
-                          "description": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
-                          "descriptionHtml": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
-                          "descriptionClean": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
-                          "id": "debugging_issues",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 33,
+                        "count": 97,
                         "id": "interop_issues",
-                        "index": 7,
-                        "percentageQuestion": 5.22,
-                        "percentageSurvey": 0.67,
+                        "index": 1,
+                        "percentageQuestion": 15.35,
+                        "percentageSurvey": 1.98,
                         "entity": {
                           "name": "Browser issues",
                           "nameHtml": "Browser issues",
@@ -1363,39 +1278,139 @@
                         ]
                       },
                       {
-                        "count": 31,
-                        "id": "overflow_issues",
-                        "index": 8,
-                        "percentageQuestion": 4.91,
-                        "percentageSurvey": 0.63,
+                        "count": 78,
+                        "id": "cognitive_overload",
+                        "index": 2,
+                        "percentageQuestion": 12.34,
+                        "percentageSurvey": 1.59,
                         "entity": {
-                          "id": "overflow_issues",
+                          "name": "Cognitive overload",
+                          "nameHtml": "Cognitive overload",
+                          "nameClean": "Cognitive overload",
+                          "id": "cognitive_overload",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 16,
+                            "id": "hard_to_memorize",
+                            "index": 0,
+                            "percentageQuestion": 2.53,
+                            "percentageSurvey": 0.33,
+                            "entity": {
+                              "name": "Hard to memorize",
+                              "nameHtml": "Hard to memorize",
+                              "nameClean": "Hard to memorize",
+                              "id": "hard_to_memorize",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 16,
+                            "id": "too_many_choices",
+                            "index": 1,
+                            "percentageQuestion": 2.53,
+                            "percentageSurvey": 0.33,
+                            "entity": {
+                              "name": "Choice overload",
+                              "nameHtml": "Choice overload",
+                              "nameClean": "Choice overload",
+                              "description": "Overwhelming amount of options and choices",
+                              "descriptionHtml": "Overwhelming amount of options and choices",
+                              "descriptionClean": "Overwhelming amount of options and choices",
+                              "id": "too_many_choices",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 13,
+                            "id": "poor_learnability",
+                            "index": 2,
+                            "percentageQuestion": 2.06,
+                            "percentageSurvey": 0.27,
+                            "entity": {
+                              "name": "Poor learnability",
+                              "nameHtml": "Poor learnability",
+                              "nameClean": "Poor learnability",
+                              "description": "High learning curve, requires too much knowledge to get started, or too much information to memorize.",
+                              "descriptionHtml": "High learning curve, requires too much knowledge to get started, or too much information to memorize.",
+                              "descriptionClean": "High learning curve, requires too much knowledge to get started, or too much information to memorize.",
+                              "id": "poor_learnability",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 10,
+                            "id": "excessive_complexity",
+                            "index": 3,
+                            "percentageQuestion": 1.58,
+                            "percentageSurvey": 0.2,
+                            "entity": {
+                              "name": "Excessive complexity",
+                              "nameHtml": "Excessive complexity",
+                              "nameClean": "Excessive complexity",
+                              "id": "excessive_complexity",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
-                        "count": 30,
-                        "id": "developer_experience",
-                        "index": 9,
-                        "percentageQuestion": 4.75,
-                        "percentageSurvey": 0.61,
+                        "count": 72,
+                        "id": "sizing_issues",
+                        "index": 3,
+                        "percentageQuestion": 11.39,
+                        "percentageSurvey": 1.47,
                         "entity": {
-                          "name": "Developer Experience",
-                          "nameHtml": "Developer Experience",
-                          "nameClean": "Developer Experience",
-                          "description": "Issues related not to being unable to achieve something, but to *how* it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
-                          "descriptionHtml": "Issues related not to being unable to achieve something, but to <em>how</em> it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
-                          "descriptionClean": "Issues related not to being unable to achieve something, but to how it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
-                          "id": "developer_experience",
+                          "name": "Element sizing",
+                          "nameHtml": "Element sizing",
+                          "nameClean": "Element sizing",
+                          "id": "sizing_issues",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 72,
+                            "id": "extrinsic_sizing",
+                            "index": 0,
+                            "percentageQuestion": 11.39,
+                            "percentageSurvey": 1.47,
+                            "entity": {
+                              "name": "Extrinsic sizing",
+                              "nameHtml": "Extrinsic sizing",
+                              "nameClean": "Extrinsic sizing",
+                              "id": "extrinsic_sizing",
+                              "parentId": "sizing_issues",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 72,
+                            "id": "automatic_min_size",
+                            "index": 1,
+                            "percentageQuestion": 11.39,
+                            "percentageSurvey": 1.47,
+                            "entity": {
+                              "name": "Automatic minimum size",
+                              "nameHtml": "Automatic minimum size",
+                              "nameClean": "Automatic minimum size",
+                              "id": "automatic_min_size",
+                              "parentId": "sizing_issues",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
-                        "count": 26,
+                        "count": 64,
                         "id": "positioning_issues",
-                        "index": 10,
-                        "percentageQuestion": 4.11,
-                        "percentageSurvey": 0.53,
+                        "index": 4,
+                        "percentageQuestion": 10.13,
+                        "percentageSurvey": 1.31,
                         "entity": {
                           "name": "Positioning",
                           "nameHtml": "Positioning",
@@ -1463,9 +1478,130 @@
                         ]
                       },
                       {
+                        "count": 60,
+                        "id": "flexbox",
+                        "index": 5,
+                        "percentageQuestion": 9.49,
+                        "percentageSurvey": 1.22,
+                        "entity": {
+                          "name": "Flexbox",
+                          "nameHtml": "Flexbox",
+                          "nameClean": "Flexbox",
+                          "id": "flexbox",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/flexbox - html_interoperability_features"
+                          },
+                          "webFeature": {
+                            "id": "flexbox",
+                            "description_html": "Flexbox is a one-dimensional layout system, which places content either horizontally or vertically, with optional wrapping.",
+                            "group": [
+                              "flexbox"
+                            ],
+                            "name": "Flexbox",
+                            "spec": [
+                              "https://drafts.csswg.org/css-flexbox-1/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/flexbox/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2015-09-30",
+                              "support": {
+                                "chrome": "29",
+                                "chrome_android": "29",
+                                "edge": "12",
+                                "firefox": "20",
+                                "firefox_android": "20",
+                                "safari": "9",
+                                "safari_ios": "9"
+                              }
+                            }
+                          }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 11,
+                            "id": "flex_wrap_balance",
+                            "index": 0,
+                            "percentageQuestion": 1.74,
+                            "percentageSurvey": 0.22,
+                            "entity": {
+                              "name": "`flex-wrap: balance;`",
+                              "nameHtml": "<code>flex-wrap: balance;</code>",
+                              "nameClean": "flex-wrap: balance;",
+                              "id": "flex_wrap_balance",
+                              "parentId": "flexbox",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 52,
+                        "id": "responsive_design",
+                        "index": 6,
+                        "percentageQuestion": 8.23,
+                        "percentageSurvey": 1.06,
+                        "entity": {
+                          "name": "Responsive design",
+                          "nameHtml": "Responsive design",
+                          "nameClean": "Responsive design",
+                          "id": "responsive_design",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 38,
+                        "id": "debugging_issues",
+                        "index": 7,
+                        "percentageQuestion": 6.01,
+                        "percentageSurvey": 0.78,
+                        "entity": {
+                          "name": "Debugging",
+                          "nameHtml": "Debugging",
+                          "nameClean": "Debugging",
+                          "description": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
+                          "descriptionHtml": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
+                          "descriptionClean": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
+                          "id": "debugging_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 31,
+                        "id": "developer_experience",
+                        "index": 8,
+                        "percentageQuestion": 4.91,
+                        "percentageSurvey": 0.63,
+                        "entity": {
+                          "name": "Developer Experience",
+                          "nameHtml": "Developer Experience",
+                          "nameClean": "Developer Experience",
+                          "description": "Issues related not to being unable to achieve something, but to *how* it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
+                          "descriptionHtml": "Issues related not to being unable to achieve something, but to <em>how</em> it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
+                          "descriptionClean": "Issues related not to being unable to achieve something, but to how it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
+                          "id": "developer_experience",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 31,
+                        "id": "overflow_issues",
+                        "index": 9,
+                        "percentageQuestion": 4.91,
+                        "percentageSurvey": 0.63,
+                        "entity": {
+                          "id": "overflow_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
                         "count": 24,
                         "id": "at_container",
-                        "index": 11,
+                        "index": 10,
                         "percentageQuestion": 3.8,
                         "percentageSurvey": 0.49,
                         "entity": {
@@ -1514,31 +1650,45 @@
                       },
                       {
                         "count": 21,
-                        "id": "box_alignment",
-                        "index": 12,
+                        "id": "alignment_issues",
+                        "index": 11,
                         "percentageQuestion": 3.32,
                         "percentageSurvey": 0.43,
                         "entity": {
-                          "name": "Alignment properties",
-                          "nameHtml": "Alignment properties",
-                          "nameClean": "Alignment properties",
-                          "id": "box_alignment",
+                          "id": "alignment_issues",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 21,
+                            "id": "box_alignment",
+                            "index": 0,
+                            "percentageQuestion": 3.32,
+                            "percentageSurvey": 0.43,
+                            "entity": {
+                              "name": "Alignment properties",
+                              "nameHtml": "Alignment properties",
+                              "nameClean": "Alignment properties",
+                              "id": "box_alignment",
+                              "parentId": "alignment_issues",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 21,
+                        "id": "choosing_layout_method",
+                        "index": 12,
+                        "percentageQuestion": 3.32,
+                        "percentageSurvey": 0.43
                       },
                       {
                         "count": 17,
                         "id": "center",
                         "index": 13,
                         "percentageQuestion": 2.69,
-                        "percentageSurvey": 0.35,
-                        "entity": {
-                          "name": "Centering",
-                          "nameHtml": "Centering",
-                          "nameClean": "Centering",
-                          "id": "center",
-                          "entityType": "default"
-                        }
+                        "percentageSurvey": 0.35
                       },
                       {
                         "count": 17,
@@ -1547,9 +1697,9 @@
                         "percentageQuestion": 2.69,
                         "percentageSurvey": 0.35,
                         "entity": {
-                          "name": "z-index & stacking contexts",
-                          "nameHtml": "z-index &amp; stacking contexts",
-                          "nameClean": "z-index & stacking contexts",
+                          "name": "Stacking contexts & `z-index`",
+                          "nameHtml": "Stacking contexts &amp; <code>z-index</code>",
+                          "nameClean": "Stacking contexts & z-index",
                           "id": "stacking_context",
                           "entityType": "default"
                         }
@@ -1635,58 +1785,8 @@
                       },
                       {
                         "count": 14,
-                        "id": "css_grid_lanes",
-                        "index": 17,
-                        "percentageQuestion": 2.22,
-                        "percentageSurvey": 0.29,
-                        "entity": {
-                          "name": "Grid Lanes",
-                          "nameHtml": "Grid Lanes",
-                          "nameClean": "Grid Lanes",
-                          "id": "css_grid_lanes",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".container {\n  display: grid-lanes;\n  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));\n  gap: 16px;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.container</span> {\n  <span class=\"hljs-attribute\">display</span>: grid-lanes;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-built_in\">repeat</span>(auto-fill, <span class=\"hljs-built_in\">minmax</span>(<span class=\"hljs-number\">250px</span>, <span class=\"hljs-number\">1</span>fr));\n  <span class=\"hljs-attribute\">gap</span>: <span class=\"hljs-number\">16px</span>;\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-grid-lanes"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://webkit.org/blog/17660/introducing-css-grid-lanes/",
-                              "title": "Introducing CSS Grid Lanes"
-                            },
-                            {
-                              "url": "https://css-tricks.com/masonry-layout-is-now-grid-lanes/",
-                              "title": "Masonry Layout is Now grid-lanes"
-                            }
-                          ],
-                          "webFeature": {
-                            "id": "masonry",
-                            "description_html": "The <code>display: grid-lanes</code> or <code>display: inline-grid-lanes</code> CSS declaration creates a layout where items are tightly packed, like brickwork, in parallel lanes. Items are placed one by one in the lane that has the most available space.",
-                            "group": [
-                              "layout"
-                            ],
-                            "name": "Masonry",
-                            "spec": [
-                              "https://drafts.csswg.org/css-grid-3/"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/masonry/",
-                            "status": {
-                              "baseline": "false"
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 14,
                         "id": "typography_issues",
-                        "index": 18,
+                        "index": 17,
                         "percentageQuestion": 2.22,
                         "percentageSurvey": 0.29,
                         "entity": {
@@ -1720,7 +1820,7 @@
                       {
                         "count": 13,
                         "id": "animations_issues",
-                        "index": 19,
+                        "index": 18,
                         "percentageQuestion": 2.06,
                         "percentageSurvey": 0.27,
                         "entity": {
@@ -1737,7 +1837,7 @@
                       {
                         "count": 13,
                         "id": "syntax_issues",
-                        "index": 20,
+                        "index": 19,
                         "percentageQuestion": 2.06,
                         "percentageSurvey": 0.27,
                         "entity": {
@@ -1751,7 +1851,7 @@
                       {
                         "count": 12,
                         "id": "environments_consumers",
-                        "index": 21,
+                        "index": 20,
                         "percentageQuestion": 1.9,
                         "percentageSurvey": 0.24,
                         "entity": {
@@ -1788,7 +1888,7 @@
                       {
                         "count": 12,
                         "id": "position_sticky",
-                        "index": 22,
+                        "index": 21,
                         "percentageQuestion": 1.9,
                         "percentageSurvey": 0.24,
                         "entity": {
@@ -1832,22 +1932,8 @@
                       },
                       {
                         "count": 11,
-                        "id": "flex_wrap_balance",
-                        "index": 23,
-                        "percentageQuestion": 1.74,
-                        "percentageSurvey": 0.22,
-                        "entity": {
-                          "name": "`flex-wrap: balance;`",
-                          "nameHtml": "<code>flex-wrap: balance;</code>",
-                          "nameClean": "flex-wrap: balance;",
-                          "id": "flex_wrap_balance",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 11,
                         "id": "flex_wrapping_detection",
-                        "index": 24,
+                        "index": 22,
                         "percentageQuestion": 1.74,
                         "percentageSurvey": 0.22,
                         "entity": {
@@ -1862,6 +1948,77 @@
                         }
                       },
                       {
+                        "count": 11,
+                        "id": "table_styling",
+                        "index": 23,
+                        "percentageQuestion": 1.74,
+                        "percentageSurvey": 0.22,
+                        "entity": {
+                          "name": "Table Styling",
+                          "nameHtml": "Table Styling",
+                          "nameClean": "Table Styling",
+                          "id": "table_styling",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 11,
+                        "id": "viewport_percentage_length_units",
+                        "index": 24,
+                        "percentageQuestion": 1.74,
+                        "percentageSurvey": 0.22,
+                        "entity": {
+                          "name": "Viewport-Relative Units",
+                          "nameHtml": "Viewport-Relative Units",
+                          "nameClean": "Viewport-Relative Units",
+                          "description": "`lvh` / `lvw` / `lvmin` / `lvmax`, `sv*`, `dv*`, etc.",
+                          "descriptionHtml": "<code>lvh</code> / <code>lvw</code> / <code>lvmin</code> / <code>lvmax</code>, <code>sv*</code>, <code>dv*</code>, etc.",
+                          "descriptionClean": "lvh / lvw / lvmin / lvmax, sv*, dv*, etc.",
+                          "id": "viewport_percentage_length_units",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "body {\n  height: 100dvh;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-tag\">body</span> {\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-number\">100</span>dvh;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/length"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_types_length_viewport_percentage_units_small"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://web.dev/viewport-units/",
+                              "title": "The large, small, and dynamic viewport units"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "viewport-unit-variants",
+                            "description_html": "The <code>sv*</code>, <code>lv*</code>, and <code>dv*</code> CSS viewport units are relative to the smallest, largest, and current (dynamic) viewport size. They are used to size elements in relation to the viewport's dimensions.",
+                            "name": "Small, large, and dynamic viewport units",
+                            "spec": [
+                              "https://drafts.csswg.org/css-values-4/#viewport-variants",
+                              "https://drafts.csswg.org/css-values-4/#viewport-relative-lengths"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/viewport-unit-variants/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2022-12-05",
+                              "support": {
+                                "chrome": "108",
+                                "chrome_android": "108",
+                                "edge": "108",
+                                "firefox": "101",
+                                "firefox_android": "101",
+                                "safari": "15.4",
+                                "safari_ios": "15.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
                         "count": 4268,
                         "id": "no_answer",
                         "index": 25,
@@ -1869,11 +2026,11 @@
                         "percentageSurvey": 87.07
                       },
                       {
-                        "count": 426,
+                        "count": 396,
                         "id": "other_answers",
                         "index": 26,
-                        "percentageQuestion": 67.57,
-                        "percentageSurvey": 8.53
+                        "percentageQuestion": 62.82,
+                        "percentageSurvey": 7.93
                       }
                     ]
                   }

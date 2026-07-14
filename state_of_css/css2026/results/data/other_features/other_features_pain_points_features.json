@@ -331,10 +331,60 @@
                     "buckets": [
                       {
                         "count": 21,
-                        "id": "css_nesting",
+                        "id": "cascade_layers",
                         "index": 0,
                         "percentageQuestion": 9.09,
                         "percentageSurvey": 0.43,
+                        "entity": {
+                          "name": "Cascade Layers",
+                          "nameHtml": "Cascade Layers",
+                          "nameClean": "Cascade Layers",
+                          "id": "cascade_layers",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "@layer layer-name {rules}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">@layer</span> layer-name {rules}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@layer"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-cascade-layers"
+                          },
+                          "webFeature": {
+                            "id": "cascade-layers",
+                            "description_html": "The <code>@layer</code> CSS at-rule avoids specificity conflicts by providing priority levels for different groups of CSS rules, such as low-priority styles like resets, and high-priority styles like UI components.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "Cascade layers",
+                            "spec": [
+                              "https://drafts.csswg.org/css-cascade-5/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/cascade-layers/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2022-03-14",
+                              "support": {
+                                "chrome": "99",
+                                "chrome_android": "99",
+                                "edge": "99",
+                                "firefox": "97",
+                                "firefox_android": "97",
+                                "safari": "15.4",
+                                "safari_ios": "15.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 19,
+                        "id": "css_nesting",
+                        "index": 1,
+                        "percentageQuestion": 8.23,
+                        "percentageSurvey": 0.39,
                         "entity": {
                           "name": "CSS Nesting",
                           "nameHtml": "CSS Nesting",
@@ -383,61 +433,167 @@
                         }
                       },
                       {
-                        "count": 10,
-                        "id": "cascade_layers",
-                        "index": 1,
-                        "percentageQuestion": 4.33,
-                        "percentageSurvey": 0.2,
+                        "count": 16,
+                        "id": "at_scope",
+                        "index": 2,
+                        "percentageQuestion": 6.93,
+                        "percentageSurvey": 0.33,
                         "entity": {
-                          "name": "Cascade Layers",
-                          "nameHtml": "Cascade Layers",
-                          "nameClean": "Cascade Layers",
-                          "id": "cascade_layers",
+                          "name": "`@scope`",
+                          "nameHtml": "<code>@scope</code>",
+                          "nameClean": "@scope",
+                          "description": "Scope styles to a specific part of the DOM tree.",
+                          "descriptionHtml": "Scope styles to a specific part of the DOM tree.",
+                          "descriptionClean": "Scope styles to a specific part of the DOM tree.",
+                          "id": "at_scope",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
-                            "code": "@layer layer-name {rules}\n",
-                            "codeHighlighted": "<span class=\"hljs-keyword\">@layer</span> layer-name {rules}"
+                            "code": "@scope (.card) {\n  :scope {\n    padding: 1rem;\n  }\n\n  .title {\n    font-size: 1.2rem;\n  }\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">@scope</span> (.card) {\n  <span class=\"hljs-selector-pseudo\">:scope</span> {\n    <span class=\"hljs-attribute\">padding</span>: <span class=\"hljs-number\">1rem</span>;\n  }\n\n  <span class=\"hljs-selector-class\">.title</span> {\n    <span class=\"hljs-attribute\">font-size</span>: <span class=\"hljs-number\">1.2rem</span>;\n  }\n}"
                           },
                           "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@layer"
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@scope"
                           },
                           "caniuse": {
-                            "url": "https://caniuse.com/css-cascade-layers"
+                            "url": "https://caniuse.com/css-cascade-scope"
                           },
                           "webFeature": {
-                            "id": "cascade-layers",
-                            "description_html": "The <code>@layer</code> CSS at-rule avoids specificity conflicts by providing priority levels for different groups of CSS rules, such as low-priority styles like resets, and high-priority styles like UI components.",
+                            "id": "scope",
+                            "description_html": "The <code>@scope</code> CSS at-rule sets the scope for a group of rules.",
                             "group": [
                               "css"
                             ],
-                            "name": "Cascade layers",
+                            "name": "@scope",
                             "spec": [
-                              "https://drafts.csswg.org/css-cascade-5/"
+                              "https://drafts.csswg.org/css-cascade-6/#scope-atrule"
                             ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/cascade-layers/",
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/scope/",
                             "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2022-03-14",
+                              "baseline": "low",
+                              "baseline_low_date": "2025-12-12",
                               "support": {
-                                "chrome": "99",
-                                "chrome_android": "99",
-                                "edge": "99",
-                                "firefox": "97",
-                                "firefox_android": "97",
-                                "safari": "15.4",
-                                "safari_ios": "15.4"
+                                "chrome": "143",
+                                "chrome_android": "143",
+                                "edge": "143",
+                                "firefox": "146",
+                                "firefox_android": "146",
+                                "safari": "26.2",
+                                "safari_ios": "26.2"
                               }
                             }
                           }
                         }
                       },
                       {
-                        "count": 10,
+                        "count": 15,
+                        "id": "if_function",
+                        "index": 3,
+                        "percentageQuestion": 6.49,
+                        "percentageSurvey": 0.31,
+                        "entity": {
+                          "name": "`if()`",
+                          "nameHtml": "<code>if()</code>",
+                          "nameClean": "if()",
+                          "description": "The `if()` CSS function is an inline conditional value that returns a value based on a set of conditions.",
+                          "descriptionHtml": "The <code>if()</code> CSS function is an inline conditional value that returns a value based on a set of conditions.",
+                          "descriptionClean": "The if() CSS function is an inline conditional value that returns a value based on a set of conditions.",
+                          "id": "if_function",
+                          "parentId": "css_conditional_logic",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "div {\n  color: var(--color);\n  background-color: if(style(--color: white): black; else: white);\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-tag\">div</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">var</span>(--color);\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">if</span>(<span class=\"hljs-built_in\">style</span>(--color: white): black; else: white);\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/if"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://chromestatus.com/feature/6313805904347136",
+                              "title": "Feature: CSS if() function"
+                            },
+                            {
+                              "url": "https://css-tricks.com/if-css-gets-inline-conditionals/",
+                              "title": "“If” CSS Gets Inline Conditionals"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "if",
+                            "description_html": "The <code>if()</code> CSS function is an inline conditional value that returns a value based on a set of conditions.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "if()",
+                            "spec": [
+                              "https://drafts.csswg.org/css-values-5/#if-notation"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/if/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "137",
+                                "chrome_android": "137",
+                                "edge": "137"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 11,
+                        "id": "at_property",
+                        "index": 4,
+                        "percentageQuestion": 4.76,
+                        "percentageSurvey": 0.22,
+                        "entity": {
+                          "name": "`@property`",
+                          "nameHtml": "<code>@property</code>",
+                          "nameClean": "@property",
+                          "id": "at_property",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "@property --property-name {\n  syntax: \"<color>\";\n  inherits: false;\n  initial-value: #c0ffee;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">@property</span> --property-name {\n  syntax: <span class=\"hljs-string\">&quot;&lt;color&gt;&quot;</span>;\n  inherits: false;\n  initial-value: <span class=\"hljs-number\">#c0ffee</span>;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@property"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_at-rules_property"
+                          },
+                          "webFeature": {
+                            "id": "registered-custom-properties",
+                            "description_html": "The <code>CSS.registerProperty()</code> static method and the <code>@property</code> CSS at-rule register custom properties for which types and behaviors can be defined.",
+                            "name": "Registered custom properties",
+                            "spec": [
+                              "https://drafts.css-houdini.org/css-properties-values-api-1/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/registered-custom-properties/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-07-09",
+                              "support": {
+                                "chrome": "85",
+                                "chrome_android": "85",
+                                "edge": "85",
+                                "firefox": "128",
+                                "firefox_android": "128",
+                                "safari": "16.4",
+                                "safari_ios": "16.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 11,
                         "id": "sibling_count",
-                        "index": 2,
-                        "percentageQuestion": 4.33,
-                        "percentageSurvey": 0.2,
+                        "index": 5,
+                        "percentageQuestion": 4.76,
+                        "percentageSurvey": 0.22,
                         "entity": {
                           "name": "`sibling-count()`",
                           "nameHtml": "<code>sibling-count()</code>",
@@ -481,11 +637,144 @@
                         }
                       },
                       {
+                        "count": 10,
+                        "id": "attr_function",
+                        "index": 6,
+                        "percentageQuestion": 4.33,
+                        "percentageSurvey": 0.2,
+                        "entity": {
+                          "name": "`attr()`",
+                          "nameHtml": "<code>attr()</code>",
+                          "nameClean": "attr()",
+                          "id": "attr_function",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/attr"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css3-attr"
+                          }
+                        }
+                      },
+                      {
                         "count": 8,
-                        "id": "has_selector",
-                        "index": 3,
+                        "id": "at_function",
+                        "index": 7,
                         "percentageQuestion": 3.46,
                         "percentageSurvey": 0.16,
+                        "entity": {
+                          "name": "`@function`",
+                          "nameHtml": "<code>@function</code>",
+                          "nameClean": "@function",
+                          "description": "The `@function` CSS at-rule defines a custom function that takes CSS values or custom properties as arguments, and returns a CSS value.",
+                          "descriptionHtml": "The <code>@function</code> CSS at-rule defines a custom function that takes CSS values or custom properties as arguments, and returns a CSS value.",
+                          "descriptionClean": "The @function CSS at-rule defines a custom function that takes CSS values or custom properties as arguments, and returns a CSS value.",
+                          "id": "at_function",
+                          "parentId": "custom_functions",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "@function --negate(--value) {\n  result: calc(-1 * var(--value));\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">@function</span> --negate(--value) {\n  result: <span class=\"hljs-built_in\">calc</span>(-<span class=\"hljs-number\">1</span> * <span class=\"hljs-built_in\">var</span>(--value));\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@function"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://css-tricks.com/functions-in-css/",
+                              "title": "Functions in CSS?!"
+                            },
+                            {
+                              "url": "https://www.bram.us/2025/02/09/css-custom-functions-teaser/",
+                              "title": "CSS Custom Functions are coming … and they are going to be a game changer!"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "function",
+                            "description_html": "The <code>@function</code> CSS at-rule defines a custom function that takes CSS values or custom properties as arguments, and returns a CSS value. It can be based on conditional logic such as by using the <code>@media</code> at-rule.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "@function",
+                            "spec": [
+                              "https://drafts.csswg.org/css-mixins-1/#function-rule"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/function/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "139",
+                                "chrome_android": "139",
+                                "edge": "139"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 7,
+                        "id": "css_custom_properties",
+                        "index": 8,
+                        "percentageQuestion": 3.03,
+                        "percentageSurvey": 0.14,
+                        "entity": {
+                          "name": "Custom Properties (Variables)",
+                          "nameHtml": "Custom Properties (Variables)",
+                          "nameClean": "Custom Properties (Variables)",
+                          "id": "css_custom_properties",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ":root {\n  --main-bg-color: brown;\n}\n.foo {\n  background-color: var(--main-bg-color);\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-pseudo\">:root</span> {\n  <span class=\"hljs-attr\">--main-bg-color</span>: brown;\n}\n<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--main-bg-color);\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-variables"
+                          }
+                        }
+                      },
+                      {
+                        "count": 7,
+                        "id": "display_contents",
+                        "index": 9,
+                        "percentageQuestion": 3.03,
+                        "percentageSurvey": 0.14,
+                        "entity": {
+                          "name": "`display: contents`",
+                          "nameHtml": "<code>display: contents</code>",
+                          "nameClean": "display: contents",
+                          "description": "Sets an element to display only its contents, not itself.",
+                          "descriptionHtml": "Sets an element to display only its contents, not itself.",
+                          "descriptionClean": "Sets an element to display only its contents, not itself.",
+                          "id": "display_contents",
+                          "entityType": "feature",
+                          "webFeature": {
+                            "id": "display-contents",
+                            "description_html": "The <code>display: contents</code> CSS declaration sets an element to display only its contents, not itself.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "display: contents",
+                            "spec": [
+                              "https://drafts.csswg.org/css-display-3/#box-generation"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/display-contents/",
+                            "status": {
+                              "baseline": "false"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 7,
+                        "id": "has_selector",
+                        "index": 10,
+                        "percentageQuestion": 3.03,
+                        "percentageSurvey": 0.14,
                         "entity": {
                           "name": "`:has()`",
                           "nameHtml": "<code>:has()</code>",
@@ -531,109 +820,54 @@
                         }
                       },
                       {
-                        "count": 7,
-                        "id": "display_contents",
-                        "index": 4,
-                        "percentageQuestion": 3.03,
-                        "percentageSurvey": 0.14,
+                        "count": 5,
+                        "id": "sibling_index",
+                        "index": 11,
+                        "percentageQuestion": 2.16,
+                        "percentageSurvey": 0.1,
                         "entity": {
-                          "name": "`display: contents`",
-                          "nameHtml": "<code>display: contents</code>",
-                          "nameClean": "display: contents",
-                          "description": "Sets an element to display only its contents, not itself.",
-                          "descriptionHtml": "Sets an element to display only its contents, not itself.",
-                          "descriptionClean": "Sets an element to display only its contents, not itself.",
-                          "id": "display_contents",
+                          "name": "`sibling-index()`",
+                          "nameHtml": "<code>sibling-index()</code>",
+                          "nameClean": "sibling-index()",
+                          "id": "sibling_index",
                           "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/sibling-index"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_types_sibling-index"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://www.w3.org/TR/css-values-5/#tree-counting",
+                              "title": "Tree Counting Functions: the sibling-count() and sibling-index() notations"
+                            },
+                            {
+                              "url": "https://nerdy.dev/sibling-index",
+                              "title": "Let the stagger experiments begin"
+                            }
+                          ],
                           "webFeature": {
-                            "id": "display-contents",
-                            "description_html": "The <code>display: contents</code> CSS declaration sets an element to display only its contents, not itself.",
+                            "id": "sibling-count",
+                            "description_html": "The <code>sibling-count()</code> and <code>sibling-index()</code> CSS functions return integers that are useful to style elements based on their positions among siblings or on the number of siblings, for example as part of a <code>calc()</code> expression.",
                             "group": [
                               "css"
                             ],
-                            "name": "display: contents",
+                            "name": "sibling-count() and sibling-index()",
                             "spec": [
-                              "https://drafts.csswg.org/css-display-3/#box-generation"
+                              "https://drafts.csswg.org/css-values-5/#tree-counting"
                             ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/display-contents/",
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/sibling-count/",
                             "status": {
-                              "baseline": "false"
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 7,
-                        "id": "where_selector",
-                        "index": 5,
-                        "percentageQuestion": 3.03,
-                        "percentageSurvey": 0.14,
-                        "entity": {
-                          "name": "`:where()`",
-                          "nameHtml": "<code>:where()</code>",
-                          "nameClean": ":where()",
-                          "id": "where_selector",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ":where(header, main, footer) p:hover {\n  color: red;\n  cursor: pointer;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-pseudo\">:where</span>(<span class=\"hljs-selector-tag\">header</span>, <span class=\"hljs-selector-tag\">main</span>, <span class=\"hljs-selector-tag\">footer</span>) <span class=\"hljs-selector-tag\">p</span><span class=\"hljs-selector-pseudo\">:hover</span> {\n  <span class=\"hljs-attribute\">color</span>: red;\n  <span class=\"hljs-attribute\">cursor</span>: pointer;\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:where"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-where"
-                          },
-                          "webFeature": {
-                            "id": "where",
-                            "description_html": "The <code>:where()</code> CSS functional pseudo-class takes a selector list as its argument, and matches any element that can be selected by one of the selectors in that list. It is functionally equivalent to the selectors in the list, but doesn't affect the CSS rule specificity.",
-                            "group": [
-                              "selectors"
-                            ],
-                            "name": ":where()",
-                            "spec": [
-                              "https://drafts.csswg.org/selectors-4/#zero-matches"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/where/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2021-01-21",
+                              "baseline": "false",
                               "support": {
-                                "chrome": "88",
-                                "chrome_android": "88",
-                                "edge": "88",
-                                "firefox": "82",
-                                "firefox_android": "82",
-                                "safari": "14",
-                                "safari_ios": "14"
+                                "chrome": "138",
+                                "chrome_android": "138",
+                                "edge": "138",
+                                "safari": "26.2",
+                                "safari_ios": "26.2"
                               }
                             }
-                          }
-                        }
-                      },
-                      {
-                        "count": 6,
-                        "id": "css_custom_properties",
-                        "index": 6,
-                        "percentageQuestion": 2.6,
-                        "percentageSurvey": 0.12,
-                        "entity": {
-                          "name": "Custom Properties (Variables)",
-                          "nameHtml": "Custom Properties (Variables)",
-                          "nameClean": "Custom Properties (Variables)",
-                          "id": "css_custom_properties",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ":root {\n  --main-bg-color: brown;\n}\n.foo {\n  background-color: var(--main-bg-color);\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-pseudo\">:root</span> {\n  <span class=\"hljs-attr\">--main-bg-color</span>: brown;\n}\n<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--main-bg-color);\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-variables"
                           }
                         }
                       }

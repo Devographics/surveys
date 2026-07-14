@@ -763,11 +763,214 @@
                         ]
                       },
                       {
-                        "count": 86,
-                        "id": "cognitive_overload",
+                        "count": 110,
+                        "id": "color_management",
                         "index": 1,
-                        "percentageQuestion": 15.01,
-                        "percentageSurvey": 1.75,
+                        "percentageQuestion": 19.2,
+                        "percentageSurvey": 2.24,
+                        "entity": {
+                          "name": "Color management",
+                          "nameHtml": "Color management",
+                          "nameClean": "Color management",
+                          "description": "Color‑management and color‑space handling across web platform features",
+                          "descriptionHtml": "Color‑management and color‑space handling across web platform features",
+                          "descriptionClean": "Color‑management and color‑space handling across web platform features",
+                          "id": "color_management",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 50,
+                            "id": "wide_gamut_colors",
+                            "index": 0,
+                            "percentageQuestion": 8.73,
+                            "percentageSurvey": 1.02,
+                            "entity": {
+                              "name": "Wide Gamut Colors",
+                              "nameHtml": "Wide Gamut Colors",
+                              "nameClean": "Wide Gamut Colors",
+                              "description": "`lch()`, `lab()`, `oklch()`, `oklab()`",
+                              "descriptionHtml": "<code>lch()</code>, <code>lab()</code>, <code>oklch()</code>, <code>oklab()</code>",
+                              "descriptionClean": "lch(), lab(), oklch(), oklab()",
+                              "id": "wide_gamut_colors",
+                              "parentId": "color_management",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": ".foo {\n  background-color: lab(29.2345% 39.3825 20.0664);\n  background-color: lch(29.2345% 44.2 27);\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">lab</span>(<span class=\"hljs-number\">29.2345%</span> <span class=\"hljs-number\">39.3825</span> <span class=\"hljs-number\">20.0664</span>);\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">lch</span>(<span class=\"hljs-number\">29.2345%</span> <span class=\"hljs-number\">44.2</span> <span class=\"hljs-number\">27</span>);\n}"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/lch"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/css-lch-lab"
+                              },
+                              "webFeature": {
+                                "id": "oklab",
+                                "description_html": "The Oklab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is, aiming to match how humans perceive colors. OkLCh is a variant of Oklab with polar coordinates. These color spaces can be used with the CSS <code>oklab()</code> and <code>oklch()</code> functions.",
+                                "group": [
+                                  "color-types"
+                                ],
+                                "name": "Oklab and OkLCh",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-color-4/#ok-lab"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/oklab/",
+                                "status": {
+                                  "baseline": "high",
+                                  "baseline_low_date": "2023-05-09",
+                                  "support": {
+                                    "chrome": "111",
+                                    "chrome_android": "111",
+                                    "edge": "111",
+                                    "firefox": "113",
+                                    "firefox_android": "113",
+                                    "safari": "15.4",
+                                    "safari_ios": "15.4"
+                                  }
+                                }
+                              }
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 28,
+                                "id": "oklch_colors",
+                                "index": 0,
+                                "percentageQuestion": 4.89,
+                                "percentageSurvey": 0.57,
+                                "entity": {
+                                  "name": "OKLCH Colors",
+                                  "nameHtml": "OKLCH Colors",
+                                  "nameClean": "OKLCH Colors",
+                                  "id": "oklch_colors",
+                                  "parentId": "wide_gamut_colors",
+                                  "entityType": "feature",
+                                  "example": {
+                                    "language": "css",
+                                    "code": ".foo {\n  background-color: oklch(40.1% 0.123 21.57)\n}\n",
+                                    "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">oklch</span>(<span class=\"hljs-number\">40.1%</span> <span class=\"hljs-number\">0.123</span> <span class=\"hljs-number\">21.57</span>)\n}"
+                                  },
+                                  "mdn": {
+                                    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch"
+                                  },
+                                  "caniuse": {
+                                    "url": "https://caniuse.com/wf-oklab"
+                                  },
+                                  "webFeature": {
+                                    "id": "oklab",
+                                    "description_html": "The Oklab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is, aiming to match how humans perceive colors. OkLCh is a variant of Oklab with polar coordinates. These color spaces can be used with the CSS <code>oklab()</code> and <code>oklch()</code> functions.",
+                                    "group": [
+                                      "color-types"
+                                    ],
+                                    "name": "Oklab and OkLCh",
+                                    "spec": [
+                                      "https://drafts.csswg.org/css-color-4/#ok-lab"
+                                    ],
+                                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/oklab/",
+                                    "status": {
+                                      "baseline": "high",
+                                      "baseline_low_date": "2023-05-09",
+                                      "support": {
+                                        "chrome": "111",
+                                        "chrome_android": "111",
+                                        "edge": "111",
+                                        "firefox": "113",
+                                        "firefox_android": "113",
+                                        "safari": "15.4",
+                                        "safari_ios": "15.4"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "count": 34,
+                            "id": "gamut_mapping",
+                            "index": 1,
+                            "percentageQuestion": 5.93,
+                            "percentageSurvey": 0.69,
+                            "entity": {
+                              "name": "Gamut mapping and display variability",
+                              "nameHtml": "Gamut mapping and display variability",
+                              "nameClean": "Gamut mapping and display variability",
+                              "id": "gamut_mapping",
+                              "parentId": "color_management",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 20,
+                            "id": "color_manipulation_issues",
+                            "index": 2,
+                            "percentageQuestion": 3.49,
+                            "percentageSurvey": 0.41,
+                            "entity": {
+                              "name": "Color manipulation",
+                              "nameHtml": "Color manipulation",
+                              "nameClean": "Color manipulation",
+                              "id": "color_manipulation_issues",
+                              "parentId": "color_management",
+                              "entityType": "default"
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 20,
+                                "id": "color_alpha",
+                                "index": 0,
+                                "percentageQuestion": 3.49,
+                                "percentageSurvey": 0.41,
+                                "entity": {
+                                  "name": "Adjusting alpha/opacity",
+                                  "nameHtml": "Adjusting alpha/opacity",
+                                  "nameClean": "Adjusting alpha/opacity",
+                                  "id": "color_alpha",
+                                  "parentId": "color_manipulation_issues",
+                                  "entityType": "default"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "count": 17,
+                            "id": "color_conversion",
+                            "index": 3,
+                            "percentageQuestion": 2.97,
+                            "percentageSurvey": 0.35,
+                            "entity": {
+                              "name": "Color conversion",
+                              "nameHtml": "Color conversion",
+                              "nameClean": "Color conversion",
+                              "id": "color_conversion",
+                              "parentId": "color_management",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 6,
+                            "id": "system_colors",
+                            "index": 4,
+                            "percentageQuestion": 1.05,
+                            "percentageSurvey": 0.12,
+                            "entity": {
+                              "name": "System colors",
+                              "nameHtml": "System colors",
+                              "nameClean": "System colors",
+                              "id": "system_colors",
+                              "parentId": "color_management",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 97,
+                        "id": "cognitive_overload",
+                        "index": 2,
+                        "percentageQuestion": 16.93,
+                        "percentageSurvey": 1.98,
                         "entity": {
                           "name": "Cognitive overload",
                           "nameHtml": "Cognitive overload",
@@ -828,9 +1031,27 @@
                             }
                           },
                           {
+                            "count": 13,
+                            "id": "too_much_boilerplate",
+                            "index": 3,
+                            "percentageQuestion": 2.27,
+                            "percentageSurvey": 0.27,
+                            "entity": {
+                              "name": "Excessive boilerplate",
+                              "nameHtml": "Excessive boilerplate",
+                              "nameClean": "Excessive boilerplate",
+                              "description": "Too much boilerplate required",
+                              "descriptionHtml": "Too much boilerplate required",
+                              "descriptionClean": "Too much boilerplate required",
+                              "id": "too_much_boilerplate",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
+                          },
+                          {
                             "count": 5,
                             "id": "speed_of_change",
-                            "index": 3,
+                            "index": 4,
                             "percentageQuestion": 0.87,
                             "percentageSurvey": 0.1,
                             "entity": {
@@ -848,421 +1069,11 @@
                         ]
                       },
                       {
-                        "count": 80,
-                        "id": "color_contrast",
-                        "index": 2,
-                        "percentageQuestion": 13.96,
-                        "percentageSurvey": 1.63,
-                        "entity": {
-                          "name": "`color-contrast()`",
-                          "nameHtml": "<code>color-contrast()</code>",
-                          "nameClean": "color-contrast()",
-                          "id": "color_contrast",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".high-contrast {\n  color: color-contrast(#008080 vs olive, var(--myColor), #d2691e);\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.high-contrast</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">color-contrast</span>(<span class=\"hljs-number\">#008080</span> vs olive, <span class=\"hljs-built_in\">var</span>(--myColor), <span class=\"hljs-number\">#d2691e</span>);\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/contrast-color"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/mdn-css_types_color_color-contrast"
-                          },
-                          "webFeature": {
-                            "id": "color-contrast",
-                            "description_html": "The <code>color-contrast()</code> CSS function picks a color from a list that has the most contrast with another color.",
-                            "group": [
-                              "color-types"
-                            ],
-                            "name": "color-contrast()",
-                            "spec": [
-                              "https://drafts.csswg.org/css-color-5/#contrast-color"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/color-contrast/",
-                            "status": {
-                              "baseline": "false"
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 65,
-                        "id": "contrast_color",
-                        "index": 3,
-                        "percentageQuestion": 11.34,
-                        "percentageSurvey": 1.33,
-                        "entity": {
-                          "name": "`contrast-color()`",
-                          "nameHtml": "<code>contrast-color()</code>",
-                          "nameClean": "contrast-color()",
-                          "id": "contrast_color",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": "button {\n  --background-color: darkblue;\n  background-color: var(--background-color);\n  color: contrast-color(var(--background-color));\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-tag\">button</span> {\n  <span class=\"hljs-attr\">--background-color</span>: darkblue;\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--background-color);\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">contrast-color</span>(<span class=\"hljs-built_in\">var</span>(--background-color));\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/contrast-color"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/mdn-css_types_color_contrast-color"
-                          },
-                          "webFeature": {
-                            "id": "contrast-color",
-                            "description_html": "The <code>contrast-color()</code> CSS function picks a color that has guaranteed contrast against a specified foreground or background color.",
-                            "group": [
-                              "color-types"
-                            ],
-                            "name": "contrast-color()",
-                            "spec": [
-                              "https://drafts.csswg.org/css-color-6/#funcdef-contrast-color"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/contrast-color/",
-                            "status": {
-                              "baseline": "low",
-                              "baseline_low_date": "2026-04-10",
-                              "support": {
-                                "chrome": "147",
-                                "chrome_android": "147",
-                                "edge": "147",
-                                "firefox": "146",
-                                "firefox_android": "146",
-                                "safari": "26",
-                                "safari_ios": "26"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 55,
-                        "id": "dark_mode",
-                        "index": 4,
-                        "percentageQuestion": 9.6,
-                        "percentageSurvey": 1.12,
-                        "entity": {
-                          "name": "Dark mode",
-                          "nameHtml": "Dark mode",
-                          "nameClean": "Dark mode",
-                          "id": "dark_mode",
-                          "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 22,
-                            "id": "light_dark",
-                            "index": 0,
-                            "percentageQuestion": 3.84,
-                            "percentageSurvey": 0.45,
-                            "entity": {
-                              "name": "`light-dark()`",
-                              "nameHtml": "<code>light-dark()</code>",
-                              "nameClean": "light-dark()",
-                              "id": "light_dark",
-                              "parentId": "dark_mode",
-                              "entityType": "feature",
-                              "example": {
-                                "language": "css",
-                                "code": "code {\n  color: light-dark(black, white);\n}\n",
-                                "codeHighlighted": "<span class=\"hljs-selector-tag\">code</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">light-dark</span>(black, white);\n}"
-                              },
-                              "mdn": {
-                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/light-dark"
-                              },
-                              "caniuse": {
-                                "url": "https://caniuse.com/mdn-css_types_color_light-dark"
-                              },
-                              "webFeature": {
-                                "id": "light-dark",
-                                "description_html": "The <code>light-dark()</code> CSS function accepts two colors and uses one depending on the current color scheme.",
-                                "group": [
-                                  "css"
-                                ],
-                                "name": "light-dark()",
-                                "spec": [
-                                  "https://drafts.csswg.org/css-color-5/#light-dark"
-                                ],
-                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/light-dark/",
-                                "status": {
-                                  "baseline": "low",
-                                  "baseline_low_date": "2024-05-13",
-                                  "support": {
-                                    "chrome": "123",
-                                    "chrome_android": "123",
-                                    "edge": "123",
-                                    "firefox": "120",
-                                    "firefox_android": "120",
-                                    "safari": "17.5",
-                                    "safari_ios": "17.5"
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        ]
-                      },
-                      {
-                        "count": 50,
-                        "id": "wide_gamut_colors",
-                        "index": 5,
-                        "percentageQuestion": 8.73,
-                        "percentageSurvey": 1.02,
-                        "entity": {
-                          "name": "Wide Gamut Colors",
-                          "nameHtml": "Wide Gamut Colors",
-                          "nameClean": "Wide Gamut Colors",
-                          "description": "`lch()`, `lab()`, `oklch()`, `oklab()`",
-                          "descriptionHtml": "<code>lch()</code>, <code>lab()</code>, <code>oklch()</code>, <code>oklab()</code>",
-                          "descriptionClean": "lch(), lab(), oklch(), oklab()",
-                          "id": "wide_gamut_colors",
-                          "parentId": "color_management",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".foo {\n  background-color: lab(29.2345% 39.3825 20.0664);\n  background-color: lch(29.2345% 44.2 27);\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">lab</span>(<span class=\"hljs-number\">29.2345%</span> <span class=\"hljs-number\">39.3825</span> <span class=\"hljs-number\">20.0664</span>);\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">lch</span>(<span class=\"hljs-number\">29.2345%</span> <span class=\"hljs-number\">44.2</span> <span class=\"hljs-number\">27</span>);\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/lch"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-lch-lab"
-                          },
-                          "webFeature": {
-                            "id": "oklab",
-                            "description_html": "The Oklab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is, aiming to match how humans perceive colors. OkLCh is a variant of Oklab with polar coordinates. These color spaces can be used with the CSS <code>oklab()</code> and <code>oklch()</code> functions.",
-                            "group": [
-                              "color-types"
-                            ],
-                            "name": "Oklab and OkLCh",
-                            "spec": [
-                              "https://drafts.csswg.org/css-color-4/#ok-lab"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/oklab/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2023-05-09",
-                              "support": {
-                                "chrome": "111",
-                                "chrome_android": "111",
-                                "edge": "111",
-                                "firefox": "113",
-                                "firefox_android": "113",
-                                "safari": "15.4",
-                                "safari_ios": "15.4"
-                              }
-                            }
-                          }
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 28,
-                            "id": "oklch_colors",
-                            "index": 0,
-                            "percentageQuestion": 4.89,
-                            "percentageSurvey": 0.57,
-                            "entity": {
-                              "name": "OKLCH Colors",
-                              "nameHtml": "OKLCH Colors",
-                              "nameClean": "OKLCH Colors",
-                              "id": "oklch_colors",
-                              "parentId": "wide_gamut_colors",
-                              "entityType": "feature",
-                              "example": {
-                                "language": "css",
-                                "code": ".foo {\n  background-color: oklch(40.1% 0.123 21.57)\n}\n",
-                                "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">oklch</span>(<span class=\"hljs-number\">40.1%</span> <span class=\"hljs-number\">0.123</span> <span class=\"hljs-number\">21.57</span>)\n}"
-                              },
-                              "mdn": {
-                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch"
-                              },
-                              "caniuse": {
-                                "url": "https://caniuse.com/wf-oklab"
-                              },
-                              "webFeature": {
-                                "id": "oklab",
-                                "description_html": "The Oklab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is, aiming to match how humans perceive colors. OkLCh is a variant of Oklab with polar coordinates. These color spaces can be used with the CSS <code>oklab()</code> and <code>oklch()</code> functions.",
-                                "group": [
-                                  "color-types"
-                                ],
-                                "name": "Oklab and OkLCh",
-                                "spec": [
-                                  "https://drafts.csswg.org/css-color-4/#ok-lab"
-                                ],
-                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/oklab/",
-                                "status": {
-                                  "baseline": "high",
-                                  "baseline_low_date": "2023-05-09",
-                                  "support": {
-                                    "chrome": "111",
-                                    "chrome_android": "111",
-                                    "edge": "111",
-                                    "firefox": "113",
-                                    "firefox_android": "113",
-                                    "safari": "15.4",
-                                    "safari_ios": "15.4"
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        ]
-                      },
-                      {
-                        "count": 39,
-                        "id": "tooling_issues",
-                        "index": 6,
-                        "percentageQuestion": 6.81,
-                        "percentageSurvey": 0.8,
-                        "entity": {
-                          "name": "Tooling",
-                          "nameHtml": "Tooling",
-                          "nameClean": "Tooling",
-                          "description": "Issues around third party tools, or lack thereof, including tooling in the browser (extensions, devtools, etc.).",
-                          "descriptionHtml": "Issues around third party tools, or lack thereof, including tooling in the browser (extensions, devtools, etc.).",
-                          "descriptionClean": "Issues around third party tools, or lack thereof, including tooling in the browser (extensions, devtools, etc.).",
-                          "id": "tooling_issues",
-                          "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 22,
-                            "id": "design_tool_compatibility",
-                            "index": 0,
-                            "percentageQuestion": 3.84,
-                            "percentageSurvey": 0.45,
-                            "entity": {
-                              "name": "Design tool compatibility",
-                              "nameHtml": "Design tool compatibility",
-                              "nameClean": "Design tool compatibility",
-                              "id": "design_tool_compatibility",
-                              "parentId": "tooling_issues",
-                              "entityType": "default"
-                            }
-                          },
-                          {
-                            "count": 5,
-                            "id": "preprocessor_reliance",
-                            "index": 1,
-                            "percentageQuestion": 0.87,
-                            "percentageSurvey": 0.1,
-                            "entity": {
-                              "name": "Preprocessor reliance",
-                              "nameHtml": "Preprocessor reliance",
-                              "nameClean": "Preprocessor reliance",
-                              "description": "Native CSS still lacking features that Sass/SCSS/PostCSS provide (mixins, @use, selector concatenation), forcing continued reliance on preprocessors.",
-                              "descriptionHtml": "Native CSS still lacking features that Sass/SCSS/PostCSS provide (mixins, @use, selector concatenation), forcing continued reliance on preprocessors.",
-                              "descriptionClean": "Native CSS still lacking features that Sass/SCSS/PostCSS provide (mixins, @use, selector concatenation), forcing continued reliance on preprocessors.",
-                              "id": "preprocessor_reliance",
-                              "parentId": "tooling_issues",
-                              "entityType": "default"
-                            }
-                          },
-                          {
-                            "count": 5,
-                            "id": "browser_devtools",
-                            "index": 2,
-                            "percentageQuestion": 0.87,
-                            "percentageSurvey": 0.1,
-                            "entity": {
-                              "name": "Browser DevTools",
-                              "nameHtml": "Browser DevTools",
-                              "nameClean": "Browser DevTools",
-                              "id": "browser_devtools",
-                              "parentId": "tooling_issues",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
-                      },
-                      {
-                        "count": 35,
-                        "id": "relative_colors",
-                        "index": 7,
-                        "percentageQuestion": 6.11,
-                        "percentageSurvey": 0.71,
-                        "entity": {
-                          "name": "Relative Colors",
-                          "nameHtml": "Relative Colors",
-                          "nameClean": "Relative Colors",
-                          "id": "relative_colors",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".foo {\n  --color: #4488dd;\n  background-color: hsl(from var(--color) h s calc(l * 1.2))\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attr\">--color</span>: <span class=\"hljs-number\">#4488dd</span>;\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">hsl</span>(from <span class=\"hljs-built_in\">var</span>(--color) h s <span class=\"hljs-built_in\">calc</span>(l * <span class=\"hljs-number\">1.2</span>))\n}"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://www.bram.us/2021/04/28/create-a-color-theme-with-css-relative-color-syntax-css-color-mix-and-css-color-contrast/",
-                              "title": "Create a color theme with CSS Relative Color Syntax, CSS color-mix(), and CSS color-contrast()"
-                            }
-                          ],
-                          "webFeature": {
-                            "id": "relative-color",
-                            "description_html": "The <code>from</code> keyword for color functions (<code>color()</code>, <code>hsl()</code>, <code>oklch()</code>, etc.) creates a new color based on a given color by modifying the values of the input color. Also known as relative color syntax (RCS).",
-                            "group": [
-                              "css"
-                            ],
-                            "name": "Relative colors",
-                            "spec": [
-                              "https://drafts.csswg.org/css-color-5/#relative-colors"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/relative-color/",
-                            "status": {
-                              "baseline": "low",
-                              "baseline_low_date": "2024-09-16",
-                              "support": {
-                                "chrome": "125",
-                                "chrome_android": "125",
-                                "edge": "125",
-                                "firefox": "128",
-                                "firefox_android": "128",
-                                "safari": "18",
-                                "safari_ios": "18"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 34,
-                        "id": "gamut_mapping",
-                        "index": 8,
-                        "percentageQuestion": 5.93,
-                        "percentageSurvey": 0.69,
-                        "entity": {
-                          "name": "Gamut mapping and display variability",
-                          "nameHtml": "Gamut mapping and display variability",
-                          "nameClean": "Gamut mapping and display variability",
-                          "id": "gamut_mapping",
-                          "parentId": "color_management",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 33,
-                        "id": "syntax_issues",
-                        "index": 9,
-                        "percentageQuestion": 5.76,
-                        "percentageSurvey": 0.67,
-                        "entity": {
-                          "name": "Syntax issues",
-                          "nameHtml": "Syntax issues",
-                          "nameClean": "Syntax issues",
-                          "id": "syntax_issues",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 30,
+                        "count": 81,
                         "id": "interop_issues",
-                        "index": 10,
-                        "percentageQuestion": 5.24,
-                        "percentageSurvey": 0.61,
+                        "index": 3,
+                        "percentageQuestion": 14.14,
+                        "percentageSurvey": 1.65,
                         "entity": {
                           "name": "Browser issues",
                           "nameHtml": "Browser issues",
@@ -1348,6 +1159,328 @@
                         ]
                       },
                       {
+                        "count": 80,
+                        "id": "color_contrast",
+                        "index": 4,
+                        "percentageQuestion": 13.96,
+                        "percentageSurvey": 1.63,
+                        "entity": {
+                          "name": "`color-contrast()`",
+                          "nameHtml": "<code>color-contrast()</code>",
+                          "nameClean": "color-contrast()",
+                          "id": "color_contrast",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".high-contrast {\n  color: color-contrast(#008080 vs olive, var(--myColor), #d2691e);\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.high-contrast</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">color-contrast</span>(<span class=\"hljs-number\">#008080</span> vs olive, <span class=\"hljs-built_in\">var</span>(--myColor), <span class=\"hljs-number\">#d2691e</span>);\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/contrast-color"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_types_color_color-contrast"
+                          },
+                          "webFeature": {
+                            "id": "color-contrast",
+                            "description_html": "The <code>color-contrast()</code> CSS function picks a color from a list that has the most contrast with another color.",
+                            "group": [
+                              "color-types"
+                            ],
+                            "name": "color-contrast()",
+                            "spec": [
+                              "https://drafts.csswg.org/css-color-5/#contrast-color"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/color-contrast/",
+                            "status": {
+                              "baseline": "false"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 65,
+                        "id": "contrast_color",
+                        "index": 5,
+                        "percentageQuestion": 11.34,
+                        "percentageSurvey": 1.33,
+                        "entity": {
+                          "name": "`contrast-color()`",
+                          "nameHtml": "<code>contrast-color()</code>",
+                          "nameClean": "contrast-color()",
+                          "id": "contrast_color",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "button {\n  --background-color: darkblue;\n  background-color: var(--background-color);\n  color: contrast-color(var(--background-color));\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-tag\">button</span> {\n  <span class=\"hljs-attr\">--background-color</span>: darkblue;\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--background-color);\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">contrast-color</span>(<span class=\"hljs-built_in\">var</span>(--background-color));\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/contrast-color"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_types_color_contrast-color"
+                          },
+                          "webFeature": {
+                            "id": "contrast-color",
+                            "description_html": "The <code>contrast-color()</code> CSS function picks a color that has guaranteed contrast against a specified foreground or background color.",
+                            "group": [
+                              "color-types"
+                            ],
+                            "name": "contrast-color()",
+                            "spec": [
+                              "https://drafts.csswg.org/css-color-6/#funcdef-contrast-color"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/contrast-color/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2026-04-10",
+                              "support": {
+                                "chrome": "147",
+                                "chrome_android": "147",
+                                "edge": "147",
+                                "firefox": "146",
+                                "firefox_android": "146",
+                                "safari": "26",
+                                "safari_ios": "26"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 55,
+                        "id": "dark_mode",
+                        "index": 6,
+                        "percentageQuestion": 9.6,
+                        "percentageSurvey": 1.12,
+                        "entity": {
+                          "name": "Dark mode",
+                          "nameHtml": "Dark mode",
+                          "nameClean": "Dark mode",
+                          "id": "dark_mode",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 22,
+                            "id": "light_dark",
+                            "index": 0,
+                            "percentageQuestion": 3.84,
+                            "percentageSurvey": 0.45,
+                            "entity": {
+                              "name": "`light-dark()`",
+                              "nameHtml": "<code>light-dark()</code>",
+                              "nameClean": "light-dark()",
+                              "id": "light_dark",
+                              "parentId": "dark_mode",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": "code {\n  color: light-dark(black, white);\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-selector-tag\">code</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">light-dark</span>(black, white);\n}"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/light-dark"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/mdn-css_types_color_light-dark"
+                              },
+                              "webFeature": {
+                                "id": "light-dark",
+                                "description_html": "The <code>light-dark()</code> CSS function accepts two colors and uses one depending on the current color scheme.",
+                                "group": [
+                                  "css"
+                                ],
+                                "name": "light-dark()",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-color-5/#light-dark"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/light-dark/",
+                                "status": {
+                                  "baseline": "low",
+                                  "baseline_low_date": "2024-05-13",
+                                  "support": {
+                                    "chrome": "123",
+                                    "chrome_android": "123",
+                                    "edge": "123",
+                                    "firefox": "120",
+                                    "firefox_android": "120",
+                                    "safari": "17.5",
+                                    "safari_ios": "17.5"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 39,
+                        "id": "tooling_issues",
+                        "index": 7,
+                        "percentageQuestion": 6.81,
+                        "percentageSurvey": 0.8,
+                        "entity": {
+                          "name": "Tooling",
+                          "nameHtml": "Tooling",
+                          "nameClean": "Tooling",
+                          "description": "Issues around third party tools, or lack thereof, including tooling in the browser (extensions, devtools, etc.).",
+                          "descriptionHtml": "Issues around third party tools, or lack thereof, including tooling in the browser (extensions, devtools, etc.).",
+                          "descriptionClean": "Issues around third party tools, or lack thereof, including tooling in the browser (extensions, devtools, etc.).",
+                          "id": "tooling_issues",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 22,
+                            "id": "design_tool_compatibility",
+                            "index": 0,
+                            "percentageQuestion": 3.84,
+                            "percentageSurvey": 0.45,
+                            "entity": {
+                              "name": "Design tool compatibility",
+                              "nameHtml": "Design tool compatibility",
+                              "nameClean": "Design tool compatibility",
+                              "id": "design_tool_compatibility",
+                              "parentId": "tooling_issues",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 5,
+                            "id": "preprocessor_reliance",
+                            "index": 1,
+                            "percentageQuestion": 0.87,
+                            "percentageSurvey": 0.1,
+                            "entity": {
+                              "name": "Preprocessor reliance",
+                              "nameHtml": "Preprocessor reliance",
+                              "nameClean": "Preprocessor reliance",
+                              "description": "Native CSS still lacking features that Sass/SCSS/PostCSS provide (mixins, @use, selector concatenation), forcing continued reliance on preprocessors.",
+                              "descriptionHtml": "Native CSS still lacking features that Sass/SCSS/PostCSS provide (mixins, @use, selector concatenation), forcing continued reliance on preprocessors.",
+                              "descriptionClean": "Native CSS still lacking features that Sass/SCSS/PostCSS provide (mixins, @use, selector concatenation), forcing continued reliance on preprocessors.",
+                              "id": "preprocessor_reliance",
+                              "parentId": "tooling_issues",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 5,
+                            "id": "browser_devtools",
+                            "index": 2,
+                            "percentageQuestion": 0.87,
+                            "percentageSurvey": 0.1,
+                            "entity": {
+                              "name": "Browser DevTools",
+                              "nameHtml": "Browser DevTools",
+                              "nameClean": "Browser DevTools",
+                              "id": "browser_devtools",
+                              "parentId": "tooling_issues",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 35,
+                        "id": "relative_colors",
+                        "index": 8,
+                        "percentageQuestion": 6.11,
+                        "percentageSurvey": 0.71,
+                        "entity": {
+                          "name": "Relative Colors",
+                          "nameHtml": "Relative Colors",
+                          "nameClean": "Relative Colors",
+                          "id": "relative_colors",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".foo {\n  --color: #4488dd;\n  background-color: hsl(from var(--color) h s calc(l * 1.2))\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attr\">--color</span>: <span class=\"hljs-number\">#4488dd</span>;\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">hsl</span>(from <span class=\"hljs-built_in\">var</span>(--color) h s <span class=\"hljs-built_in\">calc</span>(l * <span class=\"hljs-number\">1.2</span>))\n}"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://www.bram.us/2021/04/28/create-a-color-theme-with-css-relative-color-syntax-css-color-mix-and-css-color-contrast/",
+                              "title": "Create a color theme with CSS Relative Color Syntax, CSS color-mix(), and CSS color-contrast()"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "relative-color",
+                            "description_html": "The <code>from</code> keyword for color functions (<code>color()</code>, <code>hsl()</code>, <code>oklch()</code>, etc.) creates a new color based on a given color by modifying the values of the input color. Also known as relative color syntax (RCS).",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "Relative colors",
+                            "spec": [
+                              "https://drafts.csswg.org/css-color-5/#relative-colors"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/relative-color/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-09-16",
+                              "support": {
+                                "chrome": "125",
+                                "chrome_android": "125",
+                                "edge": "125",
+                                "firefox": "128",
+                                "firefox_android": "128",
+                                "safari": "18",
+                                "safari_ios": "18"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 33,
+                        "id": "syntax_issues",
+                        "index": 9,
+                        "percentageQuestion": 5.76,
+                        "percentageSurvey": 0.67,
+                        "entity": {
+                          "name": "Syntax issues",
+                          "nameHtml": "Syntax issues",
+                          "nameClean": "Syntax issues",
+                          "id": "syntax_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 24,
+                        "id": "accessibility_issues",
+                        "index": 10,
+                        "percentageQuestion": 4.19,
+                        "percentageSurvey": 0.49,
+                        "entity": {
+                          "name": "Accessibility",
+                          "nameHtml": "Accessibility",
+                          "nameClean": "Accessibility",
+                          "description": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "descriptionHtml": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "descriptionClean": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "id": "accessibility_issues",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 13,
+                            "id": "contrast_algorithms",
+                            "index": 0,
+                            "percentageQuestion": 2.27,
+                            "percentageSurvey": 0.27,
+                            "entity": {
+                              "name": "Contrast algorithms",
+                              "nameHtml": "Contrast algorithms",
+                              "nameClean": "Contrast algorithms",
+                              "id": "contrast_algorithms",
+                              "parentId": "accessibility_issues",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
                         "count": 24,
                         "id": "css_custom_properties",
                         "index": 11,
@@ -1407,24 +1540,9 @@
                         ]
                       },
                       {
-                        "count": 20,
-                        "id": "color_alpha",
-                        "index": 13,
-                        "percentageQuestion": 3.49,
-                        "percentageSurvey": 0.41,
-                        "entity": {
-                          "name": "Adjusting alpha/opacity",
-                          "nameHtml": "Adjusting alpha/opacity",
-                          "nameClean": "Adjusting alpha/opacity",
-                          "id": "color_alpha",
-                          "parentId": "color_manipulation_issues",
-                          "entityType": "default"
-                        }
-                      },
-                      {
                         "count": 19,
                         "id": "css_gradients",
-                        "index": 14,
+                        "index": 13,
                         "percentageQuestion": 3.32,
                         "percentageSurvey": 0.39,
                         "entity": {
@@ -1436,24 +1554,9 @@
                         }
                       },
                       {
-                        "count": 17,
-                        "id": "color_conversion",
-                        "index": 15,
-                        "percentageQuestion": 2.97,
-                        "percentageSurvey": 0.35,
-                        "entity": {
-                          "name": "Color conversion",
-                          "nameHtml": "Color conversion",
-                          "nameClean": "Color conversion",
-                          "id": "color_conversion",
-                          "parentId": "color_management",
-                          "entityType": "default"
-                        }
-                      },
-                      {
                         "count": 15,
                         "id": "color_mix",
-                        "index": 16,
+                        "index": 14,
                         "percentageQuestion": 2.62,
                         "percentageSurvey": 0.31,
                         "entity": {
@@ -1503,7 +1606,7 @@
                       {
                         "count": 15,
                         "id": "maintenance",
-                        "index": 17,
+                        "index": 15,
                         "percentageQuestion": 2.62,
                         "percentageSurvey": 0.31,
                         "entity": {
@@ -1551,7 +1654,7 @@
                       {
                         "count": 14,
                         "id": "ecosystem",
-                        "index": 18,
+                        "index": 16,
                         "percentageQuestion": 2.44,
                         "percentageSurvey": 0.29,
                         "entity": {
@@ -1563,60 +1666,9 @@
                         }
                       },
                       {
-                        "count": 13,
-                        "id": "too_much_boilerplate",
-                        "index": 19,
-                        "percentageQuestion": 2.27,
-                        "percentageSurvey": 0.27,
-                        "entity": {
-                          "name": "Excessive boilerplate",
-                          "nameHtml": "Excessive boilerplate",
-                          "nameClean": "Excessive boilerplate",
-                          "description": "Too much boilerplate required",
-                          "descriptionHtml": "Too much boilerplate required",
-                          "descriptionClean": "Too much boilerplate required",
-                          "id": "too_much_boilerplate",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 11,
-                        "id": "accessibility_issues",
-                        "index": 20,
-                        "percentageQuestion": 1.92,
-                        "percentageSurvey": 0.22,
-                        "entity": {
-                          "name": "Accessibility",
-                          "nameHtml": "Accessibility",
-                          "nameClean": "Accessibility",
-                          "description": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
-                          "descriptionHtml": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
-                          "descriptionClean": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
-                          "id": "accessibility_issues",
-                          "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 13,
-                            "id": "contrast_algorithms",
-                            "index": 0,
-                            "percentageQuestion": 2.27,
-                            "percentageSurvey": 0.27,
-                            "entity": {
-                              "name": "Contrast algorithms",
-                              "nameHtml": "Contrast algorithms",
-                              "nameClean": "Contrast algorithms",
-                              "id": "contrast_algorithms",
-                              "parentId": "accessibility_issues",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
-                      },
-                      {
                         "count": 11,
                         "id": "design_systems_issues",
-                        "index": 21,
+                        "index": 17,
                         "percentageQuestion": 1.92,
                         "percentageSurvey": 0.22,
                         "entity": {
@@ -1650,7 +1702,7 @@
                       {
                         "count": 8,
                         "id": "debugging_issues",
-                        "index": 22,
+                        "index": 18,
                         "percentageQuestion": 1.4,
                         "percentageSurvey": 0.16,
                         "entity": {
@@ -1687,24 +1739,14 @@
                       {
                         "count": 8,
                         "id": "verbosity",
-                        "index": 23,
+                        "index": 19,
                         "percentageQuestion": 1.4,
-                        "percentageSurvey": 0.16,
-                        "entity": {
-                          "name": "Excessive verbosity",
-                          "nameHtml": "Excessive verbosity",
-                          "nameClean": "Excessive verbosity",
-                          "description": "APIs that are overly verbose",
-                          "descriptionHtml": "APIs that are overly verbose",
-                          "descriptionClean": "APIs that are overly verbose",
-                          "id": "verbosity",
-                          "entityType": "default"
-                        }
+                        "percentageSurvey": 0.16
                       },
                       {
                         "count": 7,
                         "id": "color_scheme",
-                        "index": 24,
+                        "index": 20,
                         "percentageQuestion": 1.22,
                         "percentageSurvey": 0.14,
                         "entity": {
@@ -1752,6 +1794,119 @@
                         }
                       },
                       {
+                        "count": 6,
+                        "id": "accent_color",
+                        "index": 21,
+                        "percentageQuestion": 1.05,
+                        "percentageSurvey": 0.12,
+                        "entity": {
+                          "name": "`accent-color`",
+                          "nameHtml": "<code>accent-color</code>",
+                          "nameClean": "accent-color",
+                          "id": "accent_color",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "input[type='checkbox'] {\n  accent-color: tomato;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-tag\">input</span><span class=\"hljs-selector-attr\">[type=<span class=\"hljs-string\">&#x27;checkbox&#x27;</span>]</span> {\n  <span class=\"hljs-attribute\">accent-color</span>: tomato;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/accent-color"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_properties_accent-color"
+                          },
+                          "webFeature": {
+                            "id": "accent-color",
+                            "description_html": "The <code>accent-color</code> CSS property sets a color for checkboxes, radio buttons, and other form controls.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "accent-color",
+                            "spec": [
+                              "https://drafts.csswg.org/css-ui-4/#widget-accent"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/accent-color/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "93",
+                                "edge": "93",
+                                "firefox": "92",
+                                "firefox_android": "92",
+                                "safari": "26.2",
+                                "safari_ios": "26.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 6,
+                        "id": "unclear_use_cases",
+                        "index": 22,
+                        "percentageQuestion": 1.05,
+                        "percentageSurvey": 0.12
+                      },
+                      {
+                        "count": 5,
+                        "id": "cascade",
+                        "index": 23,
+                        "percentageQuestion": 0.87,
+                        "percentageSurvey": 0.1
+                      },
+                      {
+                        "count": 5,
+                        "id": "forced_colors",
+                        "index": 24,
+                        "percentageQuestion": 0.87,
+                        "percentageSurvey": 0.1,
+                        "entity": {
+                          "name": "`forced-colors`",
+                          "nameHtml": "<code>forced-colors</code>",
+                          "nameClean": "forced-colors",
+                          "id": "forced_colors",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "@media (forced-colors: active) {\n  .button {\n    border: 2px green solid;\n  }\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">@media</span> (<span class=\"hljs-attribute\">forced-colors</span>: active) {\n  <span class=\"hljs-selector-class\">.button</span> {\n    <span class=\"hljs-attribute\">border</span>: <span class=\"hljs-number\">2px</span> green solid;\n  }\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/forced-colors"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_at-rules_media_forced-colors"
+                          },
+                          "webFeature": {
+                            "id": "forced-colors",
+                            "description_html": "The <code>forced-colors</code> CSS @media rule detects when a user has chosen to use a forced colors mode, also known as high-contrast mode, and the <code>forced-color-adjust</code> CSS property sets whether forced colors apply to an element.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "Forced colors",
+                            "spec": [
+                              "https://drafts.csswg.org/mediaqueries-5/#forced-colors",
+                              "https://drafts.csswg.org/css-color-adjust-1/#forced-color-adjust-prop"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/forced-colors/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2022-09-12",
+                              "support": {
+                                "chrome": "89",
+                                "chrome_android": "89",
+                                "edge": "79",
+                                "firefox": "89",
+                                "firefox_android": "89",
+                                "safari": "16",
+                                "safari_ios": "16"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
                         "count": 4327,
                         "id": "no_answer",
                         "index": 25,
@@ -1759,11 +1914,11 @@
                         "percentageSurvey": 88.27
                       },
                       {
-                        "count": 216,
+                        "count": 194,
                         "id": "other_answers",
                         "index": 26,
-                        "percentageQuestion": 37.51,
-                        "percentageSurvey": 4.33
+                        "percentageQuestion": 33.66,
+                        "percentageSurvey": 3.89
                       }
                     ]
                   }

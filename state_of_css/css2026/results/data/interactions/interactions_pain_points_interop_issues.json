@@ -20,101 +20,17 @@
                     "editionId": "css2026",
                     "year": 2026,
                     "completion": {
-                      "count": 44,
-                      "percentageSurvey": 0.9,
+                      "count": 115,
+                      "percentageSurvey": 2.35,
                       "total": 4902
                     },
                     "buckets": [
                       {
-                        "count": 13,
-                        "id": "firefox",
-                        "index": 0,
-                        "percentageQuestion": 29.55,
-                        "percentageSurvey": 0.27,
-                        "entity": {
-                          "name": "Firefox",
-                          "nameHtml": "Firefox",
-                          "nameClean": "Firefox",
-                          "id": "firefox",
-                          "parentId": "mozilla",
-                          "entityType": "default",
-                          "homepage": {
-                            "url": "https://www.mozilla.org/en-US/firefox/new/"
-                          }
-                        }
-                      },
-                      {
-                        "count": 8,
-                        "id": "safari",
-                        "index": 1,
-                        "percentageQuestion": 18.18,
-                        "percentageSurvey": 0.16,
-                        "entity": {
-                          "name": "Safari",
-                          "nameHtml": "Safari",
-                          "nameClean": "Safari",
-                          "id": "safari",
-                          "parentId": "apple",
-                          "entityType": "default",
-                          "homepage": {
-                            "url": "https://www.apple.com/safari/"
-                          }
-                        }
-                      },
-                      {
-                        "count": 7,
-                        "id": "discrete_properties_animations",
-                        "index": 2,
-                        "percentageQuestion": 15.91,
-                        "percentageSurvey": 0.14,
-                        "entity": {
-                          "name": "Discrete Properties Animations",
-                          "nameHtml": "Discrete Properties Animations",
-                          "nameClean": "Discrete Properties Animations",
-                          "description": "Animate to and from properties such as `display: none`",
-                          "descriptionHtml": "Animate to and from properties such as <code>display: none</code>",
-                          "descriptionClean": "Animate to and from properties such as display: none",
-                          "id": "discrete_properties_animations",
-                          "parentId": "animations_issues",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": "/*   IS-OPEN STATE   */\ndialog[open] {\n  translate: 0 0;\n}\n\n/*   EXIT STATE   */\ndialog {\n  transition: opacity 1s, display 1s allow-discrete, overlay 1s allow-discrete;\n  translate: 0 100vh;\n}\n\n/*   0. BEFORE-OPEN STATE   */\n@starting-style {\n  dialog[open] {\n    translate: 0 100vh;\n  }\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-comment\">/*   IS-OPEN STATE   */</span>\ndialog<span class=\"hljs-selector-attr\">[open]</span> {\n  <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">0</span>;\n}\n\n<span class=\"hljs-comment\">/*   EXIT STATE   */</span>\ndialog {\n  <span class=\"hljs-attribute\">transition</span>: opacity <span class=\"hljs-number\">1s</span>, display <span class=\"hljs-number\">1s</span> allow-discrete, overlay <span class=\"hljs-number\">1s</span> allow-discrete;\n  <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n}\n\n<span class=\"hljs-comment\">/*   0. BEFORE-OPEN STATE   */</span>\n<span class=\"hljs-keyword\">@starting-style</span> {\n  dialog<span class=\"hljs-selector-attr\">[open]</span> {\n    <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n  }\n}"
-                          },
-                          "webFeature": {
-                            "id": "transition-behavior",
-                            "description_html": "The <code>transition-behavior: allow-discrete</code> CSS declaration allows transitions for properties whose animation behavior is discrete. Such properties can't be interpolated and swap from their start value to the end value at 50%.",
-                            "group": [
-                              "transitions"
-                            ],
-                            "name": "transition-behavior",
-                            "spec": [
-                              "https://drafts.csswg.org/css-transitions-2/#transition-behavior-property"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/transition-behavior/",
-                            "status": {
-                              "baseline": "low",
-                              "baseline_low_date": "2024-08-06",
-                              "support": {
-                                "chrome": "117",
-                                "chrome_android": "117",
-                                "edge": "117",
-                                "firefox": "129",
-                                "firefox_android": "129",
-                                "safari": "17.4",
-                                "safari_ios": "17.4"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 5,
+                        "count": 101,
                         "id": "browser_support",
-                        "index": 3,
-                        "percentageQuestion": 11.36,
-                        "percentageSurvey": 0.1,
+                        "index": 0,
+                        "percentageQuestion": 87.83,
+                        "percentageSurvey": 2.06,
                         "entity": {
                           "name": "Browser support",
                           "nameHtml": "Browser support",
@@ -128,65 +44,415 @@
                         }
                       },
                       {
-                        "count": 5,
-                        "id": "view_transitions",
-                        "index": 4,
-                        "percentageQuestion": 11.36,
-                        "percentageSurvey": 0.1,
+                        "count": 23,
+                        "id": "animations_issues",
+                        "index": 1,
+                        "percentageQuestion": 20,
+                        "percentageSurvey": 0.47,
                         "entity": {
-                          "name": "View Transition API",
-                          "nameHtml": "View Transition API",
-                          "nameClean": "View Transition API",
-                          "id": "view_transitions",
-                          "parentId": "animations_issues",
+                          "name": "Animations",
+                          "nameHtml": "Animations",
+                          "nameClean": "Animations",
+                          "description": "Issues related to UI animations across all technologies, regardless of technology used to implement them (CSS animations, Lottie, etc)",
+                          "descriptionHtml": "Issues related to UI animations across all technologies, regardless of technology used to implement them (CSS animations, Lottie, etc)",
+                          "descriptionClean": "Issues related to UI animations across all technologies, regardless of technology used to implement them (CSS animations, Lottie, etc)",
+                          "id": "animations_issues",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 10,
+                            "id": "discrete_properties_animations",
+                            "index": 0,
+                            "percentageQuestion": 8.7,
+                            "percentageSurvey": 0.2,
+                            "entity": {
+                              "name": "Discrete Properties Animations",
+                              "nameHtml": "Discrete Properties Animations",
+                              "nameClean": "Discrete Properties Animations",
+                              "description": "Animate to and from properties such as `display: none`",
+                              "descriptionHtml": "Animate to and from properties such as <code>display: none</code>",
+                              "descriptionClean": "Animate to and from properties such as display: none",
+                              "id": "discrete_properties_animations",
+                              "parentId": "animations_issues",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": "/*   IS-OPEN STATE   */\ndialog[open] {\n  translate: 0 0;\n}\n\n/*   EXIT STATE   */\ndialog {\n  transition: opacity 1s, display 1s allow-discrete, overlay 1s allow-discrete;\n  translate: 0 100vh;\n}\n\n/*   0. BEFORE-OPEN STATE   */\n@starting-style {\n  dialog[open] {\n    translate: 0 100vh;\n  }\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-comment\">/*   IS-OPEN STATE   */</span>\ndialog<span class=\"hljs-selector-attr\">[open]</span> {\n  <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">0</span>;\n}\n\n<span class=\"hljs-comment\">/*   EXIT STATE   */</span>\ndialog {\n  <span class=\"hljs-attribute\">transition</span>: opacity <span class=\"hljs-number\">1s</span>, display <span class=\"hljs-number\">1s</span> allow-discrete, overlay <span class=\"hljs-number\">1s</span> allow-discrete;\n  <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n}\n\n<span class=\"hljs-comment\">/*   0. BEFORE-OPEN STATE   */</span>\n<span class=\"hljs-keyword\">@starting-style</span> {\n  dialog<span class=\"hljs-selector-attr\">[open]</span> {\n    <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n  }\n}"
+                              },
+                              "webFeature": {
+                                "id": "transition-behavior",
+                                "description_html": "The <code>transition-behavior: allow-discrete</code> CSS declaration allows transitions for properties whose animation behavior is discrete. Such properties can't be interpolated and swap from their start value to the end value at 50%.",
+                                "group": [
+                                  "transitions"
+                                ],
+                                "name": "transition-behavior",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-transitions-2/#transition-behavior-property"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/transition-behavior/",
+                                "status": {
+                                  "baseline": "low",
+                                  "baseline_low_date": "2024-08-06",
+                                  "support": {
+                                    "chrome": "117",
+                                    "chrome_android": "117",
+                                    "edge": "117",
+                                    "firefox": "129",
+                                    "firefox_android": "129",
+                                    "safari": "17.4",
+                                    "safari_ios": "17.4"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "count": 10,
+                            "id": "view_transitions",
+                            "index": 1,
+                            "percentageQuestion": 8.7,
+                            "percentageSurvey": 0.2,
+                            "entity": {
+                              "name": "View Transition API",
+                              "nameHtml": "View Transition API",
+                              "nameClean": "View Transition API",
+                              "id": "view_transitions",
+                              "parentId": "animations_issues",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": "::view-transition-old(main-image),\n::view-transition-new(main-image) {\n  transform-origin: right top;\n}\n\n::view-transition-new(main-image) {\n  animation: 400ms ease-out both grow;\n}\n\nfigure {\n  view-transition-name: main-image;\n}\n",
+                                "codeHighlighted": "::<span class=\"hljs-built_in\">view-transition-old</span>(main-image),\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">transform-origin</span>: right top;\n}\n\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">animation</span>: <span class=\"hljs-number\">400ms</span> ease-out both grow;\n}\n\n<span class=\"hljs-selector-tag\">figure</span> {\n  <span class=\"hljs-attribute\">view-transition-name</span>: main-image;\n}"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/mdn-api_viewtransition"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://developer.chrome.com/docs/web-platform/view-transitions/",
+                                  "title": "Smooth and simple transitions with the View Transitions API"
+                                }
+                              ],
+                              "webFeature": {
+                                "id": "cross-document-view-transitions",
+                                "description_html": "The <code>@view-transition</code> CSS rule sets whether a document opts-in to transitions between documents in a multi-page application. Both the old and new document must opt-in for a transition to be triggered.",
+                                "group": [
+                                  "view-transitions"
+                                ],
+                                "name": "Cross-document view transitions",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-view-transitions-2/#cross-doc-opt-in"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/cross-document-view-transitions/",
+                                "status": {
+                                  "baseline": "false",
+                                  "support": {
+                                    "chrome": "126",
+                                    "chrome_android": "126",
+                                    "edge": "126",
+                                    "safari": "18.2",
+                                    "safari_ios": "18.2"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 14,
+                        "id": "mozilla",
+                        "index": 2,
+                        "percentageQuestion": 12.17,
+                        "percentageSurvey": 0.29,
+                        "entity": {
+                          "name": "Mozilla",
+                          "nameHtml": "Mozilla",
+                          "nameClean": "Mozilla",
+                          "id": "mozilla",
+                          "parentId": "interop_issues",
+                          "entityType": "default",
+                          "homepage": {
+                            "url": "https://www.mozilla.org/"
+                          }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 14,
+                            "id": "firefox",
+                            "index": 0,
+                            "percentageQuestion": 12.17,
+                            "percentageSurvey": 0.29,
+                            "entity": {
+                              "name": "Firefox",
+                              "nameHtml": "Firefox",
+                              "nameClean": "Firefox",
+                              "id": "firefox",
+                              "parentId": "mozilla",
+                              "entityType": "default",
+                              "homepage": {
+                                "url": "https://www.mozilla.org/en-US/firefox/new/"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 13,
+                        "id": "apple",
+                        "index": 3,
+                        "percentageQuestion": 11.3,
+                        "percentageSurvey": 0.27,
+                        "entity": {
+                          "name": "Apple",
+                          "nameHtml": "Apple",
+                          "nameClean": "Apple",
+                          "id": "apple",
+                          "parentId": "interop_issues",
+                          "entityType": "default",
+                          "homepage": {
+                            "url": "https://www.apple.com/"
+                          }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 9,
+                            "id": "safari",
+                            "index": 0,
+                            "percentageQuestion": 7.83,
+                            "percentageSurvey": 0.18,
+                            "entity": {
+                              "name": "Safari",
+                              "nameHtml": "Safari",
+                              "nameClean": "Safari",
+                              "id": "safari",
+                              "parentId": "apple",
+                              "entityType": "default",
+                              "homepage": {
+                                "url": "https://www.apple.com/safari/"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 12,
+                        "id": "css_carousels",
+                        "index": 4,
+                        "percentageQuestion": 10.43,
+                        "percentageSurvey": 0.24,
+                        "entity": {
+                          "name": "CSS Carousels",
+                          "nameHtml": "CSS Carousels",
+                          "nameClean": "CSS Carousels",
+                          "id": "css_carousels",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
-                            "code": "::view-transition-old(main-image),\n::view-transition-new(main-image) {\n  transform-origin: right top;\n}\n\n::view-transition-new(main-image) {\n  animation: 400ms ease-out both grow;\n}\n\nfigure {\n  view-transition-name: main-image;\n}\n",
-                            "codeHighlighted": "::<span class=\"hljs-built_in\">view-transition-old</span>(main-image),\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">transform-origin</span>: right top;\n}\n\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">animation</span>: <span class=\"hljs-number\">400ms</span> ease-out both grow;\n}\n\n<span class=\"hljs-selector-tag\">figure</span> {\n  <span class=\"hljs-attribute\">view-transition-name</span>: main-image;\n}"
+                            "code": ".carousel {\n  &::scroll-button(left) {\n    content: \"⬅\" / \"Scroll Left\";\n  }\n  \n  &::scroll-button(right) {\n    content: \"⮕\" / \"Scroll Right\";\n  }\n\n  &::scroll-button(*):focus-visible {\n    outline-offset: 5px;\n  }\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.carousel</span> {\n  &amp;::<span class=\"hljs-built_in\">scroll-button</span>(left) {\n    <span class=\"hljs-attribute\">content</span>: <span class=\"hljs-string\">&quot;⬅&quot;</span> / <span class=\"hljs-string\">&quot;Scroll Left&quot;</span>;\n  }\n  \n  &amp;::<span class=\"hljs-built_in\">scroll-button</span>(right) {\n    <span class=\"hljs-attribute\">content</span>: <span class=\"hljs-string\">&quot;⮕&quot;</span> / <span class=\"hljs-string\">&quot;Scroll Right&quot;</span>;\n  }\n\n  &amp;::<span class=\"hljs-built_in\">scroll-button</span>(*):focus-visible {\n    <span class=\"hljs-attribute\">outline-offset</span>: <span class=\"hljs-number\">5px</span>;\n  }\n}"
                           },
                           "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API"
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Overflow/Carousels"
                           },
                           "caniuse": {
-                            "url": "https://caniuse.com/mdn-api_viewtransition"
+                            "url": "https://caniuse.com/mdn-css_selectors_scroll-marker"
                           },
                           "resources": [
                             {
-                              "url": "https://developer.chrome.com/docs/web-platform/view-transitions/",
-                              "title": "Smooth and simple transitions with the View Transitions API"
+                              "url": "https://developer.chrome.com/blog/carousels-with-css",
+                              "title": "Carousels with CSS"
+                            },
+                            {
+                              "url": "https://chrome.dev/carousel/",
+                              "title": "CSS Carousel Gallery"
+                            },
+                            {
+                              "url": "https://css-tricks.com/css-carousels/",
+                              "title": "CSS Carousels"
                             }
                           ],
                           "webFeature": {
-                            "id": "cross-document-view-transitions",
-                            "description_html": "The <code>@view-transition</code> CSS rule sets whether a document opts-in to transitions between documents in a multi-page application. Both the old and new document must opt-in for a transition to be triggered.",
+                            "id": "scroll-markers",
+                            "description_html": "A scroll marker scrolls a container to a scroll target. The <code>::scroll-marker</code> CSS pseudo-element selects a scroll marker in a <code>::scroll-marker-group</code> pseudo-element, generated before or after the scroll container. You can use them to navigate and style tables of contents, tab panels, and carousels.",
                             "group": [
-                              "view-transitions"
+                              "scroll-markers"
                             ],
-                            "name": "Cross-document view transitions",
+                            "name": "Scroll markers",
                             "spec": [
-                              "https://drafts.csswg.org/css-view-transitions-2/#cross-doc-opt-in"
+                              "https://drafts.csswg.org/css-overflow-5/#scroll-markers"
                             ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/cross-document-view-transitions/",
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/scroll-markers/",
                             "status": {
                               "baseline": "false",
                               "support": {
-                                "chrome": "126",
-                                "chrome_android": "126",
-                                "edge": "126",
-                                "safari": "18.2",
-                                "safari_ios": "18.2"
+                                "chrome": "135",
+                                "chrome_android": "135",
+                                "edge": "135"
                               }
                             }
                           }
                         }
                       },
                       {
-                        "count": 55,
-                        "id": "other_answers",
+                        "count": 8,
+                        "id": "accessibility_issues",
                         "index": 5,
-                        "percentageQuestion": 124.93,
-                        "percentageSurvey": 1.1
+                        "percentageQuestion": 6.96,
+                        "percentageSurvey": 0.16,
+                        "entity": {
+                          "name": "Accessibility",
+                          "nameHtml": "Accessibility",
+                          "nameClean": "Accessibility",
+                          "description": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "descriptionHtml": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "descriptionClean": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "id": "accessibility_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 8,
+                        "id": "developer_experience",
+                        "index": 6,
+                        "percentageQuestion": 6.96,
+                        "percentageSurvey": 0.16,
+                        "entity": {
+                          "name": "Developer Experience",
+                          "nameHtml": "Developer Experience",
+                          "nameClean": "Developer Experience",
+                          "description": "Issues related not to being unable to achieve something, but to *how* it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
+                          "descriptionHtml": "Issues related not to being unable to achieve something, but to <em>how</em> it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
+                          "descriptionClean": "Issues related not to being unable to achieve something, but to how it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
+                          "id": "developer_experience",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 8,
+                        "id": "google",
+                        "index": 7,
+                        "percentageQuestion": 6.96,
+                        "percentageSurvey": 0.16,
+                        "entity": {
+                          "name": "Google",
+                          "nameHtml": "Google",
+                          "nameClean": "Google",
+                          "id": "google",
+                          "parentId": "interop_issues",
+                          "entityType": "default",
+                          "homepage": {
+                            "url": "https://google.com"
+                          }
+                        }
+                      },
+                      {
+                        "count": 8,
+                        "id": "scrollbars",
+                        "index": 8,
+                        "percentageQuestion": 6.96,
+                        "percentageSurvey": 0.16,
+                        "entity": {
+                          "name": "Scrollbars",
+                          "nameHtml": "Scrollbars",
+                          "nameClean": "Scrollbars",
+                          "description": "Issues related to scrollbars.",
+                          "descriptionHtml": "Issues related to scrollbars.",
+                          "descriptionClean": "Issues related to scrollbars.",
+                          "id": "scrollbars",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 6,
+                        "id": "scroll_driven_animations",
+                        "index": 9,
+                        "percentageQuestion": 5.22,
+                        "percentageSurvey": 0.12,
+                        "entity": {
+                          "name": "Scroll-driven animations",
+                          "nameHtml": "Scroll-driven animations",
+                          "nameClean": "Scroll-driven animations",
+                          "id": "scroll_driven_animations",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "html {\n  scroll-timeline: --page-scroll block;\n}\n\n@keyframes grow-progress {\n  from { transform: scaleX(0); }\n  to { transform: scaleX(1); }\n}\n\n#progress {\n  animation: grow-progress auto linear;\n  animation-timeline: --page-scroll;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-tag\">html</span> {\n  <span class=\"hljs-attribute\">scroll-timeline</span>: --page-scroll block;\n}\n\n<span class=\"hljs-keyword\">@keyframes</span> grow-progress {\n  <span class=\"hljs-selector-tag\">from</span> { <span class=\"hljs-attribute\">transform</span>: <span class=\"hljs-built_in\">scaleX</span>(<span class=\"hljs-number\">0</span>); }\n  <span class=\"hljs-selector-tag\">to</span> { <span class=\"hljs-attribute\">transform</span>: <span class=\"hljs-built_in\">scaleX</span>(<span class=\"hljs-number\">1</span>); }\n}\n\n<span class=\"hljs-selector-id\">#progress</span> {\n  <span class=\"hljs-attribute\">animation</span>: grow-progress auto linear;\n  <span class=\"hljs-attribute\">animation-timeline</span>: --page-scroll;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll-driven_animations"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_properties_animation-timeline"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://scroll-driven-animations.style/",
+                              "title": "Scroll-driven Animations"
+                            },
+                            {
+                              "url": "https://css-tricks.com/unleash-the-power-of-scroll-driven-animations/",
+                              "title": "Unleash the Power of Scroll-Driven Animations"
+                            },
+                            {
+                              "url": "https://developer.chrome.com/docs/css-ui/scroll-driven-animations",
+                              "title": "Animate elements on scroll with Scroll-driven animations"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "scroll-driven-animations",
+                            "description_html": "The <code>animation-timeline</code>, <code>scroll-timeline</code>, and <code>view-timeline</code> CSS properties advance animations based on the user's scroll position.",
+                            "group": [
+                              "scrolling",
+                              "animation"
+                            ],
+                            "name": "Scroll-driven animations",
+                            "spec": [
+                              "https://drafts.csswg.org/scroll-animations-1/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/scroll-driven-animations/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "115",
+                                "chrome_android": "115",
+                                "edge": "115",
+                                "safari": "26",
+                                "safari_ios": "26"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 5,
+                        "id": "reliance_on_javascript",
+                        "index": 10,
+                        "percentageQuestion": 4.35,
+                        "percentageSurvey": 0.1,
+                        "entity": {
+                          "name": "Reliance on JavaScript",
+                          "nameHtml": "Reliance on JavaScript",
+                          "nameClean": "Reliance on JavaScript",
+                          "description": "Excessive reliance on JavaScript",
+                          "descriptionHtml": "Excessive reliance on JavaScript",
+                          "descriptionClean": "Excessive reliance on JavaScript",
+                          "id": "reliance_on_javascript",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 111,
+                        "id": "other_answers",
+                        "index": 11,
+                        "percentageQuestion": 96.57,
+                        "percentageSurvey": 2.22
                       }
                     ]
                   }
