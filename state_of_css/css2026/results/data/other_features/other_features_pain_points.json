@@ -537,11 +537,11 @@
                         ]
                       },
                       {
-                        "count": 37,
+                        "count": 52,
                         "id": "cognitive_overload",
                         "index": 1,
-                        "percentageQuestion": 16.02,
-                        "percentageSurvey": 0.75,
+                        "percentageQuestion": 22.51,
+                        "percentageSurvey": 1.06,
                         "entity": {
                           "name": "Cognitive overload",
                           "nameHtml": "Cognitive overload",
@@ -566,9 +566,27 @@
                             }
                           },
                           {
+                            "count": 14,
+                            "id": "unclear_use_cases",
+                            "index": 1,
+                            "percentageQuestion": 6.06,
+                            "percentageSurvey": 0.29,
+                            "entity": {
+                              "name": "Unclear use cases",
+                              "nameHtml": "Unclear use cases",
+                              "nameClean": "Unclear use cases",
+                              "description": "Not clear why you would use a specific feature",
+                              "descriptionHtml": "Not clear why you would use a specific feature",
+                              "descriptionClean": "Not clear why you would use a specific feature",
+                              "id": "unclear_use_cases",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
+                          },
+                          {
                             "count": 8,
                             "id": "speed_of_change",
-                            "index": 1,
+                            "index": 2,
                             "percentageQuestion": 3.46,
                             "percentageSurvey": 0.16,
                             "entity": {
@@ -620,11 +638,11 @@
                         ]
                       },
                       {
-                        "count": 21,
+                        "count": 20,
                         "id": "cascade_layers",
                         "index": 3,
-                        "percentageQuestion": 9.09,
-                        "percentageSurvey": 0.43,
+                        "percentageQuestion": 8.66,
+                        "percentageSurvey": 0.41,
                         "entity": {
                           "name": "Cascade Layers",
                           "nameHtml": "Cascade Layers",
@@ -670,144 +688,9 @@
                         }
                       },
                       {
-                        "count": 20,
-                        "id": "css_abstractions",
-                        "index": 4,
-                        "percentageQuestion": 8.66,
-                        "percentageSurvey": 0.41,
-                        "nestedBuckets": [
-                          {
-                            "count": 11,
-                            "id": "custom_functions",
-                            "index": 0,
-                            "percentageQuestion": 4.76,
-                            "percentageSurvey": 0.22,
-                            "entity": {
-                              "name": "Custom Functions",
-                              "nameHtml": "Custom Functions",
-                              "nameClean": "Custom Functions",
-                              "id": "custom_functions",
-                              "parentId": "css_abstractions",
-                              "entityType": "default"
-                            },
-                            "nestedBuckets": [
-                              {
-                                "count": 8,
-                                "id": "at_function",
-                                "index": 0,
-                                "percentageQuestion": 3.46,
-                                "percentageSurvey": 0.16,
-                                "entity": {
-                                  "name": "`@function`",
-                                  "nameHtml": "<code>@function</code>",
-                                  "nameClean": "@function",
-                                  "description": "The `@function` CSS at-rule defines a custom function that takes CSS values or custom properties as arguments, and returns a CSS value.",
-                                  "descriptionHtml": "The <code>@function</code> CSS at-rule defines a custom function that takes CSS values or custom properties as arguments, and returns a CSS value.",
-                                  "descriptionClean": "The @function CSS at-rule defines a custom function that takes CSS values or custom properties as arguments, and returns a CSS value.",
-                                  "id": "at_function",
-                                  "parentId": "custom_functions",
-                                  "entityType": "feature",
-                                  "example": {
-                                    "language": "css",
-                                    "code": "@function --negate(--value) {\n  result: calc(-1 * var(--value));\n}\n",
-                                    "codeHighlighted": "<span class=\"hljs-keyword\">@function</span> --negate(--value) {\n  result: <span class=\"hljs-built_in\">calc</span>(-<span class=\"hljs-number\">1</span> * <span class=\"hljs-built_in\">var</span>(--value));\n}"
-                                  },
-                                  "mdn": {
-                                    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@function"
-                                  },
-                                  "resources": [
-                                    {
-                                      "url": "https://css-tricks.com/functions-in-css/",
-                                      "title": "Functions in CSS?!"
-                                    },
-                                    {
-                                      "url": "https://www.bram.us/2025/02/09/css-custom-functions-teaser/",
-                                      "title": "CSS Custom Functions are coming … and they are going to be a game changer!"
-                                    }
-                                  ],
-                                  "webFeature": {
-                                    "id": "function",
-                                    "description_html": "The <code>@function</code> CSS at-rule defines a custom function that takes CSS values or custom properties as arguments, and returns a CSS value. It can be based on conditional logic such as by using the <code>@media</code> at-rule.",
-                                    "group": [
-                                      "css"
-                                    ],
-                                    "name": "@function",
-                                    "spec": [
-                                      "https://drafts.csswg.org/css-mixins-1/#function-rule"
-                                    ],
-                                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/function/",
-                                    "status": {
-                                      "baseline": "false",
-                                      "support": {
-                                        "chrome": "139",
-                                        "chrome_android": "139",
-                                        "edge": "139"
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "count": 19,
-                        "id": "css_nesting",
-                        "index": 5,
-                        "percentageQuestion": 8.23,
-                        "percentageSurvey": 0.39,
-                        "entity": {
-                          "name": "CSS Nesting",
-                          "nameHtml": "CSS Nesting",
-                          "nameClean": "CSS Nesting",
-                          "id": "css_nesting",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".parent {\n  color: blue;\n\n  .child {\n    color: red;\n  }\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.parent</span> {\n  <span class=\"hljs-attribute\">color</span>: blue;\n\n  <span class=\"hljs-selector-class\">.child</span> {\n    <span class=\"hljs-attribute\">color</span>: red;\n  }\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Nesting"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://developer.chrome.com/articles/css-nesting/",
-                              "title": "CSS Nesting"
-                            }
-                          ],
-                          "webFeature": {
-                            "id": "nesting",
-                            "description_html": "CSS nesting allows for shorter selectors, easier reading, and more modularity by nesting rules inside others.",
-                            "group": [
-                              "css"
-                            ],
-                            "name": "Nesting",
-                            "spec": [
-                              "https://drafts.csswg.org/css-nesting-1/"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/nesting/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2023-12-11",
-                              "support": {
-                                "chrome": "120",
-                                "chrome_android": "120",
-                                "edge": "120",
-                                "firefox": "117",
-                                "firefox_android": "117",
-                                "safari": "17.2",
-                                "safari_ios": "17.2"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
                         "count": 19,
                         "id": "tooling_issues",
-                        "index": 6,
+                        "index": 4,
                         "percentageQuestion": 8.23,
                         "percentageSurvey": 0.39,
                         "entity": {
@@ -844,7 +727,7 @@
                       {
                         "count": 17,
                         "id": "css_control_flow",
-                        "index": 7,
+                        "index": 5,
                         "percentageQuestion": 7.36,
                         "percentageSurvey": 0.35,
                         "entity": {
@@ -934,11 +817,64 @@
                         ]
                       },
                       {
-                        "count": 16,
+                        "count": 17,
+                        "id": "css_nesting",
+                        "index": 6,
+                        "percentageQuestion": 7.36,
+                        "percentageSurvey": 0.35,
+                        "entity": {
+                          "name": "CSS Nesting",
+                          "nameHtml": "CSS Nesting",
+                          "nameClean": "CSS Nesting",
+                          "id": "css_nesting",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".parent {\n  color: blue;\n\n  .child {\n    color: red;\n  }\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.parent</span> {\n  <span class=\"hljs-attribute\">color</span>: blue;\n\n  <span class=\"hljs-selector-class\">.child</span> {\n    <span class=\"hljs-attribute\">color</span>: red;\n  }\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Nesting"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://developer.chrome.com/articles/css-nesting/",
+                              "title": "CSS Nesting"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "nesting",
+                            "description_html": "CSS nesting allows for shorter selectors, easier reading, and more modularity by nesting rules inside others.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "Nesting",
+                            "spec": [
+                              "https://drafts.csswg.org/css-nesting-1/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/nesting/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2023-12-11",
+                              "support": {
+                                "chrome": "120",
+                                "chrome_android": "120",
+                                "edge": "120",
+                                "firefox": "117",
+                                "firefox_android": "117",
+                                "safari": "17.2",
+                                "safari_ios": "17.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 14,
                         "id": "at_scope",
-                        "index": 8,
-                        "percentageQuestion": 6.93,
-                        "percentageSurvey": 0.33,
+                        "index": 7,
+                        "percentageQuestion": 6.06,
+                        "percentageSurvey": 0.29,
                         "entity": {
                           "name": "`@scope`",
                           "nameHtml": "<code>@scope</code>",
@@ -987,70 +923,82 @@
                         }
                       },
                       {
-                        "count": 14,
-                        "id": "unclear_use_cases",
-                        "index": 9,
-                        "percentageQuestion": 6.06,
-                        "percentageSurvey": 0.29
-                      },
-                      {
                         "count": 11,
-                        "id": "at_property",
-                        "index": 10,
+                        "id": "custom_functions",
+                        "index": 8,
                         "percentageQuestion": 4.76,
                         "percentageSurvey": 0.22,
                         "entity": {
-                          "name": "`@property`",
-                          "nameHtml": "<code>@property</code>",
-                          "nameClean": "@property",
-                          "id": "at_property",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": "@property --property-name {\n  syntax: \"<color>\";\n  inherits: false;\n  initial-value: #c0ffee;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-keyword\">@property</span> --property-name {\n  syntax: <span class=\"hljs-string\">&quot;&lt;color&gt;&quot;</span>;\n  inherits: false;\n  initial-value: <span class=\"hljs-number\">#c0ffee</span>;\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@property"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/mdn-css_at-rules_property"
-                          },
-                          "webFeature": {
-                            "id": "registered-custom-properties",
-                            "description_html": "The <code>CSS.registerProperty()</code> static method and the <code>@property</code> CSS at-rule register custom properties for which types and behaviors can be defined.",
-                            "name": "Registered custom properties",
-                            "spec": [
-                              "https://drafts.css-houdini.org/css-properties-values-api-1/"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/registered-custom-properties/",
-                            "status": {
-                              "baseline": "low",
-                              "baseline_low_date": "2024-07-09",
-                              "support": {
-                                "chrome": "85",
-                                "chrome_android": "85",
-                                "edge": "85",
-                                "firefox": "128",
-                                "firefox_android": "128",
-                                "safari": "16.4",
-                                "safari_ios": "16.4"
+                          "name": "Custom Functions",
+                          "nameHtml": "Custom Functions",
+                          "nameClean": "Custom Functions",
+                          "id": "custom_functions",
+                          "parentId": "css_abstractions",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 8,
+                            "id": "at_function",
+                            "index": 0,
+                            "percentageQuestion": 3.46,
+                            "percentageSurvey": 0.16,
+                            "entity": {
+                              "name": "`@function`",
+                              "nameHtml": "<code>@function</code>",
+                              "nameClean": "@function",
+                              "description": "The `@function` CSS at-rule defines a custom function that takes CSS values or custom properties as arguments, and returns a CSS value.",
+                              "descriptionHtml": "The <code>@function</code> CSS at-rule defines a custom function that takes CSS values or custom properties as arguments, and returns a CSS value.",
+                              "descriptionClean": "The @function CSS at-rule defines a custom function that takes CSS values or custom properties as arguments, and returns a CSS value.",
+                              "id": "at_function",
+                              "parentId": "custom_functions",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": "@function --negate(--value) {\n  result: calc(-1 * var(--value));\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-keyword\">@function</span> --negate(--value) {\n  result: <span class=\"hljs-built_in\">calc</span>(-<span class=\"hljs-number\">1</span> * <span class=\"hljs-built_in\">var</span>(--value));\n}"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@function"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://css-tricks.com/functions-in-css/",
+                                  "title": "Functions in CSS?!"
+                                },
+                                {
+                                  "url": "https://www.bram.us/2025/02/09/css-custom-functions-teaser/",
+                                  "title": "CSS Custom Functions are coming … and they are going to be a game changer!"
+                                }
+                              ],
+                              "webFeature": {
+                                "id": "function",
+                                "description_html": "The <code>@function</code> CSS at-rule defines a custom function that takes CSS values or custom properties as arguments, and returns a CSS value. It can be based on conditional logic such as by using the <code>@media</code> at-rule.",
+                                "group": [
+                                  "css"
+                                ],
+                                "name": "@function",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-mixins-1/#function-rule"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/function/",
+                                "status": {
+                                  "baseline": "false",
+                                  "support": {
+                                    "chrome": "139",
+                                    "chrome_android": "139",
+                                    "edge": "139"
+                                  }
+                                }
                               }
                             }
                           }
-                        }
-                      },
-                      {
-                        "count": 11,
-                        "id": "css_functions",
-                        "index": 11,
-                        "percentageQuestion": 4.76,
-                        "percentageSurvey": 0.22
+                        ]
                       },
                       {
                         "count": 11,
                         "id": "sibling_count",
-                        "index": 12,
+                        "index": 9,
                         "percentageQuestion": 4.76,
                         "percentageSurvey": 0.22,
                         "entity": {
@@ -1098,7 +1046,7 @@
                       {
                         "count": 10,
                         "id": "attr_function",
-                        "index": 13,
+                        "index": 10,
                         "percentageQuestion": 4.33,
                         "percentageSurvey": 0.2,
                         "entity": {
@@ -1116,9 +1064,56 @@
                         }
                       },
                       {
+                        "count": 9,
+                        "id": "at_property",
+                        "index": 11,
+                        "percentageQuestion": 3.9,
+                        "percentageSurvey": 0.18,
+                        "entity": {
+                          "name": "`@property`",
+                          "nameHtml": "<code>@property</code>",
+                          "nameClean": "@property",
+                          "id": "at_property",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "@property --property-name {\n  syntax: \"<color>\";\n  inherits: false;\n  initial-value: #c0ffee;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">@property</span> --property-name {\n  syntax: <span class=\"hljs-string\">&quot;&lt;color&gt;&quot;</span>;\n  inherits: false;\n  initial-value: <span class=\"hljs-number\">#c0ffee</span>;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@property"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_at-rules_property"
+                          },
+                          "webFeature": {
+                            "id": "registered-custom-properties",
+                            "description_html": "The <code>CSS.registerProperty()</code> static method and the <code>@property</code> CSS at-rule register custom properties for which types and behaviors can be defined.",
+                            "name": "Registered custom properties",
+                            "spec": [
+                              "https://drafts.css-houdini.org/css-properties-values-api-1/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/registered-custom-properties/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-07-09",
+                              "support": {
+                                "chrome": "85",
+                                "chrome_android": "85",
+                                "edge": "85",
+                                "firefox": "128",
+                                "firefox_android": "128",
+                                "safari": "16.4",
+                                "safari_ios": "16.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
                         "count": 8,
                         "id": "bugs_and_stability_issues",
-                        "index": 14,
+                        "index": 12,
                         "percentageQuestion": 3.46,
                         "percentageSurvey": 0.16,
                         "entity": {
@@ -1131,27 +1126,67 @@
                       },
                       {
                         "count": 8,
-                        "id": "developer_experience",
-                        "index": 15,
+                        "id": "css_custom_properties",
+                        "index": 13,
                         "percentageQuestion": 3.46,
                         "percentageSurvey": 0.16,
                         "entity": {
-                          "name": "Developer Experience",
-                          "nameHtml": "Developer Experience",
-                          "nameClean": "Developer Experience",
-                          "description": "Issues related not to being unable to achieve something, but to *how* it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
-                          "descriptionHtml": "Issues related not to being unable to achieve something, but to <em>how</em> it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
-                          "descriptionClean": "Issues related not to being unable to achieve something, but to how it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
-                          "id": "developer_experience",
-                          "entityType": "default"
+                          "name": "Custom Properties (Variables)",
+                          "nameHtml": "Custom Properties (Variables)",
+                          "nameClean": "Custom Properties (Variables)",
+                          "id": "css_custom_properties",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ":root {\n  --main-bg-color: brown;\n}\n.foo {\n  background-color: var(--main-bg-color);\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-pseudo\">:root</span> {\n  <span class=\"hljs-attr\">--main-bg-color</span>: brown;\n}\n<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--main-bg-color);\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-variables"
+                          },
+                          "webFeature": {
+                            "id": "custom-properties",
+                            "description_html": "Custom properties are CSS properties prefixed with <code>--</code> that set values you can reuse with the <code>var()</code> function. For example, you can set a <code>--key-color</code> property to reuse as <code>border-color: var(--key-color)</code>. Also known as CSS variables.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "Custom properties",
+                            "spec": [
+                              "https://drafts.csswg.org/css-variables-1/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/custom-properties/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2017-04-05",
+                              "support": {
+                                "chrome": "49",
+                                "chrome_android": "49",
+                                "edge": "15",
+                                "firefox": "31",
+                                "firefox_android": "31",
+                                "safari": "9.1",
+                                "safari_ios": "9.3"
+                              }
+                            }
+                          }
                         }
                       },
                       {
                         "count": 8,
                         "id": "preprocessors",
-                        "index": 16,
+                        "index": 14,
                         "percentageQuestion": 3.46,
                         "percentageSurvey": 0.16,
+                        "entity": {
+                          "name": "Preprocessors",
+                          "nameHtml": "Preprocessors",
+                          "nameClean": "Preprocessors",
+                          "id": "preprocessors",
+                          "entityType": "default"
+                        },
                         "nestedBuckets": [
                           {
                             "count": 7,
@@ -1182,7 +1217,7 @@
                       {
                         "count": 8,
                         "id": "separation_of_concerns",
-                        "index": 17,
+                        "index": 15,
                         "percentageQuestion": 3.46,
                         "percentageSurvey": 0.16,
                         "entity": {
@@ -1198,33 +1233,8 @@
                       },
                       {
                         "count": 7,
-                        "id": "css_custom_properties",
-                        "index": 18,
-                        "percentageQuestion": 3.03,
-                        "percentageSurvey": 0.14,
-                        "entity": {
-                          "name": "Custom Properties (Variables)",
-                          "nameHtml": "Custom Properties (Variables)",
-                          "nameClean": "Custom Properties (Variables)",
-                          "id": "css_custom_properties",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ":root {\n  --main-bg-color: brown;\n}\n.foo {\n  background-color: var(--main-bg-color);\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-pseudo\">:root</span> {\n  <span class=\"hljs-attr\">--main-bg-color</span>: brown;\n}\n<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--main-bg-color);\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-variables"
-                          }
-                        }
-                      },
-                      {
-                        "count": 7,
                         "id": "display_contents",
-                        "index": 19,
+                        "index": 16,
                         "percentageQuestion": 3.03,
                         "percentageSurvey": 0.14,
                         "entity": {
@@ -1256,7 +1266,7 @@
                       {
                         "count": 7,
                         "id": "has_selector",
-                        "index": 20,
+                        "index": 17,
                         "percentageQuestion": 3.03,
                         "percentageSurvey": 0.14,
                         "entity": {
@@ -1304,9 +1314,26 @@
                         }
                       },
                       {
+                        "count": 6,
+                        "id": "developer_experience",
+                        "index": 18,
+                        "percentageQuestion": 2.6,
+                        "percentageSurvey": 0.12,
+                        "entity": {
+                          "name": "Developer Experience",
+                          "nameHtml": "Developer Experience",
+                          "nameClean": "Developer Experience",
+                          "description": "Issues related not to being unable to achieve something, but to *how* it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
+                          "descriptionHtml": "Issues related not to being unable to achieve something, but to <em>how</em> it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
+                          "descriptionClean": "Issues related not to being unable to achieve something, but to how it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
+                          "id": "developer_experience",
+                          "entityType": "default"
+                        }
+                      },
+                      {
                         "count": 5,
                         "id": "accessibility_issues",
-                        "index": 21,
+                        "index": 19,
                         "percentageQuestion": 2.16,
                         "percentageSurvey": 0.1,
                         "entity": {
@@ -1322,15 +1349,22 @@
                       },
                       {
                         "count": 5,
-                        "id": "cascade",
-                        "index": 22,
+                        "id": "cascade_issues",
+                        "index": 20,
                         "percentageQuestion": 2.16,
-                        "percentageSurvey": 0.1
+                        "percentageSurvey": 0.1,
+                        "entity": {
+                          "name": "Cascade Management",
+                          "nameHtml": "Cascade Management",
+                          "nameClean": "Cascade Management",
+                          "id": "cascade_issues",
+                          "entityType": "default"
+                        }
                       },
                       {
                         "count": 5,
                         "id": "child_count",
-                        "index": 23,
+                        "index": 21,
                         "percentageQuestion": 2.16,
                         "percentageSurvey": 0.1,
                         "entity": {
@@ -1344,7 +1378,7 @@
                       {
                         "count": 5,
                         "id": "sibling_index",
-                        "index": 24,
+                        "index": 22,
                         "percentageQuestion": 2.16,
                         "percentageSurvey": 0.1,
                         "entity": {
@@ -1394,18 +1428,18 @@
                         }
                       },
                       {
-                        "count": 4669,
+                        "count": 4671,
                         "id": "no_answer",
-                        "index": 25,
+                        "index": 23,
                         "percentageQuestion": 0,
-                        "percentageSurvey": 95.25
+                        "percentageSurvey": 95.29
                       },
                       {
-                        "count": 147,
+                        "count": 142,
                         "id": "other_answers",
-                        "index": 26,
-                        "percentageQuestion": 63.61,
-                        "percentageSurvey": 2.94
+                        "index": 24,
+                        "percentageQuestion": 61.44,
+                        "percentageSurvey": 2.84
                       }
                     ]
                   }

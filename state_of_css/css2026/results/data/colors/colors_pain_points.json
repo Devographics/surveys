@@ -481,6 +481,31 @@
                           },
                           "caniuse": {
                             "url": "https://caniuse.com/css-variables"
+                          },
+                          "webFeature": {
+                            "id": "custom-properties",
+                            "description_html": "Custom properties are CSS properties prefixed with <code>--</code> that set values you can reuse with the <code>var()</code> function. For example, you can set a <code>--key-color</code> property to reuse as <code>border-color: var(--key-color)</code>. Also known as CSS variables.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "Custom properties",
+                            "spec": [
+                              "https://drafts.csswg.org/css-variables-1/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/custom-properties/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2017-04-05",
+                              "support": {
+                                "chrome": "49",
+                                "chrome_android": "49",
+                                "edge": "15",
+                                "firefox": "31",
+                                "firefox_android": "31",
+                                "safari": "9.1",
+                                "safari_ios": "9.3"
+                              }
+                            }
                           }
                         }
                       },
@@ -732,11 +757,11 @@
                     },
                     "buckets": [
                       {
-                        "count": 122,
+                        "count": 120,
                         "id": "theming",
                         "index": 0,
-                        "percentageQuestion": 21.29,
-                        "percentageSurvey": 2.49,
+                        "percentageQuestion": 20.94,
+                        "percentageSurvey": 2.45,
                         "entity": {
                           "name": "Theming",
                           "nameHtml": "Theming",
@@ -746,11 +771,11 @@
                         },
                         "nestedBuckets": [
                           {
-                            "count": 52,
+                            "count": 51,
                             "id": "color_palettes",
                             "index": 0,
-                            "percentageQuestion": 9.08,
-                            "percentageSurvey": 1.06,
+                            "percentageQuestion": 8.9,
+                            "percentageSurvey": 1.04,
                             "entity": {
                               "name": "Palettes & scales",
                               "nameHtml": "Palettes &amp; scales",
@@ -763,214 +788,11 @@
                         ]
                       },
                       {
-                        "count": 110,
-                        "id": "color_management",
-                        "index": 1,
-                        "percentageQuestion": 19.2,
-                        "percentageSurvey": 2.24,
-                        "entity": {
-                          "name": "Color management",
-                          "nameHtml": "Color management",
-                          "nameClean": "Color management",
-                          "description": "Color‑management and color‑space handling across web platform features",
-                          "descriptionHtml": "Color‑management and color‑space handling across web platform features",
-                          "descriptionClean": "Color‑management and color‑space handling across web platform features",
-                          "id": "color_management",
-                          "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 50,
-                            "id": "wide_gamut_colors",
-                            "index": 0,
-                            "percentageQuestion": 8.73,
-                            "percentageSurvey": 1.02,
-                            "entity": {
-                              "name": "Wide Gamut Colors",
-                              "nameHtml": "Wide Gamut Colors",
-                              "nameClean": "Wide Gamut Colors",
-                              "description": "`lch()`, `lab()`, `oklch()`, `oklab()`",
-                              "descriptionHtml": "<code>lch()</code>, <code>lab()</code>, <code>oklch()</code>, <code>oklab()</code>",
-                              "descriptionClean": "lch(), lab(), oklch(), oklab()",
-                              "id": "wide_gamut_colors",
-                              "parentId": "color_management",
-                              "entityType": "feature",
-                              "example": {
-                                "language": "css",
-                                "code": ".foo {\n  background-color: lab(29.2345% 39.3825 20.0664);\n  background-color: lch(29.2345% 44.2 27);\n}\n",
-                                "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">lab</span>(<span class=\"hljs-number\">29.2345%</span> <span class=\"hljs-number\">39.3825</span> <span class=\"hljs-number\">20.0664</span>);\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">lch</span>(<span class=\"hljs-number\">29.2345%</span> <span class=\"hljs-number\">44.2</span> <span class=\"hljs-number\">27</span>);\n}"
-                              },
-                              "mdn": {
-                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/lch"
-                              },
-                              "caniuse": {
-                                "url": "https://caniuse.com/css-lch-lab"
-                              },
-                              "webFeature": {
-                                "id": "oklab",
-                                "description_html": "The Oklab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is, aiming to match how humans perceive colors. OkLCh is a variant of Oklab with polar coordinates. These color spaces can be used with the CSS <code>oklab()</code> and <code>oklch()</code> functions.",
-                                "group": [
-                                  "color-types"
-                                ],
-                                "name": "Oklab and OkLCh",
-                                "spec": [
-                                  "https://drafts.csswg.org/css-color-4/#ok-lab"
-                                ],
-                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/oklab/",
-                                "status": {
-                                  "baseline": "high",
-                                  "baseline_low_date": "2023-05-09",
-                                  "support": {
-                                    "chrome": "111",
-                                    "chrome_android": "111",
-                                    "edge": "111",
-                                    "firefox": "113",
-                                    "firefox_android": "113",
-                                    "safari": "15.4",
-                                    "safari_ios": "15.4"
-                                  }
-                                }
-                              }
-                            },
-                            "nestedBuckets": [
-                              {
-                                "count": 28,
-                                "id": "oklch_colors",
-                                "index": 0,
-                                "percentageQuestion": 4.89,
-                                "percentageSurvey": 0.57,
-                                "entity": {
-                                  "name": "OKLCH Colors",
-                                  "nameHtml": "OKLCH Colors",
-                                  "nameClean": "OKLCH Colors",
-                                  "id": "oklch_colors",
-                                  "parentId": "wide_gamut_colors",
-                                  "entityType": "feature",
-                                  "example": {
-                                    "language": "css",
-                                    "code": ".foo {\n  background-color: oklch(40.1% 0.123 21.57)\n}\n",
-                                    "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">oklch</span>(<span class=\"hljs-number\">40.1%</span> <span class=\"hljs-number\">0.123</span> <span class=\"hljs-number\">21.57</span>)\n}"
-                                  },
-                                  "mdn": {
-                                    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch"
-                                  },
-                                  "caniuse": {
-                                    "url": "https://caniuse.com/wf-oklab"
-                                  },
-                                  "webFeature": {
-                                    "id": "oklab",
-                                    "description_html": "The Oklab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is, aiming to match how humans perceive colors. OkLCh is a variant of Oklab with polar coordinates. These color spaces can be used with the CSS <code>oklab()</code> and <code>oklch()</code> functions.",
-                                    "group": [
-                                      "color-types"
-                                    ],
-                                    "name": "Oklab and OkLCh",
-                                    "spec": [
-                                      "https://drafts.csswg.org/css-color-4/#ok-lab"
-                                    ],
-                                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/oklab/",
-                                    "status": {
-                                      "baseline": "high",
-                                      "baseline_low_date": "2023-05-09",
-                                      "support": {
-                                        "chrome": "111",
-                                        "chrome_android": "111",
-                                        "edge": "111",
-                                        "firefox": "113",
-                                        "firefox_android": "113",
-                                        "safari": "15.4",
-                                        "safari_ios": "15.4"
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            ]
-                          },
-                          {
-                            "count": 34,
-                            "id": "gamut_mapping",
-                            "index": 1,
-                            "percentageQuestion": 5.93,
-                            "percentageSurvey": 0.69,
-                            "entity": {
-                              "name": "Gamut mapping and display variability",
-                              "nameHtml": "Gamut mapping and display variability",
-                              "nameClean": "Gamut mapping and display variability",
-                              "id": "gamut_mapping",
-                              "parentId": "color_management",
-                              "entityType": "default"
-                            }
-                          },
-                          {
-                            "count": 20,
-                            "id": "color_manipulation_issues",
-                            "index": 2,
-                            "percentageQuestion": 3.49,
-                            "percentageSurvey": 0.41,
-                            "entity": {
-                              "name": "Color manipulation",
-                              "nameHtml": "Color manipulation",
-                              "nameClean": "Color manipulation",
-                              "id": "color_manipulation_issues",
-                              "parentId": "color_management",
-                              "entityType": "default"
-                            },
-                            "nestedBuckets": [
-                              {
-                                "count": 20,
-                                "id": "color_alpha",
-                                "index": 0,
-                                "percentageQuestion": 3.49,
-                                "percentageSurvey": 0.41,
-                                "entity": {
-                                  "name": "Adjusting alpha/opacity",
-                                  "nameHtml": "Adjusting alpha/opacity",
-                                  "nameClean": "Adjusting alpha/opacity",
-                                  "id": "color_alpha",
-                                  "parentId": "color_manipulation_issues",
-                                  "entityType": "default"
-                                }
-                              }
-                            ]
-                          },
-                          {
-                            "count": 17,
-                            "id": "color_conversion",
-                            "index": 3,
-                            "percentageQuestion": 2.97,
-                            "percentageSurvey": 0.35,
-                            "entity": {
-                              "name": "Color conversion",
-                              "nameHtml": "Color conversion",
-                              "nameClean": "Color conversion",
-                              "id": "color_conversion",
-                              "parentId": "color_management",
-                              "entityType": "default"
-                            }
-                          },
-                          {
-                            "count": 6,
-                            "id": "system_colors",
-                            "index": 4,
-                            "percentageQuestion": 1.05,
-                            "percentageSurvey": 0.12,
-                            "entity": {
-                              "name": "System colors",
-                              "nameHtml": "System colors",
-                              "nameClean": "System colors",
-                              "id": "system_colors",
-                              "parentId": "color_management",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
-                      },
-                      {
-                        "count": 97,
+                        "count": 106,
                         "id": "cognitive_overload",
-                        "index": 2,
-                        "percentageQuestion": 16.93,
-                        "percentageSurvey": 1.98,
+                        "index": 1,
+                        "percentageQuestion": 18.5,
+                        "percentageSurvey": 2.16,
                         "entity": {
                           "name": "Cognitive overload",
                           "nameHtml": "Cognitive overload",
@@ -1016,11 +838,11 @@
                             }
                           },
                           {
-                            "count": 15,
+                            "count": 14,
                             "id": "hard_to_memorize",
                             "index": 2,
-                            "percentageQuestion": 2.62,
-                            "percentageSurvey": 0.31,
+                            "percentageQuestion": 2.44,
+                            "percentageSurvey": 0.29,
                             "entity": {
                               "name": "Hard to memorize",
                               "nameHtml": "Hard to memorize",
@@ -1049,9 +871,45 @@
                             }
                           },
                           {
+                            "count": 8,
+                            "id": "verbosity_boilerplate",
+                            "index": 4,
+                            "percentageQuestion": 1.4,
+                            "percentageSurvey": 0.16,
+                            "entity": {
+                              "name": "Excessive verbosity",
+                              "nameHtml": "Excessive verbosity",
+                              "nameClean": "Excessive verbosity",
+                              "description": "APIs being overly verbose and/or requiring too much boilerplate.",
+                              "descriptionHtml": "APIs being overly verbose and/or requiring too much boilerplate.",
+                              "descriptionClean": "APIs being overly verbose and/or requiring too much boilerplate.",
+                              "id": "verbosity_boilerplate",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 6,
+                            "id": "unclear_use_cases",
+                            "index": 5,
+                            "percentageQuestion": 1.05,
+                            "percentageSurvey": 0.12,
+                            "entity": {
+                              "name": "Unclear use cases",
+                              "nameHtml": "Unclear use cases",
+                              "nameClean": "Unclear use cases",
+                              "description": "Not clear why you would use a specific feature",
+                              "descriptionHtml": "Not clear why you would use a specific feature",
+                              "descriptionClean": "Not clear why you would use a specific feature",
+                              "id": "unclear_use_cases",
+                              "parentId": "cognitive_overload",
+                              "entityType": "default"
+                            }
+                          },
+                          {
                             "count": 5,
                             "id": "speed_of_change",
-                            "index": 4,
+                            "index": 6,
                             "percentageQuestion": 0.87,
                             "percentageSurvey": 0.1,
                             "entity": {
@@ -1071,7 +929,7 @@
                       {
                         "count": 81,
                         "id": "interop_issues",
-                        "index": 3,
+                        "index": 2,
                         "percentageQuestion": 14.14,
                         "percentageSurvey": 1.65,
                         "entity": {
@@ -1161,7 +1019,7 @@
                       {
                         "count": 80,
                         "id": "color_contrast",
-                        "index": 4,
+                        "index": 3,
                         "percentageQuestion": 13.96,
                         "percentageSurvey": 1.63,
                         "entity": {
@@ -1201,7 +1059,7 @@
                       {
                         "count": 65,
                         "id": "contrast_color",
-                        "index": 5,
+                        "index": 4,
                         "percentageQuestion": 11.34,
                         "percentageSurvey": 1.33,
                         "entity": {
@@ -1249,11 +1107,11 @@
                         }
                       },
                       {
-                        "count": 55,
+                        "count": 54,
                         "id": "dark_mode",
-                        "index": 6,
-                        "percentageQuestion": 9.6,
-                        "percentageSurvey": 1.12,
+                        "index": 5,
+                        "percentageQuestion": 9.42,
+                        "percentageSurvey": 1.1,
                         "entity": {
                           "name": "Dark mode",
                           "nameHtml": "Dark mode",
@@ -1263,11 +1121,11 @@
                         },
                         "nestedBuckets": [
                           {
-                            "count": 22,
+                            "count": 21,
                             "id": "light_dark",
                             "index": 0,
-                            "percentageQuestion": 3.84,
-                            "percentageSurvey": 0.45,
+                            "percentageQuestion": 3.66,
+                            "percentageSurvey": 0.43,
                             "entity": {
                               "name": "`light-dark()`",
                               "nameHtml": "<code>light-dark()</code>",
@@ -1308,6 +1166,113 @@
                                     "firefox_android": "120",
                                     "safari": "17.5",
                                     "safari_ios": "17.5"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 50,
+                        "id": "wide_gamut_colors",
+                        "index": 6,
+                        "percentageQuestion": 8.73,
+                        "percentageSurvey": 1.02,
+                        "entity": {
+                          "name": "Wide Gamut Colors",
+                          "nameHtml": "Wide Gamut Colors",
+                          "nameClean": "Wide Gamut Colors",
+                          "description": "`lch()`, `lab()`, `oklch()`, `oklab()`",
+                          "descriptionHtml": "<code>lch()</code>, <code>lab()</code>, <code>oklch()</code>, <code>oklab()</code>",
+                          "descriptionClean": "lch(), lab(), oklch(), oklab()",
+                          "id": "wide_gamut_colors",
+                          "parentId": "color_management",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".foo {\n  background-color: lab(29.2345% 39.3825 20.0664);\n  background-color: lch(29.2345% 44.2 27);\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">lab</span>(<span class=\"hljs-number\">29.2345%</span> <span class=\"hljs-number\">39.3825</span> <span class=\"hljs-number\">20.0664</span>);\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">lch</span>(<span class=\"hljs-number\">29.2345%</span> <span class=\"hljs-number\">44.2</span> <span class=\"hljs-number\">27</span>);\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/lch"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-lch-lab"
+                          },
+                          "webFeature": {
+                            "id": "oklab",
+                            "description_html": "The Oklab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is, aiming to match how humans perceive colors. OkLCh is a variant of Oklab with polar coordinates. These color spaces can be used with the CSS <code>oklab()</code> and <code>oklch()</code> functions.",
+                            "group": [
+                              "color-types"
+                            ],
+                            "name": "Oklab and OkLCh",
+                            "spec": [
+                              "https://drafts.csswg.org/css-color-4/#ok-lab"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/oklab/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2023-05-09",
+                              "support": {
+                                "chrome": "111",
+                                "chrome_android": "111",
+                                "edge": "111",
+                                "firefox": "113",
+                                "firefox_android": "113",
+                                "safari": "15.4",
+                                "safari_ios": "15.4"
+                              }
+                            }
+                          }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 28,
+                            "id": "oklch_colors",
+                            "index": 0,
+                            "percentageQuestion": 4.89,
+                            "percentageSurvey": 0.57,
+                            "entity": {
+                              "name": "OKLCH Colors",
+                              "nameHtml": "OKLCH Colors",
+                              "nameClean": "OKLCH Colors",
+                              "id": "oklch_colors",
+                              "parentId": "wide_gamut_colors",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": ".foo {\n  background-color: oklch(40.1% 0.123 21.57)\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">oklch</span>(<span class=\"hljs-number\">40.1%</span> <span class=\"hljs-number\">0.123</span> <span class=\"hljs-number\">21.57</span>)\n}"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/wf-oklab"
+                              },
+                              "webFeature": {
+                                "id": "oklab",
+                                "description_html": "The Oklab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is, aiming to match how humans perceive colors. OkLCh is a variant of Oklab with polar coordinates. These color spaces can be used with the CSS <code>oklab()</code> and <code>oklch()</code> functions.",
+                                "group": [
+                                  "color-types"
+                                ],
+                                "name": "Oklab and OkLCh",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-color-4/#ok-lab"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/oklab/",
+                                "status": {
+                                  "baseline": "high",
+                                  "baseline_low_date": "2023-05-09",
+                                  "support": {
+                                    "chrome": "111",
+                                    "chrome_android": "111",
+                                    "edge": "111",
+                                    "firefox": "113",
+                                    "firefox_android": "113",
+                                    "safari": "15.4",
+                                    "safari_ios": "15.4"
                                   }
                                 }
                               }
@@ -1383,11 +1348,26 @@
                         ]
                       },
                       {
-                        "count": 35,
-                        "id": "relative_colors",
+                        "count": 34,
+                        "id": "gamut_mapping",
                         "index": 8,
-                        "percentageQuestion": 6.11,
-                        "percentageSurvey": 0.71,
+                        "percentageQuestion": 5.93,
+                        "percentageSurvey": 0.69,
+                        "entity": {
+                          "name": "Gamut mapping and display variability",
+                          "nameHtml": "Gamut mapping and display variability",
+                          "nameClean": "Gamut mapping and display variability",
+                          "id": "gamut_mapping",
+                          "parentId": "color_management",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 33,
+                        "id": "relative_colors",
+                        "index": 9,
+                        "percentageQuestion": 5.76,
+                        "percentageSurvey": 0.67,
                         "entity": {
                           "name": "Relative Colors",
                           "nameHtml": "Relative Colors",
@@ -1435,7 +1415,7 @@
                       {
                         "count": 33,
                         "id": "syntax_issues",
-                        "index": 9,
+                        "index": 10,
                         "percentageQuestion": 5.76,
                         "percentageSurvey": 0.67,
                         "entity": {
@@ -1447,9 +1427,59 @@
                         }
                       },
                       {
+                        "count": 30,
+                        "id": "css_custom_properties",
+                        "index": 11,
+                        "percentageQuestion": 5.24,
+                        "percentageSurvey": 0.61,
+                        "entity": {
+                          "name": "Custom Properties (Variables)",
+                          "nameHtml": "Custom Properties (Variables)",
+                          "nameClean": "Custom Properties (Variables)",
+                          "id": "css_custom_properties",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ":root {\n  --main-bg-color: brown;\n}\n.foo {\n  background-color: var(--main-bg-color);\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-pseudo\">:root</span> {\n  <span class=\"hljs-attr\">--main-bg-color</span>: brown;\n}\n<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--main-bg-color);\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-variables"
+                          },
+                          "webFeature": {
+                            "id": "custom-properties",
+                            "description_html": "Custom properties are CSS properties prefixed with <code>--</code> that set values you can reuse with the <code>var()</code> function. For example, you can set a <code>--key-color</code> property to reuse as <code>border-color: var(--key-color)</code>. Also known as CSS variables.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "Custom properties",
+                            "spec": [
+                              "https://drafts.csswg.org/css-variables-1/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/custom-properties/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2017-04-05",
+                              "support": {
+                                "chrome": "49",
+                                "chrome_android": "49",
+                                "edge": "15",
+                                "firefox": "31",
+                                "firefox_android": "31",
+                                "safari": "9.1",
+                                "safari_ios": "9.3"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
                         "count": 24,
                         "id": "accessibility_issues",
-                        "index": 10,
+                        "index": 12,
                         "percentageQuestion": 4.19,
                         "percentageSurvey": 0.49,
                         "entity": {
@@ -1481,34 +1511,9 @@
                         ]
                       },
                       {
-                        "count": 24,
-                        "id": "css_custom_properties",
-                        "index": 11,
-                        "percentageQuestion": 4.19,
-                        "percentageSurvey": 0.49,
-                        "entity": {
-                          "name": "Custom Properties (Variables)",
-                          "nameHtml": "Custom Properties (Variables)",
-                          "nameClean": "Custom Properties (Variables)",
-                          "id": "css_custom_properties",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ":root {\n  --main-bg-color: brown;\n}\n.foo {\n  background-color: var(--main-bg-color);\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-pseudo\">:root</span> {\n  <span class=\"hljs-attr\">--main-bg-color</span>: brown;\n}\n<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--main-bg-color);\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-variables"
-                          }
-                        }
-                      },
-                      {
                         "count": 21,
                         "id": "educational_issues",
-                        "index": 12,
+                        "index": 13,
                         "percentageQuestion": 3.66,
                         "percentageSurvey": 0.43,
                         "entity": {
@@ -1541,72 +1546,97 @@
                       },
                       {
                         "count": 19,
-                        "id": "css_gradients",
-                        "index": 13,
+                        "id": "color_manipulation_issues",
+                        "index": 14,
                         "percentageQuestion": 3.32,
                         "percentageSurvey": 0.39,
                         "entity": {
-                          "name": "CSS gradients",
-                          "nameHtml": "CSS gradients",
-                          "nameClean": "CSS gradients",
-                          "id": "css_gradients",
+                          "name": "Color manipulation",
+                          "nameHtml": "Color manipulation",
+                          "nameClean": "Color manipulation",
+                          "id": "color_manipulation_issues",
+                          "parentId": "color_management",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 19,
+                            "id": "color_alpha",
+                            "index": 0,
+                            "percentageQuestion": 3.32,
+                            "percentageSurvey": 0.39,
+                            "entity": {
+                              "name": "Adjusting alpha/opacity",
+                              "nameHtml": "Adjusting alpha/opacity",
+                              "nameClean": "Adjusting alpha/opacity",
+                              "id": "color_alpha",
+                              "parentId": "color_manipulation_issues",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
-                        "count": 15,
-                        "id": "color_mix",
-                        "index": 14,
-                        "percentageQuestion": 2.62,
-                        "percentageSurvey": 0.31,
+                        "count": 19,
+                        "id": "css_gradients",
+                        "index": 15,
+                        "percentageQuestion": 3.32,
+                        "percentageSurvey": 0.39,
                         "entity": {
-                          "name": "`color-mix()`",
-                          "nameHtml": "<code>color-mix()</code>",
-                          "nameClean": "color-mix()",
-                          "id": "color_mix",
+                          "name": "CSS Gradients",
+                          "nameHtml": "CSS Gradients",
+                          "nameClean": "CSS Gradients",
+                          "id": "css_gradients",
                           "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".teal {\n  background: color-mix(in lab, white 20%, #34c9eb);\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.teal</span> {\n  <span class=\"hljs-attribute\">background</span>: <span class=\"hljs-built_in\">color-mix</span>(in lab, white <span class=\"hljs-number\">20%</span>, <span class=\"hljs-number\">#34c9eb</span>);\n}"
-                          },
                           "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/mdn-css_types_color_color-mix"
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Images/Using_gradients"
                           },
                           "webFeature": {
-                            "id": "color-mix",
-                            "description_html": "The <code>color-mix()</code> function mixes two colors in a given color space and by a given amount. Commonly, lighter or darker variations of a color are created by mixing with white or black.",
+                            "id": "gradients",
+                            "description_html": "The <code>linear-gradient()</code> and <code>radial-gradient()</code> CSS functions and their repeating counterparts create backgrounds that progress smoothly between multiple colors.",
                             "group": [
-                              "css"
+                              "gradients"
                             ],
-                            "name": "color-mix()",
+                            "name": "Gradients",
                             "spec": [
-                              "https://drafts.csswg.org/css-color-5/#color-mix"
+                              "https://drafts.csswg.org/css-images-3/#gradients"
                             ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/color-mix/",
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/gradients/",
                             "status": {
                               "baseline": "high",
-                              "baseline_low_date": "2023-05-09",
+                              "baseline_low_date": "2015-07-29",
                               "support": {
-                                "chrome": "111",
-                                "chrome_android": "111",
-                                "edge": "111",
-                                "firefox": "113",
-                                "firefox_android": "113",
-                                "safari": "16.2",
-                                "safari_ios": "16.2"
+                                "chrome": "26",
+                                "chrome_android": "26",
+                                "edge": "12",
+                                "firefox": "3.6",
+                                "firefox_android": "4",
+                                "safari": "7",
+                                "safari_ios": "7"
                               }
                             }
                           }
                         }
                       },
                       {
+                        "count": 17,
+                        "id": "color_conversion",
+                        "index": 16,
+                        "percentageQuestion": 2.97,
+                        "percentageSurvey": 0.35,
+                        "entity": {
+                          "name": "Color conversion",
+                          "nameHtml": "Color conversion",
+                          "nameClean": "Color conversion",
+                          "id": "color_conversion",
+                          "parentId": "color_management",
+                          "entityType": "default"
+                        }
+                      },
+                      {
                         "count": 15,
                         "id": "maintenance",
-                        "index": 15,
+                        "index": 17,
                         "percentageQuestion": 2.62,
                         "percentageSurvey": 0.31,
                         "entity": {
@@ -1654,7 +1684,7 @@
                       {
                         "count": 14,
                         "id": "ecosystem",
-                        "index": 16,
+                        "index": 18,
                         "percentageQuestion": 2.44,
                         "percentageSurvey": 0.29,
                         "entity": {
@@ -1667,8 +1697,58 @@
                       },
                       {
                         "count": 11,
+                        "id": "color_mix",
+                        "index": 19,
+                        "percentageQuestion": 1.92,
+                        "percentageSurvey": 0.22,
+                        "entity": {
+                          "name": "`color-mix()`",
+                          "nameHtml": "<code>color-mix()</code>",
+                          "nameClean": "color-mix()",
+                          "id": "color_mix",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".teal {\n  background: color-mix(in lab, white 20%, #34c9eb);\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.teal</span> {\n  <span class=\"hljs-attribute\">background</span>: <span class=\"hljs-built_in\">color-mix</span>(in lab, white <span class=\"hljs-number\">20%</span>, <span class=\"hljs-number\">#34c9eb</span>);\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_types_color_color-mix"
+                          },
+                          "webFeature": {
+                            "id": "color-mix",
+                            "description_html": "The <code>color-mix()</code> function mixes two colors in a given color space and by a given amount. Commonly, lighter or darker variations of a color are created by mixing with white or black.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "color-mix()",
+                            "spec": [
+                              "https://drafts.csswg.org/css-color-5/#color-mix"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/color-mix/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2023-05-09",
+                              "support": {
+                                "chrome": "111",
+                                "chrome_android": "111",
+                                "edge": "111",
+                                "firefox": "113",
+                                "firefox_android": "113",
+                                "safari": "16.2",
+                                "safari_ios": "16.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 11,
                         "id": "design_systems_issues",
-                        "index": 17,
+                        "index": 20,
                         "percentageQuestion": 1.92,
                         "percentageSurvey": 0.22,
                         "entity": {
@@ -1680,29 +1760,27 @@
                           "descriptionClean": "Issues related to the creation, maintenance, and implementation of design systems and component libraries.",
                           "id": "design_systems_issues",
                           "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 11,
-                            "id": "design_tokens",
-                            "index": 0,
-                            "percentageQuestion": 1.92,
-                            "percentageSurvey": 0.22,
-                            "entity": {
-                              "name": "Design tokens",
-                              "nameHtml": "Design tokens",
-                              "nameClean": "Design tokens",
-                              "id": "design_tokens",
-                              "parentId": "design_systems_issues",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
+                        }
+                      },
+                      {
+                        "count": 11,
+                        "id": "design_tokens",
+                        "index": 21,
+                        "percentageQuestion": 1.92,
+                        "percentageSurvey": 0.22,
+                        "entity": {
+                          "name": "Design tokens",
+                          "nameHtml": "Design tokens",
+                          "nameClean": "Design tokens",
+                          "id": "design_tokens",
+                          "parentId": "design_systems",
+                          "entityType": "default"
+                        }
                       },
                       {
                         "count": 8,
                         "id": "debugging_issues",
-                        "index": 18,
+                        "index": 22,
                         "percentageQuestion": 1.4,
                         "percentageSurvey": 0.16,
                         "entity": {
@@ -1737,16 +1815,9 @@
                         ]
                       },
                       {
-                        "count": 8,
-                        "id": "verbosity",
-                        "index": 19,
-                        "percentageQuestion": 1.4,
-                        "percentageSurvey": 0.16
-                      },
-                      {
                         "count": 7,
                         "id": "color_scheme",
-                        "index": 20,
+                        "index": 23,
                         "percentageQuestion": 1.22,
                         "percentageSurvey": 0.14,
                         "entity": {
@@ -1796,7 +1867,7 @@
                       {
                         "count": 6,
                         "id": "accent_color",
-                        "index": 21,
+                        "index": 24,
                         "percentageQuestion": 1.05,
                         "percentageSurvey": 0.12,
                         "entity": {
@@ -1842,83 +1913,18 @@
                         }
                       },
                       {
-                        "count": 6,
-                        "id": "unclear_use_cases",
-                        "index": 22,
-                        "percentageQuestion": 1.05,
-                        "percentageSurvey": 0.12
-                      },
-                      {
-                        "count": 5,
-                        "id": "cascade",
-                        "index": 23,
-                        "percentageQuestion": 0.87,
-                        "percentageSurvey": 0.1
-                      },
-                      {
-                        "count": 5,
-                        "id": "forced_colors",
-                        "index": 24,
-                        "percentageQuestion": 0.87,
-                        "percentageSurvey": 0.1,
-                        "entity": {
-                          "name": "`forced-colors`",
-                          "nameHtml": "<code>forced-colors</code>",
-                          "nameClean": "forced-colors",
-                          "id": "forced_colors",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": "@media (forced-colors: active) {\n  .button {\n    border: 2px green solid;\n  }\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-keyword\">@media</span> (<span class=\"hljs-attribute\">forced-colors</span>: active) {\n  <span class=\"hljs-selector-class\">.button</span> {\n    <span class=\"hljs-attribute\">border</span>: <span class=\"hljs-number\">2px</span> green solid;\n  }\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/forced-colors"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/mdn-css_at-rules_media_forced-colors"
-                          },
-                          "webFeature": {
-                            "id": "forced-colors",
-                            "description_html": "The <code>forced-colors</code> CSS @media rule detects when a user has chosen to use a forced colors mode, also known as high-contrast mode, and the <code>forced-color-adjust</code> CSS property sets whether forced colors apply to an element.",
-                            "group": [
-                              "css"
-                            ],
-                            "name": "Forced colors",
-                            "spec": [
-                              "https://drafts.csswg.org/mediaqueries-5/#forced-colors",
-                              "https://drafts.csswg.org/css-color-adjust-1/#forced-color-adjust-prop"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/forced-colors/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2022-09-12",
-                              "support": {
-                                "chrome": "89",
-                                "chrome_android": "89",
-                                "edge": "79",
-                                "firefox": "89",
-                                "firefox_android": "89",
-                                "safari": "16",
-                                "safari_ios": "16"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 4327,
+                        "count": 4333,
                         "id": "no_answer",
                         "index": 25,
                         "percentageQuestion": 0,
-                        "percentageSurvey": 88.27
+                        "percentageSurvey": 88.39
                       },
                       {
-                        "count": 194,
+                        "count": 198,
                         "id": "other_answers",
                         "index": 26,
-                        "percentageQuestion": 33.66,
-                        "percentageSurvey": 3.89
+                        "percentageQuestion": 34.38,
+                        "percentageSurvey": 3.97
                       }
                     ]
                   }
