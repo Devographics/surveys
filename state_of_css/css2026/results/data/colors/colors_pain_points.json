@@ -39,7 +39,24 @@
                         "entity": {
                           "id": "theming_issues",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 25,
+                            "id": "dark_mode_issues",
+                            "index": 0,
+                            "percentageQuestion": 6,
+                            "percentageSurvey": 0.45,
+                            "entity": {
+                              "name": "Dark mode issues",
+                              "nameHtml": "Dark mode issues",
+                              "nameClean": "Dark mode issues",
+                              "id": "dark_mode_issues",
+                              "parentId": "theming_issues",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 40,
@@ -51,7 +68,7 @@
                           "name": "Contrast issues",
                           "nameHtml": "Contrast issues",
                           "nameClean": "Contrast issues",
-                          "id": "contrast_issues",
+                          "id": "color_contrast",
                           "parentId": "accessibility_issues",
                           "entityType": "default"
                         }
@@ -180,23 +197,9 @@
                         }
                       },
                       {
-                        "count": 25,
-                        "id": "dark_mode_issues",
-                        "index": 5,
-                        "percentageQuestion": 6,
-                        "percentageSurvey": 0.45,
-                        "entity": {
-                          "name": "Dark mode issues",
-                          "nameHtml": "Dark mode issues",
-                          "nameClean": "Dark mode issues",
-                          "id": "dark_mode_issues",
-                          "entityType": "default"
-                        }
-                      },
-                      {
                         "count": 20,
                         "id": "color_spaces_issues",
-                        "index": 6,
+                        "index": 5,
                         "percentageQuestion": 4.8,
                         "percentageSurvey": 0.36,
                         "entity": {
@@ -207,7 +210,7 @@
                       {
                         "count": 20,
                         "id": "color_variables_issues",
-                        "index": 7,
+                        "index": 6,
                         "percentageQuestion": 4.8,
                         "percentageSurvey": 0.36,
                         "entity": {
@@ -218,7 +221,7 @@
                       {
                         "count": 19,
                         "id": "accessibility",
-                        "index": 8,
+                        "index": 7,
                         "percentageQuestion": 4.56,
                         "percentageSurvey": 0.35,
                         "entity": {
@@ -235,7 +238,7 @@
                       {
                         "count": 17,
                         "id": "relative_colors",
-                        "index": 9,
+                        "index": 8,
                         "percentageQuestion": 4.08,
                         "percentageSurvey": 0.31,
                         "entity": {
@@ -285,7 +288,7 @@
                       {
                         "count": 16,
                         "id": "color_manipulation_issues",
-                        "index": 10,
+                        "index": 9,
                         "percentageQuestion": 3.84,
                         "percentageSurvey": 0.29,
                         "entity": {
@@ -300,7 +303,7 @@
                       {
                         "count": 16,
                         "id": "gradient_issues",
-                        "index": 11,
+                        "index": 10,
                         "percentageQuestion": 3.84,
                         "percentageSurvey": 0.29,
                         "entity": {
@@ -311,7 +314,7 @@
                       {
                         "count": 15,
                         "id": "color_mix",
-                        "index": 12,
+                        "index": 11,
                         "percentageQuestion": 3.6,
                         "percentageSurvey": 0.27,
                         "entity": {
@@ -361,7 +364,7 @@
                       {
                         "count": 15,
                         "id": "color_syntax_issues",
-                        "index": 13,
+                        "index": 12,
                         "percentageQuestion": 3.6,
                         "percentageSurvey": 0.27,
                         "entity": {
@@ -372,97 +375,75 @@
                       {
                         "count": 13,
                         "id": "color_contrast",
-                        "index": 14,
+                        "index": 13,
                         "percentageQuestion": 3.12,
                         "percentageSurvey": 0.24,
                         "entity": {
-                          "name": "`color-contrast()`",
-                          "nameHtml": "<code>color-contrast()</code>",
-                          "nameClean": "color-contrast()",
+                          "name": "Contrast issues",
+                          "nameHtml": "Contrast issues",
+                          "nameClean": "Contrast issues",
                           "id": "color_contrast",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".high-contrast {\n  color: color-contrast(#008080 vs olive, var(--myColor), #d2691e);\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.high-contrast</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">color-contrast</span>(<span class=\"hljs-number\">#008080</span> vs olive, <span class=\"hljs-built_in\">var</span>(--myColor), <span class=\"hljs-number\">#d2691e</span>);\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/contrast-color"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/mdn-css_types_color_color-contrast"
-                          },
-                          "webFeature": {
-                            "id": "color-contrast",
-                            "description_html": "The <code>color-contrast()</code> CSS function picks a color from a list that has the most contrast with another color.",
-                            "group": [
-                              "color-types"
-                            ],
-                            "name": "color-contrast()",
-                            "spec": [
-                              "https://drafts.csswg.org/css-color-5/#contrast-color"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/color-contrast/",
-                            "status": {
-                              "baseline": "false"
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 12,
-                        "id": "contrast_color",
-                        "index": 15,
-                        "percentageQuestion": 2.88,
-                        "percentageSurvey": 0.22,
-                        "entity": {
-                          "name": "`contrast-color()`",
-                          "nameHtml": "<code>contrast-color()</code>",
-                          "nameClean": "contrast-color()",
-                          "id": "contrast_color",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": "button {\n  --background-color: darkblue;\n  background-color: var(--background-color);\n  color: contrast-color(var(--background-color));\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-tag\">button</span> {\n  <span class=\"hljs-attr\">--background-color</span>: darkblue;\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--background-color);\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">contrast-color</span>(<span class=\"hljs-built_in\">var</span>(--background-color));\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/contrast-color"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/mdn-css_types_color_contrast-color"
-                          },
-                          "webFeature": {
-                            "id": "contrast-color",
-                            "description_html": "The <code>contrast-color()</code> CSS function picks a color that has guaranteed contrast against a specified foreground or background color.",
-                            "group": [
-                              "color-types"
-                            ],
-                            "name": "contrast-color()",
-                            "spec": [
-                              "https://drafts.csswg.org/css-color-6/#funcdef-contrast-color"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/contrast-color/",
-                            "status": {
-                              "baseline": "low",
-                              "baseline_low_date": "2026-04-10",
-                              "support": {
-                                "chrome": "147",
-                                "chrome_android": "147",
-                                "edge": "147",
-                                "firefox": "146",
-                                "firefox_android": "146",
-                                "safari": "26",
-                                "safari_ios": "26"
+                          "parentId": "accessibility_issues",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 12,
+                            "id": "contrast_color",
+                            "index": 0,
+                            "percentageQuestion": 2.88,
+                            "percentageSurvey": 0.22,
+                            "entity": {
+                              "name": "`contrast-color()`",
+                              "nameHtml": "<code>contrast-color()</code>",
+                              "nameClean": "contrast-color()",
+                              "id": "contrast_color",
+                              "parentId": "color_contrast",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": "button {\n  --background-color: darkblue;\n  background-color: var(--background-color);\n  color: contrast-color(var(--background-color));\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-selector-tag\">button</span> {\n  <span class=\"hljs-attr\">--background-color</span>: darkblue;\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--background-color);\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">contrast-color</span>(<span class=\"hljs-built_in\">var</span>(--background-color));\n}"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/contrast-color"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/mdn-css_types_color_contrast-color"
+                              },
+                              "webFeature": {
+                                "id": "contrast-color",
+                                "description_html": "The <code>contrast-color()</code> CSS function picks a color that has guaranteed contrast against a specified foreground or background color.",
+                                "group": [
+                                  "color-types"
+                                ],
+                                "name": "contrast-color()",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-color-6/#funcdef-contrast-color"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/contrast-color/",
+                                "status": {
+                                  "baseline": "low",
+                                  "baseline_low_date": "2026-04-10",
+                                  "support": {
+                                    "chrome": "147",
+                                    "chrome_android": "147",
+                                    "edge": "147",
+                                    "firefox": "146",
+                                    "firefox_android": "146",
+                                    "safari": "26",
+                                    "safari_ios": "26"
+                                  }
+                                }
                               }
                             }
                           }
-                        }
+                        ]
                       },
                       {
                         "count": 11,
                         "id": "css_custom_properties",
-                        "index": 16,
+                        "index": 14,
                         "percentageQuestion": 2.64,
                         "percentageSurvey": 0.2,
                         "entity": {
@@ -512,7 +493,7 @@
                       {
                         "count": 11,
                         "id": "too_many_choices",
-                        "index": 17,
+                        "index": 15,
                         "percentageQuestion": 2.64,
                         "percentageSurvey": 0.2,
                         "entity": {
@@ -530,7 +511,7 @@
                       {
                         "count": 10,
                         "id": "color_scheme",
-                        "index": 18,
+                        "index": 16,
                         "percentageQuestion": 2.4,
                         "percentageSurvey": 0.18,
                         "entity": {
@@ -580,7 +561,7 @@
                       {
                         "count": 10,
                         "id": "currentcolor",
-                        "index": 19,
+                        "index": 17,
                         "percentageQuestion": 2.4,
                         "percentageSurvey": 0.18,
                         "entity": {
@@ -630,7 +611,7 @@
                       {
                         "count": 10,
                         "id": "excessive_complexity",
-                        "index": 20,
+                        "index": 18,
                         "percentageQuestion": 2.4,
                         "percentageSurvey": 0.18,
                         "entity": {
@@ -645,7 +626,7 @@
                       {
                         "count": 10,
                         "id": "new_color_spaces_adoption_issues",
-                        "index": 21,
+                        "index": 19,
                         "percentageQuestion": 2.4,
                         "percentageSurvey": 0.18,
                         "entity": {
@@ -656,7 +637,7 @@
                       {
                         "count": 9,
                         "id": "color_generation_issues",
-                        "index": 22,
+                        "index": 20,
                         "percentageQuestion": 2.16,
                         "percentageSurvey": 0.16,
                         "entity": {
@@ -667,7 +648,7 @@
                       {
                         "count": 8,
                         "id": "accent_color",
-                        "index": 23,
+                        "index": 21,
                         "percentageQuestion": 1.92,
                         "percentageSurvey": 0.15,
                         "entity": {
@@ -715,11 +696,76 @@
                       {
                         "count": 7,
                         "id": "too_many_color_formats",
-                        "index": 24,
+                        "index": 22,
                         "percentageQuestion": 1.68,
                         "percentageSurvey": 0.13,
                         "entity": {
                           "id": "too_many_color_formats",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 6,
+                        "id": "has_selector",
+                        "index": 23,
+                        "percentageQuestion": 1.44,
+                        "percentageSurvey": 0.11,
+                        "entity": {
+                          "name": "`:has()`",
+                          "nameHtml": "<code>:has()</code>",
+                          "nameClean": ":has()",
+                          "id": "has_selector",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "a:has(> img) {\n  border: 2px solid grey;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-tag\">a</span><span class=\"hljs-selector-pseudo\">:has</span>(&gt; <span class=\"hljs-selector-tag\">img</span>) {\n  <span class=\"hljs-attribute\">border</span>: <span class=\"hljs-number\">2px</span> solid grey;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:has"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-has"
+                          },
+                          "webFeature": {
+                            "id": "has",
+                            "description_html": "The <code>:has()</code> CSS functional pseudo-class matches an element if any of the selectors passed as parameters would match at least one element.",
+                            "group": [
+                              "selectors"
+                            ],
+                            "name": ":has()",
+                            "spec": [
+                              "https://drafts.csswg.org/selectors-4/#relational"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/has/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2023-12-19",
+                              "support": {
+                                "chrome": "105",
+                                "chrome_android": "105",
+                                "edge": "105",
+                                "firefox": "121",
+                                "firefox_android": "121",
+                                "safari": "15.4",
+                                "safari_ios": "15.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 6,
+                        "id": "lack_of_tools",
+                        "index": 24,
+                        "percentageQuestion": 1.44,
+                        "percentageSurvey": 0.11,
+                        "entity": {
+                          "name": "Lack of tools",
+                          "nameHtml": "Lack of tools",
+                          "nameClean": "Lack of tools",
+                          "id": "lack_of_tools",
+                          "parentId": "tooling",
                           "entityType": "default"
                         }
                       },
@@ -731,11 +777,11 @@
                         "percentageSurvey": 92.35
                       },
                       {
-                        "count": 210,
+                        "count": 198,
                         "id": "other_answers",
                         "index": 26,
-                        "percentageQuestion": 50.38,
-                        "percentageSurvey": 3.83
+                        "percentageQuestion": 47.5,
+                        "percentageSurvey": 3.61
                       }
                     ]
                   },
@@ -757,11 +803,113 @@
                     },
                     "buckets": [
                       {
-                        "count": 120,
-                        "id": "theming",
+                        "count": 156,
+                        "id": "accessibility_issues",
                         "index": 0,
-                        "percentageQuestion": 20.94,
-                        "percentageSurvey": 2.45,
+                        "percentageQuestion": 27.23,
+                        "percentageSurvey": 3.18,
+                        "entity": {
+                          "name": "Accessibility",
+                          "nameHtml": "Accessibility",
+                          "nameClean": "Accessibility",
+                          "description": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "descriptionHtml": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "descriptionClean": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
+                          "id": "accessibility_issues",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 142,
+                            "id": "color_contrast",
+                            "index": 0,
+                            "percentageQuestion": 24.78,
+                            "percentageSurvey": 2.9,
+                            "entity": {
+                              "name": "Contrast issues",
+                              "nameHtml": "Contrast issues",
+                              "nameClean": "Contrast issues",
+                              "id": "color_contrast",
+                              "parentId": "accessibility_issues",
+                              "entityType": "default"
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 86,
+                                "id": "contrast_color",
+                                "index": 0,
+                                "percentageQuestion": 15.01,
+                                "percentageSurvey": 1.75,
+                                "entity": {
+                                  "name": "`contrast-color()`",
+                                  "nameHtml": "<code>contrast-color()</code>",
+                                  "nameClean": "contrast-color()",
+                                  "id": "contrast_color",
+                                  "parentId": "color_contrast",
+                                  "entityType": "feature",
+                                  "example": {
+                                    "language": "css",
+                                    "code": "button {\n  --background-color: darkblue;\n  background-color: var(--background-color);\n  color: contrast-color(var(--background-color));\n}\n",
+                                    "codeHighlighted": "<span class=\"hljs-selector-tag\">button</span> {\n  <span class=\"hljs-attr\">--background-color</span>: darkblue;\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--background-color);\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">contrast-color</span>(<span class=\"hljs-built_in\">var</span>(--background-color));\n}"
+                                  },
+                                  "mdn": {
+                                    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/contrast-color"
+                                  },
+                                  "caniuse": {
+                                    "url": "https://caniuse.com/mdn-css_types_color_contrast-color"
+                                  },
+                                  "webFeature": {
+                                    "id": "contrast-color",
+                                    "description_html": "The <code>contrast-color()</code> CSS function picks a color that has guaranteed contrast against a specified foreground or background color.",
+                                    "group": [
+                                      "color-types"
+                                    ],
+                                    "name": "contrast-color()",
+                                    "spec": [
+                                      "https://drafts.csswg.org/css-color-6/#funcdef-contrast-color"
+                                    ],
+                                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/contrast-color/",
+                                    "status": {
+                                      "baseline": "low",
+                                      "baseline_low_date": "2026-04-10",
+                                      "support": {
+                                        "chrome": "147",
+                                        "chrome_android": "147",
+                                        "edge": "147",
+                                        "firefox": "146",
+                                        "firefox_android": "146",
+                                        "safari": "26",
+                                        "safari_ios": "26"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "count": 13,
+                            "id": "contrast_algorithms",
+                            "index": 1,
+                            "percentageQuestion": 2.27,
+                            "percentageSurvey": 0.27,
+                            "entity": {
+                              "name": "Contrast algorithms",
+                              "nameHtml": "Contrast algorithms",
+                              "nameClean": "Contrast algorithms",
+                              "id": "contrast_algorithms",
+                              "parentId": "accessibility_issues",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 132,
+                        "id": "theming",
+                        "index": 1,
+                        "percentageQuestion": 23.04,
+                        "percentageSurvey": 2.69,
                         "entity": {
                           "name": "Theming",
                           "nameHtml": "Theming",
@@ -771,11 +919,11 @@
                         },
                         "nestedBuckets": [
                           {
-                            "count": 51,
+                            "count": 62,
                             "id": "color_palettes",
                             "index": 0,
-                            "percentageQuestion": 8.9,
-                            "percentageSurvey": 1.04,
+                            "percentageQuestion": 10.82,
+                            "percentageSurvey": 1.26,
                             "entity": {
                               "name": "Palettes & scales",
                               "nameHtml": "Palettes &amp; scales",
@@ -788,11 +936,11 @@
                         ]
                       },
                       {
-                        "count": 106,
+                        "count": 97,
                         "id": "cognitive_overload",
-                        "index": 1,
-                        "percentageQuestion": 18.5,
-                        "percentageSurvey": 2.16,
+                        "index": 2,
+                        "percentageQuestion": 16.93,
+                        "percentageSurvey": 1.98,
                         "entity": {
                           "name": "Cognitive overload",
                           "nameHtml": "Cognitive overload",
@@ -838,11 +986,11 @@
                             }
                           },
                           {
-                            "count": 14,
+                            "count": 15,
                             "id": "hard_to_memorize",
                             "index": 2,
-                            "percentageQuestion": 2.44,
-                            "percentageSurvey": 0.29,
+                            "percentageQuestion": 2.62,
+                            "percentageSurvey": 0.31,
                             "entity": {
                               "name": "Hard to memorize",
                               "nameHtml": "Hard to memorize",
@@ -853,27 +1001,9 @@
                             }
                           },
                           {
-                            "count": 13,
-                            "id": "too_much_boilerplate",
-                            "index": 3,
-                            "percentageQuestion": 2.27,
-                            "percentageSurvey": 0.27,
-                            "entity": {
-                              "name": "Excessive boilerplate",
-                              "nameHtml": "Excessive boilerplate",
-                              "nameClean": "Excessive boilerplate",
-                              "description": "Too much boilerplate required",
-                              "descriptionHtml": "Too much boilerplate required",
-                              "descriptionClean": "Too much boilerplate required",
-                              "id": "too_much_boilerplate",
-                              "parentId": "cognitive_overload",
-                              "entityType": "default"
-                            }
-                          },
-                          {
                             "count": 8,
                             "id": "verbosity_boilerplate",
-                            "index": 4,
+                            "index": 3,
                             "percentageQuestion": 1.4,
                             "percentageSurvey": 0.16,
                             "entity": {
@@ -889,11 +1019,11 @@
                             }
                           },
                           {
-                            "count": 6,
+                            "count": 7,
                             "id": "unclear_use_cases",
-                            "index": 5,
-                            "percentageQuestion": 1.05,
-                            "percentageSurvey": 0.12,
+                            "index": 4,
+                            "percentageQuestion": 1.22,
+                            "percentageSurvey": 0.14,
                             "entity": {
                               "name": "Unclear use cases",
                               "nameHtml": "Unclear use cases",
@@ -909,7 +1039,7 @@
                           {
                             "count": 5,
                             "id": "speed_of_change",
-                            "index": 6,
+                            "index": 5,
                             "percentageQuestion": 0.87,
                             "percentageSurvey": 0.1,
                             "entity": {
@@ -929,13 +1059,13 @@
                       {
                         "count": 81,
                         "id": "interop_issues",
-                        "index": 2,
+                        "index": 3,
                         "percentageQuestion": 14.14,
                         "percentageSurvey": 1.65,
                         "entity": {
-                          "name": "Browser issues",
-                          "nameHtml": "Browser issues",
-                          "nameClean": "Browser issues",
+                          "name": "Browser vendor issues",
+                          "nameHtml": "Browser vendor issues",
+                          "nameClean": "Browser vendor issues",
                           "description": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
                           "descriptionHtml": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
                           "descriptionClean": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
@@ -1017,101 +1147,11 @@
                         ]
                       },
                       {
-                        "count": 80,
-                        "id": "color_contrast",
-                        "index": 3,
-                        "percentageQuestion": 13.96,
-                        "percentageSurvey": 1.63,
-                        "entity": {
-                          "name": "`color-contrast()`",
-                          "nameHtml": "<code>color-contrast()</code>",
-                          "nameClean": "color-contrast()",
-                          "id": "color_contrast",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".high-contrast {\n  color: color-contrast(#008080 vs olive, var(--myColor), #d2691e);\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.high-contrast</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">color-contrast</span>(<span class=\"hljs-number\">#008080</span> vs olive, <span class=\"hljs-built_in\">var</span>(--myColor), <span class=\"hljs-number\">#d2691e</span>);\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/contrast-color"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/mdn-css_types_color_color-contrast"
-                          },
-                          "webFeature": {
-                            "id": "color-contrast",
-                            "description_html": "The <code>color-contrast()</code> CSS function picks a color from a list that has the most contrast with another color.",
-                            "group": [
-                              "color-types"
-                            ],
-                            "name": "color-contrast()",
-                            "spec": [
-                              "https://drafts.csswg.org/css-color-5/#contrast-color"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/color-contrast/",
-                            "status": {
-                              "baseline": "false"
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 65,
-                        "id": "contrast_color",
-                        "index": 4,
-                        "percentageQuestion": 11.34,
-                        "percentageSurvey": 1.33,
-                        "entity": {
-                          "name": "`contrast-color()`",
-                          "nameHtml": "<code>contrast-color()</code>",
-                          "nameClean": "contrast-color()",
-                          "id": "contrast_color",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": "button {\n  --background-color: darkblue;\n  background-color: var(--background-color);\n  color: contrast-color(var(--background-color));\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-tag\">button</span> {\n  <span class=\"hljs-attr\">--background-color</span>: darkblue;\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--background-color);\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">contrast-color</span>(<span class=\"hljs-built_in\">var</span>(--background-color));\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/contrast-color"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/mdn-css_types_color_contrast-color"
-                          },
-                          "webFeature": {
-                            "id": "contrast-color",
-                            "description_html": "The <code>contrast-color()</code> CSS function picks a color that has guaranteed contrast against a specified foreground or background color.",
-                            "group": [
-                              "color-types"
-                            ],
-                            "name": "contrast-color()",
-                            "spec": [
-                              "https://drafts.csswg.org/css-color-6/#funcdef-contrast-color"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/contrast-color/",
-                            "status": {
-                              "baseline": "low",
-                              "baseline_low_date": "2026-04-10",
-                              "support": {
-                                "chrome": "147",
-                                "chrome_android": "147",
-                                "edge": "147",
-                                "firefox": "146",
-                                "firefox_android": "146",
-                                "safari": "26",
-                                "safari_ios": "26"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 54,
+                        "count": 57,
                         "id": "dark_mode",
-                        "index": 5,
-                        "percentageQuestion": 9.42,
-                        "percentageSurvey": 1.1,
+                        "index": 4,
+                        "percentageQuestion": 9.95,
+                        "percentageSurvey": 1.16,
                         "entity": {
                           "name": "Dark mode",
                           "nameHtml": "Dark mode",
@@ -1121,11 +1161,11 @@
                         },
                         "nestedBuckets": [
                           {
-                            "count": 21,
+                            "count": 26,
                             "id": "light_dark",
                             "index": 0,
-                            "percentageQuestion": 3.66,
-                            "percentageSurvey": 0.43,
+                            "percentageQuestion": 4.54,
+                            "percentageSurvey": 0.53,
                             "entity": {
                               "name": "`light-dark()`",
                               "nameHtml": "<code>light-dark()</code>",
@@ -1174,11 +1214,11 @@
                         ]
                       },
                       {
-                        "count": 50,
+                        "count": 56,
                         "id": "wide_gamut_colors",
-                        "index": 6,
-                        "percentageQuestion": 8.73,
-                        "percentageSurvey": 1.02,
+                        "index": 5,
+                        "percentageQuestion": 9.77,
+                        "percentageSurvey": 1.14,
                         "entity": {
                           "name": "Wide Gamut Colors",
                           "nameHtml": "Wide Gamut Colors",
@@ -1281,93 +1321,11 @@
                         ]
                       },
                       {
-                        "count": 39,
-                        "id": "tooling_issues",
-                        "index": 7,
-                        "percentageQuestion": 6.81,
-                        "percentageSurvey": 0.8,
-                        "entity": {
-                          "name": "Tooling",
-                          "nameHtml": "Tooling",
-                          "nameClean": "Tooling",
-                          "description": "Issues around third party tools, or lack thereof, including tooling in the browser (extensions, devtools, etc.).",
-                          "descriptionHtml": "Issues around third party tools, or lack thereof, including tooling in the browser (extensions, devtools, etc.).",
-                          "descriptionClean": "Issues around third party tools, or lack thereof, including tooling in the browser (extensions, devtools, etc.).",
-                          "id": "tooling_issues",
-                          "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 22,
-                            "id": "design_tool_compatibility",
-                            "index": 0,
-                            "percentageQuestion": 3.84,
-                            "percentageSurvey": 0.45,
-                            "entity": {
-                              "name": "Design tool compatibility",
-                              "nameHtml": "Design tool compatibility",
-                              "nameClean": "Design tool compatibility",
-                              "id": "design_tool_compatibility",
-                              "parentId": "tooling_issues",
-                              "entityType": "default"
-                            }
-                          },
-                          {
-                            "count": 5,
-                            "id": "preprocessor_reliance",
-                            "index": 1,
-                            "percentageQuestion": 0.87,
-                            "percentageSurvey": 0.1,
-                            "entity": {
-                              "name": "Preprocessor reliance",
-                              "nameHtml": "Preprocessor reliance",
-                              "nameClean": "Preprocessor reliance",
-                              "description": "Native CSS still lacking features that Sass/SCSS/PostCSS provide (mixins, @use, selector concatenation), forcing continued reliance on preprocessors.",
-                              "descriptionHtml": "Native CSS still lacking features that Sass/SCSS/PostCSS provide (mixins, @use, selector concatenation), forcing continued reliance on preprocessors.",
-                              "descriptionClean": "Native CSS still lacking features that Sass/SCSS/PostCSS provide (mixins, @use, selector concatenation), forcing continued reliance on preprocessors.",
-                              "id": "preprocessor_reliance",
-                              "parentId": "tooling_issues",
-                              "entityType": "default"
-                            }
-                          },
-                          {
-                            "count": 5,
-                            "id": "browser_devtools",
-                            "index": 2,
-                            "percentageQuestion": 0.87,
-                            "percentageSurvey": 0.1,
-                            "entity": {
-                              "name": "Browser DevTools",
-                              "nameHtml": "Browser DevTools",
-                              "nameClean": "Browser DevTools",
-                              "id": "browser_devtools",
-                              "parentId": "tooling_issues",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
-                      },
-                      {
-                        "count": 34,
-                        "id": "gamut_mapping",
-                        "index": 8,
-                        "percentageQuestion": 5.93,
-                        "percentageSurvey": 0.69,
-                        "entity": {
-                          "name": "Gamut mapping and display variability",
-                          "nameHtml": "Gamut mapping and display variability",
-                          "nameClean": "Gamut mapping and display variability",
-                          "id": "gamut_mapping",
-                          "parentId": "color_management",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 33,
+                        "count": 46,
                         "id": "relative_colors",
-                        "index": 9,
-                        "percentageQuestion": 5.76,
-                        "percentageSurvey": 0.67,
+                        "index": 6,
+                        "percentageQuestion": 8.03,
+                        "percentageSurvey": 0.94,
                         "entity": {
                           "name": "Relative Colors",
                           "nameHtml": "Relative Colors",
@@ -1413,25 +1371,11 @@
                         }
                       },
                       {
-                        "count": 33,
-                        "id": "syntax_issues",
-                        "index": 10,
-                        "percentageQuestion": 5.76,
-                        "percentageSurvey": 0.67,
-                        "entity": {
-                          "name": "Syntax issues",
-                          "nameHtml": "Syntax issues",
-                          "nameClean": "Syntax issues",
-                          "id": "syntax_issues",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 30,
+                        "count": 40,
                         "id": "css_custom_properties",
-                        "index": 11,
-                        "percentageQuestion": 5.24,
-                        "percentageSurvey": 0.61,
+                        "index": 7,
+                        "percentageQuestion": 6.98,
+                        "percentageSurvey": 0.82,
                         "entity": {
                           "name": "Custom Properties (Variables)",
                           "nameHtml": "Custom Properties (Variables)",
@@ -1477,349 +1421,78 @@
                         }
                       },
                       {
-                        "count": 24,
-                        "id": "accessibility_issues",
-                        "index": 12,
-                        "percentageQuestion": 4.19,
-                        "percentageSurvey": 0.49,
+                        "count": 39,
+                        "id": "tooling_issues",
+                        "index": 8,
+                        "percentageQuestion": 6.81,
+                        "percentageSurvey": 0.8,
                         "entity": {
-                          "name": "Accessibility",
-                          "nameHtml": "Accessibility",
-                          "nameClean": "Accessibility",
-                          "description": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
-                          "descriptionHtml": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
-                          "descriptionClean": "Obstacles in providing accessible experiences (regardless of cause), assistive‑tech compatibility, etc.",
-                          "id": "accessibility_issues",
+                          "name": "Tooling",
+                          "nameHtml": "Tooling",
+                          "nameClean": "Tooling",
+                          "description": "Issues around third party tools, or lack thereof, including tooling in the browser (extensions, devtools, etc.).",
+                          "descriptionHtml": "Issues around third party tools, or lack thereof, including tooling in the browser (extensions, devtools, etc.).",
+                          "descriptionClean": "Issues around third party tools, or lack thereof, including tooling in the browser (extensions, devtools, etc.).",
+                          "id": "tooling_issues",
                           "entityType": "default"
                         },
                         "nestedBuckets": [
                           {
-                            "count": 13,
-                            "id": "contrast_algorithms",
+                            "count": 22,
+                            "id": "design_tool_compatibility",
                             "index": 0,
-                            "percentageQuestion": 2.27,
-                            "percentageSurvey": 0.27,
+                            "percentageQuestion": 3.84,
+                            "percentageSurvey": 0.45,
                             "entity": {
-                              "name": "Contrast algorithms",
-                              "nameHtml": "Contrast algorithms",
-                              "nameClean": "Contrast algorithms",
-                              "id": "contrast_algorithms",
-                              "parentId": "accessibility_issues",
+                              "name": "Design tool compatibility",
+                              "nameHtml": "Design tool compatibility",
+                              "nameClean": "Design tool compatibility",
+                              "id": "design_tool_compatibility",
+                              "parentId": "tooling_issues",
                               "entityType": "default"
                             }
-                          }
-                        ]
-                      },
-                      {
-                        "count": 21,
-                        "id": "educational_issues",
-                        "index": 13,
-                        "percentageQuestion": 3.66,
-                        "percentageSurvey": 0.43,
-                        "entity": {
-                          "name": "Education",
-                          "nameHtml": "Education",
-                          "nameClean": "Education",
-                          "description": "Issues related to learning new technologies",
-                          "descriptionHtml": "Issues related to learning new technologies",
-                          "descriptionClean": "Issues related to learning new technologies",
-                          "id": "educational_issues",
-                          "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 7,
-                            "id": "lack_of_knowledge",
-                            "index": 0,
-                            "percentageQuestion": 1.22,
-                            "percentageSurvey": 0.14,
-                            "entity": {
-                              "name": "Lack of knowledge",
-                              "nameHtml": "Lack of knowledge",
-                              "nameClean": "Lack of knowledge",
-                              "id": "lack_of_knowledge",
-                              "parentId": "educational_issues",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
-                      },
-                      {
-                        "count": 19,
-                        "id": "color_manipulation_issues",
-                        "index": 14,
-                        "percentageQuestion": 3.32,
-                        "percentageSurvey": 0.39,
-                        "entity": {
-                          "name": "Color manipulation",
-                          "nameHtml": "Color manipulation",
-                          "nameClean": "Color manipulation",
-                          "id": "color_manipulation_issues",
-                          "parentId": "color_management",
-                          "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 19,
-                            "id": "color_alpha",
-                            "index": 0,
-                            "percentageQuestion": 3.32,
-                            "percentageSurvey": 0.39,
-                            "entity": {
-                              "name": "Adjusting alpha/opacity",
-                              "nameHtml": "Adjusting alpha/opacity",
-                              "nameClean": "Adjusting alpha/opacity",
-                              "id": "color_alpha",
-                              "parentId": "color_manipulation_issues",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
-                      },
-                      {
-                        "count": 19,
-                        "id": "css_gradients",
-                        "index": 15,
-                        "percentageQuestion": 3.32,
-                        "percentageSurvey": 0.39,
-                        "entity": {
-                          "name": "CSS Gradients",
-                          "nameHtml": "CSS Gradients",
-                          "nameClean": "CSS Gradients",
-                          "id": "css_gradients",
-                          "entityType": "feature",
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Images/Using_gradients"
                           },
-                          "webFeature": {
-                            "id": "gradients",
-                            "description_html": "The <code>linear-gradient()</code> and <code>radial-gradient()</code> CSS functions and their repeating counterparts create backgrounds that progress smoothly between multiple colors.",
-                            "group": [
-                              "gradients"
-                            ],
-                            "name": "Gradients",
-                            "spec": [
-                              "https://drafts.csswg.org/css-images-3/#gradients"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/gradients/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2015-07-29",
-                              "support": {
-                                "chrome": "26",
-                                "chrome_android": "26",
-                                "edge": "12",
-                                "firefox": "3.6",
-                                "firefox_android": "4",
-                                "safari": "7",
-                                "safari_ios": "7"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 17,
-                        "id": "color_conversion",
-                        "index": 16,
-                        "percentageQuestion": 2.97,
-                        "percentageSurvey": 0.35,
-                        "entity": {
-                          "name": "Color conversion",
-                          "nameHtml": "Color conversion",
-                          "nameClean": "Color conversion",
-                          "id": "color_conversion",
-                          "parentId": "color_management",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 15,
-                        "id": "maintenance",
-                        "index": 17,
-                        "percentageQuestion": 2.62,
-                        "percentageSurvey": 0.31,
-                        "entity": {
-                          "name": "Maintenance",
-                          "nameHtml": "Maintenance",
-                          "nameClean": "Maintenance",
-                          "id": "maintenance",
-                          "entityType": "default"
-                        },
-                        "nestedBuckets": [
                           {
-                            "count": 10,
-                            "id": "css_architecture",
-                            "index": 0,
-                            "percentageQuestion": 1.75,
-                            "percentageSurvey": 0.2,
+                            "count": 5,
+                            "id": "browser_devtools",
+                            "index": 1,
+                            "percentageQuestion": 0.87,
+                            "percentageSurvey": 0.1,
                             "entity": {
-                              "name": "CSS architecture & organization",
-                              "nameHtml": "CSS architecture &amp; organization",
-                              "nameClean": "CSS architecture & organization",
-                              "id": "css_architecture",
-                              "parentId": "maintenance",
+                              "name": "Browser DevTools",
+                              "nameHtml": "Browser DevTools",
+                              "nameClean": "Browser DevTools",
+                              "id": "browser_devtools",
+                              "parentId": "tooling_issues",
                               "entityType": "default"
-                            },
-                            "nestedBuckets": [
-                              {
-                                "count": 5,
-                                "id": "css_naming_conventions",
-                                "index": 0,
-                                "percentageQuestion": 0.87,
-                                "percentageSurvey": 0.1,
-                                "entity": {
-                                  "name": "CSS naming conventions",
-                                  "nameHtml": "CSS naming conventions",
-                                  "nameClean": "CSS naming conventions",
-                                  "id": "css_naming_conventions",
-                                  "parentId": "css_architecture",
-                                  "entityType": "default"
-                                }
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "count": 14,
-                        "id": "ecosystem",
-                        "index": 18,
-                        "percentageQuestion": 2.44,
-                        "percentageSurvey": 0.29,
-                        "entity": {
-                          "name": "Ecosystem issues",
-                          "nameHtml": "Ecosystem issues",
-                          "nameClean": "Ecosystem issues",
-                          "id": "ecosystem",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 11,
-                        "id": "color_mix",
-                        "index": 19,
-                        "percentageQuestion": 1.92,
-                        "percentageSurvey": 0.22,
-                        "entity": {
-                          "name": "`color-mix()`",
-                          "nameHtml": "<code>color-mix()</code>",
-                          "nameClean": "color-mix()",
-                          "id": "color_mix",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".teal {\n  background: color-mix(in lab, white 20%, #34c9eb);\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.teal</span> {\n  <span class=\"hljs-attribute\">background</span>: <span class=\"hljs-built_in\">color-mix</span>(in lab, white <span class=\"hljs-number\">20%</span>, <span class=\"hljs-number\">#34c9eb</span>);\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/mdn-css_types_color_color-mix"
-                          },
-                          "webFeature": {
-                            "id": "color-mix",
-                            "description_html": "The <code>color-mix()</code> function mixes two colors in a given color space and by a given amount. Commonly, lighter or darker variations of a color are created by mixing with white or black.",
-                            "group": [
-                              "css"
-                            ],
-                            "name": "color-mix()",
-                            "spec": [
-                              "https://drafts.csswg.org/css-color-5/#color-mix"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/color-mix/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2023-05-09",
-                              "support": {
-                                "chrome": "111",
-                                "chrome_android": "111",
-                                "edge": "111",
-                                "firefox": "113",
-                                "firefox_android": "113",
-                                "safari": "16.2",
-                                "safari_ios": "16.2"
-                              }
                             }
-                          }
-                        }
-                      },
-                      {
-                        "count": 11,
-                        "id": "design_systems_issues",
-                        "index": 20,
-                        "percentageQuestion": 1.92,
-                        "percentageSurvey": 0.22,
-                        "entity": {
-                          "name": "Design systems",
-                          "nameHtml": "Design systems",
-                          "nameClean": "Design systems",
-                          "description": "Issues related to the creation, maintenance, and implementation of design systems and component libraries.",
-                          "descriptionHtml": "Issues related to the creation, maintenance, and implementation of design systems and component libraries.",
-                          "descriptionClean": "Issues related to the creation, maintenance, and implementation of design systems and component libraries.",
-                          "id": "design_systems_issues",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 11,
-                        "id": "design_tokens",
-                        "index": 21,
-                        "percentageQuestion": 1.92,
-                        "percentageSurvey": 0.22,
-                        "entity": {
-                          "name": "Design tokens",
-                          "nameHtml": "Design tokens",
-                          "nameClean": "Design tokens",
-                          "id": "design_tokens",
-                          "parentId": "design_systems",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 8,
-                        "id": "debugging_issues",
-                        "index": 22,
-                        "percentageQuestion": 1.4,
-                        "percentageSurvey": 0.16,
-                        "entity": {
-                          "name": "Debugging",
-                          "nameHtml": "Debugging",
-                          "nameClean": "Debugging",
-                          "description": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
-                          "descriptionHtml": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
-                          "descriptionClean": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
-                          "id": "debugging_issues",
-                          "entityType": "default"
-                        },
-                        "nestedBuckets": [
+                          },
                           {
-                            "count": 6,
-                            "id": "testing_issues",
-                            "index": 0,
-                            "percentageQuestion": 1.05,
-                            "percentageSurvey": 0.12,
+                            "count": 5,
+                            "id": "preprocessor_reliance",
+                            "index": 2,
+                            "percentageQuestion": 0.87,
+                            "percentageSurvey": 0.1,
                             "entity": {
-                              "name": "Testing",
-                              "nameHtml": "Testing",
-                              "nameClean": "Testing",
-                              "description": "Things being hard to test, unclear how to test them, difficulty procuring the right tools or resources to test, etc.",
-                              "descriptionHtml": "Things being hard to test, unclear how to test them, difficulty procuring the right tools or resources to test, etc.",
-                              "descriptionClean": "Things being hard to test, unclear how to test them, difficulty procuring the right tools or resources to test, etc.",
-                              "id": "testing_issues",
-                              "parentId": "debugging_issues",
+                              "name": "Preprocessor reliance",
+                              "nameHtml": "Preprocessor reliance",
+                              "nameClean": "Preprocessor reliance",
+                              "description": "Native CSS still lacking features that Sass/SCSS/PostCSS provide (mixins, @use, selector concatenation), forcing continued reliance on preprocessors.",
+                              "descriptionHtml": "Native CSS still lacking features that Sass/SCSS/PostCSS provide (mixins, @use, selector concatenation), forcing continued reliance on preprocessors.",
+                              "descriptionClean": "Native CSS still lacking features that Sass/SCSS/PostCSS provide (mixins, @use, selector concatenation), forcing continued reliance on preprocessors.",
+                              "id": "preprocessor_reliance",
+                              "parentId": "tooling_issues",
                               "entityType": "default"
                             }
                           }
                         ]
                       },
                       {
-                        "count": 7,
+                        "count": 38,
                         "id": "color_scheme",
-                        "index": 23,
-                        "percentageQuestion": 1.22,
-                        "percentageSurvey": 0.14,
+                        "index": 9,
+                        "percentageQuestion": 6.63,
+                        "percentageSurvey": 0.78,
                         "entity": {
                           "name": "`color-scheme`",
                           "nameHtml": "<code>color-scheme</code>",
@@ -1865,52 +1538,548 @@
                         }
                       },
                       {
-                        "count": 6,
-                        "id": "accent_color",
-                        "index": 24,
-                        "percentageQuestion": 1.05,
-                        "percentageSurvey": 0.12,
+                        "count": 34,
+                        "id": "gamut_mapping",
+                        "index": 10,
+                        "percentageQuestion": 5.93,
+                        "percentageSurvey": 0.69,
                         "entity": {
-                          "name": "`accent-color`",
-                          "nameHtml": "<code>accent-color</code>",
-                          "nameClean": "accent-color",
-                          "id": "accent_color",
+                          "name": "Gamut mapping and display variability",
+                          "nameHtml": "Gamut mapping and display variability",
+                          "nameClean": "Gamut mapping and display variability",
+                          "id": "gamut_mapping",
+                          "parentId": "color_management",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 33,
+                        "id": "syntax_issues",
+                        "index": 11,
+                        "percentageQuestion": 5.76,
+                        "percentageSurvey": 0.67,
+                        "entity": {
+                          "name": "Syntax issues",
+                          "nameHtml": "Syntax issues",
+                          "nameClean": "Syntax issues",
+                          "id": "syntax_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 28,
+                        "id": "rgb_color",
+                        "index": 12,
+                        "percentageQuestion": 4.89,
+                        "percentageSurvey": 0.57,
+                        "entity": {
+                          "name": "`rgb()` and `rgba()`",
+                          "nameHtml": "<code>rgb()</code> and <code>rgba()</code>",
+                          "nameClean": "rgb() and rgba()",
+                          "id": "rgb_color",
                           "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": "input[type='checkbox'] {\n  accent-color: tomato;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-tag\">input</span><span class=\"hljs-selector-attr\">[type=<span class=\"hljs-string\">&#x27;checkbox&#x27;</span>]</span> {\n  <span class=\"hljs-attribute\">accent-color</span>: tomato;\n}"
-                          },
                           "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/accent-color"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/mdn-css_properties_accent-color"
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/rgb"
                           },
                           "webFeature": {
-                            "id": "accent-color",
-                            "description_html": "The <code>accent-color</code> CSS property sets a color for checkboxes, radio buttons, and other form controls.",
+                            "id": "rgb",
+                            "description_html": "The <code>rgb()</code>, <code>rgba()</code>, and hexadecimal (as in <code>#004488ff</code>) notations pick colors using red, green, blue, and alpha (transparency) channels.",
                             "group": [
-                              "css"
+                              "color-types"
                             ],
-                            "name": "accent-color",
+                            "name": "RGB",
                             "spec": [
-                              "https://drafts.csswg.org/css-ui-4/#widget-accent"
+                              "https://drafts.csswg.org/css-color-4/#rgb-functions"
                             ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/accent-color/",
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/rgb/",
                             "status": {
-                              "baseline": "false",
+                              "baseline": "high",
+                              "baseline_low_date": "2020-01-15",
                               "support": {
-                                "chrome": "93",
-                                "edge": "93",
-                                "firefox": "92",
-                                "firefox_android": "92",
-                                "safari": "26.2",
-                                "safari_ios": "26.2"
+                                "chrome": "65",
+                                "chrome_android": "65",
+                                "edge": "79",
+                                "firefox": "52",
+                                "firefox_android": "52",
+                                "safari": "12.1",
+                                "safari_ios": "12.2"
                               }
                             }
                           }
                         }
+                      },
+                      {
+                        "count": 22,
+                        "id": "css_gradients",
+                        "index": 13,
+                        "percentageQuestion": 3.84,
+                        "percentageSurvey": 0.45,
+                        "entity": {
+                          "name": "CSS Gradients",
+                          "nameHtml": "CSS Gradients",
+                          "nameClean": "CSS Gradients",
+                          "id": "css_gradients",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Images/Using_gradients"
+                          },
+                          "webFeature": {
+                            "id": "gradients",
+                            "description_html": "The <code>linear-gradient()</code> and <code>radial-gradient()</code> CSS functions and their repeating counterparts create backgrounds that progress smoothly between multiple colors.",
+                            "group": [
+                              "gradients"
+                            ],
+                            "name": "Gradients",
+                            "spec": [
+                              "https://drafts.csswg.org/css-images-3/#gradients"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/gradients/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2015-07-29",
+                              "support": {
+                                "chrome": "26",
+                                "chrome_android": "26",
+                                "edge": "12",
+                                "firefox": "3.6",
+                                "firefox_android": "4",
+                                "safari": "7",
+                                "safari_ios": "7"
+                              }
+                            }
+                          }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 6,
+                            "id": "gradient_color_spaces",
+                            "index": 0,
+                            "percentageQuestion": 1.05,
+                            "percentageSurvey": 0.12,
+                            "entity": {
+                              "name": "Interpolation Color Spaces",
+                              "nameHtml": "Interpolation Color Spaces",
+                              "nameClean": "Interpolation Color Spaces",
+                              "id": "gradient_color_spaces",
+                              "parentId": "css_gradients",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": ".gradient {\n  background: linear-gradient(in oklab, hsl(80 90% 50%), red);\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-selector-class\">.gradient</span> {\n  <span class=\"hljs-attribute\">background</span>: <span class=\"hljs-built_in\">linear-gradient</span>(in oklab, <span class=\"hljs-built_in\">hsl</span>(<span class=\"hljs-number\">80</span> <span class=\"hljs-number\">90%</span> <span class=\"hljs-number\">50%</span>), red);\n}"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/mdn-css_types_image_gradient_conic-gradient_interpolation_color_space"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://css-tricks.com/color-spaces-for-more-interesting-css-gradients/",
+                                  "title": "Using Different Color Spaces for Non-Boring Gradients"
+                                }
+                              ],
+                              "webFeature": {
+                                "id": "gradient-interpolation",
+                                "description_html": "Gradient interpolation controls how the colors between gradient stops are calculated in CSS. For example, <code>linear-gradient(to right in oklch longer hue, red, red);</code> calculates in the <code>oklch</code> color space, with the hue going all the way around the hue circle from red back to red.",
+                                "group": [
+                                  "gradients"
+                                ],
+                                "name": "Gradient interpolation",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-color-4/#interpolation-space"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/gradient-interpolation/",
+                                "status": {
+                                  "baseline": "low",
+                                  "baseline_low_date": "2024-06-11",
+                                  "support": {
+                                    "chrome": "111",
+                                    "chrome_android": "111",
+                                    "edge": "111",
+                                    "firefox": "127",
+                                    "firefox_android": "127",
+                                    "safari": "16.2",
+                                    "safari_ios": "16.2"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 21,
+                        "id": "color_function",
+                        "index": 14,
+                        "percentageQuestion": 3.66,
+                        "percentageSurvey": 0.43,
+                        "entity": {
+                          "name": "`color()`",
+                          "nameHtml": "<code>color()</code>",
+                          "nameClean": "color()",
+                          "id": "color_function",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".brightest-green {\n  background: color(display-p3 0 1 0);\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.brightest-green</span> {\n  <span class=\"hljs-attribute\">background</span>: <span class=\"hljs-built_in\">color</span>(display-p3 <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">1</span> <span class=\"hljs-number\">0</span>);\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/color"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-color-function"
+                          },
+                          "webFeature": {
+                            "id": "color-function",
+                            "description_html": "The <code>color()</code> function picks a color from a given color space. Wide gamut color spaces like <code>display-p3</code> allow showing more vibrant and saturated colors than the standard <code>srgb</code> color space.",
+                            "group": [
+                              "color-types"
+                            ],
+                            "name": "color()",
+                            "spec": [
+                              "https://drafts.csswg.org/css-color-4/#color-function"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/color-function/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2023-05-09",
+                              "support": {
+                                "chrome": "111",
+                                "chrome_android": "111",
+                                "edge": "111",
+                                "firefox": "113",
+                                "firefox_android": "113",
+                                "safari": "15",
+                                "safari_ios": "15"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 21,
+                        "id": "color_mix",
+                        "index": 15,
+                        "percentageQuestion": 3.66,
+                        "percentageSurvey": 0.43,
+                        "entity": {
+                          "name": "`color-mix()`",
+                          "nameHtml": "<code>color-mix()</code>",
+                          "nameClean": "color-mix()",
+                          "id": "color_mix",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".teal {\n  background: color-mix(in lab, white 20%, #34c9eb);\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.teal</span> {\n  <span class=\"hljs-attribute\">background</span>: <span class=\"hljs-built_in\">color-mix</span>(in lab, white <span class=\"hljs-number\">20%</span>, <span class=\"hljs-number\">#34c9eb</span>);\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_types_color_color-mix"
+                          },
+                          "webFeature": {
+                            "id": "color-mix",
+                            "description_html": "The <code>color-mix()</code> function mixes two colors in a given color space and by a given amount. Commonly, lighter or darker variations of a color are created by mixing with white or black.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "color-mix()",
+                            "spec": [
+                              "https://drafts.csswg.org/css-color-5/#color-mix"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/color-mix/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2023-05-09",
+                              "support": {
+                                "chrome": "111",
+                                "chrome_android": "111",
+                                "edge": "111",
+                                "firefox": "113",
+                                "firefox_android": "113",
+                                "safari": "16.2",
+                                "safari_ios": "16.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 21,
+                        "id": "educational_issues",
+                        "index": 16,
+                        "percentageQuestion": 3.66,
+                        "percentageSurvey": 0.43,
+                        "entity": {
+                          "name": "Education",
+                          "nameHtml": "Education",
+                          "nameClean": "Education",
+                          "description": "Issues related to learning new technologies",
+                          "descriptionHtml": "Issues related to learning new technologies",
+                          "descriptionClean": "Issues related to learning new technologies",
+                          "id": "educational_issues",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 7,
+                            "id": "lack_of_knowledge",
+                            "index": 0,
+                            "percentageQuestion": 1.22,
+                            "percentageSurvey": 0.14,
+                            "entity": {
+                              "name": "Lack of knowledge",
+                              "nameHtml": "Lack of knowledge",
+                              "nameClean": "Lack of knowledge",
+                              "id": "lack_of_knowledge",
+                              "parentId": "educational_issues",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 20,
+                        "id": "color_manipulation_issues",
+                        "index": 17,
+                        "percentageQuestion": 3.49,
+                        "percentageSurvey": 0.41,
+                        "entity": {
+                          "name": "Color manipulation",
+                          "nameHtml": "Color manipulation",
+                          "nameClean": "Color manipulation",
+                          "id": "color_manipulation_issues",
+                          "parentId": "color_management",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 20,
+                            "id": "color_alpha",
+                            "index": 0,
+                            "percentageQuestion": 3.49,
+                            "percentageSurvey": 0.41,
+                            "entity": {
+                              "name": "Adjusting alpha/opacity",
+                              "nameHtml": "Adjusting alpha/opacity",
+                              "nameClean": "Adjusting alpha/opacity",
+                              "id": "color_alpha",
+                              "parentId": "color_manipulation_issues",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 18,
+                        "id": "prefers_color_scheme",
+                        "index": 18,
+                        "percentageQuestion": 3.14,
+                        "percentageSurvey": 0.37,
+                        "entity": {
+                          "name": "`prefers-color-scheme`",
+                          "nameHtml": "<code>prefers-color-scheme</code>",
+                          "nameClean": "prefers-color-scheme",
+                          "id": "prefers_color_scheme",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "@media (prefers-color-scheme: dark) {\n  .foo {\n    background: #333;\n    color: white;\n  }\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">@media</span> (<span class=\"hljs-attribute\">prefers-color-scheme</span>: dark) {\n  <span class=\"hljs-selector-class\">.foo</span> {\n    <span class=\"hljs-attribute\">background</span>: <span class=\"hljs-number\">#333</span>;\n    <span class=\"hljs-attribute\">color</span>: white;\n  }\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/prefers-color-scheme"
+                          },
+                          "webFeature": {
+                            "id": "prefers-color-scheme",
+                            "description_html": "The <code>prefers-color-scheme</code> CSS media query sets styles based on the requested color scheme, light or dark.",
+                            "group": [
+                              "media-queries"
+                            ],
+                            "name": "prefers-color-scheme media query",
+                            "spec": [
+                              "https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/prefers-color-scheme/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-01-15",
+                              "support": {
+                                "chrome": "76",
+                                "chrome_android": "76",
+                                "edge": "79",
+                                "firefox": "67",
+                                "firefox_android": "67",
+                                "safari": "12.1",
+                                "safari_ios": "13"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 17,
+                        "id": "color_conversion",
+                        "index": 19,
+                        "percentageQuestion": 2.97,
+                        "percentageSurvey": 0.35,
+                        "entity": {
+                          "name": "Color conversion",
+                          "nameHtml": "Color conversion",
+                          "nameClean": "Color conversion",
+                          "id": "color_conversion",
+                          "parentId": "color_management",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 15,
+                        "id": "maintenance",
+                        "index": 20,
+                        "percentageQuestion": 2.62,
+                        "percentageSurvey": 0.31,
+                        "entity": {
+                          "name": "Maintenance",
+                          "nameHtml": "Maintenance",
+                          "nameClean": "Maintenance",
+                          "id": "maintenance",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 10,
+                            "id": "css_architecture",
+                            "index": 0,
+                            "percentageQuestion": 1.75,
+                            "percentageSurvey": 0.2,
+                            "entity": {
+                              "name": "CSS architecture & organization",
+                              "nameHtml": "CSS architecture &amp; organization",
+                              "nameClean": "CSS architecture & organization",
+                              "id": "css_architecture",
+                              "parentId": "maintenance",
+                              "entityType": "default"
+                            },
+                            "nestedBuckets": [
+                              {
+                                "count": 5,
+                                "id": "css_naming_conventions",
+                                "index": 0,
+                                "percentageQuestion": 0.87,
+                                "percentageSurvey": 0.1,
+                                "entity": {
+                                  "name": "CSS naming conventions",
+                                  "nameHtml": "CSS naming conventions",
+                                  "nameClean": "CSS naming conventions",
+                                  "id": "css_naming_conventions",
+                                  "parentId": "css_architecture",
+                                  "entityType": "default"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "count": 13,
+                        "id": "ecosystem",
+                        "index": 21,
+                        "percentageQuestion": 2.27,
+                        "percentageSurvey": 0.27,
+                        "entity": {
+                          "name": "Ecosystem issues",
+                          "nameHtml": "Ecosystem issues",
+                          "nameClean": "Ecosystem issues",
+                          "id": "ecosystem",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 11,
+                        "id": "design_systems",
+                        "index": 22,
+                        "percentageQuestion": 1.92,
+                        "percentageSurvey": 0.22,
+                        "entity": {
+                          "name": "Design systems",
+                          "nameHtml": "Design systems",
+                          "nameClean": "Design systems",
+                          "id": "design_systems",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 10,
+                            "id": "design_tokens",
+                            "index": 0,
+                            "percentageQuestion": 1.75,
+                            "percentageSurvey": 0.2,
+                            "entity": {
+                              "name": "Design tokens",
+                              "nameHtml": "Design tokens",
+                              "nameClean": "Design tokens",
+                              "id": "design_tokens",
+                              "parentId": "design_systems",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 10,
+                        "id": "css_data_structures",
+                        "index": 23,
+                        "percentageQuestion": 1.75,
+                        "percentageSurvey": 0.2,
+                        "entity": {
+                          "name": "Data structures",
+                          "nameHtml": "Data structures",
+                          "nameClean": "Data structures",
+                          "id": "css_data_structures",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 8,
+                        "id": "debugging_issues",
+                        "index": 24,
+                        "percentageQuestion": 1.4,
+                        "percentageSurvey": 0.16,
+                        "entity": {
+                          "name": "Debugging",
+                          "nameHtml": "Debugging",
+                          "nameClean": "Debugging",
+                          "description": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
+                          "descriptionHtml": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
+                          "descriptionClean": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
+                          "id": "debugging_issues",
+                          "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 6,
+                            "id": "testing_issues",
+                            "index": 0,
+                            "percentageQuestion": 1.05,
+                            "percentageSurvey": 0.12,
+                            "entity": {
+                              "name": "Testing",
+                              "nameHtml": "Testing",
+                              "nameClean": "Testing",
+                              "description": "Things being hard to test, unclear how to test them, difficulty procuring the right tools or resources to test, etc.",
+                              "descriptionHtml": "Things being hard to test, unclear how to test them, difficulty procuring the right tools or resources to test, etc.",
+                              "descriptionClean": "Things being hard to test, unclear how to test them, difficulty procuring the right tools or resources to test, etc.",
+                              "id": "testing_issues",
+                              "parentId": "debugging_issues",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 4333,
@@ -1920,11 +2089,11 @@
                         "percentageSurvey": 88.39
                       },
                       {
-                        "count": 198,
+                        "count": 208,
                         "id": "other_answers",
                         "index": 26,
-                        "percentageQuestion": 34.38,
-                        "percentageSurvey": 3.97
+                        "percentageQuestion": 36.09,
+                        "percentageSurvey": 4.17
                       }
                     ]
                   }

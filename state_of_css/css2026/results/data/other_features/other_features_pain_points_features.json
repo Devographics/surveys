@@ -330,11 +330,11 @@
                     },
                     "buckets": [
                       {
-                        "count": 20,
+                        "count": 21,
                         "id": "cascade_layers",
                         "index": 0,
-                        "percentageQuestion": 8.66,
-                        "percentageSurvey": 0.41,
+                        "percentageQuestion": 9.09,
+                        "percentageSurvey": 0.43,
                         "entity": {
                           "name": "Cascade Layers",
                           "nameHtml": "Cascade Layers",
@@ -380,11 +380,11 @@
                         }
                       },
                       {
-                        "count": 17,
+                        "count": 20,
                         "id": "css_nesting",
                         "index": 1,
-                        "percentageQuestion": 7.36,
-                        "percentageSurvey": 0.35,
+                        "percentageQuestion": 8.66,
+                        "percentageSurvey": 0.41,
                         "entity": {
                           "name": "CSS Nesting",
                           "nameHtml": "CSS Nesting",
@@ -433,11 +433,64 @@
                         }
                       },
                       {
-                        "count": 15,
-                        "id": "if_function",
+                        "count": 17,
+                        "id": "at_scope",
                         "index": 2,
-                        "percentageQuestion": 6.49,
-                        "percentageSurvey": 0.31,
+                        "percentageQuestion": 7.36,
+                        "percentageSurvey": 0.35,
+                        "entity": {
+                          "name": "`@scope`",
+                          "nameHtml": "<code>@scope</code>",
+                          "nameClean": "@scope",
+                          "description": "Scope styles to a specific part of the DOM tree.",
+                          "descriptionHtml": "Scope styles to a specific part of the DOM tree.",
+                          "descriptionClean": "Scope styles to a specific part of the DOM tree.",
+                          "id": "at_scope",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "@scope (.card) {\n  :scope {\n    padding: 1rem;\n  }\n\n  .title {\n    font-size: 1.2rem;\n  }\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">@scope</span> (.card) {\n  <span class=\"hljs-selector-pseudo\">:scope</span> {\n    <span class=\"hljs-attribute\">padding</span>: <span class=\"hljs-number\">1rem</span>;\n  }\n\n  <span class=\"hljs-selector-class\">.title</span> {\n    <span class=\"hljs-attribute\">font-size</span>: <span class=\"hljs-number\">1.2rem</span>;\n  }\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@scope"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-cascade-scope"
+                          },
+                          "webFeature": {
+                            "id": "scope",
+                            "description_html": "The <code>@scope</code> CSS at-rule sets the scope for a group of rules.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "@scope",
+                            "spec": [
+                              "https://drafts.csswg.org/css-cascade-6/#scope-atrule"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/scope/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2025-12-12",
+                              "support": {
+                                "chrome": "143",
+                                "chrome_android": "143",
+                                "edge": "143",
+                                "firefox": "146",
+                                "firefox_android": "146",
+                                "safari": "26.2",
+                                "safari_ios": "26.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 17,
+                        "id": "if_function",
+                        "index": 3,
+                        "percentageQuestion": 7.36,
+                        "percentageSurvey": 0.35,
                         "entity": {
                           "name": "`if()`",
                           "nameHtml": "<code>if()</code>",
@@ -490,178 +543,57 @@
                       },
                       {
                         "count": 14,
-                        "id": "at_scope",
-                        "index": 3,
+                        "id": "advanced_attr_function",
+                        "index": 4,
                         "percentageQuestion": 6.06,
                         "percentageSurvey": 0.29,
                         "entity": {
-                          "name": "`@scope`",
-                          "nameHtml": "<code>@scope</code>",
-                          "nameClean": "@scope",
-                          "description": "Scope styles to a specific part of the DOM tree.",
-                          "descriptionHtml": "Scope styles to a specific part of the DOM tree.",
-                          "descriptionClean": "Scope styles to a specific part of the DOM tree.",
-                          "id": "at_scope",
+                          "name": "Advanced `attr()`",
+                          "nameHtml": "Advanced <code>attr()</code>",
+                          "nameClean": "Advanced attr()",
+                          "description": "Support for properties other than content",
+                          "descriptionHtml": "Support for properties other than content",
+                          "descriptionClean": "Support for properties other than content",
+                          "id": "advanced_attr_function",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
-                            "code": "@scope (.card) {\n  :scope {\n    padding: 1rem;\n  }\n\n  .title {\n    font-size: 1.2rem;\n  }\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-keyword\">@scope</span> (.card) {\n  <span class=\"hljs-selector-pseudo\">:scope</span> {\n    <span class=\"hljs-attribute\">padding</span>: <span class=\"hljs-number\">1rem</span>;\n  }\n\n  <span class=\"hljs-selector-class\">.title</span> {\n    <span class=\"hljs-attribute\">font-size</span>: <span class=\"hljs-number\">1.2rem</span>;\n  }\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@scope"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-cascade-scope"
-                          },
-                          "webFeature": {
-                            "id": "scope",
-                            "description_html": "The <code>@scope</code> CSS at-rule sets the scope for a group of rules.",
-                            "group": [
-                              "css"
-                            ],
-                            "name": "@scope",
-                            "spec": [
-                              "https://drafts.csswg.org/css-cascade-6/#scope-atrule"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/scope/",
-                            "status": {
-                              "baseline": "low",
-                              "baseline_low_date": "2025-12-12",
-                              "support": {
-                                "chrome": "143",
-                                "chrome_android": "143",
-                                "edge": "143",
-                                "firefox": "146",
-                                "firefox_android": "146",
-                                "safari": "26.2",
-                                "safari_ios": "26.2"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 11,
-                        "id": "sibling_count",
-                        "index": 4,
-                        "percentageQuestion": 4.76,
-                        "percentageSurvey": 0.22,
-                        "entity": {
-                          "name": "`sibling-count()`",
-                          "nameHtml": "<code>sibling-count()</code>",
-                          "nameClean": "sibling-count()",
-                          "id": "sibling_count",
-                          "entityType": "feature",
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/sibling-count"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/mdn-css_types_sibling-count"
+                            "code": ".title {\n  background-color: attr(data-color type(<color>));\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.title</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">attr</span>(data-color <span class=\"hljs-built_in\">type</span>(&lt;color&gt;));\n}"
                           },
                           "resources": [
                             {
-                              "url": "https://www.w3.org/TR/css-values-5/#tree-counting",
-                              "title": "Tree Counting Functions: the sibling-count() and sibling-index() notations"
+                              "url": "https://una.im/advanced-attr/",
+                              "title": "New capabilities for attr()"
+                            },
+                            {
+                              "url": "https://ishadeed.com/article/modern-attr/",
+                              "title": "First Look at The Modern attr()"
                             }
                           ],
                           "webFeature": {
-                            "id": "sibling-count",
-                            "description_html": "The <code>sibling-count()</code> and <code>sibling-index()</code> CSS functions return integers that are useful to style elements based on their positions among siblings or on the number of siblings, for example as part of a <code>calc()</code> expression.",
+                            "id": "attr",
+                            "description_html": "The <code>attr()</code> CSS function, in the context of any property, returns the value of an attribute of an HTML element, with the option to return it as a specific type or unit. You can set a default value for missing or invalid attributes.",
                             "group": [
                               "css"
                             ],
-                            "name": "sibling-count() and sibling-index()",
+                            "name": "attr()",
                             "spec": [
-                              "https://drafts.csswg.org/css-values-5/#tree-counting"
+                              "https://drafts.csswg.org/css-values-5/#attr-notation"
                             ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/sibling-count/",
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/attr/",
                             "status": {
-                              "baseline": "false",
-                              "support": {
-                                "chrome": "138",
-                                "chrome_android": "138",
-                                "edge": "138",
-                                "safari": "26.2",
-                                "safari_ios": "26.2"
-                              }
+                              "baseline": "false"
                             }
                           }
                         }
                       },
                       {
-                        "count": 10,
-                        "id": "attr_function",
-                        "index": 5,
-                        "percentageQuestion": 4.33,
-                        "percentageSurvey": 0.2,
-                        "entity": {
-                          "name": "`attr()`",
-                          "nameHtml": "<code>attr()</code>",
-                          "nameClean": "attr()",
-                          "id": "attr_function",
-                          "entityType": "feature",
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/attr"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css3-attr"
-                          }
-                        }
-                      },
-                      {
-                        "count": 9,
-                        "id": "at_property",
-                        "index": 6,
-                        "percentageQuestion": 3.9,
-                        "percentageSurvey": 0.18,
-                        "entity": {
-                          "name": "`@property`",
-                          "nameHtml": "<code>@property</code>",
-                          "nameClean": "@property",
-                          "id": "at_property",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": "@property --property-name {\n  syntax: \"<color>\";\n  inherits: false;\n  initial-value: #c0ffee;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-keyword\">@property</span> --property-name {\n  syntax: <span class=\"hljs-string\">&quot;&lt;color&gt;&quot;</span>;\n  inherits: false;\n  initial-value: <span class=\"hljs-number\">#c0ffee</span>;\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@property"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/mdn-css_at-rules_property"
-                          },
-                          "webFeature": {
-                            "id": "registered-custom-properties",
-                            "description_html": "The <code>CSS.registerProperty()</code> static method and the <code>@property</code> CSS at-rule register custom properties for which types and behaviors can be defined.",
-                            "name": "Registered custom properties",
-                            "spec": [
-                              "https://drafts.css-houdini.org/css-properties-values-api-1/"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/registered-custom-properties/",
-                            "status": {
-                              "baseline": "low",
-                              "baseline_low_date": "2024-07-09",
-                              "support": {
-                                "chrome": "85",
-                                "chrome_android": "85",
-                                "edge": "85",
-                                "firefox": "128",
-                                "firefox_android": "128",
-                                "safari": "16.4",
-                                "safari_ios": "16.4"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 8,
+                        "count": 13,
                         "id": "at_function",
-                        "index": 7,
-                        "percentageQuestion": 3.46,
-                        "percentageSurvey": 0.16,
+                        "index": 5,
+                        "percentageQuestion": 5.63,
+                        "percentageSurvey": 0.27,
                         "entity": {
                           "name": "`@function`",
                           "nameHtml": "<code>@function</code>",
@@ -713,11 +645,126 @@
                         }
                       },
                       {
-                        "count": 8,
-                        "id": "css_custom_properties",
+                        "count": 11,
+                        "id": "at_property",
+                        "index": 6,
+                        "percentageQuestion": 4.76,
+                        "percentageSurvey": 0.22,
+                        "entity": {
+                          "name": "`@property`",
+                          "nameHtml": "<code>@property</code>",
+                          "nameClean": "@property",
+                          "id": "at_property",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "@property --property-name {\n  syntax: \"<color>\";\n  inherits: false;\n  initial-value: #c0ffee;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">@property</span> --property-name {\n  syntax: <span class=\"hljs-string\">&quot;&lt;color&gt;&quot;</span>;\n  inherits: false;\n  initial-value: <span class=\"hljs-number\">#c0ffee</span>;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@property"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_at-rules_property"
+                          },
+                          "webFeature": {
+                            "id": "registered-custom-properties",
+                            "description_html": "The <code>CSS.registerProperty()</code> static method and the <code>@property</code> CSS at-rule register custom properties for which types and behaviors can be defined.",
+                            "name": "Registered custom properties",
+                            "spec": [
+                              "https://drafts.css-houdini.org/css-properties-values-api-1/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/registered-custom-properties/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-07-09",
+                              "support": {
+                                "chrome": "85",
+                                "chrome_android": "85",
+                                "edge": "85",
+                                "firefox": "128",
+                                "firefox_android": "128",
+                                "safari": "16.4",
+                                "safari_ios": "16.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 11,
+                        "id": "sibling_count",
+                        "index": 7,
+                        "percentageQuestion": 4.76,
+                        "percentageSurvey": 0.22,
+                        "entity": {
+                          "name": "`sibling-count()`",
+                          "nameHtml": "<code>sibling-count()</code>",
+                          "nameClean": "sibling-count()",
+                          "id": "sibling_count",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/sibling-count"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_types_sibling-count"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://www.w3.org/TR/css-values-5/#tree-counting",
+                              "title": "Tree Counting Functions: the sibling-count() and sibling-index() notations"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "sibling-count",
+                            "description_html": "The <code>sibling-count()</code> and <code>sibling-index()</code> CSS functions return integers that are useful to style elements based on their positions among siblings or on the number of siblings, for example as part of a <code>calc()</code> expression.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "sibling-count() and sibling-index()",
+                            "spec": [
+                              "https://drafts.csswg.org/css-values-5/#tree-counting"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/sibling-count/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "138",
+                                "chrome_android": "138",
+                                "edge": "138",
+                                "safari": "26.2",
+                                "safari_ios": "26.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 10,
+                        "id": "attr_function",
                         "index": 8,
-                        "percentageQuestion": 3.46,
-                        "percentageSurvey": 0.16,
+                        "percentageQuestion": 4.33,
+                        "percentageSurvey": 0.2,
+                        "entity": {
+                          "name": "`attr()`",
+                          "nameHtml": "<code>attr()</code>",
+                          "nameClean": "attr()",
+                          "id": "attr_function",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/attr"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css3-attr"
+                          }
+                        }
+                      },
+                      {
+                        "count": 9,
+                        "id": "css_custom_properties",
+                        "index": 9,
+                        "percentageQuestion": 3.9,
+                        "percentageSurvey": 0.18,
                         "entity": {
                           "name": "Custom Properties (Variables)",
                           "nameHtml": "Custom Properties (Variables)",
@@ -763,43 +810,11 @@
                         }
                       },
                       {
-                        "count": 7,
-                        "id": "display_contents",
-                        "index": 9,
-                        "percentageQuestion": 3.03,
-                        "percentageSurvey": 0.14,
-                        "entity": {
-                          "name": "`display: contents`",
-                          "nameHtml": "<code>display: contents</code>",
-                          "nameClean": "display: contents",
-                          "description": "Sets an element to display only its contents, not itself.",
-                          "descriptionHtml": "Sets an element to display only its contents, not itself.",
-                          "descriptionClean": "Sets an element to display only its contents, not itself.",
-                          "id": "display_contents",
-                          "entityType": "feature",
-                          "webFeature": {
-                            "id": "display-contents",
-                            "description_html": "The <code>display: contents</code> CSS declaration sets an element to display only its contents, not itself.",
-                            "group": [
-                              "css"
-                            ],
-                            "name": "display: contents",
-                            "spec": [
-                              "https://drafts.csswg.org/css-display-3/#box-generation"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/display-contents/",
-                            "status": {
-                              "baseline": "false"
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 7,
+                        "count": 9,
                         "id": "has_selector",
                         "index": 10,
-                        "percentageQuestion": 3.03,
-                        "percentageSurvey": 0.14,
+                        "percentageQuestion": 3.9,
+                        "percentageSurvey": 0.18,
                         "entity": {
                           "name": "`:has()`",
                           "nameHtml": "<code>:has()</code>",
@@ -845,9 +860,41 @@
                         }
                       },
                       {
+                        "count": 7,
+                        "id": "display_contents",
+                        "index": 11,
+                        "percentageQuestion": 3.03,
+                        "percentageSurvey": 0.14,
+                        "entity": {
+                          "name": "`display: contents`",
+                          "nameHtml": "<code>display: contents</code>",
+                          "nameClean": "display: contents",
+                          "description": "Sets an element to display only its contents, not itself.",
+                          "descriptionHtml": "Sets an element to display only its contents, not itself.",
+                          "descriptionClean": "Sets an element to display only its contents, not itself.",
+                          "id": "display_contents",
+                          "entityType": "feature",
+                          "webFeature": {
+                            "id": "display-contents",
+                            "description_html": "The <code>display: contents</code> CSS declaration sets an element to display only its contents, not itself.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "display: contents",
+                            "spec": [
+                              "https://drafts.csswg.org/css-display-3/#box-generation"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/display-contents/",
+                            "status": {
+                              "baseline": "false"
+                            }
+                          }
+                        }
+                      },
+                      {
                         "count": 5,
                         "id": "sibling_index",
-                        "index": 11,
+                        "index": 12,
                         "percentageQuestion": 2.16,
                         "percentageSurvey": 0.1,
                         "entity": {

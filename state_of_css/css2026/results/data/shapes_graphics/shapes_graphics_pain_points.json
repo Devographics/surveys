@@ -486,15 +486,15 @@
                     },
                     "buckets": [
                       {
-                        "count": 76,
+                        "count": 85,
                         "id": "interop_issues",
                         "index": 0,
-                        "percentageQuestion": 21.41,
-                        "percentageSurvey": 1.55,
+                        "percentageQuestion": 23.94,
+                        "percentageSurvey": 1.73,
                         "entity": {
-                          "name": "Browser issues",
-                          "nameHtml": "Browser issues",
-                          "nameClean": "Browser issues",
+                          "name": "Browser vendor issues",
+                          "nameHtml": "Browser vendor issues",
+                          "nameClean": "Browser vendor issues",
                           "description": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
                           "descriptionHtml": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
                           "descriptionClean": "Browser support issues, implementation bugs, cross‑browser implementation differences or inconsistencies, browser prioritization, speed of adoption of new features, any issues where specific browsers, browser engines, or browser companies are mentioned (and it’s not to praise them).",
@@ -503,11 +503,11 @@
                         },
                         "nestedBuckets": [
                           {
-                            "count": 50,
+                            "count": 57,
                             "id": "browser_support",
                             "index": 0,
-                            "percentageQuestion": 14.08,
-                            "percentageSurvey": 1.02,
+                            "percentageQuestion": 16.06,
+                            "percentageSurvey": 1.16,
                             "entity": {
                               "name": "Browser support",
                               "nameHtml": "Browser support",
@@ -521,11 +521,11 @@
                             }
                           },
                           {
-                            "count": 11,
+                            "count": 13,
                             "id": "apple",
                             "index": 1,
-                            "percentageQuestion": 3.1,
-                            "percentageSurvey": 0.22,
+                            "percentageQuestion": 3.66,
+                            "percentageSurvey": 0.27,
                             "entity": {
                               "name": "Apple",
                               "nameHtml": "Apple",
@@ -539,11 +539,11 @@
                             },
                             "nestedBuckets": [
                               {
-                                "count": 10,
+                                "count": 12,
                                 "id": "safari",
                                 "index": 0,
-                                "percentageQuestion": 2.82,
-                                "percentageSurvey": 0.2,
+                                "percentageQuestion": 3.38,
+                                "percentageSurvey": 0.24,
                                 "entity": {
                                   "name": "Safari",
                                   "nameHtml": "Safari",
@@ -576,26 +576,240 @@
                         ]
                       },
                       {
-                        "count": 52,
+                        "count": 59,
                         "id": "irregular_element_shape",
                         "index": 1,
-                        "percentageQuestion": 14.65,
-                        "percentageSurvey": 1.06,
+                        "percentageQuestion": 16.62,
+                        "percentageSurvey": 1.2,
                         "entity": {
-                          "name": "Non-rectangular element shape",
-                          "nameHtml": "Non-rectangular element shape",
-                          "nameClean": "Non-rectangular element shape",
+                          "name": "Complex element shapes",
+                          "nameHtml": "Complex element shapes",
+                          "nameClean": "Complex element shapes",
                           "description": "Giving an element a genuinely non-rectangular shape that the box itself takes on — so its border, box-shadow, and outline follow the new outline — rather than faking it by clipping the element (which drops borders/shadows) or layering shapes via pseudo-elements.",
                           "descriptionHtml": "Giving an element a genuinely non-rectangular shape that the box itself takes on — so its border, box-shadow, and outline follow the new outline — rather than faking it by clipping the element (which drops borders/shadows) or layering shapes via pseudo-elements.",
                           "descriptionClean": "Giving an element a genuinely non-rectangular shape that the box itself takes on — so its border, box-shadow, and outline follow the new outline — rather than faking it by clipping the element (which drops borders/shadows) or layering shapes via pseudo-elements.",
                           "id": "irregular_element_shape",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 30,
+                            "id": "css_corner_shape",
+                            "index": 0,
+                            "percentageQuestion": 8.45,
+                            "percentageSurvey": 0.61,
+                            "entity": {
+                              "name": "`corner-shape`",
+                              "nameHtml": "<code>corner-shape</code>",
+                              "nameClean": "corner-shape",
+                              "id": "css_corner_shape",
+                              "parentId": "irregular_element_shape",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": ".rhombus {\n  aspect-ratio: 2 / 3;\n  border-radius: 50%;\n  corner-shape: bevel;\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-selector-class\">.rhombus</span> {\n  <span class=\"hljs-attribute\">aspect-ratio</span>: <span class=\"hljs-number\">2</span> / <span class=\"hljs-number\">3</span>;\n  <span class=\"hljs-attribute\">border-radius</span>: <span class=\"hljs-number\">50%</span>;\n  corner-shape: bevel;\n}"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/corner-shape"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://frontendmasters.com/blog/understanding-css-corner-shape-and-the-power-of-the-superellipse/",
+                                  "title": "Understanding CSS corner-shape and the Power of the Superellipse"
+                                },
+                                {
+                                  "url": "https://drafts.csswg.org/css-borders-4/#corner-shaping",
+                                  "title": "Corner Shaping: the corner-*-shape properties\n"
+                                }
+                              ],
+                              "webFeature": {
+                                "id": "corner-shape",
+                                "description_html": "The <code>corner-shape</code> CSS property sets the shape of an element's corners when using <code>border-radius</code>, allowing for shapes other than rounded corners. For example, <code>corner-shape: squircle</code> is a shape in between a square and rounded corner.",
+                                "name": "corner-shape",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-borders-4/#corner-shaping"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/corner-shape/",
+                                "status": {
+                                  "baseline": "false",
+                                  "support": {
+                                    "chrome": "139",
+                                    "chrome_android": "139",
+                                    "edge": "139"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "count": 12,
+                            "id": "css_border_radius",
+                            "index": 1,
+                            "percentageQuestion": 3.38,
+                            "percentageSurvey": 0.24,
+                            "entity": {
+                              "name": "`border-radius`",
+                              "nameHtml": "<code>border-radius</code>",
+                              "nameClean": "border-radius",
+                              "id": "css_border_radius",
+                              "parentId": "irregular_element_shape",
+                              "entityType": "feature",
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/corner-shape"
+                              },
+                              "webFeature": {
+                                "id": "border-radius",
+                                "description_html": "The <code>border-radius</code> CSS property rounds the corners of the border drawn around an element.",
+                                "group": [
+                                  "borders-outlines"
+                                ],
+                                "name": "border-radius",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-backgrounds-3/#corners"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/border-radius/",
+                                "status": {
+                                  "baseline": "high",
+                                  "baseline_low_date": "2015-07-29",
+                                  "support": {
+                                    "chrome": "4",
+                                    "chrome_android": "18",
+                                    "edge": "12",
+                                    "firefox": "4",
+                                    "firefox_android": "4",
+                                    "safari": "5",
+                                    "safari_ios": "4.2"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "count": 9,
+                            "id": "css_border_shape",
+                            "index": 2,
+                            "percentageQuestion": 2.54,
+                            "percentageSurvey": 0.18,
+                            "entity": {
+                              "name": "`border-shape`",
+                              "nameHtml": "<code>border-shape</code>",
+                              "nameClean": "border-shape",
+                              "id": "css_border_shape",
+                              "parentId": "irregular_element_shape",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": "border-shape: shape(\n  from top left,                            \n  hline to calc(100% - var(--arrow-size)), \n  line to right center,                           \n  line to calc(100% - var(--arrow-size)) bottom,\n  hline to left,      \n  close                                      \n);\n",
+                                "codeHighlighted": "<span class=\"hljs-attribute\">border</span>-shape: <span class=\"hljs-built_in\">shape</span>(\n  from top left,                            \n  hline to <span class=\"hljs-built_in\">calc</span>(<span class=\"hljs-number\">100%</span> - <span class=\"hljs-built_in\">var</span>(--arrow-size)), \n  line to right center,                           \n  line to <span class=\"hljs-built_in\">calc</span>(<span class=\"hljs-number\">100%</span> - <span class=\"hljs-built_in\">var</span>(--arrow-size)) bottom,\n  hline to left,      \n  close                                      \n);"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://una.im/border-shape",
+                                  "title": "border-shape: the future of the non-rectangular web\n"
+                                }
+                              ],
+                              "webFeature": {
+                                "id": "border-shape",
+                                "description_html": "The <code>border-shape</code> CSS property sets the geometry of the border box, changing the shape of any applicable border, border image, focus outline, or shadow.",
+                                "name": "border-shape",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-borders-4/#border-shape"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/border-shape/",
+                                "status": {
+                                  "baseline": "false",
+                                  "support": {
+                                    "chrome": "147",
+                                    "chrome_android": "147",
+                                    "edge": "147"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 57,
+                        "id": "svg_technology",
+                        "index": 2,
+                        "percentageQuestion": 16.06,
+                        "percentageSurvey": 1.16,
+                        "entity": {
+                          "name": "SVG",
+                          "nameHtml": "SVG",
+                          "nameClean": "SVG",
+                          "description": "The SVG graphics format",
+                          "descriptionHtml": "The SVG graphics format",
+                          "descriptionClean": "The SVG graphics format",
+                          "id": "svg_technology",
+                          "parentId": "graphics_issues",
+                          "entityType": "feature",
+                          "webFeature": {
+                            "id": "svg",
+                            "description_html": "The SVG image format, represented by the <code>&#x3C;svg></code> element, creates two-dimensional vector graphics with declarative or scripted interaction and animation.",
+                            "group": [
+                              "svg",
+                              "image-formats"
+                            ],
+                            "name": "SVG",
+                            "spec": [
+                              "https://w3c.github.io/svgwg/svg2-draft/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/svg/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-01-15",
+                              "support": {
+                                "chrome": "1",
+                                "chrome_android": "18",
+                                "edge": "79",
+                                "firefox": "3",
+                                "firefox_android": "4",
+                                "safari": "3",
+                                "safari_ios": "2"
+                              }
+                            }
+                          }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 8,
+                            "id": "svg_embedding_modes",
+                            "index": 0,
+                            "percentageQuestion": 2.25,
+                            "percentageSurvey": 0.16,
+                            "entity": {
+                              "name": "SVG embedding modes",
+                              "nameHtml": "SVG embedding modes",
+                              "nameClean": "SVG embedding modes",
+                              "id": "svg_embedding_modes",
+                              "parentId": "svg_technology",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 8,
+                            "id": "path_syntax",
+                            "index": 1,
+                            "percentageQuestion": 2.25,
+                            "percentageSurvey": 0.16,
+                            "entity": {
+                              "name": "Path syntax",
+                              "nameHtml": "Path syntax",
+                              "nameClean": "Path syntax",
+                              "id": "path_syntax",
+                              "parentId": "svg_technology",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 48,
                         "id": "cognitive_overload",
-                        "index": 2,
+                        "index": 3,
                         "percentageQuestion": 13.52,
                         "percentageSurvey": 0.98,
                         "entity": {
@@ -675,152 +889,28 @@
                         ]
                       },
                       {
-                        "count": 39,
-                        "id": "graphics_issues",
-                        "index": 3,
-                        "percentageQuestion": 10.99,
-                        "percentageSurvey": 0.8,
-                        "entity": {
-                          "name": "Graphics",
-                          "nameHtml": "Graphics",
-                          "nameClean": "Graphics",
-                          "id": "graphics_issues",
-                          "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 38,
-                            "id": "svg_technology",
-                            "index": 0,
-                            "percentageQuestion": 10.7,
-                            "percentageSurvey": 0.78,
-                            "entity": {
-                              "name": "SVG",
-                              "nameHtml": "SVG",
-                              "nameClean": "SVG",
-                              "description": "The SVG graphics format",
-                              "descriptionHtml": "The SVG graphics format",
-                              "descriptionClean": "The SVG graphics format",
-                              "id": "svg_technology",
-                              "parentId": "graphics_issues",
-                              "entityType": "feature",
-                              "webFeature": {
-                                "id": "svg",
-                                "description_html": "The SVG image format, represented by the <code>&#x3C;svg></code> element, creates two-dimensional vector graphics with declarative or scripted interaction and animation.",
-                                "group": [
-                                  "svg",
-                                  "image-formats"
-                                ],
-                                "name": "SVG",
-                                "spec": [
-                                  "https://w3c.github.io/svgwg/svg2-draft/"
-                                ],
-                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/svg/",
-                                "status": {
-                                  "baseline": "high",
-                                  "baseline_low_date": "2020-01-15",
-                                  "support": {
-                                    "chrome": "1",
-                                    "chrome_android": "18",
-                                    "edge": "79",
-                                    "firefox": "3",
-                                    "firefox_android": "4",
-                                    "safari": "3",
-                                    "safari_ios": "2"
-                                  }
-                                }
-                              }
-                            },
-                            "nestedBuckets": [
-                              {
-                                "count": 8,
-                                "id": "path_syntax",
-                                "index": 0,
-                                "percentageQuestion": 2.25,
-                                "percentageSurvey": 0.16,
-                                "entity": {
-                                  "name": "Path syntax",
-                                  "nameHtml": "Path syntax",
-                                  "nameClean": "Path syntax",
-                                  "id": "path_syntax",
-                                  "parentId": "svg_technology",
-                                  "entityType": "default"
-                                }
-                              },
-                              {
-                                "count": 6,
-                                "id": "svg_embedding_modes",
-                                "index": 1,
-                                "percentageQuestion": 1.69,
-                                "percentageSurvey": 0.12,
-                                "entity": {
-                                  "name": "SVG embedding modes",
-                                  "nameHtml": "SVG embedding modes",
-                                  "nameClean": "SVG embedding modes",
-                                  "id": "svg_embedding_modes",
-                                  "parentId": "svg_technology",
-                                  "entityType": "default"
-                                }
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "count": 31,
-                        "id": "educational_issues",
+                        "count": 37,
+                        "id": "developer_experience",
                         "index": 4,
-                        "percentageQuestion": 8.73,
-                        "percentageSurvey": 0.63,
+                        "percentageQuestion": 10.42,
+                        "percentageSurvey": 0.75,
                         "entity": {
-                          "name": "Education",
-                          "nameHtml": "Education",
-                          "nameClean": "Education",
-                          "description": "Issues related to learning new technologies",
-                          "descriptionHtml": "Issues related to learning new technologies",
-                          "descriptionClean": "Issues related to learning new technologies",
-                          "id": "educational_issues",
+                          "name": "Developer Experience",
+                          "nameHtml": "Developer Experience",
+                          "nameClean": "Developer Experience",
+                          "description": "Issues related not to being unable to achieve something, but to *how* it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
+                          "descriptionHtml": "Issues related not to being unable to achieve something, but to <em>how</em> it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
+                          "descriptionClean": "Issues related not to being unable to achieve something, but to how it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
+                          "id": "developer_experience",
                           "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 11,
-                            "id": "lack_of_knowledge",
-                            "index": 0,
-                            "percentageQuestion": 3.1,
-                            "percentageSurvey": 0.22,
-                            "entity": {
-                              "name": "Lack of knowledge",
-                              "nameHtml": "Lack of knowledge",
-                              "nameClean": "Lack of knowledge",
-                              "id": "lack_of_knowledge",
-                              "parentId": "educational_issues",
-                              "entityType": "default"
-                            }
-                          },
-                          {
-                            "count": 8,
-                            "id": "lack_of_awareness",
-                            "index": 1,
-                            "percentageQuestion": 2.25,
-                            "percentageSurvey": 0.16,
-                            "entity": {
-                              "name": "Lack of awareness",
-                              "nameHtml": "Lack of awareness",
-                              "nameClean": "Lack of awareness",
-                              "id": "lack_of_awareness",
-                              "parentId": "educational_issues",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
+                        }
                       },
                       {
-                        "count": 29,
+                        "count": 37,
                         "id": "shapes",
                         "index": 5,
-                        "percentageQuestion": 8.17,
-                        "percentageSurvey": 0.59,
+                        "percentageQuestion": 10.42,
+                        "percentageSurvey": 0.75,
                         "entity": {
                           "name": "Shapes",
                           "nameHtml": "Shapes",
@@ -884,11 +974,11 @@
                             }
                           },
                           {
-                            "count": 5,
+                            "count": 6,
                             "id": "shape_inside",
                             "index": 1,
-                            "percentageQuestion": 1.41,
-                            "percentageSurvey": 0.1,
+                            "percentageQuestion": 1.69,
+                            "percentageSurvey": 0.12,
                             "entity": {
                               "name": "`shape-inside`",
                               "nameHtml": "<code>shape-inside</code>",
@@ -901,28 +991,102 @@
                         ]
                       },
                       {
-                        "count": 28,
-                        "id": "developer_experience",
+                        "count": 31,
+                        "id": "educational_issues",
                         "index": 6,
-                        "percentageQuestion": 7.89,
-                        "percentageSurvey": 0.57,
+                        "percentageQuestion": 8.73,
+                        "percentageSurvey": 0.63,
                         "entity": {
-                          "name": "Developer Experience",
-                          "nameHtml": "Developer Experience",
-                          "nameClean": "Developer Experience",
-                          "description": "Issues related not to being unable to achieve something, but to *how* it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
-                          "descriptionHtml": "Issues related not to being unable to achieve something, but to <em>how</em> it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
-                          "descriptionClean": "Issues related not to being unable to achieve something, but to how it's achieved. Bad syntax, confusing APIs, performance issues, etc.",
-                          "id": "developer_experience",
+                          "name": "Education",
+                          "nameHtml": "Education",
+                          "nameClean": "Education",
+                          "description": "Issues related to learning new technologies",
+                          "descriptionHtml": "Issues related to learning new technologies",
+                          "descriptionClean": "Issues related to learning new technologies",
+                          "id": "educational_issues",
                           "entityType": "default"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 11,
+                            "id": "lack_of_knowledge",
+                            "index": 0,
+                            "percentageQuestion": 3.1,
+                            "percentageSurvey": 0.22,
+                            "entity": {
+                              "name": "Lack of knowledge",
+                              "nameHtml": "Lack of knowledge",
+                              "nameClean": "Lack of knowledge",
+                              "id": "lack_of_knowledge",
+                              "parentId": "educational_issues",
+                              "entityType": "default"
+                            }
+                          },
+                          {
+                            "count": 8,
+                            "id": "lack_of_awareness",
+                            "index": 1,
+                            "percentageQuestion": 2.25,
+                            "percentageSurvey": 0.16,
+                            "entity": {
+                              "name": "Lack of awareness",
+                              "nameHtml": "Lack of awareness",
+                              "nameClean": "Lack of awareness",
+                              "id": "lack_of_awareness",
+                              "parentId": "educational_issues",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 24,
+                        "id": "css_border",
+                        "index": 7,
+                        "percentageQuestion": 6.76,
+                        "percentageSurvey": 0.49,
+                        "entity": {
+                          "name": "CSS Borders",
+                          "nameHtml": "CSS Borders",
+                          "nameClean": "CSS Borders",
+                          "id": "css_border",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border"
+                          },
+                          "webFeature": {
+                            "id": "borders",
+                            "description_html": "The <code>border</code> CSS property sets the color, style, and width of the line around an element.",
+                            "group": [
+                              "borders-outlines"
+                            ],
+                            "name": "Borders",
+                            "spec": [
+                              "https://drafts.csswg.org/css-backgrounds-3/#borders"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/borders/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2015-07-29",
+                              "support": {
+                                "chrome": "1",
+                                "chrome_android": "18",
+                                "edge": "12",
+                                "firefox": "1",
+                                "firefox_android": "14",
+                                "safari": "1",
+                                "safari_ios": "3"
+                              }
+                            }
+                          }
                         }
                       },
                       {
-                        "count": 19,
+                        "count": 20,
                         "id": "clip_path",
-                        "index": 7,
-                        "percentageQuestion": 5.35,
-                        "percentageSurvey": 0.39,
+                        "index": 8,
+                        "percentageQuestion": 5.63,
+                        "percentageSurvey": 0.41,
                         "entity": {
                           "name": "`clip-path`",
                           "nameHtml": "<code>clip-path</code>",
@@ -963,25 +1127,11 @@
                         }
                       },
                       {
-                        "count": 18,
-                        "id": "syntax_issues",
-                        "index": 8,
-                        "percentageQuestion": 5.07,
-                        "percentageSurvey": 0.37,
-                        "entity": {
-                          "name": "Syntax issues",
-                          "nameHtml": "Syntax issues",
-                          "nameClean": "Syntax issues",
-                          "id": "syntax_issues",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 17,
+                        "count": 19,
                         "id": "line_clamp",
                         "index": 9,
-                        "percentageQuestion": 4.79,
-                        "percentageSurvey": 0.35,
+                        "percentageQuestion": 5.35,
+                        "percentageSurvey": 0.39,
                         "entity": {
                           "name": "`line-clamp`",
                           "nameHtml": "<code>line-clamp</code>",
@@ -1017,11 +1167,25 @@
                         }
                       },
                       {
-                        "count": 16,
-                        "id": "css_in_svg",
+                        "count": 18,
+                        "id": "syntax_issues",
                         "index": 10,
-                        "percentageQuestion": 4.51,
-                        "percentageSurvey": 0.33,
+                        "percentageQuestion": 5.07,
+                        "percentageSurvey": 0.37,
+                        "entity": {
+                          "name": "Syntax issues",
+                          "nameHtml": "Syntax issues",
+                          "nameClean": "Syntax issues",
+                          "id": "syntax_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 17,
+                        "id": "css_in_svg",
+                        "index": 11,
+                        "percentageQuestion": 4.79,
+                        "percentageSurvey": 0.35,
                         "entity": {
                           "name": "CSS inside SVG",
                           "nameHtml": "CSS inside SVG",
@@ -1048,11 +1212,11 @@
                         ]
                       },
                       {
-                        "count": 15,
+                        "count": 16,
                         "id": "browser_rendering_issues",
-                        "index": 11,
-                        "percentageQuestion": 4.23,
-                        "percentageSurvey": 0.31,
+                        "index": 12,
+                        "percentageQuestion": 4.51,
+                        "percentageSurvey": 0.33,
                         "entity": {
                           "name": "Rendering",
                           "nameHtml": "Rendering",
@@ -1065,94 +1229,25 @@
                         }
                       },
                       {
-                        "count": 15,
+                        "count": 16,
                         "id": "sizing_issues",
-                        "index": 12,
-                        "percentageQuestion": 4.23,
-                        "percentageSurvey": 0.31,
+                        "index": 13,
+                        "percentageQuestion": 4.51,
+                        "percentageSurvey": 0.33,
                         "entity": {
                           "name": "Element sizing",
                           "nameHtml": "Element sizing",
                           "nameClean": "Element sizing",
                           "id": "sizing_issues",
                           "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 15,
-                            "id": "automatic_min_size",
-                            "index": 0,
-                            "percentageQuestion": 4.23,
-                            "percentageSurvey": 0.31,
-                            "entity": {
-                              "name": "Automatic minimum size",
-                              "nameHtml": "Automatic minimum size",
-                              "nameClean": "Automatic minimum size",
-                              "id": "automatic_min_size",
-                              "parentId": "sizing_issues",
-                              "entityType": "default"
-                            }
-                          },
-                          {
-                            "count": 15,
-                            "id": "extrinsic_sizing",
-                            "index": 1,
-                            "percentageQuestion": 4.23,
-                            "percentageSurvey": 0.31,
-                            "entity": {
-                              "name": "Extrinsic sizing",
-                              "nameHtml": "Extrinsic sizing",
-                              "nameClean": "Extrinsic sizing",
-                              "id": "extrinsic_sizing",
-                              "parentId": "sizing_issues",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
+                        }
                       },
                       {
-                        "count": 12,
-                        "id": "tooling_issues",
-                        "index": 13,
-                        "percentageQuestion": 3.38,
-                        "percentageSurvey": 0.24,
-                        "entity": {
-                          "name": "Tooling",
-                          "nameHtml": "Tooling",
-                          "nameClean": "Tooling",
-                          "description": "Issues around third party tools, or lack thereof, including tooling in the browser (extensions, devtools, etc.).",
-                          "descriptionHtml": "Issues around third party tools, or lack thereof, including tooling in the browser (extensions, devtools, etc.).",
-                          "descriptionClean": "Issues around third party tools, or lack thereof, including tooling in the browser (extensions, devtools, etc.).",
-                          "id": "tooling_issues",
-                          "entityType": "default"
-                        },
-                        "nestedBuckets": [
-                          {
-                            "count": 7,
-                            "id": "shape_authoring_tools",
-                            "index": 0,
-                            "percentageQuestion": 1.97,
-                            "percentageSurvey": 0.14,
-                            "entity": {
-                              "name": "Shape authoring tools",
-                              "nameHtml": "Shape authoring tools",
-                              "nameClean": "Shape authoring tools",
-                              "description": "Reliance on external generators or visual editors to author clip-path/shape()/path values, and desire for in-browser or IDE tools to create and copy them.",
-                              "descriptionHtml": "Reliance on external generators or visual editors to author clip-path/shape()/path values, and desire for in-browser or IDE tools to create and copy them.",
-                              "descriptionClean": "Reliance on external generators or visual editors to author clip-path/shape()/path values, and desire for in-browser or IDE tools to create and copy them.",
-                              "id": "shape_authoring_tools",
-                              "parentId": "tooling_issues",
-                              "entityType": "default"
-                            }
-                          }
-                        ]
-                      },
-                      {
-                        "count": 11,
+                        "count": 13,
                         "id": "advanced_borders",
                         "index": 14,
-                        "percentageQuestion": 3.1,
-                        "percentageSurvey": 0.22,
+                        "percentageQuestion": 3.66,
+                        "percentageSurvey": 0.27,
                         "entity": {
                           "name": "Advanced borders",
                           "nameHtml": "Advanced borders",
@@ -1163,11 +1258,11 @@
                         }
                       },
                       {
-                        "count": 11,
+                        "count": 13,
                         "id": "animations_issues",
                         "index": 15,
-                        "percentageQuestion": 3.1,
-                        "percentageSurvey": 0.22,
+                        "percentageQuestion": 3.66,
+                        "percentageSurvey": 0.27,
                         "entity": {
                           "name": "Animations",
                           "nameHtml": "Animations",
@@ -1180,126 +1275,11 @@
                         }
                       },
                       {
-                        "count": 9,
-                        "id": "filter_effects",
-                        "index": 16,
-                        "percentageQuestion": 2.54,
-                        "percentageSurvey": 0.18,
-                        "entity": {
-                          "name": "Filters & Effects",
-                          "nameHtml": "Filters &amp; Effects",
-                          "nameClean": "Filters & Effects",
-                          "description": "`blur()`, `brightness()`, `contrast()`…",
-                          "descriptionHtml": "<code>blur()</code>, <code>brightness()</code>, <code>contrast()</code>…",
-                          "descriptionClean": "blur(), brightness(), contrast()…",
-                          "id": "filter_effects",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".image{\n  filter: contrast(175%) blur(5px)\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.image</span>{\n  <span class=\"hljs-attribute\">filter</span>: <span class=\"hljs-built_in\">contrast</span>(<span class=\"hljs-number\">175%</span>) <span class=\"hljs-built_in\">blur</span>(<span class=\"hljs-number\">5px</span>)\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/filter"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/css-filters"
-                          }
-                        }
-                      },
-                      {
-                        "count": 9,
-                        "id": "positioning_issues",
-                        "index": 17,
-                        "percentageQuestion": 2.54,
-                        "percentageSurvey": 0.18,
-                        "entity": {
-                          "name": "Positioning",
-                          "nameHtml": "Positioning",
-                          "nameClean": "Positioning",
-                          "id": "positioning_issues",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 9,
-                        "id": "typography_issues",
-                        "index": 18,
-                        "percentageQuestion": 2.54,
-                        "percentageSurvey": 0.18,
-                        "entity": {
-                          "name": "Typography",
-                          "nameHtml": "Typography",
-                          "nameClean": "Typography",
-                          "description": "Issues related to text and font styling on the web.",
-                          "descriptionHtml": "Issues related to text and font styling on the web.",
-                          "descriptionClean": "Issues related to text and font styling on the web.",
-                          "id": "typography_issues",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 7,
-                        "id": "bugs_and_stability_issues",
-                        "index": 19,
-                        "percentageQuestion": 1.97,
-                        "percentageSurvey": 0.14,
-                        "entity": {
-                          "name": "Bugs and stability issues",
-                          "nameHtml": "Bugs and stability issues",
-                          "nameClean": "Bugs and stability issues",
-                          "id": "bugs_and_stability_issues",
-                          "entityType": "default"
-                        }
-                      },
-                      {
-                        "count": 7,
-                        "id": "css_gradients",
-                        "index": 20,
-                        "percentageQuestion": 1.97,
-                        "percentageSurvey": 0.14,
-                        "entity": {
-                          "name": "CSS Gradients",
-                          "nameHtml": "CSS Gradients",
-                          "nameClean": "CSS Gradients",
-                          "id": "css_gradients",
-                          "entityType": "feature",
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Images/Using_gradients"
-                          },
-                          "webFeature": {
-                            "id": "gradients",
-                            "description_html": "The <code>linear-gradient()</code> and <code>radial-gradient()</code> CSS functions and their repeating counterparts create backgrounds that progress smoothly between multiple colors.",
-                            "group": [
-                              "gradients"
-                            ],
-                            "name": "Gradients",
-                            "spec": [
-                              "https://drafts.csswg.org/css-images-3/#gradients"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/gradients/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2015-07-29",
-                              "support": {
-                                "chrome": "26",
-                                "chrome_android": "26",
-                                "edge": "12",
-                                "firefox": "3.6",
-                                "firefox_android": "4",
-                                "safari": "7",
-                                "safari_ios": "7"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 7,
+                        "count": 13,
                         "id": "css_shape_function",
-                        "index": 21,
-                        "percentageQuestion": 1.97,
-                        "percentageSurvey": 0.14,
+                        "index": 16,
+                        "percentageQuestion": 3.66,
+                        "percentageSurvey": 0.27,
                         "entity": {
                           "name": "`shape()`",
                           "nameHtml": "<code>shape()</code>",
@@ -1351,73 +1331,90 @@
                         }
                       },
                       {
-                        "count": 7,
-                        "id": "debugging_issues",
-                        "index": 22,
-                        "percentageQuestion": 1.97,
-                        "percentageSurvey": 0.14,
+                        "count": 12,
+                        "id": "tooling_issues",
+                        "index": 17,
+                        "percentageQuestion": 3.38,
+                        "percentageSurvey": 0.24,
                         "entity": {
-                          "name": "Debugging",
-                          "nameHtml": "Debugging",
-                          "nameClean": "Debugging",
-                          "description": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
-                          "descriptionHtml": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
-                          "descriptionClean": "Issues around difficulty finding and eliminating bugs, regardless of the cause.",
-                          "id": "debugging_issues",
+                          "name": "Tooling",
+                          "nameHtml": "Tooling",
+                          "nameClean": "Tooling",
+                          "description": "Issues around third party tools, or lack thereof, including tooling in the browser (extensions, devtools, etc.).",
+                          "descriptionHtml": "Issues around third party tools, or lack thereof, including tooling in the browser (extensions, devtools, etc.).",
+                          "descriptionClean": "Issues around third party tools, or lack thereof, including tooling in the browser (extensions, devtools, etc.).",
+                          "id": "tooling_issues",
                           "entityType": "default"
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 7,
+                            "id": "shape_authoring_tools",
+                            "index": 0,
+                            "percentageQuestion": 1.97,
+                            "percentageSurvey": 0.14,
+                            "entity": {
+                              "name": "Shape authoring tools",
+                              "nameHtml": "Shape authoring tools",
+                              "nameClean": "Shape authoring tools",
+                              "description": "Reliance on external generators or visual editors to author clip-path/shape()/path values, and desire for in-browser or IDE tools to create and copy them.",
+                              "descriptionHtml": "Reliance on external generators or visual editors to author clip-path/shape()/path values, and desire for in-browser or IDE tools to create and copy them.",
+                              "descriptionClean": "Reliance on external generators or visual editors to author clip-path/shape()/path values, and desire for in-browser or IDE tools to create and copy them.",
+                              "id": "shape_authoring_tools",
+                              "parentId": "tooling_issues",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
                       },
                       {
-                        "count": 7,
-                        "id": "masks",
-                        "index": 23,
-                        "percentageQuestion": 1.97,
-                        "percentageSurvey": 0.14,
+                        "count": 11,
+                        "id": "filter_effects",
+                        "index": 18,
+                        "percentageQuestion": 3.1,
+                        "percentageSurvey": 0.22,
                         "entity": {
-                          "name": "Masking",
-                          "nameHtml": "Masking",
-                          "nameClean": "Masking",
-                          "id": "masks",
+                          "name": "Filters & Effects",
+                          "nameHtml": "Filters &amp; Effects",
+                          "nameClean": "Filters & Effects",
+                          "description": "`blur()`, `brightness()`, `contrast()`…",
+                          "descriptionHtml": "<code>blur()</code>, <code>brightness()</code>, <code>contrast()</code>…",
+                          "descriptionClean": "blur(), brightness(), contrast()…",
+                          "id": "filter_effects",
                           "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".image{\n  filter: contrast(175%) blur(5px)\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.image</span>{\n  <span class=\"hljs-attribute\">filter</span>: <span class=\"hljs-built_in\">contrast</span>(<span class=\"hljs-number\">175%</span>) <span class=\"hljs-built_in\">blur</span>(<span class=\"hljs-number\">5px</span>)\n}"
+                          },
                           "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Masking"
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/filter"
                           },
                           "caniuse": {
-                            "url": "https://caniuse.com/css-masks"
-                          },
-                          "webFeature": {
-                            "id": "masks",
-                            "description_html": "The <code>mask</code> CSS property (and several longhand properties) partially or completely hides an element according to the shape and depth of an image.",
-                            "group": [
-                              "clipping-shapes-masking"
-                            ],
-                            "name": "Masks",
-                            "spec": [
-                              "https://drafts.csswg.org/css-masking-1/#positioned-masks"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/masks/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2023-12-07",
-                              "support": {
-                                "chrome": "120",
-                                "chrome_android": "120",
-                                "edge": "120",
-                                "firefox": "53",
-                                "firefox_android": "53",
-                                "safari": "15.4",
-                                "safari_ios": "15.4"
-                              }
-                            }
+                            "url": "https://caniuse.com/css-filters"
                           }
                         }
                       },
                       {
-                        "count": 7,
+                        "count": 10,
+                        "id": "bugs_and_stability_issues",
+                        "index": 19,
+                        "percentageQuestion": 2.82,
+                        "percentageSurvey": 0.2,
+                        "entity": {
+                          "name": "Bugs and stability issues",
+                          "nameHtml": "Bugs and stability issues",
+                          "nameClean": "Bugs and stability issues",
+                          "id": "bugs_and_stability_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 10,
                         "id": "text_box_trim",
-                        "index": 24,
-                        "percentageQuestion": 1.97,
-                        "percentageSurvey": 0.14,
+                        "index": 20,
+                        "percentageQuestion": 2.82,
+                        "percentageSurvey": 0.2,
                         "entity": {
                           "name": "`text-box-edge`/`text-box-trim`",
                           "nameHtml": "<code>text-box-edge</code>/<code>text-box-trim</code>",
@@ -1463,6 +1460,106 @@
                         }
                       },
                       {
+                        "count": 9,
+                        "id": "css_gradients",
+                        "index": 21,
+                        "percentageQuestion": 2.54,
+                        "percentageSurvey": 0.18,
+                        "entity": {
+                          "name": "CSS Gradients",
+                          "nameHtml": "CSS Gradients",
+                          "nameClean": "CSS Gradients",
+                          "id": "css_gradients",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Images/Using_gradients"
+                          },
+                          "webFeature": {
+                            "id": "gradients",
+                            "description_html": "The <code>linear-gradient()</code> and <code>radial-gradient()</code> CSS functions and their repeating counterparts create backgrounds that progress smoothly between multiple colors.",
+                            "group": [
+                              "gradients"
+                            ],
+                            "name": "Gradients",
+                            "spec": [
+                              "https://drafts.csswg.org/css-images-3/#gradients"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/gradients/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2015-07-29",
+                              "support": {
+                                "chrome": "26",
+                                "chrome_android": "26",
+                                "edge": "12",
+                                "firefox": "3.6",
+                                "firefox_android": "4",
+                                "safari": "7",
+                                "safari_ios": "7"
+                              }
+                            }
+                          }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 5,
+                            "id": "gradient_borders",
+                            "index": 0,
+                            "percentageQuestion": 1.41,
+                            "percentageSurvey": 0.1,
+                            "entity": {
+                              "name": "Gradient Borders",
+                              "nameHtml": "Gradient Borders",
+                              "nameClean": "Gradient Borders",
+                              "id": "gradient_borders",
+                              "parentId": "css_gradients",
+                              "entityType": "default"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 9,
+                        "id": "icons",
+                        "index": 22,
+                        "percentageQuestion": 2.54,
+                        "percentageSurvey": 0.18
+                      },
+                      {
+                        "count": 9,
+                        "id": "typography_issues",
+                        "index": 23,
+                        "percentageQuestion": 2.54,
+                        "percentageSurvey": 0.18,
+                        "entity": {
+                          "name": "Typography",
+                          "nameHtml": "Typography",
+                          "nameClean": "Typography",
+                          "description": "Issues related to text and font styling on the web.",
+                          "descriptionHtml": "Issues related to text and font styling on the web.",
+                          "descriptionClean": "Issues related to text and font styling on the web.",
+                          "id": "typography_issues",
+                          "entityType": "default"
+                        }
+                      },
+                      {
+                        "count": 8,
+                        "id": "math_functions",
+                        "index": 24,
+                        "percentageQuestion": 2.25,
+                        "percentageSurvey": 0.16,
+                        "entity": {
+                          "id": "math_functions",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/Functions"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-math-functions"
+                          }
+                        }
+                      },
+                      {
                         "count": 4550,
                         "id": "no_answer",
                         "index": 25,
@@ -1470,11 +1567,11 @@
                         "percentageSurvey": 92.82
                       },
                       {
-                        "count": 204,
+                        "count": 243,
                         "id": "other_answers",
                         "index": 26,
-                        "percentageQuestion": 57.37,
-                        "percentageSurvey": 4.08
+                        "percentageQuestion": 68.38,
+                        "percentageSurvey": 4.86
                       }
                     ]
                   }

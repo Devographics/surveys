@@ -523,11 +523,11 @@
                         }
                       },
                       {
-                        "count": 38,
+                        "count": 40,
                         "id": "css_carousels",
                         "index": 1,
-                        "percentageQuestion": 8.86,
-                        "percentageSurvey": 0.78,
+                        "percentageQuestion": 9.32,
+                        "percentageSurvey": 0.82,
                         "entity": {
                           "name": "CSS Carousels",
                           "nameHtml": "CSS Carousels",
@@ -582,9 +582,49 @@
                         }
                       },
                       {
+                        "count": 36,
+                        "id": "same_document_view_transitions",
+                        "index": 2,
+                        "percentageQuestion": 8.39,
+                        "percentageSurvey": 0.73,
+                        "entity": {
+                          "name": "View Transition API (same document)",
+                          "nameHtml": "View Transition API (same document)",
+                          "nameClean": "View Transition API (same document)",
+                          "id": "same_document_view_transitions",
+                          "parentId": "animations_issues",
+                          "entityType": "feature",
+                          "webFeature": {
+                            "id": "view-transitions",
+                            "description_html": "View transitions allow you to create animated visual transitions between different states of a document.",
+                            "group": [
+                              "view-transitions"
+                            ],
+                            "name": "View transitions",
+                            "spec": [
+                              "https://drafts.csswg.org/css-view-transitions-1/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/view-transitions/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2025-10-14",
+                              "support": {
+                                "chrome": "111",
+                                "chrome_android": "111",
+                                "edge": "111",
+                                "firefox": "144",
+                                "firefox_android": "144",
+                                "safari": "18",
+                                "safari_ios": "18"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
                         "count": 28,
                         "id": "scroll_driven_animations",
-                        "index": 2,
+                        "index": 3,
                         "percentageQuestion": 6.53,
                         "percentageSurvey": 0.57,
                         "entity": {
@@ -644,11 +684,121 @@
                         }
                       },
                       {
-                        "count": 15,
+                        "count": 18,
+                        "id": "intrinsic_sizing",
+                        "index": 4,
+                        "percentageQuestion": 4.2,
+                        "percentageSurvey": 0.37,
+                        "entity": {
+                          "name": "Intrinsic Sizing",
+                          "nameHtml": "Intrinsic Sizing",
+                          "nameClean": "Intrinsic Sizing",
+                          "description": "`min-content`, `max-content`, `fit-content`",
+                          "descriptionHtml": "<code>min-content</code>, <code>max-content</code>, <code>fit-content</code>",
+                          "descriptionClean": "min-content, max-content, fit-content",
+                          "id": "intrinsic_sizing",
+                          "parentId": "sizing_issues",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "h2 {\n  width: max-content;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-tag\">h2</span> {\n  <span class=\"hljs-attribute\">width</span>: max-content;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/min-content"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/intrinsic-width"
+                          },
+                          "webFeature": {
+                            "id": "min-max-content",
+                            "description_html": "The <code>min-content</code> and <code>max-content</code> CSS keywords represent the smallest and largest intrinsic sizes of an element.",
+                            "group": [
+                              "layout"
+                            ],
+                            "name": "min-content and max-content",
+                            "spec": [
+                              "https://drafts.csswg.org/css-sizing-3/#valdef-width-max-content",
+                              "https://drafts.csswg.org/css-sizing-3/#valdef-width-min-content"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/min-max-content/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-01-15",
+                              "support": {
+                                "chrome": "46",
+                                "chrome_android": "46",
+                                "edge": "79",
+                                "firefox": "66",
+                                "firefox_android": "66",
+                                "safari": "11",
+                                "safari_ios": "11"
+                              }
+                            }
+                          }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 16,
+                            "id": "interpolate_size",
+                            "index": 0,
+                            "percentageQuestion": 3.73,
+                            "percentageSurvey": 0.33,
+                            "entity": {
+                              "name": "`interpolate-size()`",
+                              "nameHtml": "<code>interpolate-size()</code>",
+                              "nameClean": "interpolate-size()",
+                              "id": "interpolate_size",
+                              "parentId": "intrinsic_sizing",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": "main {\n  interpolate-size: allow-keywords;\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-selector-tag\">main</span> {\n  interpolate-size: allow-keywords;\n}"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/interpolate-size"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/mdn-css_types_calc-size"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://chromestatus.com/feature/5196713071738880",
+                                  "title": "CSS interpolate-size property and calc-size() function"
+                                }
+                              ],
+                              "webFeature": {
+                                "id": "interpolate-size",
+                                "description_html": "The <code>interpolate-size</code> CSS property sets whether animations and transitions interpolate between a numeric value and a keyword value, such as from a fixed length to <code>auto</code> or <code>fit-content</code>.",
+                                "group": [
+                                  "transitions",
+                                  "animation"
+                                ],
+                                "name": "interpolate-size",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-values-5/#interpolate-size"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/interpolate-size/",
+                                "status": {
+                                  "baseline": "false",
+                                  "support": {
+                                    "chrome": "129",
+                                    "chrome_android": "129",
+                                    "edge": "129"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 17,
                         "id": "discrete_properties_animations",
-                        "index": 3,
-                        "percentageQuestion": 3.5,
-                        "percentageSurvey": 0.31,
+                        "index": 5,
+                        "percentageQuestion": 3.96,
+                        "percentageSurvey": 0.35,
                         "entity": {
                           "name": "Discrete Properties Animations",
                           "nameHtml": "Discrete Properties Animations",
@@ -692,11 +842,108 @@
                         }
                       },
                       {
-                        "count": 10,
+                        "count": 15,
+                        "id": "css_transitions",
+                        "index": 6,
+                        "percentageQuestion": 3.5,
+                        "percentageSurvey": 0.31,
+                        "entity": {
+                          "name": "CSS Transitions",
+                          "nameHtml": "CSS Transitions",
+                          "nameClean": "CSS Transitions",
+                          "id": "css_transitions",
+                          "parentId": "animations_issues",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-transitions"
+                          },
+                          "webFeature": {
+                            "id": "transitions",
+                            "description_html": "The <code>transition</code> shorthand CSS property sets how changes to an element's styles may occur over time. Transitions can be applied to specific CSS properties, all properties, or none.",
+                            "group": [
+                              "transitions"
+                            ],
+                            "name": "Transitions (CSS)",
+                            "spec": [
+                              "https://drafts.csswg.org/css-transitions-2/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/transitions/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2015-09-30",
+                              "support": {
+                                "chrome": "26",
+                                "chrome_android": "26",
+                                "edge": "12",
+                                "firefox": "16",
+                                "firefox_android": "16",
+                                "safari": "9",
+                                "safari_ios": "9"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 13,
+                        "id": "scrollbar_gutter",
+                        "index": 7,
+                        "percentageQuestion": 3.03,
+                        "percentageSurvey": 0.27,
+                        "entity": {
+                          "name": "`scrollbar-gutter`",
+                          "nameHtml": "<code>scrollbar-gutter</code>",
+                          "nameClean": "scrollbar-gutter",
+                          "id": "scrollbar_gutter",
+                          "parentId": "scrollbars",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".container {\n  scrollbar-gutter: stable;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.container</span> {\n  <span class=\"hljs-attribute\">scrollbar-gutter</span>: stable;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scrollbar-gutter"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_properties_scrollbar-gutter"
+                          },
+                          "webFeature": {
+                            "id": "scrollbar-gutter",
+                            "description_html": "The <code>scrollbar-gutter</code> CSS property reserves space for the scrollbar, preventing unwanted layout changes as the scrollbar appears and disappears.",
+                            "group": [
+                              "scrolling"
+                            ],
+                            "name": "scrollbar-gutter",
+                            "spec": [
+                              "https://drafts.csswg.org/css-overflow-3/#scrollbar-gutter-property"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/scrollbar-gutter/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-12-11",
+                              "support": {
+                                "chrome": "94",
+                                "chrome_android": "94",
+                                "edge": "94",
+                                "firefox": "97",
+                                "firefox_android": "97",
+                                "safari": "18.2",
+                                "safari_ios": "18.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 11,
                         "id": "scroll_snap",
-                        "index": 4,
-                        "percentageQuestion": 2.33,
-                        "percentageSurvey": 0.2,
+                        "index": 8,
+                        "percentageQuestion": 2.56,
+                        "percentageSurvey": 0.22,
                         "entity": {
                           "name": "Scroll Snap",
                           "nameHtml": "Scroll Snap",
@@ -746,59 +993,8 @@
                       },
                       {
                         "count": 10,
-                        "id": "scrollbar_gutter",
-                        "index": 5,
-                        "percentageQuestion": 2.33,
-                        "percentageSurvey": 0.2,
-                        "entity": {
-                          "name": "`scrollbar-gutter`",
-                          "nameHtml": "<code>scrollbar-gutter</code>",
-                          "nameClean": "scrollbar-gutter",
-                          "id": "scrollbar_gutter",
-                          "parentId": "scrollbars",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".container {\n  scrollbar-gutter: stable;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.container</span> {\n  <span class=\"hljs-attribute\">scrollbar-gutter</span>: stable;\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scrollbar-gutter"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/mdn-css_properties_scrollbar-gutter"
-                          },
-                          "webFeature": {
-                            "id": "scrollbar-gutter",
-                            "description_html": "The <code>scrollbar-gutter</code> CSS property reserves space for the scrollbar, preventing unwanted layout changes as the scrollbar appears and disappears.",
-                            "group": [
-                              "scrolling"
-                            ],
-                            "name": "scrollbar-gutter",
-                            "spec": [
-                              "https://drafts.csswg.org/css-overflow-3/#scrollbar-gutter-property"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/scrollbar-gutter/",
-                            "status": {
-                              "baseline": "low",
-                              "baseline_low_date": "2024-12-11",
-                              "support": {
-                                "chrome": "94",
-                                "chrome_android": "94",
-                                "edge": "94",
-                                "firefox": "97",
-                                "firefox_android": "97",
-                                "safari": "18.2",
-                                "safari_ios": "18.2"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 10,
                         "id": "scrollbar_styling",
-                        "index": 6,
+                        "index": 9,
                         "percentageQuestion": 2.33,
                         "percentageSurvey": 0.2,
                         "entity": {
@@ -811,9 +1007,182 @@
                         }
                       },
                       {
+                        "count": 9,
+                        "id": "scroll_state",
+                        "index": 10,
+                        "percentageQuestion": 2.1,
+                        "percentageSurvey": 0.18,
+                        "entity": {
+                          "name": "Container scroll-state queries",
+                          "nameHtml": "Container scroll-state queries",
+                          "nameClean": "Container scroll-state queries",
+                          "id": "scroll_state",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "@container scroller scroll-state(scrollable: top) {\n  .back-to-top {\n    translate: 0 0;\n  }\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">@container</span> scroller scroll-state(<span class=\"hljs-attribute\">scrollable</span>: top) {\n  <span class=\"hljs-selector-class\">.back-to-top</span> {\n    <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">0</span>;\n  }\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_at-rules_container_scroll-state_queries"
+                          },
+                          "webFeature": {
+                            "id": "container-scroll-state-queries",
+                            "description_html": "Container scroll-state queries with the <code>@container scroll-state(...)</code> at-rule apply styles to an element based on the sticky positioning, snapped, and scrollable state of the container.",
+                            "group": [
+                              "container-queries"
+                            ],
+                            "name": "Container scroll-state queries",
+                            "spec": [
+                              "https://drafts.csswg.org/css-conditional-5/#scroll-state-container"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/container-scroll-state-queries/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "133",
+                                "chrome_android": "133",
+                                "edge": "133"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 9,
+                        "id": "user_action_pseudo_classes",
+                        "index": 11,
+                        "percentageQuestion": 2.1,
+                        "percentageSurvey": 0.18,
+                        "entity": {
+                          "name": "`:active`, `:focus`, and `:hover`",
+                          "nameHtml": "<code>:active</code>, <code>:focus</code>, and <code>:hover</code>",
+                          "nameClean": ":active, :focus, and :hover",
+                          "id": "user_action_pseudo_classes",
+                          "entityType": "feature",
+                          "webFeature": {
+                            "id": "user-action-pseudos",
+                            "description_html": "The <code>:active</code>, <code>:focus</code>, and <code>:hover</code> CSS pseudo-classes match elements based on how users are interacting with them.",
+                            "group": [
+                              "selectors"
+                            ],
+                            "name": "User action pseudo-classes",
+                            "spec": [
+                              "https://drafts.csswg.org/selectors-4/#the-hover-pseudo",
+                              "https://drafts.csswg.org/selectors-4/#the-active-pseudo",
+                              "https://drafts.csswg.org/selectors-4/#the-focus-pseudo"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/user-action-pseudos/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2015-07-29",
+                              "support": {
+                                "chrome": "1",
+                                "chrome_android": "18",
+                                "edge": "12",
+                                "firefox": "1",
+                                "firefox_android": "4",
+                                "safari": "2",
+                                "safari_ios": "1"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 8,
+                        "id": "select_element",
+                        "index": 12,
+                        "percentageQuestion": 1.86,
+                        "percentageSurvey": 0.16,
+                        "entity": {
+                          "name": "`<select>`",
+                          "nameHtml": "<code>&lt;select&gt;</code>",
+                          "nameClean": "<select>",
+                          "id": "select_element",
+                          "parentId": "form_input_issues",
+                          "entityType": "feature"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 8,
+                            "id": "customizable_select",
+                            "index": 0,
+                            "percentageQuestion": 1.86,
+                            "percentageSurvey": 0.16,
+                            "entity": {
+                              "name": "Customizable Select",
+                              "nameHtml": "Customizable Select",
+                              "nameClean": "Customizable Select",
+                              "description": "Stylable, customizable dropdown control. Previously `<selectlist>` and `<selectmenu>`.",
+                              "descriptionHtml": "Stylable, customizable dropdown control. Previously <code>&lt;selectlist&gt;</code> and <code>&lt;selectmenu&gt;</code>.",
+                              "descriptionClean": "Stylable, customizable dropdown control. Previously <selectlist> and <selectmenu>.",
+                              "id": "customizable_select",
+                              "parentId": "select_element",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": "select,\n::picker(select) {\n  appearance: base-select;\n}",
+                                "codeHighlighted": "<span class=\"hljs-selector-tag\">select</span>,\n::<span class=\"hljs-built_in\">picker</span>(select) {\n  <span class=\"hljs-attribute\">appearance</span>: base-select;\n}"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://open-ui.org/components/customizableselect/",
+                                  "title": "Customizable Select Element (Explainer)"
+                                },
+                                {
+                                  "url": "https://web.dev/state-of-css-2022/#customizing-select-elements",
+                                  "title": "State of CSS 2022"
+                                },
+                                {
+                                  "url": "https://css-tricks.com/the-selectmenu-element/",
+                                  "title": "The selectmenu HTML Tag | CSS-Tricks - CSS-Tricks"
+                                },
+                                {
+                                  "url": "https://www.smashingmagazine.com/2023/06/advanced-form-control-styling-selectmenu-anchoring-api/",
+                                  "title": "Advanced Form Control Styling With Selectmenu And Anchoring API — Smashing Magazine"
+                                },
+                                {
+                                  "url": "https://hidde.blog/custom-select-with-selectmenu/",
+                                  "title": "Two levels of customising <selectlist>\n"
+                                },
+                                {
+                                  "url": "https://microsoftedge.github.io/Demos/selectmenu/",
+                                  "title": "Open UI's selectmenu demos"
+                                }
+                              ],
+                              "webFeature": {
+                                "id": "customizable-select",
+                                "description_html": "The <code>&#x3C;select></code> element's appearance, including the button, selected option, picker dropdown, and options, can be customized using CSS.",
+                                "group": [
+                                  "forms",
+                                  "html-elements"
+                                ],
+                                "name": "Customizable <select>",
+                                "spec": [
+                                  "https://open-ui.org/components/customizableselect/"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/customizable-select/",
+                                "status": {
+                                  "baseline": "false",
+                                  "support": {
+                                    "chrome": "135",
+                                    "chrome_android": "135",
+                                    "edge": "135"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
                         "count": 6,
                         "id": "popover_api",
-                        "index": 7,
+                        "index": 13,
                         "percentageQuestion": 1.4,
                         "percentageSurvey": 0.12,
                         "entity": {
@@ -880,7 +1249,7 @@
                       {
                         "count": 6,
                         "id": "scroll_behavior",
-                        "index": 8,
+                        "index": 14,
                         "percentageQuestion": 1.4,
                         "percentageSurvey": 0.12,
                         "entity": {
@@ -928,69 +1297,9 @@
                         }
                       },
                       {
-                        "count": 6,
-                        "id": "scroll_state",
-                        "index": 9,
-                        "percentageQuestion": 1.4,
-                        "percentageSurvey": 0.12,
-                        "entity": {
-                          "name": "Container scroll-state queries",
-                          "nameHtml": "Container scroll-state queries",
-                          "nameClean": "Container scroll-state queries",
-                          "id": "scroll_state",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": "@container scroller scroll-state(scrollable: top) {\n  .back-to-top {\n    translate: 0 0;\n  }\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-keyword\">@container</span> scroller scroll-state(<span class=\"hljs-attribute\">scrollable</span>: top) {\n  <span class=\"hljs-selector-class\">.back-to-top</span> {\n    <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">0</span>;\n  }\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/mdn-css_at-rules_container_scroll-state_queries"
-                          },
-                          "webFeature": {
-                            "id": "container-scroll-state-queries",
-                            "description_html": "Container scroll-state queries with the <code>@container scroll-state(...)</code> at-rule apply styles to an element based on the sticky positioning, snapped, and scrollable state of the container.",
-                            "group": [
-                              "container-queries"
-                            ],
-                            "name": "Container scroll-state queries",
-                            "spec": [
-                              "https://drafts.csswg.org/css-conditional-5/#scroll-state-container"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/container-scroll-state-queries/",
-                            "status": {
-                              "baseline": "false",
-                              "support": {
-                                "chrome": "133",
-                                "chrome_android": "133",
-                                "edge": "133"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 6,
-                        "id": "select_element",
-                        "index": 10,
-                        "percentageQuestion": 1.4,
-                        "percentageSurvey": 0.12,
-                        "entity": {
-                          "name": "`<select>`",
-                          "nameHtml": "<code>&lt;select&gt;</code>",
-                          "nameClean": "<select>",
-                          "id": "select_element",
-                          "parentId": "form_input_issues",
-                          "entityType": "feature"
-                        }
-                      },
-                      {
                         "count": 5,
                         "id": "dialog_element",
-                        "index": 11,
+                        "index": 15,
                         "percentageQuestion": 1.17,
                         "percentageSurvey": 0.1,
                         "entity": {
@@ -1038,6 +1347,148 @@
                                 "firefox_android": "98",
                                 "safari": "15.4",
                                 "safari_ios": "15.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 5,
+                        "id": "has_selector",
+                        "index": 16,
+                        "percentageQuestion": 1.17,
+                        "percentageSurvey": 0.1,
+                        "entity": {
+                          "name": "`:has()`",
+                          "nameHtml": "<code>:has()</code>",
+                          "nameClean": ":has()",
+                          "id": "has_selector",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "a:has(> img) {\n  border: 2px solid grey;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-tag\">a</span><span class=\"hljs-selector-pseudo\">:has</span>(&gt; <span class=\"hljs-selector-tag\">img</span>) {\n  <span class=\"hljs-attribute\">border</span>: <span class=\"hljs-number\">2px</span> solid grey;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:has"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-has"
+                          },
+                          "webFeature": {
+                            "id": "has",
+                            "description_html": "The <code>:has()</code> CSS functional pseudo-class matches an element if any of the selectors passed as parameters would match at least one element.",
+                            "group": [
+                              "selectors"
+                            ],
+                            "name": ":has()",
+                            "spec": [
+                              "https://drafts.csswg.org/selectors-4/#relational"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/has/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2023-12-19",
+                              "support": {
+                                "chrome": "105",
+                                "chrome_android": "105",
+                                "edge": "105",
+                                "firefox": "121",
+                                "firefox_android": "121",
+                                "safari": "15.4",
+                                "safari_ios": "15.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 5,
+                        "id": "overscroll_behavior",
+                        "index": 17,
+                        "percentageQuestion": 1.17,
+                        "percentageSurvey": 0.1,
+                        "entity": {
+                          "name": "`overscroll-behavior`",
+                          "nameHtml": "<code>overscroll-behavior</code>",
+                          "nameClean": "overscroll-behavior",
+                          "id": "overscroll_behavior",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".foo {\n  height: 200px;\n  overflow: auto;\n  overscroll-behavior-y: contain;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-number\">200px</span>;\n  <span class=\"hljs-attribute\">overflow</span>: auto;\n  <span class=\"hljs-attribute\">overscroll-behavior-y</span>: contain;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/overscroll-behavior"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-overscroll-behavior"
+                          },
+                          "webFeature": {
+                            "id": "overscroll-behavior",
+                            "description_html": "The <code>overscroll-behavior</code> CSS property disables default scrolling behaviors when the edges of a scrolling area are reached.",
+                            "group": [
+                              "scrolling"
+                            ],
+                            "name": "overscroll-behavior",
+                            "spec": [
+                              "https://drafts.csswg.org/css-overscroll-1/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/overscroll-behavior/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "144",
+                                "chrome_android": "144",
+                                "edge": "144",
+                                "firefox": "150",
+                                "firefox_android": "150"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 5,
+                        "id": "position_sticky",
+                        "index": 18,
+                        "percentageQuestion": 1.17,
+                        "percentageSurvey": 0.1,
+                        "entity": {
+                          "name": "`position:sticky`",
+                          "nameHtml": "<code>position:sticky</code>",
+                          "nameClean": "position:sticky",
+                          "id": "position_sticky",
+                          "entityType": "feature",
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-sticky"
+                          },
+                          "webFeature": {
+                            "id": "sticky-positioning",
+                            "description_html": "The <code>position: sticky</code> CSS declaration positions an element in the normal flow until it crosses a specified threshold, at which points it becomes fixed (stuck) at that position.",
+                            "group": [
+                              "positioning"
+                            ],
+                            "name": "Sticky positioning",
+                            "spec": [
+                              "https://drafts.csswg.org/css-position-3/#stickypos-insets"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/sticky-positioning/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2019-09-19",
+                              "support": {
+                                "chrome": "56",
+                                "chrome_android": "56",
+                                "edge": "16",
+                                "firefox": "59",
+                                "firefox_android": "59",
+                                "safari": "13",
+                                "safari_ios": "13"
                               }
                             }
                           }
