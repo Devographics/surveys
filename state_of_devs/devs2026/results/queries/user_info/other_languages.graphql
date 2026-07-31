@@ -1,0 +1,62 @@
+query {
+  surveys {
+    state_of_devs {
+      devs2026 {
+        user_info {
+          other_languages: other_languages {
+            id
+            comments {
+              currentEdition {
+                count
+              }
+            }
+            freeform(
+              parameters: {
+                showNoAnswer: true
+                cutoff: 10
+                limit: 40
+                mergeOtherBuckets: true
+              }
+            ) {
+              allEditions(editionCount: 2) {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                  limit
+                  cutoff
+                }
+                editionId
+                year
+                completion {
+                  count
+                  percentageSurvey
+                  total
+                }
+                average
+                percentiles {
+                  p50
+                }
+                buckets {
+                  count
+                  id
+                  value
+                  index
+                  percentageQuestion
+                  percentageSurvey
+                  isFreeformData
+                  hasInsufficientData
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
