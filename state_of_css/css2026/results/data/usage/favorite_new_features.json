@@ -8,7 +8,7 @@
               "id": "favorite_new_features",
               "comments": {
                 "currentEdition": {
-                  "count": 7
+                  "count": 2
                 }
               },
               "freeform": {
@@ -19,8 +19,8 @@
                         "property": "count",
                         "order": "desc"
                       },
-                      "limit": 20,
-                      "cutoff": 10
+                      "limit": 25,
+                      "cutoff": 5
                     },
                     "editionId": "css2025",
                     "year": 2025,
@@ -438,7 +438,60 @@
                               }
                             }
                           }
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 69,
+                            "id": "subgrid",
+                            "index": 0,
+                            "percentageQuestion": 6.01,
+                            "percentageSurvey": 1.25,
+                            "entity": {
+                              "name": "Subgrid",
+                              "nameHtml": "Subgrid",
+                              "nameClean": "Subgrid",
+                              "id": "subgrid",
+                              "parentId": "grid",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": ".wrapper {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.item {\n  grid-row: 1 / 4;\n  display: grid;\n  grid-template-rows: subgrid;\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-selector-class\">.wrapper</span> {\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">1</span>fr <span class=\"hljs-number\">1</span>fr;\n}\n\n<span class=\"hljs-selector-class\">.item</span> {\n  <span class=\"hljs-attribute\">grid-row</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">4</span>;\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-rows</span>: subgrid;\n}"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/css-subgrid"
+                              },
+                              "webFeature": {
+                                "id": "subgrid",
+                                "description_html": "The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.",
+                                "group": [
+                                  "grid"
+                                ],
+                                "name": "Subgrid",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-grid-2/#subgrids"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/subgrid/",
+                                "status": {
+                                  "baseline": "high",
+                                  "baseline_low_date": "2023-09-15",
+                                  "support": {
+                                    "chrome": "117",
+                                    "chrome_android": "117",
+                                    "edge": "117",
+                                    "firefox": "71",
+                                    "firefox_android": "79",
+                                    "safari": "16",
+                                    "safari_ios": "16"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 45,
@@ -1082,18 +1135,358 @@
                         }
                       },
                       {
-                        "count": 4358,
-                        "id": "no_answer",
+                        "count": 23,
+                        "id": "css_custom_properties",
                         "index": 20,
-                        "percentageQuestion": 0,
-                        "percentageSurvey": 79.15
+                        "percentageQuestion": 2,
+                        "percentageSurvey": 0.42,
+                        "entity": {
+                          "name": "Custom Properties (Variables)",
+                          "nameHtml": "Custom Properties (Variables)",
+                          "nameClean": "Custom Properties (Variables)",
+                          "id": "css_custom_properties",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ":root {\n  --main-bg-color: brown;\n}\n.foo {\n  background-color: var(--main-bg-color);\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-pseudo\">:root</span> {\n  <span class=\"hljs-attr\">--main-bg-color</span>: brown;\n}\n<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--main-bg-color);\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-variables"
+                          },
+                          "webFeature": {
+                            "id": "custom-properties",
+                            "description_html": "Custom properties are CSS properties prefixed with <code>--</code> that set values you can reuse with the <code>var()</code> function. For example, you can set a <code>--key-color</code> property to reuse as <code>border-color: var(--key-color)</code>. Also known as CSS variables.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "Custom properties",
+                            "spec": [
+                              "https://drafts.csswg.org/css-variables-1/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/custom-properties/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2017-04-05",
+                              "support": {
+                                "chrome": "49",
+                                "chrome_android": "49",
+                                "edge": "15",
+                                "firefox": "31",
+                                "firefox_android": "31",
+                                "safari": "9.1",
+                                "safari_ios": "9.3"
+                              }
+                            }
+                          }
+                        }
                       },
                       {
-                        "count": 605,
-                        "id": "other_answers",
+                        "count": 23,
+                        "id": "text_wrap",
                         "index": 21,
-                        "percentageQuestion": 52.74,
-                        "percentageSurvey": 11
+                        "percentageQuestion": 2,
+                        "percentageSurvey": 0.42,
+                        "entity": {
+                          "name": "`text-wrap`",
+                          "nameHtml": "<code>text-wrap</code>",
+                          "nameClean": "text-wrap",
+                          "id": "text_wrap",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".wrap {\n  text-wrap: wrap;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.wrap</span> {\n  <span class=\"hljs-attribute\">text-wrap</span>: wrap;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-wrap"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_properties_text-wrap"
+                          },
+                          "webFeature": {
+                            "id": "text-wrap",
+                            "description_html": "The <code>text-wrap</code> CSS property sets how lines break in text that overflows the container. It is a shorthand for <code>text-wrap-style</code> and <code>text-wrap-mode</code>.",
+                            "group": [
+                              "text-wrap"
+                            ],
+                            "name": "text-wrap",
+                            "spec": [
+                              "https://drafts.csswg.org/css-text-4/#text-wrap-shorthand"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/text-wrap/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-10-17",
+                              "support": {
+                                "chrome": "130",
+                                "chrome_android": "130",
+                                "edge": "130",
+                                "firefox": "124",
+                                "firefox_android": "124",
+                                "safari": "17.5",
+                                "safari_ios": "17.5"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 19,
+                        "id": "display_contents",
+                        "index": 22,
+                        "percentageQuestion": 1.66,
+                        "percentageSurvey": 0.35,
+                        "entity": {
+                          "name": "`display: contents`",
+                          "nameHtml": "<code>display: contents</code>",
+                          "nameClean": "display: contents",
+                          "description": "Sets an element to display only its contents, not itself.",
+                          "descriptionHtml": "Sets an element to display only its contents, not itself.",
+                          "descriptionClean": "Sets an element to display only its contents, not itself.",
+                          "id": "display_contents",
+                          "entityType": "feature",
+                          "webFeature": {
+                            "id": "display-contents",
+                            "description_html": "The <code>display: contents</code> CSS declaration sets an element to display only its contents, not itself.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "display: contents",
+                            "spec": [
+                              "https://drafts.csswg.org/css-display-3/#box-generation"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/display-contents/",
+                            "status": {
+                              "baseline": "false"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 19,
+                        "id": "intrinsic_sizing",
+                        "index": 23,
+                        "percentageQuestion": 1.66,
+                        "percentageSurvey": 0.35,
+                        "entity": {
+                          "name": "Intrinsic Sizing",
+                          "nameHtml": "Intrinsic Sizing",
+                          "nameClean": "Intrinsic Sizing",
+                          "description": "`min-content`, `max-content`, `fit-content`",
+                          "descriptionHtml": "<code>min-content</code>, <code>max-content</code>, <code>fit-content</code>",
+                          "descriptionClean": "min-content, max-content, fit-content",
+                          "id": "intrinsic_sizing",
+                          "parentId": "sizing_issues",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "h2 {\n  width: max-content;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-tag\">h2</span> {\n  <span class=\"hljs-attribute\">width</span>: max-content;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/min-content"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/intrinsic-width"
+                          },
+                          "webFeature": {
+                            "id": "min-max-content",
+                            "description_html": "The <code>min-content</code> and <code>max-content</code> CSS keywords represent the smallest and largest intrinsic sizes of an element.",
+                            "group": [
+                              "layout"
+                            ],
+                            "name": "min-content and max-content",
+                            "spec": [
+                              "https://drafts.csswg.org/css-sizing-3/#valdef-width-max-content",
+                              "https://drafts.csswg.org/css-sizing-3/#valdef-width-min-content"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/min-max-content/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2020-01-15",
+                              "support": {
+                                "chrome": "46",
+                                "chrome_android": "46",
+                                "edge": "79",
+                                "firefox": "66",
+                                "firefox_android": "66",
+                                "safari": "11",
+                                "safari_ios": "11"
+                              }
+                            }
+                          }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 13,
+                            "id": "calc_size",
+                            "index": 0,
+                            "percentageQuestion": 1.13,
+                            "percentageSurvey": 0.24,
+                            "entity": {
+                              "name": "`calc-size()`",
+                              "nameHtml": "<code>calc-size()</code>",
+                              "nameClean": "calc-size()",
+                              "id": "calc_size",
+                              "parentId": "intrinsic_sizing",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": ".element {\n  height: 0;\n  overflow: hidden;\n  transition: height 0.3s;\n}\n\n.element.open {\n  height: calc-size(auto);\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-selector-class\">.element</span> {\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-number\">0</span>;\n  <span class=\"hljs-attribute\">overflow</span>: hidden;\n  <span class=\"hljs-attribute\">transition</span>: height <span class=\"hljs-number\">0.3s</span>;\n}\n\n<span class=\"hljs-selector-class\">.element</span><span class=\"hljs-selector-class\">.open</span> {\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-built_in\">calc-size</span>(auto);\n}"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/mdn-css_types_calc-size"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://chromestatus.com/feature/5196713071738880",
+                                  "title": "CSS interpolate-size property and calc-size() function"
+                                }
+                              ],
+                              "webFeature": {
+                                "id": "calc-size",
+                                "description_html": "The <code>calc-size()</code> CSS function computes mathematical expressions that include <code>height</code> and <code>width</code> keyword values, for example <code>calc-size(fit-content, size / 2)</code>. Not to be confused with the <code>calc()</code> CSS function, which cannot use keyword values.",
+                                "group": [
+                                  "css"
+                                ],
+                                "name": "calc-size()",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-values-5/#calc-size"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/calc-size/",
+                                "status": {
+                                  "baseline": "false",
+                                  "support": {
+                                    "chrome": "129",
+                                    "chrome_android": "129",
+                                    "edge": "129"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "count": 7,
+                            "id": "interpolate_size",
+                            "index": 1,
+                            "percentageQuestion": 0.61,
+                            "percentageSurvey": 0.13,
+                            "entity": {
+                              "name": "`interpolate-size()`",
+                              "nameHtml": "<code>interpolate-size()</code>",
+                              "nameClean": "interpolate-size()",
+                              "id": "interpolate_size",
+                              "parentId": "intrinsic_sizing",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": "main {\n  interpolate-size: allow-keywords;\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-selector-tag\">main</span> {\n  interpolate-size: allow-keywords;\n}"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/interpolate-size"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/mdn-css_types_calc-size"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://chromestatus.com/feature/5196713071738880",
+                                  "title": "CSS interpolate-size property and calc-size() function"
+                                }
+                              ],
+                              "webFeature": {
+                                "id": "interpolate-size",
+                                "description_html": "The <code>interpolate-size</code> CSS property sets whether animations and transitions interpolate between a numeric value and a keyword value, such as from a fixed length to <code>auto</code> or <code>fit-content</code>.",
+                                "group": [
+                                  "transitions",
+                                  "animation"
+                                ],
+                                "name": "interpolate-size",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-values-5/#interpolate-size"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/interpolate-size/",
+                                "status": {
+                                  "baseline": "false",
+                                  "support": {
+                                    "chrome": "129",
+                                    "chrome_android": "129",
+                                    "edge": "129"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 18,
+                        "id": "dialog_element",
+                        "index": 24,
+                        "percentageQuestion": 1.57,
+                        "percentageSurvey": 0.33,
+                        "entity": {
+                          "name": "`<dialog>`",
+                          "nameHtml": "<code>&lt;dialog&gt;</code>",
+                          "nameClean": "<dialog>",
+                          "description": "Creates a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.",
+                          "descriptionHtml": "Creates a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.",
+                          "descriptionClean": "Creates a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.",
+                          "id": "dialog_element",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "html",
+                            "code": "<dialog id=\"confirm\">\n\t<form method=\"dialog\">\n\t\tAre you sure?\n\t\t<button value=\"1\">Yes</button>\n\t\t<button value=\"0\">No</button>\n\t</form>\n</dialog>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">dialog</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;confirm&quot;</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">form</span> <span class=\"hljs-attr\">method</span>=<span class=\"hljs-string\">&quot;dialog&quot;</span>&gt;</span>\n\t\tAre you sure?\n\t\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">value</span>=<span class=\"hljs-string\">&quot;1&quot;</span>&gt;</span>Yes<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n\t\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">value</span>=<span class=\"hljs-string\">&quot;0&quot;</span>&gt;</span>No<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">form</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">dialog</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element",
+                              "title": "HTML Standard"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "dialog",
+                            "description_html": "The <code>&#x3C;dialog></code> HTML element represents a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.",
+                            "group": [
+                              "html-elements"
+                            ],
+                            "name": "<dialog>",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/dialog/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2022-03-14",
+                              "support": {
+                                "chrome": "37",
+                                "chrome_android": "37",
+                                "edge": "79",
+                                "firefox": "98",
+                                "firefox_android": "98",
+                                "safari": "15.4",
+                                "safari_ios": "15.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 117,
+                        "id": "other_answers",
+                        "index": 25,
+                        "percentageQuestion": 10.2,
+                        "percentageSurvey": 2.12
                       }
                     ]
                   },
@@ -1103,8 +1496,8 @@
                         "property": "count",
                         "order": "desc"
                       },
-                      "limit": 20,
-                      "cutoff": 10
+                      "limit": 25,
+                      "cutoff": 5
                     },
                     "editionId": "css2026",
                     "year": 2026,
@@ -1115,11 +1508,11 @@
                     },
                     "buckets": [
                       {
-                        "count": 166,
+                        "count": 168,
                         "id": "anchor_positioning",
                         "index": 0,
-                        "percentageQuestion": 18.18,
-                        "percentageSurvey": 3.39,
+                        "percentageQuestion": 18.4,
+                        "percentageSurvey": 3.43,
                         "entity": {
                           "name": "Anchor Positioning",
                           "nameHtml": "Anchor Positioning",
@@ -1171,11 +1564,11 @@
                         }
                       },
                       {
-                        "count": 159,
+                        "count": 158,
                         "id": "has_selector",
                         "index": 1,
-                        "percentageQuestion": 17.42,
-                        "percentageSurvey": 3.24,
+                        "percentageQuestion": 17.31,
+                        "percentageSurvey": 3.22,
                         "entity": {
                           "name": "`:has()`",
                           "nameHtml": "<code>:has()</code>",
@@ -1221,11 +1614,61 @@
                         }
                       },
                       {
-                        "count": 114,
-                        "id": "css_nesting",
+                        "count": 126,
+                        "id": "at_container_size",
                         "index": 2,
-                        "percentageQuestion": 12.49,
-                        "percentageSurvey": 2.33,
+                        "percentageQuestion": 13.8,
+                        "percentageSurvey": 2.57,
+                        "entity": {
+                          "name": "`@container` size queries",
+                          "nameHtml": "<code>@container</code> size queries",
+                          "nameClean": "@container size queries",
+                          "id": "at_container_size",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "@container (min-width: 700px) {\n  .card {\n    display: grid;\n    grid-template-columns: 2fr 1fr;\n  }\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">@container</span> (<span class=\"hljs-attribute\">min-width</span>: <span class=\"hljs-number\">700px</span>) {\n  <span class=\"hljs-selector-class\">.card</span> {\n    <span class=\"hljs-attribute\">display</span>: grid;\n    <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">2</span>fr <span class=\"hljs-number\">1</span>fr;\n  }\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Containment/Container_queries"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-container-queries"
+                          },
+                          "webFeature": {
+                            "id": "container-queries",
+                            "description_html": "Container size queries with the <code>@container</code> at-rule apply styles to an element based on the dimensions of its container.",
+                            "group": [
+                              "container-queries"
+                            ],
+                            "name": "Container queries",
+                            "spec": [
+                              "https://drafts.csswg.org/css-conditional-5/#container-queries"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/container-queries/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2023-02-14",
+                              "support": {
+                                "chrome": "105",
+                                "chrome_android": "105",
+                                "edge": "105",
+                                "firefox": "110",
+                                "firefox_android": "110",
+                                "safari": "16",
+                                "safari_ios": "16"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 116,
+                        "id": "css_nesting",
+                        "index": 3,
+                        "percentageQuestion": 12.71,
+                        "percentageSurvey": 2.37,
                         "entity": {
                           "name": "CSS Nesting",
                           "nameHtml": "CSS Nesting",
@@ -1274,166 +1717,201 @@
                         }
                       },
                       {
-                        "count": 102,
-                        "id": "at_container_size",
-                        "index": 3,
-                        "percentageQuestion": 11.17,
-                        "percentageSurvey": 2.08,
+                        "count": 107,
+                        "id": "grid",
+                        "index": 4,
+                        "percentageQuestion": 11.72,
+                        "percentageSurvey": 2.18,
                         "entity": {
-                          "name": "`@container` size queries",
-                          "nameHtml": "<code>@container</code> size queries",
-                          "nameClean": "@container size queries",
-                          "id": "at_container_size",
+                          "name": "Grid",
+                          "nameHtml": "Grid",
+                          "nameClean": "Grid",
+                          "id": "grid",
+                          "parentId": "css_layout_issues",
                           "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": "@container (min-width: 700px) {\n  .card {\n    display: grid;\n    grid-template-columns: 2fr 1fr;\n  }\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-keyword\">@container</span> (<span class=\"hljs-attribute\">min-width</span>: <span class=\"hljs-number\">700px</span>) {\n  <span class=\"hljs-selector-class\">.card</span> {\n    <span class=\"hljs-attribute\">display</span>: grid;\n    <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">2</span>fr <span class=\"hljs-number\">1</span>fr;\n  }\n}"
-                          },
                           "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Containment/Container_queries"
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout"
                           },
                           "caniuse": {
-                            "url": "https://caniuse.com/css-container-queries"
+                            "url": "https://caniuse.com/css-grid"
                           },
                           "webFeature": {
-                            "id": "container-queries",
-                            "description_html": "Container size queries with the <code>@container</code> at-rule apply styles to an element based on the dimensions of its container.",
+                            "id": "grid",
+                            "description_html": "CSS grid is a two-dimensional layout system, which lays content out in rows and columns.",
                             "group": [
-                              "container-queries"
+                              "grid"
                             ],
-                            "name": "Container queries",
+                            "name": "Grid",
                             "spec": [
-                              "https://drafts.csswg.org/css-conditional-5/#container-queries"
+                              "https://drafts.csswg.org/css-grid-3/"
                             ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/container-queries/",
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/grid/",
                             "status": {
                               "baseline": "high",
-                              "baseline_low_date": "2023-02-14",
+                              "baseline_low_date": "2017-10-17",
                               "support": {
-                                "chrome": "105",
-                                "chrome_android": "105",
-                                "edge": "105",
-                                "firefox": "110",
-                                "firefox_android": "110",
-                                "safari": "16",
-                                "safari_ios": "16"
+                                "chrome": "57",
+                                "chrome_android": "57",
+                                "edge": "16",
+                                "firefox": "52",
+                                "firefox_android": "52",
+                                "safari": "10.1",
+                                "safari_ios": "10.3"
                               }
                             }
                           }
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 76,
+                            "id": "subgrid",
+                            "index": 0,
+                            "percentageQuestion": 8.32,
+                            "percentageSurvey": 1.55,
+                            "entity": {
+                              "name": "Subgrid",
+                              "nameHtml": "Subgrid",
+                              "nameClean": "Subgrid",
+                              "id": "subgrid",
+                              "parentId": "grid",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": ".wrapper {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.item {\n  grid-row: 1 / 4;\n  display: grid;\n  grid-template-rows: subgrid;\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-selector-class\">.wrapper</span> {\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-number\">1</span>fr <span class=\"hljs-number\">1</span>fr;\n}\n\n<span class=\"hljs-selector-class\">.item</span> {\n  <span class=\"hljs-attribute\">grid-row</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">4</span>;\n  <span class=\"hljs-attribute\">display</span>: grid;\n  <span class=\"hljs-attribute\">grid-template-rows</span>: subgrid;\n}"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/css-subgrid"
+                              },
+                              "webFeature": {
+                                "id": "subgrid",
+                                "description_html": "The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.",
+                                "group": [
+                                  "grid"
+                                ],
+                                "name": "Subgrid",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-grid-2/#subgrids"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/subgrid/",
+                                "status": {
+                                  "baseline": "high",
+                                  "baseline_low_date": "2023-09-15",
+                                  "support": {
+                                    "chrome": "117",
+                                    "chrome_android": "117",
+                                    "edge": "117",
+                                    "firefox": "71",
+                                    "firefox_android": "79",
+                                    "safari": "16",
+                                    "safari_ios": "16"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "count": 13,
+                            "id": "css_grid_lanes",
+                            "index": 1,
+                            "percentageQuestion": 1.42,
+                            "percentageSurvey": 0.27,
+                            "entity": {
+                              "name": "Grid Lanes",
+                              "nameHtml": "Grid Lanes",
+                              "nameClean": "Grid Lanes",
+                              "id": "css_grid_lanes",
+                              "parentId": "grid",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": ".container {\n  display: grid-lanes;\n  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));\n  gap: 16px;\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-selector-class\">.container</span> {\n  <span class=\"hljs-attribute\">display</span>: grid-lanes;\n  <span class=\"hljs-attribute\">grid-template-columns</span>: <span class=\"hljs-built_in\">repeat</span>(auto-fill, <span class=\"hljs-built_in\">minmax</span>(<span class=\"hljs-number\">250px</span>, <span class=\"hljs-number\">1</span>fr));\n  <span class=\"hljs-attribute\">gap</span>: <span class=\"hljs-number\">16px</span>;\n}"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout"
+                              },
+                              "caniuse": {
+                                "url": "https://caniuse.com/css-grid-lanes"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://webkit.org/blog/17660/introducing-css-grid-lanes/",
+                                  "title": "Introducing CSS Grid Lanes"
+                                },
+                                {
+                                  "url": "https://css-tricks.com/masonry-layout-is-now-grid-lanes/",
+                                  "title": "Masonry Layout is Now grid-lanes"
+                                }
+                              ],
+                              "webFeature": {
+                                "id": "masonry",
+                                "description_html": "The <code>display: grid-lanes</code> or <code>display: inline-grid-lanes</code> CSS declaration creates a layout where items are tightly packed, like brickwork, in parallel lanes. Items are placed one by one in the lane that has the most available space.",
+                                "group": [
+                                  "layout"
+                                ],
+                                "name": "Masonry",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-grid-3/"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/masonry/",
+                                "status": {
+                                  "baseline": "false"
+                                }
+                              }
+                            }
+                          }
+                        ]
                       },
                       {
-                        "count": 62,
-                        "id": "view_transitions",
-                        "index": 4,
-                        "percentageQuestion": 6.79,
-                        "percentageSurvey": 1.26,
+                        "count": 59,
+                        "id": "same_document_view_transitions",
+                        "index": 5,
+                        "percentageQuestion": 6.46,
+                        "percentageSurvey": 1.2,
                         "entity": {
-                          "name": "View Transition API",
-                          "nameHtml": "View Transition API",
-                          "nameClean": "View Transition API",
-                          "id": "view_transitions",
+                          "name": "View Transition API (same document)",
+                          "nameHtml": "View Transition API (same document)",
+                          "nameClean": "View Transition API (same document)",
+                          "id": "same_document_view_transitions",
                           "parentId": "animations_issues",
                           "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": "::view-transition-old(main-image),\n::view-transition-new(main-image) {\n  transform-origin: right top;\n}\n\n::view-transition-new(main-image) {\n  animation: 400ms ease-out both grow;\n}\n\nfigure {\n  view-transition-name: main-image;\n}\n",
-                            "codeHighlighted": "::<span class=\"hljs-built_in\">view-transition-old</span>(main-image),\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">transform-origin</span>: right top;\n}\n\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">animation</span>: <span class=\"hljs-number\">400ms</span> ease-out both grow;\n}\n\n<span class=\"hljs-selector-tag\">figure</span> {\n  <span class=\"hljs-attribute\">view-transition-name</span>: main-image;\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/mdn-api_viewtransition"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://developer.chrome.com/docs/web-platform/view-transitions/",
-                              "title": "Smooth and simple transitions with the View Transitions API"
-                            }
-                          ],
                           "webFeature": {
-                            "id": "cross-document-view-transitions",
-                            "description_html": "The <code>@view-transition</code> CSS rule sets whether a document opts-in to transitions between documents in a multi-page application. Both the old and new document must opt-in for a transition to be triggered.",
+                            "id": "view-transitions",
+                            "description_html": "View transitions allow you to create animated visual transitions between different states of a document.",
                             "group": [
                               "view-transitions"
                             ],
-                            "name": "Cross-document view transitions",
+                            "name": "View transitions",
                             "spec": [
-                              "https://drafts.csswg.org/css-view-transitions-2/#cross-doc-opt-in"
+                              "https://drafts.csswg.org/css-view-transitions-1/"
                             ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/cross-document-view-transitions/",
-                            "status": {
-                              "baseline": "false",
-                              "support": {
-                                "chrome": "126",
-                                "chrome_android": "126",
-                                "edge": "126",
-                                "safari": "18.2",
-                                "safari_ios": "18.2"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 57,
-                        "id": "light_dark",
-                        "index": 5,
-                        "percentageQuestion": 6.24,
-                        "percentageSurvey": 1.16,
-                        "entity": {
-                          "name": "`light-dark()`",
-                          "nameHtml": "<code>light-dark()</code>",
-                          "nameClean": "light-dark()",
-                          "id": "light_dark",
-                          "parentId": "dark_mode",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": "code {\n  color: light-dark(black, white);\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-tag\">code</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">light-dark</span>(black, white);\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/light-dark"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/mdn-css_types_color_light-dark"
-                          },
-                          "webFeature": {
-                            "id": "light-dark",
-                            "description_html": "The <code>light-dark()</code> CSS function accepts two colors and uses one depending on the current color scheme.",
-                            "group": [
-                              "css"
-                            ],
-                            "name": "light-dark()",
-                            "spec": [
-                              "https://drafts.csswg.org/css-color-5/#light-dark"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/light-dark/",
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/view-transitions/",
                             "status": {
                               "baseline": "low",
-                              "baseline_low_date": "2024-05-13",
+                              "baseline_low_date": "2025-10-14",
                               "support": {
-                                "chrome": "123",
-                                "chrome_android": "123",
-                                "edge": "123",
-                                "firefox": "120",
-                                "firefox_android": "120",
-                                "safari": "17.5",
-                                "safari_ios": "17.5"
+                                "chrome": "111",
+                                "chrome_android": "111",
+                                "edge": "111",
+                                "firefox": "144",
+                                "firefox_android": "144",
+                                "safari": "18",
+                                "safari_ios": "18"
                               }
                             }
                           }
                         }
                       },
                       {
-                        "count": 53,
+                        "count": 56,
                         "id": "relative_colors",
                         "index": 6,
-                        "percentageQuestion": 5.81,
-                        "percentageSurvey": 1.08,
+                        "percentageQuestion": 6.13,
+                        "percentageSurvey": 1.14,
                         "entity": {
                           "name": "Relative Colors",
                           "nameHtml": "Relative Colors",
@@ -1480,61 +1958,11 @@
                         }
                       },
                       {
-                        "count": 51,
-                        "id": "color_mix",
-                        "index": 7,
-                        "percentageQuestion": 5.59,
-                        "percentageSurvey": 1.04,
-                        "entity": {
-                          "name": "`color-mix()`",
-                          "nameHtml": "<code>color-mix()</code>",
-                          "nameClean": "color-mix()",
-                          "id": "color_mix",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".teal {\n  background: color-mix(in lab, white 20%, #34c9eb);\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.teal</span> {\n  <span class=\"hljs-attribute\">background</span>: <span class=\"hljs-built_in\">color-mix</span>(in lab, white <span class=\"hljs-number\">20%</span>, <span class=\"hljs-number\">#34c9eb</span>);\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix"
-                          },
-                          "caniuse": {
-                            "url": "https://caniuse.com/mdn-css_types_color_color-mix"
-                          },
-                          "webFeature": {
-                            "id": "color-mix",
-                            "description_html": "The <code>color-mix()</code> function mixes two colors in a given color space and by a given amount. Commonly, lighter or darker variations of a color are created by mixing with white or black.",
-                            "group": [
-                              "css"
-                            ],
-                            "name": "color-mix()",
-                            "spec": [
-                              "https://drafts.csswg.org/css-color-5/#color-mix"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/color-mix/",
-                            "status": {
-                              "baseline": "high",
-                              "baseline_low_date": "2023-05-09",
-                              "support": {
-                                "chrome": "111",
-                                "chrome_android": "111",
-                                "edge": "111",
-                                "firefox": "113",
-                                "firefox_android": "113",
-                                "safari": "16.2",
-                                "safari_ios": "16.2"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "count": 49,
+                        "count": 54,
                         "id": "cascade_layers",
-                        "index": 8,
-                        "percentageQuestion": 5.37,
-                        "percentageSurvey": 1,
+                        "index": 7,
+                        "percentageQuestion": 5.91,
+                        "percentageSurvey": 1.1,
                         "entity": {
                           "name": "Cascade Layers",
                           "nameHtml": "Cascade Layers",
@@ -1581,11 +2009,112 @@
                         }
                       },
                       {
-                        "count": 40,
-                        "id": "scroll_driven_animations",
+                        "count": 52,
+                        "id": "color_mix",
+                        "index": 8,
+                        "percentageQuestion": 5.7,
+                        "percentageSurvey": 1.06,
+                        "entity": {
+                          "name": "`color-mix()`",
+                          "nameHtml": "<code>color-mix()</code>",
+                          "nameClean": "color-mix()",
+                          "id": "color_mix",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".teal {\n  background: color-mix(in lab, white 20%, #34c9eb);\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.teal</span> {\n  <span class=\"hljs-attribute\">background</span>: <span class=\"hljs-built_in\">color-mix</span>(in lab, white <span class=\"hljs-number\">20%</span>, <span class=\"hljs-number\">#34c9eb</span>);\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_types_color_color-mix"
+                          },
+                          "webFeature": {
+                            "id": "color-mix",
+                            "description_html": "The <code>color-mix()</code> function mixes two colors in a given color space and by a given amount. Commonly, lighter or darker variations of a color are created by mixing with white or black.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "color-mix()",
+                            "spec": [
+                              "https://drafts.csswg.org/css-color-5/#color-mix"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/color-mix/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2023-05-09",
+                              "support": {
+                                "chrome": "111",
+                                "chrome_android": "111",
+                                "edge": "111",
+                                "firefox": "113",
+                                "firefox_android": "113",
+                                "safari": "16.2",
+                                "safari_ios": "16.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 52,
+                        "id": "light_dark",
                         "index": 9,
-                        "percentageQuestion": 4.38,
-                        "percentageSurvey": 0.82,
+                        "percentageQuestion": 5.7,
+                        "percentageSurvey": 1.06,
+                        "entity": {
+                          "name": "`light-dark()`",
+                          "nameHtml": "<code>light-dark()</code>",
+                          "nameClean": "light-dark()",
+                          "id": "light_dark",
+                          "parentId": "dark_mode",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "code {\n  color: light-dark(black, white);\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-tag\">code</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-built_in\">light-dark</span>(black, white);\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/light-dark"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_types_color_light-dark"
+                          },
+                          "webFeature": {
+                            "id": "light-dark",
+                            "description_html": "The <code>light-dark()</code> CSS function accepts two colors and uses one depending on the current color scheme.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "light-dark()",
+                            "spec": [
+                              "https://drafts.csswg.org/css-color-5/#light-dark"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/light-dark/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2024-05-13",
+                              "support": {
+                                "chrome": "123",
+                                "chrome_android": "123",
+                                "edge": "123",
+                                "firefox": "120",
+                                "firefox_android": "120",
+                                "safari": "17.5",
+                                "safari_ios": "17.5"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 49,
+                        "id": "scroll_driven_animations",
+                        "index": 10,
+                        "percentageQuestion": 5.37,
+                        "percentageSurvey": 1,
                         "entity": {
                           "name": "Scroll-driven animations",
                           "nameHtml": "Scroll-driven animations",
@@ -1643,11 +2172,11 @@
                         }
                       },
                       {
-                        "count": 37,
+                        "count": 38,
                         "id": "discrete_properties_animations",
-                        "index": 10,
-                        "percentageQuestion": 4.05,
-                        "percentageSurvey": 0.75,
+                        "index": 11,
+                        "percentageQuestion": 4.16,
+                        "percentageSurvey": 0.78,
                         "entity": {
                           "name": "Discrete Properties Animations",
                           "nameHtml": "Discrete Properties Animations",
@@ -1688,12 +2217,62 @@
                               }
                             }
                           }
-                        }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 20,
+                            "id": "at_starting_style",
+                            "index": 0,
+                            "percentageQuestion": 2.19,
+                            "percentageSurvey": 0.41,
+                            "entity": {
+                              "name": "`@starting-style`",
+                              "nameHtml": "<code>@starting-style</code>",
+                              "nameClean": "@starting-style",
+                              "description": "The @starting-style CSS at-rule sets the starting values for properties that are transitioning when the target element's style is first updated.",
+                              "descriptionHtml": "The @starting-style CSS at-rule sets the starting values for properties that are transitioning when the target element's style is first updated.",
+                              "descriptionClean": "The @starting-style CSS at-rule sets the starting values for properties that are transitioning when the target element's style is first updated.",
+                              "id": "at_starting_style",
+                              "parentId": "discrete_properties_animations",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": "@starting-style {\n  dialog[open] {\n    translate: 0 100vh;\n  }\n}\n",
+                                "codeHighlighted": "<span class=\"hljs-keyword\">@starting-style</span> {\n  dialog<span class=\"hljs-selector-attr\">[open]</span> {\n    <span class=\"hljs-attribute\">translate</span>: <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">100vh</span>;\n  }\n}"
+                              },
+                              "webFeature": {
+                                "id": "starting-style",
+                                "description_html": "The <code>@starting-style</code> CSS at-rule sets the starting values for properties that are transitioning when the target element's style is first updated.",
+                                "group": [
+                                  "css"
+                                ],
+                                "name": "@starting-style",
+                                "spec": [
+                                  "https://drafts.csswg.org/css-transitions-2/#defining-before-change-style"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/starting-style/",
+                                "status": {
+                                  "baseline": "low",
+                                  "baseline_low_date": "2024-08-06",
+                                  "support": {
+                                    "chrome": "117",
+                                    "chrome_android": "117",
+                                    "edge": "117",
+                                    "firefox": "129",
+                                    "firefox_android": "129",
+                                    "safari": "17.5",
+                                    "safari_ios": "17.5"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
                       },
                       {
                         "count": 31,
                         "id": "popover_api",
-                        "index": 11,
+                        "index": 12,
                         "percentageQuestion": 3.4,
                         "percentageSurvey": 0.63,
                         "entity": {
@@ -1759,22 +2338,111 @@
                       },
                       {
                         "count": 25,
-                        "id": "better_scoping",
-                        "index": 12,
+                        "id": "at_scope",
+                        "index": 13,
                         "percentageQuestion": 2.74,
                         "percentageSurvey": 0.51,
                         "entity": {
-                          "name": "Scoping",
-                          "nameHtml": "Scoping",
-                          "nameClean": "Scoping",
-                          "id": "better_scoping",
-                          "entityType": "default"
+                          "name": "`@scope`",
+                          "nameHtml": "<code>@scope</code>",
+                          "nameClean": "@scope",
+                          "description": "Scope styles to a specific part of the DOM tree.",
+                          "descriptionHtml": "Scope styles to a specific part of the DOM tree.",
+                          "descriptionClean": "Scope styles to a specific part of the DOM tree.",
+                          "id": "at_scope",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "@scope (.card) {\n  :scope {\n    padding: 1rem;\n  }\n\n  .title {\n    font-size: 1.2rem;\n  }\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">@scope</span> (.card) {\n  <span class=\"hljs-selector-pseudo\">:scope</span> {\n    <span class=\"hljs-attribute\">padding</span>: <span class=\"hljs-number\">1rem</span>;\n  }\n\n  <span class=\"hljs-selector-class\">.title</span> {\n    <span class=\"hljs-attribute\">font-size</span>: <span class=\"hljs-number\">1.2rem</span>;\n  }\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@scope"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-cascade-scope"
+                          },
+                          "webFeature": {
+                            "id": "scope",
+                            "description_html": "The <code>@scope</code> CSS at-rule sets the scope for a group of rules.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "@scope",
+                            "spec": [
+                              "https://drafts.csswg.org/css-cascade-6/#scope-atrule"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/scope/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2025-12-12",
+                              "support": {
+                                "chrome": "143",
+                                "chrome_android": "143",
+                                "edge": "143",
+                                "firefox": "146",
+                                "firefox_android": "146",
+                                "safari": "26.2",
+                                "safari_ios": "26.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 24,
+                        "id": "css_corner_shape",
+                        "index": 14,
+                        "percentageQuestion": 2.63,
+                        "percentageSurvey": 0.49,
+                        "entity": {
+                          "name": "`corner-shape`",
+                          "nameHtml": "<code>corner-shape</code>",
+                          "nameClean": "corner-shape",
+                          "id": "css_corner_shape",
+                          "parentId": "irregular_element_shape",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".rhombus {\n  aspect-ratio: 2 / 3;\n  border-radius: 50%;\n  corner-shape: bevel;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.rhombus</span> {\n  <span class=\"hljs-attribute\">aspect-ratio</span>: <span class=\"hljs-number\">2</span> / <span class=\"hljs-number\">3</span>;\n  <span class=\"hljs-attribute\">border-radius</span>: <span class=\"hljs-number\">50%</span>;\n  corner-shape: bevel;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/corner-shape"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://frontendmasters.com/blog/understanding-css-corner-shape-and-the-power-of-the-superellipse/",
+                              "title": "Understanding CSS corner-shape and the Power of the Superellipse"
+                            },
+                            {
+                              "url": "https://drafts.csswg.org/css-borders-4/#corner-shaping",
+                              "title": "Corner Shaping: the corner-*-shape properties\n"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "corner-shape",
+                            "description_html": "The <code>corner-shape</code> CSS property sets the shape of an element's corners when using <code>border-radius</code>, allowing for shapes other than rounded corners. For example, <code>corner-shape: squircle</code> is a shape in between a square and rounded corner.",
+                            "name": "corner-shape",
+                            "spec": [
+                              "https://drafts.csswg.org/css-borders-4/#corner-shaping"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/corner-shape/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "139",
+                                "chrome_android": "139",
+                                "edge": "139"
+                              }
+                            }
+                          }
                         }
                       },
                       {
                         "count": 23,
                         "id": "sibling_index",
-                        "index": 13,
+                        "index": 15,
                         "percentageQuestion": 2.52,
                         "percentageSurvey": 0.47,
                         "entity": {
@@ -1824,28 +2492,31 @@
                         }
                       },
                       {
-                        "count": 22,
-                        "id": "oklch_colors",
-                        "index": 14,
-                        "percentageQuestion": 2.41,
-                        "percentageSurvey": 0.45,
+                        "count": 23,
+                        "id": "wide_gamut_colors",
+                        "index": 16,
+                        "percentageQuestion": 2.52,
+                        "percentageSurvey": 0.47,
                         "entity": {
-                          "name": "OKLCH Colors",
-                          "nameHtml": "OKLCH Colors",
-                          "nameClean": "OKLCH Colors",
-                          "id": "oklch_colors",
-                          "parentId": "wide_gamut_colors",
+                          "name": "Wide Gamut Colors",
+                          "nameHtml": "Wide Gamut Colors",
+                          "nameClean": "Wide Gamut Colors",
+                          "description": "`lch()`, `lab()`, `oklch()`, `oklab()`",
+                          "descriptionHtml": "<code>lch()</code>, <code>lab()</code>, <code>oklch()</code>, <code>oklab()</code>",
+                          "descriptionClean": "lch(), lab(), oklch(), oklab()",
+                          "id": "wide_gamut_colors",
+                          "parentId": "color_management",
                           "entityType": "feature",
                           "example": {
                             "language": "css",
-                            "code": ".foo {\n  background-color: oklch(40.1% 0.123 21.57)\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">oklch</span>(<span class=\"hljs-number\">40.1%</span> <span class=\"hljs-number\">0.123</span> <span class=\"hljs-number\">21.57</span>)\n}"
+                            "code": ".foo {\n  background-color: lab(29.2345% 39.3825 20.0664);\n  background-color: lch(29.2345% 44.2 27);\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">lab</span>(<span class=\"hljs-number\">29.2345%</span> <span class=\"hljs-number\">39.3825</span> <span class=\"hljs-number\">20.0664</span>);\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">lch</span>(<span class=\"hljs-number\">29.2345%</span> <span class=\"hljs-number\">44.2</span> <span class=\"hljs-number\">27</span>);\n}"
                           },
                           "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch"
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/lch"
                           },
                           "caniuse": {
-                            "url": "https://caniuse.com/wf-oklab"
+                            "url": "https://caniuse.com/css-lch-lab"
                           },
                           "webFeature": {
                             "id": "oklab",
@@ -1877,7 +2548,7 @@
                       {
                         "count": 22,
                         "id": "where_selector",
-                        "index": 15,
+                        "index": 17,
                         "percentageQuestion": 2.41,
                         "percentageSurvey": 0.45,
                         "entity": {
@@ -1925,59 +2596,9 @@
                         }
                       },
                       {
-                        "count": 21,
-                        "id": "css_corner_shape",
-                        "index": 16,
-                        "percentageQuestion": 2.3,
-                        "percentageSurvey": 0.43,
-                        "entity": {
-                          "name": "`corner-shape`",
-                          "nameHtml": "<code>corner-shape</code>",
-                          "nameClean": "corner-shape",
-                          "id": "css_corner_shape",
-                          "parentId": "irregular_element_shape",
-                          "entityType": "feature",
-                          "example": {
-                            "language": "css",
-                            "code": ".rhombus {\n  aspect-ratio: 2 / 3;\n  border-radius: 50%;\n  corner-shape: bevel;\n}\n",
-                            "codeHighlighted": "<span class=\"hljs-selector-class\">.rhombus</span> {\n  <span class=\"hljs-attribute\">aspect-ratio</span>: <span class=\"hljs-number\">2</span> / <span class=\"hljs-number\">3</span>;\n  <span class=\"hljs-attribute\">border-radius</span>: <span class=\"hljs-number\">50%</span>;\n  corner-shape: bevel;\n}"
-                          },
-                          "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/corner-shape"
-                          },
-                          "resources": [
-                            {
-                              "url": "https://frontendmasters.com/blog/understanding-css-corner-shape-and-the-power-of-the-superellipse/",
-                              "title": "Understanding CSS corner-shape and the Power of the Superellipse"
-                            },
-                            {
-                              "url": "https://drafts.csswg.org/css-borders-4/#corner-shaping",
-                              "title": "Corner Shaping: the corner-*-shape properties\n"
-                            }
-                          ],
-                          "webFeature": {
-                            "id": "corner-shape",
-                            "description_html": "The <code>corner-shape</code> CSS property sets the shape of an element's corners when using <code>border-radius</code>, allowing for shapes other than rounded corners. For example, <code>corner-shape: squircle</code> is a shape in between a square and rounded corner.",
-                            "name": "corner-shape",
-                            "spec": [
-                              "https://drafts.csswg.org/css-borders-4/#corner-shaping"
-                            ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/corner-shape/",
-                            "status": {
-                              "baseline": "false",
-                              "support": {
-                                "chrome": "139",
-                                "chrome_android": "139",
-                                "edge": "139"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
                         "count": 20,
                         "id": "at_container_style",
-                        "index": 17,
+                        "index": 18,
                         "percentageQuestion": 2.19,
                         "percentageSurvey": 0.41,
                         "entity": {
@@ -2030,7 +2651,7 @@
                       {
                         "count": 20,
                         "id": "if_function",
-                        "index": 18,
+                        "index": 19,
                         "percentageQuestion": 2.19,
                         "percentageSurvey": 0.41,
                         "entity": {
@@ -2084,64 +2705,303 @@
                         }
                       },
                       {
-                        "count": 19,
-                        "id": "grid",
-                        "index": 19,
-                        "percentageQuestion": 2.08,
-                        "percentageSurvey": 0.39,
+                        "count": 20,
+                        "id": "logical_properties",
+                        "index": 20,
+                        "percentageQuestion": 2.19,
+                        "percentageSurvey": 0.41,
                         "entity": {
-                          "name": "Grid",
-                          "nameHtml": "Grid",
-                          "nameClean": "Grid",
-                          "id": "grid",
-                          "parentId": "css_layout_issues",
+                          "name": "CSS Logical Properties",
+                          "nameHtml": "CSS Logical Properties",
+                          "nameClean": "CSS Logical Properties",
+                          "description": "`margin-block-start`, `padding-inline-end`, `border-inline-start`…",
+                          "descriptionHtml": "<code>margin-block-start</code>, <code>padding-inline-end</code>, <code>border-inline-start</code>…",
+                          "descriptionClean": "margin-block-start, padding-inline-end, border-inline-start…",
+                          "id": "logical_properties",
                           "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": "section {\n  border-block: 8px solid blue;\n  border-inline: 8px solid green;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-tag\">section</span> {\n  <span class=\"hljs-attribute\">border-block</span>: <span class=\"hljs-number\">8px</span> solid blue;\n  <span class=\"hljs-attribute\">border-inline</span>: <span class=\"hljs-number\">8px</span> solid green;\n}"
+                          },
                           "mdn": {
-                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout"
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Logical_properties_and_values"
                           },
                           "caniuse": {
-                            "url": "https://caniuse.com/css-grid"
+                            "url": "https://caniuse.com/css-logical-props"
                           },
                           "webFeature": {
-                            "id": "grid",
-                            "description_html": "CSS grid is a two-dimensional layout system, which lays content out in rows and columns.",
+                            "id": "logical-properties",
+                            "description_html": "CSS logical properties control borders, size, margin, and padding with directions and dimensions relative to the writing mode. For example, in a left to right, top to bottom writing mode, <code>block-end</code> refers to the bottom. Also known as flow relative.",
                             "group": [
-                              "grid"
+                              "css"
                             ],
-                            "name": "Grid",
+                            "name": "Logical properties",
                             "spec": [
-                              "https://drafts.csswg.org/css-grid-3/"
+                              "https://drafts.csswg.org/css-logical-1/"
                             ],
-                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/grid/",
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/logical-properties/",
                             "status": {
                               "baseline": "high",
-                              "baseline_low_date": "2017-10-17",
+                              "baseline_low_date": "2021-09-20",
                               "support": {
-                                "chrome": "57",
-                                "chrome_android": "57",
-                                "edge": "16",
-                                "firefox": "52",
-                                "firefox_android": "52",
-                                "safari": "10.1",
-                                "safari_ios": "10.3"
+                                "chrome": "89",
+                                "chrome_android": "89",
+                                "edge": "89",
+                                "firefox": "66",
+                                "firefox_android": "66",
+                                "safari": "15",
+                                "safari_ios": "15"
                               }
                             }
                           }
                         }
                       },
                       {
-                        "count": 3989,
-                        "id": "no_answer",
-                        "index": 20,
-                        "percentageQuestion": 0,
-                        "percentageSurvey": 81.37
+                        "count": 19,
+                        "id": "color_scheme",
+                        "index": 21,
+                        "percentageQuestion": 2.08,
+                        "percentageSurvey": 0.39,
+                        "entity": {
+                          "name": "`color-scheme`",
+                          "nameHtml": "<code>color-scheme</code>",
+                          "nameClean": "color-scheme",
+                          "id": "color_scheme",
+                          "parentId": "theming",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".foo {\n  color-scheme: light dark;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">color-scheme</span>: light dark;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color-scheme"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_properties_color-scheme"
+                          },
+                          "webFeature": {
+                            "id": "color-scheme",
+                            "description_html": "The <code>color-scheme</code> CSS property sets which color schemes (light or dark) an element uses and may prevent automatic dark mode adjustments by the browser.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "color-scheme",
+                            "spec": [
+                              "https://drafts.csswg.org/css-color-adjust-1/#color-scheme-prop"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/color-scheme/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2022-02-03",
+                              "support": {
+                                "chrome": "98",
+                                "chrome_android": "98",
+                                "edge": "98",
+                                "firefox": "96",
+                                "firefox_android": "96",
+                                "safari": "13",
+                                "safari_ios": "13"
+                              }
+                            }
+                          }
+                        }
                       },
                       {
-                        "count": 463,
+                        "count": 18,
+                        "id": "css_custom_properties",
+                        "index": 22,
+                        "percentageQuestion": 1.97,
+                        "percentageSurvey": 0.37,
+                        "entity": {
+                          "name": "Custom Properties (Variables)",
+                          "nameHtml": "Custom Properties (Variables)",
+                          "nameClean": "Custom Properties (Variables)",
+                          "id": "css_custom_properties",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ":root {\n  --main-bg-color: brown;\n}\n.foo {\n  background-color: var(--main-bg-color);\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-pseudo\">:root</span> {\n  <span class=\"hljs-attr\">--main-bg-color</span>: brown;\n}\n<span class=\"hljs-selector-class\">.foo</span> {\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-built_in\">var</span>(--main-bg-color);\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-variables"
+                          },
+                          "webFeature": {
+                            "id": "custom-properties",
+                            "description_html": "Custom properties are CSS properties prefixed with <code>--</code> that set values you can reuse with the <code>var()</code> function. For example, you can set a <code>--key-color</code> property to reuse as <code>border-color: var(--key-color)</code>. Also known as CSS variables.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "Custom properties",
+                            "spec": [
+                              "https://drafts.csswg.org/css-variables-1/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/custom-properties/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2017-04-05",
+                              "support": {
+                                "chrome": "49",
+                                "chrome_android": "49",
+                                "edge": "15",
+                                "firefox": "31",
+                                "firefox_android": "31",
+                                "safari": "9.1",
+                                "safari_ios": "9.3"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 16,
+                        "id": "aspect_ratio",
+                        "index": 23,
+                        "percentageQuestion": 1.75,
+                        "percentageSurvey": 0.33,
+                        "entity": {
+                          "name": "`aspect-ratio`",
+                          "nameHtml": "<code>aspect-ratio</code>",
+                          "nameClean": "aspect-ratio",
+                          "id": "aspect_ratio",
+                          "parentId": "sizing_issues",
+                          "entityType": "feature",
+                          "example": {
+                            "language": "css",
+                            "code": ".square {\n  aspect-ratio: 1 / 1;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.square</span> {\n  <span class=\"hljs-attribute\">aspect-ratio</span>: <span class=\"hljs-number\">1</span> / <span class=\"hljs-number\">1</span>;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/aspect-ratio"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-css_properties_aspect-ratio"
+                          },
+                          "webFeature": {
+                            "id": "aspect-ratio",
+                            "description_html": "The <code>aspect-ratio</code> CSS property controls the width-to-height ratio of elements. For <code>&#x3C;img></code> and <code>&#x3C;video></code> elements, the <code>width</code> and <code>height</code> attributes used together with <code>height: auto</code> control the aspect ratio while the image/video is loading.",
+                            "group": [
+                              "css"
+                            ],
+                            "name": "aspect-ratio",
+                            "spec": [
+                              "https://drafts.csswg.org/css-sizing-4/#aspect-ratio"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/aspect-ratio/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2021-09-20",
+                              "support": {
+                                "chrome": "88",
+                                "chrome_android": "88",
+                                "edge": "88",
+                                "firefox": "89",
+                                "firefox_android": "89",
+                                "safari": "15",
+                                "safari_ios": "15"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "count": 16,
+                        "id": "select_element",
+                        "index": 24,
+                        "percentageQuestion": 1.75,
+                        "percentageSurvey": 0.33,
+                        "entity": {
+                          "name": "`<select>`",
+                          "nameHtml": "<code>&lt;select&gt;</code>",
+                          "nameClean": "<select>",
+                          "id": "select_element",
+                          "parentId": "form_input_issues",
+                          "entityType": "feature"
+                        },
+                        "nestedBuckets": [
+                          {
+                            "count": 16,
+                            "id": "customizable_select",
+                            "index": 0,
+                            "percentageQuestion": 1.75,
+                            "percentageSurvey": 0.33,
+                            "entity": {
+                              "name": "Customizable Select",
+                              "nameHtml": "Customizable Select",
+                              "nameClean": "Customizable Select",
+                              "description": "Stylable, customizable dropdown control. Previously `<selectlist>` and `<selectmenu>`.",
+                              "descriptionHtml": "Stylable, customizable dropdown control. Previously <code>&lt;selectlist&gt;</code> and <code>&lt;selectmenu&gt;</code>.",
+                              "descriptionClean": "Stylable, customizable dropdown control. Previously <selectlist> and <selectmenu>.",
+                              "id": "customizable_select",
+                              "parentId": "select_element",
+                              "entityType": "feature",
+                              "example": {
+                                "language": "css",
+                                "code": "select,\n::picker(select) {\n  appearance: base-select;\n}",
+                                "codeHighlighted": "<span class=\"hljs-selector-tag\">select</span>,\n::<span class=\"hljs-built_in\">picker</span>(select) {\n  <span class=\"hljs-attribute\">appearance</span>: base-select;\n}"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://open-ui.org/components/customizableselect/",
+                                  "title": "Customizable Select Element (Explainer)"
+                                },
+                                {
+                                  "url": "https://web.dev/state-of-css-2022/#customizing-select-elements",
+                                  "title": "State of CSS 2022"
+                                },
+                                {
+                                  "url": "https://css-tricks.com/the-selectmenu-element/",
+                                  "title": "The selectmenu HTML Tag | CSS-Tricks - CSS-Tricks"
+                                },
+                                {
+                                  "url": "https://www.smashingmagazine.com/2023/06/advanced-form-control-styling-selectmenu-anchoring-api/",
+                                  "title": "Advanced Form Control Styling With Selectmenu And Anchoring API — Smashing Magazine"
+                                },
+                                {
+                                  "url": "https://hidde.blog/custom-select-with-selectmenu/",
+                                  "title": "Two levels of customising <selectlist>\n"
+                                },
+                                {
+                                  "url": "https://microsoftedge.github.io/Demos/selectmenu/",
+                                  "title": "Open UI's selectmenu demos"
+                                }
+                              ],
+                              "webFeature": {
+                                "id": "customizable-select",
+                                "description_html": "The <code>&#x3C;select></code> element's appearance, including the button, selected option, picker dropdown, and options, can be customized using CSS.",
+                                "group": [
+                                  "forms",
+                                  "html-elements"
+                                ],
+                                "name": "Customizable <select>",
+                                "spec": [
+                                  "https://open-ui.org/components/customizableselect/"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/customizable-select/",
+                                "status": {
+                                  "baseline": "false",
+                                  "support": {
+                                    "chrome": "135",
+                                    "chrome_android": "135",
+                                    "edge": "135"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "count": 223,
                         "id": "other_answers",
-                        "index": 21,
-                        "percentageQuestion": 50.78,
-                        "percentageSurvey": 9.36
+                        "index": 25,
+                        "percentageQuestion": 24.41,
+                        "percentageSurvey": 4.52
                       }
                     ]
                   }
