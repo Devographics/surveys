@@ -1,0 +1,821 @@
+- id: forms
+  template: featurev3
+  slug: features
+  messageId: features.features_intro_html2026
+  randomizeSectionSequence: true
+  questions:
+    - id: datalist_element
+    - id: showpicker
+    - id: customizable_select
+
+    # - id: autocomplete_attribute # removed in 2024
+    # - id: media_capture # removed in 2024
+    # - id: formdata # removed in 2024
+
+    # - id: input_checkbox_switch
+    #   yearAdded: 2025
+
+    - id: input_type_color
+      yearAdded: 2025
+
+    - id: input_type_color_colospace
+      yearAdded: 2025
+
+    - id: input_type_color_alpha
+      yearAdded: 2025
+
+    - id: contenteditable_plaintext
+
+    - id: forms_pain_points
+      disableRegexMatching: true
+      disallowedTokenIds: [form_issues]
+      matchTags: [common_pain_points, features_html]
+      template: textList
+
+- id: interactivity
+  template: featurev3
+  slug: features
+  randomizeSectionSequence: true
+  questions:
+    - id: details_element
+    - id: accordion_element
+    - id: dialog_element
+
+    - id: dialog_closedby
+      yearAdded: 2025
+
+    - id: dialog_requestclose
+      yearAdded: 2025
+
+    - id: popover_api
+
+    - id: popover_hint
+      yearAdded: 2025
+
+    - id: invokers # TODO: change to command_invokers in 2026
+      yearAdded: 2025
+
+    - id: element_before
+      yearAdded: 2025
+
+    - id: element_move_before
+      yearAdded: 2025
+
+    - id: interactivity_pain_points
+      disableRegexMatching: true
+      matchTags: [common_pain_points, features_html]
+      template: textList
+
+- id: graphics_multimedia
+  template: featurev3
+  slug: features
+  randomizeSectionSequence: true
+  questions:
+    - id: svg_element
+
+    - id: canvas_element
+
+    - id: canvas_colorspace
+      yearAdded: 2025
+
+    - id: canvas_drawelement
+      yearAdded: 2025
+
+    - id: model_element
+
+    - id: webxr
+      yearAdded: 2025
+
+    - id: webgpu
+      yearAdded: 2025
+
+    - id: webgl
+      yearAdded: 2025
+
+    - id: jpeg_xl
+      yearAdded: 2025
+
+    - id: graphics_pain_points
+      disableRegexMatching: true
+      matchTags: [common_pain_points, features_html]
+      template: textList
+
+- id: content
+  template: featurev3
+  slug: features
+  randomizeSectionSequence: true
+  questions:
+    - id: math_element
+
+    - id: mapviewer_element
+      yearAdded: 2025
+
+    - id: content_security_policy
+    - id: sanitizer_api
+
+    - id: hidden_until_found
+      yearAdded: 2025
+
+    - id: intl_segmenter
+      yearAdded: 2024
+
+    - id: intl_locale
+      yearAdded: 2025
+
+    - id: html_modules
+
+    - id: template_element
+
+    - id: content_pain_points
+      disableRegexMatching: true
+      matchTags: [common_pain_points, features_html]
+      template: textList
+
+- id: performance
+  template: featurev3
+  slug: features
+  randomizeSectionSequence: true
+  questions:
+    - id: lazy_loading
+    - id: respimg_attributes
+
+    - id: img_sizes_auto
+      yearAdded: 2025
+
+    - id: fetchpriority_attribute
+    - id: blocking_render
+    - id: link_rel_expect
+      yearAdded: 2025
+
+    - id: speculation_rules
+      yearAdded: 2025
+
+    - id: performance_pain_points
+      disableRegexMatching: true
+      disallowedTokenIds: [performance]
+      # matchTags: [common_pain_points, features_html]
+      matchTags: [common_pain_points, features_html]
+      template: textList
+
+# - id: security
+#   template: featurev3
+#   slug: features
+#   questions:
+#     - id: content_security_policy
+#     - id: sanitizer_api
+
+#     - id: security_pain_points
+#       matchTags: [common_pain_points, features_html]
+#       template: textList
+
+- id: web_components
+  template: featurev3
+  slug: features
+  randomizeSectionSequence: true
+  questions:
+    - id: custom_elements_using
+    - id: custom_elements_defining
+
+    - id: declarative_custom_elements
+      yearAdded: 2025
+
+    - id: scoped_element_registries
+    - id: shadow_dom
+    - id: declarative_shadow_dom
+    - id: slot_attribute
+    - id: imperative_slot
+    - id: element_internals
+
+    - id: reference_target_api
+      yearAdded: 2025
+    - id: has_slotted
+      yearAdded: 2025
+
+    # - id: web_components_libraries
+    #   template: multipleWithOther
+    #   matchTags: [libraries]
+    #   options:
+    #     - id: shoelace
+    #     - id: spectrum_wc
+    #     - id: lightning_wc
+    #     - id: fast_design
+    #     - id: elix
+    #     - id: lion_wc
+    #     - id: material_wc
+    #     - id: litelement
+    #     - id: stencil
+    #     - id: polymer
+    #     - id: svelte
+    #     - id: ionic
+    #     - id: na
+
+    # - id: reasons_for_not_using_web_components
+    #   template: multipleWithOther
+    #   options:
+    #     - id: not_interested
+    #     - id: no_chance
+    #     - id: negative_experience
+    #     - id: use_frameworks_instead
+    #     - id: compatibility_issues
+
+    # - id: using_web_components_pain_points
+    #   matchTags: [common_pain_points, features_html, web_components_pain_points]
+    #   template: textList
+
+    # - id: making_web_components_pain_points
+    #   matchTags: [common_pain_points, features_html, web_components_pain_points]
+    #   template: textList
+
+    - id: web_components_common_pain_points
+      limit: 3
+      matchTags: [common_pain_points, features_html, web_components_pain_points]
+      template: multiple
+      options:
+        - id: complex_apis
+        - id: a11y_issues
+        - id: i18n_issues
+        - id: low_shadow_dom_specificity
+        - id: overly_strict_encapsulation
+        - id: overreliance_on_js
+        - id: design_tokens_access
+        - id: native_element_extension
+        - id: slotted_descendants_style
+        # - id: poor_ssr_support
+        - id: na
+
+    - id: web_components_other_pain_points
+      disableRegexMatching: true
+      matchTags: [common_pain_points, features_html, web_components_pain_points]
+      template: textList
+
+- id: accessibility
+  template: featurev3
+  slug: features
+  randomizeSectionSequence: true
+  questions:
+    - id: landmark_elements
+    - id: tabindex_attribute
+    - id: focusgroup_attribute
+    - id: search_element
+
+    - id: accessibility_techniques
+      template: multipleWithOther
+      matchTags: [accessibility]
+      cutoff: 999
+      options:
+        # - id: tabindex
+        - id: keyboard_navigation
+        # - id: aria_attributes
+        - id: descriptive_alt_text
+        - id: skip_to_content
+        - id: fieldset_and_legend
+        - id: headings_hierarchy
+        - id: meaningful_link_text
+        - id: form_control_label
+        - id: visible_focus
+        - id: pointer_alternative
+        - id: good_color_contrast
+        - id: color_alternative
+        - id: prefers_reduced_motion
+        - id: prefers_contrast
+        - id: prefers_color_scheme
+        - id: na
+
+    - id: accessibility_disabilities
+      template: multipleWithOther
+      matchTags: [accessibility, disabilities]
+      allowComment: true
+      options:
+        - id: low_vision
+        - id: atypical_vision
+        - id: mobility_impairments
+        - id: vestibular_disorders
+        - id: learning_disabilities
+        - id: cognitive_impairments
+        - id: hearing_impairments
+        - id: na
+
+    - id: accessibility_screenreaders
+      template: multipleWithOtherSentiment
+      matchTags: [accessibility, browsers]
+      options:
+        - id: voiceover
+        - id: jaws
+        - id: talkback
+        - id: nvda
+        - id: narrator
+        - id: orca
+        - id: chrome_devtools
+        - id: chromevox
+        - id: wave
+        - id: na
+
+    - id: accessibility_tools
+      template: multipleWithOtherSentiment
+      matchTags: [accessibility, browsers, services]
+      order: alphabetical
+      options:
+        - id: axe
+        - id: lighthouse
+        - id: assistiv_labs
+        - id: voiceover_js
+        - id: guidepup
+        - id: wave
+        - id: browser_devtools
+        - id: firefox_accessibility_inspector
+        - id: siteimprove
+        - id: accessibility_insights
+        - id: pa11y
+        - id: storybook
+        - id: arc
+        - id: polypane
+        - id: ibm_accessibility_checker
+        - id: na
+
+    - id: accessibility_pain_points
+      disableRegexMatching: true
+      matchTags: [common_pain_points, features_html]
+      disallowedTokenIds: [accessibility]
+      template: textList
+
+- id: system_capabilities
+  template: featurev3
+  slug: features
+  randomizeSectionSequence: true
+  questions:
+    # - id: client_hints
+    - id: filesystem_access
+    - id: web_share_api
+
+    - id: app_manifest_share_target
+      yearAdded: 2025
+
+    - id: file_handling_api
+
+    - id: register_protocol_handler
+      yearAdded: 2025
+
+    - id: web_bluetooth_api
+      yearAdded: 2025
+
+    - id: web_usb_api
+      yearAdded: 2025
+
+    - id: speech_recognition_api
+      yearAdded: 2025
+
+    - id: payment_request_api
+      yearAdded: 2025
+
+    - id: web_nfc_api
+      yearAdded: 2025
+
+    - id: system_capabilities_pain_points
+      disableRegexMatching: true
+      matchTags: [common_pain_points, features_html]
+      template: textList
+
+# - id: other_tools
+#   questions:
+#     - id: site_generators
+#       template: multipleWithOther
+#       matchTags: [libraries]
+#       options:
+#         - id: jekyll
+#         - id: eleventy
+#         - id: hugo
+#         - id: gatsby
+#         - id: nextjs
+#         - id: nuxt
+#         - id: astro
+#         - id: sveltekit
+#         - id: remix
+#         - id: na
+
+#     - id: validation_tools
+#       template: multipleWithOther
+#       matchTags: [libraries, text_editors]
+#       options:
+#         - id: w3c_validator
+#         - id: nu_html_checker
+#         - id: html_validate
+#         - id: html_hint
+#         - id: na
+
+#     - id: performance_tools
+#       template: multipleWithOther
+#       matchTags: [services]
+#       options:
+#         - id: lighthouse
+#         - id: browser_devtools
+#         - id: pagespeed_insights
+#         - id: webpagetest
+#         - id: pingdom
+#         - id: na
+
+#     - id: analytics_tools
+#       template: multipleWithOther
+#       matchTags: [services]
+#       options:
+#         - id: google_analytics
+#         - id: plausible
+#         - id: fathom
+#         - id: new_relic
+#         - id: mixpanel
+#         - id: clicky
+#         - id: matomo
+#         - id: heap
+#         - id: datadog
+#         - id: na
+
+#     - id: browsers
+#       template: multipleWithOther
+#       options:
+#         - id: edge
+#         - id: chrome
+#         - id: safari
+#         - id: firefox
+#         - id: internet_explorer_11
+#         - id: internet_explorer_8_9_10
+#         - id: opera_mini
+#         - id: safari_ios
+#         - id: chrome_ios
+#         - id: chrome_android
+#         - id: firefox_android
+#         - id: samsung_internet
+#         - id: vivaldi
+#         - id: brave
+#         - id: ucbrowser
+#         - id: opera
+#         - id: polypane
+#         - id: arc
+#         - id: ladybird
+
+#     - id: web_platform_resources
+#       template: multipleWithOther
+#       matchTags: [sites, people]
+#       sectionId: resources
+#       options:
+#         - id: w3c
+#         - id: mdn
+#         - id: web_dev
+#         - id: caniuse
+#         - id: chrome_platform_status
+#         - id: webkit_blog
+#         - id: http_archive
+#         - id: web_features_explorer
+#         # - id: rum_archive # for 2025
+
+- id: usage
+  questions:
+    - id: html_interoperability_features
+      disableRegexMatching: true
+      matchTags:
+        [html_features, js_features, css_features, html_missing_features]
+      template: textList
+
+    - id: html_functionality_features
+      disableRegexMatching: true
+      matchTags:
+        [html_features, js_features, css_features, html_missing_features]
+      template: textList
+
+    # - id: html_new_features
+    #   limit: 3
+    #   template: multipleWithOther
+    #   allowComment: true
+    #   order: random
+    #   matchTags:
+    #     [features_html, features_js, css_features, html_missing_features]
+    #   options:
+    #     - id: popover_api
+    #     - id: custom_highlight_api
+    #     - id: clipboard_api
+    #     - id: accelerometer_api
+    #     - id: picture_in_picture_api
+    #     - id: edit_context
+    #     - id: eyedropper
+    #     - id: file_system_access
+    #     - id: jpeg_xl
+    #     - id: web_bluetooth_api
+    #     - id: background_fetch
+    #     - id: idle_detector
+
+    - id: html_missing_elements
+      limit: 4
+      template: multipleWithOther
+      allowComment: true
+      order: random
+      matchTags:
+        [features_html, features_js, css_features, html_missing_features]
+      options:
+        - id: charts
+        - id: combobox_autocomplete
+        - id: context_menu
+        - id: datatable
+        - id: dropdown_menu
+        - id: footnotes
+        - id: html_include
+        - id: maps
+        - id: offcanvas
+        - id: rich_code_block
+        - id: rich_text_editor
+        - id: scroll_area
+        - id: segmented_button
+        - id: skeleton_loading_placeholder
+        - id: sortable_list
+        - id: switch
+        - id: tabs
+        - id: callout
+
+        # - id: range_slider
+        # - id: image_zoom
+        # - id: star_rating
+        # - id: accordion
+        # - id: calendar
+        # - id: carousel
+        # - id: command_palette
+        # - id: progress_bar
+        # - id: toast_message
+        # - id: tooltip
+        # - id: spinner
+        # - id: icon
+        - id: na
+
+    - id: html_styling_issues
+      limit: 3
+      template: multipleWithOther
+      options:
+        - id: details_element
+        - id: dialog_element
+        - id: input_type_checkbox
+        - id: input_type_date
+        - id: input_type_time
+        - id: input_type_number
+        - id: input_type_radio
+        - id: input_type_range
+        - id: input_type_color
+        - id: select_element
+        - id: select_multiple_element
+        - id: svg_element
+        - id: datalist_element
+
+        - id: fieldset_and_legend
+        - id: progress_element
+        - id: popover_api
+        - id: validation_errors
+
+    # - id: html_interoperability_features
+    #   template: longtext
+
+    # - id: html_missing_features
+    #   template: multipleWithOther
+    #   options:
+    #     - id: accordion_element
+    #     - id: breadcrumb_element
+    #     - id: drawer_element
+    #     - id: todo
+
+    # - id: html_common_components
+    #   template: multipleWithOther
+    #   options:
+    #     - id: accordion
+    #     - id: dialog
+    #     - id: tabs
+    #     - id: toast
+    #     - id: toggle
+
+    # - id: tools_for_other_developers
+    #   template: single
+    #   order: alphabetical
+    #   allowComment: true
+    #   options:
+    #     - id: na
+    #     - id: a_few
+    #     - id: less_than_1000
+    #     - id: more_than_1000
+    #     - id: more_than_1000000
+
+    # - id: industry_sector
+    #   intlId: user_info.industry_sector
+    #   template: multipleWithOther
+    #   matchTags: [industry_sectors]
+    #   order: alphabetical
+    #   options:
+    #     - id: automotive
+    #     - id: consulting
+    #     - id: cyber_security
+    #     - id: ecommerce
+    #     - id: education
+    #     - id: energy
+    #     - id: entertainment
+    #     - id: finance
+    #     - id: government
+    #     - id: healthcare
+    #     - id: insurance
+    #     - id: logistics
+    #     - id: manufacturing
+    #     - id: marketing_tools
+    #     - id: news_media
+    #     - id: programming_tools
+    #     - id: real_estate
+    #     - id: socialmedia
+    #     - id: tourism
+    #     - id: transport
+
+    - id: component_strategies
+      template: multipleWithOther
+      matchTags: [libraries]
+      options:
+        - id: server_side_templating
+        - id: build_time_templating
+        - id: client_side_templating
+        - id: component_based_frameworks
+        - id: web_components
+        - id: web_components_frameworks
+        - id: copy_paste
+        - id: na
+
+    - id: design_system_strategies
+      template: multipleWithOther
+      options:
+        - id: elements_components
+        - id: design_tokens
+        - id: utilities
+        - id: guidelines
+        - id: patterns
+        - id: na
+
+    - id: html_css_js_balance
+      template: slider
+      allowComment: true
+
+    - id: what_do_you_use_html_for
+      template: multipleWithOther
+      matchTags: [use_cases]
+      order: alphabetical
+      allowComment: true
+      options:
+        - id: blogs
+        - id: design_systems
+        - id: desktop_apps
+        - id: emails
+        - id: marketing_sites
+        - id: mobile_apps
+        - id: printed_documents
+        - id: web_apps
+        - id: na
+
+    # did not have time to find proper wording, maybe in 2026?
+    # - id: design_system_customization
+    #   template: slider
+    - id: html_pain_points_freeform
+      disableRegexMatching: true
+      matchTags: [common_pain_points]
+      template: textList
+      # longText: true # does not work!!! do not use!
+
+### DEMOGRAPHICS ###
+
+- id: opinions
+  messageId: opinions.opinions_intro
+  questions:
+    - id: accessibility_is_valued
+      template: opinion
+
+    - id: validation_is_important
+      template: opinion
+
+    - id: keeping_informed_is_challenging
+      template: opinion
+
+    - id: browser_interoperability_is_obstacle
+      template: opinion
+
+    - id: browser_interoperability_pace
+      template: opinion
+
+    - id: web_platform_right_direction
+      template: opinion
+
+- id: user_info
+  questions:
+    - id: age
+      template: age_number
+
+    - id: years_of_experience
+      template: years_of_experience
+
+    - id: company_size
+      template: company_size
+
+    - id: job_title
+      template: longtext
+
+    - id: yearly_salary
+      template: yearly_salary
+      # 2024 todo: use yearly_salary_v2
+      showIf:
+        - id: company_size
+          condition:
+            operator: includes
+            values: [10_20, 50_70]
+
+    - id: higher_education_degree
+      template: higher_education_degree
+
+    - id: country
+      template: country
+
+    - id: gender
+      template: gender
+
+    - id: race_ethnicity
+      template: race_ethnicity
+
+    - id: disability_status
+      template: disability_status2
+
+    - id: other_surveys
+      sectionId: resources
+      template: multipleWithOther
+      allowOther: true
+      matchTags: [surveys]
+      options:
+        - id: state_of_js_survey
+        - id: state_of_css_survey
+        - id: state_of_devs_survey
+        - id: state_of_ai_survey
+        - id: state_of_react_survey
+        - id: jetbrains_survey
+        - id: stack_overflow_survey
+        - id: codingame_survey
+        - id: uxtools_survey
+        - id: postman_survey
+        - id: netlify_survey
+        - id: na
+
+    - id: how_did_user_find_out_about_the_survey
+      template: longtext
+      matchType: single
+      matchTags:
+        [
+          people,
+          sites,
+          newsletters,
+          video_creators,
+          podcasts,
+          surveys,
+          events,
+          state_of_html_sources,
+          socialmedia,
+          sources,
+        ]
+
+    - id: did_you_run_into_technical_issues
+      template: textList
+
+    - id: missing_questions
+      template: textList
+
+    - id: how_can_we_improve
+      template: longtext
+
+    - id: receive_notifications
+      template: receive_notifications
+
+    - id: referrer
+      matchType: single
+      matchTags:
+        [
+          people,
+          sites,
+          newsletters,
+          video_creators,
+          podcasts,
+          surveys,
+          events,
+          state_of_html_sources,
+          socialmedia,
+          sources,
+        ]
+      hidden: true
+      template: referrer
+
+    - id: sourcetag
+      matchType: single
+      matchTags:
+        [
+          people,
+          sites,
+          newsletters,
+          video_creators,
+          podcasts,
+          surveys,
+          events,
+          state_of_html_sources,
+          socialmedia,
+          sources,
+        ]
+      hidden: true
+      template: sourcetag
