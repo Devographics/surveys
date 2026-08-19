@@ -18,13 +18,13 @@
     - id: input_type_color
       yearAdded: 2025
 
-    - id: input_type_color_colospace
-      yearAdded: 2025
+    # - id: input_type_color_colospace # removed in 2026 (too niche)
+    #   yearAdded: 2025
 
-    - id: input_type_color_alpha
-      yearAdded: 2025
+    # - id: input_type_color_alpha # removed in 2026 (too niche)
+    #   yearAdded: 2025
 
-    - id: contenteditable_plaintext
+    # - id: contenteditable_plaintext # removed in 2026 (too niche)
 
     - id: forms_pain_points
       disableRegexMatching: true
@@ -44,8 +44,8 @@
     - id: dialog_closedby
       yearAdded: 2025
 
-    - id: dialog_requestclose
-      yearAdded: 2025
+    # - id: dialog_requestclose # removed in 2026 (too niche)
+    #   yearAdded: 2025
 
     - id: popover_api
 
@@ -58,8 +58,11 @@
     - id: element_before
       yearAdded: 2025
 
-    - id: element_move_before
-      yearAdded: 2025
+    - id: navigation_api
+      yearAdded: 2026
+
+    # - id: element_move_before # removed in 2026 (too niche)
+    #   yearAdded: 2025
 
     - id: interactivity_pain_points
       disableRegexMatching: true
@@ -75,22 +78,22 @@
 
     - id: canvas_element
 
-    - id: canvas_colorspace
-      yearAdded: 2025
+    # - id: canvas_colorspace # removed in 2026 (too niche)
+    #   yearAdded: 2025
 
     - id: canvas_drawelement
       yearAdded: 2025
 
-    - id: model_element
+    # - id: model_element # removed in 2026 (too niche)
 
-    - id: webxr
-      yearAdded: 2025
+    # - id: webxr # removed in 2026 (too niche)
+    #   yearAdded: 2025
 
-    - id: webgpu
-      yearAdded: 2025
+    # - id: webgpu # removed in 2026 (too niche)
+    #   yearAdded: 2025
 
-    - id: webgl
-      yearAdded: 2025
+    # - id: webgl # remove in 2026? (low comments)
+    #   yearAdded: 2025
 
     - id: jpeg_xl
       yearAdded: 2025
@@ -126,6 +129,15 @@
 
     - id: template_element
 
+    - id: import_attributes
+      yearAdded: 2026
+
+    - id: urlpattern
+      yearAdded: 2026
+
+    - id: web_mcp
+      yearAdded: 2026
+
     - id: content_pain_points
       disableRegexMatching: true
       matchTags: [common_pain_points, features_html]
@@ -143,12 +155,15 @@
       yearAdded: 2025
 
     - id: fetchpriority_attribute
-    - id: blocking_render
-    - id: link_rel_expect
-      yearAdded: 2025
+    # - id: blocking_render # removed in 2026 (too niche)
+    # - id: link_rel_expect # removed in 2026 (too niche)
+    #   yearAdded: 2025
 
     - id: speculation_rules
       yearAdded: 2025
+
+    - id: web_transport_api
+      yearAdded: 2026
 
     - id: performance_pain_points
       disableRegexMatching: true
@@ -183,13 +198,13 @@
     - id: shadow_dom
     - id: declarative_shadow_dom
     - id: slot_attribute
-    - id: imperative_slot
+    # - id: imperative_slot # removed in 2026 (too niche)
     - id: element_internals
 
-    - id: reference_target_api # too niche?
-      yearAdded: 2025
-    - id: has_slotted
-      yearAdded: 2025
+    # - id: reference_target_api # removed in 2026 (too niche)
+    #   yearAdded: 2025
+    # - id: has_slotted # removed in 2026 (too niche)
+    #   yearAdded: 2025
 
     # - id: web_components_libraries
     #   template: multipleWithOther
@@ -347,10 +362,10 @@
     - id: filesystem_access
     - id: web_share_api
 
-    - id: app_manifest_share_target
-      yearAdded: 2025
+    # - id: app_manifest_share_target # removed in 2026 (too niche)
+    #   yearAdded: 2025
 
-    - id: file_handling_api
+    # - id: file_handling_api # removed in 2026 (too niche)
 
     - id: register_protocol_handler
       yearAdded: 2025
@@ -367,8 +382,8 @@
     - id: payment_request_api
       yearAdded: 2025
 
-    - id: web_nfc_api
-      yearAdded: 2025
+    # - id: web_nfc_api # removed in 2026 (too niche)
+    #   yearAdded: 2025
 
     - id: system_capabilities_pain_points
       disableRegexMatching: true
@@ -623,49 +638,78 @@
     #     - id: tourism
     #     - id: transport
 
-    - id: component_strategies
-      template: multipleWithOther
-      matchTags: [libraries]
-      options:
-        - id: server_side_templating
-        - id: build_time_templating
-        - id: client_side_templating
-        - id: component_based_frameworks
-        - id: web_components
-        - id: web_components_frameworks
-        - id: copy_paste
-        - id: na
+    # removed in 2026 (shorten survey)
+    # - id: component_strategies
+    #   template: multipleWithOther
+    #   matchTags: [libraries]
+    #   options:
+    #     - id: server_side_templating
+    #     - id: build_time_templating
+    #     - id: client_side_templating
+    #     - id: component_based_frameworks
+    #     - id: web_components
+    #     - id: web_components_frameworks
+    #     - id: copy_paste
+    #     - id: na
 
-    - id: design_system_strategies
-      template: multipleWithOther
+    # removed in 2026 (shorten survey)
+    # - id: design_system_strategies
+    #   template: multipleWithOther
+    #   options:
+    #     - id: elements_components
+    #     - id: design_tokens
+    #     - id: utilities
+    #     - id: guidelines
+    #     - id: patterns
+    #     - id: na
+
+    - id: progressive_enhancement_priority
+      yearAdded: 2026
+      template: single
       options:
-        - id: elements_components
-        - id: design_tokens
-        - id: utilities
-        - id: guidelines
-        - id: patterns
-        - id: na
+        - id: not_a_concern
+        - id: low_priority
+        - id: high_priority
+        - id: required
 
     - id: html_css_js_balance
       template: slider
       allowComment: true
 
-    - id: what_do_you_use_html_for
+    - id: ai_browser_apis
+      yearAdded: 2026
       template: multipleWithOther
-      matchTags: [use_cases]
-      order: alphabetical
-      allowComment: true
+      limit: 3
+      randomize: true
       options:
-        - id: blogs
-        - id: design_systems
-        - id: desktop_apps
-        - id: emails
-        - id: marketing_sites
-        - id: mobile_apps
-        - id: printed_documents
-        - id: web_apps
+        - id: translation
+        - id: language_detection
+        - id: summarization
+        - id: text_generation
+        - id: image_generation
+        - id: speech_generation
+        - id: speech_recognition
+        - id: computer_vision
+        - id: sentiment_analysis
+        - id: caption_generation
         - id: na
 
+    # removed in 2026 (shorten survey)
+    # - id: what_do_you_use_html_for
+    #   template: multipleWithOther
+    #   matchTags: [use_cases]
+    #   order: alphabetical
+    #   allowComment: true
+    #   options:
+    #     - id: blogs
+    #     - id: design_systems
+    #     - id: desktop_apps
+    #     - id: emails
+    #     - id: marketing_sites
+    #     - id: mobile_apps
+    #     - id: printed_documents
+    #     - id: web_apps
+    #     - id: na
     # did not have time to find proper wording, maybe in 2026?
     # - id: design_system_customization
     #   template: slider
@@ -675,28 +719,30 @@
       template: textList
       # longText: true # does not work!!! do not use!
 
+# removed in 2026 (shorten survey)
+
+# - id: opinions
+#   messageId: opinions.opinions_intro
+#   questions:
+#     - id: accessibility_is_valued
+#       template: opinion
+
+#     - id: validation_is_important
+#       template: opinion
+
+#     - id: keeping_informed_is_challenging
+#       template: opinion
+
+#     - id: browser_interoperability_is_obstacle
+#       template: opinion
+
+#     - id: browser_interoperability_pace
+#       template: opinion
+
+#     - id: web_platform_right_direction
+#       template: opinion
+
 ### DEMOGRAPHICS ###
-
-- id: opinions
-  messageId: opinions.opinions_intro
-  questions:
-    - id: accessibility_is_valued
-      template: opinion
-
-    - id: validation_is_important
-      template: opinion
-
-    - id: keeping_informed_is_challenging
-      template: opinion
-
-    - id: browser_interoperability_is_obstacle
-      template: opinion
-
-    - id: browser_interoperability_pace
-      template: opinion
-
-    - id: web_platform_right_direction
-      template: opinion
 
 - id: user_info
   questions:
@@ -721,8 +767,9 @@
             operator: includes
             values: [10_20, 50_70]
 
-    - id: higher_education_degree
-      template: higher_education_degree
+    # removed in 2026 (shorten survey)
+    # - id: higher_education_degree
+    #   template: higher_education_degree
 
     - id: country
       template: country
@@ -730,8 +777,9 @@
     - id: gender
       template: gender
 
-    - id: race_ethnicity
-      template: race_ethnicity
+    # removed in 2026 (shorten survey)
+    # - id: race_ethnicity
+    #   template: race_ethnicity
 
     - id: disability_status
       template: disability_status2
