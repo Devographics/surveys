@@ -69,51 +69,51 @@
       matchTags: [common_pain_points, features_html]
       template: textList
 
-- id: graphics_multimedia
-  template: featurev3
-  slug: features
-  randomizeSectionSequence: true
-  questions:
-    - id: svg_element
+# - id: graphics_multimedia
+#   template: featurev3
+#   slug: features
+#   randomizeSectionSequence: true
+#   questions:
+#     - id: svg_element
 
-    - id: canvas_element
+#     - id: canvas_element
 
-    # - id: canvas_colorspace # removed in 2026 (too niche)
-    #   yearAdded: 2025
+#     # - id: canvas_colorspace # removed in 2026 (too niche)
+#     #   yearAdded: 2025
 
-    - id: canvas_drawelement
-      yearAdded: 2025
+#     - id: canvas_drawelement
+#       yearAdded: 2025
 
-    # - id: model_element # removed in 2026 (too niche)
+#     # - id: model_element # removed in 2026 (too niche)
 
-    # - id: webxr # removed in 2026 (too niche)
-    #   yearAdded: 2025
+#     # - id: webxr # removed in 2026 (too niche)
+#     #   yearAdded: 2025
 
-    # - id: webgpu # removed in 2026 (too niche)
-    #   yearAdded: 2025
+#     # - id: webgpu # removed in 2026 (too niche)
+#     #   yearAdded: 2025
 
-    # - id: webgl # remove in 2026? (low comments)
-    #   yearAdded: 2025
+#     # - id: webgl # remove in 2026? (low comments)
+#     #   yearAdded: 2025
 
-    - id: jpeg_xl
-      yearAdded: 2025
+#     - id: jpeg_xl
+#       yearAdded: 2025
 
-    - id: graphics_pain_points
-      disableRegexMatching: true
-      matchTags: [common_pain_points, features_html]
-      template: textList
+#     - id: graphics_pain_points
+#       disableRegexMatching: true
+#       matchTags: [common_pain_points, features_html]
+#       template: textList
 
 - id: content
   template: featurev3
   slug: features
   randomizeSectionSequence: true
   questions:
-    - id: math_element
+    # - id: math_element # removed in 2026 (widely available + too niche)
 
-    - id: mapviewer_element
-      yearAdded: 2025
+    # - id: mapviewer_element # removed in 2026 (too new + too niche)
+    #   yearAdded: 2025
 
-    - id: content_security_policy
+    # - id: content_security_policy # removed in 2026 (too old + widely available)
     - id: sanitizer_api
 
     - id: hidden_until_found
@@ -197,7 +197,7 @@
     - id: scoped_element_registries
     - id: shadow_dom
     - id: declarative_shadow_dom
-    - id: slot_attribute
+    # - id: slot_attribute # removed in 2026 (niche + widely supported + low comments)
     # - id: imperative_slot # removed in 2026 (too niche)
     - id: element_internals
 
@@ -241,24 +241,29 @@
     #   matchTags: [common_pain_points, features_html, web_components_pain_points]
     #   template: textList
 
-    - id: web_components_common_pain_points
-      limit: 3
-      matchTags: [common_pain_points, features_html, web_components_pain_points]
-      template: multiple
-      options:
-        - id: complex_apis
-        - id: a11y_issues
-        - id: i18n_issues
-        - id: low_shadow_dom_specificity
-        - id: overly_strict_encapsulation
-        - id: overreliance_on_js
-        - id: design_tokens_access
-        - id: native_element_extension
-        - id: slotted_descendants_style
-        # - id: poor_ssr_support
-        - id: na
+    # - id: web_components_common_pain_points
+    #   limit: 3
+    #   matchTags: [common_pain_points, features_html, web_components_pain_points]
+    #   template: multiple
+    #   options:
+    #     - id: complex_apis
+    #     - id: a11y_issues
+    #     - id: i18n_issues
+    #     - id: low_shadow_dom_specificity
+    #     - id: overly_strict_encapsulation
+    #     - id: overreliance_on_js
+    #     - id: design_tokens_access
+    #     - id: native_element_extension
+    #     - id: slotted_descendants_style
+    #     # - id: poor_ssr_support
+    #     - id: na
 
-    - id: web_components_other_pain_points
+    # - id: web_components_other_pain_points
+    #   disableRegexMatching: true
+    #   matchTags: [common_pain_points, features_html, web_components_pain_points]
+    #   template: textList
+
+    - id: web_components_pain_points
       disableRegexMatching: true
       matchTags: [common_pain_points, features_html, web_components_pain_points]
       template: textList
@@ -268,10 +273,10 @@
   slug: features
   randomizeSectionSequence: true
   questions:
-    - id: landmark_elements
+    # - id: landmark_elements # removed in 2026 (too common)
     - id: tabindex_attribute
     - id: focusgroup_attribute
-    - id: search_element
+    # - id: search_element # removed in 2026 (too common)
 
     - id: accessibility_techniques
       template: multipleWithOther
@@ -323,6 +328,7 @@
         - id: chrome_devtools
         - id: chromevox
         - id: wave
+        - id: firefox_accessibility_inspector
         - id: na
 
     - id: accessibility_tools
@@ -345,7 +351,20 @@
         - id: arc
         - id: polypane
         - id: ibm_accessibility_checker
+        - id: silktide
         - id: na
+
+    - id: accessibility_ai_impact
+      yearAdded: 2026
+      template: single
+      optionsAreNumeric: true
+      optionsAreSequential: true
+      options:
+        - id: 0
+        - id: 1
+        - id: 2
+        - id: 3
+        - id: 4
 
     - id: accessibility_pain_points
       disableRegexMatching: true
@@ -367,8 +386,8 @@
 
     # - id: file_handling_api # removed in 2026 (too niche)
 
-    - id: register_protocol_handler
-      yearAdded: 2025
+    # - id: register_protocol_handler # removed in 2026 (too niche)
+    #   yearAdded: 2025
 
     - id: web_bluetooth_api
       yearAdded: 2025
@@ -675,6 +694,10 @@
     - id: html_css_js_balance
       template: slider
       allowComment: true
+
+    - id: ai_generated_code_balance
+      yearAdded: 2026
+      template: slider
 
     - id: ai_browser_apis
       yearAdded: 2026
