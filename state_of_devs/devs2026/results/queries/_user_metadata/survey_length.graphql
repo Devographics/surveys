@@ -2,8 +2,8 @@ query {
   surveys {
     state_of_devs {
       devs2026 {
-        career {
-          higher_education_degree: higher_education_degree {
+        _user_metadata {
+          survey_length: survey_length {
             id
             comments {
               currentEdition {
@@ -13,7 +13,7 @@ query {
             combined(
               parameters: {
                 showNoAnswer: true
-                mergeOtherBuckets: true
+                mergeOtherBuckets: false
                 cutoff: 10
               }
             ) {
