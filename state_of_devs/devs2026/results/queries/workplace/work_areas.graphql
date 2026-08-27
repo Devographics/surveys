@@ -10,12 +10,11 @@ query {
                 count
               }
             }
-            freeform(
+            combined(
               parameters: {
                 showNoAnswer: true
-                cutoff: 10
-                limit: 20
                 mergeOtherBuckets: true
+                cutoff: 10
               }
             ) {
               allEditions(editionCount: 2) {
@@ -56,6 +55,7 @@ query {
                     nameHtml
                     nameClean
                     alias
+                    author
                     description
                     descriptionHtml
                     descriptionClean
@@ -78,6 +78,9 @@ query {
                       url
                     }
                     wikipedia {
+                      url
+                    }
+                    steam {
                       url
                     }
                     youtube {
