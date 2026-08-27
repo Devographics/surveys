@@ -10,12 +10,11 @@ query {
                 count
               }
             }
-            freeform(
+            combined(
               parameters: {
                 showNoAnswer: true
-                cutoff: 10
-                limit: 20
                 mergeOtherBuckets: true
+                cutoff: 10
               }
             ) {
               allEditions(editionCount: 2) {
@@ -72,6 +71,12 @@ query {
                       url
                     }
                     homepage {
+                      url
+                    }
+                    amazon {
+                      url
+                    }
+                    wikipedia {
                       url
                     }
                     youtube {
