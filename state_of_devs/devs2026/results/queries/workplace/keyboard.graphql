@@ -44,14 +44,9 @@ query {
             freeform(
               parameters: {
                 showNoAnswer: true
-                cutoff: 5
-                limit: 25
+                cutoff: 10
+                limit: 20
                 mergeOtherBuckets: true
-              }
-              bucketsFilter: {
-                nin: [
-                  limitations
-                ]
               }
             ) {
               allEditions(editionCount: 2) {
