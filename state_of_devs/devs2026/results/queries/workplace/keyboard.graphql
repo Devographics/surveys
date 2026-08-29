@@ -44,9 +44,14 @@ query {
             freeform(
               parameters: {
                 showNoAnswer: true
-                cutoff: 10
-                limit: 20
+                cutoff: 5
+                limit: 25
                 mergeOtherBuckets: true
+              }
+              bucketsFilter: {
+                nin: [
+                  limitations
+                ]
               }
             ) {
               allEditions(editionCount: 2) {
@@ -173,6 +178,321 @@ query {
                           firefox_android
                           safari
                           safari_ios
+                        }
+                      }
+                    }
+                  }
+                  nestedBuckets {
+                    count
+                    id
+                    value
+                    index
+                    percentageQuestion
+                    percentageSurvey
+                    isFreeformData
+                    hasInsufficientData
+                    entity {
+                      name
+                      nameHtml
+                      nameClean
+                      alias
+                      author
+                      description
+                      descriptionHtml
+                      descriptionClean
+                      id
+                      parentId
+                      entityType
+                      example {
+                        label
+                        language
+                        code
+                        codeHighlighted
+                      }
+                      avatar {
+                        url
+                      }
+                      homepage {
+                        url
+                      }
+                      amazon {
+                        url
+                      }
+                      wikipedia {
+                        url
+                      }
+                      steam {
+                        url
+                      }
+                      youtube {
+                        url
+                      }
+                      twitter {
+                        url
+                      }
+                      bluesky {
+                        url
+                      }
+                      threads {
+                        url
+                      }
+                      twitch {
+                        url
+                      }
+                      rss {
+                        url
+                      }
+                      blog {
+                        url
+                      }
+                      mastodon {
+                        url
+                      }
+                      github {
+                        url
+                      }
+                      npm {
+                        url
+                      }
+                      mdn {
+                        url
+                      }
+                      caniuse {
+                        url
+                      }
+                      resources {
+                        url
+                        title
+                      }
+                      webFeature {
+                        id
+                        description_html
+                        group
+                        name
+                        spec
+                        url
+                        status {
+                          baseline
+                          baseline_low_date
+                          support {
+                            chrome
+                            chrome_android
+                            edge
+                            firefox
+                            firefox_android
+                            safari
+                            safari_ios
+                          }
+                        }
+                      }
+                    }
+                    nestedBuckets {
+                      count
+                      id
+                      value
+                      index
+                      percentageQuestion
+                      percentageSurvey
+                      isFreeformData
+                      hasInsufficientData
+                      entity {
+                        name
+                        nameHtml
+                        nameClean
+                        alias
+                        author
+                        description
+                        descriptionHtml
+                        descriptionClean
+                        id
+                        parentId
+                        entityType
+                        example {
+                          label
+                          language
+                          code
+                          codeHighlighted
+                        }
+                        avatar {
+                          url
+                        }
+                        homepage {
+                          url
+                        }
+                        amazon {
+                          url
+                        }
+                        wikipedia {
+                          url
+                        }
+                        steam {
+                          url
+                        }
+                        youtube {
+                          url
+                        }
+                        twitter {
+                          url
+                        }
+                        bluesky {
+                          url
+                        }
+                        threads {
+                          url
+                        }
+                        twitch {
+                          url
+                        }
+                        rss {
+                          url
+                        }
+                        blog {
+                          url
+                        }
+                        mastodon {
+                          url
+                        }
+                        github {
+                          url
+                        }
+                        npm {
+                          url
+                        }
+                        mdn {
+                          url
+                        }
+                        caniuse {
+                          url
+                        }
+                        resources {
+                          url
+                          title
+                        }
+                        webFeature {
+                          id
+                          description_html
+                          group
+                          name
+                          spec
+                          url
+                          status {
+                            baseline
+                            baseline_low_date
+                            support {
+                              chrome
+                              chrome_android
+                              edge
+                              firefox
+                              firefox_android
+                              safari
+                              safari_ios
+                            }
+                          }
+                        }
+                      }
+                      nestedBuckets {
+                        count
+                        id
+                        value
+                        index
+                        percentageQuestion
+                        percentageSurvey
+                        isFreeformData
+                        hasInsufficientData
+                        entity {
+                          name
+                          nameHtml
+                          nameClean
+                          alias
+                          author
+                          description
+                          descriptionHtml
+                          descriptionClean
+                          id
+                          parentId
+                          entityType
+                          example {
+                            label
+                            language
+                            code
+                            codeHighlighted
+                          }
+                          avatar {
+                            url
+                          }
+                          homepage {
+                            url
+                          }
+                          amazon {
+                            url
+                          }
+                          wikipedia {
+                            url
+                          }
+                          steam {
+                            url
+                          }
+                          youtube {
+                            url
+                          }
+                          twitter {
+                            url
+                          }
+                          bluesky {
+                            url
+                          }
+                          threads {
+                            url
+                          }
+                          twitch {
+                            url
+                          }
+                          rss {
+                            url
+                          }
+                          blog {
+                            url
+                          }
+                          mastodon {
+                            url
+                          }
+                          github {
+                            url
+                          }
+                          npm {
+                            url
+                          }
+                          mdn {
+                            url
+                          }
+                          caniuse {
+                            url
+                          }
+                          resources {
+                            url
+                            title
+                          }
+                          webFeature {
+                            id
+                            description_html
+                            group
+                            name
+                            spec
+                            url
+                            status {
+                              baseline
+                              baseline_low_date
+                              support {
+                                chrome
+                                chrome_android
+                                edge
+                                firefox
+                                firefox_android
+                                safari
+                                safari_ios
+                              }
+                            }
+                          }
                         }
                       }
                     }
