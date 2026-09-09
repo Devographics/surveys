@@ -2,8 +2,8 @@ query {
   surveys {
     state_of_devs {
       devs2026 {
-        user_info {
-          gender_vs_number_of_kids: gender {
+        health {
+          age_vs_number_of_kids: age {
             id
             comments {
               currentEdition {
@@ -42,13 +42,14 @@ query {
               }
             }
             combined(
-              facet: health__number_of_kids
+              facet: user_info__number_of_kids
               parameters: {
                 showNoAnswer: true
-                cutoff: 20
+                mergeOtherBuckets: false
+                cutoff: 10
               }
             ) {
-              allEditions(editionCount: 1) {
+              allEditions(editionCount: 2) {
                 _metadata {
                   axis1Sort {
                     property
