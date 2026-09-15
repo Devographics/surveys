@@ -12,6 +12,8 @@ query {
             }
             _correlations {
               questionCorrelations {
+                kind1
+                kind2
                 questionId1
                 sectionId1
                 optionId1
@@ -27,6 +29,8 @@ query {
               optionCorrelations {
                 id
                 correlations {
+                  kind1
+                  kind2
                   questionId1
                   sectionId1
                   optionId1
@@ -45,7 +49,9 @@ query {
               filters: {
                 user_info__gender: {
                   in: [
-                    male
+                    female
+                    non_binary
+                    not_listed
                   ]
                 }
               }
@@ -66,6 +72,16 @@ query {
                   }
                   limit
                   cutoff
+                }
+                _cardinalities {
+                  buckets {
+                    answerCount
+                    count
+                    percentage
+                  }
+                  max
+                  mean
+                  n
                 }
                 editionId
                 year
@@ -195,6 +211,8 @@ query {
             }
             _correlations {
               questionCorrelations {
+                kind1
+                kind2
                 questionId1
                 sectionId1
                 optionId1
@@ -210,6 +228,8 @@ query {
               optionCorrelations {
                 id
                 correlations {
+                  kind1
+                  kind2
                   questionId1
                   sectionId1
                   optionId1
@@ -228,9 +248,7 @@ query {
               filters: {
                 user_info__gender: {
                   in: [
-                    female
-                    non_binary
-                    not_listed
+                    male
                   ]
                 }
               }
@@ -251,6 +269,16 @@ query {
                   }
                   limit
                   cutoff
+                }
+                _cardinalities {
+                  buckets {
+                    answerCount
+                    count
+                    percentage
+                  }
+                  max
+                  mean
+                  n
                 }
                 editionId
                 year

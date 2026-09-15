@@ -2,8 +2,8 @@ query {
   surveys {
     state_of_devs {
       devs2026 {
-        user_info {
-          gender_vs_number_of_kids: gender {
+        workplace {
+          company_size_vs_ai_generated_code_balance: company_size {
             id
             comments {
               currentEdition {
@@ -12,6 +12,8 @@ query {
             }
             _correlations {
               questionCorrelations {
+                kind1
+                kind2
                 questionId1
                 sectionId1
                 optionId1
@@ -27,6 +29,8 @@ query {
               optionCorrelations {
                 id
                 correlations {
+                  kind1
+                  kind2
                   questionId1
                   sectionId1
                   optionId1
@@ -42,7 +46,7 @@ query {
               }
             }
             combined(
-              facet: health__number_of_kids
+              facet: ai_usage__ai_generated_code_balance
               parameters: {
                 showNoAnswer: true
                 cutoff: 20

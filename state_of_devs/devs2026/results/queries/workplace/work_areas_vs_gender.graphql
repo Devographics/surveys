@@ -12,6 +12,8 @@ query {
             }
             _correlations {
               questionCorrelations {
+                kind1
+                kind2
                 questionId1
                 sectionId1
                 optionId1
@@ -27,6 +29,8 @@ query {
               optionCorrelations {
                 id
                 correlations {
+                  kind1
+                  kind2
                   questionId1
                   sectionId1
                   optionId1
@@ -41,7 +45,7 @@ query {
                 }
               }
             }
-            freeform(
+            combined(
               facet: user_info__gender
               parameters: {
                 showNoAnswer: true
@@ -82,101 +86,6 @@ query {
                   percentageSurvey
                   isFreeformData
                   hasInsufficientData
-                  entity {
-                    name
-                    nameHtml
-                    nameClean
-                    alias
-                    author
-                    description
-                    descriptionHtml
-                    descriptionClean
-                    id
-                    parentId
-                    entityType
-                    example {
-                      label
-                      language
-                      code
-                      codeHighlighted
-                    }
-                    avatar {
-                      url
-                    }
-                    homepage {
-                      url
-                    }
-                    amazon {
-                      url
-                    }
-                    wikipedia {
-                      url
-                    }
-                    steam {
-                      url
-                    }
-                    youtube {
-                      url
-                    }
-                    twitter {
-                      url
-                    }
-                    bluesky {
-                      url
-                    }
-                    threads {
-                      url
-                    }
-                    twitch {
-                      url
-                    }
-                    rss {
-                      url
-                    }
-                    blog {
-                      url
-                    }
-                    mastodon {
-                      url
-                    }
-                    github {
-                      url
-                    }
-                    npm {
-                      url
-                    }
-                    mdn {
-                      url
-                    }
-                    caniuse {
-                      url
-                    }
-                    resources {
-                      url
-                      title
-                    }
-                    webFeature {
-                      id
-                      description_html
-                      group
-                      name
-                      spec
-                      url
-                      status {
-                        baseline
-                        baseline_low_date
-                        support {
-                          chrome
-                          chrome_android
-                          edge
-                          firefox
-                          firefox_android
-                          safari
-                          safari_ios
-                        }
-                      }
-                    }
-                  }
                   averageByFacet
                   percentilesByFacet {
                     p0
@@ -193,105 +102,6 @@ query {
                     percentageBucket
                     percentageQuestion
                     hasInsufficientData
-                    entity {
-                      name
-                      nameHtml
-                      nameClean
-                      alias
-                      author
-                      description
-                      descriptionHtml
-                      descriptionClean
-                      id
-                      parentId
-                      entityType
-                      example {
-                        label
-                        language
-                        code
-                        codeHighlighted
-                      }
-                      avatar {
-                        url
-                      }
-                      homepage {
-                        url
-                      }
-                      amazon {
-                        url
-                      }
-                      wikipedia {
-                        url
-                      }
-                      steam {
-                        url
-                      }
-                      youtube {
-                        url
-                      }
-                      twitter {
-                        url
-                      }
-                      bluesky {
-                        url
-                      }
-                      threads {
-                        url
-                      }
-                      twitch {
-                        url
-                      }
-                      rss {
-                        url
-                      }
-                      blog {
-                        url
-                      }
-                      mastodon {
-                        url
-                      }
-                      github {
-                        url
-                      }
-                      npm {
-                        url
-                      }
-                      mdn {
-                        url
-                      }
-                      caniuse {
-                        url
-                      }
-                      resources {
-                        url
-                        title
-                      }
-                      webFeature {
-                        id
-                        description_html
-                        group
-                        name
-                        spec
-                        url
-                        status {
-                          baseline
-                          baseline_low_date
-                          support {
-                            chrome
-                            chrome_android
-                            edge
-                            firefox
-                            firefox_android
-                            safari
-                            safari_ios
-                          }
-                        }
-                      }
-                    }
-                    token {
-                      id
-                      parentId
-                    }
                   }
                 }
               }

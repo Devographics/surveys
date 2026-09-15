@@ -1,0 +1,182 @@
+query {
+  surveys {
+    state_of_devs {
+      devs2026 {
+        workplace {
+          work_areas_vs_years_of_experience_vs_yearly_salary_1: work_areas {
+            id
+            comments {
+              currentEdition {
+                count
+              }
+            }
+            _correlations {
+              questionCorrelations {
+                kind1
+                kind2
+                questionId1
+                sectionId1
+                optionId1
+                questionId2
+                sectionId2
+                optionId2
+                n
+                correlation
+                sameSection
+                strength
+                direction
+              }
+              optionCorrelations {
+                id
+                correlations {
+                  kind1
+                  kind2
+                  questionId1
+                  sectionId1
+                  optionId1
+                  questionId2
+                  sectionId2
+                  optionId2
+                  n
+                  correlation
+                  sameSection
+                  strength
+                  direction
+                }
+              }
+            }
+            combined(
+              parameters: {
+                showNoAnswer: true
+                cutoff: 100
+                limit: 20
+              }
+            ) {
+              allEditions(editionCount: 1) {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                  limit
+                  cutoff
+                }
+                editionId
+                year
+                completion {
+                  count
+                  percentageSurvey
+                  total
+                }
+                average
+                percentiles {
+                  p50
+                }
+                buckets {
+                  count
+                  id
+                  value
+                  index
+                  percentageQuestion
+                  percentageSurvey
+                  isFreeformData
+                  hasInsufficientData
+                }
+              }
+            }
+          }
+          work_areas_vs_years_of_experience_vs_yearly_salary_2: work_areas {
+            id
+            comments {
+              currentEdition {
+                count
+              }
+            }
+            _correlations {
+              questionCorrelations {
+                kind1
+                kind2
+                questionId1
+                sectionId1
+                optionId1
+                questionId2
+                sectionId2
+                optionId2
+                n
+                correlation
+                sameSection
+                strength
+                direction
+              }
+              optionCorrelations {
+                id
+                correlations {
+                  kind1
+                  kind2
+                  questionId1
+                  sectionId1
+                  optionId1
+                  questionId2
+                  sectionId2
+                  optionId2
+                  n
+                  correlation
+                  sameSection
+                  strength
+                  direction
+                }
+              }
+            }
+            combined(
+              parameters: {
+                showNoAnswer: true
+                cutoff: 100
+                limit: 20
+              }
+            ) {
+              allEditions(editionCount: 1) {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                  limit
+                  cutoff
+                }
+                editionId
+                year
+                completion {
+                  count
+                  percentageSurvey
+                  total
+                }
+                average
+                percentiles {
+                  p50
+                }
+                buckets {
+                  count
+                  id
+                  value
+                  index
+                  percentageQuestion
+                  percentageSurvey
+                  isFreeformData
+                  hasInsufficientData
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
