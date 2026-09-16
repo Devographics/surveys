@@ -2,8 +2,8 @@ query {
   surveys {
     state_of_devs {
       devs2026 {
-        workplace {
-          work_areas_vs_years_of_experience_vs_yearly_salary_1: work_areas {
+        user_info {
+          countries_vs_yearly_income_vs_work_hours_1: country {
             id
             comments {
               currentEdition {
@@ -11,7 +11,7 @@ query {
               }
             }
             combined(
-              facet: career__years_of_experience
+              facet: workplace__work_hours_per_week
               parameters: {
                 showNoAnswer: false
                 cutoff: 20
@@ -72,7 +72,7 @@ query {
               }
             }
           }
-          work_areas_vs_years_of_experience_vs_yearly_salary_2: work_areas {
+          countries_vs_yearly_income_vs_work_hours_2: country {
             id
             comments {
               currentEdition {

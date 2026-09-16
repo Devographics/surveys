@@ -11,6 +11,7 @@
     #   sectionSlug: user_info
     #   template: higher_education_degree
 
+    # todo 2027: remove?
     - id: how_many_jobs
       template: number
       groups:
@@ -78,6 +79,7 @@
     - id: career_issues
       template: multipleWithOther
       showCommentInput: true
+      doNotCorrelateWith: [discrimination_issues]
       options:
         - id: harassment
         # - id: sexual_harassment
@@ -95,6 +97,7 @@
     - id: discrimination_issues
       template: multipleWithOther
       showCommentInput: true
+      doNotCorrelateWith: [career_issues]
       options:
         - id: gender
         - id: sexual_orientation
@@ -150,10 +153,15 @@
       optionsAreNumeric: true
       options:
         - id: 0
+          value: 1
         - id: 1
+          value: 2
         - id: 2
+          value: 3
         - id: 3
+          value: 4
         - id: 4
+          value: 5
 
     - id: career_security
       yearAdded: 2026
@@ -161,10 +169,15 @@
       optionsAreNumeric: true
       options:
         - id: 0
+          value: 1
         - id: 1
+          value: 2
         - id: 2
+          value: 3
         - id: 3
+          value: 4
         - id: 4
+          value: 5
 
 - id: workplace
   questions:
