@@ -1,0 +1,628 @@
+query {
+  surveys {
+    state_of_devs {
+      devs2026 {
+        worldview {
+          tech_industry_emotion_vs_ai_sentiment_1: tech_industry_emotion {
+            id
+            comments {
+              currentEdition {
+                count
+              }
+            }
+            _correlations {
+              questionCorrelations {
+                kind1
+                kind2
+                questionId1
+                sectionId1
+                optionId1
+                questionId2
+                sectionId2
+                optionId2
+                n
+                correlation
+                sameSection
+                strength
+                direction
+              }
+              optionCorrelations {
+                id
+                correlations {
+                  kind1
+                  kind2
+                  questionId1
+                  sectionId1
+                  optionId1
+                  questionId2
+                  sectionId2
+                  optionId2
+                  n
+                  correlation
+                  sameSection
+                  strength
+                  direction
+                }
+              }
+            }
+            combined(
+              filters: {
+                ai_usage__ai_sentiment: {
+                  in: [
+                    value_0
+                    value_1
+                    value_2
+                    value_3
+                  ]
+                }
+              }
+              parameters: {
+                showNoAnswer: true
+                cutoff: 10
+                limit: 20
+                mergeOtherBuckets: true
+              }
+            ) {
+              allEditions(editionCount: 2) {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                  limit
+                  cutoff
+                }
+                _cardinalities {
+                  buckets {
+                    answerCount
+                    count
+                    percentage
+                  }
+                  max
+                  mean
+                  n
+                }
+                editionId
+                year
+                completion {
+                  count
+                  percentageSurvey
+                  total
+                }
+                average
+                percentiles {
+                  p50
+                }
+                buckets {
+                  id
+                  count
+                  value
+                  index
+                  percentageQuestion
+                  percentageSurvey
+                  isFreeformData
+                  hasInsufficientData
+                  entity {
+                    name
+                    nameHtml
+                    nameClean
+                    alias
+                    author
+                    description
+                    descriptionHtml
+                    descriptionClean
+                    id
+                    parentId
+                    entityType
+                    tags
+                    example {
+                      label
+                      language
+                      code
+                      codeHighlighted
+                    }
+                    avatar {
+                      url
+                    }
+                    homepage {
+                      url
+                    }
+                    amazon {
+                      url
+                    }
+                    wikipedia {
+                      url
+                    }
+                    steam {
+                      url
+                    }
+                    youtube {
+                      url
+                    }
+                    twitter {
+                      url
+                    }
+                    bluesky {
+                      url
+                    }
+                    threads {
+                      url
+                    }
+                    twitch {
+                      url
+                    }
+                    rss {
+                      url
+                    }
+                    blog {
+                      url
+                    }
+                    mastodon {
+                      url
+                    }
+                    github {
+                      url
+                    }
+                    npm {
+                      url
+                    }
+                    mdn {
+                      url
+                    }
+                    caniuse {
+                      url
+                    }
+                    resources {
+                      url
+                      title
+                    }
+                    webFeature {
+                      id
+                      description_html
+                      group
+                      name
+                      spec
+                      url
+                      status {
+                        baseline
+                        baseline_low_date
+                        support {
+                          chrome
+                          chrome_android
+                          edge
+                          firefox
+                          firefox_android
+                          safari
+                          safari_ios
+                        }
+                      }
+                    }
+                  }
+                  groupedBuckets {
+                    id
+                    count
+                    value
+                    index
+                    percentageQuestion
+                    percentageSurvey
+                    isFreeformData
+                    hasInsufficientData
+                    entity {
+                      name
+                      nameHtml
+                      nameClean
+                      alias
+                      author
+                      description
+                      descriptionHtml
+                      descriptionClean
+                      id
+                      parentId
+                      entityType
+                      tags
+                      example {
+                        label
+                        language
+                        code
+                        codeHighlighted
+                      }
+                      avatar {
+                        url
+                      }
+                      homepage {
+                        url
+                      }
+                      amazon {
+                        url
+                      }
+                      wikipedia {
+                        url
+                      }
+                      steam {
+                        url
+                      }
+                      youtube {
+                        url
+                      }
+                      twitter {
+                        url
+                      }
+                      bluesky {
+                        url
+                      }
+                      threads {
+                        url
+                      }
+                      twitch {
+                        url
+                      }
+                      rss {
+                        url
+                      }
+                      blog {
+                        url
+                      }
+                      mastodon {
+                        url
+                      }
+                      github {
+                        url
+                      }
+                      npm {
+                        url
+                      }
+                      mdn {
+                        url
+                      }
+                      caniuse {
+                        url
+                      }
+                      resources {
+                        url
+                        title
+                      }
+                      webFeature {
+                        id
+                        description_html
+                        group
+                        name
+                        spec
+                        url
+                        status {
+                          baseline
+                          baseline_low_date
+                          support {
+                            chrome
+                            chrome_android
+                            edge
+                            firefox
+                            firefox_android
+                            safari
+                            safari_ios
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          tech_industry_emotion_vs_ai_sentiment_2: tech_industry_emotion {
+            id
+            comments {
+              currentEdition {
+                count
+              }
+            }
+            _correlations {
+              questionCorrelations {
+                kind1
+                kind2
+                questionId1
+                sectionId1
+                optionId1
+                questionId2
+                sectionId2
+                optionId2
+                n
+                correlation
+                sameSection
+                strength
+                direction
+              }
+              optionCorrelations {
+                id
+                correlations {
+                  kind1
+                  kind2
+                  questionId1
+                  sectionId1
+                  optionId1
+                  questionId2
+                  sectionId2
+                  optionId2
+                  n
+                  correlation
+                  sameSection
+                  strength
+                  direction
+                }
+              }
+            }
+            combined(
+              filters: {
+                ai_usage__ai_sentiment: {
+                  in: [
+                    value_5
+                    value_6
+                    value_7
+                    value_8
+                  ]
+                }
+              }
+              parameters: {
+                showNoAnswer: true
+                cutoff: 10
+                limit: 20
+                mergeOtherBuckets: true
+              }
+            ) {
+              allEditions(editionCount: 2) {
+                _metadata {
+                  axis1Sort {
+                    property
+                    order
+                  }
+                  axis2Sort {
+                    property
+                    order
+                  }
+                  limit
+                  cutoff
+                }
+                _cardinalities {
+                  buckets {
+                    answerCount
+                    count
+                    percentage
+                  }
+                  max
+                  mean
+                  n
+                }
+                editionId
+                year
+                completion {
+                  count
+                  percentageSurvey
+                  total
+                }
+                average
+                percentiles {
+                  p50
+                }
+                buckets {
+                  id
+                  count
+                  value
+                  index
+                  percentageQuestion
+                  percentageSurvey
+                  isFreeformData
+                  hasInsufficientData
+                  entity {
+                    name
+                    nameHtml
+                    nameClean
+                    alias
+                    author
+                    description
+                    descriptionHtml
+                    descriptionClean
+                    id
+                    parentId
+                    entityType
+                    tags
+                    example {
+                      label
+                      language
+                      code
+                      codeHighlighted
+                    }
+                    avatar {
+                      url
+                    }
+                    homepage {
+                      url
+                    }
+                    amazon {
+                      url
+                    }
+                    wikipedia {
+                      url
+                    }
+                    steam {
+                      url
+                    }
+                    youtube {
+                      url
+                    }
+                    twitter {
+                      url
+                    }
+                    bluesky {
+                      url
+                    }
+                    threads {
+                      url
+                    }
+                    twitch {
+                      url
+                    }
+                    rss {
+                      url
+                    }
+                    blog {
+                      url
+                    }
+                    mastodon {
+                      url
+                    }
+                    github {
+                      url
+                    }
+                    npm {
+                      url
+                    }
+                    mdn {
+                      url
+                    }
+                    caniuse {
+                      url
+                    }
+                    resources {
+                      url
+                      title
+                    }
+                    webFeature {
+                      id
+                      description_html
+                      group
+                      name
+                      spec
+                      url
+                      status {
+                        baseline
+                        baseline_low_date
+                        support {
+                          chrome
+                          chrome_android
+                          edge
+                          firefox
+                          firefox_android
+                          safari
+                          safari_ios
+                        }
+                      }
+                    }
+                  }
+                  groupedBuckets {
+                    id
+                    count
+                    value
+                    index
+                    percentageQuestion
+                    percentageSurvey
+                    isFreeformData
+                    hasInsufficientData
+                    entity {
+                      name
+                      nameHtml
+                      nameClean
+                      alias
+                      author
+                      description
+                      descriptionHtml
+                      descriptionClean
+                      id
+                      parentId
+                      entityType
+                      tags
+                      example {
+                        label
+                        language
+                        code
+                        codeHighlighted
+                      }
+                      avatar {
+                        url
+                      }
+                      homepage {
+                        url
+                      }
+                      amazon {
+                        url
+                      }
+                      wikipedia {
+                        url
+                      }
+                      steam {
+                        url
+                      }
+                      youtube {
+                        url
+                      }
+                      twitter {
+                        url
+                      }
+                      bluesky {
+                        url
+                      }
+                      threads {
+                        url
+                      }
+                      twitch {
+                        url
+                      }
+                      rss {
+                        url
+                      }
+                      blog {
+                        url
+                      }
+                      mastodon {
+                        url
+                      }
+                      github {
+                        url
+                      }
+                      npm {
+                        url
+                      }
+                      mdn {
+                        url
+                      }
+                      caniuse {
+                        url
+                      }
+                      resources {
+                        url
+                        title
+                      }
+                      webFeature {
+                        id
+                        description_html
+                        group
+                        name
+                        spec
+                        url
+                        status {
+                          baseline
+                          baseline_low_date
+                          support {
+                            chrome
+                            chrome_android
+                            edge
+                            firefox
+                            firefox_android
+                            safari
+                            safari_ios
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
