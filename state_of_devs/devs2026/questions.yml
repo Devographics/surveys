@@ -362,6 +362,7 @@
 
     - id: workplace_perks
       template: multipleWithOther
+      doNotCorrelateWith: [workplace_difficulties]
       options:
         - id: coworker_relations
         - id: company_culture
@@ -375,6 +376,7 @@
 
     - id: workplace_difficulties
       template: multipleWithOther
+      doNotCorrelateWith: [workplace_perks]
       options:
         - id: coworker_relations
         - id: company_culture
@@ -409,11 +411,13 @@
     - id: keyboard
       yearAdded: 2026
       template: text
+      autoAddParentTokens: true
 
     - id: monitors
       yearAdded: 2026
       template: single
       optionsAreNumeric: true
+      optionsAreSequential: true
       options:
         - id: 0
         - id: 1
@@ -459,9 +463,13 @@
       optionsAreNumeric: true
       options:
         - id: 0
+          value: 1
         - id: 1
+          value: 2
         - id: 2
+          value: 3
         - id: 3
+          value: 4
 
     - id: ai_mental_state
       yearAdded: 2026
@@ -769,10 +777,15 @@
       optionsAreNumeric: true
       options:
         - id: 0
+          value: 1
         - id: 1
+          value: 2
         - id: 2
+          value: 3
         - id: 3
+          value: 4
         - id: 4
+          value: 5
 
     - id: workers_union
       yearAdded: 2026
@@ -794,15 +807,35 @@
       randomize: true
       options:
         - id: overwhelmed
+          tags:
+            - negative
         - id: disillusioned
+          tags:
+            - negative
         - id: angry
+          tags:
+            - negative
         - id: exhausted
+          tags:
+            - negative
         - id: anxious
+          tags:
+            - negative
         - id: excited
+          tags:
+            - positive
         - id: curious
+          tags:
+            - positive
         - id: hopeful
+          tags:
+            - positive
         - id: engaged
+          tags:
+            - positive
         - id: motivated
+          tags:
+            - positive
 
     # - id: policies_statements
     #   template: likert
@@ -895,6 +928,8 @@
     - id: hobbies
       template: multipleWithOther
       randomize: true
+      doNotCorrelateWith:
+        [video_game_platforms, physical_activity, physical_activity_frequency]
       options:
         - id: woodworking
         - id: table_top_gaming
@@ -1128,10 +1163,15 @@
       yearAdded: 2026
       options:
         - id: 0
+          value: 1
         - id: 1
+          value: 2
         - id: 2
+          value: 3
         - id: 3
+          value: 4
         - id: 4
+          value: 5
 
     - id: did_you_run_into_technical_issues
       template: textList
