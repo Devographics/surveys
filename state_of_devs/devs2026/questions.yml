@@ -492,6 +492,24 @@
       template: longtext
       disableRegexMatching: true
       matchTags: [ai_risks, ai_uses]
+      # guidance for LLM coding of answers against this question's codebook
+      instructions: |-
+        The codebook combines three kinds of codes:
+        - Stances: the respondent's overall attitude toward AI, under anti_ai_sentiment, pro_ai_sentiment, and neutral_ai_sentiment. This is where subjective or abstract statements belong, such as "AI is the future", "I hate AI", or "I haven't made up my mind yet".
+        - Risks: concrete negative risks, impacts, and externalities of AI, such as job displacement, environmental impact, or low-quality output.
+        - Uses: concrete things developers use AI for, such as code assistance, brainstorming, or image generation.
+
+        Stances and concrete risks or uses are complementary: code both when an answer contains both. Assign a stance code only when the respondent expresses an overall attitude, explicitly or unmistakably; mentioning a risk or a use does not by itself imply a stance. Within each hierarchy, prefer the most specific code that fits, and fall back to anti_ai_sentiment, pro_ai_sentiment, or neutral_ai_sentiment when no stance child does.
+
+        Most answers need 1-3 codes; longer answers that raise several distinct points may need more.
+
+        Special cases:
+        - "invalid": nonsense, spam, or off-topic answers. It must be the only code.
+        - Leave the list empty for answers with nothing substantive to add, such as "no", "nothing", or "n/a".
+
+        Examples:
+        - "It makes me want to leave the industry and do something worthwhile with my life." → ["career_change_consideration", "anti_ai_sentiment"]
+        - "I still feel like I haven't really fully embraced AI; as wonderful as it seems I haven't really had the mental bandwidth to do it." → ["still_learning_navigating"]
 
 # - id: technology
 #   questions:
@@ -1069,6 +1087,7 @@
       yearAdded: 2026
       template: country
 
+    # TODO 2027: "migration experience: yes" is confusing, makes it sounds like you did immigrate when it means the opposuite
     - id: migration_experience
       yearAdded: 2026
       template: singleWithOther
