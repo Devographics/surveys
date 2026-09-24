@@ -11,7 +11,7 @@
     #   sectionSlug: user_info
     #   template: higher_education_degree
 
-    # todo 2027: remove?
+    # todo 2027: remove? (too confounded by age)
     - id: how_many_jobs
       template: number
       groups:
@@ -147,6 +147,7 @@
         - id: yes_before
         - id: no
 
+    # TODO 2027: maybe don't need both job and career security questions?
     - id: job_security
       yearAdded: 2026
       template: single
@@ -163,6 +164,7 @@
         - id: 4
           value: 5
 
+    # TODO 2027: maybe don't need both job and career security questions?
     - id: career_security
       yearAdded: 2026
       template: single
@@ -1083,6 +1085,7 @@
     - id: country
       template: country
 
+    # TODO 2027: remove (low correlations)
     - id: country_of_origin
       yearAdded: 2026
       template: country
@@ -1097,12 +1100,14 @@
         - id: different_country
         - id: different_country_immigrant_parents
 
+    # TODO 2027: remove (low correlations)
     - id: native_languages
       yearAdded: 2026
       template: textList
       matchTags: [spoken_languages]
       doNotCorrelateWith: [other_languages, locale]
 
+    # TODO 2027: remove (low correlations)
     - id: other_languages
       yearAdded: 2026
       template: textList
@@ -1124,6 +1129,7 @@
     - id: race_ethnicity
       template: race_ethnicity
 
+    # TODO 2027: remove (low correlations)
     - id: number_of_kids
       template: number
       optionsAreSequential: true
