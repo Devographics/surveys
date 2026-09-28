@@ -1,6 +1,7 @@
 - id: career
   questions:
     - id: years_of_experience
+      doNotCorrelateWith: [age]
       intlId: user_info.years_of_experience
       sectionSlug: user_info
       template: years
@@ -111,6 +112,7 @@
         - id: appearance_body
         - id: na
 
+    # todo 2027: remove? too correlated with issues
     - id: negative_impacts
       template: multipleWithOther
       showCommentInput: true
@@ -410,11 +412,13 @@
     # - id: how_much_can_you_be_yourself_at_work
     #   template: slider
 
+    # todo 2027: remove? probably no need to ask again
     - id: keyboard
       yearAdded: 2026
       template: text
       autoAddParentTokens: true
 
+    # todo 2027: remove? probably no need to ask again
     - id: monitors
       yearAdded: 2026
       template: single
@@ -473,6 +477,12 @@
         - id: 3
           value: 4
 
+    # todo 2027: add question about AI productivity impact
+    #
+    #
+    #
+    # todo 2027: should we rephrase that to ask if the impact is
+    # positive or negative? or keep the same for continuity?
     - id: ai_mental_state
       yearAdded: 2026
       template: opinion
@@ -669,6 +679,7 @@
 - id: health
   questions:
     - id: age
+      doNotCorrelateWith: [years_of_experience]
       template: age_number
       sectionSlug: user_info
       intlId: user_info.age
@@ -699,6 +710,7 @@
         - id: headaches
         - id: na
 
+    # todo 2027: remove? probably won't change, not correlate with much else
     - id: sleep_quantity
       template: single
       optionsAreRange: true
@@ -807,6 +819,7 @@
         - id: 4
           value: 5
 
+    # todo 2027: remove? probably won't change compared to 2026
     - id: workers_union
       yearAdded: 2026
       template: single
@@ -923,6 +936,7 @@
         - id: living_environment
         - id: religion_spirituality
 
+    # todo 2027: remove? probably won't change compared to 2026
     - id: relocation
       template: textList
       matchTags: [countries]
@@ -973,6 +987,7 @@
     #     - id: few_times_per_week
     #     - id: every_day
 
+    # todo 2027: remove?
     - id: physical_activity
       matchTags: [hobbies]
       template: multipleWithOther
@@ -1037,6 +1052,7 @@
     #   template: textList
     #   matchTags: [tv]
 
+    # todo 2027: remove?
     - id: favorite_beverages
       yearAdded: 2026
       matchTags: [drinks]
