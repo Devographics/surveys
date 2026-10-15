@@ -12,198 +12,15 @@
   slug: features
   messageId: features.features_intro
   questions:
-    # - id: features_intro
-    #   template: help
-
-    # removed in 2021
-    # - id: async_await
-    # - id: promises
-    # - id: decorators
-    # - id: destructuring
-    # - id: spread_operator
-    # - id: arrow_functions
-
-    # - id: proxies # removed in 2023, stable trend
-    # - id: promise_all_settled
-    # - id: dynamic_import
-    # - id: nullish_coalescing
-    # - id: optional_chaining # removed in 2022, too popular
-    # - id: private_fields
-    # - id: big_int # removed in 2022
-
-    # new in 2021
-    # - id: numeric_separators # removed in 2023
-    #   yearAdded: 2021
-    # - id: string_replace_all
-    #   yearAdded: 2021
-    # - id: string_match_all
-    #   yearAdded: 2021
-    # - id: logical_assignment
-    #   yearAdded: 2021
-    # - id: promise_any
-    #   yearAdded: 2021
-    # - id: array_at # removed in 2023
-    #   yearAdded: 2021
-    # - id: top_level_await
-    #   yearAdded: 2021
-
-    # new in 2022
-    # - id: array_findlast
-    #   yearAdded: 2022
-    # - id: error_cause
-    #   yearAdded: 2022
-    # - id: object_hasown
-    #   yearAdded: 2022
-    # - id: regexp_match_indices
-    #   yearAdded: 2022
-
-    # - id: hashbang_grammar
-    #   yearAdded: 2023
-
-    - id: syntax_features
-      template: multiple
-      countsTowardScore: true
-      options:
-        - id: dynamic_import
-        - id: nullish_coalescing
-        - id: private_fields
-        - id: logical_assignment
-        - id: error_cause
-        - id: hashbang_grammar
-          yearAdded: 2023
-        - id: js_iterator_methods
-          yearAdded: 2025
-        # - id: structured_clone # too old?
-        #   yearAdded: 2025
-        - id: regexp_escape
-          yearAdded: 2025
-        - id: js_float16_arrays
-          yearAdded: 2025
-        - id: na
-
-    - id: string_features
-      template: multiple
-      countsTowardScore: true
-      options:
-        - id: string_replace_all
-        - id: string_match_all
-        - id: regexp_match_indices
-        - id: na
-
-    - id: array_features
-      template: multiple
-      countsTowardScore: true
-      options:
-        - id: array_findlast
-        - id: array_to_sorted
-        - id: array_to_reversed
-        - id: array_with
-        - id: array_to_spliced
-        - id: array_from_async
-          yearAdded: 2024
-        - id: na
-
-    - id: set_features
-      template: multiple
-      countsTowardScore: true
-      yearAdded: 2024
-      options:
-        - id: set_intersection
-          yearAdded: 2024
-        - id: set_union
-          yearAdded: 2024
-        - id: set_difference
-          yearAdded: 2024
-        - id: set_symmetric_difference
-          yearAdded: 2024
-        - id: set_is_subset_of
-          yearAdded: 2024
-        - id: set_is_superset_of
-          yearAdded: 2024
-        - id: set_is_disjoint_from
-          yearAdded: 2024
-        - id: na
-
-    - id: object_features
-      template: multiple
-      countsTowardScore: true
-      yearAdded: 2024
-      options:
-        - id: object_group_by
-          yearAdded: 2024
-        - id: na
-
-    - id: async_features
-      template: multiple
-      countsTowardScore: true
-      options:
-        # - id: top_level_await # removed in 2024
-        - id: promise_all_settled
-        - id: promise_any
-        - id: promise_try
-          yearAdded: 2024
-        - id: na
-
-    - id: browser_api_features
-      template: multiple
-      countsTowardScore: true
-      options:
-        - id: webgl
-        - id: web_animations
-        - id: webrtc
-        - id: web_speech
-        - id: websocket
-        - id: page_visibility
-          yearAdded: 2021
-        - id: broadcast_channel
-          yearAdded: 2021
-        - id: geolocation
-          yearAdded: 2021
-        - id: webxr
-          yearAdded: 2021
-
-        - id: temporal
-          yearAdded: 2022
-        - id: gamepad_api
-          yearAdded: 2024
-        - id: web_authentication_api
-          yearAdded: 2024
-
-        - id: urlpattern
-          yearAdded: 2025
-        - id: scheduler_api
-          yearAdded: 2025
-
-        - id: pwas
-        - id: wasm
-        - id: na
-
-    - id: language_pain_points
-      template: textList
-      matchTags:
-        - common_pain_points
-        - js_pain_points
-        - js_features
-        - html_features
-
-    - id: browser_apis_pain_points
-      template: textList
-      matchTags:
-        - common_pain_points
-        - js_pain_points
-        - js_features
-        - html_features
-        - browsers
-        - companies
-        - os
-
     - id: js_new_features
       yearAdded: 2024
       template: multipleWithOther
-      limit: 3
+      limit: 5
       matchTags: [js_features, js_missing_features]
       options:
         - id: temporal
+        - id: js_iterator_methods
+          yearAdded: 2026
         - id: js_decorators
         # - id: array_from_async
         - id: js_explicit_resource_management
@@ -219,6 +36,12 @@
         # - id: js_float16_arrays # now available in 2025
         - id: js_get_or_insert
           yearAdded: 2025
+        - id: js_pipeline_operator
+          yearAdded: 2026
+        - id: js_signals
+          yearAdded: 2026
+        - id: js_async_context
+          yearAdded: 2026
         - id: na
 
     - id: top_currently_missing_from_js
@@ -255,35 +78,45 @@
           yearAdded: 2025
         - id: na
 
-    - id: native_types_proposal
-      yearAdded: 2024
-      template: singleWithOther
-      options:
-        - id: runtime_types
-        - id: type_annotations
-        - id: jsdoc_types
-        - id: no_types
+    - id: browser_apis_pain_points
+      disableRegexMatching: true
+      template: textList
+      matchTags:
+        - common_pain_points
+        - js_pain_points
+        - js_features
+        - html_features
+        - browsers
+        - companies
+        - os
 
-    - id: js_pace_of_change
-      template: single
-      optionsAreNumeric: true
-      yearAdded: 2025
-      options:
-        - id: 1
-        - id: 2
-        - id: 3
-        - id: 4
-        - id: 5
+    - id: language_pain_points
+      disableRegexMatching: true
+      template: textList
+      matchTags:
+        - common_pain_points
+        - js_pain_points
+        - js_features
+        - html_features
+    # - id: native_types_proposal
+    #   yearAdded: 2024
+    #   template: singleWithOther
+    #   options:
+    #     - id: runtime_types
+    #     - id: type_annotations
+    #     - id: jsdoc_types
+    #     - id: no_types
 
-    # new in 2023
-    # - id: array_to_sorted
-    #   yearAdded: 2023
-    # - id: array_to_reversed
-    #   yearAdded: 2023
-    # - id: array_with
-    #   yearAdded: 2023
-    # - id: array_to_spliced
-    #   yearAdded: 2023
+    # - id: js_pace_of_change
+    #   template: single
+    #   optionsAreNumeric: true
+    #   yearAdded: 2025
+    #   options:
+    #     - id: 1
+    #     - id: 2
+    #     - id: 3
+    #     - id: 4
+    #     - id: 5
 
 # removed in 2021
 # - id: data_structures
@@ -393,10 +226,10 @@
     # - id: stimulus # removed in 2022, too niche?
     - id: solid
       yearAdded: 2021
-    - id: qwik
-      yearAdded: 2022
-    - id: stencil
-      yearAdded: 2022
+    # - id: qwik # removed in 2026
+    #   yearAdded: 2022
+    # - id: stencil # removed in 2026
+    #   yearAdded: 2022
     - id: htmx
       yearAdded: 2023
     # - id: enhance # too new to add in 2023?
@@ -428,6 +261,7 @@
       template: happiness
 
     - id: front_end_frameworks_pain_points
+      disableRegexMatching: true
       template: textList
       matchTags:
         - companies
@@ -473,7 +307,7 @@
   questions:
     - id: nextjs
     - id: nuxt
-    - id: gatsby
+    # - id: gatsby # removed in 2026
 
     # new in 2021
     - id: remix
@@ -528,6 +362,7 @@
       template: happiness
 
     - id: meta_frameworks_pain_points
+      disableRegexMatching: true
       template: textList
       matchTags:
         - companies
@@ -553,13 +388,17 @@
     - id: fastify
     - id: strapi
     - id: hono
-    - id: koa
+    # - id: koa # removed in 2026
     - id: elysia
     - id: adonis
-    - id: hapi
+    # - id: hapi # removed in 2026
     - id: directus
     - id: trpc
     - id: nitro
+    - id: h3
+      yearAdded: 2026
+    - id: orpc
+      yearAdded: 2026
 
     - id: back_end_frameworks_others
       intlId: tools.other_tools
@@ -588,6 +427,7 @@
       template: happiness
 
     - id: back_end_frameworks_pain_points
+      disableRegexMatching: true
       template: textList
       matchTags:
         - companies
@@ -607,7 +447,7 @@
   slug: tools
   questions:
     - id: jest
-    - id: mocha
+    # - id: mocha # removed in 2026
     - id: storybook
     - id: cypress
     # - id: ava # removed in 2023
@@ -615,19 +455,21 @@
     - id: puppeteer
     - id: testing_library
     - id: playwright
-    - id: webdriverio
+    # - id: webdriverio # removed in 2026
     - id: vitest
       yearAdded: 2021
     - id: selenium
       yearAdded: 2022
-    - id: testcafe
-      yearAdded: 2022
+    # - id: testcafe # removed in 2026
+    #   yearAdded: 2022
     - id: mock_service_worker
       yearAdded: 2023
     - id: node_test_runner
       yearAdded: 2024
     - id: bun_test
       yearAdded: 2025
+    - id: deno_test_runner
+      yearAdded: 2026
 
     - id: testing_others
       intlId: tools.other_tools
@@ -657,6 +499,7 @@
       template: happiness
 
     - id: testing_pain_points
+      disableRegexMatching: true
       template: textList
       disallowedTokenIds: [testing]
       matchTags:
@@ -795,6 +638,8 @@
       yearAdded: 2024
     - id: bun
       yearAdded: 2025
+    - id: deno
+      yearAdded: 2026
 
     - id: build_tools_others
       intlId: tools.other_tools
@@ -823,6 +668,7 @@
       template: happiness
 
     - id: build_tools_pain_points
+      disableRegexMatching: true
       template: textList
       disallowedTokenIds: [build_tools]
       matchTags:
@@ -921,6 +767,8 @@
           yearAdded: 2023
         - id: valibot
           yearAdded: 2025
+        - id: effect_ts
+          yearAdded: 2026
         - id: na
       matchTags: [libraries, services]
 
@@ -962,6 +810,10 @@
           yearAdded: 2024
         - id: chart_js
           yearAdded: 2025
+        - id: echarts
+          yearAdded: 2026
+        - id: highcharts
+          yearAdded: 2026
         - id: na
 
     # - id: data_fetching
@@ -1022,6 +874,16 @@
         - id: "n"
         - id: biome
           yearAdded: 2025
+        - id: oxlint
+          yearAdded: 2026
+        - id: oxfmt
+          yearAdded: 2026
+        - id: volta
+          yearAdded: 2026
+        - id: fnm
+          yearAdded: 2026
+        - id: vite_plus
+          yearAdded: 2026
 
     - id: runtimes
       template: multipleWithOtherSentiment
@@ -1101,87 +963,101 @@
         - id: windsurf
         - id: zed
 
-    - id: ai_tools
+    # TODO 2027
+    - id: web_components_usage
       template: multipleWithOtherSentiment
-      order: random
+      matchTags: [ai_tools]
       options:
-        - id: copilot
-        - id: chat_gpt
-        - id: gemini
-        - id: claude
-        - id: deepseek
-        - id: perplexity
+        - id: vs_code
+        - id: sublime_text
+        - id: vim
+        - id: emacs
+        - id: webstorm
         - id: cursor
-        - id: tabnine
-        - id: jetbrains_ai
-        - id: v0
-        - id: bolt
-        - id: na
+        - id: windsurf
+        - id: zed
 
-    - id: mobile_desktop
-      template: multipleWithOtherSentiment
-      matchTags: [libraries]
-      order: random
-      options:
-        - id: electron
-        - id: reactnative
-        - id: cordova
-        - id: ionic
-        - id: capacitor
-        - id: nwjs
-        - id: expo
-        - id: tauri
-        - id: nativescript
-        - id: na
+    # - id: ai_tools
+    #   template: multipleWithOtherSentiment
+    #   order: random
+    #   options:
+    #     - id: copilot
+    #     - id: chat_gpt
+    #     - id: gemini
+    #     - id: claude
+    #     - id: deepseek
+    #     - id: perplexity
+    #     - id: cursor
+    #     - id: tabnine
+    #     - id: jetbrains_ai
+    #     - id: v0
+    #     - id: bolt
+    #     - id: na
 
-    - id: monorepo_tools
-      template: multipleWithOtherSentiment
-      matchTags: [libraries]
-      order: random
-      options:
-        - id: rush
-        - id: turborepo
-        - id: yarn_workspaces
-        - id: yalc
-        - id: lerna
-        - id: npm_workspaces
-        - id: pnpm
-        - id: nx
-        - id: bun_install
-        - id: na
+    # - id: mobile_desktop
+    #   template: multipleWithOtherSentiment
+    #   matchTags: [libraries]
+    #   order: random
+    #   options:
+    #     - id: electron
+    #     - id: reactnative
+    #     - id: cordova
+    #     - id: ionic
+    #     - id: capacitor
+    #     - id: nwjs
+    #     - id: expo
+    #     - id: tauri
+    #     - id: nativescript
+    #     - id: na
 
-    - id: non_js_languages
-      template: multipleWithOtherSentiment
-      matchTags: [languages]
-      options:
-        - id: php
-        - id: ruby
-        - id: python
-        - id: golang
-        - id: rust
-        - id: java
-        - id: c_cplusplus
-        - id: objective_c
-        - id: scala
-        - id: swift
-        - id: csharp
-        - id: haskell
-        - id: ocaml
-        - id: dart
-        - id: kotlin
-        - id: elixir
-        - id: bash
-        - id: clojure
-        - id: elm
-        - id: julia
-        - id: lua
-          yearAdded: 2025
-        - id: na
+    # - id: monorepo_tools
+    #   template: multipleWithOtherSentiment
+    #   matchTags: [libraries]
+    #   order: random
+    #   options:
+    #     - id: rush
+    #     - id: turborepo
+    #     - id: yarn_workspaces
+    #     - id: yalc
+    #     - id: lerna
+    #     - id: npm_workspaces
+    #     - id: pnpm
+    #     - id: nx
+    #     - id: bun_install
+    #     - id: na
 
-    - id: non_js_languages_features
-      yearAdded: 2025
-      matchTags: [languages, js_missing_features]
-      template: textList
+    # - id: non_js_languages
+    #   template: multipleWithOtherSentiment
+    #   matchTags: [languages]
+    #   options:
+    #     - id: php
+    #     - id: ruby
+    #     - id: python
+    #     - id: golang
+    #     - id: rust
+    #     - id: java
+    #     - id: c_cplusplus
+    #     - id: objective_c
+    #     - id: scala
+    #     - id: swift
+    #     - id: csharp
+    #     - id: haskell
+    #     - id: ocaml
+    #     - id: dart
+    #     - id: kotlin
+    #     - id: elixir
+    #     - id: bash
+    #     - id: clojure
+    #     - id: elm
+    #     - id: julia
+    #     - id: lua
+    #       yearAdded: 2025
+    #     - id: na
+
+    # - id: non_js_languages_features
+    #   yearAdded: 2025
+    #   matchTags: [languages, js_missing_features]
+    #   template: textList
 
     # - id: performance_testing
     #   template: multiple
@@ -1273,6 +1149,33 @@
     #     - id: accessibility_features # does it implement accessibility features well?
     #     - id: community_inclusivity # does it have a good community?
 
+- id: ai_usage
+  slug: ai_usage
+  questions:
+    - id: ai_generated_code_balance
+      yearAdded: 2024
+      template: slider
+
+    - id: ai_generated_code_reviewed_balance
+      yearAdded: 2024
+      template: slider
+
+    - id: ai_tools
+      template: multipleWithOtherSentiment
+      order: random
+      options:
+        - id: copilot
+        - id: openai_codex
+        - id: gemini
+        - id: claude_code
+        - id: deepseek
+        - id: coderabbit
+        - id: cursor
+        - id: opencode
+        - id: jetbrains_ai
+        - id: windsurf
+        - id: na
+
 ######################################################
 #########                USAGE               #########
 ######################################################
@@ -1280,42 +1183,38 @@
 - id: usage
   slug: usage
   questions:
-    - id: js_ts_balance
-      yearAdded: 2022
-      template: slider
+    # - id: js_ts_balance
+    #   yearAdded: 2022
+    #   template: slider
 
-    - id: compiled_code_balance
-      yearAdded: 2024
-      template: slider
+    # - id: compiled_code_balance
+    #   yearAdded: 2024
+    #   template: slider
 
-    - id: build_step_advantages
-      template: multipleWithOther
-      yearAdded: 2025
-      limit: 3
-      options:
-        - id: types
-        - id: developer_experience
-        - id: transpilation
-        - id: bundling
-        - id: optimization
-        - id: compatibility
-        - id: assets
-        - id: linting
-        - id: environment_support
+    # - id: build_step_advantages
+    #   template: multipleWithOther
+    #   yearAdded: 2025
+    #   limit: 3
+    #   options:
+    #     - id: types
+    #     - id: developer_experience
+    #     - id: transpilation
+    #     - id: bundling
+    #     - id: optimization
+    #     - id: compatibility
+    #     - id: assets
+    #     - id: linting
+    #     - id: environment_support
 
-    - id: ai_generated_code_balance
-      yearAdded: 2024
-      template: slider
-
-      # template: singleWithOther
-      # options:
-      #   - id: range_0
-      #   - id: range_0_25
-      #   - id: range_25_50
-      #   - id: range_50
-      #   - id: range_50_75
-      #   - id: range_75_100
-      #   - id: range_100
+    # template: singleWithOther
+    # options:
+    #   - id: range_0
+    #   - id: range_0_25
+    #   - id: range_25_50
+    #   - id: range_50
+    #   - id: range_50_75
+    #   - id: range_75_100
+    #   - id: range_100
 
     # - id: usage_type # removed in 2025
     #   yearAdded: 2022
@@ -1325,52 +1224,52 @@
     #     - id: student
     #     - id: hobby
 
-    - id: what_do_you_use_js_for
-      yearAdded: 2022
-      template: multipleWithOther
-      matchTags: [js_uses]
-      options:
-        - id: frontend_development
-        - id: backend_development
-        - id: data_analysis
-        - id: machine_learning
-        - id: desktop_apps
-        - id: mobile_apps
-        - id: embedded_apps
-        - id: game_development
-        - id: data_visualization
-        - id: graphics_animation
+    # - id: what_do_you_use_js_for
+    #   yearAdded: 2022
+    #   template: multipleWithOther
+    #   matchTags: [js_uses]
+    #   options:
+    #     - id: frontend_development
+    #     - id: backend_development
+    #     - id: data_analysis
+    #     - id: machine_learning
+    #     - id: desktop_apps
+    #     - id: mobile_apps
+    #     - id: embedded_apps
+    #     - id: game_development
+    #     - id: data_visualization
+    #     - id: graphics_animation
 
-    - id: industry_sector
-      intlId: usage.industry_sector_js
-      template: multipleWithOther
-      matchTags: [industry_sectors]
-      options:
-        # - id: agriculture
-        # - id: automotive
-        # - id: construction
-        - id: consulting #
-        - id: cyber_security
-        - id: ecommerce #
-        - id: education #
-        # - id: energy
-        - id: entertainment #
-        - id: finance #
-        - id: government #
-        - id: healthcare #
-        # - id: hospitality
-        # - id: insurance
-        # - id: logistics
-        # - id: manufacturing
-        - id: marketing_tools #
-        - id: news_media #
-        - id: programming_tools #
-        # - id: real_estate
-        - id: socialmedia #
-        # - id: student
-        # - id: telecommunications
-        # - id: transport
-        # - id: travel
+    # - id: industry_sector
+    #   intlId: usage.industry_sector_js
+    #   template: multipleWithOther
+    #   matchTags: [industry_sectors]
+    #   options:
+    #     # - id: agriculture
+    #     # - id: automotive
+    #     # - id: construction
+    #     - id: consulting #
+    #     - id: cyber_security
+    #     - id: ecommerce #
+    #     - id: education #
+    #     # - id: energy
+    #     - id: entertainment #
+    #     - id: finance #
+    #     - id: government #
+    #     - id: healthcare #
+    #     # - id: hospitality
+    #     # - id: insurance
+    #     # - id: logistics
+    #     # - id: manufacturing
+    #     - id: marketing_tools #
+    #     - id: news_media #
+    #     - id: programming_tools #
+    #     # - id: real_estate
+    #     - id: socialmedia #
+    #     # - id: student
+    #     # - id: telecommunications
+    #     # - id: transport
+    #     # - id: travel
 
     - id: js_app_patterns
       yearAdded: 2022
@@ -1591,7 +1490,7 @@
           yearAdded: 2025
         - id: vue_school
           yearAdded: 2025
-        - id: midudev
+        - id: miguel_angel_duran
           yearAdded: 2025
         - id: devtalles
           yearAdded: 2025
@@ -1766,9 +1665,11 @@
   questions:
     - id: age
       template: age_number
+      doNotCorrelateWith: [years_of_experience]
 
     - id: years_of_experience
       template: years
+      doNotCorrelateWith: [age]
 
     - id: company_size
       template: company_size
@@ -1776,11 +1677,67 @@
     - id: job_title
       template: text
 
+    - id: work_areas
+      template: multipleWithOther
+      yearAdded: 2026
+      options:
+        - id: front_end_js
+          group: web_dev
+        - id: front_end_css
+          group: web_dev
+        - id: back_end
+          group: web_dev
+        - id: accessibility
+          group: web_dev
+
+        - id: mobile
+          group: native_dev
+        - id: desktop
+          group: native_dev
+        - id: embedded_software
+          group: native_dev
+        - id: game_development
+          group: native_dev
+
+        - id: devops
+          group: infrastructure
+        - id: cloud
+          group: infrastructure
+        - id: sre
+          group: infrastructure
+        - id: platform_engineering
+          group: infrastructure
+
+        - id: data_engineering
+          group: data_ai
+        - id: ai_llm
+          group: data_ai
+        - id: machine_learning
+          group: data_ai
+
+        - id: people_management
+          group: management
+        - id: technical_leadership
+          group: management
+        - id: project_management
+          group: management
+        - id: product_management
+          group: management
+        - id: hiring_interviewing
+          group: management
+
+        - id: qa_testing
+        - id: security
+        - id: systems_design
+        - id: devrel
+        - id: tooling
+
     - id: yearly_salary
       template: yearly_salary_v2
 
-    - id: higher_education_degree
-      template: higher_education_degree
+    # removed in 2026
+    # - id: higher_education_degree
+    #   template: higher_education_degree
 
     - id: country
       template: country
@@ -1791,9 +1748,10 @@
     - id: race_ethnicity
       template: race_ethnicity
 
-    - id: disability_status
-      template: disability_status2
-      matchTags: [disabilities]
+    # removed in 2026
+    # - id: disability_status
+    #   template: disability_status2
+    #   matchTags: [disabilities]
 
     - id: why_did_you_take_the_survey
       template: multipleWithOther
