@@ -10,6 +10,41 @@ query {
                 count
               }
             }
+            _correlations {
+              questionCorrelations {
+                kind1
+                kind2
+                questionId1
+                sectionId1
+                optionId1
+                questionId2
+                sectionId2
+                optionId2
+                n
+                correlation
+                sameSection
+                strength
+                direction
+              }
+              optionCorrelations {
+                id
+                correlations {
+                  kind1
+                  kind2
+                  questionId1
+                  sectionId1
+                  optionId1
+                  questionId2
+                  sectionId2
+                  optionId2
+                  n
+                  correlation
+                  sameSection
+                  strength
+                  direction
+                }
+              }
+            }
             combined(
               filters: {
                 _user_metadata__os: {
@@ -36,6 +71,16 @@ query {
                   limit
                   cutoff
                 }
+                _cardinalities {
+                  buckets {
+                    answerCount
+                    count
+                    percentage
+                  }
+                  max
+                  mean
+                  n
+                }
                 editionId
                 year
                 completion {
@@ -48,8 +93,8 @@ query {
                   p50
                 }
                 buckets {
-                  count
                   id
+                  count
                   value
                   index
                   percentageQuestion
@@ -61,12 +106,14 @@ query {
                     nameHtml
                     nameClean
                     alias
+                    author
                     description
                     descriptionHtml
                     descriptionClean
                     id
                     parentId
                     entityType
+                    tags
                     example {
                       label
                       language
@@ -77,6 +124,15 @@ query {
                       url
                     }
                     homepage {
+                      url
+                    }
+                    amazon {
+                      url
+                    }
+                    wikipedia {
+                      url
+                    }
+                    steam {
                       url
                     }
                     youtube {
@@ -142,8 +198,8 @@ query {
                     }
                   }
                   groupedBuckets {
-                    count
                     id
+                    count
                     value
                     index
                     percentageQuestion
@@ -155,12 +211,14 @@ query {
                       nameHtml
                       nameClean
                       alias
+                      author
                       description
                       descriptionHtml
                       descriptionClean
                       id
                       parentId
                       entityType
+                      tags
                       example {
                         label
                         language
@@ -171,6 +229,15 @@ query {
                         url
                       }
                       homepage {
+                        url
+                      }
+                      amazon {
+                        url
+                      }
+                      wikipedia {
+                        url
+                      }
+                      steam {
                         url
                       }
                       youtube {
@@ -247,6 +314,41 @@ query {
                 count
               }
             }
+            _correlations {
+              questionCorrelations {
+                kind1
+                kind2
+                questionId1
+                sectionId1
+                optionId1
+                questionId2
+                sectionId2
+                optionId2
+                n
+                correlation
+                sameSection
+                strength
+                direction
+              }
+              optionCorrelations {
+                id
+                correlations {
+                  kind1
+                  kind2
+                  questionId1
+                  sectionId1
+                  optionId1
+                  questionId2
+                  sectionId2
+                  optionId2
+                  n
+                  correlation
+                  sameSection
+                  strength
+                  direction
+                }
+              }
+            }
             combined(
               filters: {
                 _user_metadata__os: {
@@ -273,6 +375,16 @@ query {
                   limit
                   cutoff
                 }
+                _cardinalities {
+                  buckets {
+                    answerCount
+                    count
+                    percentage
+                  }
+                  max
+                  mean
+                  n
+                }
                 editionId
                 year
                 completion {
@@ -285,8 +397,8 @@ query {
                   p50
                 }
                 buckets {
-                  count
                   id
+                  count
                   value
                   index
                   percentageQuestion
@@ -298,12 +410,14 @@ query {
                     nameHtml
                     nameClean
                     alias
+                    author
                     description
                     descriptionHtml
                     descriptionClean
                     id
                     parentId
                     entityType
+                    tags
                     example {
                       label
                       language
@@ -314,6 +428,15 @@ query {
                       url
                     }
                     homepage {
+                      url
+                    }
+                    amazon {
+                      url
+                    }
+                    wikipedia {
+                      url
+                    }
+                    steam {
                       url
                     }
                     youtube {
@@ -379,8 +502,8 @@ query {
                     }
                   }
                   groupedBuckets {
-                    count
                     id
+                    count
                     value
                     index
                     percentageQuestion
@@ -392,12 +515,14 @@ query {
                       nameHtml
                       nameClean
                       alias
+                      author
                       description
                       descriptionHtml
                       descriptionClean
                       id
                       parentId
                       entityType
+                      tags
                       example {
                         label
                         language
@@ -408,6 +533,15 @@ query {
                         url
                       }
                       homepage {
+                        url
+                      }
+                      amazon {
+                        url
+                      }
+                      wikipedia {
+                        url
+                      }
+                      steam {
                         url
                       }
                       youtube {
