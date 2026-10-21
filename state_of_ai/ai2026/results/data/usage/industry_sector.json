@@ -11,6 +11,44 @@
                   "count": 7
                 }
               },
+              "_correlations": {
+                "questionCorrelations": [
+                  {
+                    "kind1": "cardinality",
+                    "kind2": "question",
+                    "questionId1": "industry_sector",
+                    "sectionId1": "usage",
+                    "questionId2": "company_size",
+                    "sectionId2": "user_info",
+                    "n": 5688,
+                    "correlation": -0.1602,
+                    "sameSection": false,
+                    "strength": "moderate",
+                    "direction": "negative"
+                  }
+                ],
+                "optionCorrelations": [
+                  {
+                    "id": "programming_tools",
+                    "correlations": [
+                      {
+                        "kind1": "option",
+                        "kind2": "question",
+                        "questionId1": "industry_sector",
+                        "sectionId1": "usage",
+                        "optionId1": "programming_tools",
+                        "questionId2": "company_size",
+                        "sectionId2": "user_info",
+                        "n": 5688,
+                        "correlation": -0.1795,
+                        "sameSection": false,
+                        "strength": "moderate",
+                        "direction": "negative"
+                      }
+                    ]
+                  }
+                ]
+              },
               "combined": {
                 "allEditions": [
                   {
@@ -22,6 +60,68 @@
                       "limit": 20,
                       "cutoff": 10
                     },
+                    "_cardinalities": {
+                      "buckets": [
+                        {
+                          "answerCount": 1,
+                          "count": 2276,
+                          "percentage": 69.645
+                        },
+                        {
+                          "answerCount": 2,
+                          "count": 682,
+                          "percentage": 20.869
+                        },
+                        {
+                          "answerCount": 3,
+                          "count": 204,
+                          "percentage": 6.2424
+                        },
+                        {
+                          "answerCount": 4,
+                          "count": 69,
+                          "percentage": 2.1114
+                        },
+                        {
+                          "answerCount": 5,
+                          "count": 24,
+                          "percentage": 0.7344
+                        },
+                        {
+                          "answerCount": 6,
+                          "count": 5,
+                          "percentage": 0.153
+                        },
+                        {
+                          "answerCount": 7,
+                          "count": 1,
+                          "percentage": 0.0306
+                        },
+                        {
+                          "answerCount": 8,
+                          "count": 1,
+                          "percentage": 0.0306
+                        },
+                        {
+                          "answerCount": 9,
+                          "count": 3,
+                          "percentage": 0.0918
+                        },
+                        {
+                          "answerCount": 11,
+                          "count": 1,
+                          "percentage": 0.0306
+                        },
+                        {
+                          "answerCount": 12,
+                          "count": 2,
+                          "percentage": 0.0612
+                        }
+                      ],
+                      "max": 12,
+                      "mean": 1.455,
+                      "n": 3268
+                    },
                     "editionId": "ai2025",
                     "year": 2025,
                     "completion": {
@@ -31,128 +131,155 @@
                     },
                     "buckets": [
                       {
-                        "count": 1565,
                         "id": "programming_tools",
+                        "count": 1565,
                         "index": 0,
                         "percentageQuestion": 51.58,
                         "percentageSurvey": 37.43
                       },
                       {
-                        "count": 738,
                         "id": "consulting",
+                        "count": 738,
                         "index": 1,
                         "percentageQuestion": 24.32,
                         "percentageSurvey": 17.65
                       },
                       {
-                        "count": 412,
                         "id": "ecommerce",
+                        "count": 412,
                         "index": 2,
                         "percentageQuestion": 13.58,
                         "percentageSurvey": 9.85
                       },
                       {
-                        "count": 309,
                         "id": "finance",
+                        "count": 309,
                         "index": 3,
                         "percentageQuestion": 10.18,
                         "percentageSurvey": 7.39,
                         "entity": {
                           "id": "finance",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "industry_sectors"
+                          ]
                         }
                       },
                       {
-                        "count": 305,
                         "id": "education",
+                        "count": 305,
                         "index": 4,
                         "percentageQuestion": 10.05,
                         "percentageSurvey": 7.29,
                         "entity": {
                           "id": "education",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "industry_sectors",
+                            "state_of_devs",
+                            "discrimination_issues"
+                          ]
                         }
                       },
                       {
-                        "count": 293,
                         "id": "marketing_tools",
+                        "count": 293,
                         "index": 5,
                         "percentageQuestion": 9.66,
                         "percentageSurvey": 7.01
                       },
                       {
-                        "count": 204,
                         "id": "healthcare",
+                        "count": 204,
                         "index": 6,
                         "percentageQuestion": 6.72,
                         "percentageSurvey": 4.88
                       },
                       {
-                        "count": 183,
                         "id": "entertainment",
+                        "count": 183,
                         "index": 7,
                         "percentageQuestion": 6.03,
                         "percentageSurvey": 4.38,
                         "entity": {
                           "id": "entertainment",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "industry_sectors"
+                          ]
                         }
                       },
                       {
-                        "count": 127,
                         "id": "news_media",
+                        "count": 127,
                         "index": 8,
                         "percentageQuestion": 4.19,
                         "percentageSurvey": 3.04
                       },
                       {
-                        "count": 101,
                         "id": "government",
+                        "count": 101,
                         "index": 9,
                         "percentageQuestion": 3.33,
                         "percentageSurvey": 2.42
                       },
                       {
-                        "count": 99,
                         "id": "cyber_security",
+                        "count": 99,
                         "index": 10,
                         "percentageQuestion": 3.26,
                         "percentageSurvey": 2.37
                       },
                       {
-                        "count": 66,
                         "id": "socialmedia",
+                        "count": 66,
                         "index": 11,
                         "percentageQuestion": 2.18,
                         "percentageSurvey": 1.58
                       },
                       {
-                        "count": 16,
                         "id": "tech_it",
+                        "count": 16,
                         "index": 12,
                         "percentageQuestion": 0.53,
                         "percentageSurvey": 0.38,
                         "isFreeformData": true,
                         "entity": {
                           "id": "tech_it",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "industry_sectors"
+                          ]
                         }
                       },
                       {
-                        "count": 13,
                         "id": "logistics",
+                        "count": 13,
                         "index": 13,
                         "percentageQuestion": 0.43,
                         "percentageSurvey": 0.31,
                         "isFreeformData": true,
                         "entity": {
                           "id": "logistics",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "industry_sectors"
+                          ]
                         }
                       },
                       {
-                        "count": 13,
                         "id": "student",
+                        "count": 13,
                         "index": 14,
                         "percentageQuestion": 0.43,
                         "percentageSurvey": 0.31,
@@ -162,100 +289,131 @@
                           "nameHtml": "Student",
                           "nameClean": "Student",
                           "id": "student",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "industry_sectors",
+                            "job_title"
+                          ]
                         }
                       },
                       {
-                        "count": 13,
                         "id": "transportation",
+                        "count": 13,
                         "index": 15,
                         "percentageQuestion": 0.43,
                         "percentageSurvey": 0.31,
                         "isFreeformData": true,
                         "entity": {
                           "id": "transportation",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "industry_sectors"
+                          ]
                         }
                       },
                       {
-                        "count": 12,
                         "id": "construction",
+                        "count": 12,
                         "index": 16,
                         "percentageQuestion": 0.4,
                         "percentageSurvey": 0.29,
                         "isFreeformData": true,
                         "entity": {
                           "id": "construction",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "industry_sectors"
+                          ]
                         }
                       },
                       {
-                        "count": 12,
                         "id": "manufacturing",
+                        "count": 12,
                         "index": 17,
                         "percentageQuestion": 0.4,
                         "percentageSurvey": 0.29,
                         "isFreeformData": true,
                         "entity": {
                           "id": "manufacturing",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "industry_sectors"
+                          ]
                         }
                       },
                       {
-                        "count": 11,
                         "id": "research",
+                        "count": 11,
                         "index": 18,
                         "percentageQuestion": 0.36,
                         "percentageSurvey": 0.26,
                         "isFreeformData": true,
                         "entity": {
                           "id": "research",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "industry_sectors"
+                          ]
                         }
                       },
                       {
-                        "count": 10,
                         "id": "real_estate",
+                        "count": 10,
                         "index": 19,
                         "percentageQuestion": 0.33,
                         "percentageSurvey": 0.24,
                         "isFreeformData": true,
                         "entity": {
                           "id": "real_estate",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "industry_sectors"
+                          ]
                         }
                       },
                       {
-                        "count": 1147,
                         "id": "no_answer",
+                        "count": 1147,
                         "index": 20,
                         "percentageQuestion": 0,
                         "percentageSurvey": 27.43
                       },
                       {
-                        "count": 262,
                         "id": "other_answers",
+                        "count": 262,
                         "index": 21,
                         "percentageQuestion": 8.65,
                         "percentageSurvey": 6.26,
                         "groupedBuckets": [
                           {
-                            "count": 10,
                             "id": "overlimit_answers",
+                            "count": 10,
                             "index": 0,
                             "percentageQuestion": 0.33,
                             "percentageSurvey": 0.24
                           },
                           {
-                            "count": 165,
                             "id": "cutoff_answers",
+                            "count": 165,
                             "index": 1,
                             "percentageQuestion": 5.45,
                             "percentageSurvey": 3.94
                           },
                           {
-                            "count": 87,
                             "id": "no_match",
+                            "count": 87,
                             "index": 2,
                             "percentageQuestion": 2.87,
                             "percentageSurvey": 2.08,
@@ -274,6 +432,68 @@
                       "limit": 20,
                       "cutoff": 10
                     },
+                    "_cardinalities": {
+                      "buckets": [
+                        {
+                          "answerCount": 1,
+                          "count": 4094,
+                          "percentage": 66.9392
+                        },
+                        {
+                          "answerCount": 2,
+                          "count": 1402,
+                          "percentage": 22.9235
+                        },
+                        {
+                          "answerCount": 3,
+                          "count": 430,
+                          "percentage": 7.0307
+                        },
+                        {
+                          "answerCount": 4,
+                          "count": 124,
+                          "percentage": 2.0275
+                        },
+                        {
+                          "answerCount": 5,
+                          "count": 37,
+                          "percentage": 0.605
+                        },
+                        {
+                          "answerCount": 6,
+                          "count": 11,
+                          "percentage": 0.1799
+                        },
+                        {
+                          "answerCount": 7,
+                          "count": 7,
+                          "percentage": 0.1145
+                        },
+                        {
+                          "answerCount": 8,
+                          "count": 4,
+                          "percentage": 0.0654
+                        },
+                        {
+                          "answerCount": 9,
+                          "count": 3,
+                          "percentage": 0.0491
+                        },
+                        {
+                          "answerCount": 11,
+                          "count": 1,
+                          "percentage": 0.0164
+                        },
+                        {
+                          "answerCount": 12,
+                          "count": 3,
+                          "percentage": 0.0491
+                        }
+                      ],
+                      "max": 12,
+                      "mean": 1.4863,
+                      "n": 6116
+                    },
                     "editionId": "ai2026",
                     "year": 2026,
                     "completion": {
@@ -283,228 +503,287 @@
                     },
                     "buckets": [
                       {
-                        "count": 2900,
                         "id": "programming_tools",
+                        "count": 2900,
                         "index": 0,
                         "percentageQuestion": 51,
                         "percentageSurvey": 39.96
                       },
                       {
-                        "count": 1525,
                         "id": "consulting",
+                        "count": 1525,
                         "index": 1,
                         "percentageQuestion": 26.82,
                         "percentageSurvey": 21.01
                       },
                       {
-                        "count": 749,
                         "id": "ecommerce",
+                        "count": 749,
                         "index": 2,
                         "percentageQuestion": 13.17,
                         "percentageSurvey": 10.32
                       },
                       {
-                        "count": 662,
                         "id": "finance",
+                        "count": 662,
                         "index": 3,
                         "percentageQuestion": 11.64,
                         "percentageSurvey": 9.12,
                         "entity": {
                           "id": "finance",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "industry_sectors"
+                          ]
                         }
                       },
                       {
-                        "count": 538,
                         "id": "marketing_tools",
+                        "count": 538,
                         "index": 4,
                         "percentageQuestion": 9.46,
                         "percentageSurvey": 7.41
                       },
                       {
-                        "count": 516,
                         "id": "education",
+                        "count": 516,
                         "index": 5,
                         "percentageQuestion": 9.07,
                         "percentageSurvey": 7.11,
                         "entity": {
                           "id": "education",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "industry_sectors",
+                            "state_of_devs",
+                            "discrimination_issues"
+                          ]
                         }
                       },
                       {
-                        "count": 347,
                         "id": "healthcare",
+                        "count": 347,
                         "index": 6,
                         "percentageQuestion": 6.1,
                         "percentageSurvey": 4.78
                       },
                       {
-                        "count": 338,
                         "id": "entertainment",
+                        "count": 338,
                         "index": 7,
                         "percentageQuestion": 5.94,
                         "percentageSurvey": 4.66,
                         "entity": {
                           "id": "entertainment",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "industry_sectors"
+                          ]
                         }
                       },
                       {
-                        "count": 267,
                         "id": "government",
+                        "count": 267,
                         "index": 8,
                         "percentageQuestion": 4.7,
                         "percentageSurvey": 3.68
                       },
                       {
-                        "count": 228,
                         "id": "news_media",
+                        "count": 228,
                         "index": 9,
                         "percentageQuestion": 4.01,
                         "percentageSurvey": 3.14
                       },
                       {
-                        "count": 216,
                         "id": "cyber_security",
+                        "count": 216,
                         "index": 10,
                         "percentageQuestion": 3.8,
                         "percentageSurvey": 2.98
                       },
                       {
-                        "count": 131,
                         "id": "socialmedia",
+                        "count": 131,
                         "index": 11,
                         "percentageQuestion": 2.3,
                         "percentageSurvey": 1.8
                       },
                       {
-                        "count": 32,
                         "id": "tech_it",
+                        "count": 32,
                         "index": 12,
                         "percentageQuestion": 0.56,
                         "percentageSurvey": 0.44,
                         "isFreeformData": true,
                         "entity": {
                           "id": "tech_it",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "industry_sectors"
+                          ]
                         }
                       },
                       {
-                        "count": 27,
                         "id": "logistics",
+                        "count": 27,
                         "index": 13,
                         "percentageQuestion": 0.47,
                         "percentageSurvey": 0.37,
                         "isFreeformData": true,
                         "entity": {
                           "id": "logistics",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "industry_sectors"
+                          ]
                         }
                       },
                       {
-                        "count": 25,
                         "id": "energy",
+                        "count": 25,
                         "index": 14,
                         "percentageQuestion": 0.44,
                         "percentageSurvey": 0.34,
                         "isFreeformData": true,
                         "entity": {
                           "id": "energy",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "industry_sectors"
+                          ]
                         }
                       },
                       {
-                        "count": 23,
                         "id": "research",
+                        "count": 23,
                         "index": 15,
                         "percentageQuestion": 0.4,
                         "percentageSurvey": 0.32,
                         "isFreeformData": true,
                         "entity": {
                           "id": "research",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "industry_sectors"
+                          ]
                         }
                       },
                       {
-                        "count": 22,
                         "id": "travel",
+                        "count": 22,
                         "index": 16,
                         "percentageQuestion": 0.39,
                         "percentageSurvey": 0.3,
                         "isFreeformData": true,
                         "entity": {
                           "id": "travel",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "industry_sectors",
+                            "state_of_devs",
+                            "hobbies"
+                          ]
                         }
                       },
                       {
-                        "count": 21,
                         "id": "law",
+                        "count": 21,
                         "index": 17,
                         "percentageQuestion": 0.37,
                         "percentageSurvey": 0.29,
                         "isFreeformData": true,
                         "entity": {
                           "id": "law",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "industry_sectors"
+                          ]
                         }
                       },
                       {
-                        "count": 21,
                         "id": "non_profit",
+                        "count": 21,
                         "index": 18,
                         "percentageQuestion": 0.37,
                         "percentageSurvey": 0.29,
                         "isFreeformData": true,
                         "entity": {
                           "id": "non_profit",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "industry_sectors"
+                          ]
                         }
                       },
                       {
-                        "count": 21,
                         "id": "saas",
+                        "count": 21,
                         "index": 19,
                         "percentageQuestion": 0.37,
                         "percentageSurvey": 0.29,
                         "isFreeformData": true,
                         "entity": {
                           "id": "saas",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "industry_sectors"
+                          ]
                         }
                       },
                       {
-                        "count": 1572,
                         "id": "no_answer",
+                        "count": 1572,
                         "index": 20,
                         "percentageQuestion": 0,
                         "percentageSurvey": 21.66
                       },
                       {
-                        "count": 482,
                         "id": "other_answers",
+                        "count": 482,
                         "index": 21,
                         "percentageQuestion": 8.57,
                         "percentageSurvey": 6.67,
                         "groupedBuckets": [
                           {
-                            "count": 185,
                             "id": "overlimit_answers",
+                            "count": 185,
                             "index": 0,
                             "percentageQuestion": 3.25,
                             "percentageSurvey": 2.57
                           },
                           {
-                            "count": 163,
                             "id": "cutoff_answers",
+                            "count": 163,
                             "index": 1,
                             "percentageQuestion": 2.96,
                             "percentageSurvey": 2.25
                           },
                           {
-                            "count": 134,
                             "id": "no_match",
+                            "count": 134,
                             "index": 2,
                             "percentageQuestion": 2.36,
                             "percentageSurvey": 1.85,

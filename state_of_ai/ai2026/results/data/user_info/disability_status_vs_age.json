@@ -11,6 +11,110 @@
                   "count": 19
                 }
               },
+              "_correlations": {
+                "questionCorrelations": [
+                  {
+                    "kind1": "cardinality",
+                    "kind2": "option",
+                    "questionId1": "disability_status",
+                    "sectionId1": "user_info",
+                    "questionId2": "gender",
+                    "sectionId2": "user_info",
+                    "optionId2": "non_binary",
+                    "n": 5441,
+                    "correlation": 0.1892,
+                    "sameSection": true,
+                    "strength": "moderate",
+                    "direction": "positive"
+                  },
+                  {
+                    "kind1": "cardinality",
+                    "kind2": "option",
+                    "questionId1": "disability_status",
+                    "sectionId1": "user_info",
+                    "questionId2": "gender",
+                    "sectionId2": "user_info",
+                    "optionId2": "male",
+                    "n": 5441,
+                    "correlation": -0.1842,
+                    "sameSection": true,
+                    "strength": "moderate",
+                    "direction": "negative"
+                  }
+                ],
+                "optionCorrelations": [
+                  {
+                    "id": "cognitive_impairments",
+                    "correlations": [
+                      {
+                        "kind1": "option",
+                        "kind2": "option",
+                        "questionId1": "disability_status",
+                        "sectionId1": "user_info",
+                        "optionId1": "cognitive_impairments",
+                        "questionId2": "gender",
+                        "sectionId2": "user_info",
+                        "optionId2": "male",
+                        "n": 5441,
+                        "correlation": -0.1953,
+                        "sameSection": true,
+                        "strength": "moderate",
+                        "direction": "negative"
+                      },
+                      {
+                        "kind1": "option",
+                        "kind2": "option",
+                        "questionId1": "disability_status",
+                        "sectionId1": "user_info",
+                        "optionId1": "cognitive_impairments",
+                        "questionId2": "gender",
+                        "sectionId2": "user_info",
+                        "optionId2": "non_binary",
+                        "n": 5441,
+                        "correlation": 0.19,
+                        "sameSection": true,
+                        "strength": "moderate",
+                        "direction": "positive"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "na",
+                    "correlations": [
+                      {
+                        "kind1": "option",
+                        "kind2": "option",
+                        "questionId1": "disability_status",
+                        "sectionId1": "user_info",
+                        "optionId1": "na",
+                        "questionId2": "gender",
+                        "sectionId2": "user_info",
+                        "optionId2": "male",
+                        "n": 5441,
+                        "correlation": 0.1801,
+                        "sameSection": true,
+                        "strength": "moderate",
+                        "direction": "positive"
+                      },
+                      {
+                        "kind1": "option",
+                        "kind2": "option",
+                        "questionId1": "disability_status",
+                        "sectionId1": "user_info",
+                        "optionId1": "na",
+                        "questionId2": "gender",
+                        "sectionId2": "user_info",
+                        "optionId2": "non_binary",
+                        "n": 5441,
+                        "correlation": -0.1785,
+                        "sameSection": true,
+                        "strength": "moderate",
+                        "direction": "negative"
+                      }
+                    ]
+                  }
+                ]
+              },
               "combined": {
                 "allEditions": [
                   {
@@ -21,7 +125,7 @@
                       },
                       "axis2Sort": {
                         "property": "options",
-                        "order": "desc"
+                        "order": "asc"
                       },
                       "limit": 50,
                       "cutoff": 20
@@ -35,8 +139,8 @@
                     },
                     "buckets": [
                       {
-                        "count": 1162,
                         "id": "cognitive_impairments",
+                        "count": 1162,
                         "index": 0,
                         "percentageQuestion": 21.35,
                         "percentageSurvey": 16.01,
@@ -96,9 +200,75 @@
                         ]
                       },
                       {
-                        "count": 5916,
-                        "id": "overall",
+                        "id": "na",
+                        "count": 3913,
                         "index": 1,
+                        "percentageQuestion": 71.9,
+                        "percentageSurvey": 53.91,
+                        "percentilesByFacet": {
+                          "p0": 13,
+                          "p10": 25,
+                          "p25": 30,
+                          "p50": 36,
+                          "p75": 42,
+                          "p90": 48,
+                          "p100": 74
+                        },
+                        "facetBuckets": [
+                          {
+                            "id": "range_under_20",
+                            "count": 91,
+                            "percentageBucket": 2.33,
+                            "percentageQuestion": 1.66
+                          },
+                          {
+                            "id": "range_20_29",
+                            "count": 726,
+                            "percentageBucket": 18.57,
+                            "percentageQuestion": 13.33
+                          },
+                          {
+                            "id": "range_30_39",
+                            "count": 1605,
+                            "percentageBucket": 41.01,
+                            "percentageQuestion": 29.48
+                          },
+                          {
+                            "id": "range_40_49",
+                            "count": 1021,
+                            "percentageBucket": 26.08,
+                            "percentageQuestion": 18.75
+                          },
+                          {
+                            "id": "range_50_59",
+                            "count": 254,
+                            "percentageBucket": 6.49,
+                            "percentageQuestion": 4.66
+                          },
+                          {
+                            "id": "range_over_60",
+                            "count": 57,
+                            "percentageBucket": 1.48,
+                            "percentageQuestion": 1.08
+                          },
+                          {
+                            "id": "no_answer",
+                            "count": 159,
+                            "percentageBucket": 4.06,
+                            "percentageQuestion": 0
+                          },
+                          {
+                            "id": "other_answers",
+                            "count": 0,
+                            "percentageBucket": 0,
+                            "percentageQuestion": 0
+                          }
+                        ]
+                      },
+                      {
+                        "id": "overall",
+                        "count": 5916,
+                        "index": 2,
                         "percentageQuestion": 108.71,
                         "percentageSurvey": 81.51,
                         "averageByFacet": 36.5,
@@ -163,9 +333,9 @@
                         ]
                       },
                       {
-                        "count": 326,
                         "id": "visual_impairments",
-                        "index": 2,
+                        "count": 326,
+                        "index": 3,
                         "percentageQuestion": 5.99,
                         "percentageSurvey": 4.49,
                         "averageByFacet": 37.9,
@@ -224,17 +394,22 @@
                         ]
                       },
                       {
-                        "count": 172,
                         "id": "mobility_impairments",
-                        "index": 3,
+                        "count": 172,
+                        "index": 4,
                         "percentageQuestion": 3.16,
                         "percentageSurvey": 2.37,
                         "entity": {
-                          "name": "Mobility Impairments",
-                          "nameHtml": "Mobility Impairments",
-                          "nameClean": "Mobility Impairments",
+                          "name": "Mobility impairments",
+                          "nameHtml": "Mobility impairments",
+                          "nameClean": "Mobility impairments",
                           "id": "mobility_impairments",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "disabilities"
+                          ]
                         },
                         "averageByFacet": 40,
                         "percentilesByFacet": {
@@ -280,9 +455,9 @@
                         ]
                       },
                       {
-                        "count": 200,
                         "id": "hearing_impairments",
-                        "index": 4,
+                        "count": 200,
+                        "index": 5,
                         "percentageQuestion": 3.68,
                         "percentageSurvey": 2.76,
                         "averageByFacet": 41.1,
@@ -335,78 +510,12 @@
                         ]
                       },
                       {
-                        "count": 3913,
-                        "id": "na",
-                        "index": 5,
-                        "percentageQuestion": 71.9,
-                        "percentageSurvey": 53.91,
-                        "percentilesByFacet": {
-                          "p0": 13,
-                          "p10": 25,
-                          "p25": 30,
-                          "p50": 36,
-                          "p75": 42,
-                          "p90": 48,
-                          "p100": 74
-                        },
-                        "facetBuckets": [
-                          {
-                            "id": "range_under_20",
-                            "count": 91,
-                            "percentageBucket": 2.33,
-                            "percentageQuestion": 1.66
-                          },
-                          {
-                            "id": "range_20_29",
-                            "count": 726,
-                            "percentageBucket": 18.57,
-                            "percentageQuestion": 13.33
-                          },
-                          {
-                            "id": "range_30_39",
-                            "count": 1605,
-                            "percentageBucket": 41.01,
-                            "percentageQuestion": 29.48
-                          },
-                          {
-                            "id": "range_40_49",
-                            "count": 1021,
-                            "percentageBucket": 26.08,
-                            "percentageQuestion": 18.75
-                          },
-                          {
-                            "id": "range_50_59",
-                            "count": 254,
-                            "percentageBucket": 6.49,
-                            "percentageQuestion": 4.66
-                          },
-                          {
-                            "id": "range_over_60",
-                            "count": 57,
-                            "percentageBucket": 1.48,
-                            "percentageQuestion": 1.08
-                          },
-                          {
-                            "id": "no_answer",
-                            "count": 159,
-                            "percentageBucket": 4.06,
-                            "percentageQuestion": 0
-                          },
-                          {
-                            "id": "other_answers",
-                            "count": 0,
-                            "percentageBucket": 0,
-                            "percentageQuestion": 0
-                          }
-                        ]
-                      },
-                      {
-                        "count": 1762,
                         "id": "no_answer",
+                        "count": 1816,
                         "index": 6,
                         "percentageQuestion": 0,
-                        "percentageSurvey": 24.28,
-                        "averageByFacet": 37.5,
+                        "percentageSurvey": 25.02,
+                        "averageByFacet": 37.3,
                         "percentilesByFacet": {
                           "p0": 12,
                           "p10": 26,
@@ -419,33 +528,33 @@
                         "facetBuckets": [
                           {
                             "id": "range_under_20",
-                            "count": 16,
-                            "percentageBucket": 0.92,
-                            "percentageQuestion": 0.29
+                            "count": 20,
+                            "percentageBucket": 1.12,
+                            "percentageQuestion": 0.37
                           },
                           {
                             "id": "range_20_29",
-                            "count": 100,
-                            "percentageBucket": 5.67,
-                            "percentageQuestion": 1.85
+                            "count": 108,
+                            "percentageBucket": 5.97,
+                            "percentageQuestion": 2
                           },
                           {
                             "id": "range_30_39",
-                            "count": 280,
-                            "percentageBucket": 15.9,
-                            "percentageQuestion": 5.15
+                            "count": 303,
+                            "percentageBucket": 16.68,
+                            "percentageQuestion": 5.55
                           },
                           {
                             "id": "range_40_49",
-                            "count": 182,
-                            "percentageBucket": 10.33,
-                            "percentageQuestion": 3.34
+                            "count": 193,
+                            "percentageBucket": 10.64,
+                            "percentageQuestion": 3.54
                           },
                           {
                             "id": "range_50_59",
-                            "count": 52,
-                            "percentageBucket": 2.94,
-                            "percentageQuestion": 0.97
+                            "count": 56,
+                            "percentageBucket": 3.09,
+                            "percentageQuestion": 1.03
                           },
                           {
                             "id": "range_over_60",
@@ -455,8 +564,8 @@
                           },
                           {
                             "id": "no_answer",
-                            "count": 1120,
-                            "percentageBucket": 63.56,
+                            "count": 1124,
+                            "percentageBucket": 61.89,
                             "percentageQuestion": 0
                           },
                           {
@@ -468,20 +577,20 @@
                         ]
                       },
                       {
-                        "count": 60,
                         "id": "other_answers",
+                        "count": 60,
                         "index": 7,
                         "percentageQuestion": 1.14,
                         "percentageSurvey": 0.78,
-                        "averageByFacet": 37.74,
+                        "averageByFacet": 34.6,
                         "percentilesByFacet": {
-                          "p0": 26.21,
-                          "p10": 30.88,
-                          "p25": 33.3,
-                          "p50": 37.47,
-                          "p75": 41.46,
-                          "p90": 46.29,
-                          "p100": 56.24
+                          "p0": 30,
+                          "p10": 31,
+                          "p25": 32,
+                          "p50": 35,
+                          "p75": 36,
+                          "p90": 39,
+                          "p100": 39
                         },
                         "facetBuckets": [
                           {

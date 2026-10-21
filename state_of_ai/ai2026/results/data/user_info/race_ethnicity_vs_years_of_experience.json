@@ -11,6 +11,171 @@
                   "count": 8
                 }
               },
+              "_correlations": {
+                "optionCorrelations": [
+                  {
+                    "id": "multiracial",
+                    "correlations": [
+                      {
+                        "kind1": "option",
+                        "kind2": "option",
+                        "questionId1": "race_ethnicity",
+                        "sectionId1": "user_info",
+                        "optionId1": "multiracial",
+                        "questionId2": "ai_tools_others",
+                        "sectionId2": "other_tools",
+                        "optionId2": "open_code",
+                        "n": 378,
+                        "correlation": 0.1684,
+                        "sameSection": false,
+                        "strength": "moderate",
+                        "direction": "positive"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "south_asian",
+                    "correlations": [
+                      {
+                        "kind1": "option",
+                        "kind2": "option",
+                        "questionId1": "race_ethnicity",
+                        "sectionId1": "user_info",
+                        "optionId1": "south_asian",
+                        "questionId2": "yearly_salary",
+                        "sectionId2": "user_info",
+                        "optionId2": "range_0_20",
+                        "n": 5216,
+                        "correlation": 0.1733,
+                        "sameSection": true,
+                        "strength": "moderate",
+                        "direction": "positive"
+                      },
+                      {
+                        "kind1": "option",
+                        "kind2": "option",
+                        "questionId1": "race_ethnicity",
+                        "sectionId1": "user_info",
+                        "optionId1": "south_asian",
+                        "questionId2": "age",
+                        "sectionId2": "user_info",
+                        "optionId2": "range_20_29",
+                        "n": 4728,
+                        "correlation": 0.171,
+                        "sameSection": true,
+                        "strength": "moderate",
+                        "direction": "positive"
+                      },
+                      {
+                        "kind1": "option",
+                        "kind2": "question",
+                        "questionId1": "race_ethnicity",
+                        "sectionId1": "user_info",
+                        "optionId1": "south_asian",
+                        "questionId2": "age",
+                        "sectionId2": "user_info",
+                        "n": 4728,
+                        "correlation": -0.1511,
+                        "sameSection": true,
+                        "strength": "moderate",
+                        "direction": "negative"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "white_european",
+                    "correlations": [
+                      {
+                        "kind1": "option",
+                        "kind2": "question",
+                        "questionId1": "race_ethnicity",
+                        "sectionId1": "user_info",
+                        "optionId1": "white_european",
+                        "questionId2": "yearly_salary",
+                        "sectionId2": "user_info",
+                        "n": 4762,
+                        "correlation": 0.2064,
+                        "sameSection": true,
+                        "strength": "moderate",
+                        "direction": "positive"
+                      },
+                      {
+                        "kind1": "option",
+                        "kind2": "question",
+                        "questionId1": "race_ethnicity",
+                        "sectionId1": "user_info",
+                        "optionId1": "white_european",
+                        "questionId2": "years_of_experience",
+                        "sectionId2": "user_info",
+                        "n": 5218,
+                        "correlation": 0.1975,
+                        "sameSection": true,
+                        "strength": "moderate",
+                        "direction": "positive"
+                      },
+                      {
+                        "kind1": "option",
+                        "kind2": "question",
+                        "questionId1": "race_ethnicity",
+                        "sectionId1": "user_info",
+                        "optionId1": "white_european",
+                        "questionId2": "age",
+                        "sectionId2": "user_info",
+                        "n": 4728,
+                        "correlation": 0.1765,
+                        "sameSection": true,
+                        "strength": "moderate",
+                        "direction": "positive"
+                      },
+                      {
+                        "kind1": "option",
+                        "kind2": "option",
+                        "questionId1": "race_ethnicity",
+                        "sectionId1": "user_info",
+                        "optionId1": "white_european",
+                        "questionId2": "ai_tools_others",
+                        "sectionId2": "other_tools",
+                        "optionId2": "open_code",
+                        "n": 378,
+                        "correlation": -0.173,
+                        "sameSection": false,
+                        "strength": "moderate",
+                        "direction": "negative"
+                      },
+                      {
+                        "kind1": "option",
+                        "kind2": "option",
+                        "questionId1": "race_ethnicity",
+                        "sectionId1": "user_info",
+                        "optionId1": "white_european",
+                        "questionId2": "text_editors",
+                        "sectionId2": "other_tools",
+                        "optionId2": "antigravity",
+                        "n": 5467,
+                        "correlation": -0.1533,
+                        "sameSection": false,
+                        "strength": "moderate",
+                        "direction": "negative"
+                      },
+                      {
+                        "kind1": "option",
+                        "kind2": "option",
+                        "questionId1": "race_ethnicity",
+                        "sectionId1": "user_info",
+                        "optionId1": "white_european",
+                        "questionId2": "grok",
+                        "sectionId2": "models",
+                        "optionId2": "used",
+                        "n": 5455,
+                        "correlation": -0.1532,
+                        "sameSection": false,
+                        "strength": "moderate",
+                        "direction": "negative"
+                      }
+                    ]
+                  }
+                ]
+              },
               "combined": {
                 "allEditions": [
                   {
@@ -21,7 +186,7 @@
                       },
                       "axis2Sort": {
                         "property": "options",
-                        "order": "desc"
+                        "order": "asc"
                       },
                       "limit": 50,
                       "cutoff": 20
@@ -35,8 +200,8 @@
                     },
                     "buckets": [
                       {
-                        "count": 22,
                         "id": "european",
+                        "count": 22,
                         "index": 0,
                         "percentageQuestion": 0.41,
                         "percentageSurvey": 0.3,
@@ -46,7 +211,12 @@
                           "nameHtml": "European",
                           "nameClean": "European",
                           "id": "european",
-                          "entityType": "default"
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "other",
+                            "race_ethnicity"
+                          ]
                         },
                         "averageByFacet": 16.4,
                         "percentilesByFacet": {
@@ -68,8 +238,8 @@
                         ]
                       },
                       {
-                        "count": 4240,
                         "id": "white_european",
+                        "count": 4240,
                         "index": 1,
                         "percentageQuestion": 78.27,
                         "percentageSurvey": 58.42,
@@ -141,8 +311,8 @@
                         ]
                       },
                       {
-                        "count": 24,
                         "id": "native_american_islander_australian",
+                        "count": 24,
                         "index": 2,
                         "percentageQuestion": 0.44,
                         "percentageSurvey": 0.33,
@@ -166,8 +336,8 @@
                         ]
                       },
                       {
-                        "count": 6153,
                         "id": "overall",
+                        "count": 6153,
                         "index": 3,
                         "percentageQuestion": 113.59,
                         "percentageSurvey": 84.78,
@@ -239,8 +409,8 @@
                         ]
                       },
                       {
-                        "count": 112,
                         "id": "multiracial",
+                        "count": 112,
                         "index": 4,
                         "percentageQuestion": 2.07,
                         "percentageSurvey": 1.54,
@@ -288,8 +458,8 @@
                         ]
                       },
                       {
-                        "count": 518,
                         "id": "hispanic_latin",
+                        "count": 518,
                         "index": 5,
                         "percentageQuestion": 9.56,
                         "percentageSurvey": 7.14,
@@ -355,8 +525,8 @@
                         ]
                       },
                       {
-                        "count": 192,
                         "id": "east_asian",
+                        "count": 192,
                         "index": 6,
                         "percentageQuestion": 3.54,
                         "percentageSurvey": 2.65,
@@ -422,8 +592,8 @@
                         ]
                       },
                       {
-                        "count": 179,
                         "id": "middle_eastern",
+                        "count": 179,
                         "index": 7,
                         "percentageQuestion": 3.3,
                         "percentageSurvey": 2.47,
@@ -477,8 +647,8 @@
                         ]
                       },
                       {
-                        "count": 107,
                         "id": "black_african",
+                        "count": 107,
                         "index": 8,
                         "percentageQuestion": 1.98,
                         "percentageSurvey": 1.47,
@@ -526,8 +696,8 @@
                         ]
                       },
                       {
-                        "count": 227,
                         "id": "south_asian",
+                        "count": 227,
                         "index": 9,
                         "percentageQuestion": 4.19,
                         "percentageSurvey": 3.13,
@@ -575,8 +745,8 @@
                         ]
                       },
                       {
-                        "count": 132,
                         "id": "south_east_asian",
+                        "count": 132,
                         "index": 10,
                         "percentageQuestion": 2.44,
                         "percentageSurvey": 1.82,
@@ -618,68 +788,68 @@
                         ]
                       },
                       {
-                        "count": 1807,
                         "id": "no_answer",
+                        "count": 1841,
                         "index": 11,
                         "percentageQuestion": 0,
-                        "percentageSurvey": 24.9,
-                        "averageByFacet": 15.2,
+                        "percentageSurvey": 25.37,
+                        "averageByFacet": 15.1,
                         "percentilesByFacet": {
-                          "p0": 0.5,
+                          "p0": 0,
                           "p10": 5,
                           "p25": 8,
                           "p50": 13,
                           "p75": 20,
-                          "p90": 26.399999999999977,
+                          "p90": 26,
                           "p100": 420
                         },
                         "facetBuckets": [
                           {
                             "id": "range_0_4",
-                            "count": 60,
-                            "percentageBucket": 3.31,
-                            "percentageQuestion": 1.12
+                            "count": 66,
+                            "percentageBucket": 3.57,
+                            "percentageQuestion": 1.23
                           },
                           {
                             "id": "range_5_9",
-                            "count": 176,
-                            "percentageBucket": 9.74,
-                            "percentageQuestion": 3.25
+                            "count": 183,
+                            "percentageBucket": 9.94,
+                            "percentageQuestion": 3.38
                           },
                           {
                             "id": "range_10_14",
-                            "count": 169,
-                            "percentageBucket": 9.35,
-                            "percentageQuestion": 3.13
+                            "count": 177,
+                            "percentageBucket": 9.61,
+                            "percentageQuestion": 3.27
                           },
                           {
                             "id": "range_15_19",
-                            "count": 128,
-                            "percentageBucket": 7.08,
-                            "percentageQuestion": 2.37
+                            "count": 133,
+                            "percentageBucket": 7.21,
+                            "percentageQuestion": 2.46
                           },
                           {
                             "id": "range_20_24",
-                            "count": 104,
-                            "percentageBucket": 5.76,
-                            "percentageQuestion": 1.92
+                            "count": 107,
+                            "percentageBucket": 5.81,
+                            "percentageQuestion": 1.98
                           },
                           {
                             "id": "range_25_29",
-                            "count": 65,
-                            "percentageBucket": 3.61,
-                            "percentageQuestion": 1.2
+                            "count": 68,
+                            "percentageBucket": 3.69,
+                            "percentageQuestion": 1.26
                           },
                           {
                             "id": "range_over_30",
-                            "count": 55,
+                            "count": 57,
                             "percentageBucket": 3.07,
-                            "percentageQuestion": 1.03
+                            "percentageQuestion": 1.07
                           },
                           {
                             "id": "no_answer",
                             "count": 1050,
-                            "percentageBucket": 58.11,
+                            "percentageBucket": 57.03,
                             "percentageQuestion": 0
                           },
                           {
@@ -691,20 +861,20 @@
                         ]
                       },
                       {
-                        "count": 78,
                         "id": "other_answers",
+                        "count": 78,
                         "index": 12,
                         "percentageQuestion": 1.45,
                         "percentageSurvey": 1.08,
-                        "averageByFacet": 13.09,
+                        "averageByFacet": 9.4,
                         "percentilesByFacet": {
-                          "p0": 3.53,
-                          "p10": 4.72,
-                          "p25": 7.17,
-                          "p50": 11.8,
-                          "p75": 17.22,
-                          "p90": 20.33,
-                          "p100": 22.7
+                          "p0": 5,
+                          "p10": 6,
+                          "p25": 6.75,
+                          "p50": 10,
+                          "p75": 11,
+                          "p90": 12.7,
+                          "p100": 14
                         },
                         "facetBuckets": [
                           {
