@@ -966,12 +966,63 @@
 
     - id: did_you_run_into_technical_issues
       template: textList
+      instructions: |
+        This question asks respondents whether they ran into technical issues while taking the survey itself. Answers describe bugs, UX problems, or other difficulties with the survey app or its questions.
+
+        Codes are organized as broad issues (parents) and specific problems (children). Assign the most specific code that describes the problem, e.g. "going back to the previous section wiped my answers" → back_navigation_data_loss, "some labels showed technical keys instead of text" → raw_i18n_keys. Use a parent code only when no child fits, e.g. "lost my progress" → lost_answers.
+
+        Answers describing several problems get one code per problem.
+
+        Special cases:
+        - "no_issues": the respondent had no problems ("none", "no", "all good", praise). It must be the only code.
+        - "invalid": jokes, spam, or off-topic answers. It must be the only code.
+        - Leave the list empty for answers that are unclear or unrelated to the survey experience.
+
+        Examples:
+        - "If I navigate back with navigation on top it clears results" → ["back_navigation_data_loss"]
+        - "Clicking the magic link loaded forever, then showed an error" → ["login_issues"]
+        - "Some questions were translation keys instead of sentences" → ["raw_i18n_keys"]
+        - "None, great job" → ["no_issues"]
 
     - id: missing_questions
       template: textList
+      matchTags: [css_missing_questions, common_missing_questions]
+      instructions: |
+        This question asks respondents which questions they wish the survey had asked. Each answer is a suggestion for the survey itself.
+
+        Codes are organized as topics (parents) and specific candidate questions (children). Assign the most specific code that captures the question the respondent wants asked, e.g. "What CSS features should they NOT make" → css_features_to_remove, "What versions of browsers are people still supporting" → browser_support_targets. Use a parent code only when the answer names a topic without a more specific question.
+
+        Most answers need 1 code; answers listing several suggestions get one code per suggestion.
+
+        Special cases:
+        - "invalid": jokes, spam, or off-topic answers. It must be the only code.
+        - Leave the list empty for answers with no suggestion, such as "none", "not sure", or "great survey".
+
+        Examples:
+        - "A section on typography" → ["css_typography"]
+        - "Would you rather drop Tailwind and use new CSS features directly?" → ["css_frameworks_vs_vanilla"]
+        - "Which AI tool is best at CSS" → ["ai_tools_used"]
+        - "More about a11y" → ["accessibility_practices"]
 
     - id: how_can_we_improve
       template: textList
+      instructions: |
+        This question asks respondents how the survey itself could be improved. Answers are suggestions about the survey's content, options, length, UI, translations, or reach.
+
+        Codes are organized as broad areas (parents) and specific suggestions (children). Assign the most specific code that captures the suggestion, e.g. "add a link to MDN for each feature" → information_links, "add a light mode" → light_mode. Use a parent code only when no child fits.
+
+        Answers with several suggestions get one code per suggestion.
+
+        Special cases:
+        - "positive_impression": the respondent praises the survey. Combine it with other codes only if the answer also contains a concrete suggestion.
+        - "dont_know": the respondent has no suggestion ("idk", "not sure").
+        - "invalid": jokes, spam, rants, or off-topic answers. It must be the only code.
+
+        Examples:
+        - "Add a short explanation about each feature" → ["feature_descriptions"]
+        - "Focus more on baseline, less experimental stuff" → ["feature_selection"]
+        - "Visual examples" → ["live_code_examples"]
+        - "It is already perfect." → ["positive_impression"]
 
     - id: receive_notifications
       template: receive_notifications

@@ -1216,12 +1216,63 @@
 
     - id: did_you_run_into_technical_issues
       template: textList
+      instructions: |
+        This question asks respondents whether they ran into technical issues while taking the survey itself. Answers describe bugs, UX problems, or other difficulties with the survey app or its questions.
+
+        Codes are organized as broad issues (parents) and specific problems (children). Assign the most specific code that describes the problem, e.g. "going back to the previous section wiped my answers" → back_navigation_data_loss, "some labels showed technical keys like options.work_areas.management" → raw_i18n_keys. Use a parent code only when no child fits, e.g. "lost my progress" → lost_answers.
+
+        Answers describing several problems get one code per problem.
+
+        Special cases:
+        - "no_issues": the respondent had no problems ("none", "no", "all good", praise). It must be the only code.
+        - "invalid": jokes, spam, or off-topic answers. It must be the only code.
+        - Leave the list empty for answers that are unclear or unrelated to the survey experience.
+
+        Examples:
+        - "Going back a section reset my answers until I reloaded the page" → ["back_navigation_data_loss"]
+        - "Mix of German and English, although my language is set to German" → ["partial_translation_issues"]
+        - "Hard to answer some questions in the context of being unemployed" → ["non_employed_respondents"]
+        - "None." → ["no_issues"]
 
     - id: missing_questions
       template: textList
+      matchTags: [devs_missing_questions, common_missing_questions]
+      instructions: |
+        This question asks respondents which questions they wish the survey had asked. Each answer is a suggestion for the survey itself.
+
+        Codes are organized as topics (parents) and specific candidate questions (children). Assign the most specific code that captures the question the respondent wants asked, e.g. "how many applications since you are unemployed?" → job_search_experience, "do you have pets?" → pet_ownership. Use a parent code only when the answer names a topic without a more specific question, e.g. "More about AI" → ai_in_development, "Education" → education_background.
+
+        Most answers need 1 code; answers listing several suggestions get one code per suggestion.
+
+        Special cases:
+        - "invalid": jokes, spam, or off-topic answers. It must be the only code.
+        - Leave the list empty for answers with no suggestion, such as "none", "not sure", or "great survey".
+
+        Examples:
+        - "How do you use AI in software development (planning/research/execution/testing…)?" → ["ai_usage_tasks"]
+        - "Has your company had layoffs? What percent, were you affected" → ["layoffs_experience"]
+        - "Religion/Beliefs" → ["religious_beliefs"]
+        - "More technical questions." → ["more_technical_questions"]
 
     - id: how_can_we_improve
       template: textList
+      instructions: |
+        This question asks respondents how the survey itself could be improved. Answers are suggestions about the survey's content, options, length, UI, translations, or reach.
+
+        Codes are organized as broad areas (parents) and specific suggestions (children). Assign the most specific code that captures the suggestion, e.g. "allow selecting more than 4 items" → selection_limit, "questions assume I'm employed" → non_employed_respondents. Use a parent code only when no child fits.
+
+        Answers with several suggestions get one code per suggestion.
+
+        Special cases:
+        - "positive_impression": the respondent praises the survey. Combine it with other codes only if the answer also contains a concrete suggestion.
+        - "dont_know": the respondent has no suggestion ("idk", "not sure").
+        - "invalid": jokes, spam, rants, or off-topic answers. It must be the only code.
+
+        Examples:
+        - "Too many personal questions" → ["fewer_personal_questions"]
+        - "The left/right political spectrum is blunt and inaccurate." → ["demographic_questions_concerns"]
+        - "Have a light mode available" → ["light_mode"]
+        - "You're doing great!" → ["positive_impression"]
 
     - id: receive_notifications
       template: receive_notifications
