@@ -1,0 +1,61 @@
+{
+  "dataAPI": {
+    "highlight_blocking_render": {
+      "id": "blocking_render",
+      "name": "`blocking=\"render\"`",
+      "nameHtml": "<code>blocking=\"render\"</code>",
+      "nameClean": "blocking=\"render\"",
+      "description": "Block rendering (but not parsing) until certain resources have been loaded. Available on `<link>`, `<script>` and `<style>`.",
+      "descriptionHtml": "Block rendering (but not parsing) until certain resources have been loaded. Available on <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code> and <code>&lt;style&gt;</code>.",
+      "descriptionClean": "Block rendering (but not parsing) until certain resources have been loaded. Available on <link>, <script> and <style>.",
+      "entityType": "feature",
+      "example": {
+        "language": "html",
+        "code": "<script blocking=\"render\" async src=\"async-script.js\"></script>",
+        "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span> <span class=\"hljs-attr\">blocking</span>=<span class=\"hljs-string\">&quot;render&quot;</span> <span class=\"hljs-attr\">async</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;async-script.js&quot;</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>"
+      },
+      "mdn": {
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script"
+      },
+      "caniuse": {
+        "url": "https://caniuse.com/mdn-html_elements_link_blocking"
+      },
+      "resources": [
+        {
+          "url": "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#blocking-attributes",
+          "title": "HTML Standard"
+        },
+        {
+          "url": "https://gist.github.com/xiaochengh/9404abbecdc3b45c0e9f3d5e99fbc65d",
+          "title": "proposal-v3.md · GitHub"
+        },
+        {
+          "url": "https://github.com/w3ctag/design-reviews/issues/727",
+          "title": "Review request on `blocking=render` attribute for scripts and stylesheets · Issue #727 · w3ctag/design-reviews · GitHub"
+        }
+      ],
+      "webFeature": {
+        "id": "blocking-render",
+        "description_html": "The <code>blocking=\"render\"</code> attribute for <code>&#x3C;link></code>, <code>&#x3C;script></code>, and <code>&#x3C;style></code> elements blocks rendering until the external script or stylesheet has been loaded. For <code>&#x3C;link rel=\"expect\"></code>, rendering is blocked until a specific element is in the DOM.",
+        "group": [
+          "html"
+        ],
+        "name": "blocking=\"render\"",
+        "spec": [
+          "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#blocking-attributes"
+        ],
+        "url": "https://web-platform-dx.github.io/web-features-explorer/features/blocking-render/",
+        "status": {
+          "baseline": "false",
+          "support": {
+            "chrome": "105",
+            "chrome_android": "105",
+            "edge": "105",
+            "safari": "18.2",
+            "safari_ios": "18.2"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "dataAPI": {
+    "highlight_payment_request_api": {
+      "id": "payment_request_api",
+      "name": "`PaymentRequest` API",
+      "nameHtml": "<code>PaymentRequest</code> API",
+      "nameClean": "PaymentRequest API",
+      "description": "Enables a consistent, secure way for websites to request payments using the browser’s native UI.",
+      "descriptionHtml": "Enables a consistent, secure way for websites to request payments using the browser’s native UI.",
+      "descriptionClean": "Enables a consistent, secure way for websites to request payments using the browser’s native UI.",
+      "parentId": "apis_capabilities",
+      "entityType": "feature",
+      "example": {
+        "language": "js",
+        "code": "const request = new PaymentRequest(\n  [{ supportedMethods: \"basic-card\" }], \n  { total: { label: \"Total\", amount: { currency: \"USD\", value: \"9.99\" } } }\n);\nlet response = await request.show();\nresponse.complete(\"success\"));\n",
+        "codeHighlighted": "<span class=\"hljs-keyword\">const</span> request = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">PaymentRequest</span>(\n  [{ <span class=\"hljs-attr\">supportedMethods</span>: <span class=\"hljs-string\">&quot;basic-card&quot;</span> }], \n  { <span class=\"hljs-attr\">total</span>: { <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">&quot;Total&quot;</span>, <span class=\"hljs-attr\">amount</span>: { <span class=\"hljs-attr\">currency</span>: <span class=\"hljs-string\">&quot;USD&quot;</span>, <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">&quot;9.99&quot;</span> } } }\n);\n<span class=\"hljs-keyword\">let</span> response = <span class=\"hljs-keyword\">await</span> request.<span class=\"hljs-title function_\">show</span>();\nresponse.<span class=\"hljs-title function_\">complete</span>(<span class=\"hljs-string\">&quot;success&quot;</span>));"
+      },
+      "mdn": {
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest"
+      },
+      "resources": [
+        {
+          "url": "https://web.dev/explore/payments",
+          "title": "Web Payments"
+        }
+      ],
+      "webFeature": {
+        "id": "payment-request",
+        "description_html": "The <code>PaymentRequest</code> API prompts the user to make a payment through the browser's user interface.",
+        "group": [
+          "payments"
+        ],
+        "name": "Payment request",
+        "spec": [
+          "https://w3c.github.io/payment-request/"
+        ],
+        "url": "https://web-platform-dx.github.io/web-features-explorer/features/payment-request/",
+        "status": {
+          "baseline": "false",
+          "support": {
+            "chrome": "60",
+            "chrome_android": "53",
+            "edge": "15",
+            "safari": "11.1",
+            "safari_ios": "11.3"
+          }
+        }
+      }
+    }
+  }
+}
