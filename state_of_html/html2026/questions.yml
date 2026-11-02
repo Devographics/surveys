@@ -27,10 +27,11 @@
     # - id: contenteditable_plaintext # removed in 2026 (too niche)
 
     - id: forms_pain_points
+      autoAddParentTokens: true
       disableRegexMatching: true
       optionsNamespace: pain_points
       disallowedTokenIds: [form_issues]
-      matchTags: [common_pain_points, features_html]
+      matchTags: [common_pain_points]
       template: textList
 
 - id: interactivity
@@ -66,9 +67,10 @@
     #   yearAdded: 2025
 
     - id: interactivity_pain_points
+      autoAddParentTokens: true
       disableRegexMatching: true
       optionsNamespace: pain_points
-      matchTags: [common_pain_points, features_html]
+      matchTags: [common_pain_points]
       template: textList
 
 # - id: graphics_multimedia
@@ -102,7 +104,7 @@
 
 #     - id: graphics_pain_points
 #       disableRegexMatching: true
-#       matchTags: [common_pain_points, features_html]
+#       matchTags: [common_pain_points]
 #       template: textList
 
 - id: content
@@ -144,9 +146,10 @@
       yearAdded: 2026
 
     - id: content_pain_points
+      autoAddParentTokens: true
       disableRegexMatching: true
       optionsNamespace: pain_points
-      matchTags: [common_pain_points, features_html]
+      matchTags: [common_pain_points]
       template: textList
 
 - id: performance
@@ -172,11 +175,12 @@
       yearAdded: 2026
 
     - id: performance_pain_points
+      autoAddParentTokens: true
       disableRegexMatching: true
       optionsNamespace: pain_points
       disallowedTokenIds: [performance]
-      # matchTags: [common_pain_points, features_html]
-      matchTags: [common_pain_points, features_html]
+      # matchTags: [common_pain_points]
+      matchTags: [common_pain_points]
       template: textList
 
 # - id: security
@@ -187,7 +191,7 @@
 #     - id: sanitizer_api
 
 #     - id: security_pain_points
-#       matchTags: [common_pain_points, features_html]
+#       matchTags: [common_pain_points]
 #       template: textList
 
 - id: web_components
@@ -241,16 +245,16 @@
     #     - id: compatibility_issues
 
     # - id: using_web_components_pain_points
-    #   matchTags: [common_pain_points, features_html, web_components_pain_points]
+    #   matchTags: [common_pain_points, web_components_pain_points]
     #   template: textList
 
     # - id: making_web_components_pain_points
-    #   matchTags: [common_pain_points, features_html, web_components_pain_points]
+    #   matchTags: [common_pain_points, web_components_pain_points]
     #   template: textList
 
     # - id: web_components_common_pain_points
     #   limit: 3
-    #   matchTags: [common_pain_points, features_html, web_components_pain_points]
+    #   matchTags: [common_pain_points, web_components_pain_points]
     #   template: multiple
     #   options:
     #     - id: complex_apis
@@ -267,13 +271,14 @@
 
     # - id: web_components_other_pain_points
     #   disableRegexMatching: true
-    #   matchTags: [common_pain_points, features_html, web_components_pain_points]
+    #   matchTags: [common_pain_points, web_components_pain_points]
     #   template: textList
 
     - id: web_components_pain_points
+      autoAddParentTokens: true
       disableRegexMatching: true
       optionsNamespace: pain_points
-      matchTags: [common_pain_points, features_html, web_components_pain_points]
+      matchTags: [common_pain_points, web_components_pain_points]
       template: textList
 
 - id: accessibility
@@ -375,9 +380,10 @@
         - id: 4
 
     - id: accessibility_pain_points
+      autoAddParentTokens: true
       disableRegexMatching: true
       optionsNamespace: pain_points
-      matchTags: [common_pain_points, features_html]
+      matchTags: [common_pain_points]
       disallowedTokenIds: [accessibility]
       template: textList
 
@@ -414,9 +420,10 @@
     #   yearAdded: 2025
 
     - id: system_capabilities_pain_points
+      autoAddParentTokens: true
       disableRegexMatching: true
       optionsNamespace: pain_points
-      matchTags: [common_pain_points, features_html]
+      matchTags: [common_pain_points]
       template: textList
 
 # - id: other_tools
@@ -517,6 +524,20 @@
       matchTags:
         [html_features, js_features, css_features, html_missing_features]
       template: textList
+      instructions: |
+        This question asks respondents which existing HTML features or browser APIs they are unable to use because of browser differences or lack of support. Answers mostly name features.
+
+        The codebook contains only features. Assign a code for each feature the answer names or clearly describes, and nothing else. Do not assign codes for the kind of problem, or for parent categories of a feature. Answers naming several features get one code per feature.
+
+        Use the most specific feature that matches, e.g. "popover=hint" → popover_hint rather than popover_api.
+
+        Leave the list empty when no feature in the codebook applies, such as "None", "Too many to list", or a feature that isn't in the codebook. Never pick a loosely related code just to assign something.
+
+        Examples:
+        - "Customizable select" → ["customizable_select"]
+        - "Sanitizer API, Temporal API, scroll-driven animations" → ["sanitizer_api", "temporal", "scroll_driven_animations"]
+        - "Web Bluetooth" → ["web_bluetooth_api"]
+        - "None! We only support one modern browser version" → []
 
     - id: html_functionality_features
       disableRegexMatching: true
@@ -747,9 +768,10 @@
     # - id: design_system_customization
     #   template: slider
     - id: html_pain_points_freeform
+      autoAddParentTokens: true
       disableRegexMatching: true
       optionsNamespace: pain_points
-      matchTags: [common_pain_points]
+      matchTags: [common_pain_points, html_pain_points]
       template: textList
       # longText: true # does not work!!! do not use!
 
@@ -867,12 +889,63 @@
 
     - id: did_you_run_into_technical_issues
       template: textList
+      instructions: |
+        This question asks respondents whether they ran into technical issues while taking the survey itself. Answers describe bugs, UX problems, or other difficulties with the survey app or its questions.
+
+        Codes are organized as broad issues (parents) and specific problems (children). Assign the most specific code that describes the problem, e.g. "going back to the previous section wiped my answers" → back_navigation_data_loss, "the welcome message appeared on the Forms page" → intro_message_misplaced. Use a parent code only when no child fits, e.g. "lost my progress" → lost_answers.
+
+        Answers describing several problems get one code per problem.
+
+        Special cases:
+        - "no_issues": the respondent had no problems ("none", "no", "all good", praise). It must be the only code.
+        - "invalid": jokes, spam, or off-topic answers. It must be the only code.
+        - Leave the list empty for answers that are unclear or unrelated to the survey experience.
+
+        Examples:
+        - "The AI-generated code question was labeled 1 - 50% - 9." → ["scale_label_errors"]
+        - "Country list wasn't searchable, had to scroll all the way" → ["country_dropdown"]
+        - "Hit back swipe by accident -- all fill in answers were gone" → ["swipe_back_data_loss"]
+        - "None, great work!" → ["no_issues"]
 
     - id: missing_questions
       template: textList
+      matchTags: [html_missing_questions, common_missing_questions]
+      instructions: |
+        This question asks respondents which questions they wish the survey had asked. Each answer is a suggestion for the survey itself.
+
+        Codes are organized as topics (parents) and specific candidate questions (children). Assign the most specific code that captures the question the respondent wants asked, e.g. "How do you verify that your HTML code is correct?" → html_validation_tools, "Do you write HTML yourself or is it generated?" → html_authoring_method. Use a parent code only when the answer names a topic without a more specific question.
+
+        Most answers need 1 code; answers listing several suggestions get one code per suggestion.
+
+        Special cases:
+        - "invalid": jokes, spam, or off-topic answers. It must be the only code.
+        - Leave the list empty for answers with no suggestion, such as "none", "not sure", or "N.A.".
+
+        Examples:
+        - "What are the minimum browsers people are still supporting" → ["browser_support_targets"]
+        - "Suggestions for new HTML elements." → ["semantic_element_opinions"]
+        - "how do you feel about AI" → ["ai_sentiment"]
+        - "Learning resources used" → ["documentation_sources"]
 
     - id: how_can_we_improve
       template: longtext
+      instructions: |
+        This question asks respondents how the survey itself could be improved. Answers are suggestions about the survey's content, options, length, UI, translations, or reach.
+
+        Codes are organized as broad areas (parents) and specific suggestions (children). Assign the most specific code that captures the suggestion, e.g. "a link to a feature's MDN page on every question" → information_links, "please include a light mode" → light_mode. Use a parent code only when no child fits.
+
+        Answers with several suggestions get one code per suggestion.
+
+        Special cases:
+        - "positive_impression": the respondent praises the survey. Combine it with other codes only if the answer also contains a concrete suggestion.
+        - "dont_know": the respondent has no suggestion ("idk", "not sure").
+        - "invalid": jokes, spam, rants, or off-topic answers. It must be the only code.
+
+        Examples:
+        - "Short descriptions of each item available without having to click to another page" → ["feature_descriptions"]
+        - "Maybe add some images or code snippets?" → ["live_code_examples"]
+        - "make it shorter" → ["survey_too_long"]
+        - "It's very good already" → ["positive_impression"]
 
     - id: receive_notifications
       template: receive_notifications

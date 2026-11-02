@@ -247,6 +247,7 @@
                                 "layout_pain_points",
                                 "interactions_pain_points",
                                 "css_general_pain_points",
+                                "forms_pain_points",
                                 "has_web_features_id"
                               ],
                               "example": {
@@ -324,6 +325,7 @@
                             "css_features",
                             "css_other",
                             "html_interoperability_features",
+                            "interactivity_pain_points",
                             "has_web_features_id"
                           ],
                           "example": {
@@ -689,7 +691,6 @@
                           "descriptionHtml": "A declarative way for <code>&lt;button&gt;</code> to invoke predefined custom commands.",
                           "descriptionClean": "A declarative way for <button> to invoke predefined custom commands.",
                           "id": "command_invokers",
-                          "parentId": "interactivity",
                           "entityType": "feature",
                           "tags": [
                             "entities",
@@ -698,6 +699,7 @@
                             "html_main",
                             "front_end_frameworks_pain_points",
                             "interactions_pain_points",
+                            "interactivity_pain_points",
                             "has_web_features_id"
                           ],
                           "example": {
@@ -778,7 +780,6 @@
                           "descriptionHtml": "A declarative way for <code>&lt;button&gt;</code> to invoke predefined custom commands.",
                           "descriptionClean": "A declarative way for <button> to invoke predefined custom commands.",
                           "id": "command_invokers",
-                          "parentId": "interactivity",
                           "entityType": "feature",
                           "tags": [
                             "entities",
@@ -787,6 +788,7 @@
                             "html_main",
                             "front_end_frameworks_pain_points",
                             "interactions_pain_points",
+                            "interactivity_pain_points",
                             "has_web_features_id"
                           ],
                           "example": {
@@ -852,6 +854,7 @@
                             "features",
                             "html_features",
                             "html_main",
+                            "system_capabilities_pain_points",
                             "has_web_features_id"
                           ],
                           "example": {
@@ -974,6 +977,7 @@
                             "features",
                             "html_features",
                             "html_main",
+                            "system_capabilities_pain_points",
                             "has_web_features_id"
                           ],
                           "example": {
@@ -1036,6 +1040,7 @@
                             "features",
                             "js_features",
                             "js_other",
+                            "system_capabilities_pain_points",
                             "has_web_features_id"
                           ],
                           "example": {
@@ -1300,6 +1305,7 @@
                             "layout_pain_points",
                             "interactions_pain_points",
                             "css_general_pain_points",
+                            "interactivity_pain_points",
                             "has_web_features_id"
                           ],
                           "example": {
@@ -1517,32 +1523,66 @@
                         }
                       },
                       {
-                        "id": "web_nfc",
+                        "id": "webxr",
                         "count": 8,
                         "index": 24,
                         "percentageQuestion": 0.9,
                         "percentageSurvey": 0.13,
                         "entity": {
-                          "name": "Web NFC",
-                          "nameHtml": "Web NFC",
-                          "nameClean": "Web NFC",
-                          "id": "web_nfc",
-                          "parentId": "apis_capabilities",
+                          "name": "`navigator.xr` (WebXR Device API)",
+                          "nameHtml": "<code>navigator.xr</code> (WebXR Device API)",
+                          "nameClean": "navigator.xr (WebXR Device API)",
+                          "description": "Create AR/VR sessions with compatible output devices.",
+                          "descriptionHtml": "Create AR/VR sessions with compatible output devices.",
+                          "descriptionClean": "Create AR/VR sessions with compatible output devices.",
+                          "id": "webxr",
                           "entityType": "feature",
                           "tags": [
                             "entities",
                             "features",
-                            "html_features",
-                            "html_main"
-                          ]
+                            "js_features",
+                            "js_other",
+                            "has_web_features_id"
+                          ],
+                          "example": {
+                            "language": "js",
+                            "code": "const xr = navigator.xr;\nconst session = await xr?.requestSession(\"immersive-vr\");\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> xr = navigator.<span class=\"hljs-property\">xr</span>;\n<span class=\"hljs-keyword\">const</span> session = <span class=\"hljs-keyword\">await</span> xr?.<span class=\"hljs-title function_\">requestSession</span>(<span class=\"hljs-string\">&quot;immersive-vr&quot;</span>);"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/webxr"
+                          },
+                          "webFeature": {
+                            "id": "webxr-device",
+                            "description_html": "The <code>navigator.xr</code> API represents the browser's virtual reality or augmented reality system. You can use to request a WebXR session.",
+                            "group": [
+                              "webxr"
+                            ],
+                            "name": "WebXR",
+                            "spec": [
+                              "https://immersive-web.github.io/webxr/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/webxr-device/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "79",
+                                "chrome_android": "79",
+                                "edge": "79"
+                              }
+                            }
+                          }
                         }
                       },
                       {
                         "id": "other_answers",
-                        "count": 69,
+                        "count": 61,
                         "index": 25,
-                        "percentageQuestion": 7.81,
-                        "percentageSurvey": 1.1
+                        "percentageQuestion": 6.91,
+                        "percentageSurvey": 0.97
                       }
                     ]
                   },
@@ -1559,21 +1599,1228 @@
                       "buckets": [
                         {
                           "answerCount": 1,
-                          "count": 198,
-                          "percentage": 100
+                          "count": 173,
+                          "percentage": 58.6441
+                        },
+                        {
+                          "answerCount": 2,
+                          "count": 76,
+                          "percentage": 25.7627
+                        },
+                        {
+                          "answerCount": 3,
+                          "count": 26,
+                          "percentage": 8.8136
+                        },
+                        {
+                          "answerCount": 4,
+                          "count": 8,
+                          "percentage": 2.7119
+                        },
+                        {
+                          "answerCount": 5,
+                          "count": 8,
+                          "percentage": 2.7119
+                        },
+                        {
+                          "answerCount": 6,
+                          "count": 2,
+                          "percentage": 0.678
+                        },
+                        {
+                          "answerCount": 7,
+                          "count": 1,
+                          "percentage": 0.339
+                        },
+                        {
+                          "answerCount": 8,
+                          "count": 1,
+                          "percentage": 0.339
                         }
                       ],
-                      "max": 1,
-                      "mean": 1,
-                      "n": 198
+                      "max": 8,
+                      "mean": 1.7017,
+                      "n": 295
                     },
                     "editionId": "html2026",
                     "year": 2026,
                     "completion": {
-                      "count": 198,
-                      "percentageSurvey": 13.95,
-                      "total": 1419
-                    }
+                      "count": 295,
+                      "percentageSurvey": 14.11,
+                      "total": 2091
+                    },
+                    "buckets": [
+                      {
+                        "id": "customizable_select",
+                        "count": 59,
+                        "index": 0,
+                        "percentageQuestion": 20,
+                        "percentageSurvey": 2.82,
+                        "entity": {
+                          "name": "Customizable Select",
+                          "nameHtml": "Customizable Select",
+                          "nameClean": "Customizable Select",
+                          "description": "Stylable, customizable dropdown control. Previously `<selectlist>` and `<selectmenu>`.",
+                          "descriptionHtml": "Stylable, customizable dropdown control. Previously <code>&lt;selectlist&gt;</code> and <code>&lt;selectmenu&gt;</code>.",
+                          "descriptionClean": "Stylable, customizable dropdown control. Previously <selectlist> and <selectmenu>.",
+                          "id": "customizable_select",
+                          "parentId": "select_element",
+                          "entityType": "feature",
+                          "tags": [
+                            "entities",
+                            "features",
+                            "html_features",
+                            "html_main",
+                            "layout_pain_points",
+                            "interactions_pain_points",
+                            "css_general_pain_points",
+                            "forms_pain_points",
+                            "has_web_features_id"
+                          ],
+                          "example": {
+                            "language": "css",
+                            "code": "select,\n::picker(select) {\n  appearance: base-select;\n}",
+                            "codeHighlighted": "<span class=\"hljs-selector-tag\">select</span>,\n::<span class=\"hljs-built_in\">picker</span>(select) {\n  <span class=\"hljs-attribute\">appearance</span>: base-select;\n}"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://open-ui.org/components/customizableselect/",
+                              "title": "Customizable Select Element (Explainer)"
+                            },
+                            {
+                              "url": "https://web.dev/state-of-css-2022/#customizing-select-elements",
+                              "title": "State of CSS 2022"
+                            },
+                            {
+                              "url": "https://css-tricks.com/the-selectmenu-element/",
+                              "title": "The selectmenu HTML Tag | CSS-Tricks - CSS-Tricks"
+                            },
+                            {
+                              "url": "https://www.smashingmagazine.com/2023/06/advanced-form-control-styling-selectmenu-anchoring-api/",
+                              "title": "Advanced Form Control Styling With Selectmenu And Anchoring API — Smashing Magazine"
+                            },
+                            {
+                              "url": "https://hidde.blog/custom-select-with-selectmenu/",
+                              "title": "Two levels of customising <selectlist>\n"
+                            },
+                            {
+                              "url": "https://microsoftedge.github.io/Demos/selectmenu/",
+                              "title": "Open UI's selectmenu demos"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "customizable-select",
+                            "description_html": "The <code>&#x3C;select></code> element's appearance, including the button, selected option, picker dropdown, and options, can be customized using CSS.",
+                            "group": [
+                              "forms",
+                              "html-elements"
+                            ],
+                            "name": "Customizable <select>",
+                            "spec": [
+                              "https://open-ui.org/components/customizableselect/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/customizable-select/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "135",
+                                "chrome_android": "135",
+                                "edge": "135"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "id": "popover_api",
+                        "count": 39,
+                        "index": 1,
+                        "percentageQuestion": 13.22,
+                        "percentageSurvey": 1.87,
+                        "entity": {
+                          "name": "`popover` attribute (Popover API)",
+                          "nameHtml": "<code>popover</code> attribute (Popover API)",
+                          "nameClean": "popover attribute (Popover API)",
+                          "description": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
+                          "descriptionHtml": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
+                          "descriptionClean": "HTML syntax and JS API facilitating popovers such as overlays, popups, menus etc.",
+                          "id": "popover_api",
+                          "entityType": "feature",
+                          "tags": [
+                            "entities",
+                            "features",
+                            "html_features",
+                            "html_main",
+                            "interactivity_pain_points",
+                            "favorite_new_features",
+                            "front_end_frameworks_pain_points",
+                            "testing_pain_points",
+                            "layout_pain_points",
+                            "has_web_features_id"
+                          ],
+                          "example": {
+                            "language": "html",
+                            "code": "<button popovertarget=\"foo\">Toggle the popover</button>\n<div id=\"foo\" popover>Popover content</div>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">popovertarget</span>=<span class=\"hljs-string\">&quot;foo&quot;</span>&gt;</span>Toggle the popover<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;foo&quot;</span> <span class=\"hljs-attr\">popover</span>&gt;</span>Popover content<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Popover_API"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-html_global_attributes_popover"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://html.spec.whatwg.org/multipage/popover.html#dom-popover",
+                              "title": "HTML Standard"
+                            },
+                            {
+                              "url": "https://github.com/w3ctag/design-reviews/issues/743",
+                              "title": "The Popover API (previously Popup) · Issue #743 · w3ctag/design-reviews · GitHub"
+                            },
+                            {
+                              "url": "https://open-ui.org/components/popover.research.explainer/",
+                              "title": "Popover API (Explainer) | Open UI"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "popover",
+                            "description_html": "The <code>popover</code> HTML attribute creates an overlay to display content on top of other page content. Popovers can be shown declaratively using HTML, or using the <code>showPopover()</code> method.",
+                            "group": [
+                              "html"
+                            ],
+                            "name": "Popover",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/popover.html"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/popover/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2025-01-27",
+                              "support": {
+                                "chrome": "116",
+                                "chrome_android": "116",
+                                "edge": "116",
+                                "firefox": "125",
+                                "firefox_android": "125",
+                                "safari": "17",
+                                "safari_ios": "18.3"
+                              }
+                            }
+                          }
+                        },
+                        "nestedBuckets": [
+                          {
+                            "id": "popover_hint",
+                            "count": 8,
+                            "index": 0,
+                            "percentageQuestion": 2.71,
+                            "percentageSurvey": 0.38,
+                            "entity": {
+                              "name": "`popover=\"hint\"`",
+                              "nameHtml": "<code>popover=\"hint\"</code>",
+                              "nameClean": "popover=\"hint\"",
+                              "description": "A way to create less persistent popovers, such as tooltips.",
+                              "descriptionHtml": "A way to create less persistent popovers, such as tooltips.",
+                              "descriptionClean": "A way to create less persistent popovers, such as tooltips.",
+                              "id": "popover_hint",
+                              "parentId": "popover_api",
+                              "entityType": "feature",
+                              "tags": [
+                                "entities",
+                                "features",
+                                "html_features",
+                                "html_main",
+                                "interactivity_pain_points",
+                                "has_web_features_id"
+                              ],
+                              "example": {
+                                "language": "html",
+                                "code": "<div id=\"tooltip\" popover=\"hint\">\n  Save this document\n</div>\n<button popovertarget=\"tooltip\">\n  Save\n</button>\n",
+                                "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;tooltip&quot;</span> <span class=\"hljs-attr\">popover</span>=<span class=\"hljs-string\">&quot;hint&quot;</span>&gt;</span>\n  Save this document\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">popovertarget</span>=<span class=\"hljs-string\">&quot;tooltip&quot;</span>&gt;</span>\n  Save\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>"
+                              },
+                              "mdn": {
+                                "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"
+                              },
+                              "resources": [
+                                {
+                                  "url": "https://open-ui.org/components/popover-hint.research.explainer/",
+                                  "title": "Popover=hint (Explainer) | Open UI"
+                                },
+                                {
+                                  "url": "https://developer.chrome.com/blog/popover-hint",
+                                  "title": "Popover = hint"
+                                },
+                                {
+                                  "url": "https://una.im/popover-hint/",
+                                  "title": "What is popover=hint?"
+                                },
+                                {
+                                  "url": "https://html.spec.whatwg.org/multipage/popover.html#attr-popover-hint",
+                                  "title": "HTML Standard"
+                                }
+                              ],
+                              "webFeature": {
+                                "id": "popover-hint",
+                                "description_html": "The <code>popover=\"hint\"</code> global HTML attribute creates a popover that is subordinate to popovers with a <code>popover=\"auto\"</code> attribute. You can use this to create tooltips that don't dismiss <code>auto</code> popovers.",
+                                "group": [
+                                  "html"
+                                ],
+                                "name": "popover=\"hint\"",
+                                "spec": [
+                                  "https://html.spec.whatwg.org/multipage/popover.html#attr-popover-hint"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/popover-hint/",
+                                "status": {
+                                  "baseline": "false",
+                                  "support": {
+                                    "chrome": "151",
+                                    "chrome_android": "151",
+                                    "edge": "151",
+                                    "firefox": "153",
+                                    "firefox_android": "153"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "id": "anchor_positioning",
+                        "count": 21,
+                        "index": 2,
+                        "percentageQuestion": 7.12,
+                        "percentageSurvey": 1,
+                        "entity": {
+                          "name": "Anchor Positioning",
+                          "nameHtml": "Anchor Positioning",
+                          "nameClean": "Anchor Positioning",
+                          "id": "anchor_positioning",
+                          "parentId": "positioning",
+                          "entityType": "feature",
+                          "tags": [
+                            "entities",
+                            "features",
+                            "css_features",
+                            "css_other",
+                            "html_interoperability_features",
+                            "interactivity_pain_points",
+                            "has_web_features_id"
+                          ],
+                          "example": {
+                            "language": "css",
+                            "code": ".anchor {\n  anchor-name: --my-anchor;\n}\n.target {\n  position: absolute;\n  position-anchor: --my-anchor;\n  position-area: start end;\n}\n",
+                            "codeHighlighted": "<span class=\"hljs-selector-class\">.anchor</span> {\n  <span class=\"hljs-attribute\">anchor-name</span>: --my-anchor;\n}\n<span class=\"hljs-selector-class\">.target</span> {\n  <span class=\"hljs-attribute\">position</span>: absolute;\n  <span class=\"hljs-attribute\">position-anchor</span>: --my-anchor;\n  <span class=\"hljs-attribute\">position</span>-area: start end;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Anchor_positioning"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/css-anchor-positioning"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://kizu.dev/anchor-positioning-experiments/",
+                              "title": "Future CSS: Anchor Positioning\n"
+                            },
+                            {
+                              "url": "https://developer.chrome.com/blog/tether-elements-to-each-other-with-css-anchor-positioning/",
+                              "title": "Tether elements to each other with CSS anchor positioning\n"
+                            },
+                            {
+                              "url": "https://css-tricks.com/css-anchor-positioning-guide/",
+                              "title": "CSS Anchor Positioning Guide"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "anchor-positioning",
+                            "description_html": "Anchor positioning places an element based on the position of another element. For example, you can place a tooltip next to the content it references.",
+                            "name": "Anchor positioning",
+                            "spec": [
+                              "https://drafts.csswg.org/css-anchor-position-1/#anchoring"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/anchor-positioning/",
+                            "status": {
+                              "baseline": "false"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "id": "temporal",
+                        "count": 18,
+                        "index": 3,
+                        "percentageQuestion": 6.1,
+                        "percentageSurvey": 0.86,
+                        "entity": {
+                          "name": "Temporal",
+                          "nameHtml": "Temporal",
+                          "nameClean": "Temporal",
+                          "description": "Provides standard objects and functions for working with dates and times.",
+                          "descriptionHtml": "Provides standard objects and functions for working with dates and times.",
+                          "descriptionClean": "Provides standard objects and functions for working with dates and times.",
+                          "id": "temporal",
+                          "parentId": "date_and_time",
+                          "entityType": "feature",
+                          "tags": [
+                            "entities",
+                            "features",
+                            "js_features",
+                            "js_other",
+                            "has_web_features_id"
+                          ],
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"
+                          },
+                          "webFeature": {
+                            "id": "temporal",
+                            "description_html": "The <code>Temporal</code> API allows you to work with dates, times, time zones, and durations. It is more powerful than the <code>Date</code> API.",
+                            "group": [
+                              "javascript"
+                            ],
+                            "name": "Temporal",
+                            "spec": [
+                              "https://tc39.es/proposal-temporal/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/temporal/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "144",
+                                "chrome_android": "144",
+                                "edge": "144",
+                                "firefox": "139",
+                                "firefox_android": "139"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "id": "file_system_access",
+                        "count": 14,
+                        "index": 4,
+                        "percentageQuestion": 4.75,
+                        "percentageSurvey": 0.67,
+                        "entity": {
+                          "name": "File System Access API",
+                          "nameHtml": "File System Access API",
+                          "nameClean": "File System Access API",
+                          "description": "Access files and directories on the user's local device and create writable files that can be updated.",
+                          "descriptionHtml": "Access files and directories on the user's local device and create writable files that can be updated.",
+                          "descriptionClean": "Access files and directories on the user's local device and create writable files that can be updated.",
+                          "id": "file_system_access",
+                          "parentId": "filesystem_apis",
+                          "entityType": "feature",
+                          "tags": [
+                            "entities",
+                            "features",
+                            "html_features",
+                            "html_main",
+                            "browser_apis_pain_points",
+                            "mobile_web_apps_pain_points",
+                            "js_other",
+                            "system_capabilities_pain_points",
+                            "has_web_features_id"
+                          ],
+                          "example": {
+                            "language": "js",
+                            "code": "const handle = await window.showSaveFilePicker();\nconst writable = await handle.createWritable();\nawait writable.write(\"Hello, world!\");\nawait writable.close();\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> handle = <span class=\"hljs-keyword\">await</span> <span class=\"hljs-variable language_\">window</span>.<span class=\"hljs-title function_\">showSaveFilePicker</span>();\n<span class=\"hljs-keyword\">const</span> writable = <span class=\"hljs-keyword\">await</span> handle.<span class=\"hljs-title function_\">createWritable</span>();\n<span class=\"hljs-keyword\">await</span> writable.<span class=\"hljs-title function_\">write</span>(<span class=\"hljs-string\">&quot;Hello, world!&quot;</span>);\n<span class=\"hljs-keyword\">await</span> writable.<span class=\"hljs-title function_\">close</span>();"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/File_System_API"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/native-filesystem-api"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://web.dev/file-system-access/",
+                              "title": "File System Access API"
+                            },
+                            {
+                              "url": "https://fs.spec.whatwg.org/",
+                              "title": "File System API Specification"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "file-system-access",
+                            "description_html": "The <code>showOpenFilePicker()</code>, <code>showDirectoryPicker()</code>, and <code>showSaveFilePicker()</code> methods request access to files and directories on the user's device and returns a handle for reading and writing to them.",
+                            "group": [
+                              "file-system"
+                            ],
+                            "name": "File system access",
+                            "spec": [
+                              "https://wicg.github.io/file-system-access/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/file-system-access/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "86",
+                                "chrome_android": "132",
+                                "edge": "86"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "id": "dialog_element",
+                        "count": 13,
+                        "index": 5,
+                        "percentageQuestion": 4.41,
+                        "percentageSurvey": 0.62,
+                        "entity": {
+                          "name": "`<dialog>`",
+                          "nameHtml": "<code>&lt;dialog&gt;</code>",
+                          "nameClean": "<dialog>",
+                          "description": "Creates a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.",
+                          "descriptionHtml": "Creates a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.",
+                          "descriptionClean": "Creates a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.",
+                          "id": "dialog_element",
+                          "entityType": "feature",
+                          "tags": [
+                            "entities",
+                            "features",
+                            "html_features",
+                            "html_main",
+                            "css_interoperability_features",
+                            "interactivity_pain_points",
+                            "favorite_new_features",
+                            "testing_pain_points",
+                            "layout_pain_points",
+                            "has_web_features_id"
+                          ],
+                          "example": {
+                            "language": "html",
+                            "code": "<dialog id=\"confirm\">\n\t<form method=\"dialog\">\n\t\tAre you sure?\n\t\t<button value=\"1\">Yes</button>\n\t\t<button value=\"0\">No</button>\n\t</form>\n</dialog>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">dialog</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;confirm&quot;</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">form</span> <span class=\"hljs-attr\">method</span>=<span class=\"hljs-string\">&quot;dialog&quot;</span>&gt;</span>\n\t\tAre you sure?\n\t\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">value</span>=<span class=\"hljs-string\">&quot;1&quot;</span>&gt;</span>Yes<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n\t\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">value</span>=<span class=\"hljs-string\">&quot;0&quot;</span>&gt;</span>No<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">form</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">dialog</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element",
+                              "title": "HTML Standard"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "dialog",
+                            "description_html": "The <code>&#x3C;dialog></code> HTML element represents a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.",
+                            "group": [
+                              "html-elements"
+                            ],
+                            "name": "<dialog>",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/dialog/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2022-03-14",
+                              "support": {
+                                "chrome": "37",
+                                "chrome_android": "37",
+                                "edge": "79",
+                                "firefox": "98",
+                                "firefox_android": "98",
+                                "safari": "15.4",
+                                "safari_ios": "15.4"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "id": "web_bluetooth_api",
+                        "count": 12,
+                        "index": 6,
+                        "percentageQuestion": 4.07,
+                        "percentageSurvey": 0.57,
+                        "entity": {
+                          "name": "Web Bluetooth",
+                          "nameHtml": "Web Bluetooth",
+                          "nameClean": "Web Bluetooth",
+                          "description": "Connect to and communicate with nearby Bluetooth Low Energy (BLE) devices.",
+                          "descriptionHtml": "Connect to and communicate with nearby Bluetooth Low Energy (BLE) devices.",
+                          "descriptionClean": "Connect to and communicate with nearby Bluetooth Low Energy (BLE) devices.",
+                          "id": "web_bluetooth_api",
+                          "parentId": "apis_capabilities",
+                          "entityType": "feature",
+                          "tags": [
+                            "entities",
+                            "features",
+                            "html_features",
+                            "html_pwas",
+                            "browser_apis_pain_points",
+                            "system_capabilities_pain_points",
+                            "has_web_features_id"
+                          ],
+                          "example": {
+                            "language": "js",
+                            "code": "const device = await navigator.bluetooth.requestDevice({ filters: [{ services: [\"heart_rate\"] }] });\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> device = <span class=\"hljs-keyword\">await</span> navigator.<span class=\"hljs-property\">bluetooth</span>.<span class=\"hljs-title function_\">requestDevice</span>({ <span class=\"hljs-attr\">filters</span>: [{ <span class=\"hljs-attr\">services</span>: [<span class=\"hljs-string\">&quot;heart_rate&quot;</span>] }] });"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://developer.chrome.com/docs/capabilities/bluetooth",
+                              "title": "Communicating with Bluetooth devices over JavaScript"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "web-bluetooth",
+                            "description_html": "The Web Bluetooth API enables selecting and communicating with nearby Bluetooth devices.",
+                            "name": "Web Bluetooth",
+                            "spec": [
+                              "https://webbluetoothcg.github.io/web-bluetooth/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/web-bluetooth/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "70",
+                                "chrome_android": "56",
+                                "edge": "79"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "id": "datalist_element",
+                        "count": 11,
+                        "index": 7,
+                        "percentageQuestion": 3.73,
+                        "percentageSurvey": 0.53,
+                        "entity": {
+                          "name": "`<datalist>`",
+                          "nameHtml": "<code>&lt;datalist&gt;</code>",
+                          "nameClean": "<datalist>",
+                          "description": "Method of providing a list of presets for a user to select in a form control, while still allowing custom options.",
+                          "descriptionHtml": "Method of providing a list of presets for a user to select in a form control, while still allowing custom options.",
+                          "descriptionClean": "Method of providing a list of presets for a user to select in a form control, while still allowing custom options.",
+                          "id": "datalist_element",
+                          "parentId": "form_input_issues",
+                          "entityType": "feature",
+                          "tags": [
+                            "entities",
+                            "features",
+                            "html_features",
+                            "html_main",
+                            "forms_pain_points",
+                            "has_web_features_id"
+                          ],
+                          "example": {
+                            "language": "html",
+                            "code": "<input name=\"country\" list=\"countries\">\n<datalist id=\"countries\">\n  <option>Afghanistan</option>\n  ...\n</datalist>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">&quot;country&quot;</span> <span class=\"hljs-attr\">list</span>=<span class=\"hljs-string\">&quot;countries&quot;</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">datalist</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;countries&quot;</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">option</span>&gt;</span>Afghanistan<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">option</span>&gt;</span>\n  ...\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">datalist</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/datalist"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/datalist"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element",
+                              "title": "The datalist element"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "datalist",
+                            "description_html": "The <code>&#x3C;datalist></code> element sets recommended values for an <code>&#x3C;input></code> element. Browsers may show a dropdown menu of all values or match values as the user types.",
+                            "group": [
+                              "forms"
+                            ],
+                            "name": "<datalist>",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/datalist/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "69",
+                                "chrome_android": "69",
+                                "edge": "12",
+                                "firefox": "110",
+                                "safari": "12.1",
+                                "safari_ios": "12.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "id": "pwas",
+                        "count": 11,
+                        "index": 8,
+                        "percentageQuestion": 3.73,
+                        "percentageSurvey": 0.53,
+                        "entity": {
+                          "name": "Progressive Web Apps",
+                          "nameHtml": "Progressive Web Apps",
+                          "nameClean": "Progressive Web Apps",
+                          "id": "pwas",
+                          "entityType": "feature",
+                          "tags": [
+                            "entities",
+                            "features",
+                            "js_features",
+                            "js_other",
+                            "html_interoperability_features",
+                            "browser_apis_pain_points",
+                            "mobile_desktop_pain_points"
+                          ],
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"
+                          }
+                        }
+                      },
+                      {
+                        "id": "web_usb_api",
+                        "count": 11,
+                        "index": 9,
+                        "percentageQuestion": 3.73,
+                        "percentageSurvey": 0.53,
+                        "entity": {
+                          "name": "WebUSB API",
+                          "nameHtml": "WebUSB API",
+                          "nameClean": "WebUSB API",
+                          "description": "Directly communicate with USB devices, enabling data exchange without drivers or native apps.",
+                          "descriptionHtml": "Directly communicate with USB devices, enabling data exchange without drivers or native apps.",
+                          "descriptionClean": "Directly communicate with USB devices, enabling data exchange without drivers or native apps.",
+                          "id": "web_usb_api",
+                          "parentId": "apis_capabilities",
+                          "entityType": "feature",
+                          "tags": [
+                            "entities",
+                            "features",
+                            "html_features",
+                            "html_main",
+                            "system_capabilities_pain_points",
+                            "has_web_features_id"
+                          ],
+                          "example": {
+                            "language": "js",
+                            "code": "const device = await navigator.usb.requestDevice({ filters: [{ vendorId: 0x2341 }] });\nawait device.open();\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> device = <span class=\"hljs-keyword\">await</span> navigator.<span class=\"hljs-property\">usb</span>.<span class=\"hljs-title function_\">requestDevice</span>({ <span class=\"hljs-attr\">filters</span>: [{ <span class=\"hljs-attr\">vendorId</span>: <span class=\"hljs-number\">0x2341</span> }] });\n<span class=\"hljs-keyword\">await</span> device.<span class=\"hljs-title function_\">open</span>();"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebUSB_API"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://developer.chrome.com/docs/capabilities/usb",
+                              "title": "Access USB Devices on the Web"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "webusb",
+                            "description_html": "The WebUSB API exposes USB compatible devices to web pages.",
+                            "name": "WebUSB",
+                            "spec": [
+                              "https://wicg.github.io/webusb/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/webusb/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "61",
+                                "chrome_android": "61",
+                                "edge": "79"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "id": "command_invokers",
+                        "count": 10,
+                        "index": 10,
+                        "percentageQuestion": 3.39,
+                        "percentageSurvey": 0.48,
+                        "entity": {
+                          "name": "`command` and `commandfor` attributes (Command Invokers)",
+                          "nameHtml": "<code>command</code> and <code>commandfor</code> attributes (Command Invokers)",
+                          "nameClean": "command and commandfor attributes (Command Invokers)",
+                          "description": "A declarative way for `<button>` to invoke predefined custom commands.",
+                          "descriptionHtml": "A declarative way for <code>&lt;button&gt;</code> to invoke predefined custom commands.",
+                          "descriptionClean": "A declarative way for <button> to invoke predefined custom commands.",
+                          "id": "command_invokers",
+                          "entityType": "feature",
+                          "tags": [
+                            "entities",
+                            "features",
+                            "html_features",
+                            "html_main",
+                            "front_end_frameworks_pain_points",
+                            "interactions_pain_points",
+                            "interactivity_pain_points",
+                            "has_web_features_id"
+                          ],
+                          "example": {
+                            "language": "html",
+                            "code": "<button commandfor=\"mydialog\" command=\"show-modal\">\n  Show modal dialog\n</button>\n<dialog id=\"mydialog\">\n  <button commandfor=\"mydialog\" command=\"close\">\n    Close\n  </button>\n  *dialog content*\n</dialog>\n",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">commandfor</span>=<span class=\"hljs-string\">&quot;mydialog&quot;</span> <span class=\"hljs-attr\">command</span>=<span class=\"hljs-string\">&quot;show-modal&quot;</span>&gt;</span>\n  Show modal dialog\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">dialog</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;mydialog&quot;</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">commandfor</span>=<span class=\"hljs-string\">&quot;mydialog&quot;</span> <span class=\"hljs-attr\">command</span>=<span class=\"hljs-string\">&quot;close&quot;</span>&gt;</span>\n    Close\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n  *dialog content*\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">dialog</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://open-ui.org/components/invokers.explainer/",
+                              "title": "Invoker Commands (Explainer) | Open UI"
+                            },
+                            {
+                              "url": "https://css-tricks.com/invoker-commands-additional-ways-to-work-with-dialog-popover-and-more/",
+                              "title": "Invoker Commands: Additional Ways to Work With Dialog, Popover… and More?"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "invoker-commands",
+                            "description_html": "The <code>command</code> and <code>commandfor</code> attributes for the <code>&#x3C;button></code> HTML element dispatch an action to an element when the button is invoked (by click or keystroke), as a declarative alternative to <code>addEventListener()</code> calls or <code>onclick</code> attribute handlers.",
+                            "name": "Invoker commands",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/form-elements.html#attr-button-command"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/invoker-commands/",
+                            "status": {
+                              "baseline": "low",
+                              "baseline_low_date": "2025-12-12",
+                              "support": {
+                                "chrome": "135",
+                                "chrome_android": "135",
+                                "edge": "135",
+                                "firefox": "144",
+                                "firefox_android": "144",
+                                "safari": "26.2",
+                                "safari_ios": "26.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "id": "web_share_api",
+                        "count": 10,
+                        "index": 11,
+                        "percentageQuestion": 3.39,
+                        "percentageSurvey": 0.48,
+                        "entity": {
+                          "name": "Web Share API",
+                          "nameHtml": "Web Share API",
+                          "nameClean": "Web Share API",
+                          "description": "Exposes a mechanism for sharing content to various user-selected targets.",
+                          "descriptionHtml": "Exposes a mechanism for sharing content to various user-selected targets.",
+                          "descriptionClean": "Exposes a mechanism for sharing content to various user-selected targets.",
+                          "id": "web_share_api",
+                          "parentId": "apis_capabilities",
+                          "entityType": "feature",
+                          "tags": [
+                            "entities",
+                            "features",
+                            "html_features",
+                            "html_main",
+                            "system_capabilities_pain_points",
+                            "has_web_features_id"
+                          ],
+                          "example": {
+                            "language": "js",
+                            "code": "navigator.share(shareData)",
+                            "codeHighlighted": "navigator.<span class=\"hljs-title function_\">share</span>(shareData)"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/web-share"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://web.dev/web-share/",
+                              "title": "Integrate with the OS sharing UI with the Web Share API"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "share",
+                            "description_html": "The <code>navigator.share()</code> method invokes the device's native sharing mechanism and passes text, links, files, and other content to share targets. Also known as the Web Share API.",
+                            "name": "navigator.share()",
+                            "spec": [
+                              "https://w3c.github.io/web-share/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/share/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "128",
+                                "chrome_android": "61",
+                                "edge": "93",
+                                "firefox_android": "79",
+                                "safari": "12.1",
+                                "safari_ios": "12.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "id": "focusgroup_attribute",
+                        "count": 9,
+                        "index": 12,
+                        "percentageQuestion": 3.05,
+                        "percentageSurvey": 0.43,
+                        "entity": {
+                          "name": "`focusgroup` attribute",
+                          "nameHtml": "<code>focusgroup</code> attribute",
+                          "nameClean": "focusgroup attribute",
+                          "description": "Facilitate keyboard focus navigation using the keyboard arrow keys among a set of focusable elements.",
+                          "descriptionHtml": "Facilitate keyboard focus navigation using the keyboard arrow keys among a set of focusable elements.",
+                          "descriptionClean": "Facilitate keyboard focus navigation using the keyboard arrow keys among a set of focusable elements.",
+                          "id": "focusgroup_attribute",
+                          "entityType": "feature",
+                          "tags": [
+                            "entities",
+                            "features",
+                            "html_features",
+                            "html_main",
+                            "layout_pain_points"
+                          ],
+                          "example": {
+                            "language": "html",
+                            "code": "<div focusgroup=\"wrap horizontal\">\n\t<!-- child elements -->\n</div>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">focusgroup</span>=<span class=\"hljs-string\">&quot;wrap horizontal&quot;</span>&gt;</span>\n\t<span class=\"hljs-comment\">&lt;!-- child elements --&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://open-ui.org/components/focusgroup.explainer/",
+                              "title": "focusgroup (Explainer) | Open UI"
+                            },
+                            {
+                              "url": "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/Focusgroup/explainer.md?rgh-link-date=2022-02-20T23%3A49%3A02Z",
+                              "title": "focusgroup for HTML and CSS"
+                            },
+                            {
+                              "url": "https://chromestatus.com/feature/5637601087193088",
+                              "title": "Chrome Platform Status"
+                            },
+                            {
+                              "url": "https://bugs.chromium.org/p/chromium/issues/detail?id=1286127",
+                              "title": "1286127 -       chromium -      An open-source project to help move the web forward. -     Monorail"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "id": "input_type_date",
+                        "count": 8,
+                        "index": 13,
+                        "percentageQuestion": 2.71,
+                        "percentageSurvey": 0.38,
+                        "entity": {
+                          "name": "`<input type=\"date\">`",
+                          "nameHtml": "<code>&lt;input type=\"date\"&gt;</code>",
+                          "nameClean": "<input type=\"date\">",
+                          "id": "input_type_date",
+                          "parentId": "pickers",
+                          "entityType": "feature",
+                          "tags": [
+                            "entities",
+                            "features",
+                            "html_features",
+                            "html_forms",
+                            "forms_pain_points"
+                          ]
+                        }
+                      },
+                      {
+                        "id": "sanitizer_api",
+                        "count": 8,
+                        "index": 14,
+                        "percentageQuestion": 2.71,
+                        "percentageSurvey": 0.38,
+                        "entity": {
+                          "name": "Sanitizer API",
+                          "nameHtml": "Sanitizer API",
+                          "nameClean": "Sanitizer API",
+                          "description": "`element.setHTML()` and `Document.parseHTML()`. API to prevent XSS attacks by sanitizing untrusted strings of HTML.",
+                          "descriptionHtml": "<code>element.setHTML()</code> and <code>Document.parseHTML()</code>. API to prevent XSS attacks by sanitizing untrusted strings of HTML.",
+                          "descriptionClean": "element.setHTML() and Document.parseHTML(). API to prevent XSS attacks by sanitizing untrusted strings of HTML.",
+                          "id": "sanitizer_api",
+                          "parentId": "security_privacy",
+                          "entityType": "feature",
+                          "tags": [
+                            "entities",
+                            "features",
+                            "html_features",
+                            "html_main",
+                            "language_pain_points"
+                          ],
+                          "example": {
+                            "language": "js",
+                            "code": "greeting.setHTML('Hello ' + nameInput.value);\n",
+                            "codeHighlighted": "greeting.<span class=\"hljs-title function_\">setHTML</span>(<span class=\"hljs-string\">&#x27;Hello &#x27;</span> + nameInput.<span class=\"hljs-property\">value</span>);"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTML_Sanitizer_API"
+                          }
+                        }
+                      },
+                      {
+                        "id": "view_transitions",
+                        "count": 8,
+                        "index": 15,
+                        "percentageQuestion": 2.71,
+                        "percentageSurvey": 0.38,
+                        "entity": {
+                          "name": "View Transition API",
+                          "nameHtml": "View Transition API",
+                          "nameClean": "View Transition API",
+                          "id": "view_transitions",
+                          "parentId": "animations_issues",
+                          "entityType": "feature",
+                          "tags": [
+                            "entities",
+                            "features",
+                            "css_features",
+                            "css_animations_and_transforms",
+                            "html_pwas",
+                            "html_missing_features",
+                            "has_web_features_id"
+                          ],
+                          "example": {
+                            "language": "css",
+                            "code": "::view-transition-old(main-image),\n::view-transition-new(main-image) {\n  transform-origin: right top;\n}\n\n::view-transition-new(main-image) {\n  animation: 400ms ease-out both grow;\n}\n\nfigure {\n  view-transition-name: main-image;\n}\n",
+                            "codeHighlighted": "::<span class=\"hljs-built_in\">view-transition-old</span>(main-image),\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">transform-origin</span>: right top;\n}\n\n::<span class=\"hljs-built_in\">view-transition-new</span>(main-image) {\n  <span class=\"hljs-attribute\">animation</span>: <span class=\"hljs-number\">400ms</span> ease-out both grow;\n}\n\n<span class=\"hljs-selector-tag\">figure</span> {\n  <span class=\"hljs-attribute\">view-transition-name</span>: main-image;\n}"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/mdn-api_viewtransition"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://developer.chrome.com/docs/web-platform/view-transitions/",
+                              "title": "Smooth and simple transitions with the View Transitions API"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "cross-document-view-transitions",
+                            "description_html": "The <code>@view-transition</code> CSS rule sets whether a document opts-in to transitions between documents in a multi-page application. Both the old and new document must opt-in for a transition to be triggered.",
+                            "group": [
+                              "view-transitions"
+                            ],
+                            "name": "Cross-document view transitions",
+                            "spec": [
+                              "https://drafts.csswg.org/css-view-transitions-2/#cross-doc-opt-in"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/cross-document-view-transitions/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "126",
+                                "chrome_android": "126",
+                                "edge": "126",
+                                "safari": "18.2",
+                                "safari_ios": "18.2"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "id": "input_type_month",
+                        "count": 7,
+                        "index": 16,
+                        "percentageQuestion": 2.37,
+                        "percentageSurvey": 0.33,
+                        "entity": {
+                          "name": "`<input type=\"month\">`",
+                          "nameHtml": "<code>&lt;input type=\"month\"&gt;</code>",
+                          "nameClean": "<input type=\"month\">",
+                          "id": "input_type_month",
+                          "entityType": "feature",
+                          "tags": [
+                            "entities",
+                            "features",
+                            "html_features",
+                            "html_forms"
+                          ]
+                        }
+                      },
+                      {
+                        "id": "web_nfc_api",
+                        "count": 7,
+                        "index": 17,
+                        "percentageQuestion": 2.37,
+                        "percentageSurvey": 0.33,
+                        "entity": {
+                          "name": "Web NFC",
+                          "nameHtml": "Web NFC",
+                          "nameClean": "Web NFC",
+                          "description": "Read from and write to NFC tags using a device’s built-in NFC reader.",
+                          "descriptionHtml": "Read from and write to NFC tags using a device’s built-in NFC reader.",
+                          "descriptionClean": "Read from and write to NFC tags using a device’s built-in NFC reader.",
+                          "id": "web_nfc_api",
+                          "entityType": "feature",
+                          "tags": [
+                            "entities",
+                            "features",
+                            "js_features",
+                            "js_other",
+                            "system_capabilities_pain_points",
+                            "has_web_features_id"
+                          ],
+                          "example": {
+                            "language": "js",
+                            "code": "const reader = new NDEFReader();\nawait reader.scan();\nreader.onreading = e => console.log(e.message.records);\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> reader = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">NDEFReader</span>();\n<span class=\"hljs-keyword\">await</span> reader.<span class=\"hljs-title function_\">scan</span>();\nreader.<span class=\"hljs-property\">onreading</span> = <span class=\"hljs-function\"><span class=\"hljs-params\">e</span> =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(e.<span class=\"hljs-property\">message</span>.<span class=\"hljs-property\">records</span>);"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_NFC_API"
+                          },
+                          "webFeature": {
+                            "id": "web-nfc",
+                            "description_html": "The <code>NDEFReader</code> API reads and writes messages to near-field communication (NFC) tags.",
+                            "name": "Web NFC",
+                            "spec": [
+                              "https://w3c-cg.github.io/web-nfc/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/web-nfc/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome_android": "100"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "id": "speech_recognition_api",
+                        "count": 6,
+                        "index": 18,
+                        "percentageQuestion": 2.03,
+                        "percentageSurvey": 0.29,
+                        "entity": {
+                          "name": "`SpeechRecognition`",
+                          "nameHtml": "<code>SpeechRecognition</code>",
+                          "nameClean": "SpeechRecognition",
+                          "description": "API that converts microphone input to text.",
+                          "descriptionHtml": "API that converts microphone input to text.",
+                          "descriptionClean": "API that converts microphone input to text.",
+                          "id": "speech_recognition_api",
+                          "parentId": "apis_capabilities",
+                          "entityType": "feature",
+                          "tags": [
+                            "entities",
+                            "features",
+                            "js_features",
+                            "js_other",
+                            "system_capabilities_pain_points",
+                            "has_web_features_id"
+                          ],
+                          "example": {
+                            "language": "js",
+                            "code": "const rec = new SpeechRecognition();\nrec.lang = \"en-US\";\nrec.addEventListener(\"result\", e => console.log(e.results[0][0].transcript));\nrec.start();\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> rec = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">SpeechRecognition</span>();\nrec.<span class=\"hljs-property\">lang</span> = <span class=\"hljs-string\">&quot;en-US&quot;</span>;\nrec.<span class=\"hljs-title function_\">addEventListener</span>(<span class=\"hljs-string\">&quot;result&quot;</span>, <span class=\"hljs-function\"><span class=\"hljs-params\">e</span> =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(e.<span class=\"hljs-property\">results</span>[<span class=\"hljs-number\">0</span>][<span class=\"hljs-number\">0</span>].<span class=\"hljs-property\">transcript</span>));\nrec.<span class=\"hljs-title function_\">start</span>();"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition"
+                          },
+                          "webFeature": {
+                            "id": "speech-recognition",
+                            "description_html": "The <code>SpeechRecognition</code> API converts audio into text using the device's speech recognition service.",
+                            "group": [
+                              "speech"
+                            ],
+                            "name": "Speech recognition",
+                            "spec": [
+                              "https://webaudio.github.io/web-speech-api/#speechreco-section"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/speech-recognition/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "139",
+                                "chrome_android": "139",
+                                "edge": "139"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "id": "extended_builtins",
+                        "count": 5,
+                        "index": 19,
+                        "percentageQuestion": 1.69,
+                        "percentageSurvey": 0.24,
+                        "entity": {
+                          "name": "Extended built-ins",
+                          "nameHtml": "Extended built-ins",
+                          "nameClean": "Extended built-ins",
+                          "description": "Extend built-in elements with custom behavior.",
+                          "descriptionHtml": "Extend built-in elements with custom behavior.",
+                          "descriptionClean": "Extend built-in elements with custom behavior.",
+                          "id": "extended_builtins",
+                          "entityType": "feature",
+                          "tags": [
+                            "entities",
+                            "features",
+                            "html_features",
+                            "html_main"
+                          ],
+                          "example": {
+                            "language": "html",
+                            "code": "<button is=\"primary-button\">Continue</button>\n<script>\n\tcustomElements.define(\"primary-button\", PrimaryButton, {extends: \"button\"});\n</script>",
+                            "codeHighlighted": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">is</span>=<span class=\"hljs-string\">&quot;primary-button&quot;</span>&gt;</span>Continue<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span>&gt;</span><span class=\"language-javascript\">\n\tcustomElements.<span class=\"hljs-title function_\">define</span>(<span class=\"hljs-string\">&quot;primary-button&quot;</span>, <span class=\"hljs-title class_\">PrimaryButton</span>, {<span class=\"hljs-attr\">extends</span>: <span class=\"hljs-string\">&quot;button&quot;</span>});\n</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://html.spec.whatwg.org/multipage/custom-elements.html#attr-is",
+                              "title": "HTML Standard"
+                            },
+                            {
+                              "url": "https://github.com/WebKit/standards-positions/issues/97",
+                              "title": "Customized built-in elements · Issue #97 · WebKit/standards-positions · GitHub"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "id": "input_type_week",
+                        "count": 5,
+                        "index": 20,
+                        "percentageQuestion": 1.69,
+                        "percentageSurvey": 0.24,
+                        "entity": {
+                          "name": "`<input type=\"week\">`",
+                          "nameHtml": "<code>&lt;input type=\"week\"&gt;</code>",
+                          "nameClean": "<input type=\"week\">",
+                          "id": "input_type_week",
+                          "entityType": "feature",
+                          "tags": [
+                            "entities",
+                            "features",
+                            "html_features",
+                            "html_forms"
+                          ]
+                        }
+                      }
+                    ]
                   }
                 ]
               }
