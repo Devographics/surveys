@@ -544,6 +544,20 @@
       matchTags:
         [html_features, js_features, css_features, html_missing_features]
       template: textList
+      instructions: |
+        This question asks respondents which existing HTML features or browser APIs they are unable to use for reasons other than browser support, and why. Answers usually name a feature and explain the problem with it (hard to style, poor accessibility, missing functionality, etc.).
+
+        The codebook contains only features. Assign a code for each feature the answer names or clearly describes, and nothing else. Never code the reason the feature can't be used, the kind of problem, or parent categories of a feature. Answers naming several features get one code per feature.
+
+        Use the most specific feature that matches, e.g. "Multiple select" → select_element_multiselect rather than select_element, and "combobox" → autocomplete.
+
+        Leave the list empty when no feature in the codebook applies, such as "None that I can think of", a general complaint, or a feature that isn't in the codebook. Never pick a loosely related code just to assign something.
+
+        Examples:
+        - "Datalists (can't limit entries to only the ones in the list without JS)" → ["datalist_element"]
+        - "Dialog, custom select element, popover api, commandfor because our UI library doesn't support them yet" → ["dialog_element", "customizable_select", "popover_api", "command_invokers"]
+        - "range slider with two thumbs" → ["multi_handle_slider"]
+        - "None that I can think of" → []
 
     # - id: html_new_features
     #   limit: 3
