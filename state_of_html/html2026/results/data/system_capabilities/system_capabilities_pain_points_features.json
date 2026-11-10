@@ -1228,9 +1228,82 @@
                     },
                     "buckets": [
                       {
+                        "id": "filesystem_access",
+                        "count": 17,
+                        "index": 0,
+                        "percentageQuestion": 5.31,
+                        "percentageSurvey": 0.27,
+                        "entity": {
+                          "name": "File System Access API",
+                          "nameHtml": "File System Access API",
+                          "nameClean": "File System Access API",
+                          "description": "Access files and directories on the user's local device and create writable files that can be updated.",
+                          "descriptionHtml": "Access files and directories on the user's local device and create writable files that can be updated.",
+                          "descriptionClean": "Access files and directories on the user's local device and create writable files that can be updated.",
+                          "id": "file_system_access",
+                          "idAliases": [
+                            "filesystem_access"
+                          ],
+                          "parentId": "filesystem_apis",
+                          "entityType": "feature",
+                          "tags": [
+                            "entities",
+                            "features",
+                            "html_features",
+                            "html_main",
+                            "browser_apis_pain_points",
+                            "mobile_web_apps_pain_points",
+                            "js_other",
+                            "system_capabilities_pain_points",
+                            "has_web_features_id"
+                          ],
+                          "example": {
+                            "language": "js",
+                            "code": "const handle = await window.showSaveFilePicker();\nconst writable = await handle.createWritable();\nawait writable.write(\"Hello, world!\");\nawait writable.close();\n",
+                            "codeHighlighted": "<span class=\"hljs-keyword\">const</span> handle = <span class=\"hljs-keyword\">await</span> <span class=\"hljs-variable language_\">window</span>.<span class=\"hljs-title function_\">showSaveFilePicker</span>();\n<span class=\"hljs-keyword\">const</span> writable = <span class=\"hljs-keyword\">await</span> handle.<span class=\"hljs-title function_\">createWritable</span>();\n<span class=\"hljs-keyword\">await</span> writable.<span class=\"hljs-title function_\">write</span>(<span class=\"hljs-string\">&quot;Hello, world!&quot;</span>);\n<span class=\"hljs-keyword\">await</span> writable.<span class=\"hljs-title function_\">close</span>();"
+                          },
+                          "mdn": {
+                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/File_System_API"
+                          },
+                          "caniuse": {
+                            "url": "https://caniuse.com/native-filesystem-api"
+                          },
+                          "resources": [
+                            {
+                              "url": "https://web.dev/file-system-access/",
+                              "title": "File System Access API"
+                            },
+                            {
+                              "url": "https://fs.spec.whatwg.org/",
+                              "title": "File System API Specification"
+                            }
+                          ],
+                          "webFeature": {
+                            "id": "file-system-access",
+                            "description_html": "The <code>showOpenFilePicker()</code>, <code>showDirectoryPicker()</code>, and <code>showSaveFilePicker()</code> methods request access to files and directories on the user's device and returns a handle for reading and writing to them.",
+                            "group": [
+                              "file-system"
+                            ],
+                            "name": "File system access",
+                            "spec": [
+                              "https://wicg.github.io/file-system-access/"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/file-system-access/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "86",
+                                "chrome_android": "132",
+                                "edge": "86"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
                         "id": "webusb",
                         "count": 9,
-                        "index": 0,
+                        "index": 1,
                         "percentageQuestion": 2.81,
                         "percentageSurvey": 0.14,
                         "entity": {
@@ -1290,7 +1363,7 @@
                       {
                         "id": "web_share_api",
                         "count": 8,
-                        "index": 1,
+                        "index": 2,
                         "percentageQuestion": 2.5,
                         "percentageSurvey": 0.13,
                         "entity": {
@@ -1353,7 +1426,7 @@
                       {
                         "id": "media_capture",
                         "count": 5,
-                        "index": 2,
+                        "index": 3,
                         "percentageQuestion": 1.56,
                         "percentageSurvey": 0.08,
                         "entity": {
@@ -1422,7 +1495,7 @@
                       {
                         "id": "web_midi_api",
                         "count": 5,
-                        "index": 3,
+                        "index": 4,
                         "percentageQuestion": 1.56,
                         "percentageSurvey": 0.08,
                         "entity": {
@@ -1521,6 +1594,9 @@
                           "descriptionHtml": "Access files and directories on the user's local device and create writable files that can be updated.",
                           "descriptionClean": "Access files and directories on the user's local device and create writable files that can be updated.",
                           "id": "file_system_access",
+                          "idAliases": [
+                            "filesystem_access"
+                          ],
                           "parentId": "filesystem_apis",
                           "entityType": "feature",
                           "tags": [

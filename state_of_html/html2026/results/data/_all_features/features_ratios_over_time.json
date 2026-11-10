@@ -4442,6 +4442,30 @@
               },
               {
                 "id": "filesystem_access",
+                "entity": {
+                  "name": "File System Access API",
+                  "nameClean": "File System Access API",
+                  "nameHtml": "File System Access API",
+                  "entityType": "feature",
+                  "description": "Access files and directories on the user's local device and create writable files that can be updated.",
+                  "descriptionClean": "Access files and directories on the user's local device and create writable files that can be updated.",
+                  "descriptionHtml": "Access files and directories on the user's local device and create writable files that can be updated.",
+                  "caniuse": {
+                    "name": "native-filesystem-api",
+                    "url": "https://caniuse.com/native-filesystem-api"
+                  },
+                  "mdn": {
+                    "locale": "en-US",
+                    "url": "https://developer.mozilla.org/en-US/docs/Web/API/File_System_API",
+                    "title": "File System API",
+                    "summary": "The File System API — with extensions provided via the File System Access API to access files on the device file system — allows read, write and file management capabilities."
+                  },
+                  "example": {
+                    "language": "js",
+                    "code": "const handle = await window.showSaveFilePicker();\nconst writable = await handle.createWritable();\nawait writable.write(\"Hello, world!\");\nawait writable.close();\n",
+                    "codeHighlighted": "<span class=\"hljs-keyword\">const</span> handle = <span class=\"hljs-keyword\">await</span> <span class=\"hljs-variable language_\">window</span>.<span class=\"hljs-title function_\">showSaveFilePicker</span>();\n<span class=\"hljs-keyword\">const</span> writable = <span class=\"hljs-keyword\">await</span> handle.<span class=\"hljs-title function_\">createWritable</span>();\n<span class=\"hljs-keyword\">await</span> writable.<span class=\"hljs-title function_\">write</span>(<span class=\"hljs-string\">&quot;Hello, world!&quot;</span>);\n<span class=\"hljs-keyword\">await</span> writable.<span class=\"hljs-title function_\">close</span>();"
+                  }
+                },
                 "responses": {
                   "allEditions": [
                     {

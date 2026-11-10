@@ -1331,64 +1331,9 @@
                             ]
                           },
                           {
-                            "id": "google",
-                            "count": 23,
-                            "index": 1,
-                            "percentageQuestion": 7.19,
-                            "percentageSurvey": 0.37,
-                            "entity": {
-                              "name": "Google",
-                              "nameHtml": "Google",
-                              "nameClean": "Google",
-                              "id": "google",
-                              "parentId": "interop_issues",
-                              "entityType": "default",
-                              "tags": [
-                                "entities",
-                                "sites",
-                                "common_sources",
-                                "companies",
-                                "layout_pain_points",
-                                "colors_pain_points",
-                                "interactions_pain_points",
-                                "other_features_pain_points",
-                                "css_general_pain_points"
-                              ],
-                              "homepage": {
-                                "url": "https://google.com"
-                              }
-                            },
-                            "nestedBuckets": [
-                              {
-                                "id": "chrome",
-                                "count": 18,
-                                "index": 0,
-                                "percentageQuestion": 5.63,
-                                "percentageSurvey": 0.29,
-                                "entity": {
-                                  "name": "Chrome",
-                                  "nameHtml": "Chrome",
-                                  "nameClean": "Chrome",
-                                  "id": "chrome",
-                                  "parentId": "google",
-                                  "entityType": "default",
-                                  "tags": [
-                                    "entities",
-                                    "apps",
-                                    "browsers",
-                                    "browser_apis_pain_points"
-                                  ],
-                                  "homepage": {
-                                    "url": "https://www.google.com/chrome/"
-                                  }
-                                }
-                              }
-                            ]
-                          },
-                          {
                             "id": "mozilla",
                             "count": 23,
-                            "index": 2,
+                            "index": 1,
                             "percentageQuestion": 7.19,
                             "percentageSurvey": 0.37,
                             "entity": {
@@ -1437,6 +1382,61 @@
                                   ],
                                   "homepage": {
                                     "url": "https://www.mozilla.org/en-US/firefox/new/"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "id": "google",
+                            "count": 23,
+                            "index": 2,
+                            "percentageQuestion": 7.19,
+                            "percentageSurvey": 0.37,
+                            "entity": {
+                              "name": "Google",
+                              "nameHtml": "Google",
+                              "nameClean": "Google",
+                              "id": "google",
+                              "parentId": "interop_issues",
+                              "entityType": "default",
+                              "tags": [
+                                "entities",
+                                "sites",
+                                "common_sources",
+                                "companies",
+                                "layout_pain_points",
+                                "colors_pain_points",
+                                "interactions_pain_points",
+                                "other_features_pain_points",
+                                "css_general_pain_points"
+                              ],
+                              "homepage": {
+                                "url": "https://google.com"
+                              }
+                            },
+                            "nestedBuckets": [
+                              {
+                                "id": "chrome",
+                                "count": 18,
+                                "index": 0,
+                                "percentageQuestion": 5.63,
+                                "percentageSurvey": 0.29,
+                                "entity": {
+                                  "name": "Chrome",
+                                  "nameHtml": "Chrome",
+                                  "nameClean": "Chrome",
+                                  "id": "chrome",
+                                  "parentId": "google",
+                                  "entityType": "default",
+                                  "tags": [
+                                    "entities",
+                                    "apps",
+                                    "browsers",
+                                    "browser_apis_pain_points"
+                                  ],
+                                  "homepage": {
+                                    "url": "https://www.google.com/chrome/"
                                   }
                                 }
                               }
@@ -1494,7 +1494,82 @@
                                 "system_capabilities_pain_points",
                                 "language_pain_points"
                               ]
-                            }
+                            },
+                            "nestedBuckets": [
+                              {
+                                "id": "filesystem_access",
+                                "count": 17,
+                                "index": 0,
+                                "percentageQuestion": 5.31,
+                                "percentageSurvey": 0.27,
+                                "entity": {
+                                  "name": "File System Access API",
+                                  "nameHtml": "File System Access API",
+                                  "nameClean": "File System Access API",
+                                  "description": "Access files and directories on the user's local device and create writable files that can be updated.",
+                                  "descriptionHtml": "Access files and directories on the user's local device and create writable files that can be updated.",
+                                  "descriptionClean": "Access files and directories on the user's local device and create writable files that can be updated.",
+                                  "id": "file_system_access",
+                                  "idAliases": [
+                                    "filesystem_access"
+                                  ],
+                                  "parentId": "filesystem_apis",
+                                  "entityType": "feature",
+                                  "tags": [
+                                    "entities",
+                                    "features",
+                                    "html_features",
+                                    "html_main",
+                                    "browser_apis_pain_points",
+                                    "mobile_web_apps_pain_points",
+                                    "js_other",
+                                    "system_capabilities_pain_points",
+                                    "has_web_features_id"
+                                  ],
+                                  "example": {
+                                    "language": "js",
+                                    "code": "const handle = await window.showSaveFilePicker();\nconst writable = await handle.createWritable();\nawait writable.write(\"Hello, world!\");\nawait writable.close();\n",
+                                    "codeHighlighted": "<span class=\"hljs-keyword\">const</span> handle = <span class=\"hljs-keyword\">await</span> <span class=\"hljs-variable language_\">window</span>.<span class=\"hljs-title function_\">showSaveFilePicker</span>();\n<span class=\"hljs-keyword\">const</span> writable = <span class=\"hljs-keyword\">await</span> handle.<span class=\"hljs-title function_\">createWritable</span>();\n<span class=\"hljs-keyword\">await</span> writable.<span class=\"hljs-title function_\">write</span>(<span class=\"hljs-string\">&quot;Hello, world!&quot;</span>);\n<span class=\"hljs-keyword\">await</span> writable.<span class=\"hljs-title function_\">close</span>();"
+                                  },
+                                  "mdn": {
+                                    "url": "https://developer.mozilla.org/en-US/docs/Web/API/File_System_API"
+                                  },
+                                  "caniuse": {
+                                    "url": "https://caniuse.com/native-filesystem-api"
+                                  },
+                                  "resources": [
+                                    {
+                                      "url": "https://web.dev/file-system-access/",
+                                      "title": "File System Access API"
+                                    },
+                                    {
+                                      "url": "https://fs.spec.whatwg.org/",
+                                      "title": "File System API Specification"
+                                    }
+                                  ],
+                                  "webFeature": {
+                                    "id": "file-system-access",
+                                    "description_html": "The <code>showOpenFilePicker()</code>, <code>showDirectoryPicker()</code>, and <code>showSaveFilePicker()</code> methods request access to files and directories on the user's device and returns a handle for reading and writing to them.",
+                                    "group": [
+                                      "file-system"
+                                    ],
+                                    "name": "File system access",
+                                    "spec": [
+                                      "https://wicg.github.io/file-system-access/"
+                                    ],
+                                    "url": "https://web-platform-dx.github.io/web-features-explorer/features/file-system-access/",
+                                    "status": {
+                                      "baseline": "false",
+                                      "support": {
+                                        "chrome": "86",
+                                        "chrome_android": "132",
+                                        "edge": "86"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ]
                           },
                           {
                             "id": "webusb",
@@ -1620,31 +1695,9 @@
                             }
                           },
                           {
-                            "id": "web_midi_api",
-                            "count": 5,
-                            "index": 3,
-                            "percentageQuestion": 1.56,
-                            "percentageSurvey": 0.08,
-                            "entity": {
-                              "name": "Web MIDI API",
-                              "nameHtml": "Web MIDI API",
-                              "nameClean": "Web MIDI API",
-                              "id": "web_midi_api",
-                              "parentId": "apis_capabilities",
-                              "entityType": "feature",
-                              "tags": [
-                                "entities",
-                                "features",
-                                "html_features",
-                                "html_main",
-                                "system_capabilities_pain_points"
-                              ]
-                            }
-                          },
-                          {
                             "id": "media_capture",
                             "count": 5,
-                            "index": 4,
+                            "index": 3,
                             "percentageQuestion": 1.56,
                             "percentageSurvey": 0.08,
                             "entity": {
@@ -1708,6 +1761,28 @@
                                   }
                                 }
                               }
+                            }
+                          },
+                          {
+                            "id": "web_midi_api",
+                            "count": 5,
+                            "index": 4,
+                            "percentageQuestion": 1.56,
+                            "percentageSurvey": 0.08,
+                            "entity": {
+                              "name": "Web MIDI API",
+                              "nameHtml": "Web MIDI API",
+                              "nameClean": "Web MIDI API",
+                              "id": "web_midi_api",
+                              "parentId": "apis_capabilities",
+                              "entityType": "feature",
+                              "tags": [
+                                "entities",
+                                "features",
+                                "html_features",
+                                "html_main",
+                                "system_capabilities_pain_points"
+                              ]
                             }
                           }
                         ]
@@ -1898,16 +1973,9 @@
                         ]
                       },
                       {
-                        "id": "filesystem_access",
-                        "count": 17,
-                        "index": 6,
-                        "percentageQuestion": 5.31,
-                        "percentageSurvey": 0.27
-                      },
-                      {
                         "id": "environments_consumers",
                         "count": 12,
-                        "index": 7,
+                        "index": 6,
                         "percentageQuestion": 3.75,
                         "percentageSurvey": 0.19,
                         "entity": {
@@ -1951,7 +2019,7 @@
                       {
                         "id": "reliability",
                         "count": 12,
-                        "index": 8,
+                        "index": 7,
                         "percentageQuestion": 3.75,
                         "percentageSurvey": 0.19,
                         "entity": {
@@ -1973,7 +2041,7 @@
                       {
                         "id": "end_user_ux_issues",
                         "count": 11,
-                        "index": 9,
+                        "index": 8,
                         "percentageQuestion": 3.44,
                         "percentageSurvey": 0.18,
                         "entity": {
@@ -1996,7 +2064,7 @@
                       {
                         "id": "scope_creep",
                         "count": 9,
-                        "index": 10,
+                        "index": 9,
                         "percentageQuestion": 2.81,
                         "percentageSurvey": 0.14,
                         "entity": {
@@ -2015,7 +2083,7 @@
                       {
                         "id": "cognitive_overload",
                         "count": 8,
-                        "index": 11,
+                        "index": 10,
                         "percentageQuestion": 2.5,
                         "percentageSurvey": 0.13,
                         "entity": {
@@ -2058,7 +2126,7 @@
                       {
                         "id": "storage",
                         "count": 7,
-                        "index": 12,
+                        "index": 11,
                         "percentageQuestion": 2.19,
                         "percentageSurvey": 0.11,
                         "entity": {
@@ -2079,14 +2147,14 @@
                       {
                         "id": "web_bluetooth",
                         "count": 6,
-                        "index": 13,
+                        "index": 12,
                         "percentageQuestion": 1.88,
                         "percentageSurvey": 0.1
                       },
                       {
                         "id": "debugging_issues",
                         "count": 5,
-                        "index": 14,
+                        "index": 13,
                         "percentageQuestion": 1.56,
                         "percentageSurvey": 0.08,
                         "entity": {
@@ -2108,7 +2176,7 @@
                       {
                         "id": "native_look_feel",
                         "count": 5,
-                        "index": 15,
+                        "index": 14,
                         "percentageQuestion": 1.56,
                         "percentageSurvey": 0.08,
                         "entity": {
@@ -2133,7 +2201,7 @@
                       {
                         "id": "peripheral_access",
                         "count": 5,
-                        "index": 16,
+                        "index": 15,
                         "percentageQuestion": 1.56,
                         "percentageSurvey": 0.08,
                         "entity": {
@@ -2157,14 +2225,14 @@
                       {
                         "id": "no_answer",
                         "count": 5902,
-                        "index": 17,
+                        "index": 16,
                         "percentageQuestion": 0,
                         "percentageSurvey": 94.84
                       },
                       {
                         "id": "other_answers",
                         "count": 133,
-                        "index": 18,
+                        "index": 17,
                         "percentageQuestion": 41.61,
                         "percentageSurvey": 2.17
                       }
@@ -2396,6 +2464,9 @@
                                       "descriptionHtml": "Access files and directories on the user's local device and create writable files that can be updated.",
                                       "descriptionClean": "Access files and directories on the user's local device and create writable files that can be updated.",
                                       "id": "file_system_access",
+                                      "idAliases": [
+                                        "filesystem_access"
+                                      ],
                                       "parentId": "filesystem_apis",
                                       "entityType": "feature",
                                       "tags": [
