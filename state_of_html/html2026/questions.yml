@@ -31,7 +31,7 @@
       disableRegexMatching: true
       optionsNamespace: pain_points
       disallowedTokenIds: [form_issues]
-      matchTags: [common_pain_points]
+      matchTags: [common_pain_points, browsers]
       template: textList
 
 - id: interactivity
@@ -70,7 +70,7 @@
       autoAddParentTokens: true
       disableRegexMatching: true
       optionsNamespace: pain_points
-      matchTags: [common_pain_points]
+      matchTags: [common_pain_points, browsers]
       template: textList
 
 # - id: graphics_multimedia
@@ -149,7 +149,7 @@
       autoAddParentTokens: true
       disableRegexMatching: true
       optionsNamespace: pain_points
-      matchTags: [common_pain_points]
+      matchTags: [common_pain_points, browsers]
       template: textList
 
 - id: performance
@@ -180,7 +180,7 @@
       optionsNamespace: pain_points
       disallowedTokenIds: [performance]
       # matchTags: [common_pain_points]
-      matchTags: [common_pain_points]
+      matchTags: [common_pain_points, browsers]
       template: textList
 
 # - id: security
@@ -278,7 +278,7 @@
       autoAddParentTokens: true
       disableRegexMatching: true
       optionsNamespace: pain_points
-      matchTags: [common_pain_points, web_components_pain_points]
+      matchTags: [common_pain_points, web_components_pain_points, browsers]
       template: textList
 
 - id: accessibility
@@ -293,7 +293,7 @@
 
     - id: accessibility_techniques
       template: multipleWithOther
-      matchTags: [accessibility]
+      matchTags: [accessibility, browsers]
       cutoff: 999
       options:
         # - id: tabindex
@@ -383,7 +383,7 @@
       autoAddParentTokens: true
       disableRegexMatching: true
       optionsNamespace: pain_points
-      matchTags: [common_pain_points]
+      matchTags: [common_pain_points, browsers]
       disallowedTokenIds: [accessibility]
       template: textList
 
@@ -423,7 +423,7 @@
       autoAddParentTokens: true
       disableRegexMatching: true
       optionsNamespace: pain_points
-      matchTags: [common_pain_points]
+      matchTags: [common_pain_points, browsers]
       template: textList
 
 # - id: other_tools
@@ -522,7 +522,13 @@
     - id: html_interoperability_features
       disableRegexMatching: true
       matchTags:
-        [html_features, js_features, css_features, html_missing_features]
+        [
+          html_features,
+          js_features,
+          css_features,
+          html_missing_features,
+          browsers,
+        ]
       template: textList
       instructions: |
         This question asks respondents which existing HTML features or browser APIs they are unable to use because of browser differences or lack of support. Answers mostly name features.
@@ -542,7 +548,13 @@
     - id: html_functionality_features
       disableRegexMatching: true
       matchTags:
-        [html_features, js_features, css_features, html_missing_features]
+        [
+          html_features,
+          js_features,
+          css_features,
+          html_missing_features,
+          browsers,
+        ]
       template: textList
       instructions: |
         This question asks respondents which existing HTML features or browser APIs they are unable to use for reasons other than browser support, and why. Answers usually name a feature and explain the problem with it (hard to style, poor accessibility, missing functionality, etc.).
@@ -586,7 +598,13 @@
       allowComment: true
       order: random
       matchTags:
-        [features_html, features_js, css_features, html_missing_features]
+        [
+          features_html,
+          features_js,
+          css_features,
+          html_missing_features,
+          browsers,
+        ]
       options:
         - id: charts
         - id: combobox_autocomplete
@@ -785,7 +803,7 @@
       autoAddParentTokens: true
       disableRegexMatching: true
       optionsNamespace: pain_points
-      matchTags: [common_pain_points, html_pain_points]
+      matchTags: [common_pain_points, html_pain_points, browsers]
       template: textList
       # longText: true # does not work!!! do not use!
 
