@@ -1191,7 +1191,8 @@
                             "features",
                             "html_features",
                             "html_main",
-                            "layout_pain_points"
+                            "layout_pain_points",
+                            "has_web_features_id"
                           ],
                           "example": {
                             "language": "html",
@@ -1200,6 +1201,31 @@
                           },
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe"
+                          },
+                          "webFeature": {
+                            "id": "iframe",
+                            "description_html": "The <code>&#x3C;iframe></code> element embeds another HTML page into the current page.",
+                            "group": [
+                              "html-elements"
+                            ],
+                            "name": "<iframe>",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/iframe/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2015-07-29",
+                              "support": {
+                                "chrome": "1",
+                                "chrome_android": "18",
+                                "edge": "12",
+                                "firefox": "1",
+                                "firefox_android": "4",
+                                "safari": "≤4",
+                                "safari_ios": "≤3.2"
+                              }
+                            }
                           }
                         },
                         "nestedBuckets": [
@@ -1337,7 +1363,8 @@
                                 "features",
                                 "html_features",
                                 "html_main",
-                                "language_pain_points"
+                                "language_pain_points",
+                                "has_web_features_id"
                               ],
                               "example": {
                                 "language": "js",
@@ -1346,6 +1373,25 @@
                               },
                               "mdn": {
                                 "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTML_Sanitizer_API"
+                              },
+                              "webFeature": {
+                                "id": "sanitizer",
+                                "description_html": "The <code>Sanitizer</code> API customizes the sanitization of HTML parsed and inserted into the DOM in a way that can prevent cross-site scripting attacks. You can use it with DOM APIs that accept a sanitizer option, such as <code>parseHTML()</code> or <code>setHTML()</code>.",
+                                "name": "Sanitizer API",
+                                "spec": [
+                                  "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#html-sanitization"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/sanitizer/",
+                                "status": {
+                                  "baseline": "false",
+                                  "support": {
+                                    "chrome": "146",
+                                    "chrome_android": "146",
+                                    "edge": "146",
+                                    "firefox": "148",
+                                    "firefox_android": "148"
+                                  }
+                                }
                               }
                             }
                           },
@@ -1372,7 +1418,8 @@
                                 "html_main",
                                 "common_pain_points",
                                 "content_pain_points",
-                                "browser_apis_pain_points"
+                                "browser_apis_pain_points",
+                                "has_web_features_id"
                               ],
                               "example": {
                                 "language": "http",
@@ -1387,7 +1434,32 @@
                                   "url": "https://fetch.spec.whatwg.org/#http-access-control-allow-origin",
                                   "title": "Fetch Standard"
                                 }
-                              ]
+                              ],
+                              "webFeature": {
+                                "id": "cors",
+                                "description_html": "Cross-Origin Resource Sharing is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources. Also known as CORS.",
+                                "group": [
+                                  "security"
+                                ],
+                                "name": "CORS",
+                                "spec": [
+                                  "https://fetch.spec.whatwg.org/#http-cors-protocol"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/cors/",
+                                "status": {
+                                  "baseline": "high",
+                                  "baseline_low_date": "2015-07-29",
+                                  "support": {
+                                    "chrome": "4",
+                                    "chrome_android": "18",
+                                    "edge": "12",
+                                    "firefox": "3.5",
+                                    "firefox_android": "4",
+                                    "safari": "4",
+                                    "safari_ios": "3.2"
+                                  }
+                                }
+                              }
                             }
                           }
                         ]
@@ -1575,7 +1647,7 @@
                                     ],
                                     "url": "https://web-platform-dx.github.io/web-features-explorer/features/declarative-shadow-dom/",
                                     "status": {
-                                      "baseline": "low",
+                                      "baseline": "high",
                                       "baseline_low_date": "2024-02-20",
                                       "support": {
                                         "chrome": "111",
@@ -1610,10 +1682,36 @@
                                 "features",
                                 "js_features",
                                 "js_other",
-                                "interactivity_pain_points"
+                                "interactivity_pain_points",
+                                "has_web_features_id"
                               ],
                               "mdn": {
                                 "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components"
+                              },
+                              "webFeature": {
+                                "id": "autonomous-custom-elements",
+                                "description_html": "Autonomous custom elements are HTML elements with a hyphenated tag name (like <code>&#x3C;example-element></code>) that have behaviors you define.",
+                                "group": [
+                                  "custom-elements"
+                                ],
+                                "name": "Autonomous custom elements",
+                                "spec": [
+                                  "https://html.spec.whatwg.org/multipage/custom-elements.html#autonomous-custom-element"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/autonomous-custom-elements/",
+                                "status": {
+                                  "baseline": "high",
+                                  "baseline_low_date": "2020-01-15",
+                                  "support": {
+                                    "chrome": "54",
+                                    "chrome_android": "54",
+                                    "edge": "79",
+                                    "firefox": "63",
+                                    "firefox_android": "63",
+                                    "safari": "10.1",
+                                    "safari_ios": "10.3"
+                                  }
+                                }
                               }
                             }
                           }
@@ -2234,57 +2332,52 @@
                       "buckets": [
                         {
                           "answerCount": 1,
-                          "count": 26,
-                          "percentage": 16.7742
+                          "count": 28,
+                          "percentage": 18.0645
                         },
                         {
                           "answerCount": 2,
-                          "count": 33,
-                          "percentage": 21.2903
+                          "count": 56,
+                          "percentage": 36.129
                         },
                         {
                           "answerCount": 3,
-                          "count": 50,
-                          "percentage": 32.2581
+                          "count": 34,
+                          "percentage": 21.9355
                         },
                         {
                           "answerCount": 4,
-                          "count": 23,
-                          "percentage": 14.8387
+                          "count": 18,
+                          "percentage": 11.6129
                         },
                         {
                           "answerCount": 5,
-                          "count": 6,
-                          "percentage": 3.871
-                        },
-                        {
-                          "answerCount": 6,
                           "count": 8,
                           "percentage": 5.1613
                         },
                         {
+                          "answerCount": 6,
+                          "count": 4,
+                          "percentage": 2.5806
+                        },
+                        {
                           "answerCount": 7,
-                          "count": 3,
-                          "percentage": 1.9355
+                          "count": 4,
+                          "percentage": 2.5806
                         },
                         {
                           "answerCount": 8,
-                          "count": 3,
-                          "percentage": 1.9355
-                        },
-                        {
-                          "answerCount": 9,
                           "count": 1,
                           "percentage": 0.6452
                         },
                         {
-                          "answerCount": 10,
+                          "answerCount": 9,
                           "count": 2,
                           "percentage": 1.2903
                         }
                       ],
-                      "max": 10,
-                      "mean": 3.1355,
+                      "max": 9,
+                      "mean": 2.7871,
                       "n": 155
                     },
                     "editionId": "html2026",
@@ -2296,16 +2389,20 @@
                     },
                     "buckets": [
                       {
-                        "id": "content",
-                        "count": 55,
+                        "id": "html_reuse",
+                        "count": 26,
                         "index": 0,
-                        "percentageQuestion": 35.48,
-                        "percentageSurvey": 2.63,
+                        "percentageQuestion": 16.77,
+                        "percentageSurvey": 1.24,
                         "entity": {
-                          "name": "Content",
-                          "nameHtml": "Content",
-                          "nameClean": "Content",
-                          "id": "content",
+                          "name": "HTML Reuse",
+                          "nameHtml": "HTML Reuse",
+                          "nameClean": "HTML Reuse",
+                          "description": "Pain points related to reusing and modularizing HTML content.",
+                          "descriptionHtml": "Pain points related to reusing and modularizing HTML content.",
+                          "descriptionClean": "Pain points related to reusing and modularizing HTML content.",
+                          "id": "html_reuse",
+                          "parentId": "content",
                           "entityType": "token",
                           "tags": [
                             "tokens",
@@ -2319,186 +2416,57 @@
                         },
                         "nestedBuckets": [
                           {
-                            "id": "html_reuse",
-                            "count": 26,
+                            "id": "templating",
+                            "count": 11,
                             "index": 0,
-                            "percentageQuestion": 16.77,
-                            "percentageSurvey": 1.24,
+                            "percentageQuestion": 7.1,
+                            "percentageSurvey": 0.53,
                             "entity": {
-                              "name": "HTML Reuse",
-                              "nameHtml": "HTML Reuse",
-                              "nameClean": "HTML Reuse",
-                              "description": "Pain points related to reusing and modularizing HTML content.",
-                              "descriptionHtml": "Pain points related to reusing and modularizing HTML content.",
-                              "descriptionClean": "Pain points related to reusing and modularizing HTML content.",
-                              "id": "html_reuse",
-                              "parentId": "content",
+                              "name": "Templating",
+                              "nameHtml": "Templating",
+                              "nameClean": "Templating",
+                              "description": "Lack of templating",
+                              "descriptionHtml": "Lack of templating",
+                              "descriptionClean": "Lack of templating",
+                              "id": "templating",
+                              "parentId": "html_reuse",
                               "entityType": "token",
                               "tags": [
                                 "tokens",
                                 "pain_points",
                                 "html_pain_points",
-                                "content_pain_points",
+                                "making_web_components_pain_points",
+                                "language_pain_points",
                                 "front_end_frameworks_pain_points",
                                 "meta_frameworks_pain_points",
                                 "back_end_frameworks_pain_points"
                               ]
-                            },
-                            "nestedBuckets": [
-                              {
-                                "id": "templating",
-                                "count": 11,
-                                "index": 0,
-                                "percentageQuestion": 7.1,
-                                "percentageSurvey": 0.53,
-                                "entity": {
-                                  "name": "Templating",
-                                  "nameHtml": "Templating",
-                                  "nameClean": "Templating",
-                                  "description": "Lack of templating",
-                                  "descriptionHtml": "Lack of templating",
-                                  "descriptionClean": "Lack of templating",
-                                  "id": "templating",
-                                  "parentId": "html_reuse",
-                                  "entityType": "token",
-                                  "tags": [
-                                    "tokens",
-                                    "pain_points",
-                                    "html_pain_points",
-                                    "making_web_components_pain_points",
-                                    "language_pain_points",
-                                    "front_end_frameworks_pain_points",
-                                    "meta_frameworks_pain_points",
-                                    "back_end_frameworks_pain_points"
-                                  ]
-                                }
-                              },
-                              {
-                                "id": "html_imports",
-                                "count": 5,
-                                "index": 1,
-                                "percentageQuestion": 3.23,
-                                "percentageSurvey": 0.24,
-                                "entity": {
-                                  "name": "HTML imports",
-                                  "nameHtml": "HTML imports",
-                                  "nameClean": "HTML imports",
-                                  "description": "Lack of native HTML imports or templating",
-                                  "descriptionHtml": "Lack of native HTML imports or templating",
-                                  "descriptionClean": "Lack of native HTML imports or templating",
-                                  "id": "html_imports",
-                                  "parentId": "html_reuse",
-                                  "entityType": "token",
-                                  "tags": [
-                                    "tokens",
-                                    "missing_features",
-                                    "html_missing_features",
-                                    "interactivity_pain_points",
-                                    "content_pain_points"
-                                  ]
-                                }
-                              }
-                            ]
+                            }
                           },
                           {
-                            "id": "tables",
-                            "count": 12,
+                            "id": "html_imports",
+                            "count": 5,
                             "index": 1,
-                            "percentageQuestion": 7.74,
-                            "percentageSurvey": 0.57,
+                            "percentageQuestion": 3.23,
+                            "percentageSurvey": 0.24,
                             "entity": {
-                              "name": "Tables",
-                              "nameHtml": "Tables",
-                              "nameClean": "Tables",
-                              "description": "Issues around tables and table layout",
-                              "descriptionHtml": "Issues around tables and table layout",
-                              "descriptionClean": "Issues around tables and table layout",
-                              "id": "tables",
-                              "parentId": "content",
+                              "name": "HTML imports",
+                              "nameHtml": "HTML imports",
+                              "nameClean": "HTML imports",
+                              "description": "Lack of native HTML imports or templating",
+                              "descriptionHtml": "Lack of native HTML imports or templating",
+                              "descriptionClean": "Lack of native HTML imports or templating",
+                              "id": "html_imports",
+                              "parentId": "html_reuse",
                               "entityType": "token",
                               "tags": [
                                 "tokens",
-                                "pain_points",
-                                "html_pain_points",
+                                "missing_features",
+                                "html_missing_features",
+                                "interactivity_pain_points",
                                 "content_pain_points"
                               ]
                             }
-                          },
-                          {
-                            "id": "semantics",
-                            "count": 9,
-                            "index": 2,
-                            "percentageQuestion": 5.81,
-                            "percentageSurvey": 0.43,
-                            "entity": {
-                              "name": "Semantics",
-                              "nameHtml": "Semantics",
-                              "nameClean": "Semantics",
-                              "description": "Issues related to understanding, choosing, and correctly using semantically appropriate HTML elements.",
-                              "descriptionHtml": "Issues related to understanding, choosing, and correctly using semantically appropriate HTML elements.",
-                              "descriptionClean": "Issues related to understanding, choosing, and correctly using semantically appropriate HTML elements.",
-                              "id": "semantics",
-                              "parentId": "content",
-                              "entityType": "token",
-                              "tags": [
-                                "tokens",
-                                "pain_points",
-                                "html_pain_points",
-                                "content_pain_points",
-                                "language_pain_points",
-                                "front_end_frameworks_pain_points"
-                              ]
-                            }
-                          },
-                          {
-                            "id": "headings",
-                            "count": 7,
-                            "index": 3,
-                            "percentageQuestion": 4.52,
-                            "percentageSurvey": 0.33,
-                            "entity": {
-                              "name": "Headings",
-                              "nameHtml": "Headings",
-                              "nameClean": "Headings",
-                              "description": "Issues related to managing heading elements and maintaining a correct and logical document outline.",
-                              "descriptionHtml": "Issues related to managing heading elements and maintaining a correct and logical document outline.",
-                              "descriptionClean": "Issues related to managing heading elements and maintaining a correct and logical document outline.",
-                              "id": "headings",
-                              "parentId": "content",
-                              "entityType": "token",
-                              "tags": [
-                                "tokens",
-                                "pain_points",
-                                "html_pain_points",
-                                "content_pain_points"
-                              ]
-                            },
-                            "nestedBuckets": [
-                              {
-                                "id": "heading_levels_components",
-                                "count": 7,
-                                "index": 0,
-                                "percentageQuestion": 4.52,
-                                "percentageSurvey": 0.33,
-                                "entity": {
-                                  "name": "Heading Levels in Components",
-                                  "nameHtml": "Heading Levels in Components",
-                                  "nameClean": "Heading Levels in Components",
-                                  "description": "Managing heading levels across reusable components and CMS content, including the lack of a heading offset.",
-                                  "descriptionHtml": "Managing heading levels across reusable components and CMS content, including the lack of a heading offset.",
-                                  "descriptionClean": "Managing heading levels across reusable components and CMS content, including the lack of a heading offset.",
-                                  "id": "heading_levels_components",
-                                  "parentId": "headings",
-                                  "entityType": "token",
-                                  "tags": [
-                                    "tokens",
-                                    "pain_points",
-                                    "html_pain_points",
-                                    "content_pain_points"
-                                  ]
-                                }
-                              }
-                            ]
                           }
                         ]
                       },
@@ -2547,10 +2515,36 @@
                                 "html_interoperability_features",
                                 "browser_apis_pain_points",
                                 "html_missing_features",
-                                "content_pain_points"
+                                "content_pain_points",
+                                "has_web_features_id"
                               ],
                               "mdn": {
                                 "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl"
+                              },
+                              "webFeature": {
+                                "id": "intl",
+                                "description_html": "The <code>Intl</code> API provides language sensitive string comparison, number formatting, date and time formatting, and more.",
+                                "group": [
+                                  "intl"
+                                ],
+                                "name": "Intl",
+                                "spec": [
+                                  "https://tc39.es/ecma402/#introduction"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/intl/",
+                                "status": {
+                                  "baseline": "high",
+                                  "baseline_low_date": "2017-09-28",
+                                  "support": {
+                                    "chrome": "24",
+                                    "chrome_android": "25",
+                                    "edge": "12",
+                                    "firefox": "29",
+                                    "firefox_android": "56",
+                                    "safari": "10",
+                                    "safari_ios": "10"
+                                  }
+                                }
                               }
                             }
                           }
@@ -2635,9 +2629,33 @@
                         ]
                       },
                       {
+                        "id": "tables",
+                        "count": 12,
+                        "index": 3,
+                        "percentageQuestion": 7.74,
+                        "percentageSurvey": 0.57,
+                        "entity": {
+                          "name": "Tables",
+                          "nameHtml": "Tables",
+                          "nameClean": "Tables",
+                          "description": "Issues around tables and table layout",
+                          "descriptionHtml": "Issues around tables and table layout",
+                          "descriptionClean": "Issues around tables and table layout",
+                          "id": "tables",
+                          "parentId": "content",
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "pain_points",
+                            "html_pain_points",
+                            "content_pain_points"
+                          ]
+                        }
+                      },
+                      {
                         "id": "accessibility_issues",
                         "count": 11,
-                        "index": 3,
+                        "index": 4,
                         "percentageQuestion": 7.1,
                         "percentageSurvey": 0.53,
                         "entity": {
@@ -2661,7 +2679,7 @@
                       {
                         "id": "iframe_element",
                         "count": 11,
-                        "index": 4,
+                        "index": 5,
                         "percentageQuestion": 7.1,
                         "percentageSurvey": 0.53,
                         "entity": {
@@ -2675,7 +2693,8 @@
                             "features",
                             "html_features",
                             "html_main",
-                            "layout_pain_points"
+                            "layout_pain_points",
+                            "has_web_features_id"
                           ],
                           "example": {
                             "language": "html",
@@ -2684,6 +2703,31 @@
                           },
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe"
+                          },
+                          "webFeature": {
+                            "id": "iframe",
+                            "description_html": "The <code>&#x3C;iframe></code> element embeds another HTML page into the current page.",
+                            "group": [
+                              "html-elements"
+                            ],
+                            "name": "<iframe>",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/iframe/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2015-07-29",
+                              "support": {
+                                "chrome": "1",
+                                "chrome_android": "18",
+                                "edge": "12",
+                                "firefox": "1",
+                                "firefox_android": "4",
+                                "safari": "≤4",
+                                "safari_ios": "≤3.2"
+                              }
+                            }
                           }
                         },
                         "nestedBuckets": [
@@ -2716,7 +2760,7 @@
                       {
                         "id": "developer_experience",
                         "count": 9,
-                        "index": 5,
+                        "index": 6,
                         "percentageQuestion": 5.81,
                         "percentageSurvey": 0.43,
                         "entity": {
@@ -2738,7 +2782,7 @@
                       {
                         "id": "ecosystem",
                         "count": 9,
-                        "index": 6,
+                        "index": 7,
                         "percentageQuestion": 5.81,
                         "percentageSurvey": 0.43,
                         "entity": {
@@ -2755,9 +2799,35 @@
                         }
                       },
                       {
+                        "id": "semantics",
+                        "count": 9,
+                        "index": 8,
+                        "percentageQuestion": 5.81,
+                        "percentageSurvey": 0.43,
+                        "entity": {
+                          "name": "Semantics",
+                          "nameHtml": "Semantics",
+                          "nameClean": "Semantics",
+                          "description": "Issues related to understanding, choosing, and correctly using semantically appropriate HTML elements.",
+                          "descriptionHtml": "Issues related to understanding, choosing, and correctly using semantically appropriate HTML elements.",
+                          "descriptionClean": "Issues related to understanding, choosing, and correctly using semantically appropriate HTML elements.",
+                          "id": "semantics",
+                          "parentId": "content",
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "pain_points",
+                            "html_pain_points",
+                            "content_pain_points",
+                            "language_pain_points",
+                            "front_end_frameworks_pain_points"
+                          ]
+                        }
+                      },
+                      {
                         "id": "iframe_issues",
                         "count": 8,
-                        "index": 7,
+                        "index": 9,
                         "percentageQuestion": 5.16,
                         "percentageSurvey": 0.38,
                         "entity": {
@@ -2781,13 +2851,38 @@
                           },
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe"
+                          },
+                          "webFeature": {
+                            "id": "iframe",
+                            "description_html": "The <code>&#x3C;iframe></code> element embeds another HTML page into the current page.",
+                            "group": [
+                              "html-elements"
+                            ],
+                            "name": "<iframe>",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/iframe/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2015-07-29",
+                              "support": {
+                                "chrome": "1",
+                                "chrome_android": "18",
+                                "edge": "12",
+                                "firefox": "1",
+                                "firefox_android": "4",
+                                "safari": "≤4",
+                                "safari_ios": "≤3.2"
+                              }
+                            }
                           }
                         }
                       },
                       {
                         "id": "educational_issues",
                         "count": 7,
-                        "index": 8,
+                        "index": 10,
                         "percentageQuestion": 4.52,
                         "percentageSurvey": 0.33,
                         "entity": {
@@ -2808,9 +2903,59 @@
                         }
                       },
                       {
+                        "id": "headings",
+                        "count": 7,
+                        "index": 11,
+                        "percentageQuestion": 4.52,
+                        "percentageSurvey": 0.33,
+                        "entity": {
+                          "name": "Headings",
+                          "nameHtml": "Headings",
+                          "nameClean": "Headings",
+                          "description": "Issues related to managing heading elements and maintaining a correct and logical document outline.",
+                          "descriptionHtml": "Issues related to managing heading elements and maintaining a correct and logical document outline.",
+                          "descriptionClean": "Issues related to managing heading elements and maintaining a correct and logical document outline.",
+                          "id": "headings",
+                          "parentId": "content",
+                          "entityType": "token",
+                          "tags": [
+                            "tokens",
+                            "pain_points",
+                            "html_pain_points",
+                            "content_pain_points"
+                          ]
+                        },
+                        "nestedBuckets": [
+                          {
+                            "id": "heading_levels_components",
+                            "count": 7,
+                            "index": 0,
+                            "percentageQuestion": 4.52,
+                            "percentageSurvey": 0.33,
+                            "entity": {
+                              "name": "Heading Levels in Components",
+                              "nameHtml": "Heading Levels in Components",
+                              "nameClean": "Heading Levels in Components",
+                              "description": "Managing heading levels across reusable components and CMS content, including the lack of a heading offset.",
+                              "descriptionHtml": "Managing heading levels across reusable components and CMS content, including the lack of a heading offset.",
+                              "descriptionClean": "Managing heading levels across reusable components and CMS content, including the lack of a heading offset.",
+                              "id": "heading_levels_components",
+                              "parentId": "headings",
+                              "entityType": "token",
+                              "tags": [
+                                "tokens",
+                                "pain_points",
+                                "html_pain_points",
+                                "content_pain_points"
+                              ]
+                            }
+                          }
+                        ]
+                      },
+                      {
                         "id": "styling_customization",
                         "count": 7,
-                        "index": 9,
+                        "index": 12,
                         "percentageQuestion": 4.52,
                         "percentageSurvey": 0.33,
                         "entity": {
@@ -2832,7 +2977,7 @@
                       {
                         "id": "cognitive_overload",
                         "count": 6,
-                        "index": 10,
+                        "index": 13,
                         "percentageQuestion": 3.87,
                         "percentageSurvey": 0.29,
                         "entity": {
@@ -2852,7 +2997,7 @@
                       {
                         "id": "security_privacy",
                         "count": 6,
-                        "index": 11,
+                        "index": 14,
                         "percentageQuestion": 3.87,
                         "percentageSurvey": 0.29,
                         "entity": {
@@ -2875,7 +3020,7 @@
                       {
                         "id": "reliance_on_javascript",
                         "count": 5,
-                        "index": 12,
+                        "index": 15,
                         "percentageQuestion": 3.23,
                         "percentageSurvey": 0.24,
                         "entity": {
@@ -2897,16 +3042,16 @@
                       {
                         "id": "no_answer",
                         "count": 1938,
-                        "index": 13,
+                        "index": 16,
                         "percentageQuestion": 0,
                         "percentageSurvey": 92.68
                       },
                       {
                         "id": "other_answers",
-                        "count": 172,
-                        "index": 14,
-                        "percentageQuestion": 111.3,
-                        "percentageSurvey": 8.44
+                        "count": 173,
+                        "index": 17,
+                        "percentageQuestion": 111.95,
+                        "percentageSurvey": 8.49
                       }
                     ]
                   }

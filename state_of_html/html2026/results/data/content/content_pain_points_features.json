@@ -788,7 +788,8 @@
                             "features",
                             "html_features",
                             "html_main",
-                            "layout_pain_points"
+                            "layout_pain_points",
+                            "has_web_features_id"
                           ],
                           "example": {
                             "language": "html",
@@ -797,6 +798,31 @@
                           },
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe"
+                          },
+                          "webFeature": {
+                            "id": "iframe",
+                            "description_html": "The <code>&#x3C;iframe></code> element embeds another HTML page into the current page.",
+                            "group": [
+                              "html-elements"
+                            ],
+                            "name": "<iframe>",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/iframe/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2015-07-29",
+                              "support": {
+                                "chrome": "1",
+                                "chrome_android": "18",
+                                "edge": "12",
+                                "firefox": "1",
+                                "firefox_android": "4",
+                                "safari": "≤4",
+                                "safari_ios": "≤3.2"
+                              }
+                            }
                           }
                         }
                       },
@@ -961,7 +987,7 @@
                                     ],
                                     "url": "https://web-platform-dx.github.io/web-features-explorer/features/declarative-shadow-dom/",
                                     "status": {
-                                      "baseline": "low",
+                                      "baseline": "high",
                                       "baseline_low_date": "2024-02-20",
                                       "support": {
                                         "chrome": "111",
@@ -996,10 +1022,36 @@
                                 "features",
                                 "js_features",
                                 "js_other",
-                                "interactivity_pain_points"
+                                "interactivity_pain_points",
+                                "has_web_features_id"
                               ],
                               "mdn": {
                                 "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components"
+                              },
+                              "webFeature": {
+                                "id": "autonomous-custom-elements",
+                                "description_html": "Autonomous custom elements are HTML elements with a hyphenated tag name (like <code>&#x3C;example-element></code>) that have behaviors you define.",
+                                "group": [
+                                  "custom-elements"
+                                ],
+                                "name": "Autonomous custom elements",
+                                "spec": [
+                                  "https://html.spec.whatwg.org/multipage/custom-elements.html#autonomous-custom-element"
+                                ],
+                                "url": "https://web-platform-dx.github.io/web-features-explorer/features/autonomous-custom-elements/",
+                                "status": {
+                                  "baseline": "high",
+                                  "baseline_low_date": "2020-01-15",
+                                  "support": {
+                                    "chrome": "54",
+                                    "chrome_android": "54",
+                                    "edge": "79",
+                                    "firefox": "63",
+                                    "firefox_android": "63",
+                                    "safari": "10.1",
+                                    "safari_ios": "10.3"
+                                  }
+                                }
                               }
                             }
                           }
@@ -1199,7 +1251,8 @@
                             "features",
                             "html_features",
                             "html_main",
-                            "language_pain_points"
+                            "language_pain_points",
+                            "has_web_features_id"
                           ],
                           "example": {
                             "language": "js",
@@ -1208,6 +1261,25 @@
                           },
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTML_Sanitizer_API"
+                          },
+                          "webFeature": {
+                            "id": "sanitizer",
+                            "description_html": "The <code>Sanitizer</code> API customizes the sanitization of HTML parsed and inserted into the DOM in a way that can prevent cross-site scripting attacks. You can use it with DOM APIs that accept a sanitizer option, such as <code>parseHTML()</code> or <code>setHTML()</code>.",
+                            "name": "Sanitizer API",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#html-sanitization"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/sanitizer/",
+                            "status": {
+                              "baseline": "false",
+                              "support": {
+                                "chrome": "146",
+                                "chrome_android": "146",
+                                "edge": "146",
+                                "firefox": "148",
+                                "firefox_android": "148"
+                              }
+                            }
                           }
                         }
                       },
@@ -1234,7 +1306,8 @@
                             "html_main",
                             "common_pain_points",
                             "content_pain_points",
-                            "browser_apis_pain_points"
+                            "browser_apis_pain_points",
+                            "has_web_features_id"
                           ],
                           "example": {
                             "language": "http",
@@ -1249,7 +1322,32 @@
                               "url": "https://fetch.spec.whatwg.org/#http-access-control-allow-origin",
                               "title": "Fetch Standard"
                             }
-                          ]
+                          ],
+                          "webFeature": {
+                            "id": "cors",
+                            "description_html": "Cross-Origin Resource Sharing is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources. Also known as CORS.",
+                            "group": [
+                              "security"
+                            ],
+                            "name": "CORS",
+                            "spec": [
+                              "https://fetch.spec.whatwg.org/#http-cors-protocol"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/cors/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2015-07-29",
+                              "support": {
+                                "chrome": "4",
+                                "chrome_android": "18",
+                                "edge": "12",
+                                "firefox": "3.5",
+                                "firefox_android": "4",
+                                "safari": "4",
+                                "safari_ios": "3.2"
+                              }
+                            }
+                          }
                         }
                       },
                       {
@@ -1309,57 +1407,52 @@
                       "buckets": [
                         {
                           "answerCount": 1,
-                          "count": 26,
-                          "percentage": 16.7742
+                          "count": 28,
+                          "percentage": 18.0645
                         },
                         {
                           "answerCount": 2,
-                          "count": 33,
-                          "percentage": 21.2903
+                          "count": 56,
+                          "percentage": 36.129
                         },
                         {
                           "answerCount": 3,
-                          "count": 50,
-                          "percentage": 32.2581
+                          "count": 34,
+                          "percentage": 21.9355
                         },
                         {
                           "answerCount": 4,
-                          "count": 23,
-                          "percentage": 14.8387
+                          "count": 18,
+                          "percentage": 11.6129
                         },
                         {
                           "answerCount": 5,
-                          "count": 6,
-                          "percentage": 3.871
-                        },
-                        {
-                          "answerCount": 6,
                           "count": 8,
                           "percentage": 5.1613
                         },
                         {
+                          "answerCount": 6,
+                          "count": 4,
+                          "percentage": 2.5806
+                        },
+                        {
                           "answerCount": 7,
-                          "count": 3,
-                          "percentage": 1.9355
+                          "count": 4,
+                          "percentage": 2.5806
                         },
                         {
                           "answerCount": 8,
-                          "count": 3,
-                          "percentage": 1.9355
-                        },
-                        {
-                          "answerCount": 9,
                           "count": 1,
                           "percentage": 0.6452
                         },
                         {
-                          "answerCount": 10,
+                          "answerCount": 9,
                           "count": 2,
                           "percentage": 1.2903
                         }
                       ],
-                      "max": 10,
-                      "mean": 3.1355,
+                      "max": 9,
+                      "mean": 2.7871,
                       "n": 155
                     },
                     "editionId": "html2026",
@@ -1387,7 +1480,8 @@
                             "features",
                             "html_features",
                             "html_main",
-                            "layout_pain_points"
+                            "layout_pain_points",
+                            "has_web_features_id"
                           ],
                           "example": {
                             "language": "html",
@@ -1396,6 +1490,31 @@
                           },
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe"
+                          },
+                          "webFeature": {
+                            "id": "iframe",
+                            "description_html": "The <code>&#x3C;iframe></code> element embeds another HTML page into the current page.",
+                            "group": [
+                              "html-elements"
+                            ],
+                            "name": "<iframe>",
+                            "spec": [
+                              "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/iframe/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2015-07-29",
+                              "support": {
+                                "chrome": "1",
+                                "chrome_android": "18",
+                                "edge": "12",
+                                "firefox": "1",
+                                "firefox_android": "4",
+                                "safari": "≤4",
+                                "safari_ios": "≤3.2"
+                              }
+                            }
                           }
                         }
                       },
@@ -1420,10 +1539,36 @@
                             "html_interoperability_features",
                             "browser_apis_pain_points",
                             "html_missing_features",
-                            "content_pain_points"
+                            "content_pain_points",
+                            "has_web_features_id"
                           ],
                           "mdn": {
                             "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl"
+                          },
+                          "webFeature": {
+                            "id": "intl",
+                            "description_html": "The <code>Intl</code> API provides language sensitive string comparison, number formatting, date and time formatting, and more.",
+                            "group": [
+                              "intl"
+                            ],
+                            "name": "Intl",
+                            "spec": [
+                              "https://tc39.es/ecma402/#introduction"
+                            ],
+                            "url": "https://web-platform-dx.github.io/web-features-explorer/features/intl/",
+                            "status": {
+                              "baseline": "high",
+                              "baseline_low_date": "2017-09-28",
+                              "support": {
+                                "chrome": "24",
+                                "chrome_android": "25",
+                                "edge": "12",
+                                "firefox": "29",
+                                "firefox_android": "56",
+                                "safari": "10",
+                                "safari_ios": "10"
+                              }
+                            }
                           }
                         }
                       }
